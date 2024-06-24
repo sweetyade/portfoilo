@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>landing page</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../../css/aos.css">
+  <link rel="stylesheet" href="../../css/landing.css">
+</head>
+<body style="background-color: var(--body-bg);">
+  <!-- header -->
+  <header id="header">
+    <div class="inner">
+      <div class="flex">
+        <h1 class="logo">
+          <a href="./"><img src="../../images/common/logo.svg" alt="Vuexy">Vuexy</a>
+        </h1>
+
+        <nav class="nav">
+          <div class="nav-list"><a href="#visual" class="nav-link active">Home</a></div>
+          <div class="nav-list"><a href="#features" class="nav-link">Features</a></div>
+          <div class="nav-list"><a href="#team" class="nav-link">Team</a></div>
+          <div class="nav-list"><a href="#faq" class="nav-link">FAQ</a></div>
+          <div class="nav-list"><a href="#contact" class="nav-link">Contact us</a></div>
+          <div class="nav-list"><a href="javascript:void(0)" class="nav-link openSub">Pages <i class="ic_chevron_down"></i></a>
+            <div class="nav-sub">
+              <div class="nav-list"><a href="javascript:void(0)" class="nav-link">Payment</a></div>
+              <div class="nav-list"><a href="javascript:void(0)" class="nav-link">Pricing</a></div>
+              <div class="nav-list"><a href="javascript:void(0)" class="nav-link">Help Center</a></div>
+              <div class="nav-list"><a href="javascript:void(0)" class="nav-link">Check Out</a></div>
+            </div>
+          </div>
+
+          <div class="nav-close ic_x"></div>
+        </nav>
+      </div>
+      <div class="flex_right">
+        <p class="theme_toggle ic_moon_stars"></p>
+        <button class="btn type_basic">
+          <div class="ripple js-ripple">
+            <span class="ripple__circle"></span>
+          </div>
+          <i><img src="../../images/system/shopping_cart_w.svg" alt=""></i>Purchase Now
+        </button>
+        <p class="nav_toggle ic_menu_2"></p>
+      </div>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main id="main">
+    <section class="payment">
+      <div class="inner">
+        <!-- 결제정보 -->
+        <div class="payment-info">
+          <div class="payment-grp">
+            <p class="title">Checkout</p>
+            <p class="txt">
+              All plans include 40+ advanced tools and features to boost your product.<br>
+              Choose the best plan to fit your needs.
+            </p>
+          </div>
+
+          <div class="payment-slt">
+            <div class="input_check active">
+              <input type="radio" class="radio_input check_visa" id="radio1" name="sltpayment" checked="">
+              <label for="radio1" class=""><span class="check"></span><span class="payicon"><img src="../../images/logo_visa.svg" alt=""></span><span class="check_label">Credit card</span></label>
+            </div>
+
+            <div class="input_check">
+              <input type="radio" class="radio_input check_visa" id="radio2" name="sltpayment" >
+              <label for="radio2" class=""><span class="check"></span><span class="payicon"><img src="../../images/logo_paypal.svg" alt=""></span><span class="check_label">Paypal</span></label>
+            </div>
+          </div>
+
+          <div class="payment-grp">
+            <p class="title">Billing Details</p>
+            <div class="grid_2">
+              <div class="input_basic">
+                <div class="inner">
+                  <input type="email" placeholder="john.deo@gmail.com" id='input_email' value="" required >
+                  <label for="input_email" class="input_label">Email Address</label>
+                </div>
+              </div>
+              <div class="input_basic">
+                <div class="inner">
+                  <input type="password" placeholder="Password" id='input_pass' value="" required >
+                  <label for="input_pass" class="input_label">Password</label>
+                </div>
+              </div>
+            </div>
+            <div class="grid_2">
+              <div class="input_basic">
+                <div class="inner">
+                  <select name="" id="slt_contry">
+                    <option value="">Select Country</option>
+                    <option value="">셀렉트 옵션2</option>
+                    <option value="">셀렉트 옵션3</option>
+                  </select>
+                  <label for="slt_contry" class="input_label">Country</label>
+                </div>
+              </div>
+              <div class="input_basic">
+                <div class="inner">
+                  <select name="" id="slt_zip">
+                    <option value="">Billing Zip / Postal Code</option>
+                    <option value="">셀렉트 옵션2</option>
+                    <option value="">셀렉트 옵션3</option>
+                  </select>
+                  <label for="slt_zip" class="input_label">Billing Zip / Postal Code</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="payment-grp">
+            <p class="title">Credit Card Info</p>
+
+            <div class="input_basic">
+              <div class="inner">
+                <input type="tel" placeholder="5221 3668 7996 5223" maxlength="25" id='input_cardno' class="ccFormatMonitor" inputmode="numeric" value="" required>
+                <input type="hidden" class="cardNumber" id="" />
+                <label for="input_cardno" class="input_label">Card Number</label>
+              </div>
+            </div>
+
+            <div class="grid_3">
+              <div class="input_basic">
+                <div class="inner">
+                  <input type="text" placeholder="John Doe" id='input_name' value="" required>
+                  <label for="input_name" class="input_label">Name</label>
+                </div>
+              </div>
+              <div class="input_basic">
+                <div class="inner">
+                  <input type="text" placeholder="MM/YY" id='inputExpDate' maxlength="7" inputmode="numeric" value="" required>
+                  <label for="inputExpDate" class="input_label">EXP. date</label>
+                </div>
+              </div>
+              <div class="input_basic">
+                <div class="inner">
+                  <input type="password" placeholder="654" id='input_cvv' class="cvv" maxlength="3" inputmode="numeric" value="" required>
+                  <label for="input_cvv" class="input_label">CVV</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 결제요약 -->
+        <div class="payment-smr">
+          <p class="title">Order Summary</p>
+          <p class="txt">It can help you manage and service orders before, during, and after fulfilment.</p>
+
+          <div class="payment-total">
+            <div class="payment-moncost">
+              <p class="txt2">A simple start for everyone</p>
+              <p class="total">$59.99<span>/month</span></p>
+  
+              <button class="btn type_label">
+                <div class="ripple js-ripple">
+                  <span class="ripple__circle"></span>
+                </div>
+                Change Plan
+              </button>
+            </div>
+  
+            <div class="payment-list">
+              <div class="list_data">
+                <div class="list_grp">
+                  <p class="sbj">Subscription</p>
+                  <p class="cost">$85.99</p>
+                </div>
+                <div class="list_grp">
+                  <p class="sbj">Tax</p>
+                  <p class="cost">$4.99</p>
+                </div>
+              </div>
+              
+              <div class="list_total">
+                <div class="list_grp">
+                  <p class="sbj">Total</p>
+                  <p class="cost">$90.98</p>
+                </div>
+              </div>
+              
+            </div>
+  
+            <button class="btn type_basic color_success">
+              <div class="ripple js-ripple">
+                <span class="ripple__circle"></span>
+              </div>
+              Proceed with payment <img src="../../images/system/arrow_right_w.svg" alt="">
+            </button>
+          </div>
+          
+          <p class="txt">By continuing, you accept to our Terms of Services and Privacy Policy. Please note that payments are non-refundable.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer id="footer" class="footer" >
+    <div class="inner">
+      <div class="footer-info">
+        <div class="footer-logo"><img src="../../images/common/logo.svg" alt=""> <p>Vuexy</p></div>
+        <p class="">Most developer friendly & highly customisable Admin Dashboard Template.</p>
+        <div class="footer-mail">
+          <label class="input_label" for="footer_email">Subscribe to newsletter</label>
+          <div class="footer-input">
+            <input type="email" placeholder="Your email" id="footer_email">
+            <button class="btn type_basic">
+              <div class="ripple js-ripple">
+                <span class="ripple__circle"></span>
+              </div>
+              Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-menu">
+        <p class="title">Pages</p>
+        <div class="menu_list">
+          <a href="javascript:void(0)" class="menu_link"><p>Pricing</p></a>
+          <a href="javascript:void(0)" class="menu_link"><p>Payment</p> <span class="chip type_basic size_s color_pr">New</span></a>
+          <a href="javascript:void(0)" class="menu_link"><p>Maintenance</p></a>
+          <a href="javascript:void(0)" class="menu_link"><p>Coming Soon</p></a>
+        </div>
+      </div>
+      <div class="footer-menu">
+        <p class="title">Products</p>
+        <div class="menu_list">
+          <a href="javascript:void(0)" class="menu_link"><p>Page Builder</p></a>
+          <a href="javascript:void(0)" class="menu_link"><p>Admin Dashboards</p></a>
+          <a href="javascript:void(0)" class="menu_link"><p>UI Kits</p></a>
+          <a href="javascript:void(0)" class="menu_link"><p>Illustrations</p></a>
+        </div>
+
+        
+      </div>
+      <div class="footer-app">
+        <p class="txt">Download our app</p>
+        <a href="javascript:void(0)"><img src="../../images/app_apple.png" alt=""></a>
+        <a href="javascript:void(0)"><img src="../../images/app_google.png" alt=""></a>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="inner">
+        <p class="txt">© 2024 <b>Pixinvent,</b> Made with ❤️ for a better web.</p>
+
+        <div class="social">
+          <a href="javascript:void(0)"><img src="../../images/social_1.svg" alt=""></a>
+          <a href="javascript:void(0)"><img src="../../images/social_2.svg" alt=""></a>
+          <a href="javascript:void(0)"><img src="../../images/social_3.svg" alt=""></a>
+          <a href="javascript:void(0)"><img src="../../images/social_4.svg" alt=""></a>
+        </div>
+      </div>
+      
+    </div>
+  </footer>
+
+  <!-- js -->
+  <script src="../../js/jquery.min.js""></script>
+  <script src="../../js/aos.js""></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    
+    //테마변경 
+    $(".theme_toggle").click(function(){
+      $('html').toggleClass('dark');
+    })
+    //리플버튼
+    var $ripple = $('.js-ripple');
+    $ripple.on('click.ui.ripple', function(e) {
+
+      var $this = $(this);
+      var $offset = $this.parent().offset();
+      var $circle = $this.find('.ripple__circle');
+
+      var x = e.pageX - $offset.left;
+      var y = e.pageY - $offset.top;
+
+      $circle.css({
+        top: y + 'px',
+        left: x + 'px'
+      });
+
+      $this.addClass('is-active');
+    });
+
+    $ripple.on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', function(e) {
+      $(this).removeClass('is-active');
+    });
+
+
+    //nav
+    $(".openSub").click(function(){
+      $(this).toggleClass('open')
+      $(".nav-sub").slideToggle();
+    })
+
+    $(window).on("resize", function(){
+      const bodyWith = $(this).width()
+      if(bodyWith > 960){
+        $('#header .inner').removeClass('overlay');
+      }
+    });
+
+    $('.nav_toggle').click(function(){
+      $('.nav').toggleClass('navOpen');
+      $('#header .inner').addClass('overlay');
+    })
+
+    $('.nav-close').click(function(){
+      $('.nav').removeClass('navOpen');
+      $('#header .inner').removeClass('overlay');
+    })
+
+    //카드선택
+    $('.input_check').click(function(){
+      if($(this).children('input').is(':checked')){
+        $(this).addClass('active');
+        $(this).siblings('.input_check').removeClass('active')
+      }
+    })
+
+  var app;
+
+(function() {
+  'use strict';
+  
+  app = {
+    monthAndSlashRegex: /^\d\d \/ $/, // regex to match "MM / "
+    monthRegex: /^\d\d$/, // regex to match "MM"
+    
+    el_cardNumber: '.ccFormatMonitor',
+    el_expDate: '#inputExpDate',
+    el_cvv: '.cvv',
+    el_ccUnknown: 'cc_type_unknown',
+    el_ccTypePrefix: 'cc_type_',
+    el_monthSelect: '#monthSelect',
+    el_yearSelect: '#yearSelect',
+    
+    cardTypes: {
+      'American Express': {
+        name: 'American Express',
+        code: 'ax',
+        security: 4,
+        pattern: /^3[47]/,
+        valid_length: [15],
+        formats: {
+          length: 15,
+          format: 'xxxx xxxxxxx xxxx'
+        }
+      },
+      'Visa': {
+				name: 'Visa',
+				code: 'vs',
+        security: 3,
+				pattern: /^4/,
+				valid_length: [16],
+				formats: {
+						length: 16,
+						format: 'xxxx xxxx xxxx xxxx'
+					}
+			},
+      'Maestro': {
+				name: 'Maestro',
+				code: 'ma',
+        security: 3,
+				pattern: /^(50(18|20|38)|5612|5893|63(04|90)|67(59|6[1-3])|0604)/,
+				valid_length: [16],
+				formats: {
+						length: 16,
+						format: 'xxxx xxxx xxxx xxxx'
+					}
+			},
+      'Mastercard': {
+				name: 'Mastercard',
+				code: 'mc',
+        security: 3,
+				pattern: /^5[1-5]/,
+				valid_length: [16],
+				formats: {
+						length: 16,
+						format: 'xxxx xxxx xxxx xxxx'
+					}
+			} 
+    }
+  };
+  
+  app.addListeners = function() {
+      $(app.el_expDate).on('keydown', function(e) {
+        app.removeSlash(e);
+      });
+
+      $(app.el_expDate).on('keyup', function(e) {
+        app.addSlash(e);
+      });
+
+      $(app.el_expDate).on('blur', function(e) {
+        app.populateDate(e);
+      });
+
+      $(app.el_cvv +', '+ app.el_expDate).on('keypress', function(e) {
+        return e.charCode >= 48 && e.charCode <= 57;
+      });  
+  };
+  
+  app.addSlash = function (e) {
+    var isMonthEntered = app.monthRegex.exec(e.target.value);
+    if (e.key >= 0 && e.key <= 9 && isMonthEntered) {
+      e.target.value = e.target.value + " / ";
+    }
+  };
+  
+  app.removeSlash = function(e) {
+    var isMonthAndSlashEntered = app.monthAndSlashRegex.exec(e.target.value);
+    if (isMonthAndSlashEntered && e.key === 'Backspace') {
+      e.target.value = e.target.value.slice(0, -3);
+    }
+  };
+  
+  app.populateDate = function(e) {
+    var month, year;
+    
+    if (e.target.value.length == 7) {
+      month = parseInt(e.target.value.slice(0, -5));
+      year = "20" + e.target.value.slice(5);
+      
+      if (app.checkMonth(month)) {
+        $(app.el_monthSelect).val(month);
+      } else {
+        $(app.el_monthSelect).val(0);
+      }
+      
+      if (app.checkYear(year)) {
+        $(app.el_yearSelect).val(year);
+      } else {
+        $(app.el_yearSelect).val(0);
+      }
+      
+    }
+  };
+  
+  app.checkMonth = function(month) {
+    if (month <= 12) {
+      var monthSelectOptions = app.getSelectOptions($(app.el_monthSelect));
+      month = month.toString();
+      if (monthSelectOptions.includes(month)) {
+        return true; 
+      }
+    }
+  };
+  
+  app.checkYear = function(year) {
+    var yearSelectOptions = app.getSelectOptions($(app.el_yearSelect));
+    if (yearSelectOptions.includes(year)) {
+      return true; 
+    }
+  };
+          
+  app.getSelectOptions = function(select) {
+    var options = select.find('option');
+    var optionValues = [];
+    for (var i = 0; i < options.length; i++) {
+      optionValues[i] = options[i].value;
+    }
+    return optionValues;
+  };
+  
+  app.setMaxLength = function ($elem, length) {
+    if($elem.length && app.isInteger(length)) {
+      $elem.attr('maxlength', length);
+    }else if($elem.length){
+      $elem.attr('maxlength', '');
+    }
+  };
+  
+  app.isInteger = function(x) {
+    return (typeof x === 'number') && (x % 1 === 0);
+  };
+
+  app.createExpDateField = function() {
+    $(app.el_monthSelect +', '+ app.el_yearSelect).hide();
+    $(app.el_monthSelect).parent().prepend('<input type="text" class="ccFormatMonitor">');
+  };
+  
+  
+  app.isValidLength = function(cc_num, card_type) {
+    for(var i in card_type.valid_length) {
+      if (cc_num.length <= card_type.valid_length[i]) {
+        return true;
+      }
+    }
+    return false;
+  };
+
+  app.getCardType = function(cc_num) {
+    for(var i in app.cardTypes) {
+      var card_type = app.cardTypes[i];
+      if (cc_num.match(card_type.pattern) && app.isValidLength(cc_num, card_type)) {
+        return card_type;
+      }
+    }
+  };
+
+  app.getCardFormatString = function(cc_num, card_type) {
+    for(var i in card_type.formats) {
+      var format = card_type.formats[i];
+      if (cc_num.length <= format.length) {
+        return format;
+      }
+    }
+  };
+
+  app.formatCardNumber = function(cc_num, card_type) {
+    var numAppendedChars = 0;
+    var formattedNumber = '';
+    var cardFormatIndex = '';
+
+    if (!card_type) {
+      return cc_num;
+    }
+
+    var cardFormatString = app.getCardFormatString(cc_num, card_type);
+    for(var i = 0; i < cc_num.length; i++) {
+      cardFormatIndex = i + numAppendedChars;
+      if (!cardFormatString || cardFormatIndex >= cardFormatString.length) {
+        return cc_num;
+      }
+
+      if (cardFormatString.charAt(cardFormatIndex) !== 'x') {
+        numAppendedChars++;
+        formattedNumber += cardFormatString.charAt(cardFormatIndex) + cc_num.charAt(i);
+      } else {
+        formattedNumber += cc_num.charAt(i);
+      }
+    }
+
+    return formattedNumber;
+  };
+
+  app.monitorCcFormat = function($elem) {
+    var cc_num = $elem.val().replace(/\D/g,'');
+    var card_type = app.getCardType(cc_num);
+    $elem.val(app.formatCardNumber(cc_num, card_type));
+    app.addCardClassIdentifier($elem, card_type);
+  };
+
+  app.addCardClassIdentifier = function($elem, card_type) {
+    var classIdentifier = app.el_ccUnknown;
+    if (card_type) {
+      classIdentifier = app.el_ccTypePrefix + card_type.code;
+      app.setMaxLength($(app.el_cvv), card_type.security);
+    } else {
+      app.setMaxLength($(app.el_cvv));
+    }
+
+    if (!$elem.hasClass(classIdentifier)) {
+      var classes = '';
+      for(var i in app.cardTypes) {
+        classes += app.el_ccTypePrefix + app.cardTypes[i].code + ' ';
+      }
+      $elem.removeClass(classes + app.el_ccUnknown);
+      $elem.addClass(classIdentifier);
+    }
+  };
+
+  
+  app.init = function() {
+
+    $(document).find(app.el_cardNumber).each(function() {
+      var $elem = $(this);
+      if ($elem.is('input')) {
+        $elem.on('input', function() {
+          app.monitorCcFormat($elem);
+        });
+      }
+    });
+    
+    app.addListeners();
+    
+  }();
+  
+})();
+
+    //전체 이미지
+    AOS.init();
+  </script>
+</body>
+</html>

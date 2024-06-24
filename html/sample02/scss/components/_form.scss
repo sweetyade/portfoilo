@@ -470,7 +470,7 @@ select {
 
   label {
     @include flex;
-    gap: 0.5625rem;
+    gap: 1rem;
   }
   .check_label {
     @include font_body_1;
@@ -485,6 +485,7 @@ select {
       border: 2px solid var(--text-disabled);
       position: relative;
       transition: all 0.1s ease;
+      margin: 0.5625rem;
     }
 
     &:checked ~ label .check::before {
@@ -562,7 +563,8 @@ select {
       border: 2px solid var(--text-disabled);
       position: relative;
       transition: all 0.1s ease;
-      background-color: var(--lignt-color);
+      background-color: var(--paper-bg);
+      margin: 0.5625rem;
     }
 
     &:disabled {
