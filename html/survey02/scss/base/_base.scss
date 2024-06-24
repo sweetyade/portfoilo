@@ -1,0 +1,134 @@
+/***************************************************************
+    01. base
+***************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  outline: 0;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  // flex-shrink: 0;
+}
+
+:root {
+  width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  tab-size: 4;
+  background-color: $light;
+  cursor: default;
+  user-select: none;
+  text-size-adjust: 100%;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  min-height: 100svh;
+  scroll-behavior: smooth;
+  color: $dark;
+}
+
+main,
+header,
+section,
+nav,
+footer,
+aside,
+article,
+figure {
+  display: block;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+  appearance: none;
+  border-radius: 0;
+  outline-style: none;
+  margin: 0;
+  border: none;
+  transition: all .2s;
+  color: $dark;
+}
+
+input:foucs {
+  outline: none;
+}
+
+input::-webkit-input-placeholder {
+  color: $gray03;
+  font-size: inherit;
+  line-height: 1;
+}
+
+[type="radio"],
+[type="checkbox"] {
+  appearance: auto;
+  padding: 0;
+}
+
+[type="number"] {
+  appearance: textfield;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+  // height: auto;
+}
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+[type="search"] {
+  appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+  appearance: none;
+}
+
+::-webkit-file-upload-button {
+  appearance: button;
+  font: inherit;
+}

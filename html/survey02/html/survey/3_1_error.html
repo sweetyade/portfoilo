@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>3-1.오류</title>
+</head>
+<body>
+  <main class="main">
+    <div class="fullpage">
+      
+      <div class="line_bg_gr top">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="cpl_center">
+        
+        <div class="con">
+          <p class="cpl_icon"><img src="../../images/cpl_noti.svg" alt=""></p>
+          <p class="title">오류가 발생했어요</p>
+          <p class="sub_txt">일시적인 오류가 발생했어요<br>
+            새로고침 후 다시 한번 확인해주세요</p>
+        </div>
+      </div>
+      <div class="line_bg_gr bottom">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+       <!-- 모바일 미노출 -->
+       <div class="back_btn">
+        <p class="back_icon" onclick="location.href='2_servey_index.html';"><img src="../../images/arrow_back.svg" alt=""></p>
+        <p class="back_txt">돌아가기 <span class="back_time timer" data-seconds-left=30></span></p>
+      </div>
+    </div>
+  </main>
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/jquery.simple.timer.js"></script>
+
+  <script>
+  //timer
+  $(function(){
+      $('.timer').startTimer({
+        onComplete: function(element){
+          $('html, body').addClass('bodyTimeoutBackground');
+        }
+      }).click(function(){ location.reload() });
+    })
+  </script>
+</body>
+</html>

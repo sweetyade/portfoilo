@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>1-2.이메일로 회원가입</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="back"><img src="../../images/icon/system_back.svg" alt="뒤로가기" /></div>
+      <div class="page_name">이메일로 회원가입</div>
+      <div class="header_icon"></div>
+    </header>
+
+    <main class="main">
+      <section class="inner_1_25 inner_tb_1_5 pd_bottom">
+        <!-- 이메일주소 -->
+        <div class="input_block mb_1">
+          <label for="input01">이메일 주소</label>
+          <div class="input_div">
+            <input type="text" id="input01" class="clearInput" placeholder="이메일 주소를 입력해주세요." required />
+            <div class="btnClear"></div>
+          </div>
+        </div>
+
+        <!--비밀번호 -->
+        <div class="input_block mb_1">
+          <label for="pass01">비밀번호</label>
+          <div class="input_div mb_0_5">
+            <input type="password" id="pass01" class="clearInput inputPass" placeholder="비밀번호를 입력해주세요." required />
+            <div toggle="#pass01" class="pass_view"></div>
+            <div class="btnClear"></div>
+          </div>
+          <div class="input_div">
+            <input type="password" id="pass02" class="clearInput inputPass" placeholder="비밀번호를 한번 더 입력해주세요" required />
+            <div toggle="#pass02" class="pass_view"></div>
+            <div class="btnClear"></div>
+          </div>
+        </div>
+
+        <!-- 이름 -->
+        <div class="input_block mb_1">
+          <label for="input02">이름</label>
+          <div class="input_div">
+            <input type="text" id="input02" placeholder="한글이나 영문 2~5글자 이내로 입력해주세요" />
+          </div>
+        </div>
+
+        <!-- 휴대폰번호 -->
+        <div class="input_block">
+          <label for="number01">휴대폰 번호</label>
+          <div class="input_div mb_0_5">
+            <input type="number" id="number01" class="clearInput" maxlength="11" placeholder="-를 제외하고 입력해주세요" inputmode="numeric" oninput="maxLengthChk(this)" required />
+            <button class="btn_m btn_white input_btnl">인증번호 발송</button>
+            <div class="btnClear"></div>
+          </div>
+          <div class="input_div">
+            <input type="number" id="number24" class="clearInput" maxlength="4" placeholder="인증번호를 입력해주세요" inputmode="numeric" oninput="maxLengthChk(this)" required />
+            <button class="btn_m btn_white input_btns">확인</button>
+            <div class="btnClear"></div>
+            <p class="input_time">3:00</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="inner_1_25 inner_tb_1_5 pd_bottom_l">
+        <div class="join_check check_block">
+          <div class="input_check">
+            <input type="checkbox" id="check_all" />
+            <label for="check_all" class="ck_line span1_fb">약관에 모두 동의합니다</label>
+          </div>
+          <div class="check_list">
+            <div class="input_check">
+              <input type="checkbox" name="terms" id="check01" />
+              <label for="check01" class="ck_line">[필수] 서비스 이용약관 <span class="checkbox_link">보기</span></label>
+            </div>
+            <div class="input_check">
+              <input type="checkbox" name="terms" id="check02" />
+              <label for="check02" class="ck_line">[필수] 개인정보 수집 및 이용동의<span class="checkbox_link">보기</span></label>
+            </div>
+            <div class="input_check">
+              <input type="checkbox" name="terms" id="check03" />
+              <label for="check03" class="ck_line">[필수] 14세 이상 회원가입 동의</label>
+            </div>
+            <div class="input_check">
+              <input type="checkbox" name="terms" id="check04" />
+              <label for="check04" class="ck_line">[선택] 마케팅 정보 수신동의<span class="checkbox_link">보기</span></label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="btn_fix">
+        <button class="btn_b btn_basic popupbtn">회원가입 완료하기</button>
+      </div>
+    </main>
+
+    <!-- 이메일주소 입력안내 팝업-->
+    <div class="popup">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 팝업 컨텐츠 -->
+      <div class="popup_wrap">
+        <p class="pop_title">이메일 주소를 입력해주세요</p>
+        <p class="pop_txt">회원가입을 위해 이메일 주소가 필요해요</p>
+        <!-- 버튼 2개 -->
+        <div class="pop_btn">
+          <button class="btn_m btn_light btnClose">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+      /* popup */
+      $(".popupbtn").on("click", function () {
+        $(".popup, body").addClass("open");
+      });
+
+      $(".overlay, .btnClose").on("click", function () {
+        $(".popup, .modal, body").removeClass("open");
+      });
+
+      // /* ---- 삭제버튼 ------- */
+      $(document).ready(function () {
+        $(".input_div").each(function () {
+          $(this)
+            .find(".clearInput")
+            .on("keyup focus", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 1");
+
+              if ($(this).val().length == 0) {
+                $(this).siblings(".btnClear").attr("style", "opacity: 0");
+              } else {
+                $(this).siblings(".btnClear").attr("style", "opacity: 1");
+              }
+            });
+
+          $(this)
+            .find(".clearInput")
+            .on("blur", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 0");
+            });
+
+          $(this)
+            .find(".btnClear")
+            .on("click touchstart", function () {
+              $(this).closest(".input_div").find(".clearInput").val("");
+              $(this).closest(".input_div").find(".btnClear").attr("style", "opacity: 0");
+              return false;
+            });
+        });
+      });
+
+      /* 패스워드 */
+      $(".pass_view").click(function () {
+        $(this).toggleClass("inputPass");
+        var input = $($(this).attr("toggle"));
+        if (input.attr("type") == "password") {
+          input.attr("type", "text");
+        } else {
+          input.attr("type", "password");
+        }
+      });
+
+      $(document).ready(function () {
+        $(".pass_view").on("click", function () {
+          $(this).toggleClass("pass_view-on");
+        });
+      });
+
+      /* 넘버인풋 맥스 */
+      function maxLengthChk(object) {
+        if (object.value.length > object.maxLength) {
+          object.value = object.value.slice(0, object.maxLength);
+        }
+      }
+
+      /* 체크박스 전체선택 해제 */
+      $("#check_all").on("click", function () {
+        if ($(this).is(":checked")) {
+          $(".check_list input").prop("checked", true);
+        } else {
+          $(".check_list input").prop("checked", false);
+        }
+      });
+
+      $(".check_list input").on("click", function () {
+        var total = $(".check_list input").length;
+        var checked = $(".check_list input:checked").length;
+
+        if (total != checked) {
+          $("#check_all").prop("checked", false);
+        } else {
+          $("#check_all").prop("checked", true);
+        }
+      });
+    </script>
+  </body>
+</html>

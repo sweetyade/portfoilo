@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/rcommon.css">
+  <link rel="stylesheet" href="../../css/guide.css">
+  <link rel="stylesheet" href="../../css/rstyle.css">
+  <title>회원정보수정</title>
+  <style>
+    .user_pg .user_sec{
+      padding: 2.5rem 2rem;
+    }
+
+    .repass .btnClear{
+      top: .875rem;
+    }
+    
+
+    @media (max-width: 499px) {
+      .user_pg .user_sec{
+      padding: 2.5rem 1.5rem;
+    }
+
+    .repass .btnClear{
+      top: .6rem;
+    }
+    }
+  </style> 
+
+</head>
+<body>
+    <div class="rmain_wrap user_pg" style="background-color: #f5f5f5;">
+      <section class="user_sec mb_1">
+
+
+        <!-- 오류메세지는 회원가입 시와 똑같이 노출 -->
+        <!-- 카카오 아이디 일때  .lg_kakao / 애플 아이디 일때 .lg_apple 클래스 추가 -->
+        <div class="input_basic mb_1_5">
+          <label for="lg_email">이메일 주소</label>
+          <input type="text" class="rinput" value="kthd@kthd.co.kr" id="lg_email" disabled>
+        </div>
+
+        <div class="input_basic mb_1_5 lg_kakao">
+          <label for="lg_email">카카오 아이디 일 때</label>
+          <input type="text" class="rinput" value="kakao_" id="lg_email" disabled>
+        </div>
+
+        <div class="input_basic mb_1_5 lg_apple">
+          <label for="lg_email">애플 아이디 일 때</label>
+          <input type="text" class="rinput" value="apple_" id="lg_email" disabled>
+        </div>
+
+
+        <div class="input_basic" style="margin-bottom: .75rem">
+          <label for="lg_pass">비밀번호</label>
+          <input type="password" class="rinput" placeholder="비밀번호를 입력해주세요" pattern="" id="lg_pass" required>
+          <p class="input_info error" style="display: none">특수문자가 포함되어 있는지 확인해주세요</p>
+        </div>
+        <div class="input_basic repass mb_1_5">
+          <input type="password" class="rinput" placeholder="비밀번호를 한번 더 입력해주세요" value="제대로 입력 했을 때" pattern="제대로 입력 했을 때" id="lg_pass2" required>
+          <p class="input_info error" style="display: none">비밀번호가 동일한지 다시한번 확인해주세요</p>
+        </div>
+
+        <div class="input_basic mb_1_5">
+          <label for="lg_name">이름</label>
+          <input type="text" class="rinput" placeholder="한글이나 영문 2~5글자 이내로 입력해주세요" value="최대오글자" id="lg_email">
+          <p class="input_info error" style="display: none">이름은 한글이나 영문 2~5글자로 작성해주세요</p>
+        </div>
+        
+        <div class="input_basic">
+          <label for="lg_phone" class="mb_1">휴대폰 번호</label>
+          <div class="input_btmix" style="margin-bottom: .75rem;">
+            <input type="text" class="rinput mix_mi" placeholder="-없이 번호만 입력해주세요" id="lg_phone" value="01012345678" required>
+            <input type="submit" value="인증번호 발송" class="btn_blue rinput mix_r">
+            <p class="input_info error" style="display: none">휴대폰 번호 형식이 올바르지 않습니다</p>
+          </div>
+          <div class="input_btmix" style="margin-bottom: .75rem;">
+            <input type="text" class="rinput mix_si" placeholder="인증번호를 입력해주세요" required>
+            <input type="submit" value="확인" class="btn_blue rinput mix_s">
+            <p class="phone_time">3:00</p>
+            <p class="input_info cnf" style="display: none">휴대폰 인증이 완료되었습니다.</p>
+          </div>
+        </div>
+
+        <div class="input_basic">
+          <label for="lg_add" class="mb_1">배송지 주소</label>
+          <div class="input_btmix" style="margin-bottom: .75rem;">
+            <input type="text" class="rinput" placeholder="우편번호" id="lg_add" value="27393">
+            <input type="submit" value="주소검색" class="btn_blue rinput" style="background-color: var(--primary01)">
+          </div>
+          <input type="text" class="rinput" placeholder="기본 주소를 입력해주세요" id="" value="서울 강남구 논현로135길 10 (논현동)" style="margin-bottom: .75rem;">
+          <input type="text" class="rinput" placeholder="상세주소를 입력해주세요 (예 103동 201호)" value="시온타워 101호" id="" style="margin-bottom: .75rem;">
+        </div>
+      </section>
+
+      <section class="user_sec mb_1">
+        <div class="input_basic">
+          <label for="lg_code">추천인 코드</label>
+          <div class="input_btmix" style="margin-bottom: .75rem;">
+            <input type="text" class="rinput mix_si" placeholder="추천인 코드를 입력해주세요" id="lg_code" required>
+            <input type="submit" value="확인" class="btn_blue rinput mix_s">
+            <p class="input_info error">유효하지 않은 추천인 코드입니다</p>
+          </div>
+      </section>
+
+      <section class="user_sec mb_1">
+        <div class="input_basic">
+          <label for="lg_code">추천인 코드 <span class="primary_c01 bold_f" style="margin-left: .3rem;">등록완료</span></label>
+          <input type="text" class="rinput mix_si" placeholder="추천인 코드를 입력해주세요" value="UURPIPIU" id="lg_code" disabled>
+      </section>
+
+
+      <section class="user_sec mb_4">
+        <div class="input_check">
+          <input type="checkbox" class="rinput" id="ckall">
+          <label for="ckall" class="ck_line ck_allt" style="display: flex; justify-content: space-between">마케팅 정보 수신동의 <a href="#" class="misc2_under gray_c02">보기</a></label>
+        </div>
+
+        <div class="user_ckall">
+          <div class="input_check">
+            <input type="checkbox" class="rinput" id="checkbox01">
+            <label for="checkbox01" class="ck_line">이메일을 받겠습니다.</label>
+          </div>
+          <div class="input_check">
+            <input type="checkbox" class="rinput" id="checkbox02">
+            <label for="checkbox02" class="ck_line">알림톡 또는 휴대폰 문자메세지를 받겠습니다.</label>
+          </div>
+        </div>
+      </section>
+
+      <div class="btn_center pd_base" style="padding-bottom: 2rem; ">
+        <button class="btn_b btn_blue mb_1_5">저장하기</button>
+        <a href="#" class="misc1_under gray_c02 mb_1">회원 탈퇴하기</a>
+      </div>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,487 @@
+
+/*input reset*/
+#contents input[type=range] { width:100%; -webkit-appearance: none; background: transparent; }
+#contents input[type="text"],textarea{-webkit-border-radius:0; -webkit-appearance:none;}
+#contents select {appearance: none; -webkit-appearance: none; background:url(../images/select_bg3.png) no-repeat 95% center; padding:10px 20px 10px 10px;}
+#contents select:focus{background:url(../images/select_bg4.png) no-repeat 95% center;}
+
+
+input[type="checkbox"] {background:#fff !important; border:1px solid #ddd;}
+
+select {width:100px;}
+
+
+
+.online_class h3{margin-bottom:5px;}
+.online_class .board_search{margin-top:20px;}
+
+.color_pink{color:#fe8385;}
+.color_blue{color:#2682c4}
+.color_green{color:#52bdb5}
+
+
+
+
+/*강의리스트*/
+.board_list .b_check{width:10%;}
+.board_list .b_class{width:74%; justify-content:flex-start;}
+.board_list .b_detail{width:16%;}
+.board_list li{flex-wrap:wrap; padding:10px 0 0; border-bottom:1px solid #ddd; align-items:center;}
+.board_list .board_top{padding:0;}
+
+.board_list .class_thumb{max-width:220px; width:33%;}
+.board_list .class_thumb img{width:100%;}
+.board_list .class_txt{width:67%; text-align:left; padding:20px; line-height:1.5rem;}
+.board_list .class_txt .class_loc{font-size:.875rem; color:#555; margin-bottom:10px;}
+.board_list .class_txt .class_subject{font-size:1.125rem;}
+.board_list .class_txt .class_chap{color:#999; margin:20px 0; font-size:.875rem;}
+
+.board_list .class_icon1{display:inline-block; background:#ff8286; font-size:.875rem; color:#fff; padding:3px 20px 2px; border-radius:14px; height:28px; line-height:1.5rem}
+.board_list .class_icon2{display:inline-block; background:#999; font-size:.875rem; color:#fff; padding:3px 20px 2px; border-radius:14px; height:28px; line-height:1.5rem}
+.board_list .class_cate{display:inline; margin-left:5px;}
+.board_list .b_detail button{background:#52bdb5; color:#fff; padding:10px 20px; height:40px; border-radius:20px; -webkit-transition:all 0.1s ease-in-out; -o-transition:all 0.1s ease-in-out; transition:all 0.1s ease-in-out;}
+.board_list .b_detail button:hover{background:#2682c4; -webkit-transition:all 0.1s ease-in-out; -o-transition:all 0.1s ease-in-out; transition:all 0.1s ease-in-out;}
+
+.board_list .more_view{width:100%; background:#f9f9f9; margin-top:10px; padding:0 10px;}
+.board_list .more_view .more_btn{width:100%; cursor:pointer; font-size:.75rem; color:#999;}
+.board_list .more_view ul{background:#fff; font-size:.875rem; margin-bottom:10px;}
+.board_list .more_view li{line-height:1rem; padding:16px;}
+.board_list .more_view .more_check{width:10%;}
+.board_list .more_view .more_subject{width:60%;  text-align:left;}
+.board_list .more_view .more_cate{width:30%;  text-align:left; color:#999}
+.board_list .more_view .board_top p{text-align:center !important; color:#555;}
+
+
+/*btn*/
+.select_class .select_cancle{text-align:right; margin-top:10px;}
+.select_class .select_cancle button{padding:4px 10px; font-size:.75rem; border:1px solid #999; background:#f9f9f9; border-radius:5px;}
+.form_btn{text-align:center; margin:50px auto;}
+.form_btn button{display:inline-block; padding:13px 50px; height:50px; font-size:1rem; color:#fff; border-radius:25px; background:#52bdb5; -webkit-transition:all 0.1s ease-in-out; -o-transition:all 0.1s ease-in-out; transition:all 0.1s ease-in-out;}
+.form_btn button:hover{background:#2682c4; -webkit-transition:all 0.1s ease-in-out; -o-transition:all 0.1s ease-in-out; transition:all 0.1s ease-in-out;}
+
+
+
+
+/*강의리스트-과정전체보기*/
+.full_class{}
+.full_class .board_top p{font-size:.875rem;}
+.full_class .grid_flex{align-items:center;}
+.more_view .full_class li{padding:0;}
+.full_class .board_top .more_check{width:15%; display:block; text-align:center;}
+.full_class .board_top .more_subject{width:85%; padding:16px 0; border-left:1px solid #ddd;}
+.full_class .more_check{display:flex; width:15% !important; padding:16px;}
+.full_class label{margin-left:5px;}
+.full_class .full_class_dep{flex-wrap:wrap; width:85%; text-align:left; padding:16px; border-left:1px solid #ddd; justify-content: flex-start}
+.full_class .full_class_dep .more_subject_list{width:32.5%; margin-left:5px; display:flex; align-items:center; font-size:.75rem;}
+.full_class .full_class_dep p{line-height:2rem;}
+.full_class .font_bold{font-weight:500}
+
+
+
+/*선택한과정_픽스*/
+.sub_contents .con_in{}
+.class_fixed{position:fixed; width:100%; left:0; bottom:0; z-index:1;}
+.class_fixed .con_in{background:#fff; position:relative; border-right:1px solid #52bdb5; border-left:1px solid #52bdb5; padding:0; height:56px; transition:height .5s ease;}
+.class_fixed .con_in .select_btn{background:#52bdb5; color:#fff; text-align:center; padding:16px 0; cursor:pointer;}
+.class_fixed .con_in:hover{height:500px; transition:height .5s ease;}
+.class_fixed .select_pd{position:relative; padding:30px; height:56px; height:444px; overflow:auto;}
+.online_class .class_fixed .form_btn{justify-content:center; position:absolute; top:50px; right:30px; margin:0;}
+
+.board_list .class_cate.color_green{font-weight:500; position:relative; top:2px; font-size:1.25rem;}
+
+
+
+/*선택한과정*/
+.select_class .board_list{margin-top:30px;}
+.select_class .b_cate{width:16%;}
+.select_class .b_class{width:76%;}
+.select_class .b_check{width:8%;}
+
+.select_class ul li{padding-top:0;}
+.select_class .refundlist{background:#fff4f4; border-bottom:1px solid #999;}
+.select_class .nonelist{background:#f9f9f9; border-bottom:1px solid #999;}
+.select_class .refund_icon{width:16%;}
+.select_class .select_list{width:84%; border-left:1px solid #ddd;}
+.select_class .select_list li{padding:0; justify-content:flex-start; line-height:.875rem; line-height:1.5rem;}
+.select_class .select_list li i{font-size:.75rem; margin-left:3px;}
+.select_class .select_list li:last-child{border:none;}
+.select_class .select_list .select_subject{width:100%; align-items:center;}
+.select_class .select_list .select_cate{padding:20px 0; width:20%; text-align:center; font-size:.875rem;}
+.select_class .select_list .select_subject_dep1{width:80%; border-left:1px solid #ddd;}
+.select_class .select_list .select_subject_dep1 li{padding:0;}
+.select_class .select_list .select_subject_dep1 li > p{text-align:center; width:25%;}
+.select_class .select_list .select_subject_dep1 .select_subject_dep2{width:63%; border-left:1px solid #ddd;border-right:1px solid #ddd;}
+.select_class .select_list .select_subject_dep1 .select_subject_dep2 li{width:100%;}
+.select_class .select_list .select_subject_dep1 .select_subject_dep2 .select_title{width:100%; text-align:left; padding:20px}
+.select_class .select_list .select_check{width:12%;}
+.select_class .select_list .select_title{font-weight:500; font-size:.875rem;}
+.select_class .select_list .select_title a{font-weight:400; display:inline-block;}
+.select_class .select_list .select_title span::after{display:inline-block; width:1px; height:10px; background:#999; content:''; margin:0 10px;}
+.select_class .select_list .select_title span:first-child{margin-left:5px;}
+.select_class .select_list .select_title span:last-child::after{width:0;}
+.select_class .select_list .select_title i{cursor:pointer;-webkit-transition:all 0.1s ease-in-out; -o-transition:all 0.1s ease-in-out; transition:all 0.1s ease-in-out;}
+.select_class .select_list .select_title i:hover{color:#ff8286;-webkit-transition:all 0.1s ease-in-out; -o-transition:all 0.1s ease-in-out; transition:all 0.1s ease-in-out;}
+
+
+
+
+/*자세히보기*/
+.class_read{width:100%;}
+.class_read .info_top{background:#f9f9f9; padding:20px; border-bottom:1px solid #ddd;}
+.class_read .info_top .thumbnail{width:40%}
+.class_read .info_top .thumbnail img{width:100%; max-width:368px;}
+.class_read .info_top .info_txt{width:60%; padding-left:40px;}
+.class_read .class_loc{display:inline-block; font-size:.875rem; margin-left:5px;}
+.class_read .class_subject{margin-top:20px; font-size:1.25rem;}
+.class_read .class_chap{color:#999;}
+.class_read .info_txt .font_s{margin-top:50px;}
+
+.class_read .info_detail{padding:40px 0; border-bottom:1px solid #ddd;}
+.class_read .info_detail .block{margin-bottom:50px;}
+.class_read .info_detail .block .title{font-size:1.125rem; font-weight:500; border-left:5px solid #52bdb5; line-height:1rem; padding-left:5px; margin-bottom:20px;}
+.class_read .info_detail .block p{line-height:2rem;}
+
+.class_read .info_detail .block table{width:100%; border-top:2px solid #52bdb5;}
+.class_read .info_detail .block table th{padding:16px 0; border-bottom:1px solid #ddd; background:#f9f9f9; font-weight:500; border-right:1px solid #ddd;}
+.class_read .info_detail .block table td{padding:16px 0; text-align:center; border-bottom:1px solid #ddd; border-right:1px solid #ddd;}
+.class_read .info_detail .block table th:last-child, .class_read .info_detail .block table td:last-child{border-right:0;}
+
+
+
+
+.class_read_btn button{margin-top:20px; display:inline-block; padding:13px 50px; height:50px; font-size:1rem; color:#fff; border-radius:25px; background:#52bdb5; -webkit-transition:all 0.1s ease-in-out; -o-transition:all 0.1s ease-in-out; transition:all 0.1s ease-in-out;}
+.class_read_btn button:hover{background:#2682c4; -webkit-transition:all 0.1s ease-in-out; -o-transition:all 0.1s ease-in-out; transition:all 0.1s ease-in-out;}
+
+
+
+
+/*------------- 나의강의실 ------------*/
+.myclass h3{margin-bottom:5px;}
+.myclass > p > i{color:#ff8286; margin-right:5px;}
+
+.myclass .notice{ padding:30px; position:relative; overflow:hidden; margin-top:30px; line-height:2rem; font-size:.875rem; background:#f9f9f9 url(../images/myclass_bg.png) no-repeat 96% 20px; background-size:contain;}
+.myclass .notic .title{font-weight:500; font-size:1.125rem;}
+.myclass .notic .color_blue{font-weight:500;}
+.bg_ract{display:block; width:100px; height:100px; background:#ff8286; position:absolute; transform:rotate(45deg); top:-70px; left:-70px;}
+
+
+.myclass .board_list{margin-top:30px; border-top:1px solid #999;}
+.myclass .board_list .myclass_list{padding:0; border-top:1px solid #999;}
+.myclass .board_list .b_class{width:100%;}
+.myclass .board_list .myclass_list .class_thumb{width:12%; padding:20px 0;}
+.myclass .board_list .myclass_list .class_txt{padding:20px; width:58%; line-height:1.25rem;}
+.myclass .board_list .myclass_list .class_txt .class_subject{font-size:1rem;}
+.myclass .board_list .myclass_list .class_txt .class_date{font-size:.75rem; color:#999;}
+.myclass .board_list .myclass_list .class_txt .class_teach{font-size:.75rem; color:#999; margin-bottom:10px;}
+.myclass .board_list .myclass_list .class_txt .class_icon{display: inline-block;font-size: .625rem;padding: 2px 10px; border-radius: 14px;color: #fff;margin-right:10px;}
+.class_txt .icon_green{background:#52bdb5}
+.class_txt .icon_pink{background:#fe8385}
+.class_txt .icon_gray{background:#555}
+
+.myclass .class_per{bordeR-left:1px solid #ddd; border-bottom:1px solid #ddd; width:30%;}
+.myclass .class_per .class_perin{border-right:1px solid #ddd; width:33.3333%; font-size:.875rem;} 
+.myclass .class_per .class_perin p{padding:2px 0;}
+.myclass .class_per .class_perin .per_st{border-top:1px solid #ddd; font-size:2rem; font-weight:500; padding-top:15px;}
+.myclass .class_per .class_perin .per_st span{font-weight:400; font-size:.875rem;}
+
+.myclass .myclass_detail{margin-top:0; background:#f5f5f5; padding:20px; line-height:.75rem;}
+.myclass .myclass_detail .more_btn{font-size:.75rem; color:#999; cursor:pointer;}
+.myclass .myclass_detail .detail_view{margin-top:20px; font-size:.875rem;}
+.myclass .myclass_detail .detail_view .statusbar{padding:20px; margin-bottom:20px; background:#fff;}
+
+.myclass .myclass_detail .detail_view .statusbar .per_bar{width:50%; text-align:left;}
+.myclass .myclass_detail .detail_view .statusbar .per_bar p{display:inline-block;}
+.myclass .myclass_detail .detail_view .statusbar .per_bar .bar{margin-bottom:19px; line-height:1rem;}
+.myclass .myclass_detail .detail_view .statusbar .per_bar .color_pink, .myclass .myclass_detail .detail_view .statusbar .per_bar .color_blue, .myclass .myclass_detail .detail_view .statusbar .per_bar .color_green{font-weight:500; width:10%;}
+.myclass .myclass_detail .detail_view .statusbar .per_bar .per_title{width:20%;}
+.myclass .myclass_detail .detail_view .statusbar .per_bar .bar_base{background:#f5f5f5; height:18px; width:65%; vertical-align:middle;}
+.myclass .myclass_detail .detail_view .statusbar .per_bar .bar_pink{display:block; background:#fe8385; width:50%; height:100%;}
+.myclass .myclass_detail .detail_view .statusbar .per_bar .bar_blue{display:block; background:#2682c4; width:20%; height:100%;}
+.myclass .myclass_detail .detail_view .statusbar .per_bar .bar_green{display:block; background:#52bdb5; width:80%; height:100%;}
+
+.myclass .myclass_detail .detail_view .statusbar .test_info{width:50%;}
+.myclass .myclass_detail .detail_view .statusbar .test_info li{width:33.33333%; border-right:1px solid #ddd; border-bottom:0;}
+.myclass .myclass_detail .detail_view .statusbar .test_info li:last-child{border-right:0;}
+.myclass .myclass_detail .detail_view .statusbar .test_info li p{line-height:1.5rem;}
+.myclass .myclass_detail .detail_view .statusbar .test_info li .color_pink, .myclass .myclass_detail .detail_view .statusbar .test_info li .color_blue{font-size:1rem; margin-bottom:10px; font-weight:500;}
+
+.myclass .myclass_detail .detail_view .table_info{background:#fff; margin-bottom:20px;}
+.myclass .myclass_detail .detail_view .table_info .table{width:75%;}
+.myclass .myclass_detail .detail_view .table_info .table > p{background:#52bdb5; color:#fff; font-weight:500; padding:20px 0;}
+.myclass .myclass_detail .detail_view .table_info .table th{text-align:center; font-size:.875rem; border-bottom:2px solid #999; border-right:1px solid #ddd; padding:20px 0; font-weight:500;}
+.myclass .myclass_detail .detail_view .table_info .table td{font-size:.75rem; text-align:center; padding:20px 0;border-right:1px solid #ddd; border-bottom:1px solid #ddd;}
+.myclass .myclass_detail .detail_view .table_info .table th:last-child, .myclass .myclass_detail .detail_view .table_info .table td:last-child{border-right:0;}
+
+.myclass .myclass_detail .detail_view .table_info .info_banner{width:25%;}
+.myclass .myclass_detail .detail_view .table_info .info_banner a{text-decoration:none;}
+.myclass .myclass_detail .detail_view .table_info .info_banner div{padding:30px 0 20px; width:70%; margin:0 auto; height:50%;}
+.myclass .myclass_detail .detail_view .table_info .info_banner > div p{font-weight:500; font-size:1rem; text-align:left; padding-left:80px;}
+.myclass .myclass_detail .detail_view .table_info .info_banner > div .color_gray{font-size:.875rem; color:#999; padding-top:15px;}
+.myclass .myclass_detail .detail_view .table_info .banner_class{background:url(../images/myclass_icon1.png) no-repeat left center; background-size:60px; border-bottom:1px solid #ddd;}
+.myclass .myclass_detail .detail_view .table_info .banner_file{background:url(../images/myclass_icon2.png) no-repeat left center; background-size:60px;}
+
+.myclass .myclass_detail .detail_view .myclass_ul{background:#fff; border-top:2px solid #999;}
+.myclass .myclass_detail .detail_view .myclass_ul li{padding:20px 0; line-height:1rem;}
+.myclass .myclass_detail .detail_view .myclass_ul .more_chap{width:10%; font-size:.75rem;}
+.myclass .myclass_detail .detail_view .myclass_ul .more_chapinfo{width:55%; text-align:left;}
+.myclass .myclass_detail .detail_view .myclass_ul .more_chapinfo .more_subject{margin-bottom:10px; font-weight:500;}
+.myclass .myclass_detail .detail_view .myclass_ul .more_chapinfo span{display:block; font-size:.75rem; color:#999; line-height:1rem;}
+.myclass .myclass_detail .detail_view .myclass_ul .font_s{width:15%;}
+.myclass .myclass_detail .detail_view .myclass_ul .more_chapbtn{width:20%;}
+
+.myclass .myclass_detail .detail_view .myclass_ul .more_chapbtn p{cursor:pointer; color:#fff; width:50%; margin:3px auto; font-size:.75rem; padding:7px 0; border-radius:15px;-webkit-transition:all 0.1s ease-in-out; -o-transition:all 0.1s ease-in-out; transition:all 0.1s ease-in-out;}
+.myclass .myclass_detail .detail_view .myclass_ul .more_chapbtn .more_btn2{background:#52bdb5;}
+.myclass .myclass_detail .detail_view .myclass_ul .more_chapbtn .more_btn3{background:#555;}
+.myclass .myclass_detail .detail_view .myclass_ul .more_chapbtn .more_btn4{background:#2682c4;}
+.myclass .myclass_detail .detail_view .myclass_ul .textbg{background:#f1f9ff;}
+.myclass .myclass_detail .detail_view .myclass_ul .more_chapbtn p:hover{opacity:.9;-webkit-transition:all 0.1s ease-in-out; -o-transition:all 0.1s ease-in-out; transition:all 0.1s ease-in-out;}
+
+
+
+
+
+/*수강신청확인*/
+.online_class .select_class{margin-top:50px}
+.online_class .signup .board_list{padding:30px 0; border-top:0;}
+.online_class .signup .board_list .board_top{border-top:2px solid #999; margin-top:30px; line-height:1rem; padding:20px 0;}
+.online_class .signup .board_list .b_cate{width:16%;}
+.online_class .signup .board_list .b_class{width:74%;}
+.online_class .signup .board_list .b_check{width:10%;}
+.online_class .signup .board_list .select_cate{width:20%; padding:0 10px;}
+.online_class .signup .board_list .select_title{width:40%; text-align:left; padding-left:20px;}
+.online_class .signup .board_list .select_date{width:35%; text-align:left; padding-left:20px; display: none;}
+.online_class .signup .board_list .select_date input{padding:10px !important; width:42%; border:1px solid #ddd; height:40px !important;}
+.online_class .signup .board_list .select_date input:hover{border:1px solid #2682c4;}
+.signup .select_list .select_subject_dep1 .select_subject_dep2{width: 80%; border-right: 0;}
+.signup .select_list .select_item{width: 82%; border-right: 1px solid #ddd;} 
+.signup .select_list .select_check{width: 18%;}
+.signup .select_list .select_subject_dep1 .select_subject_dep2 .select_title{padding: 20px;}
+.online_class .signup .board_list .select_date{padding: 0 20px 20px; width: 100%;}
+
+
+.select_class .write_form{padding-bottom:20px; border-top:0;}
+.select_class .write_form div{flex-wrap:wrap; justify-content:flex-start; padding:10px 0; align-items: center}
+.select_class .write_form > div > div{width:80%;}
+.select_class .write_form > div > div > p{width:45%; padding:10px 0;}
+.select_class .write_form > div > div > p > label{width:60%}
+.select_class .write_form p{border-bottom:0; width:100%; padding-left:20%;}
+.select_class .write_form label{width:20%; text-align:left;}
+.select_class .write_form div span a, .select_class_form .write_form a{display:inline-block; font-size:.875rem; margin-left:10px; background:#ff8286; color:#fff; padding:5px 10px;}
+.select_class .write_form div span a:hover, .select_class_form .write_form a:hover{text-decoration:none;}
+
+
+.select_class_form{margin-top:50px;}
+.select_class_form .write_form{padding-top:30px; border-top:2px solid #555; justify-content:flex-start; align-items:center; }
+.select_class_form .write_form > div{flex-wrap:wrap; justify-content:flex-start; align-items: center; border-bottom:1px solid #ddd;}
+.select_class_form .write_form > div > div{flex-wrap:wrap; justify-content:flex-start; align-items: center; width:80%; padding:10px 0;}
+.select_class_form .write_form > div > div > p{border-bottom:0; padding:0 0 10px 10px; display:flex}
+.select_class_form .write_form label{width:20%;}
+.select_class_form .write_form .form_check, .select_class_form .write_form .form_check p{border-bottom:0; width:100%;}
+.select_class_form .write_form .form_check span.color_blue{padding-left:20px; margin-top:5px}
+.select_class_form > div > div > label{box-sizing: border-box;padding-left: 20px;}
+
+/*수강신청내역*/
+.online_class .select_class .form_btn{justify-content:center;}
+
+
+
+/*학습종료과정*/
+.myclass .notice.bg2{background:#f9f9f9 url(../images/myclass_bg2.png) no-repeat; background-position:95% center; background-size:120px}
+.cml_list .class_subject2{font-size:1.25rem}
+.myclass .board_list .cml_list .class_txt{width:70%;}
+.myclass .board_list .cml_list .class_cate{font-size:.875rem; margin-left:0; line-height:2rem;}
+.myclass .notice .title{font-size:1rem; font-weight:500;}
+.myclass .board_list .cml_list .info_cml{width:25%; overflow:hidden;}
+.myclass .board_list .cml_list .info_cml .font_s{height:33.3333%; text-align:left; padding:16px 30px;}
+.myclass .board_list .cml_list .info_cml .color_gray{margin-top:10px;}
+.myclass .board_list .cml_list .info_cml p > span{font-size:1.125rem; font-weight:500; margin-left:10px;}
+
+
+
+@media screen and (max-width: 1024px) {
+    .select_class .write_form > div > div > p{width:50%;}
+    .select_class .write_form .wd150{max-width:120px;}
+    .select_class .wd400, .select_class_form .wd400{max-width:240px; font-size:.75rem;}
+    .myclass .class_per .class_perin .per_st{font-size:1.5rem;}
+    .myclass .myclass_detail .detail_view .statusbar .per_bar .per_title{width:25%;}
+    .myclass .myclass_detail .detail_view .statusbar .per_bar .bar_base{width:60%;}
+    .myclass .myclass_detail .detail_view .table_info .info_banner div{background-size:40px; background-position:0 center;}
+    .myclass .myclass_detail .detail_view .table_info .info_banner > div p{padding-left:50px;}
+    .myclass .myclass_detail .detail_view .table_info .info_banner > div .color_gray{padding-left:50px; padding-top:10px;}
+    
+    .select_class .write_form div span a, .select_class_form .write_form a{font-size:.75rem;}
+    .select_class_form .write_form .form_check label{width:80% !important;}
+    .select_class_form .write_form .form_check span.color_blue{padding-left:10px;}
+    
+    .myclass .board_list .cml_list .info_cml .font_s{padding:16px 20px}
+    
+    /*과정선택*/
+    .full_class .board_top .more_check,.full_class .more_check{width:20% !important;}
+    .full_class .board_top .more_subject, .full_class .full_class_dep{width:80%;}
+    .full_class .full_class_dep .more_subject_list{width:49%;}
+    .select_class .select_list .select_cate{padding:10px 16px}
+}
+
+@media screen and (max-width: 425px) {
+    .board_list .board_top .b_detail, .board_list .board_top .b_check, .board_list .board_top .more_cate, .board_list .board_top .more_check, .select_class .board_top .b_cate{display:none;}
+    .board_list li{padding:20px 0 0;}
+    .board_list .board_top p{width:100%;}
+    .board_list .b_check{width:10%;}
+    .board_list .b_class{width:90%;}
+    .board_list .b_class{flex-wrap:wrap; justify-content:flex-start;}
+    .board_list .class_thumb{width:30%;}
+    .board_list .class_txt{width:70%; padding:0 0 0 10px;}
+    .board_list .class_txt .class_loc{margin-bottom:5px; line-height:100%; font-size:.75rem}
+    .board_list .class_txt .class_subject{font-size:.875rem; line-height:180%;}
+    .board_list .class_txt .class_chap{font-size:.75rem;}
+    .board_list .class_icon1, .board_list .class_icon2{font-size:.625rem; padding:2px 10px; height:auto;}
+    .board_list .class_cate{font-size:.75rem;}
+    .board_list .b_detail{width:60%; text-align:left; margin-left:40%;}
+    .board_list .b_detail button{padding:8px; width:100%; height:auto; margin:20px 0 10px;}
+
+    .board_list .more_view .more_btn{line-height:2.5rem;}
+    .board_list .more_view li{padding:12px; flex-wrap:wrap;}
+    .board_list .more_view .more_check{text-align:left;}
+    .board_list .more_view .more_subject{width:90%;}
+    .board_list .more_view .more_cate{width:90%; margin-left:10%; font-size:.75rem; margin-top:5px;}
+    
+    
+    .select_class .refund_icon{width:20%;}
+    .select_class .select_list{width:80%;}
+    .select_class .select_list .select_subject{text-align:left; flex-wrap:wrap;}
+    .select_class .select_list .select_cate{display:none;}
+    .select_class .select_list .select_subject_dep1{width:100%; border-left:0;}
+    .select_class .select_list .select_subject_dep1 li{padding:0;}
+    .select_class .select_list .select_subject_dep1 .select_subject_dep2{width:100%; border-left:0;}
+    .select_class .select_list .select_subject_dep1 .select_subject_dep2 li{text-align:left;}
+    .select_class .select_list .select_subject_dep1 .select_subject_dep2 .select_title{padding:10px;}
+    
+    
+    .form_btn button{padding:12px 32px; height:44px; font-size:.875rem; border-radius:22px;}
+
+    
+    .class_read .info_top{padding:10px; flex-wrap:wrap;}
+    .class_read .info_top .thumbnail{width:100%;}
+    .class_read .info_top .info_txt{width:100%; padding-left:0; margin-top:20px;}
+    .class_read .class_loc{font-size:.75rem;}
+    .class_read .class_subject{font-size:1rem; margin-top:10px;}
+    .class_read .class_chap{font-size:.875rem;}
+    .class_read .info_txt .font_s{margin-top:20px;}
+    .class_read_btn button{padding:8px 20px; height:auto; font-size:.875rem;}
+    .class_read .info_detail .block .title{font-size:1rem;}
+    .class_read .info_detail .block table th{font-size:.75rem;}
+    .class_read .info_detail .block table td{font-size:.625rem;}
+    .class_read .info_detail .block p{line-height:1.5rem;}
+    
+    
+    .myclass .notice{padding:20px; font-size:.75rem; line-height:1.5rem; background-size:30%; background-position:98% bottom;}
+    .myclass .board_list .b_class{flex-wrap:wrap;}
+    .myclass .board_list .myclass_list .class_thumb{display:none;}
+    .myclass .board_list .myclass_list .class_txt{padding:16px 0; width:100%; line-height:1.25rem;}
+    .myclass .board_list .myclass_list .class_txt .class_subject{line-height:1.5rem;}
+    .myclass .board_list .myclass_list .class_txt .class_icon{margin-right:5px;}
+    .myclass .class_per{width:100%; border-top:1px solid #ddd; margin-bottom:20px;}
+    .myclass .class_per .class_perin{font-size:.75rem; line-height:2rem;}
+    .myclass .class_per .class_perin .per_st{font-size:1.25rem; padding:10px 0 5px; line-height:1.5rem;}
+    
+    .myclass .myclass_detail{padding:10px;}
+    .myclass .myclass_detail .detail_view{margin-top:10px;}
+    .myclass .myclass_detail .detail_view .statusbar{flex-wrap:wrap;}
+    .myclass .myclass_detail .detail_view .statusbar .per_bar{width:100%;}
+    .myclass .myclass_detail .detail_view .statusbar .per_bar .bar{margin-bottom:30px;}
+    .myclass .myclass_detail .detail_view .statusbar .per_bar .per_title{display:block; margin-bottom:5px; width:100%; font-weight:500;}
+    .myclass .myclass_detail .detail_view .statusbar .per_bar .color_pink, .myclass .myclass_detail .detail_view .statusbar .per_bar .color_blue, .myclass .myclass_detail .detail_view .statusbar .per_bar .color_green{width:20%;}
+    .myclass .myclass_detail .detail_view .statusbar .per_bar .bar_base{width:78%;}
+    
+    .myclass .myclass_detail .detail_view .statusbar .test_info{width:100%; margin-top:30px;}
+    .myclass .myclass_detail .detail_view .statusbar .test_info li{padding:0;}
+    .myclass .myclass_detail .detail_view .statusbar .test_info li p{line-height:1.5rem;}
+    .myclass .myclass_detail .detail_view .statusbar .test_info li .color_pink, .myclass .myclass_detail .detail_view .statusbar .test_info li .color_blue{font-size:.875rem; margin-bottom:10px; line-height:1rem;}
+    .myclass .myclass_detail .detail_view .statusbar .test_info li p{line-height:1rem;}
+    
+    
+    .myclass .myclass_detail .detail_view .table_info{flex-wrap:wrap;}
+    .myclass .myclass_detail .detail_view .table_info .table{width:100%;}
+    .myclass .myclass_detail .detail_view .table_info .table > p{padding:16px 0;}
+    .myclass .myclass_detail .detail_view .table_info .table th{font-size:.75rem; padding:10px 0;}
+    .myclass .myclass_detail .detail_view .table_info .table td{padding:10px 0;}
+    .myclass .myclass_detail .detail_view .table_info .info_banner{width:100%; padding:30px 0; display:flex;}
+    .myclass .myclass_detail .detail_view .table_info .info_banner div{width:50%; margin:0; padding:10px 10px 0; border-bottom:0; background-position:20px center; height:40px;}
+    .myclass .myclass_detail .detail_view .table_info .info_banner > div p{padding-left:60px; font-size:.875rem;}
+    .myclass .myclass_detail .detail_view .table_info .info_banner > div .color_gray{font-size:.75rem; padding-top:5px;}
+    .myclass .myclass_detail .detail_view .table_info .banner_class{border-right:1px solid #ddd;}
+    
+    
+    .myclass .myclass_detail .detail_view .myclass_ul li{flex-wrap:wrap;}
+    .myclass .myclass_detail .detail_view .myclass_ul .more_chap{width:100%; padding:0 20px; text-align:left;}
+    .myclass .myclass_detail .detail_view .myclass_ul .more_chapinfo{width:100%; padding:8px 20px;}
+    .myclass .myclass_detail .detail_view .myclass_ul .font_s{width:100%; text-align:left; padding:0 20px;}
+    .myclass .myclass_detail .detail_view .myclass_ul .more_chapbtn{width:100%; display:flex; padding:0 20px;}
+    .myclass .myclass_detail .detail_view .myclass_ul .more_chapbtn p{width:30%; margin:10px 10px 0 0;}
+    
+    
+    .online_class .signup .board_list{padding:30px 0 10px;}
+    .online_class .signup .board_list .board_top{padding:10px 0;}
+    .online_class .signup .board_list .b_class{width:80%;}
+    .online_class .signup .board_list .b_check{width:20%; display:block !important; }
+    .signup .refund_icon{display:none;}
+    .signup .select_list{border-left:0; width:100%;}
+    .online_class .signup .board_list .select_title{width:60%; padding:10px;}
+    .online_class .signup .board_list .select_date{width:100%; padding:0 20px 20px;}
+    .online_class .signup .board_list .select_date input{width:80px; padding:5px !important; height:30px !important}
+    
+    .signup .select_list .select_subject_dep1 .select_subject_dep2{width:100% !important}
+    .signup .select_list .select_item{width: 80%;}
+    .signup .select_list .select_check{width: 20% !important; text-align: center;}
+    .signup .select_list .select_check input[type="checkbox"]{margin: 0 !important;}
+    .signup .select_list .select_subject_dep1 .select_subject_dep2 .select_title{padding: 20px;}
+
+
+    .select_class .write_form label{width:100%;}
+    .select_class .write_form > div > div{width:100%;}
+    .select_class .write_form > div > div > p{width:100%; padding:0 0 5px 0;}
+    .select_class_form > div > div > label{padding-left:0;}
+
+    .select_class .wd400, .select_class_form .wd400{max-width:200px;}
+    .select_class .write_form div span a, .select_class_form .write_form a{margin:5px 0 0 0;}
+    .select_class_form .write_form label{width:100%;}
+    .select_class_form .write_form > div > div{width:100%; padding:0}
+    .select_class_form .write_form > div > div > p{padding:10px 0;}
+    .select_class_form .write_form > div{border-bottom:0; margin-top:10px;}
+    .select_class_form .write_form > div > label{margin-bottom:0}
+    .select_class_form .write_form .form_check span.color_blue{margin-top:0;}
+    .select_class_form .write_form .color_gray{0 0  10px 0;}
+    .online_class .select_class{margin-top:30px}
+    
+    .myclass .notice .title{font-size:.875rem;}
+    
+    .myclass .notice.bg2{background-size:60px; background-position:94% 90%;}
+    .myclass .board_list .cml_list .info_cml{width:100%; display:flex;}
+    .myclass .board_list .cml_list .info_cml .font_s{padding:20px 5px; width:33.3333%; text-align:center;}
+    .myclass .board_list .cml_list .info_cml p > span{display:block; margin:5px 0 0 0; font-size:1rem;}
+    .cml_list .class_subject2{font-size:1.125rem;}
+    
+    
+    /*과정선택*/
+    .full_class .more_check{width:20% !important; flex-direction: column; align-items: center}
+    .full_class .more_check input{margin-bottom:5px}
+    .board_list .more_view .full_class li{padding:0;}
+    .full_class .board_top .more_subject{width:100%; border-left:0;}
+    .full_class .full_class_dep{width:80%; padding:10px;}
+    .full_class .full_class_dep .more_subject_list{width:100%;}
+    .board_list .class_cate.color_green{font-size:1rem;}
+    
+    .class_fixed .select_pd{padding:16px;}
+    .class_fixed  .board_list{margin-top:50px;}
+    .select_class .select_list .select_subject_dep1 .select_subject_dep2{width:90%;}
+    .select_class .select_list .select_check{width:10%;}
+    .select_class .select_list .select_subject_dep1 .select_subject_dep2 .select_title{font-size:.75rem; line-height:1rem;}
+    
+    .online_class .class_fixed .form_btn{top:75px; right:16px;}
+    .online_class .class_fixed .form_btn button{height:auto; padding:10px 20px; line-height:.875rem;}
+    
+    
+    .class_fixed .con_in{height:51px;}
+    .class_fixed .select_pd{height:244px;}
+    .class_fixed .con_in:hover{height:300px;}
+}

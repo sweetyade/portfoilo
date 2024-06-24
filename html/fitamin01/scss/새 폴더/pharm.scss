@@ -1,0 +1,2071 @@
+
+/* ================= font ======================= */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+/* =================== variables =============== */
+$point_color: #3C5FC6;
+$point_color_2: #00aaff;
+$bg_gray: #f5f5f5;
+$bg_white: #fff;
+$text_color: #323232;
+$text_color_2: #9F9F9F;
+$border_color: #eee;
+$h1_f: 1.5rem;
+$h2_f: 1.25rem;
+$h3_f: 1.125rem;
+$normal_f: .875rem;
+$small_f: .75rem;
+$smaller_f: .6875rem;
+$medium_bold_f: 500;
+$semi_bold_f: 600;
+$bold_f: 700;
+$mb_1: 1rem;
+$mb_2: 2rem;
+$mb_3: 3rem;
+$mb_4: 4rem;
+$mb_5: 5rem;
+
+/* =================== basic =================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  font-size: 1rem;
+  color: $text_color;
+  line-height: 1.5;
+}
+
+::selection{
+  background-color: $point_color;
+  color: $bg_white;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: $text_color;
+  transition: .3s;
+}
+
+.new_img{
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+
+img{
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+img{
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.btn_basic{
+  background-color: $point_color;
+  color: $bg_white;
+  border-radius: .3rem;
+}
+
+/* ================== scroll bar =================== */
+::-webkit-scrollbar{
+  width: .5rem;
+  background: $bg_white;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #ddd;
+  border-radius: .5rem;
+}
+
+
+
+/* ===================== input =================== */
+label {
+  display: inline-block;
+}
+
+button {
+  border-radius: 0;
+}
+
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  line-height: inherit;
+  font-size: $normal_f;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  
+}
+
+input,
+select,
+textarea{
+    border: 1px solid $border_color;
+    padding: .8rem;
+    outline: none;
+    transition: .2s;
+    border-radius: .3rem;
+    font-size: $small_f;
+    color: $text_color;
+}
+
+input[type="text"]:hover,
+input[type="text"]:focus,
+input[type="password"]:hover,
+input[type="password"]:focus,
+select:hover,
+select:focus,
+textarea:hover,
+textarea:focus
+{
+  border-color: $point_color;
+}
+
+input:valid{
+  color: $text_color_2;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+[role=button] {
+  cursor: pointer;
+}
+
+select {
+  word-wrap: normal;
+}
+select:disabled {
+  opacity: 1;
+}
+
+[list]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+button:not(:disabled),
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled) {
+  cursor: pointer;
+}
+
+
+
+::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-size: calc(1.275rem + 0.3vw);
+  line-height: inherit;
+}
+@media (min-width: 1200px) {
+  legend {
+    font-size: 1.5rem;
+  }
+}
+legend + * {
+  clear: left;
+}
+
+::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-minute,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-year-field {
+  padding: 0;
+}
+
+::-webkit-inner-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  outline-offset: -2px;
+  -webkit-appearance: textfield;
+}
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+}
+
+::file-selector-button {
+  font: inherit;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+
+output {
+  display: inline-block;
+}
+
+iframe {
+  border: 0;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+
+/* ==================== button ==================== */
+.btn_white{
+  background-color: $bg_white;
+  font-size: $smaller_f;
+  padding: .3rem .5rem;
+  border-radius: .3rem;
+  border: 1px solid $text_color_2;
+}
+
+.btn_round{
+  background-color: $point_color;
+  color: $bg_white;
+  font-size: $normal_f;
+  padding: .5rem 0;
+  word-break:keep-all;
+  border-radius: .3rem;
+  margin: .3rem;
+  width: calc(50% - .6rem);
+  text-align: center;
+
+  &:hover{
+    background-color: $text_color;
+  }
+}
+
+.form_btn{
+  background-color: $point_color;
+  color: $bg_white;
+  padding: 1rem 0;
+  width: 70%;
+  border-radius: 3rem;
+  max-width: 300px;
+  transition: .3s;
+
+  &:hover{
+    background-color: $text_color;
+  }
+}
+
+.input_btn-w{
+  background-color: $text_color_2;
+  width: 120px;
+  color: $bg_white;
+  border-radius: .3rem;
+  transition: .3s;
+
+  &:hover{
+    background-color: $text_color;
+  }
+}
+
+.side_btn{
+  font-weight: $semi_bold_f;
+  text-align: center;
+  color: $bg_white;
+  padding: .5rem 0;
+  width: 100%;
+  display: block;
+  border-radius: 3rem;
+  border: 1px solid transparent;
+  margin-bottom: $mb_1;
+
+  &:hover{
+    opacity: .9;
+  }
+}
+
+.blue_btn{
+  background-color: $point_color;
+}
+.black_btn{
+  background-color: $text_color;
+}
+.white_btn{
+  border-color: $text_color;
+  color: $text_color;
+}
+.gray_btn{
+  background-color: $text_color_2;
+}
+
+.bg_yellow{
+  background-color: #f4c964;
+}
+
+.bg_red{
+  background-color: #ee7570;
+}
+
+.bg_blue{
+  background-color: $point_color;
+}
+/* ===================== layout ===================== */
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pharm_wrap{
+  height: 100vh;
+  overflow: hidden;
+  align-items: flex-start;
+}
+
+.f_s{
+  font-size: $small_f;
+}
+
+/* ===================== header ====================== */
+
+.header{
+  width: 20%;
+  max-width: 350px;
+  border-right: 1px solid #ddd;
+  height: 100%;
+  overflow: auto;
+  padding: 2rem;
+
+  .profile{
+    text-align: center;
+
+    .p_img{
+      width: 60px;
+      border-radius: 50%;
+      margin-bottom: $mb_1;
+    }
+
+    h1{
+      font-size: $h1_f;
+      margin-bottom: .5rem;
+    }
+
+    .p_name{
+      font-weight: $semi_bold_f;
+      color: $point_color_2;
+      margin-bottom: .5rem;
+    }
+  }
+
+  .header_smr{
+    margin: $mb_3 0;
+
+    .smr_check{
+      padding: 1rem;
+    }
+    .smr_block{
+      color: $bg_white;
+      padding: 1rem;
+      border-radius: .5rem;
+      line-height: 1.8;
+
+      a{
+        color: $bg_white;
+        font-weight: $bold_f;
+        text-decoration: underline;
+      }
+
+      &.box1{
+        background-color: $point_color;
+        margin-bottom: $mb_1;
+      }
+
+      &.box2{
+        background-color: $point_color_2;
+      }
+    }
+  }
+
+  .nav{
+    .nav_list{
+      
+      .nav_item{
+        border-bottom: 1px solid $border_color;
+        flex-wrap: wrap;
+        width: 100%;
+
+        & > p{
+          width: 100%;
+        }
+        
+        .nav_link{
+          line-height: 2;
+          display: flex;
+          align-items: center;
+          width: 100%;
+
+          i{
+            font-size: 1.5rem;
+            margin-right: .3rem;
+          }
+        }
+
+        &.sub-open i{
+          transform: rotate(180deg);
+        }
+
+        .sub_list{
+          width: 100%;
+          height: 0;
+          transition: all .25s ease;
+          overflow: hidden;
+
+          .sub_item{
+
+            &:last-child{
+              margin-bottom: $mb_1;
+            }
+            
+            .sub_link{
+              font-size: $small_f;
+              padding-left: 2rem;
+            }
+          }
+        }
+      }
+
+      .active{
+        color: $point_color;
+        font-weight: $semi_bold_f;
+      }
+    }
+
+    a:hover{
+      color: $point_color;
+    }
+  }
+}
+
+.smr_toggle{
+
+  input[type=checkbox]{
+    display: none;
+  }
+  
+  label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 35px;
+    height: 20px;
+    background: $text_color_2;
+    display: block;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  label:after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  
+  input:checked + label {
+    background: $point_color;
+  }
+  
+  input:checked + label:after {
+    left: calc(100% - 1px);
+    transform: translateX(-100%);
+  }
+}
+
+/* ===================== main ===================== */
+.pharm_main{
+  width: 90%;
+  position: relative;
+  background-color: $bg_gray;
+  height: 100%;
+
+  .pharm_support{
+    
+    .support_top{
+      border-bottom: 1px solid $border_color;
+      background-color: $bg_white;
+      padding: 1rem 2rem;
+      box-shadow: 0 0px 3px 0 rgba(0,0,0,.05);
+
+      h2{
+        font-size: $h2_f;
+      }
+
+      .support_search{
+        width: 300px;
+        background-color: $bg_gray;
+        padding: 0;
+        border-radius: .5rem;
+        border: 1px solid transparent;
+        transition: .3s;
+
+        .top_search{
+         width: 100%;
+         max-width: 400px;
+         border: none;
+         background-color: transparent;
+
+         &::placeholder{
+          color: $text_color_2;
+         }
+        }
+
+        .search_btn{
+          background-color: $bg_white;
+          background-color: transparent;
+          width: 40px;
+
+          i{
+            font-size: 1.2rem;
+            color: $text_color_2;
+          }
+        }
+
+        &:hover{
+          border-color:$point_color;
+        }
+      }
+    }
+  }
+
+  .pharm_container{
+    padding: 2rem;
+
+    .support_menu{
+      margin-bottom: $mb_1;
+  
+      a{
+        font-size: $normal_f;
+        display: inline-block;
+        padding: .5rem 1rem;
+        background-color: transparent;
+        border-radius: .3rem;
+        margin-right: .5rem;
+        transition: .3s;
+  
+        &.active{
+          background-color: $point_color;
+          color: $bg_white;
+          font-weight: $semi_bold_f;
+        }
+  
+        &:hover{
+          background-color: $point_color;
+          color: $bg_white;
+        }
+      }
+    }  
+  
+    .support_list{
+      height: calc(100vh - 280px);
+      overflow: auto;
+      padding-right: $mb_1;
+  
+      .support_item{
+        background-color: $bg_white;
+        margin-bottom: $mb_1;
+        padding: $mb_1 $mb_2;
+        border-radius: .5rem;
+        transition: .3s;
+  
+        &:hover{
+          box-shadow: 0 0 5px 0 rgba(0,0,0,0.05);
+        }
+
+        .spt_data{
+          width: 80%;
+          
+          .spt_block{
+            line-height: 2;
+            justify-content: flex-start;
+            width: 100%;
+
+            .spt_title{
+              font-weight: $bold_f;
+              width: 20%;
+            }
+
+            .spt_txt{
+              width: 80%;
+            }
+          }
+        }
+
+        .spt_btn{
+          width: 20%;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+
+  .pagenation{
+    text-align: center;
+    margin-top: $mb_2;
+    justify-content: center;
+    
+
+    a{
+      font-size: $small_f;
+      display: inline-flex;
+      align-items: center;
+      background-color: #fff;
+      width: 30px;
+      height: 30px;
+      justify-content: center;
+      margin: 0 .3rem;
+      border-radius: 3rem;
+      transition: .3s;
+
+      &.active, 
+      &:hover{
+        background-color: $point_color;
+        color: $bg_white;
+      }
+    }
+  }
+}
+
+/* ==================== 프로필 관리 ===================== */
+.check_pass{
+  margin-top: 50vh;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  text-align: center;
+  background-color: $bg_white;
+  border-radius: 1rem;
+  padding: 2rem 3rem;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,.05);
+
+  h2{
+    margin-bottom: $mb_2;
+  }
+
+  strong{
+    color: $point_color;
+  }
+
+  .text{
+    font-size: $small_f;
+    margin-bottom: $mb_1;
+    border-bottom: 1px solid $border_color;
+    padding-bottom: $mb_1;
+  }
+}
+
+.passchk_form{
+  text-align: left;
+
+  .input_wrap{
+    display: flex;
+    align-items: center;
+    margin-bottom: $mb_1;
+    
+    textarea{
+      color: $text_color_2;
+    }
+    
+    .label_txt{
+      width: 25%;
+      font-size: $normal_f;
+      font-weight: $semi_bold_f;
+
+      span{
+        font-size: $smaller_f;
+      }
+
+      a{
+        display: block;
+        font-size: $small_f;
+        text-decoration: underline;
+        color: $point_color;
+      }
+    }
+    
+    .input_txt{
+      width: 75%;
+      font-size: $normal_f;
+    }
+
+    .pharm_input{
+      width: 75%;
+      max-width: 250px;
+    }
+
+    .input_w{
+      width: 75%;
+    }
+
+    .input_f{
+      width: 100%;
+      margin-top: .3rem;
+    }
+
+    .input_in{
+      width: 75%;
+      align-items: stretch;
+      flex-wrap: wrap;
+      
+
+      .input_w{
+        width: calc(100% - 125px);
+      }
+    }
+
+
+  } 
+
+  input::file-selector-button{
+    display: none;
+  }
+
+  .formbtn_wrap{
+    margin-top: $mb_1;
+    text-align: center;
+    border-top: 1px solid $border_color;
+    padding-top: $mb_1;
+  }
+}
+
+.pharm_profile{
+  width: 90%;
+  position: relative;
+  height: 100%;
+  padding: $mb_5;
+  overflow: auto;
+
+  .pharm_edit{
+    width: 800px;
+    margin-bottom: $mb_2;
+
+    .passchk_form{
+      .input_wrap{
+        margin-bottom: $mb_3;
+      }
+    }
+
+    .pharm_edit-in h3{
+      margin-bottom: $mb_2;
+    }
+    .formbtn_wrap{
+      text-align: left;
+      padding-top: $mb_2;
+    }
+  }
+}
+
+.edit_check{
+  text-align: left;
+  margin-bottom: $mb_1;
+
+  input[type=checkbox]{
+    display: none;
+  }
+
+  .all_check{
+    font-size: $small_f;
+    font-weight: $bold_f;
+    background-color: #f9f9f9;
+    padding: $mb_1 $mb_2;
+    border-radius: .3rem;
+    margin-bottom: 1rem;
+
+    label{
+      line-height: 23px;
+      padding-left: 30px;
+    }
+
+    input[type="checkbox"] + label{
+      background: url(../images/icon_checkbox00.png)  no-repeat center left;
+    }
+
+    input[type="checkbox"]:checked + label{
+      background: url(../images/fit_result_check.png)  no-repeat center left;
+    }
+
+    a{
+      text-decoration: underline;
+    }
+  }
+
+  .check{
+    font-size: $small_f;
+    padding: .5rem $mb_2;
+
+    label{
+      line-height: 15px;
+      padding-left: 20px
+    }
+
+    input[type="checkbox"] + label{
+      background: url(../images/icon_checkbox00.png)  no-repeat center left;
+      background-size: 15px;
+    }
+
+    input[type="checkbox"]:checked + label{
+      background: url(../images/fit_result_check.png)  no-repeat center left;
+      background-size: 15px;
+    }
+  }
+
+
+}
+
+
+/* -===================== 상담설정 ====================== */
+.pharm_setting{
+  height: 100%;
+
+  .setting_top{
+    justify-content: flex-start;
+    
+    .txt{
+      font-size: $small_f;
+      margin-left: .5rem;
+      padding-top: .4rem;
+    }
+  }
+
+  .pharm_container{
+    padding: 2rem 5rem;
+
+    h3{
+      font-size: 2rem;
+      font-weight: initial;
+      text-align: center;
+      border-bottom: 1px solid $border_color;
+      padding-bottom: $mb_1;
+
+    }
+
+    .select_date{
+      padding: $mb_5 $mb_5 $mb_2 ;
+      flex-wrap: wrap;
+
+      .date_wrap{
+        width: calc((100% / 7) - 1rem);
+        
+        label{
+          display: block;
+          text-align: center;
+          cursor: pointer;
+          
+          input[type=checkbox]{
+            display: none;
+          }
+
+          input[type=checkbox] ~ span{
+            display: block;
+            padding: 1rem 0;
+            border-radius: .5rem;
+            transition: all .3s;
+            background-color: $bg_white;
+            box-shadow: 0 0 2px 0 rgba(0,0,0,0.1);
+          }
+
+          input[type=checkbox]:checked ~ span{
+            background-color: $point_color;
+            color:  $bg_white;
+          }
+        }
+      }
+    }
+
+    .formbtn_wrap{
+      text-align: center;
+    }
+
+    .edit_check{
+      width: 100%;
+      
+
+      .check{
+        padding: 3rem 0 0 0;
+
+        input[type="checkbox"] + label{
+          background-size:20px;
+        }
+
+        input[type="checkbox"]:checked + label{
+          background-size:20px;
+        }
+  
+        label{
+        line-height: 1;
+        padding: .5rem 1.5rem;
+          span{
+            font-size: initial;
+          }
+        }
+
+      }
+      
+    }
+  }
+}
+
+/* =============== popup =================== */
+.popup{
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 230px;
+  transition: .3s;
+  background-color: $text_color;
+  padding: .5rem;
+  border-radius: .3rem;
+  height: 34px;
+  overflow: hidden;
+  transition: all .25s ease;
+
+  .title{
+    color: $bg_white;
+  }
+
+  .popup_toggle{
+
+    .title{
+      font-size: $small_f;
+      font-weight: $bold_f;
+    }
+
+    .smr_toggle{
+
+      label {
+        width: 28px;
+        height: 14px;
+        border-radius: 7px;
+        background: $bg_white;
+      }
+      
+      label:after {
+        width: 12px;
+        height: 12px;
+        background: $text_color;
+      }
+
+      input:checked + label {
+        background: $bg_white;
+      }
+
+      label:after {
+        width: 12px;
+        height: 12px;
+        background: $text_color;
+      }
+
+      input:checked + label:after {
+        background-color: $point_color;
+      }
+    }
+  }
+  
+  .popup_list{
+    background-color: $bg_white;
+    border-radius: .3rem;
+    margin-top: $mb_1;
+    transition: .3s;
+    padding: .5rem;
+    transition: .3s;
+    
+
+    .popup_item{
+      font-size: $small_f;
+      line-height: 2;
+      justify-content: flex-start;
+
+      i{
+        margin-right: .3rem;
+      }
+    }
+  }
+
+  &.open {
+    height: auto;
+
+    &.open .popup_list{
+      bottom: 0;
+    }
+  }
+}
+
+
+
+/* =================== 상담결과보기 창 ====================== */
+.pharm_result{
+  position: relative;
+  background-color: $bg_gray;
+  height: 100vh;
+
+
+  .result_top{
+    background-color: $text_color;
+    color: $bg_white;
+    height: 3rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 0 2rem;
+
+    .top_l{
+      font-size: $small_f;
+
+      img{
+        width: 70px;
+        padding-bottom: 2px;
+        margin-right: $mb_1;
+        display: block;
+      }
+    }
+
+    .top_r{
+
+      .top_icon{
+        font-size: 1.25rem;
+        margin-left: $mb_1;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .result_main{
+    width: calc(100% - 200px);
+    // height: calc(100vh);
+    padding-top: 3rem;
+    align-items: flex-start;
+    max-width: 1720px;
+
+    .select_block{
+      justify-content: flex-start;
+      align-items: stretch;
+      
+      select{
+        width: 200px;
+        padding: .5rem;
+        margin-right: .5rem;
+        height: 34px;
+      }
+
+      .select_btn{
+        background-color: $point_color;
+        color: $bg_white;
+        padding: 0 1rem;
+        border-radius: .3rem;
+        font-size: $small_f;
+        transition: .3s;
+
+        &:hover{
+          background-color: $text_color;
+        }
+      }
+    }
+
+    .result01{
+      width: 50%;
+      min-width: 800px;
+      background-color: $bg_white;
+      margin: 2rem 1rem 2rem 2rem;
+      height: calc(100vh - 7rem);
+      border-radius: .5rem;
+      box-shadow: 0 0 5px 0 rgba(0,0,0,.05);
+      overflow: hidden;
+
+      .result_h{
+        background-color: $point_color;
+        padding: 1rem 2rem;
+        border-radius: .5rem .5rem 0 0;
+        color: $bg_white;
+
+        .h_l{
+
+          .title{
+            font-size: $h2_f;
+            font-weight: $bold_f;
+
+            span{
+              font-size: $normal_f;
+              font-weight: initial;
+            }
+          }
+
+          .txt{
+            font-size: $small_f;
+          }
+        }
+
+        .h_r{
+
+          .result01_link{
+            background-color: $bg_white;
+            font-size: $small_f;
+            display: inline-block;
+            padding: .5rem 1.5rem;
+            font-weight: $bold_f;
+            margin-left: .5rem;
+            border-radius: 3rem;
+            opacity: .5;
+
+            &.active{
+              background-color: $bg_white;
+              color: $point_color;
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      .reslut_main{
+        padding: 2rem;
+        overflow: auto;
+        height: calc(100vh - 200px);
+
+        .main_block{
+          margin-bottom: $mb_3;
+          border-bottom: 1px solid $border_color;
+          padding-bottom: $mb_3;
+
+          &:last-child{
+            border-bottom: none;
+            margin-bottom: 0;
+          }
+        }
+
+        .title{
+          font-size: $h3_f;
+          font-weight: $bold_f;
+          color: $point_color;
+          margin-bottom: $mb_1;
+        }
+
+        
+
+        .select_drug{
+          width: 100%;
+          justify-content: flex-start;
+          margin-top: $mb_1;
+          align-items: flex-start;
+
+          .drug_img{
+            width: 100px;
+            border: 1px solid $border_color;
+            height: 100px;
+            border-radius: .3rem;
+            margin-right: $mb_1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+          }
+
+          .drug_info{
+
+            .tltle{
+              font-weight: $semi_bold_f;
+              font-size: $normal_f;
+              margin-bottom: .5rem;
+              justify-content: flex-start;
+
+              .del_btn{
+                font-size: smaller;
+                background-color: #ddd;
+                padding: .3rem .5rem;
+                border-radius: .3rem;
+                margin-left: 1rem;
+              }
+            }
+
+            .drug_type{
+              margin-bottom: .5rem;
+
+              .type{
+                display: inline-block;
+                border: 1px solid $text_color_2;
+                padding: .3rem 1rem;
+                font-size: $small_f;
+                margin-right: .3rem;
+                border-radius: .3rem;
+                cursor: pointer;
+
+                &.active{
+                  background-color: $point_color;
+                  color: $bg_white;
+                  border-color: $point_color;
+                }
+              }
+            }
+
+            .font_p{
+              font-size: $small_f;
+              color: #ee7570;
+            }
+          }
+        }
+
+        .block_list{
+          align-items: flex-start;
+
+          .title{
+            font-size: $normal_f;
+            color: $text_color;
+          }
+
+          .block_item{
+            width: 50%;
+            padding: 0 1rem 1rem;
+
+            .block_data{
+              justify-content: flex-start;
+              flex-wrap: wrap;
+
+              .list{
+                width: calc(100% / 4);
+                text-align: center;
+                position: relative;
+                margin-bottom: 1rem;
+
+                .img{
+                  background: $bg_gray;
+                  padding: 1rem;
+                  height: 60px;
+                  width: 60px;
+                  display: inline-flex;
+                  justify-content: center;
+                  align-items: center;
+                  border-radius: 50%;
+                  margin-bottom: .5rem;
+                  
+                  img{
+                    width: initial;
+                    max-height: 27px;
+                  }
+                }
+
+                .no{
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  background-color: $text_color;
+                  color: $bg_white;
+                  font-size: $smaller_f;
+                  display: inline-flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 20px;
+                  height: 20px;
+                  line-height: 1;
+                  border-radius: 50%;
+                }
+              }
+
+              .txt{
+                font-size: $small_f;
+                line-height: 1.3;
+                font-weight: $semi_bold_f;
+              }
+            }
+
+            &:first-child{
+              border-right: 1px solid $border_color;
+            }
+          }
+        }
+
+        .block_total{
+          width: 50%;
+          padding: 2rem 1rem;
+          border: 1px solid $border_color;
+          border-radius: .5rem;
+
+          
+          .total_no{
+
+            .circle{
+              width: 80px;
+              height: 80px;
+              border-radius: 50%;
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+
+              .no{
+                font-size: $h1_f;
+                color: $bg_white;
+              }
+            }
+          }
+
+          .total_txt{
+            width: calc(100% - 100px);
+            border-left: 1px solid $border_color;
+            padding-left: 20px;
+
+            .txt{
+              font-size: $small_f;
+            }
+          }
+        }
+
+        .total_list{
+          width: 50%;
+          padding-left: 2rem;
+
+          .total_item{
+            margin-bottom: $mb_2;
+
+            .total_g{
+              .total_bar{
+                width: 100%;
+                background-color: $text_color_2;
+                border-radius: 3rem;
+                padding: .5rem;
+                position: relative;
+                
+                p{
+                  font-size: $smaller_f;
+                  color: $bg_white;
+                  margin: 0 .5rem;
+                  text-align: center;
+                  line-height: 1;
+                  position: relative;
+                  z-index: 5;
+                }
+              }
+
+              .total_no{
+                font-size: $smaller_f;
+                margin: .5rem auto;
+                width: 70%;
+              }
+
+              &.grid6 .bar_select{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -1%; /* 저체중 -1% / 정상 15.5% / 비만전 31.5% / 1단계 48.5% / 2단계 65% / 3단계 82% */
+                width: 50px;
+                height: 50px;
+                z-index: 1;
+                border-radius: 50%;
+              }
+
+              &.grid3 .total_bar{
+                padding: .5rem 1rem;
+              }
+
+              &.grid3 .bar_select{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 80.5%; /* 위험 0% / 보통 40.5% / 양호 80.5% */
+                width: 50px;
+                height: 50px;
+                z-index: 1;
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+
+        .q_list{
+
+          .q_title{
+            margin-bottom: $mb_3;
+            font-size: $normal_f;
+            display: inline-block;
+            background-color: $bg_gray;
+            padding: 1rem;
+            border-radius: .3rem;
+
+            span{
+              margin: 0 .5rem;
+              font-weight: $semi_bold_f;
+            }
+          }
+
+          .q_item{
+            margin-bottom: $mb_3;
+
+            .title{
+              font-size: initial;
+              color: $text_color;
+              position: relative;
+              
+              padding-left: 1rem;
+
+              &::before{
+                position: absolute;
+                content: '';
+                display: block;
+                width:.5rem;
+                height: .2rem;
+                background-color: $point_color;
+                left: 0;
+                top: calc(50% - .2rem);
+              }
+            }
+            .txt{
+              font-size: $normal_f;
+              padding-left: 1rem;
+
+              span{
+                display: inline-block;
+                border: 1px solid $text_color_2;
+                padding: .5rem;
+                margin-right: .5rem;
+                border-radius: .3rem;
+
+                &.select{
+                  background-color: $point_color;
+                  color: $bg_white;
+                  border-color: $point_color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .tab_table{
+      padding: 2rem;
+      overflow: auto;
+      height: calc(100vh - 200px);
+
+      .title{
+        font-size: $h3_f;
+        font-weight: $bold_f;
+        color: $point_color;
+        margin-bottom: .5rem;
+      }
+
+      .txt{
+        font-size: $small_f;
+      }
+
+      .t_select{
+        margin: $mb_1 0;
+
+        &.flex_r{
+          display: flex;
+          justify-content: flex-end;
+        }
+
+        .btn_all{
+          display: inline-block;
+          font-size: $small_f;
+          padding: .5rem 1rem;
+          font-weight: $semi_bold_f;
+          border-radius: 3rem;
+          background-color: $text_color;
+          color: $bg_white;
+
+          &:hover{
+            background-color: $text_color_2;
+          }
+        }
+        
+      }
+
+      table{
+        font-size: $small_f;
+        border-top: 1px solid $border_color;
+        border-left: 1px solid $border_color;
+        
+        th{
+          padding: 1rem .5rem;
+          border-right: 1px solid $border_color;
+          border-bottom: 1px solid $border_color;
+          background-color: $bg_gray;
+        }
+
+        td{
+          padding: 1rem;
+          border-right: 1px solid $border_color;
+          border-bottom: 1px solid $border_color;
+          font-weight: $medium_bold_f;
+
+          &.point{
+            color: #b81018;
+          }
+        }
+      }
+    }
+
+    .sesult_right{
+      width: 50%;
+      min-width:810px;
+      margin: 2rem 2rem 2rem 0rem;
+      height: calc(100vh - 7rem);
+      overflow: auto;
+      padding-right: 1rem;
+
+      .result_h{
+        background-color: $point_color;
+        border-radius: .5rem .5rem 0 0;
+        padding: 1rem;
+        color: $bg_white;
+        font-weight: $bold_f;
+        
+      }
+      
+      .result02{
+        background-color: $bg_white;
+        box-shadow: 0 0 5px 0 rgba(0,0,0,.05);
+        border-radius: .5rem;
+        margin-bottom: $mb_1;
+
+        .result02_list{
+          flex-wrap: wrap;
+          padding-bottom: $mb_1;
+
+          .result02_item{
+            width: 50%;
+            padding: 1rem 1rem 0;
+
+            .title{
+              font-weight: $semi_bold_f;
+              margin-bottom: .2rem;
+              font-size: $normal_f;
+            }
+
+            textarea{
+              padding: .5rem;
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .result03{
+        background-color: $bg_white;
+        box-shadow: 0 0 5px 0 rgba(0,0,0,.05);
+        border-radius: .5rem;
+        margin-bottom: $mb_1;
+
+        .result_h{
+
+          select{
+            padding: .5rem
+          }
+        }
+
+        .result03_block{
+          padding: 0;
+
+          textarea{
+            width: 100%;
+            border: none;
+          }
+          .hide{
+            display: none;
+          }
+        }
+      }
+
+      .result04{
+        background-color: $bg_white;
+        border-radius: .5rem;
+        box-shadow: 0 0 5px 0 rgba(0,0,0,.05);
+
+        table{
+          width: 100%;
+          border-radius: .5rem;
+          overflow: hidden;
+
+          .t_select td{
+            background-color: #fffaef;
+          }
+
+          .t_center{
+            text-align: center;
+          }
+
+          .align_btn{
+            background-color: $bg_white;
+            width: 75px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            font-size: $smaller_f;
+            line-height: 1;
+            margin-top: .5rem;
+            border-radius: 3rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            a{
+              padding: .2rem .3rem .1rem;
+              color: #000;
+              background-color: white;
+              height:18px;
+              color: $text_color_2;
+              
+              
+              &.align_left{
+                border-radius: 3rem 0 0 3rem;
+                width: 20px;
+              }
+
+              &.align_right{
+                border-radius: 0 3rem 3rem 0;
+                width: 20px;
+              }
+
+              &.align_auto{
+                width: 35px;
+              }
+
+              &:hover{
+                color: $text_color;
+                background-color: #fff1d1;
+              }
+            }
+          }
+
+          th{
+            background-color: $point_color;
+            color: $bg_white;
+            font-size: $small_f;
+          }
+
+          td{
+            font-size: $small_f;
+            padding: 1rem;
+            border-right: 1px solid $border_color;
+            border-bottom: 1px solid $border_color;
+
+            .t_txt{
+              width: calc(100% - 2rem);
+
+              .drug_name{
+                font-weight: $bold_f;
+              }
+              .drug_price{
+                color: $point_color;
+                font-weight: $bold_f;
+              }
+
+              
+            }
+
+            .t_txt_l{
+              line-height: 1.8;
+              position: relative;
+              padding-left: .5rem;
+              font-weight: $semi_bold_f;
+
+              &::before{
+                content: '';
+                position: absolute;
+                top: 35%;
+                left: 0;
+                display: block;
+                width: 3px;
+                height: 3px;
+                background-color: $point_color;
+                border-radius: 50%;
+              }
+            }
+
+            .t_flex{
+              display: flex;
+              align-items: flex-start;
+              justify-content: space-between;
+              margin: .5rem 0;
+
+              .r_icon{
+                display: flex;
+                background-color: #b81018;
+                font-size: $smaller_f;
+                color: $bg_white;
+                font-weight: $semi_bold_f;
+                width: 1rem;
+                height: 1rem;
+                justify-content: center;
+                align-items: center;
+                line-height: 1;
+                border-radius: .2rem;
+                margin-right: .3rem;
+              }
+  
+              .p_icon{
+                display: flex;
+                background-color: #ee7570;
+                font-size: $smaller_f;
+                color: $bg_white;
+                font-weight: $semi_bold_f;
+                width: 1rem;
+                height: 1rem;
+                justify-content: center;
+                align-items: center;
+                line-height: 1;
+                border-radius: .2rem;
+                margin-right: .3rem;
+              }
+              .t_p{
+                justify-content: flex-start;
+                align-items: flex-start;
+                color: #ee7570;
+                font-weight: $semi_bold_f;
+                flex-wrap: wrap;
+                width: calc(100% - 1.3rem);
+              }
+              .t_r{
+                justify-content: flex-start;
+                align-items: flex-start;
+                color: #b81018;
+                font-weight: $semi_bold_f;
+                width: calc(100% - 1.3rem);
+              }
+              
+            }
+            
+            .t_btn{
+              width: 1rem;
+              text-align: center;
+
+              .drug_btn{
+                font-size: $smaller_f;
+                width: 1rem;
+                height:1rem;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                line-height: 1;
+                border-radius: 50%;
+                margin: .3rem 0;
+              }
+
+              .add,
+              .min{
+                background-color: $point_color;
+                color:$bg_white;
+              }
+
+              .add2,
+              .min2,
+              .info{
+                background-color: $border_color;
+                color:$text_color
+              }
+
+              .no{
+                color: $bg_white;
+                background-color: $point_color_2;
+                font-weight: $bold_f;
+              }
+
+              .no_none{
+                color: $bg_white;
+                background-color: $text_color_2;
+                font-weight: $bold_f;
+              }
+            }
+
+            .t_star{
+              width: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  
+  .fixed_sidebar{
+    position: fixed;
+    top: 50px;
+    right: 0;
+    height: 100vh;
+    width: 200px;
+    overflow: auto;
+    background-color: $bg_white;
+    font-size: $normal_f;
+    border-left: 1px solid $border_color;
+
+    .side_profile{
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+
+      .side_time{
+        font-size: $small_f;
+        font-weight: $semi_bold_f;
+        margin-bottom: $mb_1;
+
+        span{
+          color: #b81018;
+        }
+      }
+
+      .side_name{
+        font-size: $h3_f;
+        font-weight: $bold_f;
+        
+        span{
+          font-size: $normal_f;
+        }
+      }
+    }
+
+    .side_chat{
+      border: 1px solid $border_color;
+      font-size: $small_f;
+      border-radius: .3rem;
+      overflow: hidden;
+
+      .title{
+        background-color: $point_color;
+        padding: .5rem;
+        color: $bg_white;
+        font-weight: $semi_bold_f;
+        justify-content: flex-start;
+
+        i{
+          margin-right: .3rem;
+        }
+      }
+
+      .chat_box{
+        padding: .5rem;
+        margin: .2rem;
+        height: 190px;
+        overflow: auto;
+        border: 1px solid $border_color;
+
+        .chat_l{
+          margin-bottom: .5rem;
+
+          .chat_user{
+            background-color: $bg_gray;
+            max-width: 80%;
+            font-weight: $semi_bold_f;
+            padding: .5rem;
+            border-radius: .3rem;
+            line-height: 1.2;
+          }
+        }
+
+        .chat_r{
+          justify-content: flex-end;
+          margin-bottom: .5rem;
+
+          .chat_user{
+            background-color: #fff1d1;
+            max-width: 80%;
+            font-weight: $semi_bold_f;
+            padding: .5rem;
+            border-radius: .3rem;
+            line-height: 1.2;
+          }
+        }
+      }
+
+      .chat_send{
+        padding: 0 .2rem .2rem;
+        align-items: stretch;
+
+        input{
+          padding: .2rem;
+          width: calc(100% - 53px)
+        }
+        .chat_btn{
+          background-color: $text_color;
+          color: $bg_white;
+          font-size: $smaller_f;
+          width: 50px;
+          border-radius: .3rem;
+        }
+      }
+    }
+
+    .side_receipt{
+      margin-top: $mb_1;
+      border-top: 1px dotted $text_color_2;
+      padding: 1rem;
+      position: relative;
+
+      .d_all{
+        margin-bottom: $mb_1;
+
+        .title{
+          justify-content: flex-start;
+          font-weight: bold;
+
+          i{
+            color: $point_color;
+            margin-right: .3rem;
+          }
+        }
+
+        .d_list{
+          background-color: $bg_gray;
+          padding: .8rem;
+          border-radius: .5rem;
+          margin-top: .5rem;
+        
+          .d_item{
+            font-size: $small_f;
+            font-weight: $semi_bold_f;
+            justify-content: flex-start;
+            line-height: 1.8;
+
+            .no{
+              display: inline-flex;
+              margin-right: .3rem;
+              width: 14px;
+              height: 14px;
+              background-color: $point_color;
+              color:$bg_white;
+              justify-content: center;
+              align-items: center;
+              line-height: 1;
+              border-radius: 50%;
+              font-size: $smaller_f;
+            }
+          }
+        }
+      }
+
+      .receipt_total{
+        font-weight: $bold_f;
+
+
+        &::before{
+          content: '';
+          display: block;
+          width: 20px;
+          height: 2px;
+          left: 0;
+          top: 0;
+          background-color: $point_color;
+          margin-bottom: $mb_1;
+        }
+
+        .f_s{
+          font-size: $smaller_f;
+        }
+
+        .f_b{
+          font-size: $h2_f;
+    
+          span{
+            font-size: initial;
+          }
+        }
+
+        .f_m{
+          font-size: $normal_f;
+        }
+
+        .f_c{
+          color: $point_color;
+          border-bottom: 1px solid $border_color;
+          padding-bottom: .5rem;
+          margin-bottom: .5rem;
+        }
+
+        .f_total{
+          color: $point_color;
+          position: relative;
+        }
+
+        .t_r{
+          text-align: right;
+        }
+      }
+    }
+
+    .side_btnwrap{
+      text-align: center;
+      padding: 1rem;
+    }
+  }
+}

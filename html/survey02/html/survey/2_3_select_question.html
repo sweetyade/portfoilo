@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>2.설문 - 2-3.설문유형선택</title>
+</head>
+<body>
+  <main class="main">
+    <div class="header">
+      <p class="header_back"><img src="../../images/back.svg" alt=""></p>
+    </div>
+
+    <div class="contents">
+      <div class="servey_top">
+        <div class="servey_title">
+          <p class="title">설문유형선택</p>
+        </div>
+      </div>
+
+      <div class="select_list">
+        <div class="list_btn">
+          <p class="icon icon_bg"></p>
+          <p class="txt">매우 디테일하고 자세히</p>
+        </div>
+        <div class="list_btn">
+          <p class="icon icon_bg"></p>
+          <p class="txt">간단하지만 가볍지 않게 </p>
+        </div>
+        <div class="list_btn">
+          <p class="icon icon_bg"></p>
+          <p class="txt">최대한 간단하고 빠르게</p>
+        </div>
+      </div>
+
+      <p class="next_btn gr" onclick="location.href='2_4_select_cpl.html';"><img src="../../images/arrow_next.svg" alt=""></p>
+    </div>
+  </main>
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/jquery-ui.min.css"></script>
+
+  <script>
+    //뒤로가기
+    $(document).ready(function() {
+      // on click
+      $('.header_back').click(function(e){
+        // prevent default behavior
+        e.preventDefault();
+        // Go back 1 page 
+        window.history.back();
+        // can also use 
+        // window.history.go(-1);
+      });
+    });
+
+    $(".list_btn").click(function(){
+      $(this).toggleClass("active");
+      if($(this).hasClass("active")){
+        $(this).children(".icon").addClass("icon_bg");
+        $(this).siblings().removeClass("active");
+        $(".next_btn").removeClass("gr");
+      }else {
+        $(".next_btn").addClass("gr");
+      }
+    })
+  </script>
+</body>
+</html>

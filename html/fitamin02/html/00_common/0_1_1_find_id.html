@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>1-1-1.회원정보 찾기</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="back"><img src="../../images/icon/system_back.svg" alt="뒤로가기" /></div>
+      <div class="page_name">회원정보 찾기</div>
+      <div class="header_icon"></div>
+    </header>
+
+    <main class="main" style="background-color: #fff">
+      <section class="inner_1_25 inner_tb_1_5">
+        <p class="p1_fb mb_0_75">휴대폰 번호를 인증해주세요</p>
+        <p class="p3_f gray02 mb_1_5">회원가입 시 인증하신 휴대폰 번호를<br />입력하여 인증을 진행해주세요.</p>
+        <!-- 휴대폰번호 -->
+        <div class="input_block">
+          <label for="number01">휴대폰 번호</label>
+          <div class="input_div mb_0_5">
+            <input type="number" id="number01" class="clearInput" maxlength="11" placeholder="-를 제외하고 입력해주세요" inputmode="numeric" oninput="maxLengthChk(this)" required />
+            <button class="btn_m btn_white input_btnl">인증번호 발송</button>
+            <div class="btnClear"></div>
+          </div>
+
+          <div class="input_div">
+            <input type="number" id="number02" class="clearInput" maxlength="4" placeholder="인증번호를 입력해주세요" inputmode="numeric" oninput="maxLengthChk(this)" required />
+            <button class="btn_m btn_white input_btns">확인</button>
+            <div class="btnClear"></div>
+            <p class="input_time">3:00</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="btn_wrap">
+        <button class="btn_b btn_basic mb_1">로그인 하기</button>
+        <a href="#" class="misc2_under gray01">회원정보를 잊어버리셨나요?</a>
+      </div>
+    </main>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+      // /* ---- 삭제버튼 ------- */
+      $(document).ready(function () {
+        $(".input_div").each(function () {
+          $(this)
+            .find(".clearInput")
+            .on("keyup focus", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 1");
+
+              if ($(this).val().length == 0) {
+                $(this).siblings(".btnClear").attr("style", "opacity: 0");
+              } else {
+                $(this).siblings(".btnClear").attr("style", "opacity: 1");
+              }
+            });
+
+          $(this)
+            .find(".clearInput")
+            .on("blur", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 0");
+            });
+
+          $(this)
+            .find(".btnClear")
+            .on("click touchstart", function () {
+              $(this).closest(".input_div").find(".clearInput").val("");
+              $(this).closest(".input_div").find(".btnClear").attr("style", "opacity: 0");
+              return false;
+            });
+        });
+      });
+
+      /* 넘버인풋 맥스 */
+      function maxLengthChk(object) {
+        if (object.value.length > object.maxLength) {
+          object.value = object.value.slice(0, object.maxLength);
+        }
+      }
+    </script>
+  </body>
+</html>

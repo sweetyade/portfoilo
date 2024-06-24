@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+  <!-- <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'> -->
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>GUIDE BUTTON</title>
+</head>
+
+<style>
+  .guide_wrap{
+    width: 100%;
+    max-width: 360px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  .info{
+    width: 100%;
+    line-height: var(--line-h);
+    margin-bottom: 5rem;
+  }
+
+  .guide_block{
+    margin: 2rem 0 5rem;
+  }
+
+  .quide_flex{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .quide_flex .span3_f{
+    margin-left: 1rem;
+    color: #9F9F9F;
+  }
+
+</style>
+<body>
+  <div class="guide_wrap">
+    <h1 class="h1_f" style="margin-bottom: 2rem;">BUTTON</h1>
+
+    
+    <!--화면하단 기본 버튼-->
+    <div class="guide_block">
+      <p class="h2_f" style="margin-bottom: 1rem;">.btn_b</p>
+      <div class="btn_wrap">
+        <button class="btn_b btn_basic">기본버튼</button>
+        <button class="btn_b btn_light">라이트 버튼</button>
+        <button class="btn_b btn_light" disabled>비활성 버튼</button>
+        <button class="btn_b btn_white btn_img"><img src="../../images/icon/check_off.svg"> 화이트 버튼 / 텍스트와 왼쪽 아이콘형 버튼</button>
+        <button class="btn_b btn_white btn_img">텍스트와 오른쪽 아이콘형 버튼<img src="../../images/icon/check_off.svg"></button>
+        <button class="btn_b btn_trans">투명 버튼</button>
+      </div>
+    </div>
+    
+    <!-- 중간사이즈 버튼-->
+    <div class="guide_block">
+      <p class="h2_f" style="margin-bottom: 1rem;">.btn_m</p>
+      <div class="btn_left" style="margin-bottom: 1rem; flex-wrap: wrap;">
+        <button class="btn_m btn_basic">기본버튼</button>
+        <button class="btn_m btn_red">레드버튼</button>
+        <button class="btn_m btn_light">라이트 버튼</button>
+        <button class="btn_m btn_light" disabled>비활성 버튼</button>
+        <button class="btn_m btn_white btn_img"><img src="../../images/icon/check_off.svg">화이트 버튼</button>
+        <button class="btn_m btn_white btn_img">화이트 버튼<img src="../../images/icon/check_off.svg"></button>
+        <button class="btn_m btn_trans">투명 버튼</button>
+      </div>
+    </div>
+
+    <!-- 작은사이즈 버튼 -->
+    <div class="guide_block">
+      <p class="h2_f" style="margin-bottom: 1rem;">.btn_s</p>
+      <div class="btn_left" style="margin-bottom: 1rem; flex-wrap: wrap;">
+        <button class="btn_s btn_basic">기본버튼</button>
+        <button class="btn_s btn_light">라이트 버튼</button>
+        <button class="btn_s btn_light" disabled>비활성 버튼</button>
+        <button class="btn_s btn_white btn_img"><img src="../../images/icon/check_off.svg">화이트 버튼</button>
+        <button class="btn_s btn_trans">투명 버튼</button>
+      </div>
+    </div>
+
+    <!-- 검은버튼 버튼 -->
+    <div class="guide_block">
+      <p class="h2_f" style="margin-bottom: 1rem;">.btn_black</p>
+      <div class="btn_right">
+        <button class="btn_black">후기 작성하기</button>
+        <button class="btn_black"><img src="../../images/icon/edit_wt.svg">후기 작성하기</button>
+        <button class="btn_black">후기 작성하기<img src="../../images/icon/edit_wt.svg"></button>
+      </div>
+    </div>
+
+    <!-- 아이콘용 -->
+    <div class="guide_block">
+      <p class="h2_f" style="margin-bottom: 1rem;">.btn_icon</p>
+        <p class="btn_icon btn_basic">#기본색상</p>
+        <p class="btn_icon btn_border">#보더아이콘</p>
+        <p class="btn_icon btn_light">#라이트아이콘</p>
+        <p class="btn_icon btn_white">#화이트아이콘</p>
+    </div>
+    
+    <!-- 소셜 버튼 -->
+    <div class="guide_block">
+      <p class="h2_f" style="margin-bottom: 1rem;">.btn_social</p>
+      <div class="btn_wrap">
+        <button class="btn_social btn_kakao"><img src="../../images/icon/kakao_bk.svg" alt="kakaologin">카카오로 시작하기</button>
+        <button class="btn_social btn_apple"><img src="../../images/icon/apple_wt.svg" alt="appelogin">Apple로 로그인</button>
+      </div>
+    </div>
+
+    <!-- 하단 픽스 버튼 -->
+    <div class="guide_block">
+      <p class="h2_f" style="margin-bottom: 1rem;">.btn_fix / 그라디언트 배경 .btn_fixgr</p>
+      <div class="btn_fix btn_fixgr">
+        
+        <button class="btn_b btn_basic">하단 고정 버튼</button>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>5-3.faq</title>
+</head>
+<body>
+  <main class="main">
+    <!-- sidebar -->
+    <div class="sidebar">
+      
+      <h1 class="logo"><a href="#"><img src="../../images/common/logo_wt.svg" alt=""></a></h1>
+
+      <!-- 로그인정보-->
+      <div class="user_info">
+        <p class="user_img"><img src="../../images/login_bg.jpg" alt=""></p>
+        <div class="user_name">
+          <p class="base_fb light">약사이름</p>
+          <p class="small_f mt_0_5 gray04">약국명</p>
+        </div>
+      </div>
+
+      <!-- 상담스케쥴 요약 -->
+      <div class="consult_sml">
+        <div class="al_setting" style="display: none;">
+          <p class="small_f">채팅 상담 설정</p>
+          <div class="toggle_block">
+            <input type="checkbox" class="toggle" id="ipToggle" checked />
+            <label for="ipToggle" class="toggle_btn"></label>
+          </div>
+        </div>
+        <div class="al_setting" style="display: none;">
+          <p class="small_f">즉시 상담 설정</p>
+          <div class="toggle_block">
+            <input type="checkbox" class="toggle" id="ipToggle2" />
+            <label for="ipToggle2" class="toggle_btn"></label>
+          </div>
+        </div>
+
+        <div class="sml_list">
+          <div class="sml_data">
+            <p class="txt">예약 현황</p>
+            <a class="total_no" href="#">1건</a>
+          </div>
+          <div class="sml_data">
+            <p class="txt">상담 완료</p>
+            <a class="total_no" href="#">1건</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 메뉴 -->
+      <nav class="nav">
+        <a class="nav_link" href="#">
+          <p class="nav_menu"><i class="ri-user-settings-line"></i> 프로필 관리</p>
+        </a>
+        <a class="nav_link" href="#">
+          <p class="nav_menu"><i class="ri-customer-service-line"></i> 상담 내역</p>
+          <!-- <div class="sub_list">
+            <a href="#" class="sub_link">상담 대기 리스트</a>
+            <a href="#" class="sub_link">예약 확정 리스트</a>
+            <a href="#" class="sub_link">상담 내역 조회</a>
+            <a href="#" class="sub_link">상담 설정</a>
+          </div> -->
+        </a>
+        <a class="nav_link" href="#">
+          <p class="nav_menu"><i class="ri-edit-line"></i>설문 내역</p>
+        </a>
+        <div class="nav_link" href="#">
+          <p class="nav_menu sub_menu"><i class="ri-question-answer-line"></i> 게시판</p>
+          <div class="sub_list">
+            <a href="#" class="sub_link">공지사항</a>
+            <a href="#" class="sub_link">1:1문의</a>
+            <a href="#" class="sub_link">FAQ</a>
+          </div>
+        </div>
+        <a class="nav_link" href="#">
+          <p class="nav_menu"><i class="ri-kakao-talk-line"></i> 고객센터</p>
+        </a>
+      </nav>
+
+      <p class="logoutBtn">로그아웃 <i class="ri-logout-box-r-line"></i></p>
+
+      <p class="closeBtn"><i class="ri-close-line"></i></p>
+    </div>
+
+    <!-- main -->
+    <div class="container">
+      <!-- header -->
+      <section class="header">
+        <div class="header_left">
+          <div class="open_toggle">
+            <div class="burger"></div>
+          </div>
+          <h2 class="header_menu">더현대 서울 Fitamin 상담관리 시스템</h2>
+        </div>
+
+        <div class="input_search">
+          <input type="text" placeholder="예약 번호/예약자를 검색해주세요.">
+          <button class="search_input"><i class="ri-search-line"></i></button>
+        </div>
+      </section>
+
+      <!-- contents -->
+      <section class="contents">
+        <div class="contents_wrap">
+          <p class="board_title">FAQ</p>
+          <!-- 게시글 리스트 -->
+          <div class="board_list">
+            <div class="faq_table">
+              <p class="info_txt"><i class="ri-error-warning-line"></i> 1:1문의 전에 faq를 확인해 주세요. 찾으시는 내용이 없다면 1:1문의를 이용해 주세요!</p>
+
+              <div class="faq_list">
+                <div class="faq_item">
+                  <div class="faq_q">
+                    <p class="q_bold">Q.</p>
+                    <p class="title">소비자가 접속한 것 같은데, 화면이 보이지 않아요.</p>
+                  </div>
+                  <div class="faq_a">
+                    채팅을 통해 회원님의 접속 여부와 카메라, 마이크 접근 권한 허용 여부를 확인해 주세요. <br><br>
+                    - 개인맞춤형 건강기능식품 판매 가이드라인 상 화상상담은 필수로 안내하고 있습니다. 1~2초간 얼굴(화면) 확인 후 채팅 상담이 가능하다고 안내 부탁드립니다.<br><br>
+                    - 그 외에 화면, 소리 등 연결이 원활하게 출력이 안 될 경우에는 회원님께 채팅으로 상담취소 후 핏타민 고객센터로 문의하실 수 있도록 안내해 주세요.
+                  </div>
+                </div>
+                <div class="faq_item">
+                  <div class="faq_q">
+                    <p class="q_bold">Q.</p>
+                    <p class="title">소비자가 접속한 것 같은데, 화면이 보이지 않아요.</p>
+                  </div>
+                  <div class="faq_a">
+                    채팅을 통해 회원님의 접속 여부와 카메라, 마이크 접근 권한 허용 여부를 확인해 주세요. <br><br>
+                    - 개인맞춤형 건강기능식품 판매 가이드라인 상 화상상담은 필수로 안내하고 있습니다. 1~2초간 얼굴(화면) 확인 후 채팅 상담이 가능하다고 안내 부탁드립니다.<br><br>
+                    - 그 외에 화면, 소리 등 연결이 원활하게 출력이 안 될 경우에는 회원님께 채팅으로 상담취소 후 핏타민 고객센터로 문의하실 수 있도록 안내해 주세요.
+                  </div>
+                </div>
+                <div class="faq_item">
+                  <div class="faq_q">
+                    <p class="q_bold">Q.</p>
+                    <p class="title">소비자가 접속한 것 같은데, 화면이 보이지 않아요.</p>
+                  </div>
+                  <div class="faq_a">
+                    채팅을 통해 회원님의 접속 여부와 카메라, 마이크 접근 권한 허용 여부를 확인해 주세요. <br><br>
+                    - 개인맞춤형 건강기능식품 판매 가이드라인 상 화상상담은 필수로 안내하고 있습니다. 1~2초간 얼굴(화면) 확인 후 채팅 상담이 가능하다고 안내 부탁드립니다.<br><br>
+                    - 그 외에 화면, 소리 등 연결이 원활하게 출력이 안 될 경우에는 회원님께 채팅으로 상담취소 후 핏타민 고객센터로 문의하실 수 있도록 안내해 주세요.
+                  </div>
+                </div>
+                <div class="faq_item">
+                  <div class="faq_q">
+                    <p class="q_bold">Q.</p>
+                    <p class="title">소비자가 접속한 것 같은데, 화면이 보이지 않아요.</p>
+                  </div>
+                  <div class="faq_a">
+                    채팅을 통해 회원님의 접속 여부와 카메라, 마이크 접근 권한 허용 여부를 확인해 주세요. <br><br>
+                    - 개인맞춤형 건강기능식품 판매 가이드라인 상 화상상담은 필수로 안내하고 있습니다. 1~2초간 얼굴(화면) 확인 후 채팅 상담이 가능하다고 안내 부탁드립니다.<br><br>
+                    - 그 외에 화면, 소리 등 연결이 원활하게 출력이 안 될 경우에는 회원님께 채팅으로 상담취소 후 핏타민 고객센터로 문의하실 수 있도록 안내해 주세요.
+                  </div>
+                </div>
+                <div class="faq_item">
+                  <div class="faq_q">
+                    <p class="q_bold">Q.</p>
+                    <p class="title">소비자가 접속한 것 같은데, 화면이 보이지 않아요.</p>
+                  </div>
+                  <div class="faq_a">
+                    채팅을 통해 회원님의 접속 여부와 카메라, 마이크 접근 권한 허용 여부를 확인해 주세요. <br><br>
+                    - 개인맞춤형 건강기능식품 판매 가이드라인 상 화상상담은 필수로 안내하고 있습니다. 1~2초간 얼굴(화면) 확인 후 채팅 상담이 가능하다고 안내 부탁드립니다.<br><br>
+                    - 그 외에 화면, 소리 등 연결이 원활하게 출력이 안 될 경우에는 회원님께 채팅으로 상담취소 후 핏타민 고객센터로 문의하실 수 있도록 안내해 주세요.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="../../scripts/jquery.min.js"></script>
+  <script src="../../scripts/main.js"></script>
+
+  <script>
+
+  </script>
+</body>
+</html>

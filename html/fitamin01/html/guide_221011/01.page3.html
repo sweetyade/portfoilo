@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/rcommon.css">
+  <link rel="stylesheet" href="../../css/guide.css">
+  <link rel="stylesheet" href="../../css/rstyle.css">
+  <title>설문페이지 - 기본정보 1단계</title>
+
+
+</head>
+<body class="on">
+    <div class="rmain_wrap grid_btn pd_base svy_bt">
+        <div class="svy_cont">
+          <p class="rtitle">최대오글자님, 반가워요 👋🏻</p>
+          <p class="rtitle">건강상태 확인에 필요한<br>기본정보를 물어볼게요!</p>
+
+          <div class="svy_prg">
+            <div class="prg_step">
+              <p class="prg_dot dot1 step_c"></p>
+              <p class="prg_dot dot2"></p>
+              <p class="prg_dot dot3"></p>
+              <p class="prg_dot dot4"></p>
+            </div>
+
+            <div class="step_txt">
+              <p class="step1">기본정보</p>
+              <p class="step2" style="color: #fff">건강목표</p>
+              <p class="step3" style="color: #fff">생활습관</p>
+              <p class="step4" style="color: #fff">영양상태</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="btn_center">
+          <button class="btn_b btn_blue">다음</button>
+        </div>
+    </div>
+
+    <div class="rpopup on">
+      <div class="overlay"></div>
+      <div class="pop_open">
+        <div class="pop_in">
+          <p class="p_txt1 mb_1">아직 완료하지 않은 설문이 있어요.<br>설문 완료하고 건강 점수 확인하세요!</p>
+          <p class="p_txt1 system_c01">설문결과가 저장되지 않을 수 있어요</p>
+        </div>
+        <div class="pop_btn">
+          <button class="btn_m btn_light p_cancel">계속 진행</button>
+          <button class="btn_m btn_red p_cp">나가기</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      /* popup */
+      $(".pop_btn, .overlay").on("click", function(){
+      $(".rpopup, body").removeClass("on");
+      });
+  
+    </script>
+</body>
+</html>

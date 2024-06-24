@@ -1,0 +1,311 @@
+
+/*input reset*/
+#contents input[type=range] { width:100%; -webkit-appearance: none; background: transparent; }
+#contents input[type="text"], textarea{-webkit-border-radius:0; -webkit-appearance:none;}
+
+.font_s{font-size:.875rem;}
+.font_m{font-size:1.125rem;}
+.font_l{font-size:1.875rem;}
+
+
+/*결과레포트 종합 결과*/
+.color_green{color:#52bdb5;}
+.color_pink{color:#ff8286;}
+.color_blue{color:#2682c5;}
+.color_purple{color:#7e5fbc;}
+
+.report{background:linear-gradient(180deg, #52bdb5 29%, #52bdb5 1%, #dbefee 1%, #dbefee 69%); padding:50px; position:relative;}
+.report_logo{position:absolute; top:50px; right:50px; width:180px;}
+.report_logo img{width:100%;}
+.report .title_sub{color:#fff; font-size:1.5rem; font-weight:300}
+.report .title_sub span{font-weight:500;}
+.report .title{font-size:4.5rem; color:#fff; line-height:6rem; font-weight:600}
+
+.report .score{background:#fff; padding:30px 0; margin:30px 0;}
+.score .score_total{width:60%; padding:0 20px; text-align:center; border-right:1px solid #ddd;}
+.score .score_total p{}
+.score .score_total p span{font-size:1.25rem; font-weight:600;}
+.score .score_total .total_title, .score_total_2 .total_title{font-size:2rem; font-weight:500; }
+.score .score_total .total_border{width:200px; height:200px; margin:20px auto; background:linear-gradient(125deg, #66b3e1 30%, #52bdb5 70%); border-radius:50%; padding:4px;}
+.score .score_total .total_bg{background:linear-gradient(125deg, #52bdb5 30%, #66b3e1 70%); height:192px; width:192px; display:flex; flex-direction:column; justify-content:center; border-radius:50%; border:7px solid #fff; color:#fff; font-size:1.5rem;}
+.score .score_total .total_bg .total_no{font-weight:600; font-size:4rem; line-height:3rem;}
+
+.score .score_detail{width:40%; padding:0 20px;}
+.score .score_detail .score_list{height:33%; display:flex; align-items:center}
+.score .score_detail p{font-size:1.125rem; font-weight:500;}
+.score .score_detail .score_bg{text-align:right;}
+.score .score_detail .score_bg > p{font-size:1.5rem; display:inline;}
+.score .score_detail .score_bg > div{display:inline-block; padding:20px 10px; width:80px; height:80px; border-radius:50%; color:#fff;}
+.score .score_detail .score_bg > div > p{display:inline; font-size:1.875rem;}
+.score .score_detail .score_bg .bg_pink{background:#ff8286}
+.score .score_detail .score_bg .bg_blue{background:#2682c5}
+.score .score_detail .score_bg .bg_purple{background:#7e5fbc}
+
+
+.grade{}
+.grade p{text-align:center; margin:50px 0 20px;}
+.grade p span{font-weight:600;}
+.grade table{border-top:3px solid #52bdb5; font-size:.875rem; background:#fff;}
+.grade table th{font-size:1rem; font-weight:600; padding:10px 0; border-right:1px solid #ddd; border-bottom:1px solid #ddd; background:#fffff7;}
+.grade table th span{display:block; font-size:.875rem; font-weight:400;}
+.grade table th:last-child, .grade table td:last-child{border-right:0;}
+.grade table td{text-align:center; padding:10px 5px; border-right:1px solid #ddd; border-bottom:1px solid #ddd;}
+.grade .table1{width:100%;}
+.grade table .grade_point{background:#fef2f2}
+.grade table .grade_point2{background:#f7ffff; font-size:.875rem; font-weight:600;} 
+
+.report_check_open{text-align:center; background:#f5f5f5; font-size:.875rem; color:#999; padding:10px 0; cursor:pointer;}
+
+.grade .table2,.grade .table3{overflow-x:auto;}
+
+    
+
+/*레포트 종합결과 - 환자경험성평가*/
+.score{flex-wrap:wrap;}
+.score > p{width:100%; text-align:center; padding:20px 20px 0;}
+.score > p span{font-weight:500;}
+.score .score_total_2{width:50%; padding:0 20px; text-align:center; border-right:1px solid #ddd;}
+.score .score_total_2 .total_border{width:300px; height:128px; margin:20px auto; background:linear-gradient(125deg, #66b3e1 30%, #52bdb5 70%); border-radius:64px; padding:4px;}
+.score .score_total_2 .total_bg{background:linear-gradient(125deg, #52bdb5 30%, #66b3e1 70%); height:120px; width:292px; display:flex; justify-content:center; border-radius:60px; border:7px solid #fff; color:#fff; font-size:1.5rem; align-items:center;}
+.score .score_total_2 .total_bg .total_no{font-weight:600; font-size:4rem; line-height:3rem; margin-right:5px;}
+
+.score .score_detail_2{width:50%; padding:0 20px; flex-wrap:wrap;}
+.score .score_detail_2 .score_list{width:30%; text-align:center; border-radius:16px;}
+.score .score_detail_2 .score_list.bg_blue{background:#2682c5; margin-bottom:20px;}
+.score .score_detail_2 .score_list.bg_green{background:#52bdb5}
+.score .score_detail_2 .score_list .font_m{color:#fff; margin:10px 0;}
+.score .score_detail_2 .score_list .font_l{font-weight:500; background:#fff; margin:0 10px; border-radius:5px;}
+.score .score_detail_2 .score_list .font_s{margin:5px 0; color:#fff;}
+
+
+
+
+/* 레포트 작성 내역 확인하기 */
+.report_check_list{padding:50px 0;} 
+.report_check_list .color_green{font-size:1.25rem; font-weight:600; margin-bottom:20px;}
+.report_check_list > div > div{border-bottom:1px solid #ddd; font-size:.875rem; align-items:center;}
+.report_check_list .ck_top{border-top:3px solid #52bdb5; font-weight:600; font-size:1rem; text-align:center;}
+.report_check_list input{border:1px solid #ddd; background:#f5f5f5; padding:5px 10px; width:60px; margin-right:10px; text-align:center;}   
+.report_ck_1{position:relative;}
+.report_ck_1 .ck_q{width:25%; padding:15px 20px; border-right:1px solid #ddd;}
+.report_ck_1 .ck_if{width:60%; padding:15px 20px; border-right:1px solid #ddd;}
+.report_ck_1 .ck_wr{width:15%; padding:10px 20px;}
+
+.report_ck_2{margin-top:50px; position:relative;}
+.report_ck_2 .ck_top .ck_q, .report_ck_2 .ck_top .ck_if{padding:15px 0;}
+.report_ck_2 .ck_q{width:25%; padding:0 20px;}
+.report_ck_2 .ck_if{width:75%; border-left:1px solid #ddd; padding-top:15px;}
+.report_ck_2 .ck_if p{line-height:1.5rem; padding:0 20px;}
+.report_ck_2 .ck_wr{width:100%; border-top:1px solid #ddd; margin-top:15px;}
+.report_ck_2 .ck_wr p{border-right:1px solid #ddd; padding:10px 0; text-align:center; width:16.6666%}
+.report_ck_2 .ck_wr p:last-child{border-right:0;}
+.report_ck_2 .ck_wr p input{width:50px; margin-right:0;}
+
+
+
+
+
+/*적정성평가 자가진단*/
+#selftest{width:100%; max-width:950px; margin:0 auto; border-top:10px solid #52bdb5; background:#fffff7; padding:80px 0; text-align:center;}
+#selftest h1{width:100%; display:block; font-weight:400; line-height:4.5rem; font-size:3.25rem; letter-spacing:-2px;}
+#selftest h1 span{display:block;font-size:4.25rem; font-weight:800; position:relative; z-index:2;}
+#selftest h1 .title_line{display:inline-block; height:15px; background:#ffc1c2; width:580px; position:relative; top:-30px; z-index:1;}
+#selftest > p{margin:50px 0;}
+#selftest > p > span{font-weight:600;}
+#selftest .test_table{background:#dbefee; padding:50px;}
+#selftest .test_table img{margin-bottom:30px; width:100%; max-width:776px;}
+#selftest .test_table .font_s{color:#555; text-align:left;}
+#selftest .test_table .font_s span{font-weight:600;}
+
+
+#selftest .test_loc{justify-content:center; align-items:center;}
+#selftest .test_loc p{font-size:1.5rem; line-height:1.5rem; background:#ddd; color:#fff; padding:15px 30px; border-radius:27px;}
+#selftest .test_loc p.selected{background:#ff8286;}
+#selftest .test_loc span{display:inline-block; width:20px; height:1px; background:#ddd;}
+
+
+#selftest .test_table2{margin:50px 50px 0; text-align:left;}
+#selftest .test_table2 .font_l, #selftest .test_table2 .font_m span{font-weight:600;}
+#selftest .test_table2 .report_ck_1, #selftest .test_table2 .report_ck_2{background:#fff; border-top:3px solid #52bdb5; margin-top:50px;}
+#selftest .test_table2 .report_ck_1 .ck_top, #selftest .test_table2 .report_ck_2 .ck_top{text-align:center; font-weight:500; border-bottom:1px solid #ddd; font-size:1rem;}
+#selftest .test_table2 .report_ck_1 > div{border-bottom:1px solid #ddd;}
+#selftest .report_ck_1 .ck_q{width:36%;}
+#selftest .report_ck_1 .ck_if{width:48%;}
+#selftest .report_ck_1 .ck_wr{width:16%;}
+#selftest .report_ck_1 .ck_top .ck_wr{padding:15px 20px;}
+#selftest .ck_wr input{border:1px solid #ddd; padding:10px; width:70px; margin-right:5px;}
+
+#selftest .test_table3{text-align:left; background:#effffe; margin:0 50px; padding:30px;}
+#selftest .test_table3 .color_green{font-size:1.25rem; font-weight:600; margin-bottom:20px;}
+#selftest .test_table3 p{margin-top:20px;}
+#selftest .test_table2 .report_ck_2 > div{border-bottom:1px solid #ddd; align-items:center;}
+#selftest .report_ck_2 .ck_q{width:23%;}
+#selftest .report_ck_2 .ck_if{width:77%; font-size:.875rem;}
+#selftest .report_ck_2 .ck_wr input{width:50px;}
+
+
+#selftest2{padding-top:10px; width:100%; max-width:950px; margin:0 auto; border-top:10px solid #52bdb5;}
+
+
+
+/*button*/
+#selftest .btn{margin:50px auto 0;}
+#selftest .btn p {display:inline-block; border-radius:45px;}
+#selftest .btn p a{display:block; padding:25px 50px; color:#fff; font-size:2rem; cursor:pointer; letter-spacing:-1px; font-weight:500; line-height:2rem;}
+#selftest .btn p a:hover{text-decoration:none;}
+#selftest .btn .btn_pink{background:#ff8286; transition:all 0.1s ease-in-out;}
+#selftest .btn .btn_pink:hover{background:#2582c5; transition:all 0.1s ease-in-out;}
+
+#selftest .table_btn{position:absolute; top:-40px; right:0; border-bottom:0 !important;}
+#selftest .table_btn button{padding:8px 20px; border:1px solid #ddd; font-size:.75rem; line-height:.75rem; background:#eee; height:30px; border-radius:15px; cursor:pointer;}
+
+
+#selftest .test_btn{justify-content:center; margin:50px 0;}
+#selftest .test_btn p{font-size:1.5rem; line-height:1.5rem; margin:0 10px;}
+#selftest .test_btn a{display:block; padding:17px 40px; border-radius:33px;}
+#selftest .test_btn a:hover{text-decoration:none;}
+#selftest .test_btn .btn_green{background:#fff; border:2px solid #52bdb5; color:#52bdb5;}
+#selftest .test_btn .btn_green:hover{background:#52bdb5; color:#fff;}
+#selftest .test_btn .btn_gray{background:#ccc; border:2px solid #ccc; color:#fff;}
+#selftest .test_btn .btn_gray:hover{background:#999; border:2px solid #999; }
+#selftest .test_btn .btn_green2{background:#52bdb5; border:2px solid #52bdb5; color:#fff;}
+#selftest .test_btn .btn_green2:hover{background:#2582c5; border:2px solid #2582c5;}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    
+    
+    .report .title_sub{font-size:1rem;}
+    .report .title{font-size:3rem; line-height:4rem;}
+    .report .score{flex-wrap:wrap; padding:0;}
+    .score .score_total, .score .score_total_2{width:100%; border-bottom:1px solid #ddd; border-right:0; padding:30px;}
+    .score .score_detail{width:100%; padding:20px 0;}
+    .score .score_detail .score_list{padding:20px 50px;}
+    
+    .grade table th{font-size:.875rem;}
+    .grade table td{font-size:.75rem;}
+    .grade .table2 table{width:900px;}
+    
+    .report_ck_1 .ck_q{width:35%;}
+    .report_ck_1 .ck_if{width:45%;}
+    .report_ck_1 .ck_wr{width:20%;}
+    
+    /*환자경험평가*/
+    .score .score_detail_2{width:100%; margin:30px;}
+    .score > p{padding:0 20px 20px;}
+    
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    #test_table2 .report_ck_1 .ck_if{width:44%;}
+    #selftest .report_ck_1 .ck_wr{width:20%;}
+
+    
+    
+}
+
+
+@media screen and (max-width: 425px) {
+    .report{padding:20px;}
+    .report_logo{top:20px; left:20px; width:100px;}
+    .report .title_sub{font-size:.875rem; margin-top:50px;}
+    .report .title{font-size:2.5rem; line-height:3.5rem;}
+    .score .score_total, .score .score_total_2{padding:30px 16px;}
+    .score .score_total .total_title, .score .score_total_2 .total_title{font-size:1.5rem;}
+    .score .score_total .total_border{width:160px; height:160px;}
+    .score .score_total .total_bg{width:152px; height:152px; border:5px solid #fff;}
+    .score .score_total .total_bg .total_no{font-size:3rem; line-height:2rem;}
+    .score .score_total .total_bg .total_no > p{font-size:1.25rem;}
+    .score .score_total p span{font-size:1rem;}
+    .score .score_detail .score_list{padding:10px 20px;}
+    .score .score_detail p{font-size:1rem;}
+    .score .score_detail .score_bg > div{width:60px; height:60px; padding:15px 8px;}
+    .score .score_detail .score_bg > div > p{font-size:1.5rem;}
+    .score .score_detail .score_bg > div span{font-size:.6875rem}
+    .score .score_detail .score_bg > p{font-size:1rem;}
+    .grade .table2 table{width:700px;}
+    
+    
+    /*환자경험평가*/
+    .score .score_total_2 .total_border{width:196px; height:108px;}
+    .score .score_total_2 .total_bg{border:5px solid #fff; width:188px; height:100px;}
+    .score .score_detail_2{margin:30px 0 10px;}
+    .score .score_total_2 .total_bg .total_no{font-size:2.875rem; line-height:2rem;}
+    .score .score_total_2 .total_bg > p{font-size:1.25rem;}
+    .score .score_detail_2 .score_list{width:45%; margin-bottom:20px; border-radius:10px;}
+    .score .score_detail_2 .score_list:nth-child(3),.score .score_detail_2 .score_list:nth-child(4){background:#7e5fbc}
+    .grade .table3 table{width:500px;}
+    
+    .report_check_list .color_green{font-size:1rem;}
+    .report_check_list .ck_top{font-size:.875rem;}
+    .report_ck_1 .ck_q{width:67%;}
+    .report_ck_1 .ck_if{display:none;}
+    .report_ck_1 .ck_wr{width:33%; text-align:center; padding:10px;}
+    .report_check_list > div > div{font-size:.75rem;}
+    .report_check_list input{margin-right:5px; width:50px;}
+    
+    .report_ck_2 .ck_q{width:100%; padding:10px 0;}
+    .report_ck_2 .ck_top .ck_if{display:none;}
+    .report_check_list .report_ck_2 > div{flex-wrap:wrap; border-bottom:2px solid #999;}
+    .report_ck_2 .ck_q{width:100%; padding:20px 10px; font-size:.875rem;}
+    .report_ck_2 .ck_if{width:100%; border-left:0; padding:0;}
+    .report_ck_2 .ck_if > p{padding:0 10px 10px;}
+    .report_ck_2 .ck_wr{flex-wrap:wrap; border-top:0;}
+    .report_ck_2 .ck_wr p{width:33.3333%; border-top:1px solid #ddd;}
+    .report_ck_2 .ck_wr p:nth-child(3){border-right:0;}
+    
+    .font_l{font-size:1.25rem;}
+    .font_m{font-size:.875rem;}
+    
+    #selftest{padding:30px 0; border-top:5px solid #52bdb5;}
+    #selftest h1{font-size:1.5rem; line-height:2.5rem;}
+    #selftest h1 span{font-size:2rem;}
+    #selftest h1 .title_line{height:10px; top:-15px; width:270px;}
+    #selftest > p{margin:30px 0 50px; padding:0 20px;}
+    #selftest .test_table{padding:30px;}
+    #selftest .test_table img{margin-bottom:20px;}
+    #selftest .test_table .font_s, .report table th span{font-size:.75rem;}
+    
+    #selftest .test_loc p{font-size:.75rem; line-height:.75rem; padding:10px;}
+    #selftest .test_loc span{width:10px;}
+    #selftest .test_table2{margin:30px 16px 0;}
+    #selftest .test_table2 .report_ck_1 .ck_top, #selftest .test_table2 .report_ck_2 .ck_top{font-size:.875rem;}
+    #selftest .report_ck_1 .ck_q{padding:15px 10px; width:60%;}
+    #selftest .report_ck_1 .ck_wr{width:40%}
+    #selftest .test_table2 .report_ck_1 > div{font-size:.75rem; align-items:center;}
+    #selftest .report_ck_1 .ck_wr{padding:5px;}
+    #selftest .ck_wr input{width:60px;}
+    #selftest .test_table3{margin:0 10px; padding:30px 20px;}
+    #selftest .test_table3 .color_green{margin:0; font-size:.875rem;}
+    #selftest .test_table3 p{font-size:.75rem;}
+    #selftest .test_table3 .color_pink{font-size:.75rem;}
+    
+    #selftest .report_ck_2 .ck_q{width:100%;}
+    #selftest .test_table2 .report_ck_2 > div{flex-wrap:wrap; border-bottom: 2px solid #999;}
+    #selftest .report_ck_2 .ck_q{width:100%; padding:15px 20px; font-weight:500;}
+    #selftest .report_ck_2 .ck_if{width:100%; font-size:.75rem;}
+    .test_table2 .report_ck_2 .ck_if > p{padding:0 20px 10px; line-height:1.25rem;}
+    .test_table2 .report_ck_2 .ck_wr{margin-top:0;}
+    .test_table2 .report_ck_2 .ck_wr p{padding:5px 0;}
+    
+    #selftest .btn{margin:30px auto 0;}
+    #selftest .btn p a{font-size:1rem; line-height:1rem; padding:15px 20px;}
+    #selftest .test_btn p{font-size:1rem; line-height:1rem; margin:0 5px;}
+    
+    #selftest .test_btn a{padding:12px 20px;}
+    
+    
+}
+
+
+
+
+

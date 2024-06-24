@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <script src="../../js/lottie-player.js"></script>
+    <title>2-7-17.설문결과</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="back"><img src="../../images/icon/system_back.svg" alt="뒤로가기" /></div>
+      <div class="page_name">설문결과</div>
+      <div class="header_icon">
+        <p class="header_link">
+          <img src="../../images/icon/system_cart.svg" alt="닫기" />
+        </p>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- 설문결과 토탈 슬라이드 -->
+      <section class="rst_total">
+        <div class="swiper rst_total_slide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide rst_bad">
+              <p class="title">최대오글자님의 건강점수</p>
+
+              <div class="total_box">
+                <div class="total_circle">
+                  <div class="circle_first">
+                    <p class="txt">상위 0.1%</p>
+                    <p class="per">39</p>
+                    <!-- 기준 0% = 50% /  -50% = 0% / 50% = 100% -->
+                    <div class="per_bg" style="bottom: -11%">
+                      <lottie-player src="../../images/json/water.json" background="transparent" speed="1" autoplay></lottie-player>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="total_info">
+                  <p class="title">
+                    지금 당장<br />
+                    <span>개선을 해야해요</span>
+                  </p>
+                  <p class="subtxt">현재 건강상태가 지속될 경우 질병의 발병률이 높아질 수 있어 적극적인 건강관리가 필요해요!</p>
+                </div>
+                <div class="rst_icons">
+                  <p class="icon_s icon_basic">혈중지질개선</p>
+                  <p class="icon_s icon_basic">스트레스/긴장</p>
+                  <p class="icon_s icon_basic">관절/뼈 건강</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide rst_notbad">
+              <p class="title">BMI</p>
+
+              <div class="total_box">
+                <div class="total_circle">
+                  <div class="circle_border">
+                    <p class="type">비만</p>
+                  </div>
+                </div>
+
+                <div class="total_info">
+                  <p class="title">
+                    BMI는 25.0이며,<br />
+                    <span>비만 개선이 필요해요.</span>
+                  </p>
+                  <p class="subtxt">현재 상태를 유지할 경우 고도비만을<br />초래할 수 있어요. 체중 감소를 위한<br />식사조절과 운동이 필요해요.</p>
+                </div>
+
+                <p class="bmiModal"><img src="../../images/icon/help.svg" alt="" /></p>
+              </div>
+            </div>
+
+            <div class="swiper-slide rst_normal">
+              <p class="title">식습관</p>
+
+              <div class="total_box">
+                <div class="total_circle">
+                  <div class="circle_border">
+                    <p class="type">보통</p>
+                  </div>
+                </div>
+
+                <div class="total_info">
+                  <p class="title">
+                    <span>식습관 개선</span>
+                    을 권장해요!
+                  </p>
+
+                  <div class="info_group">
+                    <p class="txt">식사 관련습관 (3)</p>
+
+                    <div class="rst_icons">
+                      <p class="icon_s">불규칙한 식사</p>
+                      <p class="icon_s">영양불균형</p>
+                      <p class="icon_s">잦은 야식</p>
+                    </div>
+                  </div>
+                  <div class="info_group">
+                    <p class="txt">섭취 관련습관 (3)</p>
+
+                    <div class="rst_icons">
+                      <p class="icon_s">칼슘 부족</p>
+                      <p class="icon_s">단백질 부족</p>
+                      <p class="icon_s">중성지방 과다섭취</p>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="bmiModal"><img src="../../images/icon/help.svg" alt="" /></p>
+              </div>
+            </div>
+
+            <div class="swiper-slide rst_good">
+              <p class="title">활동습관</p>
+
+              <div class="total_box">
+                <div class="total_circle">
+                  <div class="circle_border">
+                    <p class="type">좋음</p>
+                  </div>
+                </div>
+
+                <div class="total_info">
+                  <p class="title">
+                    활동 습관이
+                    <span>좋아요!</span>
+                  </p>
+                  <p class="subtxt">운동은 혈액순환을 돕고 노폐물 배출을<br />촉진시켜 신진대사를 원할하게 해요!<br />좋은 습관을 잘 지켜보세요!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!-- 추천영양성분 -->
+      <section class="rst_goods">
+        <p class="title">
+          최대오글자 님을 위한<br />
+          <span class="primary">추천 영양성분 결과</span>를 확인하세요
+          <span class="goodsModal"><img src="../../images/icon/help.svg" alt="" /></span>
+        </p>
+
+        <div class="grid_list_0_75 mt_2_25">
+          <div class="thumb_goods best_item">
+            <p class="thumb"><img src="../../images/drug_sample.png" alt="" /></p>
+            <div class="goods_data">
+              <p class="type">스트레스 긴장완화</p>
+              <p class="name">쏘팔케토옥타코사놀+</p>
+              <div class="info">
+                <p class="txt">전립선 건강 유지</p>
+                <p class="txt">지구력 증진</p>
+              </div>
+            </div>
+            <p class="best">권장</p>
+          </div>
+          <div class="thumb_goods best_item">
+            <p class="thumb"><img src="../../images/drug_sample.png" alt="" /></p>
+            <div class="goods_data">
+              <p class="type">스트레스 긴장완화</p>
+              <p class="name">쏘팔케토옥타코사놀+</p>
+              <div class="info">
+                <p class="txt">전립선 건강 유지</p>
+                <p class="txt">지구력 증진</p>
+              </div>
+            </div>
+            <p class="best">권장</p>
+          </div>
+          <div class="thumb_goods best_item">
+            <p class="thumb"><img src="../../images/drug_sample.png" alt="" /></p>
+            <div class="goods_data">
+              <p class="type">스트레스 긴장완화</p>
+              <p class="name">쏘팔케토옥타코사놀+</p>
+              <div class="info">
+                <p class="txt">전립선 건강 유지</p>
+                <p class="txt">지구력 증진</p>
+              </div>
+            </div>
+            <p class="best">권장</p>
+          </div>
+          <div class="thumb_goods">
+            <p class="thumb"><img src="../../images/drug_sample.png" alt="" /></p>
+            <div class="goods_data">
+              <p class="type">스트레스 긴장완화</p>
+              <p class="name">쏘팔케토옥타코사놀+</p>
+              <div class="info">
+                <p class="txt">전립선 건강 유지</p>
+                <p class="txt">지구력 증진</p>
+              </div>
+            </div>
+            <p class="best">권장</p>
+          </div>
+          <div class="thumb_goods">
+            <p class="thumb"><img src="../../images/drug_sample.png" alt="" /></p>
+            <div class="goods_data">
+              <p class="type">스트레스 긴장완화</p>
+              <p class="name">쏘팔케토옥타코사놀+</p>
+              <div class="info">
+                <p class="txt">전립선 건강 유지</p>
+                <p class="txt">지구력 증진</p>
+              </div>
+            </div>
+            <p class="best">권장</p>
+          </div>
+          <div class="thumb_goods">
+            <p class="thumb"><img src="../../images/drug_sample.png" alt="" /></p>
+            <div class="goods_data">
+              <p class="type">스트레스 긴장완화</p>
+              <p class="name">쏘팔케토옥타코사놀+</p>
+              <div class="info">
+                <p class="txt">전립선 건강 유지</p>
+                <p class="txt">지구력 증진</p>
+              </div>
+            </div>
+            <p class="best">권장</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 추가영양성분 슬라이드 -->
+      <div class="rst_more">
+        <div class="swiper rst_more_slide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <p class="title">
+                이런 영양제도<br />
+                있어요
+              </p>
+              <p class="txt">
+                최대오글자 님의<br />
+                건강분석결과 섭취해도 괜찮은 영양성분이에요!
+              </p>
+            </div>
+            <div class="thumb_goods_data swiper-slide">
+              <p class="img"><img src="../../images/drug_sample.png" alt="" /></p>
+              <p class="type">스트레스 긴장완화</p>
+              <p class="name">rTG 알티지 오메가3+</p>
+            </div>
+            <div class="thumb_goods_data swiper-slide">
+              <p class="img"><img src="../../images/drug_sample.png" alt="" /></p>
+              <p class="type">스트레스 긴장완화</p>
+              <p class="name">rTG 알티지 오메가3+</p>
+            </div>
+            <div class="thumb_goods_data swiper-slide">
+              <p class="img"><img src="../../images/drug_sample.png" alt="" /></p>
+              <p class="type">스트레스 긴장완화</p>
+              <p class="name">rTG 알티지 오메가3+</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 영양성분 타입별 탭 슬라이드 -->
+      <section class="rst_typetab">
+        <p class="title">
+          건강고민에 도움 되는<br />
+          영양성분을 준비했어요
+        </p>
+
+        <div class="typetab">
+          <p class="tab_btn active">혈중지질개선</p>
+          <p class="tab_btn">스트레스/긴장</p>
+          <p class="tab_btn">관절/뼈 건강</p>
+        </div>
+
+        <!-- tab 1 con -->
+        <div class="tab_con">
+          <div class="swiper tab_list_slide">
+            <div class="tab_list swiper-wrapper">
+              <div class="tab_data swiper-slide">
+                <p class="thumb"><img src="../../images/drug_sample.png" alt="" /></p>
+                <div class="data_info">
+                  <p class="type">스트레스 긴장완화</p>
+                  <p class="name">혈중지질개선컨츠</p>
+                </div>
+              </div>
+              <div class="tab_data swiper-slide">
+                <p class="thumb"><img src="../../images/drug_sample.png" alt="" /></p>
+                <div class="data_info">
+                  <p class="type">스트레스 긴장완화</p>
+                  <p class="name">rTG 알티지 오메가3+</p>
+                </div>
+              </div>
+              <div class="tab_data swiper-slide">
+                <p class="thumb"><img src="../../images/drug_sample.png" alt="" /></p>
+                <div class="data_info">
+                  <p class="type">스트레스 긴장완화</p>
+                  <p class="name">rTG 알티지 오메가3+</p>
+                </div>
+              </div>
+              <div class="tab_data swiper-slide">
+                <p class="thumb"><img src="../../images/drug_sample.png" alt="" /></p>
+                <div class="data_info">
+                  <p class="type">스트레스 긴장완화</p>
+                  <p class="name">rTG 알티지 오메가3+</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- tab 2 con -->
+        <div class="tab_con" style="display: none">
+          <div class="swiper tab_list_slide">
+            <div class="tab_list swiper-wrapper">
+              <div class="tab_data swiper-slide">
+                <p class="thumb"><img src="../../images/drug_sample.png" alt="" /></p>
+                <div class="data_info">
+                  <p class="type">스트레스 긴장완화</p>
+                  <p class="name">스트레스긴장 컨텐츠</p>
+                </div>
+              </div>
+              <div class="tab_data swiper-slide">
+                <p class="thumb"><img src="../../images/drug_sample.png" alt="" /></p>
+                <div class="data_info">
+                  <p class="type">스트레스 긴장완화</p>
+                  <p class="name">rTG 알티지 오메가3+</p>
+                </div>
+              </div>
+              <div class="tab_data swiper-slide">
+                <p class="thumb"><img src="../../images/drug_sample.png" alt="" /></p>
+                <div class="data_info">
+                  <p class="type">스트레스 긴장완화</p>
+                  <p class="name">rTG 알티지 오메가3+</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- tab 3 con -->
+        <div class="tab_con" style="display: none">
+          <div class="swiper tab_list_slide">
+            <div class="tab_list swiper-wrapper">
+              <div class="tab_data swiper-slide">
+                <p class="thumb"><img src="../../images/drug_sample.png" alt="" /></p>
+                <div class="data_info">
+                  <p class="type">스트레스 긴장완화</p>
+                  <p class="name">rTG 알티지 오메가3+</p>
+                </div>
+              </div>
+              <div class="tab_data swiper-slide">
+                <p class="thumb"><img src="../../images/drug_sample.png" alt="" /></p>
+                <div class="data_info">
+                  <p class="type">스트레스 긴장완화</p>
+                  <p class="name">관절 뼈 건강 컨텐츠</p>
+                </div>
+              </div>
+              <div class="tab_data swiper-slide">
+                <p class="thumb"><img src="../../images/drug_sample.png" alt="" /></p>
+                <div class="data_info">
+                  <p class="type">스트레스 긴장완화</p>
+                  <p class="name">rTG 알티지 오메가3+</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="btn_wrap bg_light" style="padding-bottom: 10rem">
+        <button class="btn_b btn_basic">추천 영양제 구독하기</button>
+        <button class="btn_b btn_white">약사님과 영양제 상담하기</button>
+      </div>
+
+      <a href="#" class="home_top"></a>
+
+      <div class="bottom_btn" style="bottom: 1rem">
+        <p class="txt">5개의 제품을 담았어요</p>
+        <p class="btn_s btn_light btn_img">담은 제품 확인</p>
+      </div>
+    </main>
+
+    <!-- 로그인 확인 팝업 -->
+    <div class="popup popup01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 팝업 컨텐츠 -->
+      <div class="popup_wrap">
+        <p class="pop_title">로그인이 필요한 기능이예요</p>
+        <p class="pop_txt">지금 로그인하고 핏타민의 모든 서비스를 이용해보세요!</p>
+        <!-- 버튼 2개 -->
+        <div class="pop_btn">
+          <button class="btn_m btn_light popClose">닫기</button>
+          <button class="btn_m btn_basic popClose">로그인 하기</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- bmi 정보 모달 -->
+    <div class="modal modal01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 모달 컨텐츠-->
+      <div class="modal_wrap">
+        <div class="modal_top">
+          <p class="modal_title">BMI는 무엇인가요?</p>
+          <p class="modal_sub">BMI(신체질량지수)는 키와 몸무게를 이용하여 지방의 양을 추정하는 비만 측정법이예요</p>
+        </div>
+        <div class="modal_con">
+          <ul class="list_dot">
+            <li>저체중: 18.5 미만</li>
+            <li>정상체중: 18.5 ~ 22.9</li>
+            <li>과체중: 23.0 ~ 24.9</li>
+            <li>비만: 25.0 ~ 29.9</li>
+            <li>고도비만: 30.0 이상</li>
+          </ul>
+        </div>
+
+        <div class="btn_wrap">
+          <button class="btn_b btn_basic popClose">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 약사확인 모달 -->
+    <div class="modal modal02">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 모달 컨텐츠-->
+      <div class="modal_wrap">
+        <div class="modal_top">
+          <p class="modal_title">약사님의 확인이 꼭 필요한가요?</p>
+          <p class="modal_sub">약사님과 영양제 추천 결과를 확인하시고 내 맞춤 영양제를 확정지으세요</p>
+        </div>
+        <div class="modal_con">
+          <ul class="list_dot">
+            <li>약사상담을 받으실 경우 고객님의 건강 분석과 함께 더욱 상세한 영양성분 추천이 가능합니다.</li>
+            <li>또한 복용 중인 의약품이 있을 경우 성분 충돌 및 기능성 중복 주의 성분을 방지할 수 있습니다.</li>
+          </ul>
+        </div>
+
+        <div class="btn_wrap">
+          <button class="btn_b btn_basic popClose">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 약 상세 정보 모달 -->
+    <div class="modal modal03">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 모달 컨텐츠-->
+      <div class="modal_wrap">
+        <div class="modal_top">
+          <div class="detail_img">
+            <p class="goods_img"><img src="../../images/drug_sample.png" alt="" /></p>
+            <p class="flex_right">
+              <img src="../../images/modal_fix1.png" alt="" />
+              <img src="../../images/modal_fix2.png" alt="" />
+            </p>
+          </div>
+          <p class="modal_title">비타민B 컴플렉스+</p>
+          <p class="goods_cost"><span class="primary"> 30정</span> <span class="gray01">12,900원</span></p>
+        </div>
+
+        <div class="modal_con">
+          <div class="modal_goods">
+            <div class="goods_data">
+              <p class="goods_title">하루 섭취 권장량</p>
+              <p class="span2_f gray02">1일 섭취량 : 1정(1,000 mg)</p>
+            </div>
+
+            <div class="goods_data">
+              <p class="goods_title">주요기능</p>
+              <ul>
+                <li>비타민A : 어두운 곳에서 시각 적응을 위해 필요, 피부와 점막을 형성하고 기능을 유지하는데 필요,상피 세포의 성장과 발달에 필요</li>
+                <li>비타민B2 : 체내 에너지 생성에 필요</li>
+                <li>비타민B6: 단백질및 아미노산 이용에 필요, 혈액의호모시스테인 수준을 정상으로 유지하는데 필요</li>
+                <li>비타민B12:정상적인 엽산대사에 필요</li>
+                <li>비타민C:결합조직 형성과 기능유지에 필요, 철의 흡수에 필요, 항산화 작용을 하여 유해산소로부터 세포를 보호하는데 필요</li>
+              </ul>
+            </div>
+
+            <div class="goods_data">
+              <p class="goods_title">영양정보</p>
+              <table>
+                <colgroup>
+                  <col width="30%" />
+                  <col width="60%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>1일 섭취량 당</th>
+                    <th>함량(% 영양성분기준치)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>단백질</td>
+                    <td>0g(0%)</td>
+                  </tr>
+                  <tr>
+                    <td>지방</td>
+                    <td>0g(0%)</td>
+                  </tr>
+                  <tr>
+                    <td>탄수화물</td>
+                    <td>1g미만(0%)</td>
+                  </tr>
+                  <tr>
+                    <td>나트륨</td>
+                    <td>0mg(0%)</td>
+                  </tr>
+                  <tr>
+                    <td>비타민 A</td>
+                    <td>700µg RE(100%)</td>
+                  </tr>
+                  <tr>
+                    <td>비타민 B1</td>
+                    <td>50mg(4267%)</td>
+                  </tr>
+                  <tr>
+                    <td>비타민 B2</td>
+                    <td>50mg(3571%)</td>
+                  </tr>
+                  <tr>
+                    <td>비타민 B6</td>
+                    <td>50mg(3333%)</td>
+                  </tr>
+                  <tr>
+                    <td>비타민 B12</td>
+                    <td>120µg(5000%)</td>
+                  </tr>
+                  <tr>
+                    <td>비타민 C</td>
+                    <td>100mg(100%)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="goods_data">
+              <p class="goods_title">섭취방법</p>
+              <p class="p5_f">충분한 물과 함께 섭취하십시오.</p>
+            </div>
+
+            <div class="goods_data">
+              <p class="goods_title">부작용 및 주의사항</p>
+              <ul>
+                <li>비타민B 성분의 중복 섭취를 확인해주세요.</li>
+                <li>고용량의 비타민A 성분은 독성을 유발할 수 있으므로 중복 섭취에 주의하세요.</li>
+              </ul>
+            </div>
+
+            <div class="goods_data">
+              <p class="goods_title">제조원 및 판매원</p>
+              <ul>
+                <li>제조원 : 코스맥스바이오(주)/충북 제천시 바이오밸리 3로 30</li>
+                <li>판매원 : (주)킥더허들/경상남도 창원시 의창구 용동로57번길 18, 8층 801호</li>
+              </ul>
+            </div>
+
+            <div class="goods_data">
+              <ul class="noti">
+                <li>제품 정보는 제품용기에 기재되거나 제조업체 또는 판매업체가 제공하는 정보에 기반합니다.</li>
+                <li>개인의 건강상태에 따라 섭취량 및 섭취방법이 달라질 수 있으며 더 정확한 개인별 분석을 위해서는 전문가와의 상담을 권장합니다.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn_wrap btn_fixgr">
+          <button class="btn_b btn_basic">한 팩 담기</button>
+          <button class="btn_b btn_trans btnClose">닫기</button>
+          <!-- <p class="toast" style="bottom: 8rem">쏘팔메토옥타코사놀+ 제품을 담았어요</p> -->
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script>
+      //탑버튼 스크립트
+      $(document).ready(function () {
+        var topbtn = $(".home_top");
+
+        $(window).scroll(function () {
+          var scroll = $(window).scrollTop();
+          if (scroll >= 80) {
+            topbtn.addClass("topbtn");
+          } else {
+            topbtn.removeClass("topbtn");
+          }
+        });
+      });
+
+      //total slide
+      var rstSlide = new Swiper(".rst_total_slide", {
+        slidesPerView: "auto",
+        spaceBetween: 15,
+        centeredSlides: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+      //more slide
+      var rstmoreSlide = new Swiper(".rst_more_slide", {
+        slidesPerView: "auto",
+        spaceBetween: 8,
+      });
+
+      //more slide
+      var tablistSlide = new Swiper(".tab_list_slide", {
+        slidesPerView: "auto",
+        spaceBetween: 8,
+      });
+
+      //tap
+      $(".typetab")
+        .find(".tab_btn")
+        .click(function () {
+          $(this).addClass("active");
+          $(this).siblings().removeClass("active");
+        });
+
+      var tabBtn = $(".tab_btn");
+      var tabCont = $(".tab_con");
+
+      tabCont.hide().eq(0).show();
+
+      tabBtn.click(function () {
+        var target = $(this);
+        var index = target.index();
+        // alert(index);
+        tabBtn.removeClass("active");
+        target.addClass("active");
+        tabCont.css("display", "none");
+        tabCont.eq(index).css("display", "block");
+      });
+
+      /* popup */
+      $(".bmiModal").on("click", function () {
+        $(".modal01, body").addClass("open");
+      });
+
+      $(".goodsModal").on("click", function () {
+        $(".modal02, body").addClass("open");
+      });
+
+      $(".thumb_goods, .thumb_goods_data, .tab_data").on("click", function () {
+        $(".modal03, body").addClass("open");
+      });
+
+      $(".overlay, .popClose").on("click", function () {
+        $(".popup, .modal, body, .btn_trans").removeClass("open");
+      });
+    </script>
+  </body>
+</html>

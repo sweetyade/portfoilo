@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- css -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/> <!-- icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/><!-- swiper -->
+  <link rel="stylesheet" href="../../css/mini-event-calendar.min.css"><!-- celendar -->
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <title>home</title>
+</head>
+<body class="bg_color">
+  <!-- hedaer -->
+  <header class="header">
+    <div class="inner">
+      <div class="header_title">
+        <h2>
+          <span class="mb_0_25">2024년 2월</span>
+          안녕하세요, __님
+        </h2>
+      </div>
+      <div class="icon_group">
+        <div class="user_img"><img src="../../images/profile.jpg" alt=""></div>
+      </div>
+    </div>
+    <div class="header_noti">
+      <p>오늘 테스트 '1'건, 읽지않은 공지 '3'건, <br>
+        읽지않은 알림 '3'건, 이벤트 '1'건
+      </p>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main class="main bg_top-white">
+    <div class="inner">
+      <!-- 상단 스캐쥴 리스트 -->
+      <section class="dashboard_scd">
+        <div class="tab_group">
+          <p class="tab_btn active">학습 클래스</p>
+          <p class="tab_btn  new">이벤트</p>
+        </div>
+
+        <div class="tab_con"">
+          <div class="swiper scd_slide">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide time_card">
+                <p class="class_name">프로그래밍</p>
+                <p class="class_time">
+                  다음 수업 시간<br>
+                  오후 3시 20분
+                </p>
+              </div>
+              <div class="swiper-slide time_card">
+                <p class="class_name">수학</p>
+                <p class="class_time">
+                  다음 수업 시간<br>
+                  오후 3시 20분
+                </p>
+              </div>
+              <div class="swiper-slide time_card">
+                <p class="class_name">기초 중국어</p>
+                <p class="class_time">
+                  다음 수업 시간<br>
+                  오후 3시 20분
+                </p>
+              </div>
+              <div class="swiper-slide time_card">
+                <p class="class_name">수학</p>
+                <p class="class_time">
+                  다음 수업 시간<br>
+                  오후 3시 20분
+                </p>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <div class="tab_con">
+          <div id="calendar" class="mb_1"></div>
+        </div>
+        
+      </section>
+
+      <!-- 공지사항 -->
+      <section class="dashboard_notice">
+        <h2 class="title">공지사항 <span class="icon_round icon_primary-alp">1 new</span></h2>
+
+        <div class="list_0_75">
+          <a href="javascript:void(0)" class="card_dash new">
+            <p class="icon_round icon_white">new</p>
+            <p class="title">공지사항 타이틀</p>
+            <p class="date">24년 2월 5일</p>
+          </a>
+          <a href="javascript:void(0)" class="card_dash">
+            <p class="title">공지사항 타이틀</p>
+            <p class="date">24년 2월 5일</p>
+          </a>
+          <a href="javascript:void(0)" class="card_dash">
+            <p class="title">공지사항 타이틀</p>
+            <p class="date">24년 2월 5일</p>
+          </a>
+          <a href="javascript:void(0)" class="card_dash">
+            <p class="title">공지사항 타이틀</p>
+            <p class="date">24년 2월 5일</p>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+  
+  <!-- footer -->
+  <footer class="footer">
+    <nav class="nav">
+      <a href="javascript:void(0)" class="nav_link active"><i class="ri-home-5-line"></i></a>
+      <a href="javascript:void(0)" class="nav_link"><i class="ri-book-line"></i></a>
+      <a href="javascript:void(0)" class="nav_link"><i class="ri-shopping-bag-line"></i></a>
+      <a href="javascript:void(0)" class="nav_link"><i class="ri-user-line"></i></a>
+    </nav>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+  <script src="../../js/mini-event-calendar.min.js"></script>
+  <script>
+    //변동높이 설정 
+    $(document).ready(function() {
+      headerHeight = $(".header").innerHeight();
+      mainHeight = (innerHeight - headerHeight)
+      $(".main").css("min-height", mainHeight).css("padding-bottom", '5rem');
+    });
+
+    //해더 스크롤 쉐도우 추가
+    $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+      if (scroll >= 50) {
+        $(".header").addClass("scroll");
+      } else {
+        //console.log('a');
+        $(".header").removeClass("scroll");
+      }
+    });
+
+    //스케쥴 카드
+    var swiper = new Swiper(".scd_slide", {
+      slidesPerView: "auto",
+      spaceBetween: 12,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+
+    //스캐쥴, 이벤트 탭
+      var tabBtn = $(".tab_group .tab_btn");   
+      var tabCont = $(".tab_con");   
+
+      tabBtn.click(function(){
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+      });
+
+        tabCont.hide().eq(0).show();
+
+        tabBtn.click(function(){
+        var target = $(this);               
+        var index = target.index();          
+        // alert(index);
+        tabBtn.removeClass("active");          
+        target.addClass("active");                
+        tabCont.css("display","none");
+        tabCont.eq(index).css("display","block");
+        });
+
+
+      //캘린더
+      var sameDaylastWeek = new Date().setDate(new Date().getDate() - 7);
+		var someDaynextMonth = new Date().setDate(new Date().getDate() + 31);
+    var sampleEvents = [
+			{
+			    title: "간단 이벤트 내용 추가 / 전주 오늘 선택",
+			    date: sameDaylastWeek, // Same day as today, last week
+			    // link: "https://www.eventbrite.com/e/soulful-sundays-bay-area-edition-tickets-55214242285?aff=ehomecard"
+			},
+			{
+			    title: "링크 입력시 해당 페이지로 이동 내용이길면 말줄임표 처리 / 오늘지정",
+			    date: new Date().getTime(), // Today
+			    // link: "https://www.eventbrite.co.uk/e/london-film-comic-con-summer-2019-tickets-49472593860?aff=ebdssbdestsearch"
+			},
+			{
+			    title: "이벤트이벤트 랄랄랄 / 담달 오늘선택",
+			    date: someDaynextMonth, // Some day as today, next month
+			    // link: "https://www.eventbrite.com/e/leaner-stronger-faster-tm-youth-athletic-camp-2021-tickets-38245970728?aff=ebdssbdestsearch"
+			},
+      {
+			    title: "선택날짜 이벤트 이렇게 추가",
+			    date: "2024-05-15", // Some day as today, next month
+			    // link: "https://www.eventbrite.com/e/leaner-stronger-faster-tm-youth-athletic-camp-2021-tickets-38245970728?aff=ebdssbdestsearch"
+			},
+	    	];
+        $(document).ready(function(){
+			$("#calendar").MEC({
+				events: sampleEvents
+			});
+		});
+  </script>
+</body>
+</html>

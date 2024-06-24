@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/rcommon.css">
+  <link rel="stylesheet" href="../../css/guide.css">
+  <title>Fitamin UI Design Guide</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+    body{
+      background: #f9f9f9;
+      padding: 0 1rem;
+    }
+
+    section{
+      width: 100%;
+      max-width: 500px;
+      margin: 2rem auto;
+      border: 1px solid #eee;
+      padding: 0 1.375rem;
+      background: #fff;
+    }
+
+    h1.title{
+      text-transform: uppercase;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.875rem;
+      border-bottom: 1px solid var(--gray04);
+      padding: 2rem 0 1rem;
+    }
+
+    h2.group_title{
+      font-size: var(--h2-f);
+    }
+
+    .contents{
+      padding: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- form -->
+  <section>
+    <h1 class="title">form</h1>
+
+    <div class="contents">
+      <h2 class="group_title mb_2">01. input text, password</h2>
+      
+      <div class="mb_4">
+        <div class="input_basic mb_3">
+          <label for="input01" class="mb_1">기본 텍스트 인풋</label>
+          <input type="text" placeholder="기본 텍스트 인풋" id="input01">
+        </div>
+
+        <div class="input_basic mb_3">
+          <label for="input02" class="mb_1">텍스트+버튼 세트</label>
+          <div class="input_btmix">
+            <input type="text" placeholder="버튼 믹스 인풋" id="input02" class="clearInput">
+            <input type="submit" value="인증하기" class="btn_blue">
+            <p class="btnClear"></p>
+          </div>
+        </div>
+
+        <div class="input_basic mb_3">
+          <label for="pass01" class="mb_1">기본 비밀번호</label>
+          <div class="input_pass">
+            <input type="password" placeholder="비밀번호를 입력해주세요." id="pass01" class="inputPass clearInput" pattern="^([a-z0-9_]){6,10}$" required>
+            <p toggle="#pass01" class="pass_view"></p>
+            <p class="btnClear"></p>
+          </div>
+          <p class="input_info">특수문자가 포함되도록 설정해주세요.</p>
+        </div>
+
+        <div class="input_basic mb_3">
+          <label for="pass02" class="mb_1">비밀번호 - 오류 입력시 하단 에러메세지 출력</label>
+          <div class="input_pass">
+            <input type="text" placeholder="비밀번호를 입력해주세요." id="pass02" class="inputPass clearInput" pattern="^([a-z0-9_]){6,10}$" value="오른쪽 입력 비밀번호 보이기 버튼" required>
+            <p toggle="#pass02" class="pass_view"></p>
+            <p class="btnClear"></p>
+          </div>
+          <p class="input_info error">특수문자가 포함되어 있는지 확인해주세요.</p>
+        </div>
+
+        <div class="input_basic mb_3">
+          <label for="pass03" class="mb_1">비밀번호 - 정상입력 시 체크 출력</label>
+          <div class="input_pass">
+            <input type="password" placeholder="비밀번호를 입력해주세요." id="pass03" class="inputPass clearInput" pattern="^([a-z0-9_]){6,10}$" value="pass_1234" required>
+            <p class="btnCheck"></p>
+          </div>
+          <!-- <p class="input_info">특수문자가 포함되도록 설정해주세요.</p> -->
+        </div>
+
+        <div class="input_basic mb_3">
+          <label for="pass04" class="mb_1">비밀번호 - 틀렸을 때</label>
+          <div class="input_pass">
+            <input type="password" placeholder="비밀번호를 입력해주세요." id="pass04" class="inputPass clearInput" pattern="^([a-z0-9_]){6,10}$" value="잘못된 비밀번호 입력 시" required>
+            <p class="btnCheck"></p>
+          </div>
+          <p class="input_info">특수문자가 포함되도록 설정해주세요.</p>
+        </div>
+
+        <div class="input_basic mb_3">
+          <label for="input03" class="mb_1">수정불가</label>
+          <input type="text" placeholder="수정할 수 없는 인풋" id="input03" disabled>
+        </div>
+      </div>
+
+      <h2 class="group_title mb_2">02. select</h2>
+      <div class="mb_4">
+        <div class="selectbox">
+          <button class="selectBtn">옵션을 선택해주세요:)</button>
+          <ul class="optionList">
+              <li class="optionItem">옵션1</li>
+              <li class="optionItem">옵션2</li>
+              <li class="optionItem">옵션3</li>
+              <li class="optionItem">옵션4</li>
+          </ul>
+          <img src="../images/icon_down.svg" alt="" class="selectArrow">
+        </div>
+      </div>
+
+      <h2 class="group_title mb_2">03. textarea</h2>
+      <div class="mb_4">
+        <div class="input_basic mb_3">
+          <!-- <label for="textarea01" class="mb_1">글쓰기</label> -->
+          <textarea type="text" id="textarea01" cols="0" rows="10" placeholder="문의내용을 남겨주세요."></textarea>
+        </div>
+      </div>
+
+      <h2 class="group_title mb_2">04. checkbox, radio, toggle</h2>
+      <div class="" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+        <div class="input_check">
+          <input type="checkbox" id="checkbox01">
+          <label for="checkbox01" class="ck_line">체크박스 라인 - 체크 되지 않음</label>
+        </div>
+        <div class="input_check mb_1">
+          <input type="checkbox" id="checkbox02" checked>
+          <label for="checkbox02" class="ck_line">체크박스 라인 - 체크 됨</label>
+        </div>
+
+        <div class="check_list mb_2">
+          <div class="input_check">
+            <input type="checkbox" id="checkbox03" checked>
+            <label for="checkbox03" class="ck_circle">체크1 - 써클</label>
+          </div>
+          <div class="input_check">
+            <input type="checkbox" id="checkbox04">
+            <label for="checkbox04" class="ck_circle">체크2 - 써클</label>
+          </div>
+          <div class="input_check">
+            <input type="checkbox" id="checkbox05">
+            <label for="checkbox05" class="ck_circle">체크3 - 써클</label>
+          </div>
+        </div>
+
+        <div class="input_check">
+          <input type="radio" id="radio01" name="radioset01" checked>
+          <label for="radio01" class="ck_circle">라디오 써클 - 체크 됨</label>
+        </div>
+
+        <div class="input_check mb_1">
+          <input type="radio" id="radio02" name="radioset01">
+          <label for="radio02" class="ck_circle">라디오 써클 - 체크 되지 않음</label>
+        </div>
+
+        <div class="check_list mb_3">
+          <div class="input_check">
+            <input type="radio" id="radio03" name="radioset02" checked>
+            <label for="radio03" class="ck_line">체크1 - 라인</label>
+          </div>
+          <div class="input_check">
+            <input type="radio" id="radio04" name="radioset02">
+            <label for="radio04" class="ck_line">체크2 - 라인</label>
+          </div>
+          <div class="input_check">
+            <input type="radio" id="radio05" name="radioset02">
+            <label for="radio05" class="ck_line">체크3 - 라인</label>
+          </div>
+        </div>
+
+        <div class="input_toggle">  
+          <input type="checkbox" class="toggle" id="ipToggle">
+          <label for="ipToggle" class="toggle_btn"></label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script>
+    
+
+    // /* ---- 삭제버튼 ------- */
+    $(document).ready(function(){
+      $('.input_basic').each(function(){
+        $(this).find('.clearInput').on('keyup focus', function(){
+          $(this).siblings('.btnClear, .btnCheck').attr('style', 'opacity: 1');
+
+          if($(this).val().length == 0){
+            $(this).siblings('.btnClear, .btnCheck').attr('style', 'opacity: 0');
+          } else {
+            $(this).siblings('.btnClear, .btnCheck').attr('style', 'opacity: 1');
+          }
+        });
+      
+        // $(this).find('.clearInput').on('blur', function(){
+        //   $(this).siblings('.btnClear').attr('style', 'opacity: 0');
+        // });
+      
+        $(this).find('.btnClear, .btnCheck').on('click touchstart', function(){
+          $(this).closest('.input_basic').find('.clearInput').val('');
+          $(this).closest('.input_basic').find('.btnClear').attr('style', 'opacity: 0');
+          return false;
+        });
+      });
+    });
+
+
+
+
+    /* 패스워드 */
+    $(".pass_view").click(function() {
+
+    $(this).toggleClass("inputPass");
+    var input = $($(this).attr("toggle"));
+    if (input.attr("type") == "password"){
+      input.attr("type", "text");
+    } else {
+      input.attr("type", "password");
+    }
+    });
+
+    $(document).ready(function () {
+  $(".pass_view").on("click", function () {
+    $(this).toggleClass("pass_view-on");
+  });
+})
+
+
+
+
+/* 셀렉트 */
+const label = document.querySelectorAll('.selectBtn');
+label.forEach(function(lb){
+    lb.addEventListener('click', e => {
+        let optionList = lb.nextElementSibling;
+        let optionItems = optionList.querySelectorAll('.optionItem');
+        clickLabel(lb, optionItems);
+    })
+});
+const clickLabel = (lb, optionItems) => {
+    if(lb.parentNode.classList.contains('active')) {
+        lb.parentNode.classList.remove('active');
+        optionItems.forEach((opt) => {
+            opt.removeEventListener('click', () => {
+                handleSelect(lb, opt)
+            })
+        })
+    } else {
+        lb.parentNode.classList.add('active');
+        optionItems.forEach((opt) => {
+            opt.addEventListener('click', () => {
+                handleSelect(lb, opt)
+            })
+        })
+    }
+}
+const handleSelect = (label, item) => {
+    label.innerHTML = item.textContent;
+    label.parentNode.classList.remove('active');
+}
+
+  </script>
+</body>
+</html>

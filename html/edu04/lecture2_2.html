@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- =========================== icons ========================= -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!-- ============================ sweiper css ========================= -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <!-- ========================= css ================================= -->
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/lecture.css">
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <title>나야넷 한국안전교육기술원</title>
+</head>
+
+<body>
+    <header id="header" class="header">
+        <div style="text-align:center; font-size: .75rem; background-color: #222; color: #fff; width: 100%; padding: 10px;">
+            <p>메뉴에 링크가 걸려있습니다. 각 페이지는 링크로 직접 확인해주세요</p>
+        </div>
+        <div class="container header_container">
+            <a href="index.html" class="logo">
+                <img src="images/logo_gnb.png" alt="" class="logo_img">
+            </a>
+
+            <!-- ======= nav ============ -->
+            <div class="nav" id="nav-menu">
+                <a href="#" class="close_toggle" id="nav-close"><i class='bx bx-x'></i></a>
+
+                <div class="nav_block">
+                    <div class="lnb">
+                        <a href="#" class="lnb_link">
+                            <i class='bx bx-support lnb_icon'></i> 실시간 상담
+                        </a>
+                        <a href="#" class="lnb_link">
+                            <i class='bx bx-user-circle lnb_icon'></i> 회원가입
+                        </a>
+                        <a href="login.html" class="lnb_link">
+                            <i class='bx bx-log-in-circle lnb_icon'></i> 로그인
+                        </a>
+                    </div>
+
+                    <div class="gnb" id="gnb">
+                        <a href="about_1.html" class="gnb_link">교육원 소개</a>
+                        <a href="lecture_1.html" class="gnb_link">교육안내</a>
+                        <a href="lecture2_1.html" class="gnb_link">교육과정안내</a>
+                        <a href="board_1.html" class="gnb_link">고객지원</a>
+                    </div>
+                </div>
+
+                <!-- ============= nav_full ========== -->
+                <div class="nav_full" id="nav-menu">
+                    <ul class="nav_list">
+                        <li class="nav_item">
+                            <p class="nav_title">교육원소개 <i class='bx bx-chevron-up' ></i></p> 
+
+                            <ul class="nav_sub">
+                                <li class="sub_item">
+                                    <a href="about_1.html" class="nav_link">인사말</a>
+                                </li>
+                                <li class="sub_item">
+                                    <a href="#" class="nav_link">설립목적</a>
+                                </li>
+                                <li class="sub_item">
+                                    <a href="#" class="nav_link">조직도</a>
+                                </li>
+                                <li class="sub_item">
+                                    <a href="about_2.html" class="nav_link">찾아오시는 길</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav_item">
+                            <p class="nav_title">교육안내 <i class='bx bx-chevron-up' ></i></p>
+
+                            <ul class="nav_sub">
+                                <li class="sub_item">
+                                    <a href="lecture_1.html" class="nav_link">근로자 정기교육</a>
+                                </li>
+                                <li class="sub_item">
+                                    <a href="lecture_1.html" class="nav_link">관리감독자 교육</a>
+                                </li>
+                                <li class="sub_item">
+                                    <a href="lecture_1.html" class="nav_link">생애주기별 교육</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav_item">
+                            <p class="nav_title">교육과정안내 <i class='bx bx-chevron-up' ></i></p>
+
+                            <ul class="nav_sub">
+                                <li class="sub_item">
+                                    <a href="lecture2_1.html" class="nav_link">근로자 정기교육</a>
+                                </li>
+                                <li class="sub_item">
+                                    <a href="lecture2_2.html" class="nav_link">관리감독자 교육</a>
+                                </li>
+                                <li class="sub_item">
+                                    <a href="lecture2_1.html" class="nav_link">직무교육</a>
+                                </li>
+                                <li class="sub_item">
+                                    <a href="lecture2_1.html" class="nav_link">자격증</a>
+                                </li>
+                                <li class="sub_item">
+                                    <a href="lecture2_1.html" class="nav_link">생애주기별 안전교육</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav_item">
+                            <p class="nav_title">고객지원 <i class='bx bx-chevron-up' ></i></p>
+
+                            <ul class="nav_sub">
+                                <li class="sub_item">
+                                    <a href="board_1.html" class="nav_link">공지사항</a>
+                                </li>
+                                <li class="sub_item">
+                                    <a href="board_2.html" class="nav_link">질의응답</a>
+                                </li>
+                                <li class="sub_item">
+                                    <a href="board_3.html" class="nav_link">수강후기</a>
+                                </li>
+                                <li class="sub_item">
+                                    <a href="board_1.html" class="nav_link">자료실</a>
+                                </li>
+                                <li class="sub_item">
+                                    <a href="#" class="nav_link">주변시설</a>
+                                </li>
+                                <li class="sub_item">
+                                    <a href="#" class="nav_link">갤러리</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="myclass.html" class="myclass">
+                    <i class='bx bx-desktop' ></i> 나의강의실
+                </a>
+            </div>
+
+            <a href="#" class="nav_toggle" id="nav-toggle">
+                <i class='bx bx-grid-alt' ></i>
+            </a>
+        </div>
+    </header>
+
+
+
+    <main class="main" id="main">
+        <!-- ============================ sub header ============================= -->
+        <div class="subheader">
+            <div class="subheader_top">
+                <div class="subheader_contents container">
+                    <p class="subheader_title">교육안내</p>
+                    <p class="subheader_sub">Lectures Information</p>
+                </div>
+            </div>
+            
+            <div class="subloc">
+                <div class="subloc_contents container">
+                    <a href="#" class="subloc_icon"><i class='bx bx-home'></i></a>
+                    <p class="subloc_menu">
+                        교육과정안내
+                        <i class='bx bx-chevron-right' ></i>
+                    </p>
+                    <div class="subloc_menu subloc_full">
+                        <p class="subloc_title">관리감독자 교육</p>
+                        <i class='bx bx-chevron-down' ></i>
+
+                        <p class="subloc_sub">
+                            <a href="#" class="subloc_link">근로자 정기교육</a>
+                            <a href="#" class="subloc_link">관리감독자 교육</a>
+                            <a href="#" class="subloc_link">직무교육</a>
+                            <a href="#" class="subloc_link">자격증</a>
+                            <a href="#" class="subloc_link">생애주기별 안전교육</a>
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== sub contents ====================== -->
+        <div class="subcon_contents container">
+            <div class="subcon_inner">
+                <p class="subcon_title">관리감독자 교육 (건설업, 제조업, 서비스업)</p>
+
+                <p class="info_title">분류</p>
+                <div class="info_txt">
+                    관리감독자 교육(건설업, 제조업, 서비스업)
+                </div>
+
+                <p class="info_title">법적근거</p>
+                <div class="info_txt">
+                    산업안전보건법 제29조 및 동법 시행규칙 별표5
+                </div>
+
+                <p class="info_title">대상</p>
+                <div class="info_txt">
+                    조, 반장 급 이상 관리감독자(근로자들을 지휘 감독 할 수 있는 지위에 있는 자 전원)
+                </div>
+
+                <p class="info_title">관리감독자 교육내용</p>
+                <div class="info_txt">
+                    <table cellpadding="0" cellspacing="0" width="100%">
+                        <colgroup>
+                            <col width="20%">
+                            <col width="80%">
+                        </colgroup>
+
+                        <tr>
+                            <th>산업안전분야</th>
+                            <td>
+                                - 건설업 산업안전보건관리비 <br>
+                                - 산업안전개론<br>
+                                - 산업안전보건법<br>
+                                - 공작기계재해사례와 대책<br>
+                                - 운반기계 재해사례와 대책<br>
+                                - 위험기계기구 재해사례와 대책<br>
+                                - 전기설비의 위험성평가 및 대책<br>
+                                - 전기설비의 설계, 설치, 사용 안전<br>
+                                - 전기안전관리 규정의 작성과 운영<br>
+                                - 무너짐 재해와 예방대책<br>
+                                - 산업안전보건법(관리감독자용)<br>
+                                - 위험성평가(건설업)<br>
+                                - 추락재해예방 법적 기준<br>
+                                - 무재해 운동 추진기법<br>
+                                - 전기재해사례와 예방대책<br>
+                                - 중대산업사고 사례연구<br>
+                                - 건설업 인간공학<br>
+                                - 토목공사 안전관리2 (상하수도 등 기타 토목)<br>
+                                - 건설일반 안전관리<br>
+                                - PSM (공정안전보고서)<br>
+                                - MSDS (물질안전 보건자료)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>보건분야</th>
+                            <td>
+                                - 밀폐공간작업재해예방<br>
+                                - 산업환기 Ⅰ, Ⅱ<br>
+                                - 관리대상 유해물질(유기화합물)<br>
+                                - 분진 및 중금속<br>
+                                - 근로자 건강관리<br>
+                                - 산업보건관리계획 수립 및 평가<br>
+                                - 직업성 근 골격계 질환의 관리와 사례<br>
+                                - 인간공학적 작업환경개선 및 현장실무<br>
+                                - 소음진동의 관리와 접근방법<br>
+                                - 스트레칭<br>
+                                - MSDS 작성기법<br>
+                                - 산업보건개론<br>
+                                - 조명 및 자외선<br>
+                                - 일반질환의 예방과 관리<br>
+                                - 직업성 질환의 원인조사와 대책수립<br>
+                                - 국소배기실무<br>
+                                - 전체환기실무<br>
+                                - 직업성 호흡기질환의 관리와 사례<br>
+                                - 작업환경 특성 및 평가실무<br>
+                                - 소음진동의 기본원리<br>
+                                - 소음·진동의 측정 분석 및 평가
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>공통분야</th>
+                            <td>
+                                - 산업안전기준해설 (기계)1 , 2 <br>
+                                - 산업안전기준해설 (화공) 1, 2<br>
+                                - 산업안전기준해설 (전기) 1, 2<br>
+                                - 산업안전 보건법 및 정책방향<br>
+                                - 산업안전보건개론<br>
+                                - 안전보건개선계획 작성실무<br>
+                                - 인력운반안전<br>
+                                - 보호구의 종류와 선택<br>
+                                - 안전보건관리계획 수립 및 평가<br>
+                                - 사업장 안전보건교육 추진요령<br>
+                                - 사고조사기법<br>
+                                - 업무상 재해 인정기준
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <p class="info_title">교육 시간</p>
+                <div class="info_txt">
+                    관리감독자 교육(건설업, 제조업, 서비스업 ) - 16시간
+                </div>
+
+                <p class="info_title">과태료(벌칙) 부과기준</p>
+                <div class="info_txt">
+                    <table cellpadding="0" cellspacing="0" width="100%">
+                        <colgroup>
+                            <col width="40%">
+                            <col width="20%">
+                            <col width="20%">
+                            <col width="20%">
+                        </colgroup>
+
+                        <tr>
+                            <th>위반사항</th>
+                            <th>1차 위반</th>
+                            <th>2차 위반</th>
+                            <th>3차 위반</th>
+                        </tr>
+
+                        <tr>
+                            <td class="table_center">산업안전보건법 제29조(연간/1명당)</td>
+                            <td class="table_center">50만원</td>
+                            <td class="table_center">250만원</td>
+                            <td class="table_center">500만원</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer_lnb">
+            <div class="container">
+                <a href="#" class="footer_link">교육원 소개</a>
+                <a href="#" class="footer_link">이용약관</a>
+                <a href="#" class="footer_link">개인정보 처리방침</a>
+            </div>
+        </div>
+
+        <div class="footer_container container">
+            <img src="images/ft_logo.png" alt="" class="footer_img">
+            
+            <div class="footer_info">
+                <p class="address">
+                    사업자등록번호 : 758-82-00110  |  원장 : 박일철 <br>
+                    08506) 서울특별시 금천구 가산디지털1로 145,804호(에이스하이엔드타워 3차)<br>
+                    tel : 02-575-7115  |  fax : 02-6008-2012
+                </p>
+                <p class="copy">copyright 2016 Nayanet allright & reserved</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- ===================== js ====================== -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/basic.js"></script>
+</body>
+</html>

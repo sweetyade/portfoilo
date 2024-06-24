@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>핏타민 약사시스템 로그인</title>
+</head>
+<body>
+  
+<div class="login_wrap">
+  <div class="login_block">
+    <div class="logo">
+      <img src="../../images/common/logo.svg" alt="">
+      <p class="smaller_f gray03 mt_0_25">약사가 설계한 하나뿐인 나만의 영양제제</p>
+    </div>
+    <p class="largest_fb text_center">핏타민 약사 시스템</p>
+
+    <form action="">
+      <div class="login_form">
+        <div class="input_block">
+          <div class="input_div">
+            <input type="text" id="user_email" placeholder="아이디 : 이메일주소를 입력해주세요.">
+            <label for="user_email"><i class="ri-mail-line"></i></label>
+          </div>
+          <p class="input_error"><i class="ri-error-warning-fill"></i> 정확한 이메일 주소를 입력해주세요.</p>
+        </div>
+        <div class="input_block mt_0_5">
+          <div class="input_div">
+            <input type="password" id="user_pass"  placeholder="비밀번호를 입력해주세요.">
+            <label for="user_pass"><i class="ri-lock-2-line"></i></label>
+          </div>
+          <p class="input_error"><i class="ri-error-warning-fill"></i> 정확한 패스워드를 입력해주세요.</p>
+        </div>
+
+        <div class="check_block mt_1">
+          <input type="checkbox" id="login_check">
+          <label for="login_check">아이디 저장</label>
+        </div>
+
+        <div class="btn_wrap mt_1_5">
+          <button class="btn_b btn_basic">로그인</button>
+        </div>
+
+        <a href="0_1_join.html" class="join_link">회원가입</a>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

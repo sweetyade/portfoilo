@@ -1,0 +1,85 @@
+/***************************************************************
+    06. form
+***************************************************************/
+//common
+input:not([type="radio"]):not([type="checkbox"]){
+  padding: .8125rem 1.3125rem;
+  border-radius: 3rem;
+  width: 100%;
+  @include p3f;
+  border: 3px solid transparent;
+  background-color: $gray07;
+  color: #6c6c6c;
+
+  @include tablet{
+    padding: 1.3125rem 2.8125rem;
+  }
+
+  &::placeholder{
+    color: $gray04;
+  }
+
+  &:required:not(:focus):not(:placeholder-shown):invalid {
+    border-color: $system_red;
+  }
+  &:required:valid{
+    border-color: $primary;
+  }
+
+  &:hover,
+  &:focus,
+  &:required:valid:focus {
+    border-color: $primary;
+  }
+}
+//layout
+.input_block{
+  position: relative;
+
+  .label{
+    @include p3f;
+    padding-left: .75rem;
+    padding-bottom: .5rem;
+    display: block;
+    color: $gray02;
+
+    @include tablet{
+      padding-bottom: 1rem;
+      padding-left: 1.375rem;
+    }
+  }
+
+  &.servey_input{
+    margin-top: 6.25rem;
+  }
+
+  .input_div{
+    position: relative;
+  }
+
+  .input_error{
+    @include p6f;
+    color: $system_red;
+    padding-left: .75rem;
+    padding-top: .25rem;
+
+    @include tablet{
+      padding-top: .5rem;
+      padding-left: 1.375rem;
+    }
+  }
+}
+
+
+.btnClear {
+  position: absolute;
+  background: url(../images/delete_gr.svg) no-repeat;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  opacity: 0;
+  transition: all 0.2s;
+  cursor: pointer;
+}

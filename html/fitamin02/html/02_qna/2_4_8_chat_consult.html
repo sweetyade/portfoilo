@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>2-4-8.채팅상담 - 채팅상담화면</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="chat_consult">
+        <div class="chat_wrap">
+          <!-- 해더 -->
+          <div class="chat_top">
+            <p class="p_pic"><img src="../../images/cam_sample.png" alt=""></p>
+            <div class="p_info">
+              <div class="p_name">
+                <p class="name">김예림 약사</p>
+                <p class="txt">메디컬참약국</p>
+              </div>
+              <p class="time">소요시간<span class="chat_timer">00:00</span></p>
+            </div>
+            <p class="error_noti"></p>
+          </div>
+
+          <div class="chat_con">
+            <!-- 라인 노티 -->
+            <div class="chat_noti">
+              <p>김현정 약사님이 채팅 상담에 입장하셨습니다.</p> 
+            </div>
+
+            <!-- 약사 챗 -->
+            <div class="chat_left">
+              <div class="left_con">
+                <p class="img"><img src="../../images/chat_sample.png" alt=""></p>
+                <div class="msg_block">
+                  <div class="msg_data">
+                    <p class="chat_txt">최대넓이 있음 자동 줄맞춤, 분단위로 묶어서 시간표시</p>
+                    <p class="date">오후 09:25</p>
+                  </div>
+                  <div class="msg_data">
+                    <p class="chat_txt">영양제 추천을 위해 어떤 방식으로 상담을 진행하고 싶으세요?</p>
+                    
+                    <div class="swiper clttype_btn">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide type_btn">맞춤 영양제 추천 받을래요</div>
+                        <div class="swiper-slide type_btn">바로 영양제 선택할래요</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="msg_data">
+                    <p class="chat_txt ld">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 유저 챗 선택1.맞춤 영양제 추천 받을래요-->
+            <div class="chat_right">
+              <div class="right_con">
+                <div class="msg_block">
+                  <div class="msg_data">
+                    <p class="chat_txt">↓ 선택 1-1. 선택후 텍스트 출력 ↓</p>
+                    <p class="chat_txt">맞춤 영양제 추천 받을래요</p>
+                    <p class="date">오후 09:25</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 텍스트 노티 선택 1-1. 기존 분석결과로 할래요-->
+            <div class="chat_noti_2">
+              <p class="txt">최대오글자님의 맞춤상담을 위해 건강분석이 필요합니다.<br>
+              어떤 방법으로 진행할까요?</p>
+
+              <div class="btn_list">
+                <p class="btn_s icon_basic">기존 분석결과로 할래요</p>
+                <p class="btn_s icon_basic">새로 분석할래요</p>
+              </div>
+            </div>
+
+            <!-- 유저 챗 -->
+            <div class="chat_right">
+              <div class="right_con">
+                <div class="msg_block">
+                  <div class="msg_data">
+                    <p class="chat_txt">↓ 선택 1-1-1. 선택 후 텍스트 출력 ↓</p>
+                    <p class="chat_txt">기존 분석결과로 할래요</p>
+                    <p class="date">오후 09:25</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 텍스트 노티 선택 1-1-1. 분석결과가 없을 때 -->
+            <div class="chat_noti_2">
+              <p class="txt">기존 분석결과가 없어서 새로 진행이 필요합니다.</p>
+
+              <div class="btn_list">
+                <p class="btn_s icon_basic">건강분석 시작하기</p>
+              </div>
+            </div>
+
+            <!-- 기존분석 선택 슬라이드 선택 1-1-2. 분석결과가 있을 때-->   
+            <div class="chatrst_slide">
+              <p class="txt">상담을 희망하는 분석 결과를 선택하세요!</p>
+
+              <div class="swiper srt_slide">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide result_slt">
+                    <div class="title">
+                      <p class="point">100점</p>
+                      <p class="name">최대오글자</p>
+                    </div>
+                    <p class="info">혈중지질개선·모발&amp;손톱·활력/피로</p>
+        
+                    <div class="info_table">
+                      <p class="title">추천 영양제</p>
+                      <p class="txt">비타민D 2000IU+ 외 2건</p>
+                    </div>
+        
+                    <p class="date">2022.12.31</p>
+                  </div>
+                  <div class="swiper-slide result_slt">
+                    <div class="title">
+                      <p class="point">100점</p>
+                      <p class="name">최대오글자</p>
+                    </div>
+                    <p class="info">혈중지질개선·모발&amp;손톱·활력/피로</p>
+        
+                    <div class="info_table">
+                      <p class="title">추천 영양제</p>
+                      <p class="txt">비타민D 2000IU+ 외 2건</p>
+                    </div>
+        
+                    <p class="date">2022.12.31</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="btn_list">
+                <p class="btn_s icon_basic">선택결과 반영하기</p>
+              </div>
+            </div>
+
+            <!-- 유저 챗 -->
+            <div class="chat_right">
+              <div class="right_con">
+                <div class="msg_block">
+                  <div class="msg_data">
+                    <p class="chat_txt">↓ 선택 1-1-2. 선택 후 텍스트 출력 ↓</p>
+                    <p class="chat_txt">분석 결과 반영</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 건강분석 반영 1-1-2-1.분석결과 선택 반영-->
+            <div class="chat_rst">
+              <div class="result_slt">
+                <div class="title">
+                  <p class="point">100점</p>
+                  <p class="name">최대오글자</p>
+                </div>
+                <p class="info">혈중지질개선·모발&amp;손톱·활력/피로</p>
+    
+                <div class="info_table">
+                  <p class="title">추천 영양제</p>
+                  <p class="txt">비타민D 2000IU+ 외 2건</p>
+                </div>
+    
+                <p class="date">2022.12.31</p>
+                <p class="moreBtn">자세히보기</p>
+              </div>
+            </div>
+
+            <!-- 유저 챗 -->
+            <div class="chat_right">
+              <div class="right_con">
+                <div class="msg_block">
+                  <div class="msg_data">
+                    <p class="chat_txt">↓ 선택 1-2. 선택 후 텍스트 출력 ↓</p>
+                    <p class="chat_txt">새로 분석할래요</p>
+                    <p class="date">오후 09:25</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 텍스트 노티 선택 1-2. 새로 분석할래요-->
+            <div class="chat_noti_2">
+              <p class="txt">1~2분 내의 건강설문을 진행하겠습니다.</p>
+
+              <div class="btn_list">
+                <p class="btn_s icon_basic">건강분석 시작하기</p>
+              </div>
+            </div>
+
+            <!-- 유저 챗 -->
+            <div class="chat_right">
+              <div class="right_con">
+                <div class="msg_block">
+                  <div class="msg_data">
+                    <p class="chat_txt">↓ 선택 1-2-1. 건강분석 완료 후 ↓</p>
+                    <p class="chat_txt">건강분석 완료</p>
+                    <p class="date">오후 09:25</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 건강분석 완료 1-2-1.분석완료정보-->
+            <div class="chat_svy">
+              <div class="chat_conbox">
+                <div class="top_title">
+                  <p class="title"><img src="../../images/icon/sur.svg" alt="">최대오글자</p>
+                  <p class="date">2022.12.31</p>
+                </div>
+
+                <div class="svy_info">
+                  <div class="info_table">
+                    <p class="title">출생연도 :</p>
+                    <p class="txt">1990년</p>
+                  </div>
+                  <div class="info_table">
+                    <p class="title">키/몸무게 :</p>
+                    <p class="txt">160cm / 55kg</p>
+                  </div>
+                  <div class="info_table">
+                    <p class="title">상담목적 :</p>
+                    <p class="txt">식습관이 좋지 않아 영양섭취가 불균형해요</p>
+                  </div>
+                  <div class="info_table">
+                    <p class="title">건강고민 :</p>
+                    <p class="txt">혈중지질개선·모발&손톱·활력/피로</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 유저 챗 -->
+            <div class="chat_right">
+              <div class="right_con">
+                <div class="msg_block">
+                  <div class="msg_data">
+                    <p class="chat_txt">↓ 선택 1-2.선택 후 텍스트 출력 ↓</p>
+                    <p class="chat_txt">바로 영양제 추천 받을래요.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 영양제 추천 1-2.바로영양제 추천-->
+            <div class="chat_svy">
+              <!-- 한팩 -->
+              <div class="chat_conbox">
+                <div class="top_title">
+                  <p class="title"><img src="../../images/icon/bag.svg" alt="">한 팩 구독 제품</p>
+                  <p class="date">2022.12.31</p>
+                </div>
+
+                <div class="grid_list_0_1">
+                  <div class="list_goods">
+                    <div class="goods_data">
+                      <p class="thumb"><img src="../../images/drug_sample.png" alt=""></p>
+                      <div class="goods_info">
+                        <p class="type">피로해소</p>
+                        <p class="name">쏘팔메토옥타코사놀+</p>
+                        <p class="cost">100,000원</p>
+                      </div>
+                    </div>
+                    <div class="ck_icon">
+                      <p class="icon_img"></p>
+                      <p class="date">30일분</p>
+                    </div>
+                  </div>
+                  <div class="list_goods">
+                    <div class="goods_data">
+                      <p class="thumb"><img src="../../images/drug_sample.png" alt=""></p>
+                      <div class="goods_info">
+                        <p class="type">피로해소</p>
+                        <p class="name">쏘팔메토옥타코사놀+</p>
+                        <p class="cost">100,000원</p>
+                      </div>
+                    </div>
+                    <div class="ck_icon">
+                      <p class="icon_img"></p>
+                      <p class="date">30일분</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 단품 -->
+              <div class="chat_conbox">
+                <div class="top_title">
+                  <p class="title"><img src="../../images/icon/pill.svg" alt="">한 팩 구독 제품</p>
+                  <p class="date">2022.12.31</p>
+                </div>
+
+                <div class="grid_list_0_1">
+                  <div class="list_goods">
+                    <div class="goods_data">
+                      <p class="thumb"><img src="../../images/drug_sample.png" alt=""></p>
+                      <div class="goods_info">
+                        <p class="type">피로해소</p>
+                        <p class="name">쏘팔메토옥타코사놀+</p>
+                        <p class="cost">100,000원</p>
+                      </div>
+                    </div>
+                    <div class="ck_icon">
+                      <p class="icon_img"></p>
+                      <p class="date">30일분</p>
+                    </div>
+                  </div>
+                  <div class="list_goods">
+                    <div class="goods_data">
+                      <p class="thumb"><img src="../../images/drug_sample.png" alt=""></p>
+                      <div class="goods_info">
+                        <p class="type">피로해소</p>
+                        <p class="name">쏘팔메토옥타코사놀+</p>
+                        <p class="cost">100,000원</p>
+                      </div>
+                    </div>
+                    <div class="ck_icon">
+                      <p class="icon_img"></p>
+                      <p class="date">30일분</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="btn_list mt_0_5">
+                <p class="btn_s icon_basic">영양제 추천내용을 확인했어요</p>
+              </div>
+            </div>
+
+            <!-- 약사 챗 -->
+            <div class="chat_left">
+              <div class="left_con">
+                <p class="img"><img src="../../images/chat_sample.png" alt=""></p>
+                <div class="msg_block">
+                  <div class="msg_data">
+                    <p class="chat_txt">상담을 종료해도 괜찮을까요? <br>
+                      확인하셨으면 아래 ‘상담 종료' 버튼을 눌러주세요!</p>
+                    <p class="date">오후 09:25</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 버튼 1개 -->
+            <div class="btn_list">
+              <p class="btn_s icon_basic">고마워요:) 상담을 종료할께요!</p>
+            </div>
+
+            <!-- 유저 챗 -->
+            <div class="chat_right">
+              <div class="right_con">
+                <div class="msg_block">
+                  <div class="msg_data">
+                    <p class="chat_txt">고마워요:) 상담을 종료할께요!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 연결이 원할하지 않을 때 -->
+            <div class="error_msg">
+              <p class="txt">현재 약사 연결이 원활하지 않습니다.<br>
+                응답이 계속 없을 경우 5분 후 상담이 자동 종료 처리됩니다. </p>
+              <p class="timer jst-timeout" data-minutes-left=5></p>
+            </div>
+
+            <!-- 연결이 원할하지 않을 때 -->
+            <div class="error_msg">
+              <p class="txt">5분간 응답이 없습니다.<br>
+                10초 후 상담이 자동 종료 처리됩니다. </p>
+              <p class="timer jst-timeout" data-seconds-left=10></p>
+            </div>
+
+            <!-- 라인 노티 -->
+            <div class="chat_noti">
+              <p>최대오글자님의 상담이 종료되었습니다. </p> 
+            </div>
+
+            <!-- 라인 노티 -->
+            <div class="chat_noti">
+              <p>채팅 상담 종료 5분 전 입니다.<br>
+                상담이 마무리 될 수 있도록 부탁드립니다.</p> 
+            </div>
+
+            <!-- 라인 노티 -->
+            <div class="chat_noti">
+              <p>채팅 상담 종료 1분 전 입니다.<br>
+                상담이 마무리 될 수 있도록 부탁드립니다.</p> 
+            </div>
+
+            <div class="btn_list">
+              <p class="btn_s icon_basic">상담결과 확인하기</p>
+            </div>
+          </div>
+        </div>
+        <div class="chat_write">
+          <div class="input_div">
+            <input type="text" placeholder="메세지를 입력해주세요">
+            <p class="file"><img src="../../images/icon/copy.svg" alt=""></p>
+          </div>
+          <input type="submit" value="" class="sand_btn">
+        </div>
+      </div>
+    </main>
+
+    <!-- 상담오류 팝업 -->
+    <div class="popup popup01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 팝업 컨텐츠 -->
+      <div class="popup_wrap">
+        <p class="pop_title">상담에 문제가 생겼나요?</p>
+        <p class="pop_txt">신고하기 버튼을 누르시면 즉시 상담이 종료되며 불편사항을 신고하실 수 있어요.</p>
+        <!-- 버튼 2개 -->
+        <div class="pop_btn">
+          <button class="btn_m btn_light popClose">닫기</button>
+          <button class="btn_m btn_red popClose">신고하기</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 설문결과 자세히 보기 모달 -->
+    <div class="modal modal01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 모달 컨텐츠-->
+      <div class="modal_wrap">
+        <div class="modal_con con_only">
+          <p class="p2_f">설문결과 컨텐츠 부분</p>
+          <p class="p2_f" style="height: 10000px;">최대높이 75svh </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 영양제 자세히보기 -->
+    <div class="modal modal02">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 모달 컨텐츠-->
+      <div class="modal_wrap">
+        <div class="modal_top">
+          <div class="detail_img">
+            <p class="goods_img"><img src="../../images/drug_sample.png" alt=""></p>
+            <p class="flex_right">
+              <img src="../../images/modal_fix1.png" alt="">
+              <img src="../../images/modal_fix2.png" alt="">
+            </p>
+          </div>
+          <p class="modal_title">비타민B 컴플렉스+</p>
+          <p class="goods_cost"><span class="primary"> 30정</span> <span class="gray01">12,900원</span></p>
+        </div>
+
+        <div class="modal_con">
+          <div class="modal_goods">
+            <div class="goods_data">
+              <p class="goods_title">하루 섭취 권장량</p>
+              <p class="span2_f gray02">1일 섭취량 : 1정(1,000 mg)</p>
+            </div>
+
+            <div class="goods_data">
+              <p class="goods_title">주요기능</p>
+              <ul>
+                <li>비타민A : 어두운 곳에서 시각 적응을 위해 필요, 피부와 점막을 형성하고 기능을 유지하는데 필요,상피 세포의 성장과 발달에 필요</li>
+                <li>비타민B2 : 체내 에너지 생성에 필요</li>
+                <li>비타민B6: 단백질및 아미노산 이용에 필요, 혈액의호모시스테인 수준을 정상으로 유지하는데 필요</li>
+                <li>비타민B12:정상적인 엽산대사에 필요</li>
+                <li>비타민C:결합조직 형성과 기능유지에 필요, 철의 흡수에 필요, 항산화 작용을 하여 유해산소로부터 세포를 보호하는데 필요</li>
+              </ul>
+            </div>
+
+            <div class="goods_data">
+              <p class="goods_title">영양정보</p>
+              <table>
+                <colgroup>
+                  <col width="30%">
+                  <col width="60%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>1일 섭취량 당</th>
+                    <th>함량(% 영양성분기준치)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>단백질</td>
+                    <td>0g(0%)</td>
+                  </tr>
+                  <tr>
+                    <td>지방</td>
+                    <td>0g(0%)</td>
+                  </tr>
+                  <tr>
+                    <td>탄수화물</td>
+                    <td>1g미만(0%)</td>
+                  </tr>
+                  <tr>
+                    <td>나트륨</td>
+                    <td>0mg(0%)</td>
+                  </tr>
+                  <tr>
+                    <td>비타민 A</td>
+                    <td>700µg RE(100%)</td>
+                  </tr>
+                  <tr>
+                    <td>비타민 B1</td>
+                    <td>50mg(4267%)</td>
+                  </tr>
+                  <tr>
+                    <td>비타민 B2</td>
+                    <td>50mg(3571%)</td>
+                  </tr>
+                  <tr>
+                    <td>비타민 B6</td>
+                    <td>50mg(3333%)</td>
+                  </tr>
+                  <tr>
+                    <td>비타민 B12</td>
+                    <td>120µg(5000%)</td>
+                  </tr>
+                  <tr>
+                    <td>비타민 C</td>
+                    <td>100mg(100%)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="goods_data">
+              <p class="goods_title">섭취방법</p>
+              <p class="p5_f">충분한 물과 함께 섭취하십시오.</p>
+            </div>
+
+            <div class="goods_data">
+              <p class="goods_title">부작용 및 주의사항</p>
+              <ul>
+                <li>비타민B 성분의 중복 섭취를 확인해주세요.</li>
+                <li>고용량의 비타민A 성분은 독성을 유발할 수 있으므로 중복 섭취에 주의하세요.</li>
+              </ul>
+            </div>
+
+            <div class="goods_data">
+              <p class="goods_title">제조원 및 판매원</p>
+              <ul>
+                <li>제조원 : 코스맥스바이오(주)/충북 제천시 바이오밸리 3로 30</li>
+                <li>판매원 : (주)킥더허들/경상남도 창원시 의창구 용동로57번길 18, 8층 801호</li>
+              </ul>
+            </div>
+
+            <div class="box_0_5 bg_gray">
+              <ul>
+                <li>제품 정보는 제품용기에 기재되거나 제조업체 또는 판매업체가 제공하는 정보에 기반합니다.</li>
+                <li>개인의 건강상태에 따라 섭취량 및 섭취방법이 달라질 수 있으며 더 정확한 개인별 분석을 위해서는 전문가와의 상담을 권장합니다.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn_wrap btn_fixgr">
+          <button class="btn_b btn_basic modalClose">한 팩 담기</button>
+          <button class="btn_b btn_trans modalClose">닫기</button>
+        </div>
+      </div>
+    </div>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script src="../../js/stopwatch.js"></script>
+    <script src="../../js/jquery.simple.timer.js"></script>
+    <script>
+      //소요시간 타이머 
+      $('.chat_timer').stopwatch().stopwatch('start');
+
+      //오류 타이머
+      $(function(){
+        $('.timer').startTimer({
+          
+        }).click(function(){ location.reload() });
+      })
+
+      //상담 타입 버튼
+      var clttype = new Swiper(".clttype_btn", {
+        slidesPerView: "auto",
+        spaceBetween: 8,
+      });
+
+
+    //분석결과 선택
+    $(".chatrst_slide .result_slt").click(function() {
+      $(this).addClass("select");
+      $(this).siblings().removeClass("select");
+      $(".btn_b").attr("disabled",false);
+    });
+
+    var rstslide = new Swiper(".srt_slide", {
+      slidesPerView: "auto",
+      spaceBetween: 8,
+    });
+    
+
+      /* popup */
+      $(".error_noti").on("click", function () {
+        $(".popup01, body").addClass("open");
+      });
+
+      $(".moreBtn").on("click", function () {
+        $(".modal01, body").addClass("open");
+      });
+
+      $(".list_goods").on("click", function () {
+        $(".modal02, body").addClass("open");
+      });
+
+      $(".overlay, .modalClose, .popClose").on("click", function () {
+        $(".popup, .modal, body").removeClass("open");
+      });
+    </script>
+  </body>
+</html>

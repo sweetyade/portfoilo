@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>2_프로필관리</title>
+</head>
+<body>
+  <main class="main">
+    <!-- sidebar -->
+    <div class="sidebar">
+      
+      <h1 class="logo"><a href="#"><img src="../../images/common/logo_wt.svg" alt=""></a></h1>
+
+      <!-- 로그인정보-->
+      <div class="user_info">
+        <p class="user_img"><img src="../../images/login_bg.jpg" alt=""></p>
+        <div class="user_name">
+          <p class="base_fb light">약사이름</p>
+          <p class="small_f mt_0_5 gray04">약국명</p>
+        </div>
+      </div>
+
+      <!-- 상담스케쥴 요약 -->
+      <div class="consult_sml">
+        <div class="al_setting">
+          <p class="small_f">채팅 상담 설정</p>
+          <div class="toggle_block">
+            <input type="checkbox" class="toggle" id="ipToggle" checked />
+            <label for="ipToggle" class="toggle_btn"></label>
+          </div>
+        </div>
+        <div class="al_setting">
+          <p class="small_f">즉시 상담 설정</p>
+          <div class="toggle_block">
+            <input type="checkbox" class="toggle" id="ipToggle2" />
+            <label for="ipToggle2" class="toggle_btn"></label>
+          </div>
+        </div>
+
+        <div class="sml_list">
+          <div class="sml_data">
+            <p class="txt">예약 예정 상담</p>
+            <a class="total_no" href="#">1건</a>
+          </div>
+          <div class="sml_data">
+            <p class="txt">채팅 상담 대기</p>
+            <a class="total_no" href="#">1건</a>
+          </div>
+          <div class="sml_data">
+            <p class="txt">즉시 상담 대기</p>
+            <a class="total_no" href="#">2건</a>
+          </div>
+          <div class="sml_data">
+            <p class="txt">재상담 상담</p>
+            <a class="total_no" href="#">1건</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 메뉴 -->
+      <nav class="nav">
+        <a class="nav_link" href="#">
+          <p class="nav_menu"><i class="ri-user-settings-line"></i> 프로필 관리</p>
+        </a>
+        <div class="nav_link">
+          <p class="nav_menu sub_menu"><i class="ri-customer-service-line"></i> 상담 관리</p>
+          <div class="sub_list">
+            <a href="#" class="sub_link">상담 대기 리스트</a>
+            <a href="#" class="sub_link">예약 확정 리스트</a>
+            <a href="#" class="sub_link">상담 내역 조회</a>
+            <a href="#" class="sub_link">상담 설정</a>
+          </div>
+        </div>
+        <a class="nav_link" href="#">
+          <p class="nav_menu"><i class="ri-edit-line"></i> 게시판</p>
+        </a>
+        <a class="nav_link" href="#">
+          <p class="nav_menu"><i class="ri-question-answer-line"></i> 고객센터</p>
+        </a>
+      </nav>
+
+      <p class="logoutBtn">로그아웃 <i class="ri-logout-box-r-line"></i></p>
+    </div>
+
+    <!-- main -->
+    <div class="container">
+      <!-- header -->
+      <section class="header">
+        <div class="header_left">
+          <div class="open_toggle">
+            <div class="burger"></div>
+          </div>
+          <h2 class="header_menu">프로필 관리</h2>
+        </div>
+
+        <div class="input_search">
+          <input type="text" placeholder="예약 번호/예약자를 검색해주세요.">
+          <button class="search_input"><i class="ri-search-line"></i></button>
+        </div>
+      </section>
+
+      <!-- contents -->
+      <section class="contents">
+        <div class="contents_wrap">
+          <div class="profile_login">
+            <p class="title text_center">회원 비밀번호 확인</p>
+            <p class="mt_1 base_f text_center">비밀번호를 한번 더 입력해주세요.</p>
+            <p class="smaller_f mt_0_25 gray02 text_center">회원님의 정보를 안전하게 보호하기 위해 비밀번호를 한번 더 확인합니다.</p>
+
+            <form action="">
+              <div class="input_block mt_3">
+                <p class="label">회원아이디</p>
+                <div class="input_div">
+                  <p class="base_f">회원아이디@mail.com</p>  
+                </div>
+              </div>
+              <div class="input_block mt_2">
+                <label class="label" for="user_pass">비밀번호</label>
+                <div class="input_div">
+                  <input type="password" id="user_pass"  placeholder="비밀번호를 입력해주세요.">
+                </div>
+              </div>
+
+              <div class="btn_wrap mt_3">
+                <button class="btn_b btn_basic">확인</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="../../scripts/jquery.min.js"></script>
+  <script src="../../scripts/main.js"></script>
+
+  <script>
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/rcommon.css">
+  <link rel="stylesheet" href="../../css/guide.css">
+  <link rel="stylesheet" href="../../css/rstyle.css">
+  <title>이메일로 로그인</title>
+  <style>
+    .user_pg .user_sec{
+      padding: 2.5rem 2rem;
+    }
+
+    .repass .btnClear{
+      top: .875rem;
+    }
+
+    @media (max-width: 499px) {
+      .user_pg .user_sec{
+      padding: 2.5rem 1.5rem;
+    }
+
+    .repass .btnClear{
+      top: .6rem;
+    }
+    }
+  </style> 
+
+</head>
+<body>
+    <div class="rmain_wrap user_pg" style="background-color: #f5f5f5;">
+      <section class="user_sec mb_1">
+
+        <div class="input_basic mb_1_5">
+          <label for="lg_email">이메일 주소</label>
+          <input type="text" class="rinput" placeholder="이메일 주소를 입력해주세요" id="lg_email" pattern="^([a-z0-9_]){6,10}$" value="형식이 잘못되었을 때" required>
+          <p class="btnClear"></p>
+          <p class="input_info error">올바른 이메일 형식을 작성해주세요</p>
+        </div>
+
+        <div class="input_basic" style="margin-bottom: .75rem">
+          <label for="lg_pass">비밀번호</label>
+          <input type="password" class="rinput" placeholder="비밀번호를 입력해주세요" pattern="" id="lg_pass" required>
+          <p class="btnClear"></p>
+          <p class="input_info error" style="display: none">특수문자가 포함되어 있는지 확인해주세요</p>
+        </div>
+        <div class="input_basic repass mb_1_5">
+          <input type="password" class="rinput" placeholder="비밀번호를 한번 더 입력해주세요" pattern="" id="lg_pass2" required>
+          <p class="btnClear"></p>
+          <p class="input_info error" style="display: none">비밀번호가 동일한지 다시한번 확인해주세요</p>
+        </div>
+
+        <div class="input_basic mb_1_5">
+          <label for="lg_name">이름</label>
+          <input type="text" class="rinput" placeholder="한글이나 영문 2~5글자 이내로 입력해주세요" id="lg_email">
+          <p class="btnClear"></p>
+          <p class="input_info error" style="display: none">이름은 한글이나 영문 2~5글자로 작성해주세요</p>
+        </div>
+        
+        <div class="input_basic">
+          <label for="lg_phone" class="mb_1">휴대폰 번호</label>
+          <div class="input_btmix" style="margin-bottom: .75rem;">
+            <input type="text" class="rinput mix_mi" placeholder="-없이 번호만 입력해주세요" id="lg_phone" required>
+            <input type="submit" value="인증번호 발송" class="btn_blue rinput mix_r">
+            <p class="input_info error" style="display: none">휴대폰 번호 형식이 올바르지 않습니다</p>
+          </div>
+          <div class="input_btmix" style="margin-bottom: .75rem;">
+            <input type="text" class="rinput mix_si" placeholder="인증번호를 입력해주세요" id="lg_phone" required>
+            <input type="submit" value="확인" class="btn_blue rinput mix_s">
+            <p class="phone_time">3:00</p>
+            <p class="input_info cnf" style="display: none">휴대폰 인증이 완료되었습니다.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="user_sec mb_4">
+        <div class="input_check">
+          <input type="checkbox" class="rinput" id="ckall">
+          <label for="ckall" class="ck_line ck_allt">약관에 모두 동의합니다</label>
+        </div>
+
+        <div class="user_ckall">
+          <div class="input_check">
+            <input type="checkbox" class="rinput" id="checkbox01">
+            <label for="checkbox01" class="ck_line">[필수] 서비스 이용약관 <a href="#">보기</a></label>
+          </div>
+          <div class="input_check">
+            <input type="checkbox" class="rinput" id="checkbox02">
+            <label for="checkbox02" class="ck_line">[필수] 개인정보 수정 및 이용동의 <a href="#">보기</a></label>
+          </div>
+          <div class="input_check">
+            <input type="checkbox" class="rinput" id="checkbox03">
+            <label for="checkbox03" class="ck_line">[필수] 민감정보 수집 및 이용동의 <a href="#">보기</a></label>
+          </div>
+          <div class="input_check">
+            <input type="checkbox" class="rinput" id="checkbox04">
+            <label for="checkbox04" class="ck_line">[필수] 14세 이상 회원가입 동의 <a href="#">보기</a></label>
+          </div>
+          <div class="input_check">
+            <input type="checkbox" class="rinput" id="checkbox05">
+            <label for="checkbox05" class="ck_line">[선택] 마케팅 정보 수신동의 <a href="#">보기</a></label>
+          </div>
+        </div>
+      </section>
+
+      <div class="btn_center pd_base" style="padding-bottom: 2rem; ">
+        <button class="btn_b btn_blue">로그인</button>
+      </div>
+    </div>
+
+    
+</body>
+</html>

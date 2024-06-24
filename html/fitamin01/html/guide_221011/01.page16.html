@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/rcommon.css">
+  <link rel="stylesheet" href="../../css/guide.css">
+  <link rel="stylesheet" href="../../css/rstyle.css">
+  <title>영양상태 - 설문</title>
+
+  <style>
+    /* 애니메이션 추가 */
+
+    .svy_bt .svy_prg::after{
+      width: 100%;
+      animation: progbar3 1.5s ease-in-out;
+    }
+
+    .svy_bt .prg_step .step_c2{
+      background: var(--primary01);
+      animation: dotc 1.6s ease-in-out;
+      transition: background .5s;
+    }
+
+    .svy_bt .step4{
+      color: var(--primary01);
+      animation: txtc 1.6s ease-in-out;
+      background-color: #fff !important;
+    }
+
+  </style>
+</head>
+<body>
+    <div class="rmain_wrap grid_btn pd_base svy_bt">
+        <div class="svy_cont">
+          <p class="rtitle">정확한 영양성분 추천을 위해<br>영양상태 확인이 필요해요!</p>
+          <p class="rtxt">식습관, 복용중인 의약품에 따라<br>추천 영양제가 달라질 수 있어요. </p>
+
+          <div class="svy_prg">
+            <div class="prg_step">
+              <p class="prg_dot dot1 step_c"></p>
+              <p class="prg_dot dot2 step_c"></p>
+              <p class="prg_dot dot3 step_c"></p>
+              <p class="prg_dot dot4 step_c2"></p>
+            </div>
+
+            <div class="step_txt">
+              <p class="step1" style="color: #fff">기본정보</p>
+              <p class="step2" style="color: #fff">건강목표</p>
+              <p class="step3" style="color: #fff">생활습관</p>
+              <p class="step4">영양상태</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="btn_center">
+          <button class="btn_b btn_blue">다음</button>
+        </div>
+    </div>
+</body>
+</html>

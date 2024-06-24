@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>2.설문 - 2-2.나이</title>
+</head>
+<body>
+  <main class="main">
+    <div class="header">
+      <p class="header_back"><img src="../../images/back.svg" alt=""></p>
+    </div>
+
+    <div class="contents">
+      <div class="servey_top">
+        <div class="servey_title">
+          <p class="title">최대오글자 님의<br>
+            연령대를 알려주세요</p>
+          <p class="sub_txt">만 나이로 계산한 연령대로 선택해주세요</p>
+        </div>
+      </div>
+
+
+      <div class="age_slide swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">10대</div>
+          <div class="swiper-slide">20대</div>
+          <div class="swiper-slide">30대</div>
+          <div class="swiper-slide">40대</div>
+          <div class="swiper-slide">50대</div>
+          <div class="swiper-slide">60대 이상</div>
+        </div>
+      </div>
+      <p class="next_btn" onclick="location.href='2_3_select_question.html';"><img src="../../images/arrow_next.svg" alt=""></p>
+    </div>
+  </main>
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/jquery-ui.min.css"></script>
+  <script src="../../js/swiper-bundle.min.js"></script>
+
+  <script>
+    //연령선택
+    var swiper = new Swiper(".age_slide", {
+      direction: "vertical",
+      slidesPerView: 5,
+      centeredSlides: true,
+      initialSlide: 2,
+    });
+
+    //뒤로가기
+    $(document).ready(function() {
+      // on click
+      $('.header_back').click(function(e){
+        // prevent default behavior
+        e.preventDefault();
+        // Go back 1 page 
+        window.history.back();
+        // can also use 
+        // window.history.go(-1);
+      });
+    });
+
+  </script>
+</body>
+</html>

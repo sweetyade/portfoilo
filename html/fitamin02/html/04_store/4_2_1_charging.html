@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>4-2-1.충전내역</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="back"><img src="../../images/icon/system_back.svg" alt="" /></div>
+      <div class="page_name">충전내역</div>
+      <div class="header_icon"></div>
+    </header>
+
+    <main class="main" style="background-color: #fff">
+      <section class="top_smr">
+        <div class="smr_info">
+          <p class="sub">사용 가능한 충전금액</p>
+          <p class="title">999,999원</p>
+          <p class="span2_f gray02">소멸예정 : 9,800원</p>
+        </div>
+        <p class="smr_btn openCharging mt_0_5">충전권 이용 안내사항</p>
+      </section>
+
+      <section class="list_wrap">
+        <div class="tab_sort">
+          <p class="sort_btn sort_all active">전체</p>
+          <p class="sort_btn sort_1">충전</p>
+          <p class="sort_btn sort_2">사용</p>
+          <p class="sort_btn sort_3">소멸</p>
+        </div>
+
+        <div class="list_con">
+          <div class="charging_data sort-3">
+            <div class="info">
+              <p class="name">[소멸] 기프티콘 브랜드+상품명 출력</p>
+              <p class="date">2022.06.20</p>
+            </div>
+            <div class="cost">-1,000,000원</div>
+          </div>
+          <div class="charging_data sort-2">
+            <div class="info">
+              <p class="name">[사용]최대 2줄까지 노출되며 넘어가는 경우 말줄임표 처리해주세요 최대 2줄까지 노출되며 넘어가는 경우 말줄임표 처리해주세요</p>
+              <p class="date">2022.06.20</p>
+            </div>
+            <div class="cost">-500원</div>
+          </div>
+          <div class="charging_data sort-1">
+            <div class="info">
+              <p class="name">핏타민 머니 충전 10만원</p>
+              <p class="date">2022.06.20</p>
+            </div>
+            <div class="cost">+100,000원</div>
+          </div>
+          <div class="charging_data sort-1">
+            <div class="info">
+              <p class="name">핏타민 머니 충전 100만원</p>
+              <p class="date">2022.06.20</p>
+            </div>
+            <div class="cost">+1,000,000원</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 이용안내 모달 -->
+    <div class="modal">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 모달 컨텐츠-->
+      <div class="modal_wrap">
+        <div class="modal_top">
+          <p class="modal_title">충전권 안내사항을 확인해 주세요</p>
+        </div>
+        <div class="modal_con">
+          <ul class="list_dot">
+            <li>상품 주문 시 충전한 상품머니를 사용하실 수 있습니다.</li>
+            <li>쿠폰에 따라 적용 대상이 다를 수 있습니다.</li>
+            <li>쿠폰은 주문 1회마다 1개씩 적용할 수 있습니다.</li>
+            <li>쿠폰은 정해진 기간동안만 사용이 유효합니다. 쿠폰의 사용기간을 확인해주세요.</li>
+            <li>쿠폰을 사용한 주문을 취소하여 쿠폰 사용이 취소된 경우, 유효기간 내에 재발급됩니다.</li>
+            <li>기간이 경과한 쿠폰은 자동으로 소멸됩니다.</li>
+            <li>쿠폰 사용 중 문제가 발생했을 경우 1:1게시판으로 문의해주세요.</li>
+          </ul>
+        </div>
+
+        <div class="btn_wrap">
+          <button class="btn_b btn_basic btnClose">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+      //탭메뉴
+      $(".tab_menu")
+        .find(".tab_btn")
+        .click(function () {
+          $(this).addClass("active");
+          $(this).siblings().removeClass("active");
+        });
+
+      var tabBtn = $(".tab_menu .tab_btn");
+      var tabCont = $(".tab_con");
+
+      tabCont.hide().eq(0).show();
+
+      tabBtn.click(function () {
+        var target = $(this);
+        var index = target.index();
+        // alert(index);
+        tabBtn.removeClass("active");
+        target.addClass("active");
+        tabCont.css("display", "none");
+        tabCont.eq(index).css("display", "block");
+      });
+
+      //filter btn active
+      $(".tab_sort")
+        .find(".sort_btn")
+        .click(function () {
+          $(this).addClass("active");
+          $(this).siblings().removeClass("active");
+        });
+
+      //list filter
+      $(document).ready(function () {
+        let activeCat = "";
+        function filterGroup(group) {
+          if (activeCat != group) {
+            $(".charging_data")
+              .filter("." + group)
+              .show();
+            $(".charging_data")
+              .filter(":not(." + group + ")")
+              .hide();
+            activeCat = group;
+          }
+        }
+
+        $(".sort_all").click(function () {
+          $(".charging_data").show();
+          activeCat = "all";
+        });
+        $(".sort_1").click(function () {
+          filterGroup("sort-1");
+        });
+        $(".sort_2").click(function () {
+          filterGroup("sort-2");
+        });
+        $(".sort_3").click(function () {
+          filterGroup("sort-3");
+        });
+      });
+      /* popup */
+      $(".openCharging").on("click", function () {
+        $(".modal, body").addClass("open");
+      });
+
+      $(".overlay, .btnClose").on("click", function () {
+        $(".popup, .modal, body, .btn_trans").removeClass("open");
+      });
+    </script>
+  </body>
+</html>

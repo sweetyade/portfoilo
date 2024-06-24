@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<head lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=2.0">
+
+        <!-- ============== css ================== -->
+        <link rel="stylesheet" href="css/style.css">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>ns홈쇼핑 대시보드</title>
+    </head>
+    <body>
+        <div style="text-align:center; font-size: .75rem; background-color: #222; color: #fff; width: 100%; padding: 10px;">
+            <p>상단에 메뉴로 서브페이지 확인 가능합니다.</p>
+        </div>
+        <div class="wrap">
+            <div class="header">
+                <a href="index.html" class="header_logo">
+                    <img src="images/logo.png" alt="" class="logo_img">
+                </a>
+
+                <div class="nav">
+                    <a href="index.html" class="nav_link">VOC 현황</a>
+                    <a href="sub1.html" class="nav_link">편성별 누적 현황(TV & CTCOM)</a>
+                    <a href="sub2.html" class="nav_link selected">채널별 VOC 관련 현황</a>
+                </div>
+
+                <div class="header_date">
+                    <p class="date_txt">방송일자</p>
+                    <input type="text" class="input_date" placeholder="2022-01-04 (화요일)" disabled>
+                </div>
+            </div>
+
+            <div class="main">
+                <!-- 메인 상단 바-->
+                <form action="">
+                    <div class="main_bar">
+                        <div class="flex_l">
+                            <p class="bar_title">채널별 키워드 현황</p>
+                            <div class="select_date">
+                                <label for="select_date" class="main_bartxt">조회일자</label>
+                                <input type="text" id="select_date" class="calendar"  value="2021-12-26">
+                                <i class='bx bx-calendar'></i>
+                                <span class="main_bartxt">~</span>
+                                <input type="text" id="select_date" class="calendar"  value="2021-12-30">
+                                <i class='bx bx-calendar'></i>
+                            </div>
+                            
+
+                            <div class="input_check">
+                                <span class="main_bartxt">채널선택</span>
+                                <input type="checkbox" id="check_tv"> <label for="check_tv">TV</label>
+                                <input type="checkbox" id="check_ctcom"> <label for="check_ctcom">CTCOM</label>
+                                <input type="checkbox" id="check_internet"> <label for="check_internet">인터넷</label>
+                                <input type="checkbox" id="check_mobile"> <label for="check_mobile">모바일</label>
+                            </div>
+                            <div class="input_check">
+                                <input type="checkbox" id="check_all"> <label for="check_all">전체</label>
+                                <input type="checkbox" id="check_order"> <label for="check_order">주문</label>
+                                <input type="checkbox" id="check_cs"> <label for="check_cs">CS</label>
+                            </div>
+                        </div>
+                        <div class="flex_2">
+                            <input type="button" value="조회" class="button">
+                        </div>
+                    </div>
+                </form>
+
+                <div class="section_full">
+                    <!-- 상단순위  -->
+                    <div class="section_grid">
+                        <div class="sub_best">
+                            <p class="subbest_title">
+                                <span class="subbest_rk">순위</span>
+                                <span class="subbest_key">상품명</span>
+                                <span class="subbest_no">건수</span>
+                            </p>
+                            <ol>
+                                <li>
+                                    <span class="subbest_rk">1</span>
+                                    <span class="subbest_key">일시불</span>
+                                    <span class="subbest_no">2,000</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">2</span>
+                                    <span class="subbest_key">면도기</span>
+                                    <span class="subbest_no">1,300</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">3</span>
+                                    <span class="subbest_key">도루코</span>
+                                    <span class="subbest_no">900</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">4</span>
+                                    <span class="subbest_key">할인</span>
+                                    <span class="subbest_no">500</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">5</span>
+                                    <span class="subbest_key">일시불</span>
+                                    <span class="subbest_no">200</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">6</span>
+                                    <span class="subbest_key">풀세트구성풀세트구성풀세트구성풀세트구성풀세트구성풀세트구성풀세트구성풀세트구성</span>
+                                    <span class="subbest_no">150</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">7</span>
+                                    <span class="subbest_key">자동주문</span>
+                                    <span class="subbest_no">100</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">8</span>
+                                    <span class="subbest_key">플러스</span>
+                                    <span class="subbest_no">90</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">9</span>
+                                    <span class="subbest_key">프레쉬</span>
+                                    <span class="subbest_no">80</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">10</span>
+                                    <span class="subbest_key">페이스</span>
+                                    <span class="subbest_no">30</span>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="sub_best">
+                            <p class="subbest_title">
+                                <span class="subbest_rk">순위</span>
+                                <span class="subbest_key">키워드</span>
+                                <span class="subbest_no">건수</span>
+                            </p>
+                            <ol>
+                                <li>
+                                    <span class="subbest_rk">1</span>
+                                    <span class="subbest_key">일시불</span>
+                                    <span class="subbest_no">2,000</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">2</span>
+                                    <span class="subbest_key">면도기</span>
+                                    <span class="subbest_no">1,300</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">3</span>
+                                    <span class="subbest_key">도루코</span>
+                                    <span class="subbest_no">900</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">4</span>
+                                    <span class="subbest_key">할인</span>
+                                    <span class="subbest_no">500</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">5</span>
+                                    <span class="subbest_key">일시불</span>
+                                    <span class="subbest_no">200</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">6</span>
+                                    <span class="subbest_key">풀세트구성</span>
+                                    <span class="subbest_no">150</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">7</span>
+                                    <span class="subbest_key">자동주문</span>
+                                    <span class="subbest_no">100</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">8</span>
+                                    <span class="subbest_key">플러스</span>
+                                    <span class="subbest_no">90</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">9</span>
+                                    <span class="subbest_key">프레쉬</span>
+                                    <span class="subbest_no">80</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">10</span>
+                                    <span class="subbest_key">페이스</span>
+                                    <span class="subbest_no">30</span>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="sub_best">
+                            <p class="subbest_title">
+                                <span class="subbest_rk">순위</span>
+                                <span class="subbest_key">신규키워드</span>
+                                <span class="subbest_no">건수</span>
+                            </p>
+                            <ol>
+                                <li>
+                                    <span class="subbest_rk">1</span>
+                                    <span class="subbest_key">일시불</span>
+                                    <span class="subbest_no">2,000</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">2</span>
+                                    <span class="subbest_key">면도기</span>
+                                    <span class="subbest_no">1,300</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">3</span>
+                                    <span class="subbest_key">도루코</span>
+                                    <span class="subbest_no">900</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">4</span>
+                                    <span class="subbest_key">할인</span>
+                                    <span class="subbest_no">500</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">5</span>
+                                    <span class="subbest_key">일시불</span>
+                                    <span class="subbest_no">200</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">6</span>
+                                    <span class="subbest_key">풀세트구성</span>
+                                    <span class="subbest_no">150</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">7</span>
+                                    <span class="subbest_key">자동주문</span>
+                                    <span class="subbest_no">100</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">8</span>
+                                    <span class="subbest_key">플러스</span>
+                                    <span class="subbest_no">90</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">9</span>
+                                    <span class="subbest_key">프레쉬</span>
+                                    <span class="subbest_no">80</span>
+                                </li>
+                                <li>
+                                    <span class="subbest_rk">10</span>
+                                    <span class="subbest_key">페이스</span>
+                                    <span class="subbest_no">30</span>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+
+                    <div class="section">
+                        <!-- 주요키워드 -->
+                        <div class="section_half">
+                            <div class="keyword_bg">
+                                <p class="keyword_title color_red">주요 키워드</p>
+                                <div class="keyword_tag">
+                                    <span style="top: 30%; left: 20%;" class="keycolor1 keysize1">면도기</span>
+                                    <span style="top: 50%; left: 10%;" class="keycolor2 keysize2">일시불</span>
+                                    <span style="bottom: 10%; right: 20%;" class="keycolor3 keysize3">자동주문</span>
+                                    <span style="top: 10%; right: 30%;" class="keycolor4 keysize4">더블</span>
+                                    <span style="top: 60%; left: 80%;" class="keycolor5 keysize5">무료체험</span>
+                                    <span style="top: 30%; left: 20%;" class="keycolor6 keysize6">도루코페이스</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- voc 상담요약 -->
+                        <div class="section_half">
+                            <div class="board_list">
+                                <p class="list_title"><span class="color_red">VOC</span> 상담 요약</p>
+                                <ol>
+                                    <li>
+                                        <p class="list_no">1</p>
+                                        <p class="list_meno">
+                                            고객께서 [더바디샵] 화이트 머스크 오리지널 세트/청구할인 연락건으로 연락/적립금 쿠폰 확인/청구할인 상담진행
+                                            고객께서 [더바디샵] 화이트 머스크 오리지널 세트/청구할인 연락건으로 연락/적립금 쿠폰 확인/청구할인 상담진행
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="list_no">2</p>
+                                        <p class="list_meno">
+                                            고객께서 [더바디샵] 화이트 머스크 오리지널 세트/청구할인 연락건으로 연락/적립금 쿠폰 확인/청구할인 상담진행
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="list_no">3</p>
+                                        <p class="list_meno">
+                                            고객께서 [더바디샵] 화이트 머스크 오리지널 세트/청구할인 연락건으로 연락/적립금 쿠폰 확인/청구할인 상담진행
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="list_no">4</p>
+                                        <p class="list_meno">
+                                            고객께서 [더바디샵] 화이트 머스크 오리지널 세트/청구할인 연락건으로 연락/적립금 쿠폰 확인/청구할인 상담진행
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="list_no">5</p>
+                                        <p class="list_meno">
+                                            고객께서 [더바디샵] 화이트 머스크 오리지널 세트/청구할인 연락건으로 연락/적립금 쿠폰 확인/청구할인 상담진행
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="list_no">6</p>
+                                        <p class="list_meno">
+                                            고객께서 [더바디샵] 화이트 머스크 오리지널 세트/청구할인 연락건으로 연락/적립금 쿠폰 확인/청구할인 상담진행
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="list_no">7</p>
+                                        <p class="list_meno">
+                                            고객께서 [더바디샵] 화이트 머스크 오리지널 세트/청구할인 연락건으로 연락/적립금 쿠폰 확인/청구할인 상담진행
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="list_no">8</p>
+                                        <p class="list_meno">
+                                            고객께서 [더바디샵] 화이트 머스크 오리지널 세트/청구할인 연락건으로 연락/적립금 쿠폰 확인/청구할인 상담진행
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="list_no">9</p>
+                                        <p class="list_meno">
+                                            고객께서 [더바디샵] 화이트 머스크 오리지널 세트/청구할인 연락건으로 연락/적립금 쿠폰 확인/청구할인 상담진행
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="list_no">10</p>
+                                        <p class="list_meno">
+                                            고객께서 [더바디샵] 화이트 머스크 오리지널 세트/청구할인 연락건으로 연락/적립금 쿠폰 확인/청구할인 상담진행
+                                        </p>
+                                    </li>
+                                </ol>
+                                <div class="pagenation">
+                                    <a href="#" class="first"><i class='bx bx-chevrons-left'></i></a>
+                                    <a href="#" class="pre"><i class='bx bx-chevron-left' ></i></a>
+                                    <a href="#" class="selected">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#">5</a>
+                                    <a href="#">6</a>
+                                    <a href="#">7</a>
+                                    <a href="#">8</a>
+                                    <a href="#">9</a>
+                                    <a href="#">10</a>
+                                    <a href="#" class="next"><i class='bx bx-chevron-right' ></i></a>
+                                    <a href="#" class="last"><i class='bx bx-chevrons-right' ></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</head>

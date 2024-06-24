@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../../css/style.css">
+  <meta http-equiv="refresh" content="30; url=1_index.html"> 
+  <title>2_9_2.예약완료 - 실시간줄서기완료</title>
+</head>
+<body>
+  <main class="main">
+    <div class="contents rsv_cpl">
+      <div class="line_bg_gr top">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <p class="cpl_logo"><img src="../../images/common/logo_green.svg" alt=""></p>
+      <div class="servey_top">
+        <div class="servey_title">
+          <p class="title">온라인 줄서기가<br>완료되었어요</p>
+          <p class="sub_txt">실시간 대기 순서는 알림톡을 확인해주세요</p>
+        </div>
+      </div>
+
+      <div class="rsv_info">
+        <div class="rsv_time">
+          <p class="img"><img src="../../images/smile_ani.svg" alt=""></p>
+          <p class="p3_fb">내 대기번호</p>
+          <p class="time">9999번</p>
+        </div>
+
+        <div class="info_team">
+          <div class="team_data">
+            <p class="team_txt">예상 대기시간</p>
+            <p class="team_time">20~30분</p>
+          </div>
+          <div class="team_data">
+            <p class="team_txt">내 앞 대기팀</p>
+            <p class="team_time">999팀</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 간편설문 결과 없을 때 / 테블릿 미노출 -->
+      <div class="rsv_banner b_green">
+        <p class="title">간편설문</p>
+        <p class="txt">내 건강 유형을 찾아보세요!</p>
+      </div>
+
+      
+      <!-- 모바일 미노출 -->
+      <div class="back_btn">
+        <p class="back_icon" onclick="location.href='2_servey_index.html';"><img src="../../images/arrow_back.svg" alt=""></p>
+        <p class="back_txt">돌아가기 <span class="back_time timer" data-seconds-left=30></span></p>
+      </div>
+
+      <p class="botton_cancle">줄서기 취소</p>
+
+      <div class="line_bg_gr bottom">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  </div>
+
+
+  <div class="popup open">
+    <div class="overlay"></div>
+    <div class="popup_wrap">
+      <p class="pop_title">줄서기를 취소하시겠어요?</p>
+      <div class="popup_con centertxt">
+        <p class="txt">내 앞 대기팀 <span class="bold_f">3팀</span><br>
+          예상 대기 시간 <span class="bold_f">20~30분</span></p>
+      </div>
+
+      <div class="pop_btn">
+        <button class="btn_m btn_light">닫기</button>
+        <button class="btn_m btn_red" onclick="location.href='2_9_3_cancel.html';">줄서기 취소</button>
+      </div>
+    </div>
+  </div>
+
+  </main>
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/jquery-ui.min.css"></script>
+  <script src="../../js/jquery.simple.timer.js"></script>
+
+  <script>
+     //timer
+    $(function(){
+      $('.timer').startTimer({
+        onComplete: function(element){
+          $('html, body').addClass('bodyTimeoutBackground');
+        }
+      }).click(function(){ location.reload() });
+    })
+
+
+    //popup
+    $(".botton_cancle").click(function(){
+      $(".popup, body").addClass("open");
+    })
+
+    $(".btn_light, .overlay").click(function(){
+      $(".popup, body").removeClass("open");
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>5-2-1.1:1문의 글읽기</title>
+</head>
+<body>
+  <main class="main">
+    <!-- sidebar -->
+    <div class="sidebar">
+      
+      <h1 class="logo"><a href="#"><img src="../../images/common/logo_wt.svg" alt=""></a></h1>
+
+      <!-- 로그인정보-->
+      <div class="user_info">
+        <p class="user_img"><img src="../../images/login_bg.jpg" alt=""></p>
+        <div class="user_name">
+          <p class="base_fb light">약사이름</p>
+          <p class="small_f mt_0_5 gray04">약국명</p>
+        </div>
+      </div>
+
+      <!-- 상담스케쥴 요약 -->
+      <div class="consult_sml">
+        <div class="al_setting" style="display: none;">
+          <p class="small_f">채팅 상담 설정</p>
+          <div class="toggle_block">
+            <input type="checkbox" class="toggle" id="ipToggle" checked />
+            <label for="ipToggle" class="toggle_btn"></label>
+          </div>
+        </div>
+        <div class="al_setting" style="display: none;">
+          <p class="small_f">즉시 상담 설정</p>
+          <div class="toggle_block">
+            <input type="checkbox" class="toggle" id="ipToggle2" />
+            <label for="ipToggle2" class="toggle_btn"></label>
+          </div>
+        </div>
+
+        <div class="sml_list">
+          <div class="sml_data">
+            <p class="txt">예약 현황</p>
+            <a class="total_no" href="#">1건</a>
+          </div>
+          <div class="sml_data">
+            <p class="txt">상담 완료</p>
+            <a class="total_no" href="#">1건</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 메뉴 -->
+      <nav class="nav">
+        <a class="nav_link" href="#">
+          <p class="nav_menu"><i class="ri-user-settings-line"></i> 프로필 관리</p>
+        </a>
+        <a class="nav_link" href="#">
+          <p class="nav_menu"><i class="ri-customer-service-line"></i> 상담 내역</p>
+          <!-- <div class="sub_list">
+            <a href="#" class="sub_link">상담 대기 리스트</a>
+            <a href="#" class="sub_link">예약 확정 리스트</a>
+            <a href="#" class="sub_link">상담 내역 조회</a>
+            <a href="#" class="sub_link">상담 설정</a>
+          </div> -->
+        </a>
+        <a class="nav_link" href="#">
+          <p class="nav_menu"><i class="ri-edit-line"></i>설문 내역</p>
+        </a>
+        <div class="nav_link" href="#">
+          <p class="nav_menu sub_menu"><i class="ri-question-answer-line"></i> 게시판</p>
+          <div class="sub_list">
+            <a href="#" class="sub_link">공지사항</a>
+            <a href="#" class="sub_link">1:1문의</a>
+            <a href="#" class="sub_link">FAQ</a>
+          </div>
+        </div>
+        <a class="nav_link" href="#">
+          <p class="nav_menu"><i class="ri-kakao-talk-line"></i> 고객센터</p>
+        </a>
+      </nav>
+
+      <p class="logoutBtn">로그아웃 <i class="ri-logout-box-r-line"></i></p>
+
+      <p class="closeBtn"><i class="ri-close-line"></i></p>
+    </div>
+
+    <!-- main -->
+    <div class="container">
+      <!-- header -->
+      <section class="header">
+        <div class="header_left">
+          <div class="open_toggle">
+            <div class="burger"></div>
+          </div>
+          <h2 class="header_menu">더현대 서울 Fitamin 상담관리 시스템</h2>
+        </div>
+
+        <div class="input_search">
+          <input type="text" placeholder="예약 번호/예약자를 검색해주세요.">
+          <button class="search_input"><i class="ri-search-line"></i></button>
+        </div>
+      </section>
+
+      <!-- contents -->
+      <section class="contents">
+        <div class="contents_wrap">
+          <p class="board_title">1:1문의</p>
+
+          <div class="board_list board_read">
+            <div class="read_title">
+              <p class="title">테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트</p>
+              <p class="date">작성일 : 23-01-06 13:56:04</p>
+            </div>
+
+            <div class="board_file" style="display: none">
+              <p class="addfile">첨부파일</p>
+              <div class="file_list">
+                <p class="file_name">파일명.jpg</p>
+                <p class="file_name">파일명.pdf</p>
+                <p class="file_name">스크린샷 2022-12-22 오전 10.33.50.png</p>
+                <p class="file_name">(준비중)2022.12.16_소비자_상담-구독_프로세스_업데이트_공유_드립니다.(1228) (1).pdf</p>
+              </div>
+            </div>
+
+            <article class="article">
+              <p>내용내용내용</p>
+              <p>내용내용내용</p>
+              <p>내용내용내용</p>
+              <p>내용내용내용</p>
+              <p>내용내용내용</p>
+            </article>
+
+            <!-- 답변리스트 -->
+            <div class="rp_list">
+              <!-- 답변전 -->
+              <div class="rp_article">
+                <p class="rp_title"><span class="btn_s btn_light">답변전</span>답변제목제목제목</p>
+
+                <div class="rp_cmt">
+                  <p>곧 답변드리겠습니다. 조금만 기다려주세요.</p>
+                </div>
+              </div>
+
+              <!-- 답변완료 -->
+              <div class="rp_article rp_done">
+                <p class="rp_title"><span class="btn_s btn_purple">답변완료</span>답변제목제목제목</p>
+
+                <div class="rp_cmt">
+                  <p>내용내용내용</p>
+                  <p>내용내용내용</p>
+                  <p>내용내용내용</p>
+                  <p>내용내용내용</p>
+                  <p>내용내용내용</p>
+                  <p>내용내용내용</p>
+                </div>
+
+                <p class="date">작성일 : -</p>
+              </div>
+            </div>
+
+            <div class="page_nav">
+              <p class="page_pre btn_m btn_basic"><i class="ri-arrow-left-s-line"></i> 이전글</p>
+              <p class="page_next btn_m btn_basic">다음글 <i class="ri-arrow-right-s-line"></i></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="../../scripts/jquery.min.js"></script>
+  <script src="../../scripts/main.js"></script>
+
+  <script>
+
+  </script>
+</body>
+</html>

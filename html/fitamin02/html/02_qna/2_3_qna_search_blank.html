@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>	2-3.질문검색 - 검색결과 없음</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="back"><img src="../../images/icon/system_back.svg" alt=""></div>
+      <h2 class="page_name">검색하기</h2>
+      <div class="header_icon">
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="search_top">
+        <div class="input_block mb_1_5">
+          <div class="input_div">
+            <input type="text" class="clearInput searchInput" placeholder="검색어를 입력해주세요." >
+            <input type="submit" class="btnSearch">
+            <div class="btnClear"></div>
+          </div>
+        </div>
+
+        <div class="search_con">
+          <div class="title_total">
+            <p class="title"><span class="primary">다이어트</span>의 검색결과</p>
+            <P class="total">총 0건</P>
+          </div>
+        </div>
+      </section>
+
+      <div class="blank_txt" style="height: calc(100svh - 16rem)">
+        <p class="txt">검색결과가 존재하지 않아요.<br>
+          다른 검색어로 검색해보시는건 어때요?</p>
+      </div>
+    </main>
+
+    <!--영양제 직접입력 -->
+    <div class="modal modal01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+      <!-- 모달 컨텐츠-->
+      <div class="modal_wrap">
+        <p class="toast">브랜드명과 영양제명을 기입해주세요</p>
+        <div class="modal_top">
+          <p class="modal_title">영양제를 직접 입력해주세요</p>
+          <p class="modal_sub">섭취 중인 영양제의 정보를 기입해주세요 </p>
+        </div>
+
+        <div class="modal_con">
+          <div class="input_div">
+            <input type="text" id="" class="mb_0_5" placeholder="브랜드명"  />
+            <input type="text" id="" class="" placeholder="제품명"  />
+          </div>
+        </div>
+
+        <div class="btn_wrap">
+          <button class="btn_b btn_basic popClose">등록하기</button>
+          <button class="btn_b btn_trans popClose">닫기</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+      // /* ---- 삭제버튼 ------- */
+      $(document).ready(function () {
+        $(".input_div").each(function () {
+          $(this)
+            .find(".clearInput")
+            .on("keyup focus", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 1");
+
+              if ($(this).val().length == 0) {
+                $(this).siblings(".btnClear").attr("style", "opacity: 0");
+              } else {
+                $(this).siblings(".btnClear").attr("style", "opacity: 1");
+              }
+            });
+
+          $(this)
+            .find(".clearInput")
+            .on("blur", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 0");
+            });
+
+          $(this)
+            .find(".btnClear")
+            .on("click touchstart", function () {
+              $(this).closest(".input_div").find(".clearInput").val("");
+              $(this).closest(".input_div").find(".btnClear").attr("style", "opacity: 0");
+              return false;
+            });
+        });
+      });
+
+      //팝업
+      $(".addModal").click(function(){
+        $(".modal01").addClass("open");
+      })
+
+      $(".overlay, .popClose").on("click", function () {
+        $(".popup, .modal, body, .btn_trans").removeClass("open");
+      });
+    </script>
+  </body>
+</html>

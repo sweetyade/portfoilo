@@ -1,0 +1,164 @@
+<html><head>
+        <meta charset="UTF-8">
+        <title>MEDYON E-sang education</title>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+
+        <!-- fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        
+        <!-- jquery -->
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+        <link rel="stylesheet" href="css/basic.css">
+        <link rel="stylesheet" href="css/report.css">
+    </head>
+    
+    <body>
+       
+        <div id="selftest">
+            
+            <div class="test_loc grid_flex">
+                <p>1. 구조영역</p>
+                <span></span>
+                <p>2. 진료과정영역</p>
+                <span></span>
+                <p class="selected">3. 진료결과영역 2/2</p>
+            </div>
+            
+            <div class="test_table2">
+               <p class="font_l"><span class="color_pink">진료결과영역</span>에는</p>
+               <p class="font_m">전월 비교 5%이상 체중감소 환자분율 / 욕창이 새로 생긴 환자분율 / 욕창 개선 환자분율 / 중증도 이상 통증개선 환자분율 / 일상생활수행능력(ADL) 개선 환자분율 / 당뇨병 환자 중 HbA1c검사결과 적정범위 환자분율 / 장기입원(181일 이상)  환자분율 결과자료 도출 / 지역사회 복귀율<span>총 8개의 평가지표</span>가 있습니다.</p>
+              <div class="report_ck_2">
+                  <div class="table_btn">
+                       <button type="button">기존 작성내용 불러오기</button>
+                   </div>
+                   <div class="ck_top grid_flex">
+                       <p class="ck_q">입력사항</p>
+                       <p class="ck_if">세부내용</p>
+                   </div>
+                   <div class="grid_flex">
+                       <p class="ck_q">해당 월 평가에서 통증이 전월 평가보다 개선된 환자</p>
+                       <div class="ck_if">
+                           <p>- 통증 강도 및 발생빈도 분류에 따라 「통증의 강도 또는 발생빈도」가 줄어든 경우</p>
+                           <p>- 강도(빈도)의 개선과 빈도(강도)의 악화가 동시에 나타나는 경우 개선으로 판단하지 않음</p>
+                           <div class="ck_wr grid_flex">
+                               <p>1차 : <input type="text"></p>
+                               <p>2차 : <input type="text"></p>
+                               <p>3차 : <input type="text"></p>
+                               <p>4차 : <input type="text"></p>
+                               <p>5차 : <input type="text"></p>
+                               <p>6차 : <input type="text"></p>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="grid_flex">
+                       <p class="ck_q">해당 월 평가와 전월 평가를 모두 받은 환자</p>
+                       <div class="ck_if">
+                           <p>- 해당 월 평가와 전월 평가를 모두 받은 환자</p>
+                           <div class="ck_wr grid_flex">
+                               <p>1차 : <input type="text"></p>
+                               <p>2차 : <input type="text"></p>
+                               <p>3차 : <input type="text"></p>
+                               <p>4차 : <input type="text"></p>
+                               <p>5차 : <input type="text"></p>
+                               <p>6차 : <input type="text"></p>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="grid_flex">
+                       <p class="ck_q">해당 월 평가에서  일상생활수행능력(ADL)이 전월 평가보다 개선된 환자</p>
+                       <div class="ck_if">
+                           <p>- ADL 개선 : 환자평가표 기준에 따라 10개 ADL항목 총점이 1점이상 감소</p>
+                           <p>- 제외 : 전월 평가에서 10개의 ADL값이 모두 완전 자립전월과 해당 월 평가 모두 ‘의료최고도＇인 환자      </p>
+                           <div class="ck_wr grid_flex">
+                               <p>1차 : <input type="text"></p>
+                               <p>2차 : <input type="text"></p>
+                               <p>3차 : <input type="text"></p>
+                               <p>4차 : <input type="text"></p>
+                               <p>5차 : <input type="text"></p>
+                               <p>6차 : <input type="text"></p>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="grid_flex">
+                       <p class="ck_q">해당 월 평가를 받은 당뇨병환자</p>
+                       <div class="ck_if">
+                           <p>- 당뇨병환자 : 청구명세서에 당뇨상병(E10~E14)이 있거나 환자평가표의 당뇨에 체크된 경우</p>
+                           <p>- 제외 : 환자평가표의 평가구분이 입원평가인 경우</p>
+                           <div class="ck_wr grid_flex">
+                               <p>1차 : <input type="text"></p>
+                               <p>2차 : <input type="text"></p>
+                               <p>3차 : <input type="text"></p>
+                               <p>4차 : <input type="text"></p>
+                               <p>5차 : <input type="text"></p>
+                               <p>6차 : <input type="text"></p>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="grid_flex">
+                       <p class="ck_q">최근 3개월 이내  HbA1c검사결과가 적정범위인 환자</p>
+                       <div class="ck_if">
+                           <p>- HbA1c검사결과가 적정범위 : 4 ≤ HbA1c &lt; 8.5%</p>
+                           <p>- 검사결과가 없거나 검사일자가 환자평가표 작성일 이후인 경우</p>
+                           <div class="ck_wr grid_flex">
+                               <p>1차 : <input type="text"></p>
+                               <p>2차 : <input type="text"></p>
+                               <p>3차 : <input type="text"></p>
+                               <p>4차 : <input type="text"></p>
+                               <p>5차 : <input type="text"></p>
+                               <p>6차 : <input type="text"></p>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="grid_flex">
+                       <p class="ck_q">평가 대상기간 동안 입원중인 환자 </p>
+                       <div class="ck_if">
+                           <p>- 평가 대상기간 동안 입원중인 환자 </p>
+                           <div class="ck_wr grid_flex">
+                               <p>1차 : <input type="text"></p>
+                               <p>2차 : <input type="text"></p>
+                               <p>3차 : <input type="text"></p>
+                               <p>4차 : <input type="text"></p>
+                               <p>5차 : <input type="text"></p>
+                               <p>6차 : <input type="text"></p>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="grid_flex">
+                       <p class="ck_q">입원 기간이 181일 이상인 환자</p>
+                       <div class="ck_if">
+                           <p>- 181일 이상 입원 : 일당 정액수가 및 입원료 산정기준에 따름</p>
+                           <p>- 제외 : 의료최고도 또는 의료고도, 의료중도 환자</p>
+                           <div class="ck_wr grid_flex">
+                               <p>1차 : <input type="text"></p>
+                               <p>2차 : <input type="text"></p>
+                               <p>3차 : <input type="text"></p>
+                               <p>4차 : <input type="text"></p>
+                               <p>5차 : <input type="text"></p>
+                               <p>6차 : <input type="text"></p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+            </div>
+            
+            <div class="test_table3">
+                <p class="color_green">작성TIP!</p>
+                <p>1. 대상기간은 평가 대상기간을 말하며 작성 월 기준 직전평가 대상 기간을 기준으로 합니다.<br>
+                통상 평가는 상반기,하반기로 진행합니다. (예 : 1월 작성 시 작년 7월~12월 작성)</p>
+                <p>2. 만약 직전 6개월 작성이 어려우면 평가 기간 내  최소 분기단위  이상 기간으로 입력합니다.<br>
+                (예 : 10월 작성 시 평가기간 중 직전 3개월인 7월~9월 작성)</p>
+                <p>3. 입력사항은 월별로 입력한 내용이 지표별로 정리되므로각 지표별로 위 평가대상기간 내 동일 기간을 해당 월별로 입력합니다.</p>
+                <p>4. 지역사회 복귀율은 현재 표준화지표도없고 요양병원에서 입력내용 확인이 어려워 일단 중위값으로 적용 예정입니다.</p>
+                <p>입력란에 모든 내용을 입력하셨으면 아래의 [제출하기]버튼을 클릭해 주세요.</p>
+            </div>
+
+            <div class="test_btn grid_flex">
+               <p><a href="test_4.html" class="btn_gray"><i class="fas fa-angle-left"></i> 이전으로</a></p>
+                <p><a href="test_6.html" class="btn_green2">제출하기</a></p>
+            </div>
+        </div>
+        
+    </body>
+</html>

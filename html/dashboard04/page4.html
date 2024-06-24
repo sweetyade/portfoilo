@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=2.0">
+
+        <!-- ============== css ================== -->
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        
+
+        <title>IBK 기업은행</title>
+    </head>
+    <body>
+        <div style="text-align:center; font-size: .75rem; background-color: #222; color: #fff; width: 100%; padding: 10px;">
+            <p>각각 페이지 링크는 여기서 확인해주세요. <span style="margin: 0 .3rem;">│</span>
+                <a href="page1-close.html" style="color: #fff; text-decoration: underline;">첫페이지</a><span style="margin: 0 .3rem;">│</span>
+                <a href="page2-open.html" style="color: #fff; text-decoration: underline;">첫페이지 챗 오픈</a><span style="margin: 0 .3rem;">│</span>
+                <a href="page3.html" style="color: #fff; text-decoration: underline;">팝업창 1</a><span style="margin: 0 .3rem;">│</span>
+                <a href="page4.html" style="color: #fff; text-decoration: underline;">팝업창 2</a><span style="margin: 0 .3rem;">│</span>
+                <a href="chart1.html" style="color: #fff; text-decoration: underline;">차트 1</a><span style="margin: 0 .3rem;">│</span>
+                <a href="chart2.html" style="color: #fff; text-decoration: underline;">차트 2</a><span style="margin: 0 .3rem;">│</span>
+                <a href="chart3.html" style="color: #fff; text-decoration: underline;">차트 3</a> <span style="margin: 0 .3rem;">│</span>
+                <a href="chart4.html" style="color: #fff; text-decoration: underline;">차트 4</a>
+            </p>
+        </div>
+        <div class="wrap">
+            <!-- ========================== header =========================== -->
+            <div class="header">
+                <div class="header_left">
+                    <p class="header_title"><i class="ri-arrow-drop-right-fill"></i> 예금담보대출</p>
+                    <p>컨텐츠가 등록되었습니다.</p>
+
+                    <div class="header_btns">
+                        <button class="btn1">의도분석결과보기</button>
+                        <button class="btn1">지난상담 대화보기</button>
+                    </div>
+                </div>
+
+                <div class="header_right">
+                    <button class="btn1">지식샘</button>
+                    <a href="#" class="header_c"><img src="images/icon_01.png" alt="">
+                        <span>1</span>
+                    </a>
+                    <a href="#" class="header_c"><img src="images/icon_02.png" alt=""></a>
+                </div>
+            </div>
+
+            <!-- ========================== content ======================= -->
+            <div class="container">
+                <!-- =========== 대화창 ==================== -->
+                <div class="message msg-open" id="msg-open">
+                    <div class="msg_contents">
+                        <p class="msg_title">대화창</p>
+                        <select name="" id="">
+                            <option value="">대화+의도분석</option>
+                            <option value="">대화+의도분석2</option>
+                            <option value="">대화+의도분석3</option>
+                            <option value="">대화+의도분석4</option>
+                        </select>
+                        <div class="msg_pd">
+                            <div class="msg_list">
+                                <div class="msg_in">
+                                    <p class="msg_user">고객</p>
+                                    <div class="msg_block">
+                                        <div class="msg_item">
+                                            카드 결제 날짜를 바꾸려고요
+                                        </div>
+                                        <input type="checkbox">
+                                    </div>
+                                </div>
+    
+                                <div class="msg_out">
+                                    <p class="msg_user">직원</p>
+                                    <div class="msg_block">
+                                        <input type="checkbox">
+                                        <div class="msg_item">
+                                           결제일을 며칠로 변경해 드릴까요?
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="msg_in">
+                                    <p class="msg_user">고객</p>
+                                    <div class="msg_block">
+                                        <div class="msg_item">
+                                            카드 결제 날짜를 바꾸려고요
+                                        </div>
+                                        <input type="checkbox">
+                                    </div>
+                                </div>
+    
+                                <div class="msg_out">
+                                    <p class="msg_user">직원</p>
+                                    <div class="msg_block">
+                                        <input type="checkbox">
+                                        <div class="msg_item">
+                                           5일, 15일, 30일 가능합니다.
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="msg_in">
+                                    <p class="msg_user">고객</p>
+                                    <div class="msg_block">
+                                        <div class="msg_item">
+                                            카드 결제 날짜를 바꾸려고요
+                                        </div>
+                                        <input type="checkbox">
+                                    </div>
+                                </div>
+    
+                                <div class="msg_out">
+                                    <p class="msg_user">직원</p>
+                                    <div class="msg_block">
+                                        <input type="checkbox">
+                                        <div class="msg_item">
+                                           결제일을 며칠로 변경해 드릴까요?
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="msg_in">
+                                    <p class="msg_user">고객</p>
+                                    <div class="msg_block">
+                                        <div class="msg_item">
+                                            카드 결제 날짜를 바꾸려고요
+                                        </div>
+                                        <input type="checkbox">
+                                    </div>
+                                </div>
+    
+                                <div class="msg_out">
+                                    <p class="msg_user">직원</p>
+                                    <div class="msg_block">
+                                        <input type="checkbox">
+                                        <div class="msg_item">
+                                           결제일을 며칠로 변경해 드릴까요?
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="msg_in">
+                                    <p class="msg_user">고객</p>
+                                    <div class="msg_block">
+                                        <div class="msg_item">
+                                            카드 결제 날짜를 바꾸려고요
+                                        </div>
+                                        <input type="checkbox">
+                                    </div>
+                                </div>
+    
+                                <div class="msg_out">
+                                    <p class="msg_user">직원</p>
+                                    <div class="msg_block">
+                                        <input type="checkbox">
+                                        <div class="msg_item">
+                                           5일, 15일, 30일 가능합니다.
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="msg_in">
+                                    <p class="msg_user">고객</p>
+                                    <div class="msg_block">
+                                        <div class="msg_item">
+                                            카드 결제 날짜를 바꾸려고요
+                                        </div>
+                                        <input type="checkbox">
+                                    </div>
+                                </div>
+    
+                                <div class="msg_out">
+                                    <p class="msg_user">직원</p>
+                                    <div class="msg_block">
+                                        <input type="checkbox">
+                                        <div class="msg_item">
+                                           결제일을 며칠로 변경해 드릴까요?
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="msg_notice">
+                                    <input type="checkbox">
+                                    <p class="msg_notice-txt">
+                                        신용카드&gt;변경/등록&gt;결제일&gt;결제일변경
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="msg_toggle"  id="msg-toggle">
+                        <span><i class="ri-arrow-right-s-fill"></i></span>
+                    </a>
+                </div>
+
+                <!-- =============== 메인창 ================= -->
+                <div class="main main-open" id="main-open">
+                    <!-- ===== 컨텐츠 출력 =====-->
+                    <div class="contents">
+                        <p class="contents_title">
+                            추천 지식 컨텐츠
+                            <button class="btn2">컨텐츠 요청</button>
+                        </p>
+
+                        <div class="contents_in">
+                            <div class="tap">
+                                <a href="#" class="tap_link tap_on">예금담보대출 <i class="ri-close-line"></i></a>
+                                <a href="#" class="tap_link">카드발급신청 <i class="ri-close-line"></i></a>
+                                <a href="#" class="tap_link">카드한도조회 <i class="ri-close-line"></i></a>
+                            </div>
+
+                            <div class="contents_window-open">
+                                <div class="window_header">
+                                    <p class="window_header-title">컨텐츠보기 [예금담보대출]</p>
+                                    <div class="window_nav">
+                                        <div class="window_loc">
+                                            <img src="images/icon_04.png" alt="">
+                                            <p class="loc_title">은행</p>
+                                            <p class="loc_dep">
+                                                <span class="loc_dep1">카테고리 콜센터</span>
+                                                <span>&gt;</span>
+                                                <span class="loc_dep2">대출상품</span>
+                                            </p>
+                                        </div>
+
+                                        <div class="window_menu">
+                                            <img src="images/icon_05.png" alt="">
+                                            <p class="window_menu-date">
+                                                <span>최종변경일 : 2021-11-30</span>
+                                                <span>조회수 : 10221</span>
+                                            </p>
+
+                                            <button class="btn3">오류신고</button>
+                                            <div class="window_btns">
+                                                <a href="#"><img src="images/icon_07.png" alt=""></a>
+                                                <a href="#"><img src="images/icon_08.png" alt=""></a>
+                                                <a href="#"><img src="images/icon_09.png" alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ============== 메인 팝업창 ================= -->
+                                <div class="window_in">
+                                    <div class="popup1">
+                                        <p class="popup_title">팝업창 이름
+                                            <a href="#"><i class="ri-close-line"></i></a>
+                                        </p>
+
+                                        <div class="popup_table">
+                                            <table cellspacing="0" cellpadding="0" width="100%">
+                                                <colgroup>
+                                                    <col width="15%">
+                                                    <col width="35%">
+                                                    <col width="55%">
+                                                </colgroup>
+
+                                                <tr>
+                                                    <th>순번</th>
+                                                    <th>상담일시</th>
+                                                    <th>의도분석결과</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>순번</td>
+                                                    <td>상담일시</td>
+                                                    <td class="txt_l">의도분석결과</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>순번</td>
+                                                    <td>상담일시</td>
+                                                    <td class="txt_l">의도분석결과</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>순번</td>
+                                                    <td>상담일시</td>
+                                                    <td class="txt_l">의도분석결과</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>순번</td>
+                                                    <td>상담일시</td>
+                                                    <td class="txt_l">의도분석결과</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>순번</td>
+                                                    <td>상담일시</td>
+                                                    <td class="txt_l">의도분석결과</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <div class="popup2">
+                                        <form action="">
+                                            <p class="popup_title">팝업창 이름
+                                                <a href="#"><i class="ri-close-line"></i></a>
+                                            </p>
+
+                                            <div class="check_btns">
+                                                <button class="btn4">선택삭제</button>
+                                                <button class="btn4">전체삭제</button>
+                                            </div>
+                                            <div class="popup_table">
+                                                <table cellspacing="0" cellpadding="0" width="100%">
+                                                    <colgroup>
+                                                        <col width="10%">
+                                                        <col width="15%">
+                                                        <col width="20%">
+                                                        <col width="55%">
+                                                    </colgroup>
+
+                                                    <tr>
+                                                        <th><input type="checkbox"></th>
+                                                        <th>순번</th>
+                                                        <th>상담일시</th>
+                                                        <th>의도분석결과</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>순번</td>
+                                                        <td>상담일시</td>
+                                                        <td class="txt_l">의도분석결과</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>순번</td>
+                                                        <td>상담일시</td>
+                                                        <td class="txt_l">의도분석결과</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>순번</td>
+                                                        <td>상담일시</td>
+                                                        <td class="txt_l">의도분석결과</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>순번</td>
+                                                        <td>상담일시</td>
+                                                        <td class="txt_l">의도분석결과</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>순번</td>
+                                                        <td>상담일시</td>
+                                                        <td class="txt_l">의도분석결과</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="popup3">
+                                        <form action="">
+                                            <p class="popup_title">팝업창 이름
+                                                <a href="#"><i class="ri-close-line"></i></a>
+                                            </p>
+                                            <div class="popup_table">
+                                                <table cellspacing="0" cellpadding="0" width="100%">
+                                                    <colgroup>
+                                                        <col width="30%">
+                                                        <col width="35%">
+                                                        <col width="35%">
+                                                    </colgroup>
+
+                                                    <tr>
+                                                        <th>구분</th>
+                                                        <th colspan="2">항목</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>상담 Advisor</td>
+                                                        <td>
+                                                            <label for="table_check1">실행</label>
+                                                            <input type="radio" id="table_check1">
+                                                        </td>
+                                                        <td>미실행</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="2">추천방식</td>
+                                                        <td>
+                                                            <label for="table_check2">자동추천</label>
+                                                            <input type="radio" id="table_check2" name="table_check">
+                                                        </td>
+                                                        <td>시간
+                                                            <select name="" id="">
+                                                                <option value="">30초</option>
+                                                                <option value="">40초</option>
+                                                                <option value="">50초</option>
+                                                                <option value="">1분</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label for="table_check3">수동추천</label>
+                                                            <input type="radio" id="table_check3" name="table_check">
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="3" style="text-align: right;">
+                                                            <button class="btn4">저장</button>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="contents_check">
+                                <img src="images/icon_03.png" alt="">
+                                <p>지식컨텐츠 연결 만족도</p>
+                                <input type="radio" id="check_1" name="radio_check" checked>
+                                <label for="check_1">만족</label>
+                                <input type="radio" id="check_2" name="radio_check">
+                                <label for="check_2">불만족</label>
+                                <button class="btn1">제출</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== 검색 ===== -->
+                    <div class="search">
+                        <div class="search_list">
+                            <div class="search_tap">
+                                <input type="radio" id="search_t1" name="search_t" checked>
+                                <label for="search_t1">키워드 검색</label>
+                                <div class="search_contents">
+                                    <form action="">
+                                        <div class="search_form">
+                                            <input type="text">
+                                            <input type="button" class="btn4" value="검색">
+                                        </div>
+                                    </form>
+                                    <ul class="search_item">
+                                        <li>
+                                            <a href="#">
+                                                <i class="ri-arrow-drop-right-fill"></i>
+                                                키워드 검색키워드 검색키워드 검색키워드 검색키워드 검색키워드 검색키워드 검색키워드 검색키워드 검색키워드 검색키워드 검색
+                                                (가계대출-신용,주택담보,예금담보대출) 소득 및 재직 확인 방법 [대출]
+                                            </a>
+                                            <span class="search_date">2021-12-01</span>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="ri-arrow-drop-right-fill"></i>
+                                                (가계대출-신용,주택담보,예금담보대출) 소득 및 재직 확인 방법 [대출]
+                                            </a>
+                                            <span class="search_date">2021-12-01</span>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="ri-arrow-drop-right-fill"></i>
+                                                (가계대출-신용,주택담보,예금담보대출) 소득 및 재직 확인 방법 [대출]
+                                            </a>
+                                            <span class="search_date">2021-12-01</span>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="ri-arrow-drop-right-fill"></i>
+                                                (가계대출-신용,주택담보,예금담보대출) 소득 및 재직 확인 방법 [대출]
+                                            </a>
+                                            <span class="search_date">2021-12-01</span>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="ri-arrow-drop-right-fill"></i>
+                                                (가계대출-신용,주택담보,예금담보대출) 소득 및 재직 확인 방법 [대출]
+                                            </a>
+                                            <span class="search_date">2021-12-01</span>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="ri-arrow-drop-right-fill"></i>
+                                                (가계대출-신용,주택담보,예금담보대출) 소득 및 재직 확인 방법 [대출]
+                                            </a>
+                                            <span class="search_date">2021-12-01</span>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="ri-arrow-drop-right-fill"></i>
+                                                (가계대출-신용,주택담보,예금담보대출) 소득 및 재직 확인 방법 [대출]
+                                            </a>
+                                            <span class="search_date">2021-12-01</span>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="ri-arrow-drop-right-fill"></i>
+                                                (가계대출-신용,주택담보,예금담보대출) 소득 및 재직 확인 방법 [대출]
+                                            </a>
+                                            <span class="search_date">2021-12-01</span>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="ri-arrow-drop-right-fill"></i>
+                                                (가계대출-신용,주택담보,예금담보대출) 소득 및 재직 확인 방법 [대출]
+                                            </a>
+                                            <span class="search_date">2021-12-01</span>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="ri-arrow-drop-right-fill"></i>
+                                                (가계대출-신용,주택담보,예금담보대출) 소득 및 재직 확인 방법 [대출]
+                                            </a>
+                                            <span class="search_date">2021-12-01</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="search_tap">
+                                <input type="radio" id="search_t2" name="search_t">
+                                <label for="search_t2">용어 검색</label>
+                                <div class="search_contents">
+                                    <form action="">
+                                        <div class="search_form">
+                                            <input type="text">
+                                            <input type="button" class="btn4" value="검색">
+                                        </div>
+                                    </form>
+                                    <ul class="search_item">
+                                        <li>
+                                            <a href="#">
+                                                <i class="ri-arrow-drop-right-fill"></i>
+                                                용어 검색용어 검색용어 검색용어 검색용어 검색용어 검색용어 검색용어 검색용어 검색용어 검색용어 검색용어 검색용어 검색용어 검색용어 검색용어 
+                                                검색(가계대출-신용,주택담보,예금담보대출) 소득 및 재직 확인 방법 [대출]
+                                            </a>
+                                            <span class="search_date">2021-12-01</span>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="ri-arrow-drop-right-fill"></i>
+                                                (가계대출-신용,주택담보,예금담보대출) 소득 및 재직 확인 방법 [대출]
+                                            </a>
+                                            <span class="search_date">2021-12-01</span>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="ri-arrow-drop-right-fill"></i>
+                                                (가계대출-신용,주택담보,예금담보대출) 소득 및 재직 확인 방법 [대출]
+                                            </a>
+                                            <span class="search_date">2021-12-01</span>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="ri-arrow-drop-right-fill"></i>
+                                                (가계대출-신용,주택담보,예금담보대출) 소득 및 재직 확인 방법 [대출]
+                                            </a>
+                                            <span class="search_date">2021-12-01</span>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="ri-arrow-drop-right-fill"></i>
+                                                (가계대출-신용,주택담보,예금담보대출) 소득 및 재직 확인 방법 [대출]
+                                            </a>
+                                            <span class="search_date">2021-12-01</span>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="ri-arrow-drop-right-fill"></i>
+                                                (가계대출-신용,주택담보,예금담보대출) 소득 및 재직 확인 방법 [대출]
+                                            </a>
+                                            <span class="search_date">2021-12-01</span>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="ri-arrow-drop-right-fill"></i>
+                                                (가계대출-신용,주택담보,예금담보대출) 소득 및 재직 확인 방법 [대출]
+                                            </a>
+                                            <span class="search_date">2021-12-01</span>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="ri-arrow-drop-right-fill"></i>
+                                                (가계대출-신용,주택담보,예금담보대출) 소득 및 재직 확인 방법 [대출]
+                                            </a>
+                                            <span class="search_date">2021-12-01</span>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="ri-arrow-drop-right-fill"></i>
+                                                (가계대출-신용,주택담보,예금담보대출) 소득 및 재직 확인 방법 [대출]
+                                            </a>
+                                            <span class="search_date">2021-12-01</span>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="ri-arrow-drop-right-fill"></i>
+                                                (가계대출-신용,주택담보,예금담보대출) 소득 및 재직 확인 방법 [대출]
+                                            </a>
+                                            <span class="search_date">2021-12-01</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================== 메인창 원문상세조회 팝업 ===================== -->
+                <div class="detail_popup">
+                    <p class="popup_title">원문상세조회
+                        <a href="#"><i class="ri-close-line"></i></a>
+                    </p>
+                    <div class="popup_info">
+                        <p><span>조직정보</span>정보명</p>
+                        <p><span>상담사</span>상담사명</p>
+                        <p><span>상담일시</span> 2022-01-01</p>
+                        <p><span>추가</span>추가정보</p>
+                    </div>
+
+                    <div class="detail_contents">
+                        <div class="msg_contents">
+                            <p class="msg_title">대화창</p>
+                            <select name="" id="">
+                                <option value="">대화+의도분석</option>
+                                <option value="">대화+의도분석2</option>
+                                <option value="">대화+의도분석3</option>
+                                <option value="">대화+의도분석4</option>
+                            </select>
+                            <div class="msg_pd">
+                                <div class="msg_list">
+                                    <div class="msg_in">
+                                        <p class="msg_user">고객</p>
+                                        <div class="msg_block">
+                                            <div class="msg_item">
+                                                카드 결제 날짜를 바꾸려고요
+                                            </div>
+                                            <input type="checkbox">
+                                        </div>
+                                    </div>
+        
+                                    <div class="msg_out">
+                                        <p class="msg_user">직원</p>
+                                        <div class="msg_block">
+                                            <input type="checkbox">
+                                            <div class="msg_item">
+                                               결제일을 며칠로 변경해 드릴까요?
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="msg_in">
+                                        <p class="msg_user">고객</p>
+                                        <div class="msg_block">
+                                            <div class="msg_item">
+                                                카드 결제 날짜를 바꾸려고요
+                                            </div>
+                                            <input type="checkbox">
+                                        </div>
+                                    </div>
+        
+                                    <div class="msg_out">
+                                        <p class="msg_user">직원</p>
+                                        <div class="msg_block">
+                                            <input type="checkbox">
+                                            <div class="msg_item">
+                                               5일, 15일, 30일 가능합니다.
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="msg_in">
+                                        <p class="msg_user">고객</p>
+                                        <div class="msg_block">
+                                            <div class="msg_item">
+                                                카드 결제 날짜를 바꾸려고요
+                                            </div>
+                                            <input type="checkbox">
+                                        </div>
+                                    </div>
+        
+                                    <div class="msg_out">
+                                        <p class="msg_user">직원</p>
+                                        <div class="msg_block">
+                                            <input type="checkbox">
+                                            <div class="msg_item">
+                                               결제일을 며칠로 변경해 드릴까요?
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="msg_in">
+                                        <p class="msg_user">고객</p>
+                                        <div class="msg_block">
+                                            <div class="msg_item">
+                                                카드 결제 날짜를 바꾸려고요
+                                            </div>
+                                            <input type="checkbox">
+                                        </div>
+                                    </div>
+        
+                                    <div class="msg_out">
+                                        <p class="msg_user">직원</p>
+                                        <div class="msg_block">
+                                            <input type="checkbox">
+                                            <div class="msg_item">
+                                               결제일을 며칠로 변경해 드릴까요?
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="msg_in">
+                                        <p class="msg_user">고객</p>
+                                        <div class="msg_block">
+                                            <div class="msg_item">
+                                                카드 결제 날짜를 바꾸려고요
+                                            </div>
+                                            <input type="checkbox">
+                                        </div>
+                                    </div>
+        
+                                    <div class="msg_out">
+                                        <p class="msg_user">직원</p>
+                                        <div class="msg_block">
+                                            <input type="checkbox">
+                                            <div class="msg_item">
+                                               5일, 15일, 30일 가능합니다.
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="msg_in">
+                                        <p class="msg_user">고객</p>
+                                        <div class="msg_block">
+                                            <div class="msg_item">
+                                                카드 결제 날짜를 바꾸려고요
+                                            </div>
+                                            <input type="checkbox">
+                                        </div>
+                                    </div>
+        
+                                    <div class="msg_out">
+                                        <p class="msg_user">직원</p>
+                                        <div class="msg_block">
+                                            <input type="checkbox">
+                                            <div class="msg_item">
+                                               결제일을 며칠로 변경해 드릴까요?
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="msg_notice">
+                                        <input type="checkbox">
+                                        <p class="msg_notice-txt">
+                                            신용카드&gt;변경/등록&gt;결제일&gt;결제일변경
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="popup_list">
+                            <div class="popup_cate">
+                                <span>데이터 분석</span>
+                                <span>Sentence 분석</span>
+                                <span>Ontolongy 분석</span>
+                                <span>분류체계 정보</span>
+                                <span>추천지식컨텐츠</span>
+                            </div>
+
+                            <ul class="popup_detail-list">
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                                <li>
+                                    <span>데이터 분석</span>
+                                    <span>Sentence 분석</span>
+                                    <span>Ontolongy 분석</span>
+                                    <span>분류체계 정보</span>
+                                    <span>추천지식컨텐츠</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

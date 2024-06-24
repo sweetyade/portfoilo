@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>킥더허들 헬스케어</title>
+    <meta name="keywords" content="킥더허들 헬스케어">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="누구나 누릴 수 있는 일상의 건강">
+    <meta name="format-detection" content="telephone=no">
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <script type="text/javascript" src="<c:url value='/vendors/jquery/jquery-3.6.0.min.js' />"></script>
+
+    <!-- ============================ css ======================= -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link href="../../css/m.common.css" rel="stylesheet">
+    <link href="../../css/m.sub.css" rel="stylesheet">
+
+
+
+    <script type="text/javascript" src="<c:url value='/bootstrap/js/bootstrap.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/vendors/popper/popper.min.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/scripts/modal.js' />"></script> <!-- 모달 스크립트 -->
+    <script type="text/javascript" src="<c:url value='/scripts/common.js' />"></script> <!-- 공통 스크립트 -->
+    <script type="text/javascript" src="<c:url value='/scripts/hybridBridge.js' />"></script> <!-- 네이티브 인터페이스 브릿지 -->
+</head>
+<body>
+    <main class="main" id="top">
+
+        <header class="header survey_top" id="header">
+            <nav class="nav">
+                <a href="javascript:goHistoryback();" class="nav_back">
+                    <i class="ri-arrow-left-s-line"></i>
+                </a>
+
+                <div class="progress">
+                    <progress id="progress_bar" max-width="100%" value="10" max="100"></progress>
+                    <p class="point_c">10%</p>
+                </div>
+
+                <div class="nav_close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </nav>
+        </header>
+        
+        <div class="container" data-layout="container">
+            <div class="sub_main grid survey_container">
+                <div class="survey_txt">
+                    <p class="survey_title">복용중인 의약품이 있으신가요?</p>
+                </div>
+
+                <div class="step_btn">
+                    <a href="#" class="step_btnw">간질환</a>
+                    <a href="#" class="step_btnw">갑상선호르몬</a>
+                    <a href="#" class="step_btnw">고지혈증</a>
+                    <a href="#" class="step_btnw">고혈압</a>
+                    <a href="#" class="step_btnw">골다공증</a>
+                    <a href="#" class="step_btnw">당뇨병</a>
+                    <a href="#" class="step_btnw">항혈전/<br>혈앵응고저해</a>
+                    <a href="#" class="step_btnw">여드름</a>
+                    <a href="#" class="step_btnw">항생제</a>
+                    <a href="#" class="step_btnw">위장약<br>위염/역류성식도염</a>
+                    <a href="#" class="step_btnw">전립선비대증</a>
+                    <a href="#" class="step_btnw">기타</a>
+                    <a href="#" class="step_btnw">없음</a>
+                </div>
+
+                <a href="#" class="btn btn_gray">확인</a>
+                <a href="#" class="btn btn_blue mb_5">확인</a>
+
+                <div class="step_pop">
+                    <p class="font_m font_w">복용 중인 약의 이름을 알고 있다면 아래에 작성해주세요.</p>
+                    <p class="point_c font_w2 font_n mb_1">처방전, 약봉투 사진이 있다면 함께 첨부해주세요</p>
+
+                    <form action="" class="form_pop">
+                        <input type="text" id="" placeholder="복용중인 약의 이름을 작성해주세요">
+                        <label for="medicine_pic" class="medicine_pic">사진 첨부하기 (처방전, 약봉지)
+                            <img src="../../images/survey_medicine_file.png" alt="">
+                        </label>
+                        <input type="file" id="medicine_pic" accept="image/*">
+                        <button class="medicine_submit_button gray_c">등록</button>
+                    </form>
+
+                    <a href="#" class="close"><i class="ri-close-line"></i></a>
+                </div>
+                <div class="overlay"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- swiper slide -->
+    <script type="text/javascript" src="../../scripts/mobile.js"></script> <!-- 추가 스크립트 -->
+
+    </script>
+</body>
+</html>
+
+
+
+
+

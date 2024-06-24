@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>2-4-5.신청완료</title>
+  </head>
+  <body>
+    <header class="header">
+      <p class="back"></p>
+      <h2 class="page_name">신청완료</h2>
+      <div class="header_icon">
+        <p class="header_link">
+          <img src="../../images/icon/system_close_bk.svg" alt="닫기" />
+        </p>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="cpl_wrap">
+        <p class="icon"><img src="../../images/icon/success.svg" alt=""></p>
+        <p class="cpl_title">상담신청이 완료되었어요</p>
+
+        <p class="misc2_under gray02 mt_0_25">설문결과 다시보기</p><!-- 설문결과 있을 때 노출 -->
+
+        <div class="label notice" style="border-radius: .5rem;">
+          <p class="txt">건강설문을 하면 더 자세한 상담을 받을 수 있어요!</p>
+        </div>
+
+        <div class="cst_table bg_gray05">
+          <div class="info_table">
+            <p class="title">상담일자</p>
+            <p class="txt">2022.11.23 오후 05:00</p>
+          </div>
+          <div class="info_table">
+            <p class="title">상담방법</p>
+            <p class="txt">채팅상담</p>
+          </div>
+          <div class="info_table">
+            <p class="title">담당 약사님</p>
+            <p class="txt">김예림 약사님</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="noti bg_gray05">
+        <ul class="noti_list">
+          <li>상담 시작하기 버튼을 누르면 바로 상담이 가능한 약사님을 연결해드리며, 상담 가능한 약사님이 없는 경우에만 다시 연결이 가능합니다.</li>
+          <li>상담은 약사 연결 성공 후 5분 내로 입장하셔야 하며, 그렇지 않은 경우 상담은 취소됩니다.</li>
+          <li>여기에 상담취소 관련 안내사항이 나오면 좋을 것 같아요!</li>
+        </ul>
+      </section>
+      <div class="btn_fix">
+        <p class="misc2_under gray02 textcenter mb_0_5 modalEdit">상담일정 변경하기</p>
+        <button class="btn_b btn_basic">상담 시작하기</button>
+      </div>
+    </main>
+
+    <!-- 변경확인모달-->
+    <div class="modal modal01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 모달 컨텐츠-->
+      <div class="modal_wrap">
+        <div class="modal_top">
+          <p class="modal_title">신청내역을 변경하시겠어요?</p>
+          <p class="modal_sub">아래의 상담 신청내역을 변경할까요?</p>
+        </div>
+
+        <div class="modal_con">
+          <div class="cst_table bg_gray05">
+            <div class="info_table">
+              <p class="title">상담일자</p>
+              <p class="txt">2022.11.23 오후 05:00</p>
+            </div>
+            <div class="info_table">
+              <p class="title">상담방법</p>
+              <p class="txt">채팅상담</p>
+            </div>
+            <div class="info_table">
+              <p class="title">담당 약사님</p>
+              <p class="txt">김예림 약사님</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn_wrap">
+          <button class="btn_b btn_basic modalClose">변경하기</button>
+          <button class="btn_b btn_white openPop">상담 취소하기</button>
+          <button class="btn_b btn_trans modalClose">닫기</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 취소사유 모달 -->
+    <div class="modal modal02">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+      <!-- 모달 컨텐츠-->
+      <div class="modal_wrap">
+        <div class="modal_top">
+          <p class="modal_title">취소사유를 작성해주세요</p>
+          <p class="modal_sub">
+            작성하지 않고 닫기 버튼을 누르시면 상담취소가 철회될 수 있어요. 
+            작성 후 확인 버튼을 눌러주세요.
+          </p>
+        </div>
+
+        <div class="modal_con">
+          <div class="textarea_block">
+            <textarea name="" id="textarea01" cols="30" rows="5" placeholder="예약취소 사유를 작성해주세요"></textarea>
+          </div>
+        </div>
+
+        <div class="btn_wrap">
+          <button class="btn_b btn_basic modalClose" disabled>확인</button>
+          <button class="btn_b btn_trans">닫기</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 취소확인 팝업 -->
+    <div class="popup popup01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 팝업 컨텐츠 -->
+      <div class="popup_wrap">
+        <p class="pop_title">해당 신청건을 취소하시겠어요?</p>
+        <p class="pop_txt">상담을 취소하시면 다시 예약을 진행해야해요</p>
+        <!-- 버튼 2개 -->
+        <div class="pop_btn">
+          <button class="btn_m btn_light popClose">닫기</button>
+          <button class="btn_m btn_red modalCancel">상담취소</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 취소불가 팝업 -->
+    <div class="popup popup02">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 팝업 컨텐츠 -->
+      <div class="popup_wrap">
+        <p class="pop_title">해당 신청건은 취소할 수 없어요</p>
+        <p class="pop_txt">취소 가능한 시간이 지나서 상담 취소가 불가능해요. 주의사항을 확인해주세요!</p>
+        <!-- 버튼 2개 -->
+        <div class="pop_btn">
+          <button class="btn_m btn_light popClose">확인</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+      /* popup */
+      $(".modalEdit").on("click", function () {
+        $(".modal01, body").addClass("open");
+      });
+
+      $(".openPop").on("click", function () {
+        $(".modal01").removeClass("open");
+        $(".popup01").addClass("open");
+      });
+
+      $(".modalCancel").on("click", function () {
+        $(".popup01").removeClass("open");
+        $(".modal02").addClass("open");
+      });
+
+      
+      $("#textarea01").keyup(function() {
+        var txtCount = $("#textarea01").val().length;
+        if(txtCount >= 10){
+          $(".modal02 .btn_basic").attr("disabled",false);
+        }
+      })
+
+
+      $(".overlay, .modalClose, .popClose").on("click", function () {
+        $(".popup, .modal, body").removeClass("open");
+      });
+    </script>
+  </body>
+</html>

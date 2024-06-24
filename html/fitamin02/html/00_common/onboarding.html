@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <script src="../../js/lottie-player.js"></script>
+    <title>온보딩</title>
+  </head>
+  <body>
+    <div class="fullpage">
+      <div class="onboading_slide swiper">
+        <div class="swiper-wrapper">
+          <div class="onboarding swiper-slide">
+            <div class="on_img">
+              <lottie-player src="../../images/json/onboarding_01.json" class="random_ani" background="transparent" loop="" speed="1" autoplay=""></lottie-player>
+            </div>
+
+            <div class="on_txt">
+              <p class="on_title">섭취하면 캐시가 쌓여요</p>
+              <p class="on_sub">꾸준히 영양제를 섭취하면<br />캐시는 쌓이고 핏타민 레벨은 올라가요</p>
+            </div>
+          </div>
+          <div class="onboarding swiper-slide">
+            <div class="on_img">
+              <lottie-player src="../../images/json/onboarding_02.json" class="random_ani" background="transparent" loop="" speed="1" autoplay=""></lottie-player>
+            </div>
+
+            <div class="on_txt">
+              <p class="on_title">약사와 쉽고 편하게 상의해요</p>
+              <p class="on_sub">1:1 비대면 약사 상담을 통해<br />내 몸에 꼭 맞는 영양제를 찾을 수 있어요</p>
+            </div>
+          </div>
+          <div class="onboarding swiper-slide">
+            <div class="on_img">
+              <lottie-player src="../../images/json/onboarding_03.json" class="random_ani" background="transparent" loop="" speed="1" autoplay=""></lottie-player>
+            </div>
+
+            <div class="on_txt">
+              <p class="on_title">건강을 위한 도전을 시작해요</p>
+              <p class="on_sub">꾸준한 섭취 기록과 건강 챌린지에<br />참여하고 경품을 받아보세요.</p>
+            </div>
+          </div>
+          <div class="onboarding swiper-slide">
+            <div class="on_img">
+              <lottie-player src="../../images/json/onboarding_04.json" class="random_ani" background="transparent" loop="" speed="1" autoplay=""></lottie-player>
+            </div>
+
+            <div class="on_txt">
+              <p class="on_title">자, 이제 시작해볼까요?</p>
+              <p class="on_sub">지금 섭취 알림을 등록하면,<br />첫 시작 리워드를 받을 수 있어요!</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <p class="top_btn" onclick="jump()">건너뛰기</p>
+      </div>
+      <div class="btn_fix">
+        <button class="btn_b btn_basic">섭취 알림 등록하기</button>
+        <button class="btn_b btn_light">오늘은 둘러볼께요</button>
+      </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".onboading_slide", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+
+      //건너뛰기
+      function jump() {
+        swiper.slideTo(3, 700, false);
+      }
+    </script>
+  </body>
+</html>

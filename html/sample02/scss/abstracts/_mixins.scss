@@ -1,0 +1,358 @@
+@import "variables";
+
+/* mediaquery - mobile base (360px) */
+@mixin mobile_small {
+  @media (max-width: #{$mobile_base - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile_large {
+  @media (min-width: #{$mobile_large}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin pc_small {
+  @media (min-width: #{$pc_small}) {
+    @content;
+  }
+}
+
+@mixin pc_large {
+  @media (min-width: #{$pc_base + 1px}) {
+    @content;
+  }
+}
+
+/* mediaquery - pc base (1920px) */
+@mixin pc_large {
+  @media (min-width: #{$pc_base + 1px}) {
+    @content;
+  }
+}
+
+@mixin pc_small {
+  @media (max-width: #{$pc_small}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile_large {
+  @media (max-width: #{$mobile_large}) {
+    @content;
+  }
+}
+
+@mixin mobile_base {
+  @media (max-width: #{$mobile_base}) {
+    @content;
+  }
+}
+
+@mixin mobile_small {
+  @media (max-width: #{$mobile_small}) {
+    @content;
+  }
+}
+
+/* typo */
+@mixin vertical_txt {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-all;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+}
+
+@mixin txtover {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin listdot {
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--text-color-2);
+  position: absolute;
+  left: 5px;
+  top: 6px;
+}
+
+/* flex */
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexcenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexbtw {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flexright {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@mixin flextop {
+  display: flex;
+  align-items: flex-start;
+}
+
+@mixin flextopcenter {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@mixin flextopbtw {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@mixin flextopright {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+@mixin flexbottom {
+  display: flex;
+  align-items: flex-end;
+}
+
+@mixin flexbottomcenter {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+@mixin flexbottombtw {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+@mixin flexbottomright {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+@mixin list_0_25 {
+  display: grid;
+  gap: 0.25rem;
+}
+
+@mixin list_0_5 {
+  display: grid;
+  gap: 0.5rem;
+}
+
+@mixin list_0_75 {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@mixin list_1 {
+  display: grid;
+  gap: 1rem;
+}
+
+@mixin list_1_25 {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@mixin list_1_5 {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@mixin list_1_75 {
+  display: grid;
+  gap: 1.75rem;
+}
+
+@mixin list_2 {
+  display: grid;
+  gap: 2rem;
+}
+
+// ============= TYPOGRAPY
+@mixin font_h1 {
+  font-size: var(--font-46);
+  font-weight: var(--font-medium);
+  line-height: 4.25rem;
+}
+
+@mixin font_h2 {
+  font-size: var(--font-38);
+  font-weight: var(--font-medium);
+  line-height: 3.5rem;
+}
+
+@mixin font_h3 {
+  font-size: var(--font-28);
+  font-weight: var(--font-medium);
+  line-height: 2.625rem;
+}
+
+@mixin font_h4 {
+  font-size: var(--font-24);
+  font-weight: var(--font-medium);
+  line-height: 2.375rem;
+}
+
+@mixin font_h5 {
+  font-size: var(--font-18);
+  font-weight: var(--font-medium);
+  line-height: 1.75rem;
+}
+
+@mixin font_h6 {
+  font-size: var(--font-15);
+  font-weight: var(--font-medium);
+  line-height: 1.375rem;
+}
+
+@mixin font_subtitle_1 {
+  font-size: var(--font-15);
+  font-weight: var(--font-medium);
+  line-height: 1.375rem;
+}
+
+@mixin font_subtitle_2 {
+  font-size: var(--font-15);
+  font-weight: var(--font-medium);
+  line-height: 1.25rem;
+}
+
+@mixin font_body_1 {
+  font-size: var(--font-15);
+  line-height: 1.375rem;
+}
+
+@mixin font_body_2 {
+  font-size: var(--font-13);
+  line-height: 1.25rem;
+}
+
+@mixin font_caption {
+  font-size: var(--font-13);
+  line-height: 1.125rem;
+}
+
+@mixin font_overline {
+  font-size: var(--font-12);
+  line-height: 0.875rem;
+  text-transform: uppercase;
+}
+
+@mixin font_btn_l {
+  font-size: var(--font-17);
+  font-weight: var(--font-medium);
+  line-height: 1.625rem;
+}
+
+@mixin font_btn_m {
+  font-size: var(--font-15);
+  font-weight: var(--font-medium);
+  line-height: 1.375rem;
+}
+
+@mixin font_btn_s {
+  font-size: var(--font-13);
+  font-weight: var(--font-medium);
+  line-height: 1.125rem;
+}
+
+@mixin font_helper {
+  font-size: var(--font-13);
+  line-height: 1;
+}
+
+@mixin font_input_label {
+  font-size: var(--font-13);
+  line-height: 0.9375rem;
+}
+
+@mixin font_input_l {
+  font-size: var(--font-17);
+  line-height: 1.75rem;
+}
+
+@mixin font_input_m {
+  font-size: var(--font-15);
+  line-height: 1.5rem;
+}
+
+@mixin font_input_s {
+  font-size: var(--font-13);
+  line-height: 1.375rem;
+}
+
+@mixin font_avatar {
+  font-size: var(--font-15);
+  line-height: 1.125rem;
+}
+
+@mixin font_chip {
+  font-size: var(--font-13);
+  line-height: 1.25rem;
+}
+
+@mixin font_tooltip {
+  font-size: var(--font-13);
+  line-height: 1.25rem;
+  font-weight: var(--font-medium);
+}
+
+@mixin font_alert {
+  font-size: var(--font-18);
+  line-height: 1.5rem;
+  font-weight: var(--font-medium);
+}
+
+@mixin font_table_header {
+  font-size: var(--font-12);
+  line-height: 1.5rem;
+  font-weight: var(--font-medium);
+}
+
+@mixin font_badge_label {
+  font-size: var(--font-13);
+  line-height: 1.25rem;
+  font-weight: var(--font-medium);
+}
+
+@mixin font_toast {
+  font-size: var(--font-15);
+  line-height: 1.375rem;
+}

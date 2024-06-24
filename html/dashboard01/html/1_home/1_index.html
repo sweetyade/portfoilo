@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>3.상담내역</title>
+</head>
+<body class="">
+  <main class="main">
+    <!-- sidebar -->
+    <div class="sidebar">
+      
+      <h1 class="logo"><a href="#"><img src="../../images/common/logo_wt.svg" alt=""></a></h1>
+
+      <!-- 로그인정보-->
+      <div class="user_info">
+        <p class="user_img"><img src="../../images/login_bg.jpg" alt=""></p>
+        <div class="user_name">
+          <p class="base_fb light">약사이름</p>
+          <p class="small_f mt_0_5 gray04">약국명</p>
+        </div>
+      </div>
+
+      <!-- 상담스케쥴 요약 -->
+      <div class="consult_sml">
+        <div class="al_setting" style="display: none;">
+          <p class="small_f">채팅 상담 설정</p>
+          <div class="toggle_block">
+            <input type="checkbox" class="toggle" id="ipToggle" checked />
+            <label for="ipToggle" class="toggle_btn"></label>
+          </div>
+        </div>
+        <div class="al_setting" style="display: none;">
+          <p class="small_f">즉시 상담 설정</p>
+          <div class="toggle_block">
+            <input type="checkbox" class="toggle" id="ipToggle2" />
+            <label for="ipToggle2" class="toggle_btn"></label>
+          </div>
+        </div>
+
+        <div class="sml_list">
+          <div class="sml_data">
+            <p class="txt">예약 현황</p>
+            <a class="total_no" href="#">1건</a>
+          </div>
+          <div class="sml_data">
+            <p class="txt">상담 완료</p>
+            <a class="total_no" href="#">1건</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 메뉴 -->
+      <nav class="nav">
+        <a class="nav_link" href="#">
+          <p class="nav_menu"><i class="ri-user-settings-line"></i> 프로필 관리</p>
+        </a>
+        <a class="nav_link" href="#">
+          <p class="nav_menu"><i class="ri-customer-service-line"></i> 상담 내역</p>
+          <!-- <div class="sub_list">
+            <a href="#" class="sub_link">상담 대기 리스트</a>
+            <a href="#" class="sub_link">예약 확정 리스트</a>
+            <a href="#" class="sub_link">상담 내역 조회</a>
+            <a href="#" class="sub_link">상담 설정</a>
+          </div> -->
+        </a>
+        <a class="nav_link" href="#">
+          <p class="nav_menu"><i class="ri-edit-line"></i>설문 내역</p>
+        </a>
+        <div class="nav_link" href="#">
+          <p class="nav_menu sub_menu"><i class="ri-question-answer-line"></i> 게시판</p>
+          <div class="sub_list">
+            <a href="#" class="sub_link">공지사항</a>
+            <a href="#" class="sub_link">1:1문의</a>
+            <a href="#" class="sub_link">FAQ</a>
+          </div>
+        </div>
+        <a class="nav_link" href="#">
+          <p class="nav_menu"><i class="ri-kakao-talk-line"></i> 고객센터</p>
+        </a>
+      </nav>
+
+      <p class="logoutBtn">로그아웃 <i class="ri-logout-box-r-line"></i></p>
+
+      <p class="closeBtn"><i class="ri-close-line"></i></p>
+    </div>
+
+    <!-- main -->
+    <div class="container">
+      <!-- header -->
+      <section class="header">
+        <div class="header_left">
+          <div class="open_toggle">
+            <div class="burger"></div>
+          </div>
+          <h2 class="header_menu">더현대 서울 Fitamin 상담관리 시스템</h2>
+        </div>
+
+        <div class="input_search">
+          <input type="text" placeholder="예약 번호/예약자를 검색해주세요.">
+          <button class="search_input"><i class="ri-search-line"></i></button>
+        </div>
+      </section>
+
+      <!-- contents -->
+      <section class="contents">
+        <div class="contents_wrap">
+          <!-- 상단 탭 -->
+          <div class="contents_tap">
+            <p class="tab_link cate_all active">전체</p>
+            <p class="tab_link cate_1">상담예정</p>
+            <p class="tab_link cate_2">상담완료</p>
+            <p class="tab_link cate_3">상담취소</p>
+          </div>
+
+          <!-- 목록 -->
+          <div class="consult_list mt_2">
+            <div class="consult_data cate-2">
+              <div class="data_txt">
+                <div class="data">
+                  <p class="title">예약번호</p>
+                  <p class="txt">12345</p>
+                </div>
+                <div class="data">
+                  <p class="title">예약자/설문번호</p>
+                  <p class="txt">밍밍/3456</p>
+                </div>
+                <div class="data">
+                  <p class="title">상담형태</p>
+                  <p class="txt"><span class="system_red bold_f">[더현서]</span> 오프라인상담</p>
+                </div>
+                <div class="data">
+                  <p class="title">희망시간</p>
+                  <p class="txt">상담완료 - 결제완료 전</p>
+                </div>
+              </div>
+              <div class="btn_list">
+                <button class="btn_m btn_light" disabled>상담취소</button>
+                <button class="btn_m btn_light">결제완료</button>
+                <button class="btn_m btn_light">상담화면</button>
+              </div>
+              <div class="icon_list">
+                <p class="icon icon_light">상담완료</p>
+              </div>
+            </div>
+            <div class="consult_data cate-1">
+              <div class="data_txt">
+                <div class="data">
+                  <p class="title">예약번호</p>
+                  <p class="txt">12345</p>
+                </div>
+                <div class="data">
+                  <p class="title">예약자/설문번호</p>
+                  <p class="txt">밍밍/3456</p>
+                </div>
+                <div class="data">
+                  <p class="title">상담형태</p>
+                  <p class="txt"><span class="system_red bold_f">[더현서]</span> 오프라인상담</p>
+                </div>
+                <div class="data">
+                  <p class="title">희망시간</p>
+                  <p class="txt">예정 1시간이상 - 상담취소만 가능</p>
+                </div>
+              </div>
+              <div class="btn_list">
+                <button class="btn_m btn_light">상담취소</button>
+                <button class="btn_m btn_light sendBtn" disabled>결제완료</button>
+                <button class="btn_m btn_light" disabled>상담화면</button>
+              </div>
+              <div class="icon_list">
+                <p class="icon icon_yellow">상담예정</p>
+              </div>
+            </div>
+            <div class="consult_data cate-1">
+              <div class="data_txt">
+                <div class="data">
+                  <p class="title">예약번호</p>
+                  <p class="txt">12345</p>
+                </div>
+                <div class="data">
+                  <p class="title">예약자/설문번호</p>
+                  <p class="txt">밍밍/3456</p>
+                </div>
+                <div class="data">
+                  <p class="title">상담형태</p>
+                  <p class="txt"><span class="system_red bold_f">[더현서]</span> 오프라인상담</p>
+                </div>
+                <div class="data">
+                  <p class="title">희망시간</p>
+                  <p class="txt">예정 1시간 전 - 상담취소만 가능</p>
+                </div>
+              </div>
+              <div class="btn_list">
+                <button class="btn_m btn_light">상담취소</button>
+                <button class="btn_m btn_light sendBtn" disabled>결제완료</button>
+                <button class="btn_m btn_light" disabled>상담화면</button>
+              </div>
+              <div class="icon_list">
+                <p class="icon icon_yellow">상담예정</p>
+              </div>
+              <p class="icon_side"><i class="ri-mic-fill"></i>상담 시작하기</p>
+            </div>
+            <div class="consult_data cate-1">
+              <div class="data_txt">
+                <div class="data">
+                  <p class="title">예약번호</p>
+                  <p class="txt">12345</p>
+                </div>
+                <div class="data">
+                  <p class="title">예약자/설문번호</p>
+                  <p class="txt">밍밍/3456</p>
+                </div>
+                <div class="data">
+                  <p class="title">상담형태</p>
+                  <p class="txt"><span class="system_red bold_f">[더현서]</span> 오프라인상담</p>
+                </div>
+                <div class="data">
+                  <p class="title">희망시간</p>
+                  <p class="txt">예정 1시간 전 - 상담시작하기 버튼o</p>
+                </div>
+              </div>
+              <div class="btn_list">
+                <button class="btn_m btn_light">상담취소</button>
+                <button class="btn_m btn_light sendBtn" disabled>결제완료</button>
+                <button class="btn_m btn_light" disabled>상담화면</button>
+              </div>
+              <div class="icon_list">
+                <p class="icon icon_yellow">상담예정</p>
+              </div>
+              <p class="icon_side"><i class="ri-mic-fill"></i>상담 시작하기</p>
+            </div>
+            <div class="consult_data cate-2">
+              <div class="data_txt">
+                <div class="data">
+                  <p class="title">예약번호</p>
+                  <p class="txt">12345</p>
+                </div>
+                <div class="data">
+                  <p class="title">예약자/설문번호</p>
+                  <p class="txt">밍밍/3456</p>
+                </div>
+                <div class="data">
+                  <p class="title">상담형태</p>
+                  <p class="txt"><span class="system_red bold_f">[더현서]</span> 오프라인상담</p>
+                </div>
+                <div class="data">
+                  <p class="title">희망시간</p>
+                  <p class="txt">상담 완료 - 결제완료 후</p>
+                </div>
+              </div>
+              <div class="btn_list">
+                <button class="btn_m btn_light" disabled>상담취소</button>
+                <button class="btn_m btn_light" disabled>결제완료</button>
+                <button class="btn_m btn_light">상담화면</button>
+              </div>
+              <div class="icon_list">
+                <p class="icon icon_purple">결제완료</p>
+                <p class="icon icon_light">상담완료</p>
+              </div>
+            </div>
+            <div class="consult_data cate-1">
+              <div class="data_txt">
+                <div class="data">
+                  <p class="title">예약번호</p>
+                  <p class="txt">1234</p>
+                </div>
+                <div class="data">
+                  <p class="title">예약자/설문번호</p>
+                  <p class="txt">밍밍/3456</p>
+                </div>
+                <div class="data">
+                  <p class="title">상담형태</p>
+                  <p class="txt"><span class="system_red bold_f">[더현서]</span> 오프라인상담</p>
+                </div>
+                <div class="data">
+                  <p class="title">희망시간</p>
+                  <p class="txt">2023년8월17일14:00~14:20</p>
+                </div>
+              </div>
+              <div class="btn_list">
+                <button class="btn_m btn_light">상담취소</button>
+                <button class="btn_m btn_light sendBtn" disabled>결제완료</button>
+                <button class="btn_m btn_light" disabled>상담화면</button>
+              </div>
+              <div class="icon_list">
+                <p class="icon icon_yellow">상담예정</p>
+              </div>
+              <p class="icon_side"><i class="ri-mic-fill"></i>상담 시작하기</p>
+            </div>
+            <div class="consult_data cate-2">
+              <div class="data_txt">
+                <div class="data">
+                  <p class="title">예약번호</p>
+                  <p class="txt">12345</p>
+                </div>
+                <div class="data">
+                  <p class="title">예약자/설문번호</p>
+                  <p class="txt">밍밍/3456</p>
+                </div>
+                <div class="data">
+                  <p class="title">상담형태</p>
+                  <p class="txt"><span class="system_red bold_f">[더현서]</span> 오프라인상담</p>
+                </div>
+                <div class="data">
+                  <p class="title">희망시간</p>
+                  <p class="txt">상담완료</p>
+                </div>
+              </div>
+              <div class="btn_list">
+                <button class="btn_m btn_light" disabled>상담취소</button>
+                <button class="btn_m btn_light sendBtn">결제완료</button>
+                <button class="btn_m btn_light">상담화면</button>
+              </div>
+              <div class="icon_list">
+                <p class="icon icon_light">상담완료</p>
+              </div>
+            </div>
+            <div class="consult_data cate-3">
+              <div class="data_txt">
+                <div class="data">
+                  <p class="title">예약번호</p>
+                  <p class="txt">12345</p>
+                </div>
+                <div class="data">
+                  <p class="title">예약자/설문번호</p>
+                  <p class="txt">밍밍/3456</p>
+                </div>
+                <div class="data">
+                  <p class="title">상담형태</p>
+                  <p class="txt"><span class="system_red bold_f">[더현서]</span> 오프라인상담</p>
+                </div>
+                <div class="data">
+                  <p class="title">희망시간</p>
+                  <p class="txt">취소 - 전체버튼 x</p>
+                </div>
+              </div>
+              <div class="btn_list">
+                <button class="btn_m btn_light" disabled>상담취소</button>
+                <button class="btn_m btn_light sendBtn" disabled>결제완료</button>
+                <button class="btn_m btn_light" disabled>상담화면</button>
+              </div>
+              <div class="icon_list">
+                <p class="icon icon_red">상담취소</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 페이지 -->
+          <div class="pagenation mt_3">
+            <a href="#"><i class="ri-skip-left-line"></i></a>
+            <a href="#"><i class="ri-arrow-left-s-line"></i></a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">8</a>
+            <a href="#">9</a>
+            <a href="#">10</a>
+            <a href="#"><i class="ri-arrow-right-s-line"></i></a>
+            <a href="#"><i class="ri-skip-right-line"></i></a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- 상담내역 전송 팝업 -->
+  <div class="popup">
+    <div class="overlay"></div>
+    <div class="popup_wrap">
+      <p class="pop_title">상담내역을 전송합니다.</p>
+      <p class="pop_txt">전화번호를 입력해주세요.</p>
+      <div class="input_block mt_1">
+        <div class="input_div flex_btw">
+          <input type="text" id="input01" placeholder="- 없이 입력해주세요.">
+        </div>
+      </div>
+      <div class="btn_wrap mt_1">
+        <button class="btn_b btn_basic">전송하기</button>
+      </div>
+
+      <div class="popClose"></div>
+    </div>
+  </div>
+
+  <script src="../../scripts/jquery.min.js"></script>
+  <script src="../../scripts/main.js"></script>
+
+  <script>
+  //팝업
+  $(".sendBtn").on("click", function(){
+    $(".popup, body").addClass("open");
+  })
+  $(".popClose, .btn_b").on("click", function(){
+    $(".popup, body").removeClass("open");
+  })
+  </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <script src="../../js/lottie-player.js"></script>
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>1_6_goods_review_write_cpl</title>
+  </head>
+  <body>
+    <div class="fullpage grid_btw">
+      <header class="header">
+        <div class="back"></div>
+        <h2 class="page_name"></h2>
+        <div class="header_icon">
+          <p class="header_link"><img src="../../images/icon/system_close_bk.svg" alt=""></p>
+        </div>
+      </header>
+
+      <div class="center_con">
+        <div class="coin_ani">
+          <lottie-player src="../../images/json/coin.json"  background="transparent"  speed="1"  style="width: 100%; height: 100%;"  loop  autoplay></lottie-player>
+        </div>
+        <p class="p1_fb textcenter mt_1_5">
+          영양제 후기 작성이 완료되었어요<br>
+          50P를 적립해드릴게요 :)
+        </p>
+        <button class="btn_s btn_white mt_1">적립 내역보기</button>
+      </div>
+      
+
+      <div class="swiper intake_next">
+        <p class="span2_fb mb_0_75">지금 작성 가능한 영양제 후기가 더 있어요!</p>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide next_time right">
+            <div class="next_goods">
+              <p class="img"><img src="../../images/icon/pill.svg" alt=""></p>
+              <p class="txt">피토틱스 블랙 프리미엄일이삼사오육칠팔구십일이삼</p>
+            </div>
+          </div>
+          <div class="swiper-slide next_time right">
+            <div class="next_goods">
+              <p class="img"><img src="../../images/icon/pill.svg" alt=""></p>
+              <p class="txt">피토틱스 블랙 프리미엄일이삼사오육칠팔구십일이삼</p>
+            </div>
+          </div>
+          <div class="swiper-slide next_time right">
+            <div class="next_goods">
+              <p class="img"><img src="../../images/icon/pill.svg" alt=""></p>
+              <p class="txt">피토틱스 블랙 프리미엄일이삼사오육칠팔구십일이삼</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script>
+      var intakeNext = new Swiper(".intake_next", {
+      slidesPerView: "auto",
+      spaceBetween: 8,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- css -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/> <!-- icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/><!-- swiper -->
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <title>1.스터디 메인</title>
+</head>
+<body class="bg_color">
+  <!-- hedaer -->
+  <header class="header header_open">
+    <div class="inner">
+      <div class="header_title">
+        <h2>클래스 리스트</h2>
+      </div>
+      <div class="icon_group">
+        <a href="javascript:void(0)" class="btn_icon"><i class="ri-notification-2-line"></i></a>
+      </div>
+    </div>
+
+    <div class="swiper header_menu">
+      <div class="swiper-wrapper">
+        <a href="javascript:void(0)" class="swiper-slide btn_s active">클래스 리스트</a>
+        <a href="javascript:void(0)" class="swiper-slide btn_s">토론게시판</a>
+        <a href="javascript:void(0)" class="swiper-slide btn_s">퀴즈</a>
+        <a href="javascript:void(0)" class="swiper-slide btn_s">학습자료</a>
+        <a href="javascript:void(0)" class="swiper-slide btn_s">성적평가</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main class="main">
+    <section class="class_first innerb_1_25">
+      <div class="input_block btn_search">
+        <input type="text" class="input_search" placeholder="검색하기">
+        <button class="btn_icon btn_search"><i class="ri-search-line"></i></button>
+      </div>
+
+      <!-- 스터디 카드 슬라이드 -->
+      <div class="swiper study_slide">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide study_card">
+            <div class="grid">
+              <div class="group_top">
+                <p class="card_s">Year 1 · Semester 2</p>
+                <p class="card_l">Discrete<br>Mathematics</p>
+                <p class="card_s">4 sections from 20 iectures</p>
+              </div>
+              
+              <div class="group_bottom">
+                <p class="card_s">3 tests</p>
+                <p class="card_s">10 disscusuins</p>
+                <p class="card_s">5 files uploaded in resources</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide study_card">
+            <div class="grid">
+              <div class="group_top">
+                <p class="card_s">Year 1 · Semester 2</p>
+                <p class="card_l">Discrete<br>Mathematics</p>
+                <p class="card_s">4 sections from 20 iectures</p>
+              </div>
+              
+              <div class="group_bottom">
+                <p class="card_s">3 tests</p>
+                <p class="card_s">10 disscusuins</p>
+                <p class="card_s">5 files uploaded in resources</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide study_card">
+            <div class="grid">
+              <div class="group_top">
+                <p class="card_s">Year 1 · Semester 2</p>
+                <p class="card_l">Discrete<br>Mathematics</p>
+                <p class="card_s">4 sections from 20 iectures</p>
+              </div>
+              
+              <div class="group_bottom">
+                <p class="card_s">3 tests</p>
+                <p class="card_s">10 disscusuins</p>
+                <p class="card_s">5 files uploaded in resources</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+  <script>
+    //변동높이 설정 
+    $(document).ready(function() {
+      headerHeight = $(".header").innerHeight();
+      mainHeight = (innerHeight - headerHeight)
+      $(".main").css("min-height", mainHeight).css("padding-bottom", '5rem');
+    });
+
+    //해더 스크롤 쉐도우 추가
+    $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+      if (scroll >= 50) {
+        $(".header").addClass("scroll");
+      } else {
+        //console.log('a');
+        $(".header").removeClass("scroll");
+      }
+    });
+
+
+    //헤더 메뉴
+    var headerswiper = new Swiper(".header_menu", {
+      spaceBetween: 12,
+      slidesPerView: "auto",
+    });
+
+
+    //슬라이드
+    var swiper = new Swiper(".study_slide", {
+      effect: "cards",
+      grabCursor: true,
+      centeredSlides: true,
+      loop: true,
+      cardsEffect: {
+        perSlideOffset: 12,
+        rotate: false,
+      },
+    });
+
+    //슬라이드 랜덤컬러
+    $(document).ready(function () {
+      $(".study_card").each(function(i){
+        var colors = ["#6771E4","#7030FD","#B12DFF","#EF5557"];
+        var random_back = colors[Math.floor(Math.random() * colors.length)];
+        $('.study_card').eq(i).css('background-color',random_back);
+    })
+  });
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+  <meta http-equiv="refresh" content="30; url=1_index.html"> 
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>추천영양제 조합찾기 첫페이지 - 1-1-3.전송완료</title>
+</head>
+<body>
+  <main class="main">
+    <div class="fullpage">
+      
+      <div class="line_bg_gr top">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="cpl_center">
+        
+        <div class="con">
+          <p class="cpl_icon"><img src="../../images/kakao.svg" alt=""></p>
+          <p class="title">임지현 님,<br>
+            카카오톡 메시지를 확인해주세요</p>
+        </div>
+
+      </div>
+      <div class="back_btn">
+        <p class="back_icon" onclick="location.href='1_index.html';"><img src="../../images/arrow_back.svg" alt=""></p>
+        <p class="back_txt">돌아가기 <span class="back_time timer" data-seconds-left=30></span></p>
+      </div>
+
+      <div class="line_bg_gr bottom">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+  </main>
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/jquery-ui.min.css"></script>
+  <script src="../../js/jquery.simple.timer.js"></script>
+
+  <script>
+ //timer
+ $(function(){
+      $('.timer').startTimer({
+        onComplete: function(element){
+          $('html, body').addClass('bodyTimeoutBackground');
+        }
+      }).click(function(){ location.reload() });
+    })
+  </script>
+</body>
+</html>

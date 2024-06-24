@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>1-6.영양제섭취후기</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="back">
+        <img src="../../images/icon/system_back.svg" alt="뒤로가기" />
+      </div>
+      <h2 class="page_name">영양제 선택</h2>
+      <div class="header_icon"></div>
+    </header>
+
+    <main class="main">
+      <section class="inner_1_25 inner_tb_1_5">
+        <p class="p1_fb">후기 작성할 영양제를 선택해주세요</p>
+        <div class="title_total mt_0_75">
+          <p class="title"></p>
+          <p class="total">총 <span class="listNo">4</span>건</p>
+        </div>
+
+        <div class="grid_list_0_5 mt_0_5">
+          <div class="goods_box_s radio">
+            <p class="brand_s">브랜드명</p>
+            <p class="name">피토틱스 블랙</p>
+          </div>
+          <div class="goods_box_s radio">
+            <p class="brand_s">브랜드명</p>
+            <p class="name">피토틱스 블랙</p>
+          </div>
+          <div class="goods_box_s radio">
+            <p class="brand_s">브랜드명</p>
+            <p class="name">피토틱스 블랙</p>
+          </div>
+          <div class="goods_box_s radio disabled">
+            <p class="brand_s">브랜드명</p>
+            <p class="name">피토틱스 블랙</p>
+          </div>
+          <div class="goods_box_s radio disabled">
+            <p class="brand_s">브랜드명</p>
+            <p class="name">피토틱스 블랙</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="btn_fix">
+        <button class="btn_b btn_basic nextBtn">다음</button>
+        <p class="toast" style="display: none;">30회 이상 섭취해야 후기작성이 가능해요</p>
+      </div>
+    </main>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+      //리스트 갯수
+      var listNo = $(".grid_list_0_5 .goods_box_s").length;
+      $(".listNo").text(listNo);
+
+
+      //작성할 후기 선택
+      $(".goods_box_s").click(function(){
+        if(!$(this).hasClass("disabled")){
+          $(this).toggleClass("select");
+          if($(this).siblings().hasClass("select")){
+            $(this).siblings().removeClass("select")
+          }
+        }
+      });
+
+      //버튼액션
+      $(".nextBtn").click(function (){
+        if($(".goods_box_s").hasClass("select")){
+          $(".toast").text("30회 이상 섭취해야 후기작성이 가능해요").fadeIn("slow", function(){
+            $(this).delay(2000).fadeOut("slow");
+          });
+        }else{
+          $(".toast").text("후기를 작성할 영양제를 선택해주세요").fadeIn("slow", function(){
+            $(this).delay(2000).fadeOut("slow");
+          });
+        }
+      })
+    </script>
+  </body>
+</html>

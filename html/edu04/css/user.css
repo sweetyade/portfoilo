@@ -1,0 +1,131 @@
+@charset "UTF-8";
+/* 로그인 */
+.login {
+  max-width: 300px;
+  margin: var(--mb-2) auto;
+}
+
+.login_title {
+  font-size: var(--h1-font-size);
+}
+
+.login_title span {
+  display: block;
+  font-size: var(--smaller-font-size);
+  line-height: 150%;
+  margin-bottom: var(--mb-1);
+}
+
+.login_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #ddd;
+  font-size: var(--normal-font-size);
+  line-height: 100%;
+  height: 46px;
+  margin-bottom: var(--mb-0-5);
+  overflow: hidden;
+}
+
+.login_block label {
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 46px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-right: 1px solid #ddd;
+  padding: 1rem 0;
+  color: var(--third-color);
+}
+
+.login_input {
+  padding-left: 1rem;
+}
+
+.login_button {
+  margin-top: var(--mb-1);
+}
+
+.login_submit {
+  cursor: pointer;
+  width: 100%;
+  background-color: var(--point-color);
+  padding: .75rem 0;
+  color: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.login_submit:hover {
+  background-color: var(--point-color-alt);
+}
+
+.login_txt {
+  margin: var(--mb-1) 0;
+  font-size: var(--smaller-font-size);
+  text-align: center;
+}
+
+.login_link {
+  word-break: keep-all;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login_link::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  background-color: #ddd;
+  height: 10px;
+  margin: 0 var(--mb-0-5);
+}
+
+.login_link:last-child::after {
+  display: none;
+}
+
+@media screen and (min-width: 540px) {
+  .login {
+    max-width: 400px;
+    margin: 6rem auto;
+  }
+  .login_title span {
+    font-size: var(--small-font-size);
+    margin-top: var(--mb-0-5);
+  }
+  .login_block {
+    height: 60px;
+  }
+  .login_block label {
+    width: 20%;
+    max-width: 60px;
+    padding: 1.5rem 0;
+    font-size: 1.5rem;
+  }
+  .login_input {
+    width: 80%;
+    font-size: var(--normal-font-size);
+  }
+  .login_submit {
+    padding: 1.35rem 0;
+    font-size: var(--normal-font-size);
+  }
+  .login_txt {
+    font-size: var(--small-font-size);
+  }
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>2-4-3.상담일정 선택</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <p class="back"><img src="../../images/icon/system_back.svg" alt="뒤로가기" /></p>
+      <h2 class="page_name">상담일정 선택</h2>
+      <div class="header_icon">
+        <p class="page_no">2/3</p>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- 한팩담기 다음 상담시 노출 -->
+      <div class="consult_top" style="display: none;">
+        <div class="pack_banner">
+          <p class="img"><img src="../../images/drug_sample.png" alt=""></p>
+          <p class="span2_f">쏘팔메토옥타코사놀+</p>
+          <p class="span2_f gray01">외 7건</p>
+        </div>
+      </div>
+
+      <section class="step_list pd_bottom_l">
+        <!-- 방식 -->
+        <div class="consult_step open">
+          <div class="toggle_title">
+            <p class="title">예약방식 선택</p>
+            <p class="txt">일정예약은 오늘부터 7일 내 일정만 예약할 수 있어요</p>
+            <p class="toggle_txt">일정 예약하기</p>
+          </div>
+
+          <div class="step_type">
+            <div class="type_slt">
+              <div class="type">
+                <p class="icon type_now"></p>
+                <p class="txt">지금 바로 상담하기</p>
+              </div>
+              <div class="type">
+                <p class="icon type_book"></p>
+                <p class="txt">일정 예약하기</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 날짜 --> 
+        <div class="consult_step">
+          <div class="toggle_title">
+            <p class="title">날짜 선택</p>
+            <p class="toggle_txt">날짜를 선택해주세요</p>
+          </div>
+
+          <div class="swiper tab_sort step_date">
+            <div class="swiper-wrapper">
+              <p class="swiper-slide sort_btn active">오늘</p>
+              <p class="swiper-slide sort_btn">01월 02일</p>
+              <p class="swiper-slide sort_btn">01월 03일</p>
+              <p class="swiper-slide sort_btn">01월 04일</p>
+              <p class="swiper-slide sort_btn">01월 05일</p>
+              <p class="swiper-slide sort_btn">01월 06일</p>
+              <p class="swiper-slide sort_btn">01월 07일</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 시간 -->
+        <div class="consult_step">
+          <div class="toggle_title">
+            <p class="title">시간 선택</p>
+            <p class="toggle_txt">시간을 선택해주세요</p>
+          </div>
+
+          <div class="step_time">
+            <div class="time_block">
+              <p class="span3_f">오전</p>
+              <div class="time_list">
+                <p class="btn_m">09:00</p>
+                <p class="btn_m">09:20</p>
+                <p class="btn_m">09:40</p>
+                <p class="btn_m">10:00</p>
+                <p class="btn_m type_no">10:20</p>
+                <p class="btn_m type_no">10:40</p>
+                <p class="btn_m type_no">11:00</p>
+                <p class="btn_m type_no">11:20</p>
+                <p class="btn_m type_no">11:40</p>
+              </div>
+            </div>
+            <div class="time_block">
+              <p class="span3_f">오후</p>
+              <div class="time_list">
+                <p class="btn_m type_no">12:00</p>
+                <p class="btn_m type_no">12:20</p>
+                <p class="btn_m type_no">12:40</p>
+                <p class="btn_m">01:00</p>
+                <p class="btn_m type_no">01:20</p>
+                <p class="btn_m type_no">01:40</p>
+                <p class="btn_m">01:00</p>
+                <p class="btn_m">02:20</p>
+                <p class="btn_m type_no">02:40</p>
+                <p class="btn_m">02:00</p>
+                <p class="btn_m">03:20</p>
+                <p class="btn_m type_no">03:40</p>
+                <p class="btn_m type_no">03:00</p>
+                <p class="btn_m type_no">04:20</p>
+                <p class="btn_m">04:40</p>
+                <p class="btn_m type_no">05:00</p>
+                <p class="btn_m">05:20</p>
+                <p class="btn_m">05:40</p>
+                <p class="btn_m">06:00</p>
+                <p class="btn_m type_no">06:20</p>
+                <p class="btn_m">06:40</p>
+                <p class="btn_m type_no">07:00</p>
+                <p class="btn_m">07:20</p>
+                <p class="btn_m type_no">07:40</p>
+                <p class="btn_m type_no">08:00</p>
+                <p class="btn_m">08:20</p>
+                <p class="btn_m">08:40</p>
+                <p class="btn_m type_no">09:00</p>
+                <p class="btn_m">09:20</p>
+                <p class="btn_m type_no">09:40</p>
+              </div>
+            </div>
+            <div class="time_type">
+              <p><span class="type_ck"></span>선택</p>
+              <p><span class="type_ok"></span>가능</p>
+              <p><span class="type_no"></span>불가</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="btn_fix">
+        <button class="btn_b btn_basic" disabled>다음</button>
+      </div>
+    </main>
+
+    <!--공휴일 즉시상담 불가 -->
+    <div class="popup">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 팝업 컨텐츠 -->
+      <div class="popup_wrap">
+        <p class="pop_title">공휴일에는 즉시상담이 불가해요</p>
+        <p class="pop_txt">지금 바로 상담 대신 원하시는 일정에 상담을 진행해보세요!</p>
+        <!-- 버튼 1개 -->
+        <div class="pop_btn">
+          <button class="btn_light btnClose">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/swiper-bundle.min.js"></script>
+
+    <script>
+      //toggle
+      $(".toggle_title").click(function() {
+        if($(this).parent().hasClass("open")){
+          $(this).parent().removeClass("open");
+          $(this).siblings("div").slideUp();
+        }else{
+          $(this).parent().addClass("open");
+          $(this).siblings("div").slideDown();
+        };
+      });
+
+      //예약방식선택
+      $(".type_slt").find(".type").click(function() {
+        $(this).addClass("select");
+        $(this).siblings().removeClass("select");
+
+        $(".step_date").parent(".consult_step").addClass("open");
+        $(".step_date").slideDown();
+      });
+
+      //날짜선택
+      $(".step_date").find(".sort_btn").click(function() {
+        $(".step_time").parent(".consult_step").addClass("open");
+        $(".step_time").slideDown();
+      });
+
+      //시간선택
+      $(".step_time").find(".btn_m").click(function() {
+        $(".step_time").children(".btn_m").removeClass("select");
+        if(!$(this).hasClass("type_no")){
+          $(".step_time").find(".btn_m").removeClass("select");
+          $(this).addClass("select");
+          $(".btn_b").attr("disabled",false);
+        };
+      });
+
+      //소트메뉴
+      var sortbtn = new Swiper(".tab_sort", {
+          slidesPerView: "auto",
+          spaceBetween: 8,
+        });
+
+        $(".tab_sort")
+          .find(".sort_btn")
+          .click(function () {
+            $(this).addClass("active");
+            $(this).siblings().removeClass("active");
+          });
+    </script>
+  </body>
+</html>

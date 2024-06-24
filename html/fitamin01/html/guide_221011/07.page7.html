@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/rcommon.css">
+  <link rel="stylesheet" href="../../css/guide.css">
+  <link rel="stylesheet" href="../../css/rstyle.css">
+  <title>이메일로 회원가입 - 완료</title>
+
+</head>
+<body class="">
+    <div class="rmain_wrap cpl_pg grid_btn">
+      <section class="cpl_top pd_all" style="margin-top: 5rem;">
+        <img src="../../images/icon_cmp.svg" alt="" class="icon_cpl2">
+
+        <p class="p1_f bold_f mb_1">최대오글자님<br>회원가입이 완료되었습니다</p>
+        <p class="p4_f gray_c02 mb_1_5">추천인 코드는 마이페이지 > 회원정보 수정<br>페이지에서 입력하실 수 있어요</p>
+
+        <div class="btn_left">
+          <!-- 추천인 코드 등록 시 이미지 -> icon_checkblue.svg 로 변경-->
+          <a href="#" class="btn_m btn_light openBtn"><img src="../../images/icon_checkgr.svg">추천인 코드가 있으신가요?</a>
+        </div>
+      </section>
+
+      <div class="btn_center pd_base">
+        <div class="pop_info">
+          <p>추천인 코드가 등록되었습니다</p>
+        </div>
+        <button class="btn_b btn_blue">핏타민 시작하기</button>
+      </div>
+    </div>
+    <!-- 추천인 코드 팝업 -->
+    <div class="main_popup">
+      <div class="overlay"></div>
+      <div class="pop_bottom">
+        <div class="pop_info">
+          <p>추천인 코드가 등록되었습니다</p>
+        </div>
+        <div class="pop_in">
+          <p class="popup_title">유효하지 않은 추천인 코드입니다</p>
+          <p class="popup_sub">추천인을 입력하시면 적립금 5천원을 지급해드립니다</p>
+          <div class="pop_dec">
+            <div class="input_basic">
+              <input type="text" class="rinput" placeholder="추천인 코드 입력">
+            </div>
+         </div>
+        </div>
+        <div class="btn_center popBtn">
+          <button class="btn_b btn_blue" disabled>확인</button>
+          <button class="btn_b btn_trans">닫기</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      /* popup */
+      $(".openBtn").on("click", function(){
+      $(".main_popup, body").addClass("on");
+      });
+
+      $(".overlay, .popBtn").on("click", function(){
+        $("body, .main_popup").removeClass("on");
+      });
+  
+    </script>
+</body>
+</html>
+
+
+

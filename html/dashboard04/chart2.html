@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=2.0">
+
+        <!-- ============== css ================== -->
+        <link rel="stylesheet" href="css/chart.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+
+
+        <title>IBK 기업은행 통계화면</title>
+    </head>
+    <body>
+        <div style="text-align:center; font-size: .75rem; background-color: #222; color: #fff; width: 100%; padding: 10px;">
+            <p>각각 페이지 링크는 여기서 확인해주세요. <span style="margin: 0 .3rem;">│</span>
+                <a href="page1-close.html" style="color: #fff; text-decoration: underline;">첫페이지</a><span style="margin: 0 .3rem;">│</span>
+                <a href="page2-open.html" style="color: #fff; text-decoration: underline;">첫페이지 챗 오픈</a><span style="margin: 0 .3rem;">│</span>
+                <a href="page3.html" style="color: #fff; text-decoration: underline;">팝업창 1</a><span style="margin: 0 .3rem;">│</span>
+                <a href="page4.html" style="color: #fff; text-decoration: underline;">팝업창 2</a><span style="margin: 0 .3rem;">│</span>
+                <a href="chart1.html" style="color: #fff; text-decoration: underline;">차트 1</a><span style="margin: 0 .3rem;">│</span>
+                <a href="chart2.html" style="color: #fff; text-decoration: underline;">차트 2</a><span style="margin: 0 .3rem;">│</span>
+                <a href="chart3.html" style="color: #fff; text-decoration: underline;">차트 3</a> <span style="margin: 0 .3rem;">│</span>
+                <a href="chart4.html" style="color: #fff; text-decoration: underline;">차트 4</a>
+            </p>
+        </div>
+        <div class="wrap">
+            <!-- ============= 검색상단 ==================== -->
+            <div class="header">
+                <p class="header_title">조회일자</p>
+                <p class="header_date">
+                    <input type="text" placeholder="2022-04-05">
+                    <i class="ri-calendar-2-line"></i>
+                </p>
+                <span>~</span>
+                <p class="header_date">
+                    <input type="text" placeholder="2022-04-05">
+                    <i class="ri-calendar-2-line"></i>
+                </p>
+                <input type="radio" name="check_date" id="oneday">
+                <label for="oneday">1일</label>
+                <input type="radio" name="check_date" id="threeday">
+                <label for="threeday">3일</label>
+                <input type="radio" name="check_date" id="oneweek">
+                <label for="oneweek">일주일</label>
+            </div>
+
+            <!-- ============ 검색출력 ==================  -->
+            <!-- 상담분석 상단 -->
+            <div class="contents">
+                <p class="contents_title">
+                    <img src="images/icon_04.png" alt=""> 고빈도 단어 Top30
+                </p>
+
+                <div class="flex_3grid">
+                    <ol>
+                        <li class="top10_title">
+                            <p class="rk">순위</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">건수</p>
+                        </li>
+                        <li>
+                            <p class="rk">1</p>
+                            <p class="name">분류체계명분류체계명분류체계명분류체계명분류체계명분류체계명분류체계명분류체계명분류체계명분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">2</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">3</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">4</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">5</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">6</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">7</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">8</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">9</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">10</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                    </ol>
+
+                    <ol>
+                        <li class="top10_title">
+                            <p class="rk">순위</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">건수</p>
+                        </li>
+                        <li>
+                            <p class="rk">1</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">2</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">3</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">4</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">5</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">6</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">7</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">8</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">9</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">10</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                    </ol>
+
+                    <ol>
+                        <li class="top10_title">
+                            <p class="rk">순위</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">건수</p>
+                        </li>
+                        <li>
+                            <p class="rk">1</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">2</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">3</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">4</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">5</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">6</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">7</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">8</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">9</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                        <li>
+                            <p class="rk">10</p>
+                            <p class="name">분류체계명</p>
+                            <p class="no">111</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+
+            <!-- 상담분석 하단 -->
+            <div class="contents flex_2grid">
+                <div class="keyword">
+                    <p class="contents_title">
+                        <img src="images/icon_04.png" alt=""> 주요 고빈도 단어
+                    </p>
+                    <span class="keyword_c1 keyword_s1" style="top: 20%; left: 50%;">#개인뱅킹경로</span>
+                    <span class="keyword_c2 keyword_s2" style="top: 60%; left: 20%;">#고객정보변경</span>
+                    <span class="keyword_c3 keyword_s3" style="top: 80%; left: 10%;">#인증서발급/재발급/갱신/복사/폐기</span>
+                    <span class="keyword_c4 keyword_s4" style="top: 55%; left: 50%;">#자동화기기문의</span>
+                    <span class="keyword_c5 keyword_s5" style="top: 36%; left: 60%;">#선결제</span>
+                    <span class="keyword_c6 keyword_s1" style="top: 50%; left: 30%;">#개선사항접수</span>
+                    <span class="keyword_c7 keyword_s2" style="top: 30%; left: 15%;">#승인/취소/승인거절</span>
+                    <span class="keyword_c8 keyword_s3" style="top: 70%; left: 60%;">#신규/이용문의</span>
+                    <span class="keyword_c1 keyword_s4" style="top: 40%; left: 5%;">#분실신고해제</span>
+                </div>
+
+                <div class="masonry">
+                    <p class="contents_title">
+                        <img src="images/icon_04.png" alt=""> 단어분포
+                    </p>
+                    <div class="grid">
+                        <div class="grid-item">
+                            <p class="color_blue1">기준</p>
+                            <p class="color_blue2">지금</p>
+                            <p class="color_blue3">전화번호</p>
+                            <p class="color_blue4">내방</p>
+                            <p class="color_blue5">은행계좌번호</p>
+                            <p class="color_blue6">가야</p>
+                            <p class="color_blue7">주민등록</p>
+                            <p class="color_blue8">카드번호</p>
+                            <p class="color_blue9">사업자</p>
+                            <p class="color_blue10">비대면</p>
+                        </div>
+                        <div class="grid-item">
+                            <p class="color_green1">승인</p>
+                            <p class="color_green2">비밀번호임력</p>
+                            <p class="color_green3">이자</p>
+                            <p class="color_green4">소중</p>
+                            <p class="color_green5">상담</p>
+                            <p class="color_green6">그게</p>
+                            <p class="color_green7">할부</p>
+                            <p class="color_green8">명의</p>
+                            <p class="color_green9">정보확인</p>
+                        </div>
+                        <div class="grid-item">
+                            <p class="color_yellow1">신용카드</p>
+                            <p class="color_yellow2">오늘</p>
+                            <p class="color_yellow3">선결제</p>
+                            <p class="color_yellow4">번호입력</p>
+                            <p class="color_yellow5">아이엠뱅크</p>
+                            <p class="color_yellow6">구월</p>
+                            <p class="color_yellow7">충전</p>
+                            <p class="color_yellow8">인터넷뱅킹</p>
+                            <p class="color_yellow9">체크카드</p>
+                        </div>
+                        <div class="grid-item">
+                            <p class="color_orange1">안내음성</p>
+                            <p class="color_orange2">자동이체</p>
+                            <p class="color_orange3">계좌비밀번호</p>
+                            <p class="color_orange4">수고</p>
+                            <p class="color_orange5">상품</p>
+                            <p class="color_orange6">분실신고</p>
+                            <p class="color_orange7">재발급</p>
+                        </div>
+                        <div class="grid-item">
+                            <p class="color_red1">수수료</p>
+                            <p class="color_red2">한도</p>
+                            <p class="color_red3">음성</p>
+                            <p class="color_red4">영업점</p>
+                            <p class="color_red5">아이엠</p>
+                            <p class="color_red6">잠시</p>
+                            <p class="color_red7">해지</p>
+                        </div>
+                        <div class="grid-item">
+                            <p class="color_purple1">행복</p>
+                            <p class="color_purple2">어떻게</p>
+                            <p class="color_purple3">지점</p>
+                            <p class="color_purple4">아이</p>
+                            <p class="color_purple5">계좌번호</p>
+                            <p class="color_purple6">자리</p>
+                        </div>
+                        <div class="grid-item grid-item-width2">
+                            <p class="color_lavender1 grid-item-width3">뱅킹</p>
+                            <p class="color_lavender2 grid-item-width3">방문</p>
+                            <p class="color_navy1 grid-item-height1">비밀번호</p>
+                            <p class="color_navy2 grid-item-height1">대구광역시</p>
+                            <p class="color_navy3 grid-item-height1">안녕</p>
+                        </div>
+                        <div class="grid-item grid-item-width2">
+                            <p class="color_lavender3 grid-item-width3">발급</p>
+                            <p class="color_lavender4 grid-item-width3">이체</p>
+                            <p class="color_navy4 grid-item-height2">번호</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

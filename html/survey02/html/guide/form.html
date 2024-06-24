@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>GUIDE FORM</title>
+</head>
+
+<style>
+  .guide_wrap{
+    width: 100%;
+    max-width: 360px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  .info{
+    width: 100%;
+    line-height: var(--line-h);
+    margin-bottom: 5rem;
+  }
+
+  .guide_block{
+    margin: 2rem 0 5rem;
+  }
+
+  .quide_flex{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .quide_flex .span3_f{
+    margin-left: 1rem;
+    color: #9F9F9F;
+  }
+
+</style>
+<body>
+  <div class="guide_wrap">
+    <h1 class="h1_f">FORM</h1>
+
+    <!-- 인풋 -->
+    <div class="guide_block">
+      <p class="h2_f" style="margin-bottom: 1rem;">text input</p>
+
+      <!-- 기본인풋 -->
+      <div class="input_block">
+        <label for="input01">기본인풋</label>
+        <div class="input_basic">
+          <input type="email" id="input01" placeholder="기본 인풋스타일입니다.">
+        </div>
+      </div>
+
+      <!-- 리드온리 -->
+      <div class="input_block">
+        <label for="input01">리드온리 - 수정불가 </label>
+        <div class="input_basic">
+          <input type="email" id="input01" placeholder="기본 인풋스타일입니다." readonly>
+        </div>
+      </div>
+
+      <!-- 패턴체크 -->
+      <div class="input_block">
+        <label for="input02">패턴체크</label>
+        <div class="input_ptck">
+          <input type="text" id="input02" class="clearInput" placeholder="이메일 주소를 입력해주세요." required>
+          <div class="btnClear"></div>
+        </div>
+      </div>
+
+      <!-- 패턴체크 형식이 맞을 때 -->
+      <div class="input_block">
+        <label for="input03">패턴체크 - 형식이 맞을 때</label>
+        <div class="input_ptck">
+          <input type="text" id="input03" class="clearInput" value="형식이 맞을 때" placeholder="이메일 주소를 입력해주세요." required>
+          <div class="btnClear"></div>
+        </div>
+      </div>
+      
+
+      <!-- 패턴체크 형식이 잘못되었을 때 -->
+      <div class="input_block">
+        <label for="input04">형식이 잘못 되었을 때</label>
+        <div class="input_ptck">
+          <input type="text" id="input04" class="clearInput" pattern="[0-9]" value="형식이 잘못 됐을 때" placeholder="이메일 주소를 입력해주세요." required>
+          <div class="btnClear"></div>
+        </div>
+        <p class="input_error">올바른 이메일 형식을 작성해주세요</p>
+      </div>
+
+      <!-- 비밀번호 가리기 / 보이기-->
+      <div class="input_block">
+        <label for="pass01">비밀번호 - 가리기</label>
+        <div class="input_ptck">
+          <input type="password" id="pass01" class="clearInput inputPass" value="비밀번호 가리기 / 보이기" placeholder="이메일 주소를 입력해주세요." required>
+          <div toggle="#pass01" class="pass_view"></div>
+          <div class="btnClear"></div>
+        </div>
+        <p class="input_info">영문과 숫자를 포함하는 8자~15자 이내로 설정해주세요</p>
+      </div>
+
+      <!-- 비밀번호 잘못 입력했을 때-->
+      <div class="input_block">
+        <label for="pass02">비밀번호 - 잘못 입력 했을 때</label>
+        <div class="input_ptck">
+          <input type="password" id="pass02" class="clearInput inputPass" value="비밀번호 잘못 입력했을 때" pattern="[0-9]" placeholder="이메일 주소를 입력해주세요." required>
+          <div toggle="#pass02" class="pass_view"></div>
+          <div class="btnClear"></div>
+        </div>
+        <p class="input_error">영문과 숫자를 포함하는 8자~15자 이내로 설정해주세요</p>
+      </div>
+
+      <!-- 버튼 포함 인풋 -->
+      <div class="input_block">
+        <label for="number01">텍스트인풋 + 버튼</label>
+        <div class="input_ptck input_btn">
+          <input type="number" id="number01" class="clearInput" maxlength="11" placeholder="-를 제외하고 입력해주세요" inputmode="numeric" oninput="maxLengthChk(this)" required>
+          <button class="btn_m btn_white input_btnl">인증번호 발송</button>
+          <div class="btnClear"></div>
+        </div>
+      </div>
+
+      <!-- 버튼 포함 인풋 형식이 맞을 때 / 인증완료 후 버튼 안보임-->
+      <div class="input_block">
+        <label for="number02">형식이 맞았을 때</label>
+        <div class="input_ptck input_btn">
+          <input type="number" id="number02" class="clearInput" value="01012345678" maxlength="11" placeholder="-를 제외하고 입력해주세요" inputmode="numeric" oninput="maxLengthChk(this)" required>
+          <button class="btn_m btn_white input_btnl">인증번호 발송</button>
+          <div class="btnClear"></div>
+        </div>
+      </div>
+
+      <!-- 버튼 포함 인풋 형식이 맞지 않을 때-->
+      <div class="input_block">
+        <label for="number03">형식이 맞지 않을 때</label>
+        <div class="input_ptck input_btn">
+          <input type="text" id="number03" pattern="[0-5]*" class="clearInput" value="형식이 맞지 않을 때" maxlength="11" placeholder="-를 제외하고 입력해주세요" inputmode="numeric" oninput="maxLengthChk(this)" required>
+          <button class="btn_m btn_white input_btnl">인증번호 발송</button>
+          <div class="btnClear"></div>
+        </div>
+      </div>
+
+      <!-- 인증번호 입력 -->
+      <div class="input_block">
+        <label for="number03">인증번호 입력 기본</label>
+        <div class="input_ptck input_btn">
+          <input type="number" id="number03" class="clearInput" maxlength="4" placeholder="인증번호를 입력해주세요" inputmode="numeric" oninput="maxLengthChk(this)" required>
+          <button class="btn_m btn_white input_btns">확인</button>
+          <div class="btnClear"></div>
+          <p class="input_time">3:00</p>
+        </div>
+      </div>
+      <!-- 인증완료-->
+      <div class="input_block">
+        <label for="number03">인증번호 입력 기본</label>
+        <div class="input_ptck input_btn">
+          <input type="number" id="number03" class="clearInput" value="1234" maxlength="4" placeholder="인증번호를 입력해주세요" inputmode="numeric" oninput="maxLengthChk(this)" required>
+          <button class="btn_m btn_white input_btns" style="display: none">확인</button>
+          <div class="btnClear" style="display: none"></div><!-- 인증완료 후 클리어 버튼 안나오게 -->
+          <p class="input_time" style="display: none">3:00</p>
+        </div>
+        <p class="input_ok">휴대폰 인증이 완료되었습니다</p>
+      </div>
+
+
+    </div>
+
+    <!-- 글쓰기 -->
+    <div class="guide_block">
+      <p class="h2_f" style="margin-bottom: 1rem;">textarea</p>
+      <div class="textarea_block">
+        <label for="textarea01">글쓰기</label>
+        <textarea name="" id="textarea01" cols="30" rows="10"></textarea>
+      </div>
+    </div>
+
+    <!-- 셀렉트 -->
+    <div class="guide_block">
+      <p class="h2_f" style="margin-bottom: 1rem;">select</p>
+      <div class="select_block">
+        <label for="select01">배송 요청사항</label>
+        <button class="selectBtn" id="select01">배송 요청사항을 선택해주세요</button>
+        <ul class="optionList">
+          <li class="optionItem">옵션1</li>
+          <li class="optionItem">옵션2</li>
+          <li class="optionItem">옵션3</li>
+          <li class="optionItem">옵션4</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 토글 -->
+    <div class="guide_block">
+      <p class="h2_f" style="margin-bottom: 1rem;">toggle</p>
+      <div class="toggle_block">  
+        <input type="checkbox" class="toggle" id="ipToggle">
+        <label for="ipToggle" class="toggle_btn"></label>
+      </div>
+    </div>
+
+    <!-- 체크박스 -->
+    <div class="guide_block">
+      <p class="h2_f" style="margin-bottom: 1rem;">checkbox</p>
+      <div class="check_block">  
+        <div class="input_check">
+          <input type="checkbox" id="checkbox01">
+          <label for="checkbox01" class="ck_line">체크박스 라인 - 체크 되지 않음</label>
+        </div>
+        <div class="input_check mb_1">
+          <input type="checkbox" id="checkbox02" checked>
+          <label for="checkbox02" class="ck_line">체크박스 라인 - 체크 됨</label>
+        </div>
+
+        <div class="input_check">
+          <input type="radio" id="radio01" name="radioset01" checked>
+          <label for="radio01" class="ck_circle">라디오 써클 - 체크 됨</label>
+        </div>
+
+        <div class="input_check mb_1">
+          <input type="radio" id="radio02" name="radioset01">
+          <label for="radio02" class="ck_circle">라디오 써클 - 체크 되지 않음</label>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+     // /* ---- 삭제버튼 ------- */
+     $(document).ready(function(){
+      $('.input_block').each(function(){
+        $(this).find('.clearInput').on('keyup focus', function(){
+          $(this).siblings('.btnClear').attr('style', 'opacity: 1');
+
+          if($(this).val().length == 0){
+            $(this).siblings('.btnClear').attr('style', 'opacity: 0');
+          } else {
+            $(this).siblings('.btnClear').attr('style', 'opacity: 1');
+          }
+        });
+      
+        $(this).find('.clearInput').on('blur', function(){
+          $(this).siblings('.btnClear').attr('style', 'opacity: 0');
+        });
+      
+        $(this).find('.btnClear').on('click touchstart', function(){
+          $(this).closest('.input_block').find('.clearInput').val('');
+          $(this).closest('.input_block').find('.btnClear').attr('style', 'opacity: 0');
+          return false;
+        });
+      });
+    });
+
+        /* 패스워드 */
+        $(".pass_view").click(function() {
+
+      $(this).toggleClass("inputPass");
+      var input = $($(this).attr("toggle"));
+      if (input.attr("type") == "password"){
+        input.attr("type", "text");
+      } else {
+        input.attr("type", "password");
+      }
+      });
+
+      $(document).ready(function () {
+      $(".pass_view").on("click", function () {
+      $(this).toggleClass("pass_view-on");
+      });
+      });
+
+
+      /* 넘버인풋 맥스 */
+      function maxLengthChk(object){
+        if (object.value.length > object.maxLength){
+          object.value = object.value.slice(0, object.maxLength);
+        }    
+      }
+
+
+      /* 셀렉트 */
+    const label = document.querySelectorAll('.selectBtn');
+    label.forEach(function(lb){
+        lb.addEventListener('click', e => {
+            let optionList = lb.nextElementSibling;
+            let optionItems = optionList.querySelectorAll('.optionItem');
+            clickLabel(lb, optionItems);
+        })
+    });
+    const clickLabel = (lb, optionItems) => {
+        if(lb.parentNode.classList.contains('active')) {
+            lb.parentNode.classList.remove('active');
+            optionItems.forEach((opt) => {
+                opt.removeEventListener('click', () => {
+                    handleSelect(lb, opt)
+                })
+            })
+        } else {
+            lb.parentNode.classList.add('active');
+            optionItems.forEach((opt) => {
+                opt.addEventListener('click', () => {
+                    handleSelect(lb, opt)
+                })
+            })
+        }
+    }
+    const handleSelect = (label, item) => {
+        label.innerHTML = item.textContent;
+        label.parentNode.classList.remove('active');
+        label.classList.add('optSlt');
+    }
+  </script>
+</body>
+</html>

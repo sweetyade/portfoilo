@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>킥더허들 헬스케어</title>
+    <meta name="keywords" content="킥더허들 헬스케어">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="누구나 누릴 수 있는 일상의 건강">
+    <meta name="format-detection" content="telephone=no">
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <script type="text/javascript" src="<c:url value='/vendors/jquery/jquery-3.6.0.min.js' />"></script>
+
+    <!-- ============================ css ======================= -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link href="../../css/m.common.css" rel="stylesheet">
+    <link href="../../css/m.sub.css" rel="stylesheet">
+
+
+
+    <script type="text/javascript" src="<c:url value='/bootstrap/js/bootstrap.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/vendors/popper/popper.min.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/scripts/modal.js' />"></script> <!-- 모달 스크립트 -->
+    <script type="text/javascript" src="<c:url value='/scripts/common.js' />"></script> <!-- 공통 스크립트 -->
+    <script type="text/javascript" src="<c:url value='/scripts/hybridBridge.js' />"></script> <!-- 네이티브 인터페이스 브릿지 -->
+</head>
+<body>
+    <main class="main" id="top">
+
+        <header class="header" id="header">
+            <nav class="nav">
+                <a href="javascript:goHistoryback();" class="nav_back">
+                    <i class="ri-arrow-left-s-line"></i>
+                </a>
+
+                <h2 class="sub_header">상담결과</h2>
+        
+                <div class="nav_menu" id="nav-menu">
+                    <div class="nav_user">
+                        <a href="#" class="nav_user_link">로그인</a>
+                        <a href="#" class="nav_user_link">마이 페이지</a>
+                    </div>
+        
+                    <!-- ========메뉴 =========-->
+                    <ul class="nav_list">
+                        <li class="nav_item">
+                            <a href="#" class="nav_link active_link">홈</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">핏타민 시작하기</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">마이페이지</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">브랜드 스토리 <i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="nav_dep">
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">핏타민 스토리</a>
+                                </li>
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">핏타민 소개</a>
+                                </li>
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">이용방법</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">고객후기</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">이벤트 · 공지</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">고객센터</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="nav_close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+        
+                    <div class="nav_search">
+                        <input type="text" class="search" placeholder="검색어를 입력해주세요">
+                        <button type="submit" class="search btn_basic">검색</button>
+                    </div>
+        
+                    <!-- ================= quick link ================= -->
+                    <div class="nav_quick">
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg01.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>People</span>
+                                <p>시작부터 섭취까지<br>약사와 함께</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg02.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>Service</span>
+                                <p>과학적인 데이터<br>근거 중심으로</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg03.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>Product</span>
+                                <p>단 1알까지<br>품질우선주의</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg04.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>B2B</span>
+                                <p>기업 건강 복지<br>영양제 정기배송</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="nav_toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </nav>
+        </header>
+        
+        <div class="container" data-layout="container">
+            <div class="my_result">
+                <div class="mypage_result">
+                    <p class="sub_title mb_1">핏타민 <span class="font_n">님의 <img src="../../images/logo_b.png" alt=""></span></p>
+
+                    <p class="font_n mb_1">알고리즘과 약사 상담으로 최종 설계되었습니다.</p>
+                    <div class="my_block group_shadow mb_1 flex_groups">
+                        <p class="flex_l"><img src="../../images/consultation_img.png" alt=""></p>
+
+                        <div class="flex_r">
+                            <p class="font_m mb_1 font_w2">장약국장 약사</p>
+                            <p class="font_s">참약사 약국 대표</p>
+                            <p class="font_s">참약사육성협동조합 대표</p>
+                        </div>
+                    </div>
+
+                    <div class="my_block group_shadow mb_1 flex_groups">
+                        <div class="flex_l drug_l">
+                            <p class="point_c font_w2">오전</p>
+                            <i class="ri-sun-line gray_c"></i>
+                        </div>
+
+                        <div class="flex_r drug_list swiper">
+                            <div class="swiper-wrapper">
+                                <div class="drug_item swiper-slide">
+                                    <p class="img bgcolor_1"><img src="../../images/drug04.png" alt=""></p>
+                                    <p class="font_s">마그네슘B</p>
+                                    <p class="no">1</p>
+                                </div>
+                                <div class="drug_item swiper-slide">
+                                    <p class="img bgcolor_2"><img src="../../images/drug04.png" alt=""></p>
+                                    <p class="font_s">비타민C</p>
+                                    <p class="no">2</p>
+                                </div>
+                                <div class="drug_item swiper-slide">
+                                    <p class="img bgcolor_3"><img src="../../images/drug04.png" alt=""></p>
+                                    <p class="font_s">비타민D 2000IU+</p>
+                                    <p class="no">3</p>
+                                </div>
+                                <div class="drug_item swiper-slide">
+                                    <p class="img bgcolor_4"><img src="../../images/drug04.png" alt=""></p>
+                                    <p class="font_s">마그네슘B</p>
+                                    <p class="no">4</p>
+                                </div>
+                                <div class="drug_item swiper-slide">
+                                    <p class="img bgcolor_5"><img src="../../images/drug04.png" alt=""></p>
+                                    <p class="font_s">비타민C</p>
+                                    <p class="no">5</p>
+                                </div>
+                                <div class="drug_item swiper-slide">
+                                    <p class="img bgcolor_6"><img src="../../images/drug04.png" alt=""></p>
+                                    <p class="font_s">비타민D 2000IU+</p>
+                                    <p class="no">6</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="my_block group_shadow mb_1 flex_groups">
+                        <div class="flex_l drug_l">
+                            <p class="point_c font_w2">오후</p>
+                            <i class="ri-moon-line gray_c"></i>
+                        </div>
+
+                        <div class="flex_r drug_list swiper">
+                            <div class="swiper-wrapper">
+                                <div class="drug_item swiper-slide">
+                                    <p class="img bgcolor_1"><img src="../../images/drug04.png" alt=""></p>
+                                    <p class="font_s">마그네슘B</p>
+                                    <p class="no">1</p>
+                                </div>
+                                <div class="drug_item swiper-slide">
+                                    <p class="img bgcolor_2"><img src="../../images/drug04.png" alt=""></p>
+                                    <p class="font_s">비타민C</p>
+                                    <p class="no">2</p>
+                                </div>
+                                <div class="drug_item swiper-slide">
+                                    <p class="img bgcolor_3"><img src="../../images/drug04.png" alt=""></p>
+                                    <p class="font_s">비타민D 2000IU+</p>
+                                    <p class="no">3</p>
+                                </div>
+                                <div class="drug_item swiper-slide">
+                                    <p class="img bgcolor_4"><img src="../../images/drug04.png" alt=""></p>
+                                    <p class="font_s">마그네슘B</p>
+                                    <p class="no">4</p>
+                                </div>
+                                <div class="drug_item swiper-slide">
+                                    <p class="img bgcolor_5"><img src="../../images/drug04.png" alt=""></p>
+                                    <p class="font_s">비타민C</p>
+                                    <p class="no">5</p>
+                                </div>
+                                <div class="drug_item swiper-slide">
+                                    <p class="img bgcolor_6"><img src="../../images/drug04.png" alt=""></p>
+                                    <p class="font_s">비타민D 2000IU+</p>
+                                    <p class="no">6</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="my_block group_shadow mb_2 flex_none">
+                        <p class="point_c font_w2 mb_1">건강 지침사항</p>
+
+                        <p class="font_s mb_2">상담결과내용 상담결과내용상담결과내용 상담결과내용상담결과내용 상담결과내용상담결과내용 상담결과내용상담결과내용 상담결과내용상담결과내용 상담결과내용</p>
+                        <p class="img_sign"><img src="../../images/icon_sign.png" alt=""></p>
+                    </div>
+                </div>
+
+                <div class="bg_gray mypage_result">
+                    <p class="sub_title mb_1">최종 주문내역</p>
+
+                    <div class="my_block group_shadow mb_1 recommend_box bg_lnd">
+                        <div class="recommend_l">
+                            <p class="font_s">부족해지기 쉬운 마그네슘 보충</p>
+                            <p class="font_m font_w2">마그네슘B</p>
+                            <ul class="recommend_info">
+                                <li>ㆍ 신경과 근육 유지에 필요</li>
+                                <li>ㆍ 에너지 이용에 필요</li>
+                            </ul>
+                        </div>
+                        <div class="recommend_r">
+                            <img src="../../images/drug01.png" alt="">
+                            <p class="font_s">344원/ 일</p>
+                        </div>
+                    </div>
+                    <div class="my_block group_shadow mb_1 recommend_box bg_py">
+                        <div class="recommend_l">
+                            <p class="font_s">생기발랄 활기찬 하루</p>
+                            <p class="font_m font_w2">비타민C+</p>
+                            <ul class="recommend_info">
+                                <li>ㆍ 활성산소를 제거하는데 필요</li>
+                                <li>ㆍ 항산화 작용에 도움</li>
+                                <li>ㆍ 항산화 작용에 도움</li>
+                            </ul>
+                        </div>
+                        <div class="recommend_r bg_py">
+                            <img src="../../images/drug02.png" alt="">
+                            <p class="font_s">344원/ 일</p>
+                        </div>
+                    </div>
+                    <div class="my_block group_shadow mb_1 recommend_box bg_po">
+                        <div class="recommend_l">
+                            <p class="font_s">건강하게 챙기는 햇빛 에너지</p>
+                            <p class="font_m font_w2">비타민D 2000IU+</p>
+                            <ul class="recommend_info">
+                                <li>ㆍ 뼈의 형성과 유지에 필요</li>
+                                <li>ㆍ 골다공증 발생 위험 감소에 도움</li>
+                            </ul>
+                        </div>
+                        <div class="recommend_r bg_po">
+                            <img src="../../images/drug03.png" alt="">
+                            <p class="font_s">344원/ 일</p>
+                        </div>
+                    </div>
+
+                    <div class="receipt">
+                        <p class="font_n font_w2 mb_1">총 1개 제품</p>
+                        <div class="flex_group">
+                            <p class="font_n">정상가</p>
+                            <p class="font_n">6,900원</p>
+                        </div>
+                        <div class="flex_group">
+                            <p class="font_n">건강지원할인</p>
+                            <p class="font_n">6,900원 <span class="font_s">최대 20%</span></p>
+                        </div>
+
+                        <div class="total devider">
+                            <div class="flex_group">
+                                <p class="font_m font_w2">최종결제 금액</p>
+                                <div class="font_m font_w2 group_right">
+                                    <p>5,5520원</p>
+                                    <span class="underline font_n font_w2">1일 184원</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn_wrap mb_2">
+                        <button class="btn btn_blue popup_on" id="pay_toggle" onclick="slideUp('payment_up');">핏타민 구독하기</button>
+                    </div>
+
+                    <p class="point_c group_center font_s mb_3">
+                        *다음달 결제 진행 전 미리 알림톡을 드려요. <br>
+                        <span class="font_w2">언제든 구독해지를 할 수 있습니다.</span>
+                    </p>
+                </div>
+            </div>
+
+
+            <!----- 핏타민 구독하기  ---->
+            <div class="payment_up" id="payment_up">
+                <div class="overlay" id="toggle_close"></div>
+
+                <div class="payment_inner">
+                    <div class="inner_t flex">
+                        <p class="inner_title">정기구독</p>
+                        <p class="inner_pay">66,800 <span>원</span></p>
+                    </div>
+
+                    <form action="" class="payment_form">
+                        <div class="inner_box">
+                            <!-- 결제금액 확인 -->
+                            <div class="inner_block">
+                                <p class="flex"><span>제품 합계 금액</span> <span>66,800원</span></p>
+                                <p class="flex"><span>배송비</span> <span>0원</span></p>
+                            </div>
+
+                            <!--  총 할인금액 -->
+                            <div class="inner_block">
+                                <p class="block_t flex"><span class="font_b">총 할인 금액</span> <span class="font_b2">-15,040원</span></p>
+                                <p class="flex mb_1"><span class="font_b2">보유 쿠폰 0장</span> 
+                                    <!-- span class="cp_u on">쿠폰사용</span --><!-- 쿠폰이 있을 때 노출 -->
+                                    <span class="cp_u">쿠폰사용</span><!-- 쿠폰이 없을 때 노출 -->
+                                </p>
+                                <p class="flex gray_c mb_1"><span>적용된 쿠폰이 없습니다.</span> <span class="point_c font_b2">0원</span></p>
+                                <div class="cp_box mb_1">
+                                    <p class="font_b2">사용할 수 있는 쿠폰이 없습니다.</p>
+                                    <p class="cp_btn">닫기</p>
+                                </div>
+                                <p class="font_s mb_2">※ 쿠폰은 중복 사용 및 타 할인혜택과 동시 적용이 불가능합니다.</p>
+                                <div class="flex dis_total">
+                                    <p class="font_b2 flex">적립금 <span class="point_c flex">15,040원 보유  <a href="#"><i class="ri-question-fill"></i></a></span></p>
+                                    <p class="point_c font_b2">-15,040원</p>
+                                </div>
+                            </div>
+
+                            <!-- 배송지 정보 입력 -->
+                            <div class="inner_block">
+                                <p class="font_b mb_1">배송지 정보</p>
+
+                                <div class="inner_check add_check">
+                                    <input type="checkbox" id="add_check">
+                                    <label for="add_check">주문자 정보와 동일</label>
+                                </div>
+
+                                <div class="form_block mb_2">
+                                    <label for="rsv_name" class="mb_1">받으시는 분</label>
+                                    <div class="form_block_in">
+                                        <input type="text" id="rsv_name" class="form_bd input_w" value="핏타민">
+                                    </div>
+                                </div>
+    
+                                <div class="form_block mb_2">
+                                    <label for="rsv_phone" class="mb_1">연락처</label>
+                                    <div class="form_block_in">
+                                        <input type="text" id="rsv_phone" class="form_bd input_w" value="012-3456-789">
+                                    </div>
+                                </div>
+            
+                                <div class="form_block mb_2">
+                                    <label for="rsv_add" class="mb_1">주소</label>
+                                    <div class="form_block_in">
+                                        <input type="text" id="rsv_add" class="form_bd" value="06041">
+                                        <button class="btn_reg">주소검색</button>
+                                    </div>
+                                    <div class="form_block_in">
+                                        <input type="text" class="form_bd input_w" value="서울 강남구 논현로135길 10">
+                                    </div>
+                                    <div class="form_block_in">
+                                        <input type="text" class="form_bd input_w" value="시온타워">
+                                    </div>
+                                    <div class="form_block_in">
+                                        <input type="text" class="form_bd input_w" value="(논현동)">
+                                    </div>
+                                </div>
+            
+                                <div class="form_block mb_2">
+                                    <label for="rsv_memo" class="mb_1">배송 요청 사항</label>
+                                    <div class="form_block_in">
+                                        <input type="text" id="rsv_memo" class="form_bd input_w">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--  결제 수단 선택-->
+                            <div class="inner_block">
+                                <p class="font_b">결제 수단 선택</p>
+                                <div class="mycard reserve_card swiper">
+                                    <div class="card_list swiper-wrapper">
+                                        <div class="card_item swiper-slide">
+                                            <div class="card_add card_in">
+                                                <p class="card_name">KB국민</p>
+                                                <p class="card_no">460202500****5055</p>
+                                                <p class="card_select">선택됨</p>
+                                            </div>
+                                        </div>
+                                        <div class="card_item swiper-slide">
+                                            <a href="#" class="card_add">
+                                                <i class="ri-add-fill"></i>
+                                                <p class="font_s font_w">간편결제 카드 추가</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 총 결제금액 안내-->
+                            <div class="inner_block">
+                                <div class="flex inner_total mb_1"><p class="font_b">총 결제금액</p> <p class="point_c font_b2">51,760 <span>원</span></p></div>
+                                <p class="font_s mb_1">※ 핏타민 서비스는 개인 맞춤형 제품으로 결제 완료 시 취소 및 환불이 어렵습니다.</p>
+                                <p class="font_s">※ 카드결제 시 취소 결제금액은 1,000원입니다. (*PG사 정책에 따름)</p>
+
+                                <div class="inner_check">
+                                    <input type="checkbox" id="pay_check">
+                                    <label for="pay_check">(필수) 주문 내용을 확인하였으며, 정기 구독·결제 서비스 가입에 동의합니다.</label>
+                                </div>
+                            </div>
+
+                            <div class="btn_wrap">
+                                <button class="btn btn_blue">결제하기</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer class="footer sub_footer">
+            <div class="bottom_menu">
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon01.svg" alt="">
+                    <span>홈</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon02_on.svg" alt="">
+                    <span>설문</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon03.svg" alt="">
+                    <span>상담</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon04.svg" alt="">
+                    <span>구독</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon05.svg" alt="">
+                    <span>MY</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- swiper slide -->
+    <script type="text/javascript" src="../../scripts/mobile.js"></script> <!-- 추가 스크립트 -->
+
+
+<!--  핏타민 구독하기 버튼 슬라이드업 -->
+<script>
+        const paymentUp = document.getElementById('payment_up'),
+              toggleBtn = document.getElementById('pay_toggle'),
+              toggleClose = document.getElementById('toggle_close')
+
+        if(toggleBtn){
+            toggleBtn.addEventListener('click', () =>{
+                paymentUp.classList.add('on')
+            })
+        }
+
+        if(toggleClose){
+            toggleClose.addEventListener('click', () =>{
+                paymentUp.classList.remove('on')
+            })
+        }
+</script>
+
+</body>
+</html>

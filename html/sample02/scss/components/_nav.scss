@@ -1,0 +1,271 @@
+/***************************************************************
+    09. nav
+***************************************************************/
+.sidebar {
+  width: 16.25rem;
+  box-shadow: var(--gray-s-small);
+  transition: width 0.5s ease;
+  background-color: var(--body-bg);
+
+  .logo {
+    padding: 1.25rem 1.375rem;
+    position: relative;
+
+    a {
+      @include flex;
+      gap: 0.75rem;
+      font-size: 1.375rem;
+      line-height: 1.5rem;
+      font-weight: var(--font-bold);
+      white-space: nowrap;
+    }
+
+    p {
+      opacity: 1;
+    }
+
+    .sidebar_toggle {
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      width: 1.25rem;
+      height: 1.25rem;
+      background-image: url(/images/system/circle_dot.svg);
+      background-size: cover;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  }
+
+  .nav {
+    padding: 0.25rem 0.75rem;
+    &-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    &-grouptitle {
+      padding: 0.5rem 0.75rem;
+    }
+    &-title {
+      @include font_caption;
+      color: var(--text-disabled);
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    &-list {
+      position: relative;
+    }
+
+    &-link {
+      @include flex;
+      gap: 0.5rem;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.375rem;
+      position: relative;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: var(--action-selected);
+      }
+
+      &.active {
+        background: var(--primary-gr);
+        color: var(--light-color);
+
+        .ic_chevron_down {
+          background-image: url(/images/system/chevron_down_w.svg);
+        }
+        .ic_chevron_right {
+          background-image: url(/images/system/chevron_right_w.svg);
+        }
+      }
+
+      &.subOpen {
+        & > .icon_down {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &-icon {
+      width: 1.375rem;
+      height: 1.375rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      &.ic_circle {
+        background-size: 0.75rem;
+        margin-left: 0.5rem;
+      }
+    }
+    &-menu {
+      @include font_body_1;
+      white-space: nowrap;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    &-sub {
+      position: relative;
+      background-color: var(--body-bg);
+
+      .nav-sub {
+        .nav-icon {
+          margin-left: 1rem;
+        }
+
+        .nav-sub {
+          .nav-icon {
+            margin-left: 1.5rem;
+          }
+        }
+      }
+
+      &.subMenu {
+        display: none;
+      }
+    }
+
+    .chip {
+      position: absolute;
+      right: 2.625rem;
+      border-radius: 3rem;
+    }
+
+    .subOpen.open {
+      .ic_chevron_down {
+        transform: rotate(180deg);
+      }
+    }
+    .ic_chevron_right {
+      width: 1.375rem;
+      height: 1.375rem;
+      background-size: cover;
+      transition: all 0.2s;
+      position: absolute;
+      right: 0.75rem;
+    }
+    .ic_chevron_down {
+      width: 1.375rem;
+      height: 1.375rem;
+      background-size: cover;
+      transition: all 0.2s;
+      position: absolute;
+      right: 0.75rem;
+      transform: rotate(0);
+    }
+    .ic_external_link {
+      width: 1.375rem;
+      height: 1.375rem;
+      background-size: cover;
+      transition: all 0.2s;
+      position: absolute;
+      right: 0.75rem;
+    }
+  }
+
+  &.sideIcon {
+    width: 4.375rem;
+
+    .logo {
+      padding: 1.25rem;
+
+      a {
+        margin-inline: auto;
+        gap: 0;
+      }
+
+      p {
+        opacity: 0;
+      }
+    }
+
+    .sidebar_toggle {
+      opacity: 0;
+    }
+
+    .nav {
+      &-link {
+        gap: 0;
+
+        &.active {
+          background: var(--action-selected);
+        }
+      }
+      &-menu {
+        opacity: 0;
+        width: 0;
+      }
+
+      & > .nav-group:last-child .nav-sub {
+        top: initial;
+        bottom: 0;
+      }
+
+      &-title {
+        color: transparent;
+
+        &::after {
+          content: "-";
+          opacity: 1;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          background-color: var(--divider);
+          width: 100%;
+          height: 1px;
+        }
+      }
+
+      &-icon {
+        &.ic_circle {
+          margin-left: 0;
+        }
+      }
+
+      &-sub {
+        position: absolute;
+        border-radius: 0.375rem;
+        box-shadow: var(--gray-s-small);
+        right: -17.375rem;
+        top: 0;
+        padding: 0.5rem;
+        width: 16.25rem;
+
+        .nav-sub {
+          .nav-icon {
+            margin-left: 0;
+          }
+        }
+
+        .nav-link {
+          gap: 0.5rem;
+        }
+
+        .nav-menu {
+          opacity: 1;
+          width: auto;
+        }
+
+        .ic_chevron_right,
+        .ic_chevron_down,
+        .ic_external_link {
+          display: block;
+        }
+
+        .ic_chevron_down {
+          transform: rotate(-90deg);
+        }
+      }
+
+      .ic_chevron_right,
+      .ic_chevron_down,
+      .ic_external_link,
+      .chip {
+        display: none;
+      }
+    }
+  }
+}

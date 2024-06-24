@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>4-1-1.캐시사용,적립내역</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="back"><img src="../../images/icon/system_back.svg" alt="" /></div>
+      <div class="page_name">포인트/적립금 사용내역</div>
+      <div class="header_icon"></div>
+    </header>
+
+    <main class="main" style="background-color: #fff">
+      <div class="tab_menu">
+        <p class="tab_btn active">포인트</p>
+        <p class="tab_btn">적립금</p>
+      </div>
+
+      <!-- 포인트 -->
+      <div class="tab_con">
+        <section class="top_smr">
+          <div class="smr_info">
+            <p class="sub">사용 가능한 포인트</p>
+            <div class="title">
+              999,999원
+              <button class="btn_s btn_basic openEx">적립금 전환하기</button>
+            </div>
+            <p class="span2_f gray02">소멸예정 : 9,800원</p>
+          </div>
+          <p class="smr_btn openPoint mt_0_5">포인트 이용 안내사항</p>
+        </section>
+  
+        
+        <section class="list_wrap">
+          <div class="tab_sort">
+            <p class="sort_btn sort_all active">전체</p>
+            <p class="sort_btn sort_1">적립</p>
+            <p class="sort_btn sort_2">사용</p>
+            <p class="sort_btn sort_3">소멸</p>
+          </div>
+  
+          <div class="list_con">
+            <div class="blank_txt" style="height: 38svh">
+              <p class="txt">사용내역이 없어요.</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="bottom_btn" style="bottom: 1rem;">
+          <p class="txt">모은 포인트로 기프티콘 구매하기</p>
+          <p class="btn_s btn_light btn_img">스토어샵 이동</p>
+        </div>
+      </div>
+
+      <!-- 적립금 -->
+      <div class="tab_con">
+        <section class="top_smr">
+          <div class="smr_info">
+            <p class="sub">사용 가능한 적립금</p>
+            <p class="title">999,999원</p>
+            <p class="span2_f gray02">소멸예정 : 9,800원</p>
+          </div>
+          <p class="smr_btn openResv mt_0_5">적립금 이용 안내사항</p>
+        </section>
+  
+        
+        <section class="list_wrap">
+          <div class="tab_sort">
+            <p class="sort_btn sort_all active">전체</p>
+            <p class="sort_btn sort_1">적립</p>
+            <p class="sort_btn sort_2">사용</p>
+            <p class="sort_btn sort_3">소멸</p>
+          </div>
+  
+          <div class="list_con">
+            <div class="blank_txt" style="height: 38svh">
+              <p class="txt">사용내역이 없어요.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+      
+    </main>
+
+    <!-- 포인트 이용안내 모달 -->
+    <div class="modal modal01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 모달 컨텐츠-->
+      <div class="modal_wrap">
+        <div class="modal_top">
+          <p class="modal_title">포인트 안내사항을 확인해주세요</p>
+        </div>
+        <div class="modal_con">
+          <ul class="list_dot">
+            <li>상품 주문 시 포인트를 사용하실 수 있습니다.</li>
+            <li>최소 주문 금액 없이 포인트를 사용하실 수 있습니다.</li>
+            <li>포인트를 일부 사용한 주문을 취소한 경우 포인트가 다시 적됩니다.</li>
+            <li>포인트 유효기간은 적립일로부터 180일입니다.</li>
+            <li>포인트와 쿠폰은 동시에 사용할 수 있습니다.</li>
+          </ul>
+        </div>
+
+        <div class="btn_wrap">
+          <button class="btn_b btn_basic btnClose">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 적립금 전환 모달 -->
+    <div class="modal modal02">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+      <!-- 모달 컨텐츠-->
+      <div class="modal_wrap">
+        <div class="modal_top">
+          <p class="modal_title">적립금으로 전환할 포인트 금액을
+            입력해주세요</p>
+          <p class="modal_sub">
+            결제 시 전환한 금액만큼 할인될거예요. 단 적립금으로 전환 후에는 포인트로 다시 전환이 불가해요!
+          </p>
+        </div>
+
+        <div class="modal_con">
+          <div class="input_div">
+            <input type="text" id="" class="" placeholder="금액을 입력해주세요" required="">
+          </div>
+          <p class="span3_f mt_0_25">사용가능 포인트 1,000원</p>
+        </div>
+
+        <div class="btn_wrap">
+          <button class="btn_b btn_basic btnClose">전환하기</button>
+          <button class="btn_b btn_trans btnClose">닫기</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 적립금 이용안내 모달 -->
+    <div class="modal modal03">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 모달 컨텐츠-->
+      <div class="modal_wrap">
+        <div class="modal_top">
+          <p class="modal_title">적립금 안내사항을 확인해주세요</p>
+        </div>
+        <div class="modal_con">
+          <ul class="list_dot">
+            <li>핏타민 구독 주문 시 적립금을 사용하실 수 있습니다.</li>
+            <li>최소 주문 금액 없이 적립금을 사용하실 수 있습니다.</li>
+            <li>적립금 일부 사용한 주문을 취소한 경우 적립금이 다시 적립됩니다.</li>
+            <li>적립금 유효기간은 적립일로부터 180일입니다.</li>
+            <li>핏타민 구독 주문 시 적립금과 포인트, 쿠폰은 동시에 사용할 수 있습니다.</li>
+          </ul>
+        </div>
+
+        <div class="btn_wrap">
+          <button class="btn_b btn_basic btnClose">확인</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+      //탭메뉴
+      $(".tab_menu")
+        .find(".tab_btn")
+        .click(function () {
+          $(this).addClass("active");
+          $(this).siblings().removeClass("active");
+        });
+
+      var tabBtn = $(".tab_menu .tab_btn");
+      var tabCont = $(".tab_con");
+
+      tabCont.hide().eq(0).show();
+
+      tabBtn.click(function () {
+        var target = $(this);
+        var index = target.index();
+        // alert(index);
+        tabBtn.removeClass("active");
+        target.addClass("active");
+        tabCont.css("display", "none");
+        tabCont.eq(index).css("display", "block");
+      });
+
+      //filter btn active
+      $(".tab_sort")
+        .find(".sort_btn")
+        .click(function () {
+          $(this).addClass("active");
+          $(this).siblings().removeClass("active");
+        });
+
+      //list filter
+      $(document).ready(function () {
+        let activeCat = "";
+        function filterGroup(group) {
+          if (activeCat != group) {
+            $(".charging_data")
+              .filter("." + group)
+              .show();
+            $(".charging_data")
+              .filter(":not(." + group + ")")
+              .hide();
+            activeCat = group;
+          }
+        }
+
+        $(".sort_all").click(function () {
+          $(".charging_data").show();
+          activeCat = "all";
+        });
+        $(".sort_1").click(function () {
+          filterGroup("sort-1");
+        });
+        $(".sort_2").click(function () {
+          filterGroup("sort-2");
+        });
+        $(".sort_3").click(function () {
+          filterGroup("sort-3");
+        });
+      });
+      /* popup */
+      $(".openPoint").on("click", function () {
+        $(".modal01, body").addClass("open");
+      });
+
+      $(".openEx").on("click", function () {
+        $(".modal02, body").addClass("open");
+      });
+
+      $(".openResv").on("click", function () {
+        $(".modal03, body").addClass("open");
+      });
+      
+      $(".overlay, .btnClose").on("click", function () {
+        $(".popup, .modal, body, .btn_trans").removeClass("open");
+      });
+    </script>
+  </body>
+</html>

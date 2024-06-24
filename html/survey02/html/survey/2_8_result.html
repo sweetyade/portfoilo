@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>2-8.분석결과</title>
+</head>
+
+<style>
+  .modal .modal_wrap{
+    padding: 1.5rem 0;
+  }
+</style>
+<body>
+  
+  <main class="main">
+    <div class="header">
+      <p class="header_back"><img src="../../images/back.svg" alt=""></p>
+    </div>
+
+    <!-- 
+      슬라이드앞장 _front / 뒷장 _back / 다운용이미지 _down(다운은 모바일,pc공통)
+      간 피로 pack01
+      관절 보호 pack02
+      눈 피로 pack03
+      만성 피로 & 면역 관리 pack04
+      수면 부족 pack05
+      순환 관리 필요 pack06
+      스트레스 민감 pack07
+      운동 체력 부족 pack08
+      위장 트러블 pack09
+      채식 지향 pack10
+      체지방 고민 pack11
+      혈당 관리 필요 pack12
+    -->
+    <section class="result_top pd_bottom">
+      <p class="title">핏타민 님의 추천 영양제</p>
+      <div class="swiper top_slide"><!-- 여기 .top_white 변경 -->
+        <div class="swiper-wrapper">
+          <div class="swiper-slide result_smr">
+            <img src="../../images/servey/pack01_front.png" alt="" class="mobile_img"><!-- 모바일시 이 이미지보임 -->
+            <img src="../../images/servey/pack01_front_pc.png" alt="" class="pc_img"><!-- 태블릿,pc는 이미지보임 -->
+          </div>
+
+          <div class="swiper-slide result_smr">
+            <img src="../../images/servey/pack01_back.png" alt="" class="mobile_img"><!-- 모바일시 이 이미지보임 -->
+            <img src="../../images/servey/pack01_back_pc.png" alt="" class="pc_img"><!-- 태블릿,pc는 이미지보임 -->
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <div class="top_icon">
+        <p class="icon_img"><img src="../../images/down.svg" alt=""></p>
+        <p class="icon_img"><img src="../../images/share.svg" alt=""></p>
+      </div>
+    </section>
+
+    <!-- 모바일에서만 노출 -->
+    <section class="result_con">
+      <div class="total_title">
+        <p class="total_name"><span class="name">최대오글자</span>님을 위한</p>
+        <p>핏타민 약사의<br>건강 솔루션이 도착했어요</p>
+      </div>
+      <!-- 추천 -->
+      <div class="result_rcmd">
+        <p class="title" style="gap: 0;"><span class="primary">간 피로 유형</span>은요</p>
+
+        <div class="rcmd_total">
+          <div class="total_info" style="display: none;">
+            <p class="name">최대오글자님!</p>
+            <p class="txt">알코올은 간에서 포도당과 비타민 C를 소모하고 물을 사용해 분해해요. 따라서 물을 지속적으로 섭취해 주고, 당분과 비타민을 섭취한다면 알코올의 배출속도를 높일 수 있어요. </p>
+          </div>
+  
+          <p class="rcmd_txt">뚜렷한 이유 없이 피로감이 계속 돼요</p>
+          <p class="rcmd_txt">최근 술이 약해지고 술이 깨는데 시간이 오래걸려요</p>
+          <p class="rcmd_txt">일주일에 3회 이상 술을 마셔요.</p>
+        </div>
+      </div>
+
+      <!-- 영양제 -->
+      <div class="result_rcmd">
+        <p class="title">충전을 위해 추천해요!<span class="primary">5</span></p>
+
+        <div class="rcmd_total">
+          <div class="total_info">
+            <p class="name">최대오글자님!</p>
+            <p class="txt">알코올은 간에서 포도당과 비타민 C를 소모하고 물을 사용해 분해해요. 따라서 물을 지속적으로 섭취해 주고, 당분과 비타민을 섭취한다면 알코올의 배출속도를 높일 수 있어요. </p>
+          </div>
+        </div>
+
+        <div class="swiper rcmd_goods_slide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide rcmd_goods_list">
+              <p class="img"><img src="../../images/drug_sample.png" alt=""></p>
+
+              <div class="goods_info">
+                <p class="goods_name">가르시니아</p>
+                <p class="goods_txt">최대 4줄 내용이길면 쩜쩜쩜 과다 섭취한 탄수화물의 지방 전환을 억제해주는 탄수화물 섭취가 많은 한국인들의 다이어트에 적합해요최대세줄까지 들어갈 수 있어요 최대 4줄 내용이길면 쩜쩜쩜 과다 섭취한 탄수화물의 지방 전환을 억제해주는 </p>
+                <p class="goods_noti">최대 2줄 소변이 황색으로 변할 수 있지만 인체에 무해해요.소변이 황색으로 변할 수 있지만 인체에 무해해요. 소변이 황색으로 변할 수 있지만 인체에 무해해요.</p>
+              </div>
+            </div>
+            <div class="swiper-slide rcmd_goods_list">
+              <p class="img"><img src="../../images/drug_sample.png" alt=""></p>
+
+              <div class="goods_info">
+                <p class="goods_name">가르시니아</p>
+                <p class="goods_txt">짧으면 이러케 자동으로 밑 노티가 노출됨</p>
+                <p class="goods_noti">소변이 황색으로 변할 수 있지만 인체에 무해해요.</p>
+              </div>
+            </div>
+            <div class="swiper-slide rcmd_goods_list">
+              <p class="img"><img src="../../images/drug_sample.png" alt=""></p>
+
+              <div class="goods_info">
+                <p class="goods_name">가르시니아</p>
+                <p class="goods_txt">과다 섭취한 탄수화물의 지방 전환을 억제해주는 탄수화물 섭취가 많은 한국인들의 다이어트에 적합해요최대세줄까지 들어갈 수 있어요</p>
+                <p class="goods_noti">소변이 황색으로 변할 수 있지만 인체에 무해해요.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <!-- 섭취 -->
+      <div class="result_rcmd">
+        <p class="title">이때 섭취하면 더 좋아요!</p>
+
+        <div class="rcmd_time">
+          <div class="rcmd_time_list">
+            <p class="icon"><img src="../../images/result_sun.svg" alt=""></p>
+            <p class="txt">아침 · 점심 식후</p>
+          </div>
+          <div class="rcmd_time_list">
+            <p class="icon"><img src="../../images/result_drink.svg" alt=""></p>
+            <p class="txt">술 마시는 당일 · 다음날</p>
+          </div>
+          <div class="rcmd_time_list">
+            <p class="icon"><img src="../../images/result_sun.svg" alt=""></p>
+            <p class="txt">아침공복</p>
+          </div>
+          <div class="rcmd_time_list">
+            <p class="icon"><img src="../../images/result_rice.svg" alt=""></p>
+            <p class="txt">식후</p>
+          </div>
+          <div class="rcmd_time_list">
+            <p class="icon"><img src="../../images/result_moon.svg" alt=""></p>
+            <p class="txt">취침전</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 식품 -->
+      <div class="result_rcmd">
+        <p class="title">도움을 주는 야채와 과일</p>
+
+        <!-- 총4개 노출 -->
+        <div class="rcmd_food">
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_frt01.svg" alt=""></p>
+            <p class="txt">감</p>
+          </div>
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_frt02.svg" alt=""></p>
+            <p class="txt">감귤</p>
+          </div>
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_frt03.svg" alt=""></p>
+            <p class="txt">딸기</p>
+          </div>
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_frt04.svg" alt=""></p>
+            <p class="txt">바나나</p>
+          </div>
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_frt05.svg" alt=""></p>
+            <p class="txt">배</p>
+          </div>
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_frt06.svg" alt=""></p>
+            <p class="txt">블루베리</p>
+          </div>
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_frt07.svg" alt=""></p>
+            <p class="txt">사과</p>
+          </div>
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_frt08.svg" alt=""></p>
+            <p class="txt">오렌지</p>
+          </div>
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_frt09.svg" alt=""></p>
+            <p class="txt">체리</p>
+          </div>
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_frt10.svg" alt=""></p>
+            <p class="txt">키위</p>
+          </div>
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_frt11.svg" alt=""></p>
+            <p class="txt">포도</p>
+          </div>
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_vgt01.svg" alt=""></p>
+            <p class="txt">당근</p>
+          </div>
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_vgt02.svg" alt=""></p>
+            <p class="txt">마늘</p>
+          </div>
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_vgt03.svg" alt=""></p>
+            <p class="txt">브로콜리</p>
+          </div>
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_vgt04.svg" alt=""></p>
+            <p class="txt">비트</p>
+          </div>
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_vgt05.svg" alt=""></p>
+            <p class="txt">상추</p>
+          </div>
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_vgt06.svg" alt=""></p>
+            <p class="txt">시금치</p>
+          </div>
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_vgt07.svg" alt=""></p>
+            <p class="txt">양배추</p>
+          </div>
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_vgt08.svg" alt=""></p>
+            <p class="txt">양파</p>
+          </div>
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_vgt09.svg" alt=""></p>
+            <p class="txt">오이</p>
+          </div>
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_vgt10.svg" alt=""></p>
+            <p class="txt">우엉</p>
+          </div>
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_vgt11.svg" alt=""></p>
+            <p class="txt">케일</p>
+          </div>
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_vgt12.svg" alt=""></p>
+            <p class="txt">콩나물</p>
+          </div>
+          <div class="rcmd_food_list">
+            <p class="icon"><img src="../../images/servey/result_vgt13.svg" alt=""></p>
+            <p class="txt">호박</p>
+          </div>
+        </div>
+
+        <p class="span4_f gray03 mt_0_5">보건복지부, ｢한국인을 위한 식생활지침｣ 2021</p>
+      </div>
+
+      <!-- 팁 -->
+      <div class="result_rcmd">
+        <p class="title">약사님의 한 줄 꿀팁</p>
+
+        <div class="rcmd_tip">
+          <p class="rcmd_tip_list">흡연 시 항산화제 섭취가 필요해요.</p>
+          <p class="rcmd_tip_list">음주는 각종 비타민과 미네랄을 소모시켜요.</p>
+          <p class="rcmd_tip_list">식품 또는 영양제로 비타민D를 보충하세요.</p>
+          <p class="rcmd_tip_list">운동은 각종 질병을 예방해요.</p>
+          <p class="rcmd_tip_list">채소는 150g씩 하루 2번 이상 섭취해주세요.</p>
+          <p class="rcmd_tip_list">과일은 100g씩 하루 2번 이상 섭취해주세요.</p>
+          <p class="rcmd_tip_list">성인의 경우 하루 1컵의 우유가 권장돼요.</p>
+        </div>
+      </div>
+
+      <!-- 다른팩추천 -->
+      <div class="result_rcmd">
+        <p class="title">또 다른 추천 에너지 조합</p>
+
+        <div class="rcmd_pack">
+          <div class="rcmd_pack_list">
+            <div class="rcmd_pack_data pack_skyblue">
+              <div class="pack_name">
+                <p class="name">바싹 바싹 마른눈</p>
+                <p class="pack_logo">눈 피로 유형</p>
+                <div class="line_bg">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <p class="pack_info">뻑뻑하고 시리네...⭐</p>
+              <div class="line_bg top">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="line_bg bottom">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="rcmd_pack_data pack_blue">
+              <div class="pack_name">
+                <p class="name">유리멘탈 개복치</p>
+                <p class="pack_logo">스트레스 민감 유형</p>
+                <div class="line_bg">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <p class="pack_info">내 이름은 고난<br>
+                시련이죠.</p>
+              <div class="line_bg top">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="line_bg bottom">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="rcmd_pack_data pack_pink">
+              <div class="pack_name">
+                <p class="name">부기온앤온</p>
+                <p class="pack_logo">순환 관리 필요 유형</p>
+                <div class="line_bg">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <p class="pack_info">왜 자꾸 다리가 붓종?</p>
+              <div class="line_bg top">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="line_bg bottom">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="rcmd_pack_data pack_pruple">
+              <div class="pack_name">
+                <p class="name">자두 자두 졸림</p>
+                <p class="pack_logo">수면 부족 유형</p>
+                <div class="line_bg">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <p class="pack_info">zzZ</p>
+              <div class="line_bg top">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="line_bg bottom">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="rcmd_pack_data pack_green">
+              <div class="pack_name">
+                <p class="name">슬기로운 채식생활</p>
+                <p class="pack_logo">채식 지향 유형</p>
+                <div class="line_bg">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <p class="pack_info">지속가능한 삶을 위해!</p>
+              <div class="line_bg top">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="line_bg bottom">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="rcmd_pack_data pack_bluegreen">
+              <div class="pack_name">
+                <p class="name">프로 다시어터</p>
+                <p class="pack_logo">체지방 고민 유형</p>
+                <div class="line_bg">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <p class="pack_info">난 먹을게!<br>
+                살은 누가 찔래?</p>
+              <div class="line_bg top">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="line_bg bottom">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="rcmd_pack_data pack_red">
+              <div class="pack_name">
+                <p class="name">K-회식의 희생자</p>
+                <p class="pack_logo">간 피로 유형</p>
+                <div class="line_bg">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <p class="pack_info">제 간도 '처음처럼'<br>
+                돌릴 수 있을까요?..</p>
+              <div class="line_bg top">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="line_bg bottom">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="rcmd_pack_data pack_yellow">
+              <div class="pack_name">
+                <p class="name">걍생러의 미라클</p>
+                <p class="pack_logo">운동체력 부족 유형</p>
+                <div class="line_bg">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <p class="pack_info">준비한 체력이 모두<br>
+                소진되어 오늘은 이만...</p>
+              <div class="line_bg top">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="line_bg bottom">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="rcmd_pack_data pack_lightorange">
+              <div class="pack_name">
+                <p class="name">슈가맨</p>
+                <p class="pack_logo">혈당 관리 필요 유형</p>
+                <div class="line_bg">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <p class="pack_info">달콤함이<br>
+                쏘아 올린 작은 공</p>
+              <div class="line_bg top">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="line_bg bottom">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="rcmd_pack_data pack_orange">
+              <div class="pack_name">
+                <p class="name">먹방 유튜버 꿈나무</p>
+                <p class="pack_logo">위장 트러블 유형</p>
+                <div class="line_bg">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <p class="pack_info">매일 밤 열린<br>
+                단짠 파티의 최후</p>
+              <div class="line_bg top">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="line_bg bottom">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="rcmd_pack_data pack_gray">
+              <div class="pack_name">
+                <p class="name">열정부자 체력거지</p>
+                <p class="pack_logo">만성 피로<br>& 면역 관리 유형 </p>
+                <div class="line_bg">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <p class="pack_info">꼬리에 꼬리를<br>
+                무는 ‘피곤함’</p>
+              <div class="line_bg top">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="line_bg bottom">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="rcmd_pack_data pack_white">
+              <div class="pack_name">
+                <p class="name">바스락 관절맨</p>
+                <p class="pack_logo">관절 보호 유형</p>
+                <div class="line_bg">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <p class="pack_info">시큰 시큰<br>
+                헝그리뼈 주의보</p>
+              <div class="line_bg top">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="line_bg bottom">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="btn_fix" style="bottom: 2.5rem; gap: 1rem; opacity: 0;">
+      <!-- 8/2 사전오픈 페이지에서 노출>
+      <p class="pre_rsvbtn">12월 23일(수) 상담예약이 완료되었어요</p -->
+      <!-- 8/17 오픈 후 노출 -->
+      <div class="result_btn">
+        <p class="title">온라인 줄서기예약</p>
+        <p class="txt">에너지팩을 구매하실 수 있어요</p>
+      </div>
+
+      <p class="misc1_f" style="text-align: center;">혹시 사전예약을 하셨나요?</p>
+    </div>
+    
+  </main>
+
+
+  <!-- 온라인 줄서기 팝업 -->
+  <div class="popup popup01">
+    <!-- 팝업안 전체 오버레이 -->
+    <div class="overlay"></div>
+
+    <!-- 팝업 컨텐츠 -->
+    <div class="popup_wrap">
+      <p class="title_single">지금 온라인 줄서기를<br>진행할까요?</p>
+      <!-- 버튼 2개 -->
+      <div class="pop_btn">
+        <button class="btn_m btn_light btnClose">확인</button>
+        <button class="btn_m btn_basic btnClose">탈퇴하기</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 하단 카드모달 클릭시 해당 내용으로 모달 오픈-->
+  <div class="modal modal01">
+    <!-- 팝업안 전체 오버레이 -->
+    <div class="overlay"></div>
+
+    <!-- 모달 컨텐츠-->
+    <div class="modal_wrap" style="max-height: 80svh;">
+      <div class="modal_result">
+
+        <!-- 상단 이미지 다운, 하단 추천팩 제외하고 전체 동일 -->
+        <!-- 상단 슬라이드-->
+        <section class="result_top pd_bottom">
+          <p class="title">최대오글자 님의 건강 유형은?</p>
+          <div class="swiper top_slide"><!-- 여기 .top_white 변경 -->
+            <div class="swiper-wrapper">
+              <div class="swiper-slide result_smr">
+                <img src="../../images/servey/pack01_front.png" alt="" class="mobile_img"><!-- 모바일시 이 이미지보임 -->
+                <img src="../../images/servey/pack01_front_pc.png" alt="" class="pc_img"><!-- 태블릿,pc는 이미지보임 -->
+              </div>
+    
+              <div class="swiper-slide result_smr">
+                <img src="../../images/servey/pack01_back.png" alt="" class="mobile_img"><!-- 모바일시 이 이미지보임 -->
+                <img src="../../images/servey/pack01_back_pc.png" alt="" class="pc_img"><!-- 태블릿,pc는 이미지보임 -->
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+
+
+        <!-- 하단 내용 -->
+        <section class="result_con">
+          <div class="total_title">
+            <p class="total_name"><span class="name">최대오글자</span>님을 위한</p>
+            <p>핏타민 약사의<br>건강 솔루션이 도착했어요</p>
+          </div>
+          <!-- 추천 -->
+          <div class="result_rcmd">
+            <p class="title" style="gap: 0;"><span class="primary">간 피로 유형</span>은요</p>
+    
+            <div class="rcmd_total">
+              <p class="rcmd_txt">뚜렷한 이유 없이 피로감이 계속 돼요</p>
+              <p class="rcmd_txt">최근 술이 약해지고 술이 깨는데 시간이 오래걸려요</p>
+              <p class="rcmd_txt">일주일에 3회 이상 술을 마셔요.</p>
+            </div>
+          </div>
+    
+          <!-- 영양제 -->
+          <div class="result_rcmd">
+            <p class="title">충전을 위해 추천해요!<span class="primary">5</span></p>
+    
+            <div class="rcmd_total">
+              <div class="total_info">
+                <p class="name">최대오글자님!</p>
+                <p class="txt">알코올은 간에서 포도당과 비타민 C를 소모하고 물을 사용해 분해해요. 따라서 물을 지속적으로 섭취해 주고, 당분과 비타민을 섭취한다면 알코올의 배출속도를 높일 수 있어요. </p>
+              </div>
+            </div>
+    
+            <div class="swiper rcmd_goods_slide">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide rcmd_goods_list">
+                  <p class="img"><img src="../../images/drug_sample.png" alt=""></p>
+    
+                  <div class="goods_info">
+                    <p class="goods_name">가르시니아</p>
+                    <p class="goods_txt">최대 4줄 내용이길면 쩜쩜쩜 과다 섭취한 탄수화물의 지방 전환을 억제해주는 탄수화물 섭취가 많은 한국인들의 다이어트에 적합해요최대세줄까지 들어갈 수 있어요 최대 4줄 내용이길면 쩜쩜쩜 과다 섭취한 탄수화물의 지방 전환을 억제해주는 </p>
+                    <p class="goods_noti">최대 2줄 소변이 황색으로 변할 수 있지만 인체에 무해해요.소변이 황색으로 변할 수 있지만 인체에 무해해요. 소변이 황색으로 변할 수 있지만 인체에 무해해요.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide rcmd_goods_list">
+                  <p class="img"><img src="../../images/drug_sample.png" alt=""></p>
+    
+                  <div class="goods_info">
+                    <p class="goods_name">가르시니아</p>
+                    <p class="goods_txt">짧으면 이러케 자동으로 밑 노티가 노출됨</p>
+                    <p class="goods_noti">소변이 황색으로 변할 수 있지만 인체에 무해해요.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide rcmd_goods_list">
+                  <p class="img"><img src="../../images/drug_sample.png" alt=""></p>
+    
+                  <div class="goods_info">
+                    <p class="goods_name">가르시니아</p>
+                    <p class="goods_txt">과다 섭취한 탄수화물의 지방 전환을 억제해주는 탄수화물 섭취가 많은 한국인들의 다이어트에 적합해요최대세줄까지 들어갈 수 있어요</p>
+                    <p class="goods_noti">소변이 황색으로 변할 수 있지만 인체에 무해해요.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+    
+          <!-- 섭취 -->
+          <div class="result_rcmd">
+            <p class="title">이때 섭취하면 더 좋아요!</p>
+    
+            <div class="rcmd_time">
+              <div class="rcmd_time_list">
+                <p class="icon"><img src="../../images/result_sun.svg" alt=""></p>
+                <p class="txt">아침 · 점심 식후</p>
+              </div>
+              <div class="rcmd_time_list">
+                <p class="icon"><img src="../../images/result_drink.svg" alt=""></p>
+                <p class="txt">술 마시는 당일 · 다음날</p>
+              </div>
+              <div class="rcmd_time_list">
+                <p class="icon"><img src="../../images/result_sun.svg" alt=""></p>
+                <p class="txt">아침공복</p>
+              </div>
+              <div class="rcmd_time_list">
+                <p class="icon"><img src="../../images/result_rice.svg" alt=""></p>
+                <p class="txt">식후</p>
+              </div>
+              <div class="rcmd_time_list">
+                <p class="icon"><img src="../../images/result_moon.svg" alt=""></p>
+                <p class="txt">취침전</p>
+              </div>
+            </div>
+          </div>
+    
+          <!-- 식품 -->
+          <div class="result_rcmd">
+            <p class="title">야채와 과일로도 채울 수 있어요</p>
+    
+            <!-- 총4개 노출 -->
+            <div class="rcmd_food">
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_frt01.svg" alt=""></p>
+                <p class="txt">감</p>
+              </div>
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_frt02.svg" alt=""></p>
+                <p class="txt">감귤</p>
+              </div>
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_frt03.svg" alt=""></p>
+                <p class="txt">딸기</p>
+              </div>
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_frt04.svg" alt=""></p>
+                <p class="txt">바나나</p>
+              </div>
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_frt05.svg" alt=""></p>
+                <p class="txt">배</p>
+              </div>
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_frt06.svg" alt=""></p>
+                <p class="txt">블루베리</p>
+              </div>
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_frt07.svg" alt=""></p>
+                <p class="txt">사과</p>
+              </div>
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_frt08.svg" alt=""></p>
+                <p class="txt">오렌지</p>
+              </div>
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_frt09.svg" alt=""></p>
+                <p class="txt">체리</p>
+              </div>
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_frt10.svg" alt=""></p>
+                <p class="txt">키위</p>
+              </div>
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_frt11.svg" alt=""></p>
+                <p class="txt">포도</p>
+              </div>
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_vgt01.svg" alt=""></p>
+                <p class="txt">당근</p>
+              </div>
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_vgt02.svg" alt=""></p>
+                <p class="txt">마늘</p>
+              </div>
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_vgt03.svg" alt=""></p>
+                <p class="txt">브로콜리</p>
+              </div>
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_vgt04.svg" alt=""></p>
+                <p class="txt">비트</p>
+              </div>
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_vgt05.svg" alt=""></p>
+                <p class="txt">상추</p>
+              </div>
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_vgt06.svg" alt=""></p>
+                <p class="txt">시금치</p>
+              </div>
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_vgt07.svg" alt=""></p>
+                <p class="txt">양배추</p>
+              </div>
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_vgt08.svg" alt=""></p>
+                <p class="txt">양파</p>
+              </div>
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_vgt09.svg" alt=""></p>
+                <p class="txt">오이</p>
+              </div>
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_vgt10.svg" alt=""></p>
+                <p class="txt">우엉</p>
+              </div>
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_vgt11.svg" alt=""></p>
+                <p class="txt">케일</p>
+              </div>
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_vgt12.svg" alt=""></p>
+                <p class="txt">콩나물</p>
+              </div>
+              <div class="rcmd_food_list">
+                <p class="icon"><img src="../../images/servey/result_vgt13.svg" alt=""></p>
+                <p class="txt">호박</p>
+              </div>
+            </div>
+    
+            <p class="span4_f gray03 mt_0_5">보건복지부, ｢한국인을 위한 식생활지침｣ 2021</p>
+          </div>
+    
+          <!-- 팁 -->
+          <div class="result_rcmd">
+            <p class="title">식생활습관도 같이 챙겨요</p>
+    
+            <div class="rcmd_tip">
+              <p class="rcmd_tip_list">흡연 시 항산화제 섭취가 필요해요.</p>
+              <p class="rcmd_tip_list">음주는 각종 비타민과 미네랄을 소모시켜요.</p>
+              <p class="rcmd_tip_list">식품 또는 영양제로 비타민D를 보충하세요.</p>
+              <p class="rcmd_tip_list">운동은 각종 질병을 예방해요.</p>
+              <p class="rcmd_tip_list">채소는 150g씩 하루 2번 이상 섭취해주세요.</p>
+              <p class="rcmd_tip_list">과일은 100g씩 하루 2번 이상 섭취해주세요.</p>
+              <p class="rcmd_tip_list">성인의 경우 하루 1컵의 우유가 권장돼요.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- 공유하기 팝업 -->
+  <div class="popup popup02">
+    <!-- 팝업안 전체 오버레이 -->
+    <div class="overlay"></div>
+
+    <!-- 팝업 컨텐츠 -->
+    <div class="popup_wrap">
+      <p class="title_single">재밌는 내 추천 영양제<br>
+        공유해주세요!</p>
+      <!-- 버튼 2개 -->
+      <div class="pop_btn">
+        <button class="btn_m btn_light btnClose">URL<br>
+          복사하기</button>
+        <button class="btn_m btn_basic btnClose">카카오톡으로<br>보내기</button>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/jquery-ui.min.css"></script>
+  <script src="../../js/swiper-bundle.min.js"></script>
+
+  <script>
+    //뒤로가기
+    $(document).ready(function() {
+      // on click
+      $('.header_back').click(function(e){
+        // prevent default behavior
+        e.preventDefault();
+        // Go back 1 page 
+        window.history.back();
+        // can also use 
+        // window.history.go(-1);
+      });
+    });
+
+    //추천영양제
+    var swiper = new Swiper(".rcmd_goods_slide", {
+      slidesPerView: 1,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+
+    //상단
+    var topswiper = new Swiper(".top_slide", {
+      slidesPerView: 1,
+      spaceBetween: 40,
+      effect: "flip",
+      grabCursor: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+
+    //하단버튼 스크롤 노출
+    $(window).scroll(function() {    
+    var scroll = $(window).scrollTop();    
+    if (scroll <= 500) {
+        $(".btn_fix").css("opacity", "0");
+    }else{
+      $(".btn_fix").css("opacity", "1");
+    }
+});
+
+
+//팝업
+$(".result_btn").click(function(){
+  $(".popup01, body").addClass("open");
+})
+
+$(".rcmd_pack_data").click(function(){
+  $(".modal01, body").addClass("open");
+})
+
+$(".btnClose, .overlay").click(function(){
+  $(".popup01, .modal01, body").removeClass("open");
+})
+  </script>
+</body>
+</html>

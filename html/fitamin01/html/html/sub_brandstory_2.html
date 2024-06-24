@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>킥더허들 헬스케어</title>
+    <meta name="keywords" content="킥더허들 헬스케어">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="누구나 누릴 수 있는 일상의 건강">
+    <meta name="format-detection" content="telephone=no">
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <script type="text/javascript" src="<c:url value='/vendors/jquery/jquery-3.6.0.min.js' />"></script>
+
+    <!-- ============================ css ======================= -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link href="../../css/m.common.css" rel="stylesheet">
+    <link href="../../css/m.sub.css" rel="stylesheet">
+
+
+
+    <script type="text/javascript" src="<c:url value='/bootstrap/js/bootstrap.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/vendors/popper/popper.min.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/scripts/modal.js' />"></script> <!-- 모달 스크립트 -->
+    <script type="text/javascript" src="<c:url value='/scripts/common.js' />"></script> <!-- 공통 스크립트 -->
+    <script type="text/javascript" src="<c:url value='/scripts/hybridBridge.js' />"></script> <!-- 네이티브 인터페이스 브릿지 -->
+</head>
+<body>
+    <main class="main" id="top">
+
+        <header class="header" id="header">
+            <nav class="nav">
+                <a href="javascript:goHistoryback();" class="nav_back">
+                    <i class="ri-arrow-left-s-line"></i>
+                </a>
+
+                <h2 class="sub_header">핏타민 소개</h2>
+        
+                <div class="nav_menu" id="nav-menu">
+                    <div class="nav_user">
+                        <a href="#" class="nav_user_link">로그인</a>
+                        <a href="#" class="nav_user_link">마이 페이지</a>
+                    </div>
+        
+                    <!-- ========메뉴 =========-->
+                    <ul class="nav_list">
+                        <li class="nav_item">
+                            <a href="#" class="nav_link active_link">홈</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">핏타민 시작하기</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">마이페이지</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">브랜드 스토리 <i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="nav_dep">
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">핏타민 스토리</a>
+                                </li>
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">핏타민 소개</a>
+                                </li>
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">이용방법</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">고객후기</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">이벤트 · 공지</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">고객센터</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="nav_close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+        
+                    <div class="nav_search">
+                        <input type="text" class="search" placeholder="검색어를 입력해주세요">
+                        <button type="submit" class="search btn_basic">검색</button>
+                    </div>
+        
+                    <!-- ================= quick link ================= -->
+                    <div class="nav_quick">
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg01.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>People</span>
+                                <p>시작부터 섭취까지<br>약사와 함께</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg02.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>Service</span>
+                                <p>과학적인 데이터<br>근거 중심으로</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg03.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>Product</span>
+                                <p>단 1알까지<br>품질우선주의</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg04.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>B2B</span>
+                                <p>기업 건강 복지<br>영양제 정기배송</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="nav_toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </nav>
+        </header>
+        
+        <div class="container" data-layout="container">
+            <div class="sub_wrap">
+                <div class="sub_tab brand_tab">
+                    <a href="#" class="sub_link">서비스</a>
+                    <a href="#" class="sub_link active">사람들</a>
+                    <a href="#" class="sub_link">제품표준</a>
+                    <a href="#" class="sub_link">기업복지</a>
+                </div>
+                <div class="sub_wide">
+                    <img src="../../images/bs_people_img01.png" alt="">
+                    <div class="sub_txt">
+                        <p class="font_l mb_1">We Find your fit</p>
+                        <p class="font_s">핏타민은 눈에 보이지 않음으로 어려웠던 영양제 섭취를 <br>
+                            보다 쉽고 전문적으로 소비자에게 맞는 영양성분을 제공하기 위해 <br>
+                            전문가들이 함께 시작한 개인맞춤형영양제 구독서비스입니다.</p>
+                    </div>
+                </div>
+                <div class="brand_block bg_gray">
+                    <p class="font_title">
+                        #핏타민은 <span class="underline">전문가</span>와 함께합니다.
+                    </p>
+
+                    <ul class="professior_list">
+                        <li class="professior_item">
+                            <div class="professior_top">
+                                <img src="../../images/bs_people_img02.png" alt="">
+                                <div class="professior_text">
+                                    <p class="point_c">참약사</p>
+                                    <p class="font_m">김병주 대표약사</p>
+                                    <p class="font_s">
+                                        - 약국경영대상 대상수상 <br>
+                                        - 참약사 체인약국 대표 <br>
+                                        - 고려대 약대 외래교수 / 경희대 약대 겸임교수
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="professior_btm">
+                                “ 약의 전문가인 약사가 개인맞춤영양 분야 최고의 전문가로서,
+                                당신에게 참 맞는 영양제로 최선을다해 상담드리겠습니다. ”
+                            </div>
+                            <img src="../../images/bs_people_icon01.png" alt="" class="professior_icon icon1">
+                        </li>
+                        <li class="professior_item">
+                            <div class="professior_top">
+                                <img src="../../images/bs_people_img03.png" alt="">
+                                <div class="professior_text">
+                                    <p class="point_c">빅썸</p>
+                                    <p class="font_m">박지예 대표</p>
+                                    <p class="font_s">
+                                        - 이화여자대학교 석사 졸<br>
+                                        - 대웅제약, 이롬 황성주생식, KT&G 근무<br>
+                                        - 식품의약품안전처장 표창장
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="professior_btm">
+                                “건강기능식품 개발 20년의 집약된 노하우를 핏타민에 담아
+                                최선의 제품을 제공하도록 하겠습니다.”
+                            </div>
+                            <img src="../../images/bs_people_icon02.png" alt="" class="professior_icon icon2">
+                        </li>
+                        <li class="professior_item">
+                            <div class="professior_top">
+                                <img src="../../images/bs_people_img04.png" alt="">
+                                <div class="professior_text">
+                                    <p class="point_c">킥더허들 헬스케어</p>
+                                    <p class="font_m">박진환 대표</p>
+                                    <p class="font_s">
+                                        - 핏타민 서비스 기획 총괄<br>
+                                        - 중국 칭화대 생명공학과
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="professior_btm">
+                                “ 누구나 누릴 수 있는 헬스케어 서비스의 첫 시작 핏타민으로
+                                소비자와 약사를 연결하는 올바른 연결고리가 되겠습니다. ”
+                            </div>
+                            <img src="../../images/bs_people_icon03.png" alt="" class="professior_icon icon3">
+                        </li>
+                    </ul>
+
+                    <p class="">소비자의 건강습관을 토대로 부족 영양성분을 파악하기 위한 과학 적 설문 알고리즘 설계, 
+                        영양과 약물의 상호작용까지 고려하기 위한 약사상담을 통해 100만 가지 제품 조합 중 당신에게 
+                        가장 이상적인 조합을 선별해줍니다.</p>
+                </div>
+
+                <div class="brand_blockw">
+                    <p class="font_title mb_1">
+                        <span class="underline">#약사분들의 이야기</span>
+                    </p>
+                    <iframe width="500" height="281" style="max-width:100%;" src="https://www.youtube.com/embed/ue2_qD8Ttqw?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                </div>
+
+                <div class="brand_blockw bg_gray">
+                    <p class="font_title mb_1">
+                        <span class="underline">#함께하는 약사들</span>
+                    </p>
+                    
+                    <div class="swiper professior_slide">
+                        <ul class="swiper-wrapper">
+                          <li class="swiper-slide">
+                            <img src="../../images/bs_people_img05.png" alt="">
+                            <div class="professior_text">
+                                <p class="point_c">사직판도라약국</p>
+                                <p class="font_m">김동배<span>대표약사</span></p>
+                                <p class="font_s">
+                                    - 약사들의 공간 대표
+                                </p>
+                            </div>
+                          </li>
+                          <li class="swiper-slide">
+                            <img src="../../images/bs_people_img06.png" alt="">
+                            <div class="professior_text">
+                                <p class="point_c">부천늘봄약국</p>
+                                <p class="font_m">김태훈<span>대표약사</span></p>
+                                <p class="font_s">
+                                    - (주)참약사 운영위원회
+                                </p>
+                            </div>
+                          </li>
+                          <li class="swiper-slide">
+                            <img src="../../images/bs_people_img07.png" alt="">
+                            <div class="professior_text">
+                                <p class="point_c">해피약국</p>
+                                <p class="font_m">남창원<span>대표약사</span></p>
+                                <p class="font_s">
+                                    - 대한약사회 약국경영활성화 위원회 위원 <br>
+                                    - 헬스조선 자문위원
+                                </p>
+                            </div>
+                          </li>
+                          <li class="swiper-slide">
+                            <img src="../../images/bs_people_img08.png" alt="">
+                            <div class="professior_text">
+                                <p class="point_c">역삼센터약국</p>
+                                <p class="font_m">박승환<span>대표약사</span></p>
+                                <p class="font_s">
+                                    - 전)부츠약국 여의도ifc점 대표약사
+                                </p>
+                            </div>
+                          </li>
+                          <li class="swiper-slide">
+                            <img src="../../images/bs_people_img09.png" alt="">
+                            <div class="professior_text">
+                                <p class="point_c">지안약국</p>
+                                <p class="font_m">배주성<span>대표약사</span></p>
+                                <p class="font_s">
+                                    - (주) 참약사체인 이사 <br>
+                                    - 지안이네약방 블로그 운영중 
+                                </p>
+                            </div>
+                          </li>
+                          <li class="swiper-slide">
+                            <img src="../../images/bs_people_img10.png" alt="">
+                            <div class="professior_text">
+                                <p class="point_c">명동 웰니스약국</p>
+                                <p class="font_m">윤소정<span>대표약사</span></p>
+                                <p class="font_s">
+                                    - 한국 한약제제학회 학술팀 부회장<br>
+                                    - (주) 참약사 이사<br>
+                                    - 대한약사회 한약위원회 위원
+                                </p>
+                            </div>
+                          </li>
+                          <li class="swiper-slide">
+                            <img src="../../images/bs_people_img11.png" alt="">
+                            <div class="professior_text">
+                                <p class="point_c">1등약국</p>
+                                <p class="font_m">장경일<span>책임약사</span></p>
+                                <p class="font_s">
+                                    - 더약솔루션 공동대표<br>
+                                    - 성균관대학교 약학대학원 사회약학박사과정 수료
+                                </p>
+                            </div>
+                          </li>
+                          <li class="swiper-slide">
+                            <img src="../../images/bs_people_img12.png" alt="">
+                            <div class="professior_text">
+                                <p class="point_c">참약사 하남스타약국</p>
+                                <p class="font_m">최용한<span>대표약사</span></p>
+                                <p class="font_s">
+                                    - 하남시약사회 학술위원장<br>
+                                    - (주) 참약사 이사 
+                                </p>
+                            </div>
+                          </li>
+                          <li class="swiper-slide">
+                            <img src="../../images/bs_people_img13.png" alt="">
+                            <div class="professior_text">
+                                <p class="point_c">약사랑약국</p>
+                                <p class="font_m">최태진<span>대표약사</span></p>
+                                <p class="font_s">
+                                    - 대한약국학회 청년위원장
+                                </p>
+                            </div>
+                          </li>
+                          <li class="swiper-slide">
+                            <img src="../../images/bs_people_img16.png" alt="">
+                            <div class="professior_text">
+                                <p class="point_c">삼성참약사약국</p>
+                                <p class="font_m">이준경<span>대표약사</span></p>
+                                <p class="font_s">
+                                    - 대한약사회 국제학회 우수발표상 수상 <br>
+                                    - 비타민, 오메가3, 소화기질환 연구 및 신제품 런칭 (7년)
+                                </p>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+
+                <div class="brand_block group_center">
+                    <img src="../../images/bs_people_img14.png" alt="" width="240">
+                    <img src="../../images/bs_people_img15.png" alt="">
+
+                    <p>핏타민은 약사그룹 ‘참약사’와 함께합니다.</p>
+                </div>
+            </div>
+        </div>
+        <footer class="footer sub_footer">
+            <div class="bottom_menu">
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon01.svg" alt="">
+                    <span>홈</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon02_on.svg" alt="">
+                    <span>설문</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon03.svg" alt="">
+                    <span>상담</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon04.svg" alt="">
+                    <span>구독</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon05.svg" alt="">
+                    <span>MY</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- swiper slide -->
+    <script type="text/javascript" src="../../scripts/mobile.js"></script> <!-- 추가 스크립트 -->
+
+    <script>
+        /* ============ professior ==========  */
+
+        var proSlide = new Swiper(".professior_slide", {
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            loop : true,
+            spaceBetween: 24,
+            coverflowEffect: {
+            rotate: 0,
+            },
+            autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+            },
+            pagination: {
+            el: '.swiper-pagination',
+            },
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+

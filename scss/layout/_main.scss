@@ -1,0 +1,248 @@
+/***************************************************************
+    13. main
+***************************************************************/
+#main {
+  padding-inline: 1.5rem;
+  overflow-x: hidden;
+
+  @include pc_small{
+    padding-inline: 5rem;
+  }
+
+  .under_txt{
+    text-decoration: underline;
+  }
+
+  .link_none{
+    text-decoration: line-through;
+    color: #999;
+  }
+
+  .main_dec {
+    padding-block: 2rem;
+
+    @include pc_small{
+      padding-block: 5rem;
+    }
+
+    .info_title {
+      font-size: 2.5rem;
+      font-weight: $font_b;
+      text-transform: uppercase;
+      font-weight: 900;
+      // -webkit-text-stroke: 1px var(--border-color);
+      text-shadow: -1px 0 var(--border-color), 0 1px var(--border-color), 1px 0 var(--border-color), 0 -1px var(--border-color);
+      color: var(--bg-color);
+      margin-bottom: 3rem;
+      
+    }
+
+    .info_txt {
+      line-height: $lineh;
+    }
+  }
+
+  .main_con {
+    padding-block: 2rem;
+
+    @include pc_small{
+      padding-bottom: 8rem;
+    }
+
+    .title {
+      font-size: var(--large-font-size);
+      font-weight: $font_b;
+      margin-bottom: 1rem;
+    }
+
+    .con_list {
+      border-top: 2px solid var(--border-color);
+      position: relative;
+      .list_data {
+        @include flex;
+        gap: 0.5rem;
+        align-items: baseline;
+        border-bottom: 1px solid var(--border-color);
+        padding-block: 1rem;
+        transition: all 0.3s;
+        position: relative;
+        background:transparent;
+
+        @include pc_small {
+          padding-block: 1.5rem;
+        }
+
+        &:hover {
+          font-style: italic;
+        }
+
+        .data_link {
+          font-size: var(--h3-font-size);
+          font-weight: $font_b;
+          position: relative;
+          width: fit-content;
+          transition: font-weight 0.3s;
+
+          &::after {
+            content: "";
+            width: 0%;
+            position: absolute;
+            left: 0;
+            bottom: 40%;
+            background-color: var(--primary-color);
+            height: 30%;
+
+            // z-index: -1;
+            transition: all 0.8s;
+          }
+
+          &:hover {
+            font-weight: $font_n;
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+        .info {
+          font-size: var(small-font-size);
+          color: var(--sub-text-color);
+          // font-style: italic;
+        }
+      }
+
+      .data_img{
+        border: 1px solid var(--border-color);
+        position: absolute;
+        top: -900px;
+        left: 0;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-position: 0 0;
+        background-size: cover;
+        // transform: translateX(-50%) translateY(-50%);
+        z-index: 9;
+        opacity: 1;
+        visibility: hidden;
+        pointer-events: none;
+        display: none;
+
+        @include pc_small{
+          display: block;
+        }
+
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .detail_container{
+    padding-block: 2rem;
+    width: 100%;
+    position: relative;
+    z-index: 11;
+
+    @include pc_small{
+      padding-block: 5rem;
+      width: 50vw;
+    }
+
+    .detail_header{
+      border-bottom: 1px solid var(--border-color);
+      .title{
+        font-size: var(--h2-font-size);
+        font-weight: $font_b;
+        position: relative;
+        width: fit-content;
+
+        &::after{
+          content: '';
+          width: 100%;
+          height: 60%;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          background-color: var(--primary-color);
+          z-index: -1;
+        }
+      }
+
+      .info{
+        padding-block: 1rem;
+        @include flex;
+        gap: 1rem;
+        font-size: var(--small-font-size);
+        color: var(--sub-text-color);
+        font-weight: $font_b;
+        font-style: italic;
+      }
+    }
+
+    .smr{
+      padding-block: 2rem;
+      font-size: var(--base-font-size);
+      line-height: $lineh;
+    }
+
+    .skill_icon{
+      @include flex;
+      gap: .5rem;
+      padding-bottom: 2rem;
+
+      .icon{
+        font-size: var(--small-font-size);
+        font-weight: $font_b;
+        padding: .5rem .75rem;
+        border-radius: 3rem;
+        width: fit-content;
+        background-color: var(--bg-gray-color);
+        line-height: 1;
+      }
+    }
+
+    .noti{
+      font-size: var(--base-font-size);
+      font-weight: $font_b;
+      text-decoration: underline;
+      padding-bottom: 2rem;
+
+      @include pc_small{
+        display: none;
+      }
+    }
+
+    .detail_img{
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 40vw;
+      bottom: 0;
+      display: none;
+      overflow: hidden;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 1;
+        object-position: top;
+        transition: all 10s;
+      }
+
+      &:hover{
+        img{
+          object-position: bottom;
+        }
+      }
+
+      @include pc_small{
+        display: block;
+      }
+    }
+  }
+}

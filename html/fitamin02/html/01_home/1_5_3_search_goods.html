@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>1-5-3.영양제 추가하기</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="back"><img src="../../images/icon/system_back.svg" alt=""></div>
+      <h2 class="page_name">영양제 추가하기</h2>
+      <div class="header_icon">
+        <button class="btn_s" disabled>등록</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="search_top">
+        <div class="input_block mb_1_5">
+          <div class="input_div">
+            <input type="text" class="clearInput searchInput" placeholder="검색어를 입력해주세요.">
+            <input type="submit" class="btnSearch">
+            <div class="btnClear"></div>
+          </div>
+          <div class="search_drop">
+            <p><span>[브랜드명]</span>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트검색시 상품명 리스트검색시 상품명 리스트검색시 상품명 리스트검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+          </div>
+        </div>
+
+        <div class="search_con">
+          <div class="search_history mb_2">
+            <p class="title">최근 검색어</p>
+
+            <div class="history_list">
+              <p class="list_item">윤내과</p>
+              <p class="list_item">정이비인후과</p>
+              <p class="list_item">박상민</p>
+              <p class="list_item">윤내과</p>
+              <p class="list_item">박상민</p>
+            </div>
+          </div>
+
+          <div class="title_total">
+            <p class="title"><span class="primary">지금 많이 찾는</span> 영양제 브랜드</p>
+          </div>
+          <div class="rk_list mt_0_75">
+            <p class="rk"><span>1</span> 종근당</p>
+            <p class="rk"><span>2</span> 피토틱스</p>
+            <p class="rk"><span>3</span> 안국제약</p>
+            <p class="rk"><span>4</span> 동국제약</p>
+            <p class="rk"><span>5</span> 광동제약</p>
+            <p class="span4_f gray02 mt_0_25">2023년 04월 12일 오후 09:00 기준</p>
+          </div>
+        </div>
+      </section>
+
+      
+    </main>
+
+
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+      // /* ---- 삭제버튼 ------- */
+      $(document).ready(function () {
+        $(".input_div").each(function () {
+          $(this)
+            .find(".clearInput")
+            .on("keyup focus", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 1");
+
+              if ($(this).val().length == 0) {
+                $(this).siblings(".btnClear").attr("style", "opacity: 0");
+              } else {
+                $(this).siblings(".btnClear").attr("style", "opacity: 1");
+              }
+            });
+
+          $(this)
+            .find(".clearInput")
+            .on("blur", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 0");
+            });
+
+          $(this)
+            .find(".btnClear")
+            .on("click touchstart", function () {
+              $(this).closest(".input_div").find(".clearInput").val("");
+              $(this).closest(".input_div").find(".btnClear").attr("style", "opacity: 0");
+              return false;
+            });
+        });
+      });
+
+      //검색 리스트
+      $(".searchInput").focusin(function(){
+        $(".search_drop").slideDown();
+      })
+
+      $(".searchInput").focusout(function(){
+        $(".search_drop").slideUp();
+      })
+
+      //최근검색어 삭제
+      $(".list_item").click(function(){
+        $(this).fadeOut(function(){
+          $(this).remove();
+
+          if($(".list_item").length === 0){
+          $(".search_history").remove()
+        }
+        });
+      })
+    </script>
+  </body>
+</html>

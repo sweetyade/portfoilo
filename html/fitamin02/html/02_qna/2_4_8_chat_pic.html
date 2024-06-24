@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <script src="../../js/lottie-player.js"></script>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>2-4-8.채팅상담 - 사진등록안내</title>
+  </head>
+  <body>
+    <header class="header bg_black">
+      <div class="back"></div>
+      <h2 class="page_name">사진으로 인증하기</h2>
+      <div class="header_icon"><p class="closeBtn_wt"></p></div>
+    </header>
+
+    <main class="main bg_block">
+      <div class="pic_sample">
+        <p class="icon"><img src="../../images/icon/certification_cam.svg" alt=""></p>
+        <p class="title">약사상담을 위해<br>본인확인이 필요합니다.</p>
+        <p class="txt">본인확인을 위해 얼굴이 보이는 사진을 등록해주세요. </p>
+      </div>
+
+      <div class="pic_img">
+        <img src="../../images/cam_sample.png" alt="">
+        <p class="layer_pic"><img src="../../images/cam_overlay.png" alt=""></p>
+      </div>
+
+      <div class="btn_fix">
+        <button class="btn_b btn_light">촬영시작</button>
+      </div>
+    </main>
+
+    <!-- 사진등록 확인 모달-->
+    <div class="modal modal01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 모달 컨텐츠-->
+      <div class="modal_wrap">
+        <div class="modal_top">
+          <p class="modal_title">사진 등록 전에 꼭 확인해주세요!</p>
+          <p class="modal_sub">반드시 본인 사진을 올려주셔야해요.</p>
+        </div>
+
+        <div class="modal_con">
+          <ul class="list_dot">
+            <li>영양제 상담은 개인 건강 맞춤 상담을 위해 본인확인이 반드시 필요합니다.</li>
+            <li>채팅상담 과정 중 본인확인을 요청할 수 있어요.</li>
+            <li>본인 사진이 아닐 경우 향후 채팅상담 이용에 제한이 있을 수 있습니다. </li>
+          </ul>
+        </div>
+        <div class="btn_wrap">
+          <button class="btn_b btn_basic modalClose">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 나가기 팝업 -->
+    <div class="popup popup01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 팝업 컨텐츠 -->
+      <div class="popup_wrap">
+        <p class="pop_title">페이지를 나가시겠어요?</p>
+        <p class="pop_txt">지금 페이지를 나가시면 작성 중인<br>
+          내용이 저장되지 않고 사라져요.</p>
+        <!-- 버튼 2개 -->
+        <div class="pop_btn">
+          <button class="btn_m btn_light popClose">닫기</button>
+          <button class="btn_m btn_red popClose">나가기</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+      //popup
+      $(".closeBtn_wt").on("click", function () {
+        $(".popup01, body").addClass("open");
+      });
+
+      $(".btn_b").on("click", function () {
+        $(".modal01, body").addClass("open");
+      });
+
+      $(".overlay, .modalClose, .popClose").on("click", function () {
+        $(".popup, .modal, body").removeClass("open");
+      });
+    </script>
+  </body>
+</html>

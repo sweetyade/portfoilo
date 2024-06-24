@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>추천영양제 조합찾기 - 1-1.방법 선택</title>
+</head>
+<body>
+  <main class="main">
+    <div class="header">
+      <p class="header_back"><img src="../../images/back.svg" alt=""></p>
+    </div>
+
+    <div class="contents">
+      <div class="servey_top">
+        <div class="servey_title">
+          <p class="title">나만의 영양제 조합,<br>
+            어떤 방법으로 알려드릴까요?</p>
+        </div>
+      </div>
+      <div class="select_btn">
+        <p class="select_place">지금 여기서<br>찾을게요</p>
+        <p class="select_talk">카카오톡으로<br>받을게요</p>
+      </div>
+    </div>
+  </main>
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/jquery-ui.min.css"></script>
+
+  <script>
+    //뒤로가기
+    $(document).ready(function() {
+      // on click
+      $('.header_back').click(function(e){
+        // prevent default behavior
+        e.preventDefault();
+        // Go back 1 page 
+        window.history.back();
+        // can also use 
+        // window.history.go(-1);
+      });
+    });
+
+    
+      
+    //다음페이지
+    $(".select_btn p").click(function(){
+      $(this).addClass("active");
+
+      setTimeout(function() {
+        window.location.href = "1_1_1_phone.html";
+      }, 1000);
+    })
+  </script>
+</body>
+</html>

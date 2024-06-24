@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/guide.css" />
+    <title>DESIGN GUIDE</title>
+  </head>
+
+  <style>
+    .input_block{
+      width: calc(100% / 4);
+    }
+  </style>
+  <body>
+    <main id="guide_main">
+      <!-- menu -->
+      <nav id="guide_nav">
+        <h1>design guide</h1>
+
+        <div class="nav_menu">
+          <a href="guide.html">typography</a>
+          <a href="guide_color.html">color</a>
+          <a href="guide_icon.html">icon</a>
+          <a href="guide_form.html" class="active">form</a>
+          <a href="guide_button.html">button</a>
+          <a href="guide_popup.html">popup</a>
+          <a href="guide_layout.html">layout</a>
+          <a href="guide_component.html">component</a>
+        </div>
+      </nav>
+
+      <!-- contents -->
+      <section class="container">
+        <div class="contents">
+          <h2>form</h2>
+
+          <div class="guide_info">
+            <p class="small_f">- 인풋 .input_block</p>
+            <p class="small_f">- 라벨미포함 인풋영역 div .input_div</p>
+            <p class="small_f">- 토클 .toggle_block</p>
+            <p class="small_f">- 체크박스 .check_block </p>
+            
+          </div>
+
+          <!-- text input -->
+          <div class="guide_block">
+            <h3>text input</h3>
+            <div class="guide_data">
+              <p class="title">text │ password │ number</p>
+              <div class="data flex_top" style="gap: 1rem; flex-wrap: wrap">
+                <!-- 기본인풋 -->
+                <div class="input_block">
+                  <label for="input01">기본인풋</label>
+                  <div class="input_div flex_btw">
+                    <input type="text" id="input01" placeholder="이메일 형식을 확인해 주세요.">
+                  </div>
+                  <p class="input_error"><i class="ri-error-warning-fill"></i> 오류,경고메세지</p>
+                  <p class="input_info">기본안내메세지</p>
+                  <p class="input_ok">기본안내메세지</p>
+                </div>
+
+                <!-- 리드온리 -->
+                <div class="input_block">
+                  <label for="input02">리드온리,수정불가</label>
+                  <div class="input_div flex_btw">
+                    <input type="text" id="input02" placeholder="이메일 형식을 확인해 주세요." disabled>
+                  </div>
+                </div>
+
+                <!-- 버튼 포함 인풋 -->
+                <div class="input_block">
+                  <label for="input03">텍스트인풋 + 버튼</label>
+                  <div class="input_div flex_btw">
+                    <input type="text" id="input03" placeholder="이메일 형식을 확인해 주세요.">
+                    <button class="btn_b btn_basic">중복확인</button>
+                  </div>
+                </div>
+
+                <!-- 이미지 추가 -->
+                <div class="input_block">
+                  <label for="input04">이미지미리보기 + 파일등록</label>
+                  <div class="input_div flex_btw">
+                    <div class="file_img"><a href="#" target="_blank"><img src="../../images/login_bg.jpg" alt=""></a></div><!-- 이미지 클릭하면 새창으로 크게보기 ㄴ-->
+                    <input type="file" id="input04" placeholder="파일을 선택해주세요.">
+                    <button class="btn_b btn_basic">등록하기</button>
+                  </div>
+                  <p class="input_info">파일은 pdf, jpg 파일로 업로드 해주세요. 최대 2MB까지 첨부가 가능합니다.</p>
+                </div>
+
+                <!-- 연속된 인풋 -->
+                <div class="input_block mt_1_5">
+                  <label for="input05">연속된 인풋블록</label>
+                  <div class="input_div flex_btw">
+                    <input type="text" id="input05" placeholder="우편번호">
+                    <button class="btn_b btn_basic">우편번호 찾기</button>
+                  </div>
+                  <div class="input_div mt_0_5">
+                    <input type="text" id="" placeholder="주소">
+                  </div>
+                  <div class="input_div mt_0_5">
+                    <input type="text" id="" placeholder="상세주소">
+                  </div>
+                </div>
+            </div>
+            </div>
+          </div>
+
+          <!--textarea -->
+          <div class="guide_block">
+            <h3>textarea</h3>
+            <div class="guide_data">
+              <p class="title">textarea</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="input_block">
+                  <label for="pharm_txt">약국소개</label>
+                  <div class="textarea_div">
+                    <textarea name="" id="pharm_txt" cols="30" rows="5" placeholder="약국 소개글을 작성해주세요."></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--select -->
+          <div class="guide_block" style="display: none;">
+            <h3>select</h3>
+            <div class="guide_data">
+              <p class="title">select</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap; align-items: flex-end">
+                <!-- 리스트 셀렉트 -->
+                <div class="select_block">
+                  <label for="select01">배송 요청사항</label>
+                  <button class="selectBtn" id="select01">리스트 셀렉트박스</button>
+                  <ul class="optionList">
+                    <li class="optionItem">셀렉트박스 선택시</li>
+                    <li class="optionItem">아래로 리스트가 나옵니다</li>
+                    <li class="optionItem">옵션3</li>
+                    <li class="optionItem">옵션4</li>
+                  </ul>
+                </div>
+
+                <!-- 모달셀렉트 -->
+                <div class="select_block">
+                  <div class="overlay"></div>
+                  <label for="select01">배송 요청사항</label>
+                  <button class="selectBtn" id="">모달셀렉트박스</button
+                  ><!-- .optSlt -->
+                  <ul class="optionmodal">
+                    <li class="optionItem">셀렉트박스 선택시</li>
+                    <li class="optionItem">하단에서 위로 리스트가 나옵니다</li>
+                    <li class="optionItem">기본 옵션리스트</li>
+                    <li class="optionItem op_disabled">선택불가능한 리스트</li>
+                    <p class="toast">30회 이상 섭취해야 후기작성이 가능해요</p>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--toggle -->
+          <div class="guide_block">
+            <h3>toggle</h3>
+            <div class="guide_data">
+              <p class="title">toggle</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="toggle_block">
+                  <input type="checkbox" class="toggle" id="ipToggle" />
+                  <label for="ipToggle" class="toggle_btn"></label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--checkbox -->
+          <div class="guide_block">
+            <h3>checkbox</h3>
+            <div class="guide_data">
+              <p class="title">checkbox │ radio</p>
+              <div class="data">
+                <div class="check_block">
+                  <input type="checkbox" id="check_01" checked>
+                  <label for="check_01">체크됨</label>
+                </div>
+                <div class="check_block">
+                  <input type="checkbox" id="check_02">
+                  <label for="check_02">체크안됨</label>
+                </div>
+                <div class="check_block">
+                  <input type="radio" id="check_03" name="check_radio" checked>
+                  <label for="check_03">체크됨</label>
+                </div>
+                <div class="check_block">
+                  <input type="radio" id="check_04" name="check_radio" >
+                  <label for="check_04">체크안됨</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      // /* ---- 삭제버튼 ------- */
+      $(document).ready(function () {
+        $(".input_div").each(function () {
+          $(this)
+            .find(".clearInput")
+            .on("keyup focus", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 1");
+
+              if ($(this).val().length == 0) {
+                $(this).siblings(".btnClear").attr("style", "opacity: 0");
+              } else {
+                $(this).siblings(".btnClear").attr("style", "opacity: 1");
+              }
+            });
+
+          $(this)
+            .find(".clearInput")
+            .on("blur", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 0");
+            });
+
+          $(this)
+            .find(".btnClear")
+            .on("click touchstart", function () {
+              $(this).closest(".input_div").find(".clearInput").val("");
+              $(this).closest(".input_div").find(".btnClear").attr("style", "opacity: 0");
+              return false;
+            });
+        });
+      });
+
+      /* 패스워드 */
+      $(".pass_view").click(function () {
+        $(this).toggleClass("inputPass");
+        var input = $($(this).attr("toggle"));
+        if (input.attr("type") == "password") {
+          input.attr("type", "text");
+        } else {
+          input.attr("type", "password");
+        }
+      });
+
+      $(document).ready(function () {
+        $(".pass_view").on("click", function () {
+          $(this).toggleClass("pass_view-on");
+        });
+      });
+
+      /* 넘버인풋 맥스 */
+      function maxLengthChk(object) {
+        if (object.value.length > object.maxLength) {
+          object.value = object.value.slice(0, object.maxLength);
+        }
+      }
+
+      /* 셀렉트 */
+      const label = document.querySelectorAll(".selectBtn");
+      label.forEach(function (lb) {
+        lb.addEventListener("click", (e) => {
+          let optionList = lb.nextElementSibling;
+          let optionItems = optionList.querySelectorAll(".optionItem");
+          clickLabel(lb, optionItems);
+        });
+      });
+      const clickLabel = (lb, optionItems) => {
+        if (lb.parentNode.classList.contains("active")) {
+          lb.parentNode.classList.remove("active");
+          optionItems.forEach((opt) => {
+            opt.removeEventListener("click", () => {
+              handleSelect(lb, opt);
+            });
+          });
+        } else {
+          lb.parentNode.classList.add("active");
+          optionItems.forEach((opt) => {
+            opt.addEventListener("click", () => {
+              handleSelect(lb, opt);
+            });
+          });
+        }
+      };
+      const handleSelect = (label, item) => {
+        label.innerHTML = item.textContent;
+        label.parentNode.classList.remove("active");
+        label.classList.add("optSlt");
+      };
+    </script>
+  </body>
+</html>

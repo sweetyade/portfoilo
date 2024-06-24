@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- ================== css ========================= -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="../../css/lab01.css">
+
+  <title>실험실1 질염 : 나는 무슨 질염일까?</title>
+</head>
+<body>
+  <div class="lab_wrap">
+    <section class="lab_servey grid slide_bg">
+      <!-- 설문 상단 -->
+      <div class="lab_top">
+        <a href="#" class="back_icon"><i class="ri-arrow-left-s-line"></i></a>
+
+        <div class="lab_step">
+          <div class="stap_txt">
+            <p class="step_info">분비물 관찰이 중요해요.</p>
+            <p class="step_no">3/8</p>
+          </div>
+          <div class="step_bar">
+            <div class="progressbar"><p class="prg_w" style="max-width:calc((100% / 8) * 3);" data-width="prg_bar"></p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 설문 내역 -->
+      <div class="lab_check lab_slide grid">
+        <h2 class="lab_q">Q3. 분비물은 어떤 모습인가요?</h2>
+
+        <div class="lab_q_list">
+          <div class="mySwiper lab_a_slide">
+            <div class="lab_slide_list swiper-wrapper">
+              <div class="lab_slide_item grid swiper-slide">
+                <input type="radio" name="slide_check" id="slidec01" checked>
+                <label for="slidec01"></label>
+                <p class="slide_txt">우유 같은 흰 색<br>치즈, 두부 덩어리같은 모양</p>
+  
+                <img src="../../images/lab01_img02.svg" alt="" class="slide_img">
+              </div>
+  
+              <div class="lab_slide_item grid swiper-slide">
+                <input type="radio" name="slide_check" id="slidec02">
+                <label for="slidec02"></label>
+                <p class="slide_txt">맑은 회색빛<br>끈적이는 느낌</p>
+  
+                <img src="../../images/lab01_img01.svg" alt="" class="slide_img">
+              </div>
+  
+              <div class="lab_slide_item grid swiper-slide">
+                <input type="radio" name="slide_check" id="slidec03">
+                <label for="slidec03"></label>
+                <p class="slide_txt">녹색 빛을 띄는 황색의 분비물<br>양이 많은 경우</p>
+  
+                <img src="../../images/lab01_img04.svg" alt="" class="slide_img">
+              </div>
+  
+              <div class="lab_slide_item grid swiper-slide">
+                <input type="radio" name="slide_check" id="slidec04">
+                <label for="slidec04"></label>
+                <p class="slide_txt">누런 분비물</p>
+  
+                <img src="../../images/lab01_img05.svg" alt="" class="slide_img">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- =================== js ====================== -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".lab_a_slide", {
+      slidesPerView: 'auto',
+    });
+  </script>
+  
+</body>
+</html>

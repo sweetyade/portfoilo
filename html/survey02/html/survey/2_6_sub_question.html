@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>2.설문 - 2-6.서브질문</title>
+</head>
+<body>
+  <main class="main">
+    <div class="header">
+      <p class="header_back"><img src="../../images/back.svg" alt=""></p>
+    </div>
+
+    <div class="contents">
+      <div class="servey_top">
+        <div class="count">
+          <p class="now">02</p>
+          <p class="total">/ <span>12</span></p>
+        </div>
+        <div class="servey_title">
+          <p class="title">다음 중 해당하는 것을<br>모두 선택해주세요</p>
+          <p class="sub_txt">최대 5개까지 중복 선택이 가능해요</p>
+        </div>
+      </div>
+
+      <div class="select_list sub_list" id="selectList">
+        <div class="list_btn">
+          <p class="icon"></p>
+          <p class="txt">지금 흡연하고 있어요</p>
+        </div> 
+        <div class="list_btn">
+          <p class="icon"></p>
+          <p class="txt">술을 주 3회, 최소 5잔 이상 마셔요</p>
+        </div>
+        <div class="list_btn">
+          <p class="icon"></p>
+          <p class="txt">하루에 커피 2잔 이상 마셔요</p>
+        </div>
+        <div class="list_btn">
+          <p class="icon"></p>
+          <p class="txt">30분 이상 햇빛을 쬐는 건<br>
+            일주일에 3번 미만이에요</p>
+        </div>
+        <div class="list_btn allclear">
+          <p class="icon icon_bg"></p>
+          <p class="txt">해당하는게 없어요</p>
+        </div>
+      </div>
+
+      <p class="next_btn" onclick="location.href='2_7_loading.html';"><img src="../../images/arrow_next.svg" alt=""></p>
+    </div>
+  </main>
+  <script src="../../js/jquery.min.js"></script>
+  <!-- <script src="../../js/jquery-ui.min.css"></script> -->
+
+  <script>
+    //뒤로가기
+    $(document).ready(function() {
+      // on click
+      $('.header_back').click(function(e){
+        // prevent default behavior
+        e.preventDefault();
+        // Go back 1 page 
+        window.history.back();
+        // can also use 
+        // window.history.go(-1);
+      });
+    });
+
+    //설문영역 슬라이드
+
+    //선택
+    $(".list_btn").click(function(){
+      // $(this).toggleClass("active");
+      if($(this).hasClass("active")){
+        $(this).removeClass("active");
+        $(this).children(".icon").addClass("icon_bg")
+      }else if($(this).hasClass("allclear")){
+        $(this).siblings().removeClass("active");
+        $(this).addClass("active");
+      }else{
+        $(".allclear").removeClass("active")
+        $(this).addClass("active");
+        
+      }
+    })
+
+    //선택 - 아이콘 전체 통일
+    // $(".list_btn").click(function(){
+    //   var iconImg = $(this).find("img");
+    //   $(this).toggleClass("active");
+
+    //   if($(this).hasClass("active")){
+    //     iconImg.attr("src", iconImg.attr("src").replace("_off", "_on"));
+    //   }
+    //   else{
+    //     iconImg.attr("src", iconImg.attr("src").replace("_on", "_off"));
+    //   }
+    // });
+
+    // $(".allclear").click(function () {
+    //   $(this).siblings().removeClass("active")
+    // })
+
+
+  </script>
+</body>
+</html>

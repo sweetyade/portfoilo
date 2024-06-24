@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Description" content="키라에듀, 법정직무교육, 장애인 인식개선, 성희롱 예방, 병원인증, 환급교육, 근로자카드, 우편원격">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&family=Roboto:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+  <link rel="stylesheet" href="css/css.css" />
+  <title>키라에듀 - (온라인기업교육) 한국안전교육기술원</title>
+ </head>
+<body>
+<div id="admin_wrap">
+	<div id="admin_header">
+		<h1>한국학원총연합회 전라남도지회 관리자 시스템</h1>
+	</div>
+
+	<div id="admin_container" class="clearfix">
+		<div class="admin_sub">
+			<div class="admin_log">
+				<p><span>[전라남도학원연합회2]</span>님<br>환영합니다.</p>
+			</div>
+			<p class="btn_005"><a href="#">로그아웃</a></p>
+
+			<div class="sub_menu">
+				<ul>
+					<li><a href="#">학원정보관리</a></li>
+					<li><a href="#" class="select">학원정보등록</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="admin_contentes">
+			<div class="admin_tab">
+				<ul class="clearfix">
+					<li><a href="#">수강생관리</a></li>
+					<li><a href="#" class="select">학원정보관리</a></li>
+				</ul>
+			</div>
+			<form>
+				<div class="admin_joinform">
+					<h2>개별 등록</h2>
+
+					<ul>
+						<li>
+							<label for="adminjoin1" class="width180">지역<span class="f_c_red">*</span></label>
+							<select name="" class="width150 m_right10" id="adminjoin1">
+								<option value="">강진군</option>
+								<option value="">고흥군</option>
+								<option value="">곡성군</option>
+								<option value="">광양시</option>
+								<option value="">구례군</option>
+								<option value="">나주시</option>
+								<option value="">담양군</option>
+								<option value="">목포시</option>
+								<option value="">무안군</option>
+								<option value="">보성군</option>
+								<option value="">순천시</option>
+								<option value="">신안군</option>
+								<option value="">여수시</option>
+								<option value="">영광군</option>
+								<option value="">영암군</option>
+								<option value="">완도군</option>
+								<option value="">장성군</option>
+								<option value="">장흥군</option>
+								<option value="">진도군</option>
+								<option value="">함평군</option>
+								<option value="">해남군</option>
+								<option value="">화순군</option>
+							</select>
+						</li>
+						<li><label for="adminjoin2" class="width160">학원명<span class="f_c_red">*</span></label><input type="text" id="adminjoin2" title="학원명" value="" class="width300"/></li>
+						<li><label for="adminjoin3" class="width160">사업자번호<span class="f_c_red">*</span></label><input type="text" id="adminjoin3" title="사업자번호" value="" class="width300"/></li>
+						<li>
+							<label for="adminjoin4" class="width160">주소<span class="f_c_red">*</span></label>
+							<div class="">
+								<p><input type="text" id="adminjoin4" title="주소" value="" class="width300 m_right10" placeholder="주소"/><input type="text" title="주소" value="" class="width180 m_right10" placeholder="우편번호"/><span class="btn_004 width100"><a href="#">주소검색</a></span></p>
+								<p><input type="text" id="adminjoin4" title="상세주소" value="" class="width400" placeholder="상세주소를 입력해주세요"/></p>
+							</div>
+						</li>
+						<li><label for="adminjoin5" class="width160">개원일</label><input type="text" id="adminjoin5" title="개원일" value="" class="width150"/><span class="btn_calendar"><a href="#"></a></span></li>
+						<li>
+							<label for="adminjoin6" class="width160">개원상태</label>
+							<select name="" class="width150 m_right10" id="adminjoin6">
+								<option value="">개원</option>
+								<option value="">폐원</option>
+							</select>
+						</li>
+						<li><label for="adminjoin7" class="width160">분야</label><input type="text" title="분야" value="" id="adminjoin7" class="width300"/></li>
+						<li><label for="adminjoin8" class="width160">종류</label><input type="text" title="종류" id="adminjoin8" value="" class="width300"/></li>
+						<li><label for="adminjoin9" class="width160">학원설립관리자<span class="f_c_red">*</span></label><input type="text" id="adminjoin9" title="학원설립관리자" value="" class="width300"/></li>
+						<li>
+							<label for="adminjoin10" class="width160">회원구분<span class="f_c_red">*</span></label>
+							<select name="" class="width150 m_right10" id="adminjoin10">
+								<option value="">선택</option>
+								<option value="">비회원</option>
+								<option value="">정회원</option>
+							</select>
+						</li>
+					</ul>
+					<p class="btn_004 width200 m_right10"><a href="#">등록하기</a></p>
+					<p class="btn_005 width100"><a href="#">초기화</a></p>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="bg_color">
+	<div id="footer" class="clearfix">
+		<div class="cs_center">
+			<p>학습지원센터 <span class="f_c_red">1544-9335</span></p>
+			<p>평일 : 09:00 ~ 18:00 (주말, 공휴일 제외)</p>
+		</div>
+		<address>(08592) 서울특별시 금천구 가산디지털1로 75-15 (가산동 345-19) 가산 하우스디 와이즈타워 6층 621호~625호 ㈜모두의 러닝<br>
+		<span>주식회사 모두의러닝</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;대표 : 이영신&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;사업자등록번호 : 272-81-01049&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;통신판매업번호 : 2020-서울금천-2107&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEL : 1544-9335 <br>
+		COPYRIGHT 2021 모두의러닝 ALL RIGHTS RESERVED.
+	</address>
+	</div>
+</div>
+</body>
+</html>

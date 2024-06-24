@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>	1-5-1.알림추가 	- 섭취중인 영양제 없음</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="back"><img src="../../images/icon/system_back.svg" alt=""></div>
+      <h2 class="page_name">알림설정</h2>
+      <div class="header_icon">
+        <button class="btn_s">등록</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- 상단 알림설정 -->
+      <section class="add_alaram pd_bottom">
+        <p class="span1_fb">섭취 알림시간</p>
+        <p class="txt_date mb_1_5">
+          <span>월 화 수 금</span>
+          <span>오후 04시 10분</span>
+        </p>
+
+        <div class="time_slide">
+          <!-- 오전/오후-->
+          <div class="slide_list">
+            <div class="swiper slide_day">
+              <div class="swiper-wrapper">
+                <p class="swiper-slide">오전</p>
+                <p class="swiper-slide">오후</p>
+              </div>
+            </div>
+  
+            <!-- 시간 -->
+            <div class="swiper slide_time">
+              <div class="swiper-wrapper">
+                <p class="swiper-slide">00</p>
+                <p class="swiper-slide">01</p>
+                <p class="swiper-slide">02</p>
+                <p class="swiper-slide">03</p>
+                <p class="swiper-slide">04</p>
+                <p class="swiper-slide">05</p>
+                <p class="swiper-slide">06</p>
+                <p class="swiper-slide">07</p>
+                <p class="swiper-slide">08</p>
+                <p class="swiper-slide">09</p>
+                <p class="swiper-slide">10</p>
+                <p class="swiper-slide">11</p>
+              </div>
+            </div>
+  
+            <!-- 분 -->
+            <div class="swiper slide_min">
+              <div class="swiper-wrapper">
+                <p class="swiper-slide">00</p>
+                <p class="swiper-slide">10</p>
+                <p class="swiper-slide">20</p>
+                <p class="swiper-slide">30</p>
+                <p class="swiper-slide">40</p>
+                <p class="swiper-slide">50</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="check_block mt_1">
+          <div class="input_check">
+            <input type="checkbox" id="checkbox02" checked="">
+            <label for="checkbox02" class="ck_circle">매일 섭취해요</label>
+          </div>
+        </div>
+        
+
+        <div class="select_day mt_1">
+          <p class="active">월</p>
+          <p>화</p>
+          <p>수</p>
+          <p>목</p>
+          <p>금</p>
+          <p>토</p>
+          <p>일</p>
+        </div>
+      </section>
+
+      <!-- 알림 토글 -->
+      <div class="settion_div">
+        <div class="setting_info">
+          <p class="title">전화로도 알려주세요</p>
+          <p class="txt">알람시간 10분 후 전화알람을 받을 수 있어요.</p>
+        </div>
+        <div class="toggle_block">
+          <input type="checkbox" class="toggle" id="ipToggle" checked>
+          <label for="ipToggle" class="toggle_btn"></label>
+        </div>
+      </div>
+      
+      <!-- 영양제 리스트 -->
+      <section class="add_alarm_list pd_bottom_l">
+        <div class="title_btw mb_1">
+          <p class="title">섭취 중인 영양제</p>
+          <button class="btn_s btn_white">추가하기</button>
+        </div>
+
+        <p class="list_none">섭취할 영양제를 추가해주세요</p>
+
+        <div class="goods_list">
+
+        </div>
+      </section>
+
+      <div class="btn_fix">
+        <button class="btn_b btn_basic">추가하기</button>
+
+      </div>
+    </main>
+
+
+    <!-- 뒤로가기시 팝업 -->
+    <div class="popup">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 팝업 컨텐츠 -->
+      <div class="popup_wrap">
+        <p class="pop_title">알림등록을 취소하고 나가시겠어요?</p>
+        <p class="pop_txt">지금 페이지를 나가시면 알림등록이<br>
+          완료되지 않아요.</p>
+        <!-- 버튼 2개 -->
+        <div class="pop_btn">
+          <button class="btn_m btn_light btnClose">닫기</button>
+          <button class="btn_mbtn_basic btn_red">나가기</button>
+        </div>
+      </div>
+    </div>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script>
+      //목록삭제
+      $( document ).ready(function(){
+        $(".list_none").hide();
+
+        if($(".goods_list .goods_box_s").length === 0){
+            $(".list_none").show();
+          }
+
+        $(".deletBtn").on("click", function(){
+          $(this).parents(".goods_box_s").fadeOut("normal", function() {
+            $(this).remove();
+
+            if($(".goods_list .goods_box_s").length === 0){
+            $(".list_none").fadeIn();
+          }
+          });
+        });
+      })
+
+      //시간설정 슬라이드
+      var timeSetting = new Swiper(".slide_day, .slide_min", {
+      direction: "vertical",
+      spaceBetween: 4,
+      slidesPerView: 3,
+      centeredSlides: true,
+      initialSlide: 1,
+    });
+
+    var timeSetting2 = new Swiper(".slide_time", {
+      direction: "vertical",
+      spaceBetween: 4,
+      slidesPerView: 3,
+      centeredSlides: true,
+      initialSlide: 4,
+    });
+
+    //요일선택
+    $(".select_day p").on("click", function(){
+      $(this).toggleClass("active")
+    })
+      
+    </script>
+  </body>
+</html>

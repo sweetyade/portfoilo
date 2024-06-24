@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>핏타민</title>
+    <meta name="keywords" content="킥더허들 헬스케어">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="누구나 누릴 수 있는 일상의 건강">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- ============================ css ======================= -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="../../css/pharm.css" rel="stylesheet">
+</head>
+
+    <div class="pharm_wrap flex">
+        <!-- ============== header =============== -->
+        <header class="header">
+            <div class="profile">
+                <img class="p_img" src="../../images/no_profile.gif" alt="">
+                <h1>장약국장</h1>
+                <p class="p_name">장약국</p>
+
+                <div class="btn_wrap">
+                    <button class="btn_white">로그아웃</button>
+                </div>
+            </div>
+
+            <div class="header_smr">
+                <div class="smr_check flex">
+                    <p>즉시 상담 설정</p>
+                    <div class="smr_toggle">
+                        <input type="checkbox" id="switch" />
+                        <label for="switch">Toggle</label>
+                    </div>
+                </div>
+
+                <div class="smr_block box1">
+                    <p class="flex"><span>즉시 상담 대기</span><a href="#">1건</a></p>
+                    <p class="flex"><span>예약 상담 대기</span><a href="#">0건</a></p>
+                </div>
+
+                <div class="smr_block box2 flex">
+                    <p><span>오늘 예정 상담</span><a href="#">1건</a></p>
+                </div>
+            </div>
+
+            <nav class="nav">
+                <ul class="nav_list">
+                    <li class="nav_item flex">
+                        <p><a href="#" class="nav_link"><i class="ri-user-settings-line"></i> 프로필 관리</a></p>
+                    </li>
+                    <li class="nav_item">
+                        <p class="flex"><a href="#" class="nav_link active"><i class="ri-customer-service-2-line"></i> 상담 관리</a> <i class="ri-arrow-down-s-line"></i></p>
+                        <ul class="sub_list">
+                            <li class="sub_item">
+                                <a href="#" class="sub_link">상담 대기 리스트</a>
+                            </li>
+                            <li class="sub_item">
+                                <a href="#" class="sub_link">예약 확정 리스트</a>
+                            </li>
+                            <li class="sub_item">
+                                <a href="#" class="sub_link">상담 내역 조회</a>
+                            </li>
+                            <li class="sub_item">
+                                <a href="#" class="sub_link active">상담 설정</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_item flex">
+                        <p><a href="#" class="nav_link"><i class="ri-bar-chart-2-line"></i> 판매현황</a></p>
+                    </li>
+                    <li class="nav_item flex">
+                        <p><a href="#" class="nav_link"><i class="ri-file-text-line"></i> 식약청 의무 보고 자료</a></p>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- ============= main ================= -->
+        <main class="pharm_main">
+            <section class="pharm_support pharm_setting">
+                <div class="support_top setting_top flex">
+                    <h2>상담설정</h2>
+                    <p class="txt">가능한 상담 유형과 시간을 설정해주세요</p>
+                </div>
+
+                <div class="pharm_container">
+                    <h3>요일선택</h3>
+
+                    <div class="select_date flex">
+                        <div class="date_wrap">
+                            <label for="date01">
+                                <input type="checkbox" id="date01" checked>
+                                <span>월요일</span>
+                            </label>
+                        </div>
+                        <div class="date_wrap">
+                            <label for="date02">
+                                <input type="checkbox" id="date02">
+                                <span>화요일</span>
+                            </label>
+                        </div>
+                        <div class="date_wrap">
+                            <label for="date03">
+                                <input type="checkbox" id="date03">
+                                <span>수요일</span>
+                            </label>
+                        </div>
+                        <div class="date_wrap">
+                            <label for="date04">
+                                <input type="checkbox" id="date04">
+                                <span>목요일</span>
+                            </label>
+                        </div>
+                        <div class="date_wrap">
+                            <label for="date05">
+                                <input type="checkbox" id="date05">
+                                <span>금요일</span>
+                            </label>
+                        </div>
+                        <div class="date_wrap">
+                            <label for="date06">
+                                <input type="checkbox" id="date06">
+                                <span>토요일</span>
+                            </label>
+                        </div>
+                        <div class="date_wrap">
+                            <label for="date07">
+                                <input type="checkbox" id="date07">
+                                <span>일요일</span>
+                            </label>
+                        </div>
+
+                        <div class="edit_check">
+                            <div class="check flex">
+                                <input type="checkbox" id="check5" value="1" checked="">
+                                <label for="check5">
+                                    <span>즉시상담 가능</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="formbtn_wrap">
+                        <button class="form_btn">변경하기</button>
+                    </div>
+                </div>
+            </section>
+            <!-- =============== popup =============== -->
+            <div class="popup" id="popup">
+                <div class="popup_toggle flex">
+                    <p class="title">알림을 확인해주세요</p>
+                    <div class="smr_toggle">
+                        <input type="checkbox" id="pop_switch" class="popup_open"/>
+                        <label for="pop_switch">Toggle</label>
+                    </div>
+                </div>
+
+                <div class="popup_list">
+                    <p class="popup_item flex"><i class="ri-error-warning-line"></i> 예약 신청 건이 있습니다.</p>
+                    <p class="popup_item flex"><i class="ri-error-warning-line"></i> 즉시상담 신청 건이 있습니다.</p>
+                    <p class="popup_item flex"><i class="ri-error-warning-line"></i> 예약 신청 건이 있습니다.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
+    <!-- 메뉴 -->
+    <script>
+        const accordionItems = document.querySelectorAll('.nav_item')
+
+        accordionItems.forEach((item) =>{
+            const accordionHeader = item.querySelector('.nav_link')
+
+            accordionHeader.addEventListener('click', () =>{
+                const openItem = document.querySelector('.sub-open')
+
+                toggleItem(item)
+
+                if(openItem && openItem!== item){
+                    toggleItem(openItem)
+                }
+            })
+        })
+
+        const toggleItem = (item) =>{
+            const accordionContent = item.querySelector('.sub_list')
+
+            if(item.classList.contains('sub-open')){
+                accordionContent.removeAttribute('style')
+                item.classList.remove('sub-open')
+            }else{
+                accordionContent.style.height = accordionContent.scrollHeight + 'px'
+                item.classList.add('sub-open')
+            }
+        }
+    </script>
+
+
+    <!--  하단 알림 팝업 토글 -->
+    <script>
+        $(".popup_open").on("click", function () {
+        $(".popup").toggleClass("open");
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+

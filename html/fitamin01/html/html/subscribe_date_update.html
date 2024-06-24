@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>킥더허들 헬스케어</title>
+    <meta name="keywords" content="킥더허들 헬스케어">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="누구나 누릴 수 있는 일상의 건강">
+    <meta name="format-detection" content="telephone=no">
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <script type="text/javascript" src="<c:url value='/vendors/jquery/jquery-3.6.0.min.js' />"></script>
+
+    <!-- ============================ css ======================= -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link href="../../css/m.common.css" rel="stylesheet">
+    <link href="../../css/m.sub.css" rel="stylesheet">
+
+
+
+    <script type="text/javascript" src="<c:url value='/bootstrap/js/bootstrap.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/vendors/popper/popper.min.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/scripts/modal.js' />"></script> <!-- 모달 스크립트 -->
+    <script type="text/javascript" src="<c:url value='/scripts/common.js' />"></script> <!-- 공통 스크립트 -->
+    <script type="text/javascript" src="<c:url value='/scripts/hybridBridge.js' />"></script> <!-- 네이티브 인터페이스 브릿지 -->
+</head>
+<body>
+    <main class="main" id="top">
+
+        <header class="header" id="header">
+            <nav class="nav">
+                <a href="javascript:goHistoryback();" class="nav_back">
+                    <i class="ri-arrow-left-s-line"></i>
+                </a>
+
+                <h2 class="sub_header">구독변경</h2>
+        
+                <div class="nav_menu" id="nav-menu">
+                    <div class="nav_user">
+                        <a href="#" class="nav_user_link">로그인</a>
+                        <a href="#" class="nav_user_link">마이 페이지</a>
+                    </div>
+        
+                    <!-- ========메뉴 =========-->
+                    <ul class="nav_list">
+                        <li class="nav_item">
+                            <a href="#" class="nav_link active_link">홈</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">핏타민 시작하기</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">마이페이지</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">브랜드 스토리 <i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="nav_dep">
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">핏타민 스토리</a>
+                                </li>
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">핏타민 소개</a>
+                                </li>
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">이용방법</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">고객후기</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">이벤트 · 공지</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">고객센터</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="nav_close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+        
+                    <div class="nav_search">
+                        <input type="text" class="search" placeholder="검색어를 입력해주세요">
+                        <button type="submit" class="search btn_basic">검색</button>
+                    </div>
+        
+                    <!-- ================= quick link ================= -->
+                    <div class="nav_quick">
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg01.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>People</span>
+                                <p>시작부터 섭취까지<br>약사와 함께</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg02.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>Service</span>
+                                <p>과학적인 데이터<br>근거 중심으로</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg03.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>Product</span>
+                                <p>단 1알까지<br>품질우선주의</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg04.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>B2B</span>
+                                <p>기업 건강 복지<br>영양제 정기배송</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="nav_toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </nav>
+        </header>
+        
+        <div class="container" data-layout="container">
+            <div class="sub_wrap">
+                <div class="mypage">
+                    <div class="mb_1 reserve">
+                        <p class="font_big font_w2 mb_2">핏타민님, 다시 만나 반갑습니다!</p>
+
+                        <div class="reserve_notice mb_2">
+                            <p class="font_n mb_1">정기구독 시 누릴 수 있는 혜택 🎁</p>
+                            <p class="font_m font_w">
+                                <img src="../../images/icon_book.svg" alt=""> 재구독 시 <span class="point_c"> 자동 20% 할인</span>
+                            </p>
+                            <p class="font_m font_w">
+                                <img src="../../images/icon_review.svg" alt=""> 후기 작성 시 <span class="point_c"> 적립금 최대 13,000원</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="reserve_block mb_2">
+                        <p class="sub_title">구독일 변경 <span class="font_s">※ 미선택 시 내일 결제</span></p>
+                        <div class="reserve_header"></div>
+                        <div class="reserve_body">
+                            <div class="rsrv_date font_big">
+                                <i class="ri-arrow-left-s-line"></i>
+                                <p>2022.06</p>
+                                <i class="ri-arrow-right-s-line"></i>
+                            </div>
+
+                            <div class="rsrv_cldr mb_2">
+                                <div class="cldr_block">
+                                    <p>일</p>
+                                    <p>월</p>
+                                    <p>화</p>
+                                    <p>수</p>
+                                    <p>목</p>
+                                    <p>금</p>
+                                    <p>토</p>
+                                </div>
+                                <div class="cldr_block">
+                                    <p></p>
+                                    <p></p>
+                                    <p></p>
+                                    <p class="gray_c">1</p>
+                                    <p class="gray_c">2</p>
+                                    <p class="gray_c">3</p>
+                                    <p class="gray_c">4</p>
+                                </div>
+                                <div class="cldr_block">
+                                    <p class="gray_c">5</p>
+                                    <p class="gray_c">6</p>
+                                    <p class="gray_c">7</p>
+                                    <p class="gray_c">8</p>
+                                    <p class="gray_c">9</p>
+                                    <p class="gray_c">10</p>
+                                    <p class="gray_c">11</p>
+                                </div>
+                                <div class="cldr_block">
+                                    <p class="gray_c">12</p>
+                                    <p class="gray_c">13</p>
+                                    <p class="gray_c">14</p>
+                                    <p class="gray_c">15</p>
+                                    <p class="gray_c">16</p>
+                                    <p class="gray_c">17</p>
+                                    <p class="point_c">18</p>
+                                </div>
+                                <div class="cldr_block">
+                                    <p class="red_c">19</p>
+                                    <p class="">20</p>
+                                    <p class="">21</p>
+                                    <p class="">22</p>
+                                    <p class="">23</p>
+                                    <p class="">24</p>
+                                    <p class="point_c">25</p>
+                                </div>
+                                <div class="cldr_block">
+                                    <p class="red_c">26</p>
+                                    <p class="">27</p>
+                                    <p class="active">28</p>
+                                    <p class="">29</p>
+                                    <p class="">30</p>
+                                    <p></p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reserve_sub mb_2">
+                        <p class="sub_title">결제 예정일</p>
+                        <p class="font_m"><i class="ri-arrow-right-line"></i> 2022.06.28</p>
+                    </div>
+
+                    <div class="reserve_sub mb_2">
+                        <p class="sub_title"> 적립금 자동 사용</p>
+                        <p class="font_s">※ 구독 결제 시 사용 가능한 적립금을 자동 사용합니다</p>
+                    </div>
+                    <div class="reserve_sub mb_2">
+                        <p class="sub_title">정기 결제 금액</p>
+                        <p class="font_m"><i class="ri-arrow-right-line"></i> 5,520 원</p>
+                    </div>
+                    <div class="reserve_sub mb_2">
+                        <p class="sub_title">결제수단 변경</p>
+
+                        <div class="mycard reserve_card swiper">
+                            <div class="card_list swiper-wrapper">
+                                <div class="card_item swiper-slide">
+                                    <div class="card_add card_in">
+                                        <p class="card_name">KB국민</p>
+                                        <p class="card_no">460202500****5055</p>
+                                        <p class="card_select">선택됨</p>
+                                    </div>
+                                </div>
+                                <div class="card_item swiper-slide">
+                                    <a href="#" class="card_add">
+                                        <i class="ri-add-fill"></i>
+                                        <p class="font_s font_w">간편결제 카드 추가</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reserve_sub mb_2">
+                        <p class="sub_title mb_1">배송지 변경</p>
+
+                        <form action="" class="reserve_form">
+                            <div class="form_block mb_2">
+                                <label for="rsv_name" class="mb_1">받으시는 분</label>
+                                <div class="form_block_in">
+                                    <input type="text" id="rsv_name" class="form_bd input_w" value="핏타민">
+                                </div>
+                            </div>
+
+                            <div class="form_block mb_2">
+                                <label for="rsv_phone" class="mb_1">연락처</label>
+                                <div class="form_block_in">
+                                    <input type="text" id="rsv_phone" class="form_bd input_w" value="012-3456-789">
+                                </div>
+                            </div>
+        
+                            <div class="form_block mb_2">
+                                <label for="rsv_add" class="mb_1">주소</label>
+                                <div class="form_block_in">
+                                    <input type="text" id="rsv_add" class="form_bd" value="06041">
+                                    <button class="btn_reg">주소검색</button>
+                                </div>
+                                <div class="form_block_in">
+                                    <input type="text" class="form_bd input_w" value="서울 강남구 논현로135길 10">
+                                </div>
+                                <div class="form_block_in">
+                                    <input type="text" class="form_bd input_w" value="시온타워">
+                                </div>
+                                <div class="form_block_in">
+                                    <input type="text" class="form_bd input_w" value="(논현동)">
+                                </div>
+                            </div>
+        
+                            <div class="form_block mb_2">
+                                <label for="rsv_memo" class="mb_1">배송 요청 사항</label>
+                                <div class="form_block_in">
+                                    <input type="text" id="rsv_memo" class="form_bd input_w">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="btn_wrap reserve_block">
+                        <a href="#" class="btn btn_whiteb">구독 변경하기</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <footer class="footer sub_footer">
+            <div class="bottom_menu">
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon01.svg" alt="">
+                    <span>홈</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon02.svg" alt="">
+                    <span>설문</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon03.svg" alt="">
+                    <span>상담</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon04.svg" alt="">
+                    <span>구독</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon05_on.svg" alt="">
+                    <span>MY</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- swiper slide -->
+    <script type="text/javascript" src="../../scripts/mobile.js"></script> <!-- 추가 스크립트 -->
+</body>
+</html>
+
+
+
+
+

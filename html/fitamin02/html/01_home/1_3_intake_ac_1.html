@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>1-3-1.끌어서인증 - action1</title>
+  </head>
+  <body>
+    <div class="fullpage bg_black">
+      <div class="intake_top_time">
+        <p class="title time_sun">오전 07:00</p>
+        <p class="span3_f gray02">피토틱스 옐로우, 락토핏 유산균 골드</p>
+        <p class="closeBtn_wt"></p>
+      </div>
+
+      <div class="drag_con">
+        <p class="grag_img"><img src="../../images/chat_sample.png" alt=""></p>
+
+        <div class="drag_ac">
+          <p class="drag_bg"></p>
+          <p class="drag_pointer"><img src="../../images/icon/swipeMotion.svg" alt=""></p>
+          <p class="drag_img"><img src="../../images/icon/pillBtn.svg" alt=""></p>
+        </div>
+        <p class="span1_fb light textcenter">영양제를 꾹- 눌러보세요!</p>
+      </div>
+
+      <div class="btn_right">
+        <button class="btn_black btn_img"><img src="../../images/icon/camera.svg" alt="" style="width: 1.25rem">사진으로 인증하기</button>
+      </div>
+    </div>
+
+    <!-- 나가기 팝업 -->
+    <div class="popup">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 팝업 컨텐츠 -->
+      <div class="popup_wrap">
+        <p class="pop_title">인증을 취소하고 나가시겠어요?</p>
+        <p class="pop_txt">지금 페이지를 나가시면 섭취 인증이<br>완료되지 않아요.</p>
+        <!-- 버튼 2개 -->
+        <div class="pop_btn">
+          <button class="btn_m btn_light popClose">닫기</button>
+          <button class="btn_m btn_red">나가기</button>
+        </div>
+      </div>
+    </div>
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+      $(".closeBtn_wt").on("click", function () {
+        $(".popup, body").addClass("open");
+      });
+
+      $(".overlay, .popClose").on("click", function () {
+        $(".popup, .modal, body, .btn_trans").removeClass("open");
+      });
+    </script>
+  </body>
+</html>

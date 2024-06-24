@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>2-4-4.약사산택</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <p class="back"><img src="../../images/icon/system_back.svg" alt="뒤로가기" /></p>
+      <h2 class="page_name">약사님 선택하기</h2>
+      <div class="header_icon">
+        <p class="page_no">3/3</p>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- 한팩담기 다음 상담시 노출 -->
+      <div class="consult_top" style="display: none;">
+        <div class="pack_banner">
+          <p class="img"><img src="../../images/drug_sample.png" alt=""></p>
+          <p class="span2_f">쏘팔메토옥타코사놀+</p>
+          <p class="span2_f gray01">외 7건</p>
+        </div>
+      </div>
+
+      <section class="consult_wrap">
+        <div class="consult_title">
+          <p class="title">약사님을 선택해주세요</p>
+          <p class="txt">원하시는 약사님과 상담을 진행할 수 있어요</p>
+          <p class="btn_m btn_light mt_0_5 pharmSort btn_img"><img src="../../images/icon/systems_check_off.svg" class="checkSort" alt="">상담했던 약사님만 보기</p>      
+        </div>
+      </section>
+
+      <section class="consult_wrap bg_gray05 pd_bottom_s">
+        <!-- 필터 -->
+        <div class="filter_block mb_0_75">
+          <p class="selectBtn">누적상담 많은 순</p>
+          <!-- 옵션 -->
+          <ul class="filterOption" style="display: none;">
+            <li class="optionItem select">누적상담 많은 순</li>
+            <li class="optionItem">최근 한 달 상담 많은 순</li>
+            <li class="optionItem">신규 가입일 순</li>
+          </ul>
+        </div>
+
+        <div class="consult_list">
+          <div class="pharm_p">
+            <p class="p_pic"><img src="../../images/cam_sample.png" alt=""></p>
+            <div class="p_info">
+              <div class="p_name">
+                <p class="name">김예림 약사</p>
+                <p class="online now">상담가능</p>
+              </div>
+              <p class="info">메디컬참약국·누적상담 999회+</p>
+            </div>
+            <p class="icon_round btn_basic">신규</p>
+          </div>
+          <div class="pharm_p">
+            <p class="p_pic"><img src="../../images/cam_sample.png" alt=""></p>
+            <div class="p_info">
+              <div class="p_name">
+                <p class="name">김예림 약사</p>
+                <p class="online">상담중</p>
+              </div>
+              <p class="info">메디컬참약국·누적상담 999회+</p>
+            </div>
+            <p class="icon_round btn_basic">신규</p>
+          </div>
+          <div class="pharm_p">
+            <p class="p_pic"><img src="../../images/cam_sample.png" alt=""></p>
+            <div class="p_info">
+              <div class="p_name">
+                <p class="name">김예림 약사</p>
+                <p class="online now">상담가능</p>
+              </div>
+              <p class="info">메디컬참약국·누적상담 999회+</p>
+            </div>
+          </div>
+          <div class="pharm_p sort-1">
+            <p class="p_pic"><img src="../../images/cam_sample.png" alt=""></p>
+            <div class="p_info">
+              <div class="p_name">
+                <p class="name">상담했던 약사</p>
+                <p class="online now">상담가능</p>
+              </div>
+              <p class="info">메디컬참약국·누적상담 999회+</p>
+            </div>
+          </div>
+          <div class="pharm_p sort-1">
+            <p class="p_pic"><img src="../../images/cam_sample.png" alt=""></p>
+            <div class="p_info">
+              <div class="p_name">
+                <p class="name">상담했던 약사</p>
+                <p class="online">상담중</p>
+              </div>
+              <p class="info">메디컬참약국·누적상담 999회+</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 최종확인 모달 -->
+    <div class="modal modal01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 모달 컨텐츠-->
+      <div class="modal_wrap">
+        <div class="modal_top">
+          <p class="modal_title">상담일정을 확인해주세요!</p>
+          <p class="modal_sub">예약하기를 누르면 상담신청이 완료될거예요</p>
+        </div>
+
+        <div class="modal_con">
+          <div class="cst_table bg_gray05">
+            <div class="info_table">
+              <p class="title">상담일자</p>
+              <p class="txt">2022.11.23 오후 05:00</p>
+            </div>
+            <div class="info_table">
+              <p class="title">상담방법</p>
+              <p class="txt">채팅상담</p>
+            </div>
+            <div class="info_table">
+              <p class="title">담당 약사님</p>
+              <p class="txt">김예림 약사님</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn_wrap">
+          <button class="btn_b btn_basic modalClose">예약하기</button>
+          <button class="btn_b btn_trans modalClose">닫기</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/swiper-bundle.min.js"></script>
+
+    <script>
+      //필터정렬 
+      $(".selectBtn").on("click", function(){
+        $(".filterOption").slideToggle();
+
+        $(".optionItem ").click(function(){
+          if(!$(this).hasClass("select")){
+            $(this).addClass("select");
+            $(this).siblings().removeClass("select");
+          }
+          let optionTxt = $(".optionItem.select").text();
+          $(".selectBtn").text(optionTxt);
+        })
+      });
+
+      //상담했던 약사만 보기
+      $(document).ready(function () {
+        let activeCat = "";
+        function filterGroup(group) {
+          if (activeCat != group) {
+            $(".pharm_p")
+              .filter("." + group)
+              .show();
+            $(".pharm_p")
+              .filter(":not(." + group + ")")
+              .hide();
+            activeCat = group;
+          }
+        };
+
+        $(".pharmSort").click(function(){
+        var iconImg = $(this).find("img");
+        $(this).toggleClass("select");
+        if($(this).hasClass("select")){
+          iconImg.attr("src", iconImg.attr("src").replace("_off", "_on"));
+          filterGroup("sort-1");
+        }else{
+          iconImg.attr("src", iconImg.attr("src").replace("_on", "_off"));
+          $(".pharm_p").show();
+          activeCat = "all";
+        }
+      });
+      });
+
+      //모달
+      $(".pharm_p").on("click", function () {
+        $(".modal01, body").addClass("open");
+      });
+
+      $(".overlay, .modalClose").on("click", function () {
+        $(".popup, .modal, body, .btn_trans").removeClass("open");
+      });
+    </script>
+  </body>
+</html>

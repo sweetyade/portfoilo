@@ -1,0 +1,135 @@
+$pc_large: 2580px;
+$pc_base: 1920px;
+$pc_small: 1260px;
+$tablet: 768px;
+$mobile_large: 480px;
+$mobile_base: 360px;
+$mobile_small: 320px;
+
+//aspect ratio : base 9/16
+// $ratio_large: 9/19; //아이폰x ~ 갤럭시
+// $ratio_z: 9/22; //z플립
+// $header_height: 3rem;
+
+//typo
+$lineth: line-through;
+$lineunder: underline;
+$lineh: 1.5;
+
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+    --p-hue: 235;
+    --p-sat: 70%;
+    --p-lgt: 65%;
+    --r-hue: 0;
+    --r-sat: 85%;
+    --r-lgt: 64%;
+  --primary-color: hsla(var(--p-hue), var(--p-sat), var(--p-lgt),  1);
+  --primary-color-alp: hsl(var(--p-hue), var(--p-sat), var(--p-lgt), 10%);
+  --system-red: hsla(var(--r-hue), var(--r-sat), var(--r-lgt),  1);
+  --system-red-alp: hsla(var(--r-hue), var(--r-sat), var(--r-lgt),  10%);
+  --system-purple: #7030FD;
+  --system-pruple-2: #B12DFF;
+  --text-color: #1C1D27;
+  --text-color-2: #87888D;
+  --border-color: #ddd;
+  --white-color: #fff;
+  --white-color-alp: rgba(255,255,255,.4);
+  --bg-color: #F3F6F8;
+
+  /*========== Font and typography ==========*/
+  --body-font: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  --second-font: "Caveat", cursive;
+
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.375rem;
+  --h3-font-size: 1.25rem;
+  --large-font-size: 1.125rem;
+  --base-font-size: 1rem;
+  --normal-font-size: .875rem;
+  --small-font-size: .75rem;
+  --smaller-font-size: .625rem;
+  --tiny-font-size: .5rem;
+  --bold-font: 700;
+  --semi-bold-font: 500;
+  --medium-font: 400;
+  --thin-font: 200;
+
+  /* ========= margin ========= */
+  --m-0-25: 0.25rem;
+  --m-0-5: 0.5rem;
+  --m-0-75: 0.75rem;
+  --m-1: 1rem;
+  --m-1-25: 1.25rem;
+  --m-1-5: 1.5rem;
+  --m-1-75: 1.75rem;
+  --m-2: 2rem;
+  --m-2-25: 2.25rem;
+  --m-2-5: 2.5rem;
+  --m-2-75: 2.75rem;
+  --m-3: 3rem;
+  --m-3-25: 3.25rem;
+  --m-3-5: 3.5rem;
+  --m-3-75: 3.75rem;
+  --m-4: 4rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+
+  /* ========= etc ============= */
+  --shadow-s: 0 0 5px rgba(0, 0, 0, 0.025);
+  --shadow-m: 0 0 8px rgba(0, 0, 0, 0.05);
+  --shadow-l: 0 0 16px rgba(0, 0, 0, 0.1);
+}
+
+
+/* color */
+.primary_color{
+  color: var(--primary-color);
+}
+
+.primary_color-alp{
+  color: var(--primary-color-alp);
+}
+
+.system_red{
+  color: var(--system-red);
+}
+
+.system_red-alp{
+  color: var(--system-red-alp);
+}
+
+.text_color{
+  color: var(--text-color);
+}
+
+.text_color-2{
+  color: var(--text-color-2);
+}
+
+.border_color{
+  color: var(--border-color);
+}
+
+.white_color{
+  color: var(--white-color)
+}
+
+.white_color-alp{
+  color: var(--white-color-alp);
+}
+
+.bg_color{
+  background-color: var(--bg-color);
+}
+
+.bg_primary{
+  background-color: var(--primary-color);
+}

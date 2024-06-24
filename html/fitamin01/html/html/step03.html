@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>킥더허들 헬스케어</title>
+    <meta name="keywords" content="킥더허들 헬스케어">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="누구나 누릴 수 있는 일상의 건강">
+    <meta name="format-detection" content="telephone=no">
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <script type="text/javascript" src="<c:url value='/vendors/jquery/jquery-3.6.0.min.js' />"></script>
+
+    <!-- ============================ css ======================= -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link href="../../css/m.common.css" rel="stylesheet">
+    <link href="../../css/m.sub.css" rel="stylesheet">
+
+
+
+    <script type="text/javascript" src="<c:url value='/bootstrap/js/bootstrap.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/vendors/popper/popper.min.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/scripts/modal.js' />"></script> <!-- 모달 스크립트 -->
+    <script type="text/javascript" src="<c:url value='/scripts/common.js' />"></script> <!-- 공통 스크립트 -->
+    <script type="text/javascript" src="<c:url value='/scripts/hybridBridge.js' />"></script> <!-- 네이티브 인터페이스 브릿지 -->
+</head>
+<body>
+    <main class="main" id="top">
+
+        <header class="header survey_top" id="header">
+            <nav class="nav">
+                <a href="javascript:goHistoryback();" class="nav_back">
+                    <i class="ri-arrow-left-s-line"></i>
+                </a>
+
+                <div class="progress">
+                    <progress id="progress_bar" max-width="100%" value="0" max="100"></progress>
+                    <p class="point_c">%</p>
+                </div>
+
+                <div class="nav_close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </nav>
+        </header>
+        
+        <div class="container" data-layout="container">
+            <div class="grid_survey survey_container">
+                <div class="survey_txt">
+                    <p class="survey_title">이름 또는 닉네임을 입력하세요.</p>
+                    <p class="text">ㆍ작성하신 이름은 <span class="point_c">실제 제품에 표기</span>됩니다<br>
+                        (한글,영문 2~5글자)</p>
+                </div>
+
+                <div class="servey_img">
+                    <img src="../../images/survey_step3_bg1.png" alt="" class="servey_bg">
+                    <div class="servey_imgtop">
+                        <input type="text" class="servey_name" value="이름" max-length="5">
+                        <img src="../../images/main_made_txtimg_1.png" alt="">
+                    </div>
+                    <div class="servey_mid">
+                        <p class="mid_txt">
+                            <span>....</span>
+                            <span>x1</span>
+                        </p>
+                        <p class="mid_txt">
+                            <span>....</span>
+                            <span>x2</span>
+                        </p>
+                        <p class="mid_txt">
+                            <span>....</span>
+                            <span>x1</span>
+                        </p>
+                    </div>
+                    <div class="servey_btm">
+                        <div class="btm_left">
+                            <p class="mark">건강기능식품</p>
+                            <p class="date">
+                                DATE <br>
+                                YY.MM.DD
+                            </p>
+                        </div>
+                        <div class="btm_right">
+                            <p class="day">Day 1</p>
+                            <i class="ri-sun-line"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn_blue">확인</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- swiper slide -->
+    <script type="text/javascript" src="../../scripts/mobile.js"></script> <!-- 추가 스크립트 -->
+</body>
+</html>
+
+
+
+
+

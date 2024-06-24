@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>킥더허들 헬스케어</title>
+    <meta name="keywords" content="킥더허들 헬스케어">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="누구나 누릴 수 있는 일상의 건강">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- ============================ css ======================= -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="../../css/newindex.css">
+    <link rel="stylesheet" href="../../css/m.sub.css">
+    <link rel="stylesheet" href="../../css/m.common.css">
+    <link href="../../css/fitamin_2201819.css" rel="stylesheet"> <!-- 새로 추가된 css -->
+
+</head>
+
+    <div class="main">
+
+        <!-- header -->
+        <header class="header" id="header">
+            <nav class="nav">
+                <a href="javascript:CommonJS.goHistoryBack();" class="nav_back header_back" style="">
+                    <i class="ri-arrow-left-s-line"></i>
+                </a>
+
+                <h2 class="sub_header header_sub_header" style="">상담결과</h2>
+        
+
+                <!--///////////////////// 변경된 해더 햄버거 메뉴 컨텐츠 ///////////////////-->
+                <!--///////////////////// 여기서부터 복사하여 같은 위치에 변경해주세요 /////////////////////-->
+                <div class="nav_menu" id="nav-menu">
+
+                    <!----------- 비로그인시에만 노출됩니다 ------------->
+                    <div class="nav_login">
+                        <div class="nav_in flex">
+                          <a href="#" class="nav_user_link1">로그인</a>
+                          <a href="#" class="nav_user_link2"><i class="ri-kakao-talk-fill"></i> 카카오 1초 로그인</a>
+                        </div>
+                    </div>
+
+                    <!-- ----------- 로그인 회원정보 메뉴 ------------>
+                    <div class="nav_userinfo">
+                        <div class="nav_in">
+                            <div class="navin_top flex">
+                            <p class="title">김다민 <span>님</span></p> <!-- 회원가입 시 가입정보 이름 -->
+                            <p class="nav_code flex">추천코드 <b>ROWIIOOO</b> <a href="#" class="flex"><img src="../../images/icon_copy.svg" alt=""></a></p>
+                            </div>
+                            <div class="navin_bottom">
+                            <p class="normal_f">damin@naver.com</p>
+                            <p class="normal_f">리뷰 <a href="#">1</a> ｜ 작성가능한 리뷰 <a href="#">2</a></p>
+                            <a href="#" class="btn_logout"><img src="../../images/icon_logout.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------- 로그인 비 구독시 노출 ----------->
+                    <ul class="visual_subcard login_subcard">
+                        <li class="subcard_in">
+                            <div class="subcard_top flex">
+                                <div class="subcard_title flex">
+                                    <p class="title">핏타민 구독<span>하고 다양한 혜택 받으세요</span></p>
+                                </div>
+                            </div>
+    
+                            <div class="subcard_bottom flex">
+                                <div class="subcard_info">
+                                    <p>+ 약사상담비 무료 적용</p>
+                                    <p>+ 건강지원 20% 할인 중</p>
+                                </div>
+    
+                                <div class="subcard_date flex">
+                                </div>
+                            </div>
+                            </li>
+                    </ul>
+
+                    <!------------- 로그인 구독시 노출 ----------->
+                    <ul class="visual_subcard login_subcard">
+                        <li class="subcard_in">
+                            <div class="subcard_top flex">
+                                <div class="subcard_title flex">
+                                    <p class="title">다미니님</p> <!-- 구독신청 시 봉투에 적는 이름 노출 -->
+                                    <img src="../../images/subcard_title.svg" alt="">
+                                </div>
+                                <a href="#" class="subcard_link flex">마이페이지 <i class="ri-arrow-right-s-line"></i></a>
+                            </div>
+    
+                            <div class="subcard_bottom flex">
+                                <div class="subcard_info">
+                                    <p>+ 약사상담비 무료 적용</p>
+                                    <p>+ 건강지원 20% 할인 중</p>
+                                </div>
+    
+                                <div class="subcard_date flex">
+                                    <div class="subcard_block">
+                                        <p class="no">5</p>
+                                        <p class="txt">구독 회차</p>
+                                    </div>
+                                    <div class="subcard_block">
+                                        <p class="no2">07.05</p>
+                                        <a href="#" class="txt flex">다음 구독일 <i class="ri-arrow-right-s-line"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="subcard_in">
+                        <div class="subcard_top flex">
+                            <div class="subcard_title flex">
+                                <p class="title">피터박님</p>
+                                <img src="../../images/subcard_title.svg" alt="">
+                            </div>
+                            <a href="#" class="subcard_link flex">마이페이지 <i class="ri-arrow-right-s-line"></i></a>
+                        </div>
+
+                        <div class="subcard_bottom flex">
+                            <div class="subcard_info">
+                                <p>+ 약사상담비 무료 적용</p>
+                                <p>+ 건강지원 20% 할인 중</p>
+                            </div>
+
+                            <div class="subcard_date flex">
+                                <div class="subcard_block">
+                                    <p class="no">1</p>
+                                    <p class="txt">구독 회차</p>
+                                </div>
+                                <div class="subcard_block">
+                                    <p class="no2">07.01</p>
+                                    <a href="#" class="txt flex">다음 구독일 <i class="ri-arrow-right-s-line"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    </ul>
+
+                    <!---------- 아래부터 기본 노출 화면 --------->
+                    <div class="nav_quick">
+                        <div class="nav_in">
+                            <p class="title">핏타민 시작하기</p>
+                            <div class="flex">
+                            <div class="quick_menu">
+                                <a href="#" class="quick_link quick01">
+                                <img src="../../images/quick_icon1.png" alt="">
+                                <span>예약상담</span>
+                                </a>
+                                <p class="quick_txt">3분 설문 ➡ 1:1 약사상담</p>
+                            </div>
+                            <div class="quick_menu">
+                                <a href="#" class="quick_link quick02">
+                                <img src="../../images/quick_icon2.png" alt="">
+                                <span>즉시상담</span>
+                                </a>
+                                <p class="quick_txt">지금 바로 1:1 약사상담</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----------- 메뉴 ---------->
+                    <div class="menu_list">
+                        <a href="#" class="flex nav_link">고객후기<i class="ri-arrow-right-s-line"></i></a>
+                    </div>
+
+                    <div class="menu_list nav-open">
+                        <a href="#" class="flex nav_link">고객센터<i class="ri-arrow-down-s-line"></i></a>
+                        <div class="nav_in" style="height:115px">
+                            <div class="nav_sub flex">
+                                <a href="#">1:1 문의하기</a>
+                                <a href="#">자주묻는질문</a>
+                                <a href="#">공지사항 </a>
+                                <a href="#">이벤트</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="menu_list">
+                        <a href="#" class="flex nav_link">브랜드스토리<i class="ri-arrow-down-s-line"></i></a>
+                        <div class="nav_in">
+                            <div class="nav_sub flex">
+                                <a href="#">핏타민스토리</a>
+                                <a href="#">핏타민소개</a>
+                                <a href="#">이용방법 </a>
+                                <a href="#">섭취방법</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nav_close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+
+                </div>
+                <!--////////////////// 여기까지 ////////////////////////-->
+        
+                <div class="nav_toggle flex" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </nav>
+        </header>
+
+        <!-- //////////////////// 마이페이지 컨텐츠 영역 ////////////////////// -->
+        <div class="subscrpt_wrap bg_gray">
+
+            <div class="subscrpt">
+                <section class="subscrpt_list">
+                    <p class="result_title flex">김다민 <span>님의</span>
+                        <svg width="100%" height="100%" viewBox="0 0 100 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.0825 0.199219H0.455358C0.204305 0.199219 0 0.403524 0 0.654577V20.9449C0 21.1959 0.204305 21.4002 0.455358 21.4002H4.23847C4.48952 21.4002 4.69383 21.1959 4.69383 20.9449V13.6487C4.69383 13.3977 4.89813 13.1934 5.14919 13.1934H11.8999C12.151 13.1934 12.3553 12.9891 12.3553 12.738V9.37737C12.3553 9.12632 12.151 8.92202 11.8999 8.92202H5.14919C4.89813 8.92202 4.69383 8.71771 4.69383 8.46666V5.04714C4.69383 4.79609 4.89813 4.59178 5.14919 4.59178H13.0825C13.3335 4.59178 13.5378 4.38748 13.5378 4.13642V0.654577C13.5378 0.403524 13.3335 0.199219 13.0825 0.199219Z" fill="#2F2F2F"/>
+                            <path d="M16.4651 7.40869H20.127C20.3781 7.40869 20.5824 7.613 20.5824 7.86405V20.9448C20.5824 21.1958 20.3781 21.4001 20.127 21.4001H16.4651C16.2141 21.4001 16.0098 21.1958 16.0098 20.9448V7.86405C16.0098 7.613 16.2141 7.40869 16.4651 7.40869Z" fill="#2F2F2F"/>
+                            <path d="M71.0553 6.95264C68.9949 6.95264 67.331 7.95166 66.3614 9.67959H66.3008C65.5737 7.98282 64.0587 6.95264 61.91 6.95264C59.8739 6.95264 58.3728 7.90144 57.578 9.41642V7.85989C57.578 7.77332 57.5278 7.70926 57.4863 7.64C57.4534 7.5846 57.4205 7.54478 57.3668 7.50842C57.2993 7.45128 57.2231 7.408 57.1244 7.408H53.4573C53.2063 7.408 53.002 7.6123 53.002 7.86335V20.9441C53.002 21.1951 53.2063 21.3994 53.4573 21.3994H57.1192C57.1192 21.3994 57.121 21.3994 57.1227 21.3994C57.372 21.3994 57.5746 21.1986 57.5746 20.9493V14.4617C57.5746 11.83 58.6654 10.9833 60.0574 10.9833C61.6607 10.9833 62.329 12.043 62.329 13.8003V20.9458C62.329 21.1969 62.5333 21.4012 62.7844 21.4012H66.2645C66.5155 21.4012 66.7198 21.1969 66.7198 20.9458V14.4652C66.7198 11.83 67.8106 10.9833 69.2044 10.9833C70.8094 10.9833 71.476 12.043 71.476 13.8003V20.9458C71.476 21.1969 71.6803 21.4012 71.9314 21.4012H75.5933C75.8443 21.4012 76.0486 21.1969 76.0486 20.9458V12.2854C76.0486 8.89354 73.9588 6.95437 71.0518 6.95437L71.0553 6.95264Z" fill="#2F2F2F"/>
+                            <path d="M78.9934 7.40869H82.6554C82.9064 7.40869 83.1107 7.613 83.1107 7.86405V20.9448C83.1107 21.1958 82.9064 21.4001 82.6554 21.4001H78.9934C78.7424 21.4001 78.5381 21.1958 78.5381 20.9448V7.86405C78.5381 7.613 78.7424 7.40869 78.9934 7.40869Z" fill="#2F2F2F"/>
+                            <path d="M38.7161 1.23291H46.6563C46.9074 1.23291 47.1117 1.43722 47.1117 1.68827V3.37465C47.1117 3.62571 46.9074 3.83001 46.6563 3.83001H38.7161C38.465 3.83001 38.2607 3.62571 38.2607 3.37465V1.68827C38.2607 1.43722 38.465 1.23291 38.7161 1.23291Z" fill="#2F2F2F"/>
+                            <path d="M50.0591 7.408H46.3919C46.1426 7.408 45.9401 7.61057 45.9401 7.85989V9.316H45.8812C45.0034 7.89279 43.5784 6.95264 41.3068 6.95264C37.6726 6.95264 34.6738 9.49606 34.6738 14.4029C34.6738 19.3096 37.6709 21.8531 41.3068 21.8531C43.5784 21.8531 45.0016 20.9147 45.8812 19.4914H45.9401V20.9475C45.9401 21.1969 46.1426 21.3994 46.3919 21.3994H50.0591C50.3101 21.3994 50.5144 21.1951 50.5144 20.9441V7.86335C50.5144 7.6123 50.3101 7.408 50.0591 7.408ZM42.5794 17.6752C40.7614 17.6752 39.3694 16.4026 39.3694 14.4046C39.3694 12.4065 40.7632 11.134 42.5794 11.134C44.3956 11.134 45.8206 12.4065 45.8206 14.4046C45.8206 16.4026 44.4285 17.6752 42.5794 17.6752Z" fill="#2F2F2F"/>
+                            <path d="M18.4601 0H18.1329C16.7339 0 15.6016 1.13407 15.6016 2.53131C15.6016 3.92855 16.7356 5.06262 18.1329 5.06262H18.4601C19.8591 5.06262 20.9914 3.92855 20.9914 2.53131C20.9914 1.13407 19.8591 0 18.4601 0Z" fill="#2F2F2F"/>
+                            <path d="M81.0089 0H80.6817C79.2827 0 78.1504 1.13407 78.1504 2.53131C78.1504 3.92855 79.2845 5.06262 80.6817 5.06262H81.0089C82.4079 5.06262 83.5402 3.92855 83.5402 2.53131C83.5402 1.13407 82.4062 0 81.0089 0Z" fill="#2F2F2F"/>
+                            <path d="M94.7311 6.95264C92.7867 6.95264 91.1713 7.87547 90.1983 9.47529V7.85816C90.1983 7.76293 90.148 7.68848 90.0978 7.61576C90.0667 7.56902 90.0355 7.53785 89.9905 7.50669C89.923 7.44955 89.845 7.40626 89.7464 7.40626H86.0706C85.8195 7.40626 85.6152 7.61057 85.6152 7.86162V20.9441C85.6152 21.1951 85.8195 21.3994 86.0706 21.3994H89.7464C89.9957 21.3994 90.1983 21.1969 90.1983 20.9475V14.2141C90.2502 11.8594 91.3739 10.9816 92.8837 10.9816C94.5787 10.9816 95.4583 11.92 95.4583 14.0098V20.9441C95.4583 21.1951 95.6626 21.3994 95.9136 21.3994H99.5444C99.7954 21.3994 99.9997 21.1951 99.9997 20.9441V12.7372C99.9997 8.73944 97.8199 6.95264 94.7311 6.95264Z" fill="#2F2F2F"/>
+                            <path d="M32.806 7.39324H30.6106C30.4859 7.39324 30.3838 7.29281 30.3838 7.16642V1.68827C30.3838 1.43722 30.1795 1.23291 29.9284 1.23291H26.2665C26.0155 1.23291 25.8112 1.43722 25.8112 1.68827V7.16642C25.8112 7.29108 25.7107 7.39324 25.5861 7.39324H23.5413C23.2902 7.39324 23.0859 7.59754 23.0859 7.84859V10.7539C23.0859 11.0049 23.2902 11.2092 23.5413 11.2092H25.5861C25.7107 11.2092 25.8112 11.3097 25.8112 11.4361V16.6614C25.8112 20.0221 27.6568 21.3864 30.505 21.3864H32.155C32.297 21.3864 32.413 21.2721 32.413 21.1302V17.4042C32.413 17.2622 32.2987 17.1479 32.155 17.1479H31.8988C30.7162 17.1479 30.3838 16.7238 30.3838 15.4217V11.4378C30.3838 11.3131 30.4842 11.211 30.6106 11.211H32.806C33.0571 11.211 33.2614 11.0067 33.2614 10.7556V7.85032C33.2614 7.59927 33.0571 7.39497 32.806 7.39497V7.39324Z" fill="#2F2F2F"/>
+                            </svg>
+                            </p>
+                    <p class="title_txt"><img src="../../images/icon_check00.svg" alt="">알고리즘과 약사상담으로 최종설계되었습니다.</p>
+
+                    <div class="subscrpt_item flex pf">
+                        <div class="pfimg_left">
+                            <img src="../../images/pfimg.png" alt="">
+                        </div>
+                        <div class="pftxt_right">
+                            <p class="title">장약국장 약사</p>
+                            <p class="txt">참약사 약국 대표</p>
+                            <p class="txt">참약사육성협동조합 대표</p>
+                        </div>
+                    </div>
+
+                    <div class="subscrpt_item flex subscrpt_slide">
+                        <div class="drug_listleft">
+                            <img src="../../images/icon_sun.svg" alt="">
+                            <p>오전</p>
+                        </div>
+                        <div class="swiper drug_listslide">
+                            <div class="swiper-wrapper drug_list">
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img01.png" alt="">
+                                    </p>
+                                    <p class="drug_name">마그네슘B</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img02.png" alt="">
+                                    </p>
+                                    <p class="drug_name">비타민C+</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img03.png" alt="">
+                                    </p>
+                                    <p class="drug_name">비타민D-2000IU+</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img04.png" alt="">
+                                    </p>
+                                    <p class="drug_name">rTG-알티지-오메가3+</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img05.png" alt="">
+                                    </p>
+                                    <p class="drug_name">카테킨+</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img06.png" alt="">
+                                    </p>
+                                    <p class="drug_name">루테인아스타잔틴+</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img07.png" alt="">
+                                    </p>
+                                    <p class="drug_name">히알루론산비오틴+</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img08.png" alt="">
+                                    </p>
+                                    <p class="drug_name">밀크씨슬+</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img09.png" alt="">
+                                    </p>
+                                    <p class="drug_name">바나바리프</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img10.png" alt="">
+                                    </p>
+                                    <p class="drug_name">복합미네랄</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img11.png" alt="">
+                                    </p>
+                                    <p class="drug_name">비타민B-컴플렉스+-</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img12.png" alt="">
+                                    </p>
+                                    <p class="drug_name">로사테아닌</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img13.png" alt="">
+                                    </p>
+                                    <p class="drug_name">MSM+</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img14.png" alt="">
+                                    </p>
+                                    <p class="drug_name">소포리코시드</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img15.png" alt="">
+                                    </p>
+                                    <p class="drug_name">쏘팔메토옥타코사놀+-</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img16.png" alt="">
+                                    </p>
+                                    <p class="drug_name">종합비타민+</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img17.png" alt="">
+                                    </p>
+                                    <p class="drug_name">징코추출물</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img18.png" alt="">
+                                    </p>
+                                    <p class="drug_name">칼마디K</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img19.png" alt="">
+                                    </p>
+                                    <p class="drug_name">코큐텐+-</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img20.png" alt="">
+                                    </p>
+                                    <p class="drug_name">프로바이오틱스-베이직</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+
+                    <div class="subscrpt_item flex subscrpt_slide">
+                        <div class="drug_listleft">
+                            <img src="../../images/icon_moon.svg" alt="">
+                            <p>오후</p>
+                        </div>
+                        <div class="swiper drug_listslide">
+                            <div class="swiper-wrapper drug_list">
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img01.png" alt="">
+                                    </p>
+                                    <p class="drug_name">마그네슘B</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img02.png" alt="">
+                                    </p>
+                                    <p class="drug_name">비타민C+</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img03.png" alt="">
+                                    </p>
+                                    <p class="drug_name">비타민D-2000IU+</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img04.png" alt="">
+                                    </p>
+                                    <p class="drug_name">rTG-알티지-오메가3+</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img05.png" alt="">
+                                    </p>
+                                    <p class="drug_name">카테킨+</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img06.png" alt="">
+                                    </p>
+                                    <p class="drug_name">루테인아스타잔틴+</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img07.png" alt="">
+                                    </p>
+                                    <p class="drug_name">히알루론산비오틴+</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img08.png" alt="">
+                                    </p>
+                                    <p class="drug_name">밀크씨슬+</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img09.png" alt="">
+                                    </p>
+                                    <p class="drug_name">바나바리프</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img10.png" alt="">
+                                    </p>
+                                    <p class="drug_name">복합미네랄</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img11.png" alt="">
+                                    </p>
+                                    <p class="drug_name">비타민B-컴플렉스+-</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img12.png" alt="">
+                                    </p>
+                                    <p class="drug_name">로사테아닌</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img13.png" alt="">
+                                    </p>
+                                    <p class="drug_name">MSM+</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img14.png" alt="">
+                                    </p>
+                                    <p class="drug_name">소포리코시드</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img15.png" alt="">
+                                    </p>
+                                    <p class="drug_name">쏘팔메토옥타코사놀+-</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img16.png" alt="">
+                                    </p>
+                                    <p class="drug_name">종합비타민+</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img17.png" alt="">
+                                    </p>
+                                    <p class="drug_name">징코추출물</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img18.png" alt="">
+                                    </p>
+                                    <p class="drug_name">칼마디K</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img19.png" alt="">
+                                    </p>
+                                    <p class="drug_name">코큐텐+-</p>
+                                </div>
+                                <div class="swiper-slide drug_item">
+                                    <p class="drug_bg">
+                                        <img src="../../images/drug_img20.png" alt="">
+                                    </p>
+                                    <p class="drug_name">프로바이오틱스-베이직</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="subscrpt_item">
+                        <div class="name flex">
+                            <p class="names">건강 지침사항</a>
+                        </div>
+                        <div class="subscrpt_data">
+                            <p class="sign_txt">텍스트  텍스트  텍스트  텍스트  텍스트  텍스트  텍스트  텍스트  텍스트  텍스트  텍스트  텍스트  텍스트  텍스트</p>
+
+                            <img src="../../images/icon_sign.png" alt="" class="sign_img">
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="subscrpt_list">
+                    <p class="title">최종 주문내역</p>
+                    <div class="subscrpt_item flex bgpd">
+                        <div class="subinfo_left">
+                            <div class="left_top">
+                                <p class="font_s">건강하게 챙기는 햇빛 에너지</p>
+                                <p class="title">비타민D 2000IU+</p>
+                            </div>
+                            <div class="left_bottom">
+                                <p>뼈의 형성과 유지에 필요</p>
+                                <p>골다공증 발생 위험 감소에 도움</p>
+                            </div>
+                        </div>
+                        <div class="subinfo_right">
+                            <img src="../../images/drug_img03.png" alt="">
+                            <p class="font_s">6,900 원 <span>/월</span></p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="subscrpt_list">
+                    <div class="title flex"><p>총 결제금액</p> <p class="point_c">0 원</p></div>
+                    <div class="subscrpt_item sub_total">
+                        <div class="total_top flex">
+                            <p>총 1개 제품(30일분)</p>
+                            <p>5,520 원</p>
+                        </div>
+
+                        <div class="total_txt">
+                            <div class="txt flex"><p><b>정상가</b></p> <p><b>6,900 원</b></p></div>
+                            <div class="txt flex"><p><b>건강지원 할인<span class="icon">최대 20%</span></b>  </p><p><b>- 1,380 원</b></p></div>
+                            <div class="txt flex"><p>배송비</p> <p> 0원</p></div>
+                        </div>
+
+                        <div class="total_pay flex">
+                            <p class="title">최종 결제 금액</p>
+                            <div class="total_payright">
+                                <p class="total_paytitle">5,520 원</p>
+                                <p class="total_payday">1일 184 원</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <p class="text_bottom">※ 다음달 결제 진행 전 미리 알림톡을 드려요.<br>
+                <span class="point_c">언제든 구독해지를 할 수 있습니다.</span></p>
+
+            <div class="fixed_btn">
+                <a href="#">핏타민 구독하기</a>
+            </div>
+        </div>
+        <!-- /////////////////// 여기까지 //////////////// -->
+    </div>
+
+
+    <!-- 팝업 -->
+    <div class="coupon_popup">
+        <div class="overlay"></div>
+        <div class="coupon_pop align_center">
+            <div class="coupon_use">
+                <p class="conpon_poptxt" style="">
+                    오프라인 상담을 받으셨나요?<br>결제방식을 선택해주세요
+                </p>
+                <div class="btn_wrap">
+                    <a href="#" class="btn btn_blue">온라인에서 구독 결제할래요</a>
+                    <a href="#" class="btn btn_white">약국에서 단품 결제할래요</a>
+                </div>
+            </div>
+            <a href="#" class="coupon_close"><i class="ri-close-line"></i></a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+
+    <script>
+
+        /*===== show menu =====*/
+        const navMenu = document.getElementById('nav-menu'),
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close');
+
+if(navToggle){
+  navToggle.addEventListener('click', () =>{
+      navMenu.classList.add('show-menu');
+  })
+}
+
+/*===== hidden menu =====*/
+if(navClose){
+  navClose.addEventListener('click', () =>{
+      navMenu.classList.remove('show-menu');
+  })
+};
+
+
+
+/* ====================== nav mobile menu ========================= */
+const navFull = document.querySelectorAll('.menu_list');
+
+navFull.forEach((item) =>{
+    const navTitle = item.querySelector('.nav_link');
+
+    navTitle.addEventListener('click', () =>{
+        const openItem = document.querySelector('.nav-open');
+
+        toggleItem(item);
+
+        if(openItem && openItem!== item){
+            toggleItem(openItem);
+        }
+    })
+})
+
+const toggleItem = (item) =>{
+    const navSub = item.querySelector('.nav_in');
+ 
+    if(item.classList.contains('nav-open')){
+        navSub.removeAttribute('style');
+        item.classList.remove('nav-open');
+    }else{
+        if(navSub != null) {
+            navSub.style.height = navSub.scrollHeight + 'px';
+            item.classList.add('nav-open');
+        }
+    }
+}
+
+
+/* ----------- 구독제품 리스트 ----------- */
+var swiper = new Swiper(".drug_listslide", {
+        slidesPerView: "auto",
+        spaceBetween: 15,
+      });
+
+
+      /* 팝업 */
+$(".fixed_btn").on("click", function(){
+  $(".coupon_popup, body").addClass("active");
+});
+
+$(".btn_wrap, .coupon_close").on("click", function(){
+  $(".coupon_popup, body").removeClass("active");
+});
+
+
+
+    </script>
+    
+</body>
+</html>
+
+
+
+
+

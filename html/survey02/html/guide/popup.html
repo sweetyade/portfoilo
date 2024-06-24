@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>GUIDE POPUP</title>
+</head>
+
+<style>
+  .guide_wrap{
+    width: 100%;
+    max-width: 360px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  .info{
+    width: 100%;
+    line-height: var(--line-h);
+    margin-bottom: 5rem;
+  }
+
+  .guide_block{
+    margin: 2rem 0 5rem;
+  }
+
+  .quide_flex{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .quide_flex .span3_f{
+    margin-left: 1rem;
+    color: #9F9F9F;
+  }
+
+</style>
+<body class="open">
+  <div class="guide_wrap">
+    <h1 class="h1_f">POPUP</h1>
+    
+    <div class="guide_block">
+      <p class="h2_f" style="margin-bottom: 1rem;">기본 알림 팝업</p>
+
+      <div class="btn_wrap">
+        <button class="btn_b btn_basic pop01">버튼 1개 팝업</button>
+        <button class="btn_b btn_red pop02">버튼 2개 팝업</button>
+      </div>
+      
+      <!--팝업 버튼 1개 -->
+      <div class="popup popup01">
+        <!-- 팝업안 전체 오버레이 -->
+        <div class="overlay"></div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popup_msg">
+          <p class="popup_t">서비스를 탈퇴하시겠어요?</p>
+          <div class="popup_con">
+            <p class="popup_txt">지금 핏타민 서비스를 탈퇴하시면 받고 있는 혜택이 모두 사라져요</p>
+          </div>
+          <!-- 버튼 1개 -->
+          <div class="popup_btn">
+            <button class="btn_light btnClose">확인</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 팝업 버튼 2개 -->
+      <div class="popup popup02">
+        <!-- 팝업안 전체 오버레이 -->
+        <div class="overlay"></div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popup_msg">
+          <p class="popup_t">서비스를 탈퇴하시겠어요?</p>
+          <div class="popup_con">
+            <p class="popup_txt">지금 핏타민 서비스를 탈퇴하시면 받고 있는 혜택이 모두 사라져요<br><br></p>
+            <p class="popup_txtr">지금 핏타민 서비스를 탈퇴하시면 받고 있는 혜택이 모두 사라져요</p>
+            <p class="popup_txtg">지금 핏타민 서비스를 탈퇴하시면 받고 있는 혜택이 모두 사라져요</p>
+          </div>
+          <!-- 버튼 2개 -->
+          <div class="popup_btn">
+            <button class="btn_light btnClose">확인</button>
+            <button class="btn_basic btnClose">탈퇴하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="guide_block">
+      <p class="h2_f" style="margin-bottom: 1rem;">하단 모달</p>
+
+      <div class="btn_wrap">
+        <button class="btn_b btn_white modalbtn06">메인 이미지모달 추가</button>
+        <button class="btn_b btn_basic modalbtn01">기본 텍스트 모달</button>
+        <button class="btn_b btn_red modalbtn02">이미지 모달</button>
+        <button class="btn_b btn_light modalbtn03">텍스트 리스트 모달</button>
+        <button class="btn_b btn_white modalbtn04">인풋 모달</button>
+        <button class="btn_b btn_basic modalbtn05">파일등록 모달</button>
+      </div>
+
+      <!-- 메인페이지 모달-->
+      <div class="modal modal06">
+        <!-- 팝업안 전체 오버레이 -->
+        <div class="overlay"></div>
+
+        <!-- 모달 컨텐츠-->
+        <div class="modal_block">
+          <div class="swiper modal_img">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide img_data">
+                <a href="#">
+                  <img src="../../images/guide_sample.png" alt="">
+                </a>
+              </div>
+              <div class="swiper-slide img_data">
+                <a href="#">
+                  <img src="../../images/guide_sample2.png" alt="">
+                </a>
+              </div>
+              <div class="swiper-slide img_data">
+                <a href="#">
+                  <img src="../../images/guide_sample3.png" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="btn_main">
+            <button class="btnClose btn_check gray02">오늘 하루 보지 않기</button>
+            <button class="btnClose">닫기</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 기본 텍스트 모달-->
+      <div class="modal modal01">
+        <!-- 팝업안 전체 오버레이 -->
+        <div class="overlay"></div>
+
+        <!-- 모달 컨텐츠-->
+        <div class="modal_block">
+          <div class="modal_in">
+            <div class="modal_top">
+              <p class="modal_t">타이틀 영역입니다</p>
+              <p class="modal_sub">서브 타이틀 영역입니다</p>
+            </div>
+            <div class="modal_con">
+              <p class="span2_f">.modal_con 상하패딩 1.5rem</p>
+              <p class="span2_f">기본 컨텐츠 모달의 최대 높이는 35vh 그 이상은 스크롤</p>
+              <p class="span2_f">컨텐츠가 들어가는 영역입니다</p>
+              <p class="span2_f">엔터는 br <br><br></p>
+              <p class="span2_f">일반 텍스트 컨텐츠</p>
+              <p class="span2_f">일반 텍스트 컨텐츠</p>
+              <p class="span2_f">일반 텍스트 컨텐츠</p>
+              <p class="span2_f">일반 텍스트 컨텐츠</p>
+              <p class="span2_f">일반 텍스트 컨텐츠</p>
+              <p class="span2_f">일반 텍스트 컨텐츠</p>
+              <p class="span2_f">일반 텍스트 컨텐츠</p>
+              <p class="span2_f">일반 텍스트 컨텐츠</p>
+              <p class="span2_f">일반 텍스트 컨텐츠</p>
+              <p class="span2_f">일반 텍스트 컨텐츠</p>
+              <p class="span2_f">일반 텍스트 컨텐츠</p>
+              <p class="span2_f">일반 텍스트 컨텐츠</p>
+              <p class="span2_f">일반 텍스트 컨텐츠</p>
+              <p class="span2_f">일반 텍스트 컨텐츠</p>
+              <p class="span2_f">일반 텍스트 컨텐츠</p>
+              <p class="span2_f">일반 텍스트 컨텐츠</p>
+              <p class="span2_f">일반 텍스트 컨텐츠</p>
+              <p class="span2_f">일반 텍스트 컨텐츠</p>
+              <p class="span2_f">일반 텍스트 컨텐츠</p>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+            <p class="toast">
+              .toast / 모달안 토스트 매세지는 .btn_wrap안에 작성합니다.
+            </p>
+            <button class="btn_b btn_basic btnClose">다음</button>
+            <button class="btn_b btn_trans btnClose">닫기</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 이미지 모달-->
+      <div class="modal modal02">
+        <!-- 팝업안 전체 오버레이 -->
+        <div class="overlay"></div>
+
+        <!-- 모달 컨텐츠-->
+        <div class="modal_block">
+          <div class="modal_img">
+            <a href="#">
+              <img src="../../images/common/sample_img.png" alt="">
+            </a>
+          </div>
+
+          <div class="btn_wrap">
+            <button class="btn_b btn_basic btnClose">다음</button>
+            <button class="btn_b btn_trans btnClose">닫기</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 텍스트 리스트 모달-->
+      <div class="modal modal03">
+        <!-- 팝업안 전체 오버레이 -->
+        <div class="overlay"></div>
+
+        <!-- 모달 컨텐츠-->
+        <div class="modal_block">
+          <div class="modal_in">
+            <div class="modal_top">
+              <p class="modal_t">타이틀 영역입니다</p>
+              <p class="modal_sub">서브 타이틀 영역입니다</p>
+            </div>
+            <div class="modal_con">
+              <ul>
+                <li>내용 설명설명내용 설명설명내용 설명설명내용 설명설명내용 설명설명내용 설명설명내용 설명설명내용 설명설명</li>
+                <li>내용 설명설명</li>
+                <li>내용 설명설명</li>
+                <li>내용 설명설명</li>
+                <li>내용 설명설명</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+            <button class="btn_b btn_basic btnClose">다음</button>
+            <button class="btn_b btn_trans btnClose">닫기</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 인풋 모달-->
+      <div class="modal modal04">
+        <!-- 팝업안 전체 오버레이 -->
+        <div class="overlay"></div>
+
+        <!-- 모달 컨텐츠-->
+        <div class="modal_block">
+          <div class="modal_in">
+            <div class="modal_top">
+              <p class="modal_t">타이틀 영역입니다</p>
+              <p class="modal_sub">서브 타이틀 영역입니다</p>
+            </div>
+            <div class="modal_con">
+              <div class="input_basic">
+                <input type="email" id="input01" placeholder="복용중인 약의 이름을 적어주세요">
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+            <button class="btn_b btn_basic btnClose">다음</button>
+            <button class="btn_b btn_trans btnClose">닫기</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 파일등록 모달-->
+      <div class="modal modal05">
+        <!-- 팝업안 전체 오버레이 -->
+        <div class="overlay"></div>
+
+        <!-- 모달 컨텐츠-->
+        <div class="modal_block">
+          <div class="modal_in">
+            <div class="modal_top">
+              <p class="modal_t">어떤 약을 복용중이신가요?</p>
+              <p class="modal_sub">처방전이나 약 봉투 사진을 가지고 계신다면<br>이미지도 함께 첨부해주세요.</p>
+            </div>
+            <div class="modal_file">
+              <div class="input_basic mb_1">
+                <input type="email" id="input01" placeholder="복용중인 약의 이름을 적어주세요">
+              </div>
+
+              <div class="add_file swiper">
+                <div class="swiper-wrapper">
+                  <div class="file_list swiper-slide input_file">
+                    <label for="addfile"></label>
+                    <input type="file" name="" id="addfile">
+                  </div>
+                  <div class="file_list swiper-slide">
+                    <img src="../../images/guide_sample.png" alt="">
+                    <p class="deleteBtn"></p>
+                  </div>
+                  <div class="file_list swiper-slide">
+                    <img src="../../images/guide_sample.png" alt="">
+                    <p class="deleteBtn"></p>
+                  </div>
+                  <div class="file_list swiper-slide">
+                    <img src="../../images/guide_sample.png" alt="">
+                    <p class="deleteBtn"></p>
+                  </div>
+                  <div class="file_list swiper-slide">
+                    <img src="../../images/guide_sample.png" alt="">
+                    <p class="deleteBtn"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap">
+            <button class="btn_b btn_basic btnClose">등록하기</button>
+            <button class="btn_b btn_trans btnClose">닫기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn_fix">
+    <button class="btn_b btn_basic">하단고정 버튼</button>
+    <p class="toast">
+      .toast / 하단고정 토스트 메세지는 .btn_fix 버튼 아래에 작성합니다.
+    </p>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    let swiper = new Swiper(".add_file", {
+      spaceBetween: 8,
+      slidesPerView: "auto",
+    });
+
+
+
+     /* popup */
+    $(".pop01").on("click", function(){
+    $(".popup01, body").addClass("open");
+    });
+
+    $(".pop02").on("click", function(){
+    $(".popup02, body").addClass("open");
+    });
+
+    $(".modalbtn01").on("click", function(){
+    $(".modal01, body").addClass("open");
+    });
+
+    $(".modalbtn02").on("click", function(){
+    $(".modal02, body").addClass("open");
+    });
+
+    $(".modalbtn03").on("click", function(){
+    $(".modal03, body").addClass("open");
+    });
+
+    $(".modalbtn04").on("click", function(){
+    $(".modal04, body").addClass("open");
+    });
+
+    $(".modalbtn05").on("click", function(){
+    $(".modal05, body").addClass("open");
+    });
+
+    $(".modalbtn06").on("click", function(){
+    $(".modal06, body").addClass("open");
+    });
+
+
+
+    $(".overlay, .btnClose").on("click", function(){
+      $(".popup, .modal, body").removeClass("open");
+    });
+
+        //메인 이미지 팝업
+        let swiper2 = new Swiper(".modal_img", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+    });
+  </script>
+</body>
+</html>

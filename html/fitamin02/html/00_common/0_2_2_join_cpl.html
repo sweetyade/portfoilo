@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <script src="../../js/lottie-player.js"></script>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>1-2-2.회원가입 완료</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="back"></div>
+      <div class="page_name"></div>
+      <div class="header_icon"></div>
+    </header>
+
+    <main class="main" style="background-color: #fff">
+      <section class="inner_1_25 inner_tb_2">
+        <div class="check_ani mb_1_5">
+          <lottie-player src="../../images/json/check.json" background="transparent" speed="1" autoplay></lottie-player>
+        </div>
+        <p class="p1_fb mb_0_75">최대오글자님<br />회원가입이 완료되었어요</p>
+        <p class="p3_f gray02">
+          추천인 코드는 마이페이지 > 회원정보 수정<br />
+          페이지에서 입력하실 수 있어요
+        </p>
+      </section>
+
+      <div class="btn_fix">
+        <button class="btn_b btn_white moodalBtn">추천인 코드 등록완료</button>
+        <button class="btn_b btn_basic">홈으로 가기</button>
+        <p class="toast" style="bottom: 8.5rem">추천인 코드가 등록되었습니다</p>
+      </div>
+    </main>
+
+    <!-- 추천인 코드 모달 -->
+    <div class="modal">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 모달 컨텐츠-->
+      <div class="modal_wrap">
+        <p class="toast">유효하지 않은 추천인 코드입니다</p>
+        <div class="modal_top">
+          <p class="modal_title">추천인 코드를 입력해주세요</p>
+          <p class="modal_sub">추천인을 입력하시면 포인트 100원을 지급해드립니다</p>
+        </div>
+
+        <div class="modal_con">
+          <div class="input_div">
+            <input type="text" id="input01" class="clearInput" placeholder="추천인 코드 입력" />
+            <div class="btnClear"></div>
+          </div>
+        </div>
+
+        <div class="btn_wrap">
+          <button class="btn_b btn_basic btnClose">확인</button>
+          <button class="btn_b btn_trans btnClose">닫기</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+      /* popup */
+      $(".moodalBtn").on("click", function () {
+        $(".modal, body").addClass("open");
+      });
+
+      $(".overlay, .btnClose").on("click", function () {
+        $(".popup, .modal, body").removeClass("open");
+      });
+    </script>
+  </body>
+</html>

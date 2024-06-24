@@ -1,0 +1,112 @@
+/***************************************************************
+    10. header
+***************************************************************/
+header{
+    padding-block: 1.5rem;
+    border-radius: 0 0 .5rem .5rem;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: var(--white-color);
+    transition: .3s;
+
+    .inner{
+        @include flexbtw;
+    }
+
+    .header_title{
+        @include flex;
+        gap: .25rem;
+        width: calc(100% - 3rem);
+        
+        h2{
+            
+            span{
+                display: block;
+                font-size: var(--small-font-size);
+                color: var(--text-color-2);
+            }
+            font-size: var(--h1-font-size);
+            font-weight: var(--bold-font);
+        }
+
+        .back{
+            opacity: .5;
+            width: 2rem;
+            height: 2rem;
+            @include flex;
+        }
+    }
+
+    .icon_group{
+        justify-content: flex-end;
+
+        .btn_icon{
+            background-color: var(--bg-color);
+        }
+    }
+
+    .header_noti{
+        font-size: var(--small-font-size);
+        color: var(--text-color-2);
+        padding: .75rem 1.25rem 0;
+        line-height: 1.5;
+    }
+
+    .header_toggle{
+        position: absolute;
+        width: 1.5rem;
+        height: .25rem;
+        background-color: var(--border-color);
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    &.primary{
+        background-color: var(--primary-color);
+        color: var(--white-color);
+
+        .icon_group{
+            .btn_icon{
+                background-color: var(--white-color-alp);
+            }
+        }
+    }
+
+    &.scroll{
+        box-shadow: var(--shadow-m);
+    }
+    
+}
+
+.header_menu{
+    padding-top: 1rem;
+    position: relative;
+    width: 100%;
+    transform: initial;
+
+    &::-webkit-scrollbar {
+        background:transparent;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background:transparent;
+    }
+
+    .btn_s{
+        width: fit-content;
+        border-color: var(--border-color);
+        color: var(--primary-color);
+        white-space: nowrap;
+        transition: all .3s;
+
+        &.active{
+            border-color: var(--primary-color);
+            background-color: var(--primary-color);
+            color: var(--white-color);
+        }
+    }
+
+}

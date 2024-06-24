@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>1-5-2-1.영양제 추가하기(분석검색) - 검색결과 있음</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="back"><img src="../../images/icon/system_back.svg" alt="" /></div>
+      <h2 class="page_name">영양제 추가하기</h2>
+      <div class="header_icon">
+        <button class="btn_s">등록</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="search_top pd_bottom_l">
+        <div class="input_block mb_1_5">
+          <div class="input_div">
+            <input type="text" class="clearInput searchInput" placeholder="검색어를 입력해주세요." />
+            <input type="submit" class="btnSearch" />
+            <div class="btnClear"></div>
+          </div>
+          <div class="search_drop">
+            <p><span>[브랜드명]</span>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트검색시 상품명 리스트검색시 상품명 리스트검색시 상품명 리스트검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+            <p>검색시 상품명 리스트</p>
+          </div>
+        </div>
+
+        <div class="search_con">
+          <div class="title_total">
+            <p class="title"><span class="primary">지금 많이 찾는</span> 영양제 브랜드</p>
+            <p class="total">총 <span class="listTotal">0</span>건</p>
+          </div>
+
+          <div class="filter_block mt_1">
+            <p class="selectBtn">섭취 등록 순</p>
+            <!-- .option -->
+            <ul class="filterOption">
+              <li class="optionItem select" value="섭취 등록 순">섭취 등록 순</li>
+              <li class="optionItem" value="인기 높은 순">인기 높은 순</li>
+              <li class="optionItem" value="이름 순">이름 순</li>
+            </ul>
+          </div>
+
+          <div class="search_list mt_1">
+            <div class="goods_box_s check">
+              <p class="name"><span class="brand">[피토틱스]</span> 블랙</p>
+            </div>
+            <div class="goods_box_s check">
+              <p class="name">피토틱스 블랙</p>
+            </div>
+            <div class="goods_box_s check">
+              <p class="name">피토틱스 블랙</p>
+            </div>
+            <div class="goods_box_s check">
+              <p class="name">피토틱스 블랙</p>
+            </div>
+            <div class="goods_box_s check">
+              <p class="name">피토틱스 블랙</p>
+            </div>
+            <div class="goods_box_s check">
+              <p class="name">피토틱스 블랙</p>
+            </div>
+            <div class="goods_box_s check">
+              <p class="name">피토틱스 블랙</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="btn_fix wide">
+        <button class="btn_b btn_wide btn_basic addBtn" disabled>선택한 영양제 (<span class="selectTotal">0</span>개)</button>
+        <p class="toast" style="display: none">영양제가 추가되었어요!</p>
+        <div class="bottom_btn">
+          <p class="txt">찾는 영양제가 없으신가요?</p>
+          <p class="btn_s btn_light btn_img addModal"><img src="../../images/icon/systems_edit_gray.svg" alt="" />직접 등록하기</p>
+        </div>
+      </div>
+    </main>
+
+    <!--영양제 직접입력 -->
+    <div class="modal modal01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+      <!-- 모달 컨텐츠-->
+      <div class="modal_wrap">
+        <p class="toast">브랜드명과 영양제명을 기입해주세요</p>
+        <div class="modal_top">
+          <p class="modal_title">영양제를 직접 입력해주세요</p>
+          <p class="modal_sub">섭취 중인 영양제의 정보를 기입해주세요</p>
+        </div>
+
+        <div class="modal_con">
+          <div class="input_div">
+            <input type="text" id="" class="mb_0_5" placeholder="브랜드명" />
+            <input type="text" id="" class="" placeholder="제품명" />
+          </div>
+        </div>
+
+        <div class="btn_wrap">
+          <button class="btn_b btn_basic popClose">등록하기</button>
+          <button class="btn_b btn_trans popClose">닫기</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 영양제 선택시 등록확인 모달-->
+    <div class="modal modal02">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+      <!-- 모달 컨텐츠-->
+      <div class="modal_wrap">
+        <p class="toast" style="display: none">영양제는 최소 1개를 선택해주세요</p>
+        <div class="modal_top">
+          <p class="modal_title">
+            선택한 <span class="primary">영양제 1개</span>의<br />
+            권장 섭취일정을 분석할까요?
+          </p>
+        </div>
+
+        <div class="modal_con">
+          <div class="modal_con_list">
+            <p class="list_none">선택한 영양제가 없어요</p>
+
+            <div class="goods_box_s">
+              <p class="brand_s">고려은단</p>
+              <p class="name">피토틱스 블랙</p>
+              <p class="deletBtn"></p>
+            </div>
+            <div class="goods_box_s">
+              <p class="brand_s">고려은단</p>
+              <p class="name">피토틱스 블랙</p>
+              <p class="deletBtn"></p>
+            </div>
+            <div class="goods_box_s">
+              <p class="brand_s">고려은단</p>
+              <p class="name">피토틱스 블랙</p>
+              <p class="deletBtn"></p>
+            </div>
+            <div class="goods_box_s">
+              <p class="brand_s">고려은단</p>
+              <p class="name">피토틱스 블랙</p>
+              <p class="deletBtn"></p>
+            </div>
+            <div class="goods_box_s">
+              <p class="brand_s">고려은단</p>
+              <p class="name">피토틱스 블랙</p>
+              <p class="deletBtn"></p>
+            </div>
+            <div class="goods_box_s">
+              <p class="brand_s">고려은단</p>
+              <p class="name">피토틱스 블랙</p>
+              <p class="deletBtn"></p>
+            </div>
+            <div class="goods_box_s">
+              <p class="brand_s">고려은단</p>
+              <p class="name">피토틱스 블랙</p>
+              <p class="deletBtn"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn_wrap">
+          <button class="btn_b btn_basic popClose modalAdd">분석하기</button>
+          <button class="btn_b btn_trans popClose">닫기</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+      // /* ---- 삭제버튼 ------- */
+      $(document).ready(function () {
+        $(".input_div").each(function () {
+          $(this)
+            .find(".clearInput")
+            .on("keyup focus", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 1");
+
+              if ($(this).val().length == 0) {
+                $(this).siblings(".btnClear").attr("style", "opacity: 0");
+              } else {
+                $(this).siblings(".btnClear").attr("style", "opacity: 1");
+              }
+            });
+
+          $(this)
+            .find(".clearInput")
+            .on("blur", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 0");
+            });
+
+          $(this)
+            .find(".btnClear")
+            .on("click touchstart", function () {
+              $(this).closest(".input_div").find(".clearInput").val("");
+              $(this).closest(".input_div").find(".btnClear").attr("style", "opacity: 0");
+              return false;
+            });
+        });
+      });
+
+      //검색 리스트
+      $(".searchInput").focusin(function () {
+        $(".search_drop").slideDown();
+      });
+
+      $(".searchInput").focusout(function () {
+        $(".search_drop").slideUp();
+      });
+
+      //필터정렬
+      $(".selectBtn").on("click", function () {
+        $(".filterOption").slideToggle();
+
+        $(".optionItem ").click(function () {
+          if (!$(this).hasClass("select")) {
+            $(this).addClass("select");
+            $(this).siblings().removeClass("select");
+          }
+          let optionTxt = $(".optionItem.select").text();
+          $(".selectBtn").text(optionTxt);
+        });
+      });
+
+      $(document).ready(function() {
+        let listTotal = $(".search_list .goods_box_s").length;
+        $(".listTotal").text(listTotal)
+      })
+
+      //선택영양제
+      $(".search_list")
+        .find(".goods_box_s")
+        .click(function () {
+          $(this).toggleClass("select");
+          let selectList = $(".goods_box_s.select").length;
+          $(".selectTotal").text(selectList);
+          if ($(this).hasClass("select")) {
+            $(".btn_fix .toast").fadeIn(function () {
+              $(this).delay(1000).fadeOut();
+            });
+          }
+
+          if (selectList === 0) {
+            $(".addBtn").attr("disabled", true);
+          } else {
+            $(".addBtn").attr("disabled", false);
+          }
+        });
+
+      //팝업
+      $(".addModal").click(function () {
+        $(".modal01").addClass("open");
+      });
+
+      $(".addBtn").click(function () {
+        $(".modal02").addClass("open");
+      });
+
+      $(".overlay, .popClose").on("click", function () {
+        $(".popup, .modal, body, .btn_trans").removeClass("open");
+      });
+
+      //팝업 목록삭제
+      $(document).ready(function () {
+        $(".list_none, .modal02 .toast").hide();
+        let selectList = $(".modal_con_list .goods_box_s").length;
+
+        $(".modalTotal").text(selectList);
+
+        $(".deletBtn").on("click", function () {
+          $(this)
+            .parents(".goods_box_s")
+            .fadeOut("normal", function () {
+              $(this).remove();
+
+              if ($(".modal_con_list .goods_box_s").length === 0) {
+                $(".list_none").fadeIn();
+              }
+
+              let selectList = $(".modal_con_list .goods_box_s").length;
+              $(".modalTotal").text(selectList);
+
+              if (selectList === 0) {
+                $(".modalAdd").attr("disabled", true);
+                $(".modal02 .toast").fadeIn();
+              } else {
+                $(".modalAdd").attr("disabled", false);
+                $(".modal02 .toast").hide();
+              }
+            });
+        });
+      });
+    </script>
+  </body>
+</html>

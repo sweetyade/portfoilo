@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>2-4-1.건강분석결과 선택</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <p class="back"><img src="../../images/icon/system_back.svg" alt="뒤로가기" /></p>
+      <h2 class="page_name">건강분석 결과선택</h2>
+      <div class="header_icon"></div>
+    </header>
+
+    <main class="main">
+      <section class="consult_wrap pd_bottom_l">
+        <div class="consult_title">
+          <p class="title">건강분석 결과를 선택해주세요</p>
+          <p class="btn_s btn_light mt_0_5 popOpen">건강분석 새로하기</p>      
+        </div>
+        
+        <div class="consult_list">
+          <div class="result_slt">
+            <div class="title">
+              <p class="point">100점</p>
+              <p class="name">최대오글자</p>
+            </div>
+            <p class="info">혈중지질개선·모발&손톱·활력/피로</p>
+
+            <div class="info_table">
+              <p class="title">추천 영양제</p>
+              <p class="txt">비타민D 2000IU+ 외 2건</p>
+            </div>
+
+            <p class="date">2022.12.31</p>
+          </div>
+          <div class="result_slt">
+            <div class="title">
+              <p class="point">100점</p>
+              <p class="name">최대오글자</p>
+            </div>
+            <p class="info">혈중지질개선·모발&손톱·활력/피로</p>
+
+            <div class="info_table">
+              <p class="title">추천 영양제</p>
+              <p class="txt">비타민D 2000IU+ 외 2건</p>
+            </div>
+
+            <p class="date">2022.12.31</p>
+          </div>
+          <a href="#" class="misc2_under gray02 textcenter mt_1_5">바로 상담할래요</a>
+        </div>
+      </section>
+
+      <div class="btn_fix">
+        <button class="btn_b btn_basic" disabled>다음</button>
+      </div>
+    </main>
+
+    <!-- 건강분석 새로하기 -->
+    <div class="popup popup01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 팝업 컨텐츠 -->
+      <div class="popup_wrap">
+        <p class="pop_title">새로운 건강분석을 진행할까요?</p>
+        <p class="pop_txt">새로운 건강분석을 하실 경우 상담신청<br>
+          내역이 저장되지 않고 사라져요.</p>
+        <!-- 버튼 2개 -->
+        <div class="pop_btn">
+          <button class="btn_m btn_light popClose">닫기</button>
+          <button class="btn_m btn_red popClose">건강분석 진행</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+
+    <script>
+      $(".result_slt").click(function() {
+        $(this).addClass("select");
+        $(this).siblings().removeClass("select");
+        $(".btn_b").attr("disabled",false);
+      })
+
+      /* popup */
+      $(".popOpen").on("click", function () {
+        $(".popup01, body").addClass("open");
+      });
+
+      $(".overlay, .popClose").on("click", function () {
+        $(".popup, .modal, body, .btn_trans").removeClass("open");
+      });
+    </script>
+  </body>
+</html>

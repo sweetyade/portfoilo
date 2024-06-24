@@ -1,0 +1,1704 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="_css/_feWorksheet.min.css">
+	<style>
+		/* User style */
+		nav{position:fixed;top: 0;padding-top: 20px;background-color: #fff;z-index: 5;}
+		nav a {letter-spacing: -1px;}
+		h1{padding-top: 20px;}
+		.design, .date, .dateModify {text-align: center;}
+		.priority td{background:#feeeee !important}
+		.second td{background:#fff5e8 !important}
+		.third td{background:#eef7fc !important}
+		.fourth td{background:#f4f4f4 !important}
+		.previewIframe{display:none;position:fixed;top:0;right:0;background:#fff;width:360px;border:1px solid #000;z-index:999;aspect-ratio: 9/16;}
+		table{table-layout:fixed;}
+		th:first-child{width:4%;}
+		.people{width:2%;}
+		.checkTask{width:4%;}
+		.dueDate, .dueModifyDate{width:4.5%;line-height: 1.3;}
+		.className{font-weight: bold;width:6%;}
+		.issueMemo{width: 20%;line-height: 1.3;}
+		.cancel{text-decoration:line-through;color: red;}
+		.gray{color:#ccc;}
+		.add *{background-color:#feeeee;color:#b90b0b;}
+		.del *{text-decoration: line-through;opacity: 0.5;}
+		.blue {color: blue;}
+	</style>
+	<script src="_css/_feWorksheet.min.js"></script>
+	<script>
+		/* User script(setting) */
+		$(function() {
+			$('body').feWorksheet({
+				// Options
+			});
+			$('body').setPagePreview();
+		});
+
+		$.fn.setPagePreview = function(){
+			var $body = $('body'),
+				$a = $('.fileName a'),
+				$iframe = $('<iframe class="previewIframe" id="ifrm"></iframe>');
+
+			$body.append($iframe);
+
+			$a.each(function(){
+				var $this = $(this);
+				$this.on('mouseover',function(){
+						$iframe.attr('src', $this.attr('href'));
+						$iframe.css({'display':'block'}); 
+
+						setTimeout(function(){
+							$('#ifrm').contents().find('#wrap').css({
+								'transform' : 'scale(0.16923076923076924,0.16923076923076924)',
+								'transform-origin' : '0 0'
+							});
+						}, 200);
+
+
+				}).on('mouseout',function(){
+						$iframe.css({'display':'none'});
+				});
+			});
+
+		};
+	</script>
+</head>
+<body>
+	<header><h1><em>dashboard</em>, Front-end Web developer Worksheet</h1></header>
+	<!-- noticeWrap -->
+	<section class="noticeWrap">
+		<h2>Notice</h2>
+		<ul>
+			<li>Undone: 코딩중, Done: 코딩완료, Modify: 코딩 완료 후 HTML수정, Delete: 코딩 완료 후 SB삭제</li>
+		</ul>
+	</section>
+	<!-- //noticeWrap -->
+	<!-- filterWrap -->
+	<section class="filterWrap">
+		<h2>Task Key/Filter</h2>
+		<form action="/">
+			<fieldset>
+				<legend>Filter option(It'll be automatically applied)</legend>
+				<label><input type="checkbox" value="all">All</label>
+				<label><input type="checkbox"><b class='default'>0</b><i>Undone</i></label>
+				<label><input type="checkbox"><b>1</b><i>Done</i></label>
+				<label><input type="checkbox"><b>2</b><i>Modify</i></label>
+				<label><input type="checkbox"><b>3</b><i>Delete</i></label>
+			</fieldset>
+		</form>
+	</section>
+	<!-- //filterWrap -->
+	<!-- Worksheet -->
+	<section>
+		<h2>Worksheet: Web</h2>
+    <!-- 가이드 파일 -->
+		<h3>가이드</h3>
+		<table>
+			<!-- caption : 경로입력 -->
+			<caption>./guide</caption>
+			<thead>
+				<tr>
+					<th scope="col" class="menuDepth">Depth1</th>
+					<th scope="col" class="menuDepth">Depth2</th>
+					<th scope="col" class="menuDepth">Depth3</th>
+					<th scope="col" class="menuDepth">Depth4</th>
+					<th scope="col" class="fileName">File Name/ID</th>
+					<th scope="col" class="className">body class</th>
+					<th scope="col" class="dueDate">Done</th>
+					<th scope="col" class="dueModifyDate">Modify</th>
+					<th scope="col" class="people">People</th>
+					<th scope="col" class="issueMemo">Issue/Memo</th>
+					<th scope="col" class="checkTask">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+        <tr>
+					<td class="menuDepth">design guide</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">guide.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+			</tbody>
+		</table>
+		
+    <!-- 레이아웃 파일 -->
+    <h3>공통 레이아웃</h3>
+		<table>
+			<!-- caption : 경로입력 -->
+			<caption>./00_layout</caption>
+			<thead>
+				<tr>
+					<th scope="col" class="menuDepth">Depth1</th>
+					<th scope="col" class="menuDepth">Depth2</th>
+					<th scope="col" class="menuDepth">Depth3</th>
+					<th scope="col" class="menuDepth">Depth4</th>
+					<th scope="col" class="fileName">File Name/ID</th>
+					<th scope="col" class="className">body class</th>
+					<th scope="col" class="dueDate">Done</th>
+					<th scope="col" class="dueModifyDate">Modify</th>
+					<th scope="col" class="people">People</th>
+					<th scope="col" class="issueMemo">Issue/Memo</th>
+					<th scope="col" class="checkTask">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="menuDepth">layout</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">layout.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">navigation</td>
+					<td class="menuDepth">- vertical</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">nav_v.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">- horizontal</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">nav_h.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">content_header</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">header.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">footer</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">footer.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<!-- 프론트페이지 -->
+    <h3>Front Pages</h3>
+		<table>
+			<!-- caption : 경로입력 -->
+			<caption>./01_frontpage</caption>
+			<thead>
+				<tr>
+					<th scope="col" class="menuDepth">Depth1</th>
+					<th scope="col" class="menuDepth">Depth2</th>
+					<th scope="col" class="menuDepth">Depth3</th>
+					<th scope="col" class="menuDepth">Depth4</th>
+					<th scope="col" class="fileName">File Name/ID</th>
+					<th scope="col" class="className">body class</th>
+					<th scope="col" class="dueDate">Done</th>
+					<th scope="col" class="dueModifyDate">Modify</th>
+					<th scope="col" class="people">People</th>
+					<th scope="col" class="issueMemo">Issue/Memo</th>
+					<th scope="col" class="checkTask">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="menuDepth">1.Landing</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">index.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo">light/dark</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">2.Payment</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">3.Pricing</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">4.Help Center</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">4-1.Question</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">5.Check Out</td>
+					<td class="menuDepth">5-1.Cart</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">5-2.Address</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">5-3.Payment</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">5-4.Confirmation</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<!-- 대시보드 -->
+    <h3>dashboard</h3>
+		<table>
+			<!-- caption : 경로입력 -->
+			<caption>./02_dashboard</caption>
+			<thead>
+				<tr>
+					<th scope="col" class="menuDepth">Depth1</th>
+					<th scope="col" class="menuDepth">Depth2</th>
+					<th scope="col" class="menuDepth">Depth3</th>
+					<th scope="col" class="menuDepth">Depth4</th>
+					<th scope="col" class="fileName">File Name/ID</th>
+					<th scope="col" class="className">body class</th>
+					<th scope="col" class="dueDate">Done</th>
+					<th scope="col" class="dueModifyDate">Modify</th>
+					<th scope="col" class="people">People</th>
+					<th scope="col" class="issueMemo">Issue/Memo</th>
+					<th scope="col" class="checkTask">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="menuDepth">1.Analytics</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">2.CRM</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">3.eCommerce</td>
+					<td class="menuDepth">3-1.Overview</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-2.Product List</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-3.Add Product</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-4.Category List</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-5.Add Category</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-6.Order list</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-7.Order Details</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-8.All Customers</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-9.Customer Details</td>
+					<td class="menuDepth">3-9-1.Overview</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo">user와 동일</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-9-2.Security</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-9-3.Billing & Address</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-9-4.Notifications</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-10.Add Customore</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-11.Manage Reviews</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-12.Referrals</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-13.Settings</td>
+					<td class="menuDepth">3-13-1.Store details</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-13-2.Payments</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-13-3.Checkout</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-13-4.Shipping & delivery</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-13-5.Locations</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-13-6.Notifications</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">4.Academy</td>
+					<td class="menuDepth">4-1.Overview</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">4-2.My Course</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">4-3.Course Details</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">5.Logistics</td>
+					<td class="menuDepth">5-1.Overview</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">5-2.Fleet</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">6.User</td>
+					<td class="menuDepth">6-1.List</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">6-2.Overview</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">6-3.Security</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">6-4.Billings & Plans</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">6-5.Notification</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">6-6.Connections</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">6-7.Add New User</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">7.Email</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">7-1.Open</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">7-2.Compose</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">8.Chat</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">8-1.Settings</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">8-2.User Info</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">8-3.User Info 2</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">9.Calendar</td>
+					<td class="menuDepth">9-1.Month</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">9-2.Week</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">9-3.Day</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">9-4.List</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">10.Kanban</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">10-1.Edit</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">10-2.Edit</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">11.Invoice</td>
+					<td class="menuDepth">11-1.List</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">11-2.Preview</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">11-3.Edit</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">11-4.Add</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">12.Roles & Permissions</td>
+					<td class="menuDepth">12-1.Roles</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">11-2.Permissions - List</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<!-- pages -->
+		<h3>pages</h3>
+		<table>
+			<!-- caption : 경로입력 -->
+			<caption>./02_dashboard</caption>
+			<thead>
+				<tr>
+					<th scope="col" class="menuDepth">Depth1</th>
+					<th scope="col" class="menuDepth">Depth2</th>
+					<th scope="col" class="menuDepth">Depth3</th>
+					<th scope="col" class="menuDepth">Depth4</th>
+					<th scope="col" class="fileName">File Name/ID</th>
+					<th scope="col" class="className">body class</th>
+					<th scope="col" class="dueDate">Done</th>
+					<th scope="col" class="dueModifyDate">Modify</th>
+					<th scope="col" class="people">People</th>
+					<th scope="col" class="issueMemo">Issue/Memo</th>
+					<th scope="col" class="checkTask">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="menuDepth">1.FAQ</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">2.Pricing</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">3.Account Settings</td>
+					<td class="menuDepth">3-1.Account</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-2.Security </td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-3.Billings & Plans</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-4.Notification</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">3-5.Connections</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">4.User Profile</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">4-1.Teams</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">4-2.Projects</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">4-3.Connections</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">5.Checkout</td>
+					<td class="menuDepth">5-1.Cart</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">5-2.Address</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">5-3.Payment</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">5-4.Confirmations</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">6.Property Listing</td>
+					<td class="menuDepth">6-1.Personal Details</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">6-2.Property Details</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">6-3.Property Features</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">6-4.Property Area</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">6-5.Price Details</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">7.Create Deal</td>
+					<td class="menuDepth">7-1.Deal Type</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">7-2.Deal Details</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">7-3.Deal Usage</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">7-4.Review & Complete</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">8.Register Multi Steps</td>
+					<td class="menuDepth">8-1.Account</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">8-2.Personal</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">8-3.Billing</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">9.Login</td>
+					<td class="menuDepth">9-1.Login V1</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">9-2.Login V2</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">10.Register</td>
+					<td class="menuDepth">10-1.Register V1</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">10-2.Register V2</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">11.Reset Password</td>
+					<td class="menuDepth">11-1.Reset Password V1</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">11-2.Reset Password V2</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">12.Forgot Password</td>
+					<td class="menuDepth">12-1.Forgot Password V1</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">12-2.Forgot Password V2</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">13.Verify Email</td>
+					<td class="menuDepth">13-1.Verify Email V1</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">13-2.Verify Email V2</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">14.Two Step</td>
+					<td class="menuDepth">14-1.Two Step V1</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">14-2.Two Step V2</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">15.Error</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">16.Under Maintenance</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">17.We are launching soon</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">18.Not Authorized</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">19.Internal server error</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+			</tbody>
+		</table>
+	
+
+	</section>
+	<!-- //Worksheet -->
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="../../css/rcommon.css">
+  <link rel="stylesheet" href="../../css/guide.css">
+  <title>Fitamin UI Design Guide</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+    body{
+      background: #f9f9f9;
+      padding: 0 1rem;
+    }
+
+    section{
+      width: 100%;
+      max-width: 500px;
+      margin: 2rem auto;
+      border: 1px solid #eee;
+      padding: 0 1.375rem;
+      background: #fff;
+    }
+
+    h1.title{
+      text-transform: uppercase;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.875rem;
+      border-bottom: 1px solid var(--gray04);
+      padding: 2rem 0 1rem;
+    }
+
+    h2.group_title{
+      font-size: var(--h2-f);
+    }
+
+    .contents{
+      padding: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- tab -->
+  <section>
+    <h1 class="title">tab</h1>
+
+    <div class="contents">
+      <div class="tab_menu swiper mb_2">
+        <div class="tab_list tab_over swiper-wrapper">
+          <p class="tab_link swiper-slide active">맞춤 영양제</p>
+          <p class="tab_link swiper-slide">서비스</p>
+          <p class="tab_link swiper-slide">구독/결제</p>
+          <p class="tab_link swiper-slide">배송관련</p>
+          <p class="tab_link swiper-slide">혜택</p>
+          <p class="tab_link swiper-slide">회원정보</p>
+          <p class="tab_link swiper-slide active">기타</p>
+        </div>
+      </div>
+      
+
+      <div class="tab_list mb_2">
+        <p class="tab_link active">맞춤 영양제</p>
+        <p class="tab_link">서비스</p>
+      </div>
+
+      <div class="tab_list">
+        <p class="tab_link active">맞춤 영양제</p>
+        <p class="tab_link">서비스</p>
+        <p class="tab_link">구독/결제</p>
+      </div>
+
+      <!-- <section class="tab_con">
+        <p>맞춤영양제 탭 컨텐츠 영역</p>
+      </section>
+
+      <section class="tab_con">
+        <p>서비스 컨텐츠 영역</p>
+      </section>
+
+      <section class="tab_con">
+        <p>구독/결제 컨텐츠 영역</p>
+      </section> -->
+    </div>
+  </section>
+
+  </section>
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".tab_menu", {
+      slidesPerView: "auto",
+    });
+
+    /* 탭 컨텐츠 */
+    // var tabBtn = $(".tab_link");   
+    // var tabCont = $(".tab_con");   
+
+
+    //         tabCont.hide().eq(0).show();
+
+
+    //         tabBtn.click(function(){
+    //         var target = $(this);               
+    //         var index = target.index();          
+    //         // alert(index);
+    //         tabBtn.removeClass("active");          
+    //         target.addClass("active");                
+    //         tabCont.css("display","none");
+    //         tabCont.eq(index).css("display","block");
+    //         });
+  </script>
+</body>
+</html>

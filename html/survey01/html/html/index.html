@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- ================== css ========================= -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/lab01.css">
+
+  <title>실험실1 질염 : 나는 무슨 질염일까?</title>
+</head>
+<body class="share_scroll">
+  <div class="lab_wrap">
+    <section class="lab_visual grid">
+      <div class="v_top">
+        <h1 class="v_title">세상에 같은 질염은 없다.</h1>
+        <p class="v_txt">여성의 감기, 매년 200만명이 걸리는 질염. <br>
+          예방하는 가장 쉬운 방법은?</p>
+      </div>
+      
+      <!-- 애니메이션 이미지 -->
+      <div class="v_img">
+        <div class="v_imgwrap">
+          <img src="../../images/lab01_img01.svg" alt="" style="max-width:127px">
+          <img src="../../images/lab01_img02.png" alt="" style="max-width:138px">
+          <img src="../../images/lab01_img03.svg" alt="" style="max-width:127px">
+          <img src="../../images/lab01_img04.svg" alt="" style="max-width:138px">
+          <img src="../../images/lab01_img05.svg" alt="" style="max-width:127px">
+          <img src="../../images/lab01_img01.svg" alt="" style="max-width:127px">
+          <img src="../../images/lab01_img02.png" alt="" style="max-width:138px">
+          <img src="../../images/lab01_img03.svg" alt="" style="max-width:127px">
+          <img src="../../images/lab01_img04.svg" alt="" style="max-width:138px">
+          <img src="../../images/lab01_img05.svg" alt="" style="max-width:127px">
+          <img src="../../images/lab01_img01.svg" alt="" style="max-width:127px">
+          <img src="../../images/lab01_img02.png" alt="" style="max-width:138px">
+          <img src="../../images/lab01_img03.svg" alt="" style="max-width:127px">
+          <img src="../../images/lab01_img04.svg" alt="" style="max-width:138px">
+          <img src="../../images/lab01_img05.svg" alt="" style="max-width:127px">
+          <img src="../../images/lab01_img01.svg" alt="" style="max-width:127px">
+          <img src="../../images/lab01_img02.png" alt="" style="max-width:138px">
+          <img src="../../images/lab01_img03.svg" alt="" style="max-width:127px">
+          <img src="../../images/lab01_img04.svg" alt="" style="max-width:138px">
+          <img src="../../images/lab01_img05.svg" alt="" style="max-width:127px">
+          <img src="../../images/lab01_img01.svg" alt="" style="max-width:127px">
+          <img src="../../images/lab01_img02.png" alt="" style="max-width:138px">
+          <img src="../../images/lab01_img03.svg" alt="" style="max-width:127px">
+          <img src="../../images/lab01_img04.svg" alt="" style="max-width:138px">
+          <img src="../../images/lab01_img05.svg" alt="" style="max-width:127px">
+        </div>
+      </div>
+      <div class="v_bottom">
+        <a href="#" class="lab_btn btn_lab01">나는 무슨 질염일까?</a>
+        <p class="v_conter">지금까지 60,392명이 확인했어요</p>
+      </div>
+    </section>
+  </div>
+
+
+
+  <script>
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    
+    // We listen to the resize event
+    window.addEventListener('resize', () => {
+      // We execute the same script as before
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+      </script>
+</body>
+</html>

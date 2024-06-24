@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<head lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=2.0">
+
+        <!-- ============== css ================== -->
+        <link rel="stylesheet" href="css/style.css">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>ns홈쇼핑 대시보드</title>
+    </head>
+    <body>
+        <div style="text-align:center; font-size: .75rem; background-color: #222; color: #fff; width: 100%; padding: 10px;">
+            <p>상단에 메뉴로 서브페이지 확인 가능합니다.</p>
+        </div>
+        <div class="wrap">
+            <div class="header">
+                <a href="index.html" class="header_logo">
+                    <img src="images/logo.png" alt="" class="logo_img">
+                </a>
+
+                <div class="nav">
+                    <a href="index.html" class="nav_link">VOC 현황</a>
+                    <a href="sub1.html" class="nav_link selected">편성별 누적 현황(TV & CTCOM)</a>
+                    <a href="sub2.html" class="nav_link">채널별 VOC 관련 현황</a>
+                </div>
+
+                <div class="header_date">
+                    <p class="date_txt">방송일자</p>
+                    <input type="text" class="input_date" placeholder="2022-01-04 (화요일)" disabled>
+                </div>
+            </div>
+
+            <div class="main">
+                <!-- 메인 상단 바-->
+                <form action="">
+                    <div class="main_bar">
+                        <div class="flex_l">
+                            <label for="select_date" class="bar_title">편성일자</label>
+                            <input type="text" id="select_date" class="calendar"  value="2022-01-04">
+                            <i class='bx bx-calendar'></i>
+
+                            <div class="input_check">
+                                <input type="checkbox" id="check_tv"> <label for="check_tv">TV</label>
+                                <input type="checkbox" id="check_ctcom"> <label for="check_ctcom">CTCOM</label>
+                                <input type="checkbox" id="check_internet"> <label for="check_internet">인터넷</label>
+                                <input type="checkbox" id="check_mobile"> <label for="check_mobile">모바일</label>
+                            </div>
+                        </div>
+                        <div class="flex_2">
+                            <input type="button" value="조회" class="button">
+                        </div>
+                    </div>
+                </form>
+
+                <div class="section">
+                    <!-- 편성테이블 -->
+                    <div class="section_half">
+                        <div class="time_table">
+                            <div class="table_top">
+                                <p class="table_time">편성시작시간</p>
+                                    <p class="table_during">편성중</p>
+                                    <p class="table_code">상품코드</p>
+                                    <p class="table_name">상품명</p>
+                            </div>
+                            <ul>
+                                <li>
+                                    <p class="table_time">2021-12-26</p>
+                                    <p class="table_during">2021-12-26</p>
+                                    <p class="table_code"><a href="#" target="_blnak">30270322</a></p>
+                                    <p class="table_name">데이즈온 금은화 추출물 1박스 데이즈온 금은화 추출물 1박스 데이즈온 금은화 추출물 1박스 데이즈온 금은화 추출물 1박스</p>
+                                </li>
+                                <li>
+                                    <p class="table_time">2021-12-26</p>
+                                    <p class="table_during"></p>
+                                    <p class="table_code"><a href="#" target="_blnak">30270322</a></p>
+                                    <p class="table_name">데이즈온 금은화 추출물 1박스</p>
+                                </li>
+                                <li>
+                                    <p class="table_time">2021-12-26</p>
+                                    <p class="table_during"></p>
+                                    <p class="table_code"><a href="#" target="_blnak">30270322</a></p>
+                                    <p class="table_name">데이즈온 금은화 추출물 1박스</p>
+                                </li>
+                                <li>
+                                    <p class="table_time">2021-12-26</p>
+                                    <p class="table_during">2021-12-26</p>
+                                    <p class="table_code"><a href="#" target="_blnak">30270322</a></p>
+                                    <p class="table_name">데이즈온 금은화 추출물 1박스</p>
+                                </li>
+                                <li>
+                                    <p class="table_time">2021-12-26</p>
+                                    <p class="table_during"></p>
+                                    <p class="table_code"><a href="#" target="_blnak">30270322</a></p>
+                                    <p class="table_name">데이즈온 금은화 추출물 1박스</p>
+                                </li>
+                                <li>
+                                    <p class="table_time">2021-12-26</p>
+                                    <p class="table_during"></p>
+                                    <p class="table_code"><a href="#" target="_blnak">30270322</a></p>
+                                    <p class="table_name">데이즈온 금은화 추출물 1박스</p>
+                                </li>
+                                <li>
+                                    <p class="table_time">2021-12-26</p>
+                                    <p class="table_during"></p>
+                                    <p class="table_code"><a href="#" target="_blnak">30270322</a></p>
+                                    <p class="table_name">데이즈온 금은화 추출물 1박스</p>
+                                </li>
+                                <li>
+                                    <p class="table_time">2021-12-26</p>
+                                    <p class="table_during"></p>
+                                    <p class="table_code"><a href="#" target="_blnak">30270322</a></p>
+                                    <p class="table_name">데이즈온 금은화 추출물 1박스</p>
+                                </li>
+                                <li>
+                                    <p class="table_time">2021-12-26</p>
+                                    <p class="table_during"></p>
+                                    <p class="table_code"><a href="#" target="_blnak">30270322</a></p>
+                                    <p class="table_name">데이즈온 금은화 추출물 1박스</p>
+                                </li>
+                                <li>
+                                    <p class="table_time">2021-12-26</p>
+                                    <p class="table_during"></p>
+                                    <p class="table_code"><a href="#" target="_blnak">30270322</a></p>
+                                    <p class="table_name">데이즈온 금은화 추출물 1박스</p>
+                                </li>
+                                <li>
+                                    <p class="table_time">2021-12-26</p>
+                                    <p class="table_during"></p>
+                                    <p class="table_code"><a href="#" target="_blnak">30270322</a></p>
+                                    <p class="table_name">데이즈온 금은화 추출물 1박스</p>
+                                </li>
+                                <li>
+                                    <p class="table_time">2021-12-26</p>
+                                    <p class="table_during"></p>
+                                    <p class="table_code"><a href="#" target="_blnak">30270322</a></p>
+                                    <p class="table_name">데이즈온 금은화 추출물 1박스</p>
+                                </li>
+                                <li>
+                                    <p class="table_time">2021-12-26</p>
+                                    <p class="table_during"></p>
+                                    <p class="table_code"><a href="#" target="_blnak">30270322</a></p>
+                                    <p class="table_name">데이즈온 금은화 추출물 1박스</p>
+                                </li>
+                                <li>
+                                    <p class="table_time">2021-12-26</p>
+                                    <p class="table_during">2021-12-26</p>
+                                    <p class="table_code"><a href="#" target="_blnak">30270322</a></p>
+                                    <p class="table_name">데이즈온 금은화 추출물 1박스</p>
+                                </li>
+                                <li>
+                                    <p class="table_time">2021-12-26</p>
+                                    <p class="table_during"></p>
+                                    <p class="table_code"><a href="#" target="_blnak">30270322</a></p>
+                                    <p class="table_name">데이즈온 금은화 추출물 1박스</p>
+                                </li>
+                                <li>
+                                    <p class="table_time">2021-12-26</p>
+                                    <p class="table_during"></p>
+                                    <p class="table_code"><a href="#" target="_blnak">30270322</a></p>
+                                    <p class="table_name">데이즈온 금은화 추출물 1박스</p>
+                                </li>
+                                <li>
+                                    <p class="table_time">2021-12-26</p>
+                                    <p class="table_during"></p>
+                                    <p class="table_code"><a href="#" target="_blnak">30270322</a></p>
+                                    <p class="table_name">데이즈온 금은화 추출물 1박스</p>
+                                </li>
+                                <li>
+                                    <p class="table_time">2021-12-26</p>
+                                    <p class="table_during"></p>
+                                    <p class="table_code"><a href="#" target="_blnak">30270322</a></p>
+                                    <p class="table_name">데이즈온 금은화 추출물 1박스</p>
+                                </li>
+                                <li>
+                                    <p class="table_time">2021-12-26</p>
+                                    <p class="table_during"></p>
+                                    <p class="table_code"><a href="#" target="_blnak">30270322</a></p>
+                                    <p class="table_name">데이즈온 금은화 추출물 1박스</p>
+                                </li>
+                                <li>
+                                    <p class="table_time">2021-12-26</p>
+                                    <p class="table_during"></p>
+                                    <p class="table_code"><a href="#" target="_blnak">30270322</a></p>
+                                    <p class="table_name">데이즈온 금은화 추출물 1박스</p>
+                                </li>
+                                <li>
+                                    <p class="table_time">2021-12-26</p>
+                                    <p class="table_during"></p>
+                                    <p class="table_code"><a href="#" target="_blnak">30270322</a></p>
+                                    <p class="table_name">데이즈온 금은화 추출물 1박스</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="section_half">
+                        <!-- 누적키워드 top10 -->
+                        <div class="graph_contents">
+                            <p class="list_title"><span class="color_red">누적</span> 키워드 Top 10</p>
+                            <div class="graph">
+                                <div class="graph_no">
+                                    <span>120</span>
+                                    <span>100</span>
+                                    <span>80</span>
+                                    <span>60</span>
+                                    <span>40</span>
+                                    <span>20</span>
+                                    <span>0</span>
+                                </div>
+
+                                <div class="graph_table">
+                                    <div class="graph_group">
+                                        <div class="graph_bg">
+                                            <span class="line1"></span>
+                                            <span class="line2"></span>
+                                            <span class="line3"></span>
+                                            <span class="line4"></span>
+                                            <span class="line5"></span>
+                                            <p class="graph_per">100</p>
+                                            <p class="graph_bar per100"></p>
+                                        </div>
+                                        <p class="graph_txt">일시불일시불일시불일시불</p>
+                                    </div>
+                                    <div class="graph_group">
+                                        <div class="graph_bg">
+                                            <span class="line1"></span>
+                                            <span class="line2"></span>
+                                            <span class="line3"></span>
+                                            <span class="line4"></span>
+                                            <span class="line5"></span>
+                                            <p class="graph_per">90</p>
+                                            <p class="graph_bar per90"></p>
+                                        </div>
+                                        <p class="graph_txt">면도기</p>
+                                    </div>
+                                    <div class="graph_group">
+                                        <div class="graph_bg">
+                                            <span class="line1"></span>
+                                            <span class="line2"></span>
+                                            <span class="line3"></span>
+                                            <span class="line4"></span>
+                                            <span class="line5"></span>
+                                            <p class="graph_per">80</p>
+                                            <p class="graph_bar per80"></p>
+                                        </div>
+                                        <p class="graph_txt">도루코</p>
+                                    </div>
+                                    <div class="graph_group">
+                                        <div class="graph_bg">
+                                            <span class="line1"></span>
+                                            <span class="line2"></span>
+                                            <span class="line3"></span>
+                                            <span class="line4"></span>
+                                            <span class="line5"></span>
+                                            <p class="graph_per">70</p>
+                                            <p class="graph_bar per70"></p>
+                                        </div>
+                                        <p class="graph_txt">할인</p>
+                                    </div>
+                                    <div class="graph_group">
+                                        <div class="graph_bg">
+                                            <span class="line1"></span>
+                                            <span class="line2"></span>
+                                            <span class="line3"></span>
+                                            <span class="line4"></span>
+                                            <span class="line5"></span>
+                                            <p class="graph_per">60</p>
+                                            <p class="graph_bar per60"></p>
+                                        </div>
+                                        <p class="graph_txt">원플러스원</p>
+                                    </div>
+                                    <div class="graph_group">
+                                        <div class="graph_bg">
+                                            <span class="line1"></span>
+                                            <span class="line2"></span>
+                                            <span class="line3"></span>
+                                            <span class="line4"></span>
+                                            <span class="line5"></span>
+                                            <p class="graph_per">50</p>
+                                            <p class="graph_bar per50"></p>
+                                        </div>
+                                        <p class="graph_txt">주소</p>
+                                    </div>
+                                    <div class="graph_group">
+                                        <div class="graph_bg">
+                                            <span class="line1"></span>
+                                            <span class="line2"></span>
+                                            <span class="line3"></span>
+                                            <span class="line4"></span>
+                                            <span class="line5"></span>
+                                            <p class="graph_per">40</p>
+                                            <p class="graph_bar per40"></p>
+                                        </div>
+                                        <p class="graph_txt">반품</p>
+                                    </div>
+                                    <div class="graph_group">
+                                        <div class="graph_bg">
+                                            <span class="line1"></span>
+                                            <span class="line2"></span>
+                                            <span class="line3"></span>
+                                            <span class="line4"></span>
+                                            <span class="line5"></span>
+                                            <p class="graph_per">30</p>
+                                            <p class="graph_bar per30"></p>
+                                        </div>
+                                        <p class="graph_txt">배송</p>
+                                    </div>
+                                    <div class="graph_group">
+                                        <div class="graph_bg">
+                                            <span class="line1"></span>
+                                            <span class="line2"></span>
+                                            <span class="line3"></span>
+                                            <span class="line4"></span>
+                                            <span class="line5"></span>
+                                            <p class="graph_per">20</p>
+                                            <p class="graph_bar per20"></p>
+                                        </div>
+                                        <p class="graph_txt">무료체험</p>
+                                    </div>
+                                    <div class="graph_group">
+                                        <div class="graph_bg">
+                                            <span class="line1"></span>
+                                            <span class="line2"></span>
+                                            <span class="line3"></span>
+                                            <span class="line4"></span>
+                                            <span class="line5"></span>
+                                            <p class="graph_per">10</p>
+                                            <p class="graph_bar per10"></p>
+                                        </div>
+                                        <p class="graph_txt">풀세트</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- voc 상담요약 -->
+                        <div class="board_list">
+                            <p class="list_title"><span class="color_red">VOC</span> 상담 요약</p>
+                            <ol>
+                                <li>
+                                    <p class="list_no">1</p>
+                                    <p class="list_meno">
+                                        고객께서 [더바디샵] 화이트 머스크 오리지널 세트/청구할인 연락건으로 연락/적립금 쿠폰 확인/청구할인 상담진행
+                                        고객께서 [더바디샵] 화이트 머스크 오리지널 세트/청구할인 연락건으로 연락/적립금 쿠폰 확인/청구할인 상담진행
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="list_no">2</p>
+                                    <p class="list_meno">
+                                        고객께서 [더바디샵] 화이트 머스크 오리지널 세트/청구할인 연락건으로 연락/적립금 쿠폰 확인/청구할인 상담진행
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="list_no">3</p>
+                                    <p class="list_meno">
+                                        고객께서 [더바디샵] 화이트 머스크 오리지널 세트/청구할인 연락건으로 연락/적립금 쿠폰 확인/청구할인 상담진행
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="list_no">4</p>
+                                    <p class="list_meno">
+                                        고객께서 [더바디샵] 화이트 머스크 오리지널 세트/청구할인 연락건으로 연락/적립금 쿠폰 확인/청구할인 상담진행
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="list_no">5</p>
+                                    <p class="list_meno">
+                                        고객께서 [더바디샵] 화이트 머스크 오리지널 세트/청구할인 연락건으로 연락/적립금 쿠폰 확인/청구할인 상담진행
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="list_no">6</p>
+                                    <p class="list_meno">
+                                        고객께서 [더바디샵] 화이트 머스크 오리지널 세트/청구할인 연락건으로 연락/적립금 쿠폰 확인/청구할인 상담진행
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="list_no">7</p>
+                                    <p class="list_meno">
+                                        고객께서 [더바디샵] 화이트 머스크 오리지널 세트/청구할인 연락건으로 연락/적립금 쿠폰 확인/청구할인 상담진행
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="list_no">8</p>
+                                    <p class="list_meno">
+                                        고객께서 [더바디샵] 화이트 머스크 오리지널 세트/청구할인 연락건으로 연락/적립금 쿠폰 확인/청구할인 상담진행
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="list_no">9</p>
+                                    <p class="list_meno">
+                                        고객께서 [더바디샵] 화이트 머스크 오리지널 세트/청구할인 연락건으로 연락/적립금 쿠폰 확인/청구할인 상담진행
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="list_no">10</p>
+                                    <p class="list_meno">
+                                        고객께서 [더바디샵] 화이트 머스크 오리지널 세트/청구할인 연락건으로 연락/적립금 쿠폰 확인/청구할인 상담진행
+                                    </p>
+                                </li>
+                            </ol>
+                            <div class="pagenation">
+                                <a href="#" class="first"><i class='bx bx-chevrons-left'></i></a>
+                                <a href="#" class="pre"><i class='bx bx-chevron-left' ></i></a>
+                                <a href="#" class="selected">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                                <a href="#">7</a>
+                                <a href="#">8</a>
+                                <a href="#">9</a>
+                                <a href="#">10</a>
+                                <a href="#" class="next"><i class='bx bx-chevron-right' ></i></a>
+                                <a href="#" class="last"><i class='bx bx-chevrons-right' ></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</head>

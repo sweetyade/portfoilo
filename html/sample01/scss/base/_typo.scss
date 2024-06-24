@@ -1,0 +1,107 @@
+/***************************************************************
+    04. typo
+***************************************************************/
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard.css");
+
+body {
+  font-family: var(--body-font);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--text-color);
+}
+
+.line_h {
+  line-height: $lineh;
+}
+
+.line_th {
+  text-decoration: $lineth;
+}
+
+.line_under {
+  text-decoration: $lineunder;
+}
+
+.bold_f {
+  font-weight: var(--bold-font);
+}
+
+.semi_bold_f {
+  font-weight: var(--semi-bold-font);
+}
+
+.medium_f {
+  font-weight: var(--medium-font);
+}
+
+.thin_f {
+  font-weight: var(--thin-font);
+}
+
+.text_center {
+  text-align: center;
+}
+
+.text_right {
+  text-align: right;
+}
+
+.text_left {
+  text-align: left;
+}
+
+.second_font {
+  font-family: var(--second-font);
+}
+
+.h1_f{
+  font-size: var(--h1-font-size);
+}
+
+.h2_f{
+  font-size: var(--h2-font-size);
+}
+
+.h3_f{
+  font-size: var(--h3-font-size);
+}
+
+.large_f{
+  font-size: var(--large-font-size);
+}
+
+.base_f{
+  font-size: var(--base-font-size);
+}
+
+.normal_f{
+  font-size: var(--normal-font-size);
+}
+
+.small_f{
+  font-size: var(--small-font-size);
+}
+
+.smaller_f{
+  font-size: var(--smaller-font-size);
+}
+
+.tiny_f{
+  font-size: var(--tiny-font-size);
+}
+
+.listdot {
+  position: relative;
+  padding-left: 1rem;
+  &::before {
+    content: "";
+    @include listdot;
+  }
+}
+
+
+@media (max-width: #{$mobile_base - 1px}) {
+  :root{
+    font-size: 4.4568vw;
+  }
+}

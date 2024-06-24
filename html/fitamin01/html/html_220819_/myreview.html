@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>킥더허들 헬스케어</title>
+    <meta name="keywords" content="킥더허들 헬스케어">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="누구나 누릴 수 있는 일상의 건강">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- ============================ css ======================= -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="../../css/newindex.css">
+    <link rel="stylesheet" href="../../css/m.sub.css">
+    <link rel="stylesheet" href="../../css/m.common.css">
+    <link href="../../css/fitamin_2201819.css" rel="stylesheet"> <!-- 새로 추가된 css -->
+
+</head>
+
+    <div class="main">
+
+        <!-- header -->
+        <header class="header" id="header">
+            <nav class="nav">
+                <a href="javascript:CommonJS.goHistoryBack();" class="nav_back header_back" style="">
+                    <i class="ri-arrow-left-s-line"></i>
+                </a>
+
+                <h2 class="sub_header header_sub_header" style="">나의 후기</h2>
+        
+
+                <!--///////////////////// 변경된 해더 햄버거 메뉴 컨텐츠 ///////////////////-->
+                <!--///////////////////// 여기서부터 복사하여 같은 위치에 변경해주세요 /////////////////////-->
+                <div class="nav_menu" id="nav-menu">
+
+                    <!----------- 비로그인시에만 노출됩니다 ------------->
+                    <div class="nav_login">
+                        <div class="nav_in flex">
+                          <a href="#" class="nav_user_link1">로그인</a>
+                          <a href="#" class="nav_user_link2"><i class="ri-kakao-talk-fill"></i> 카카오 1초 로그인</a>
+                        </div>
+                    </div>
+
+                    <!-- ----------- 로그인 회원정보 메뉴 ------------>
+                    <div class="nav_userinfo">
+                        <div class="nav_in">
+                            <div class="navin_top flex">
+                            <p class="title">김다민 <span>님</span></p> <!-- 회원가입 시 가입정보 이름 -->
+                            <p class="nav_code flex">추천코드 <b>ROWIIOOO</b> <a href="#" class="flex"><img src="../../images/icon_copy.svg" alt=""></a></p>
+                            </div>
+                            <div class="navin_bottom">
+                            <p class="normal_f">damin@naver.com</p>
+                            <p class="normal_f">리뷰 <a href="#">1</a> ｜ 작성가능한 리뷰 <a href="#">2</a></p>
+                            <a href="#" class="btn_logout"><img src="../../images/icon_logout.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------- 로그인 비 구독시 노출 ----------->
+                    <ul class="visual_subcard login_subcard">
+                        <li class="subcard_in">
+                            <div class="subcard_top flex">
+                                <div class="subcard_title flex">
+                                    <p class="title">핏타민 구독<span>하고 다양한 혜택 받으세요</span></p>
+                                </div>
+                            </div>
+    
+                            <div class="subcard_bottom flex">
+                                <div class="subcard_info">
+                                    <p>+ 약사상담비 무료 적용</p>
+                                    <p>+ 건강지원 20% 할인 중</p>
+                                </div>
+    
+                                <div class="subcard_date flex">
+                                </div>
+                            </div>
+                            </li>
+                    </ul>
+
+                    <!------------- 로그인 구독시 노출 ----------->
+                    <ul class="visual_subcard login_subcard">
+                        <li class="subcard_in">
+                            <div class="subcard_top flex">
+                                <div class="subcard_title flex">
+                                    <p class="title">다미니님</p> <!-- 구독신청 시 봉투에 적는 이름 노출 -->
+                                    <img src="../../images/subcard_title.svg" alt="">
+                                </div>
+                                <a href="#" class="subcard_link flex">마이페이지 <i class="ri-arrow-right-s-line"></i></a>
+                            </div>
+    
+                            <div class="subcard_bottom flex">
+                                <div class="subcard_info">
+                                    <p>+ 약사상담비 무료 적용</p>
+                                    <p>+ 건강지원 20% 할인 중</p>
+                                </div>
+    
+                                <div class="subcard_date flex">
+                                    <div class="subcard_block">
+                                        <p class="no">5</p>
+                                        <p class="txt">구독 회차</p>
+                                    </div>
+                                    <div class="subcard_block">
+                                        <p class="no2">07.05</p>
+                                        <a href="#" class="txt flex">다음 구독일 <i class="ri-arrow-right-s-line"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="subcard_in">
+                        <div class="subcard_top flex">
+                            <div class="subcard_title flex">
+                                <p class="title">피터박님</p>
+                                <img src="../../images/subcard_title.svg" alt="">
+                            </div>
+                            <a href="#" class="subcard_link flex">마이페이지 <i class="ri-arrow-right-s-line"></i></a>
+                        </div>
+
+                        <div class="subcard_bottom flex">
+                            <div class="subcard_info">
+                                <p>+ 약사상담비 무료 적용</p>
+                                <p>+ 건강지원 20% 할인 중</p>
+                            </div>
+
+                            <div class="subcard_date flex">
+                                <div class="subcard_block">
+                                    <p class="no">1</p>
+                                    <p class="txt">구독 회차</p>
+                                </div>
+                                <div class="subcard_block">
+                                    <p class="no2">07.01</p>
+                                    <a href="#" class="txt flex">다음 구독일 <i class="ri-arrow-right-s-line"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    </ul>
+
+                    <!---------- 아래부터 기본 노출 화면 --------->
+                    <div class="nav_quick">
+                        <div class="nav_in">
+                            <p class="title">핏타민 시작하기</p>
+                            <div class="flex">
+                            <div class="quick_menu">
+                                <a href="#" class="quick_link quick01">
+                                <img src="../../images/quick_icon1.png" alt="">
+                                <span>예약상담</span>
+                                </a>
+                                <p class="quick_txt">3분 설문 ➡ 1:1 약사상담</p>
+                            </div>
+                            <div class="quick_menu">
+                                <a href="#" class="quick_link quick02">
+                                <img src="../../images/quick_icon2.png" alt="">
+                                <span>즉시상담</span>
+                                </a>
+                                <p class="quick_txt">지금 바로 1:1 약사상담</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----------- 메뉴 ---------->
+                    <div class="menu_list">
+                        <a href="#" class="flex nav_link">고객후기<i class="ri-arrow-right-s-line"></i></a>
+                    </div>
+
+                    <div class="menu_list nav-open">
+                        <a href="#" class="flex nav_link">고객센터<i class="ri-arrow-down-s-line"></i></a>
+                        <div class="nav_in" style="height:115px">
+                            <div class="nav_sub flex">
+                                <a href="#">1:1 문의하기</a>
+                                <a href="#">자주묻는질문</a>
+                                <a href="#">공지사항 </a>
+                                <a href="#">이벤트</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="menu_list">
+                        <a href="#" class="flex nav_link">브랜드스토리<i class="ri-arrow-down-s-line"></i></a>
+                        <div class="nav_in">
+                            <div class="nav_sub flex">
+                                <a href="#">핏타민스토리</a>
+                                <a href="#">핏타민소개</a>
+                                <a href="#">이용방법 </a>
+                                <a href="#">섭취방법</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nav_close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+
+                </div>
+                <!--////////////////// 여기까지 ////////////////////////-->
+        
+                <div class="nav_toggle flex" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </nav>
+        </header>
+
+        <!-- //////////////////// 마이페이지 컨텐츠 영역 ////////////////////// -->
+        <div class="review_wrap">
+            <div class="tab_wrap flex">
+                <a href="#" class="tab_btn active">작성 가능한 후기</a>
+                <a href="#" class="tab_btn">작성한 후기</a>
+            </div>
+
+            <section class="myreview">
+                <div class="subscrpt_list bg_gray">
+                    <div class="subscrpt_item">
+                        <p class="name">김다민 <span class="on">구독중</span></p>
+                        <p class="drug">비타민D 2000IU+ 외 2개</p>
+                        <div class="subscrpt_data flex">
+                            <div class="data_txt">
+                                <p class="no">주문번호 : 0000000000000</p>
+                                <p class="date">최근 결제일 : 2022.07.20</p>
+                            </div>
+                            <div class="subscrpt_btn">
+                                <button class="btn btn_blue">후기 작성하기</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="subscrpt_item">
+                        <p class="name">김다민 <span class="cancel">구독취소</span></p>
+                        <p class="drug">비타민D 2000IU+ 외 2개</p>
+                        <div class="subscrpt_data flex">
+                            <div class="data_txt">
+                                <p class="no">주문번호 : 0000000000000</p>
+                                <p class="date">최근 결제일 : 2022.07.20</p>
+                            </div>
+                            <div class="subscrpt_btn">
+                                <button class="btn btn_blue">후기 작성하기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="page">
+                        <a href="#" class="first"><i class="ri-arrow-left-line"></i></a>
+                        <a href="#" class="pre"><i class="ri-arrow-left-s-line"></i></a>
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#" class="next"><i class="ri-arrow-right-s-line"></i></a>
+                        <a href="#" class="last"><i class="ri-arrow-right-line"></i></a>
+                    </div> -->
+                </div>
+
+                <div class="notice">
+                    <p class="title flex"><i class="ri-information-line"></i> 후기 관련 규정사항</p>
+    
+                    <ul class="notice_list">
+                        <li class="notice_item">
+                            회원당 매월 1건의 후기에 한하여 적립금이 지급됩니다.
+                        </li>
+                        <li class="notice_item">
+                            적립금은 후기 작성 시 즉시 지급됩니다.(텍스트/포토리뷰에 한함)
+                        </li>
+                        <li class="notice_item">
+                            SNS 후기는 매주 수요일 일괄 지급되며 비공개 계정 및 게시물이 삭제되거나 링크가 확인되지 않으면 지급대상에서 제외될 수 있습니다.
+                        </li>
+                        <li class="notice_item">
+                            베스트 후기는 매월 첫째주 수요일 일괄 지급됩니다.
+                        </li>
+                        <li class="notice_item">
+                            후기는 핏타민 마케팅 활용 목적으로 2차 가공되어 사용될 수 있습니다.
+                        </li>
+                        <li class="notice_item">
+                            적립금 사용은 익월 결제 시 자동으로 사용됩니다.(자동 사용 체크 시)
+                        </li>
+                        <li class="notice_item">
+                            미사용된 적립금의 유효기간은 적립 후 180일까지 입니다.
+                        </li>
+                        <li class="notice_item">
+                            본 이벤트는 당사 사정에 따라 세부 내용이 변경되거나, 예고없이 종료될 수 있습니다.
+                        </li>
+                        <li class="notice_item">
+                            부적절한 방법으로 참여 시 혜택이 취소될 수 있습니다.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="review_list bg_gray myreview">
+                <div class="review_item">
+                    <div class="review_rtop flex">
+                        <p class="title">리뷰 타이틀리뷰 타이틀리뷰 타이틀리뷰 타이틀리뷰 타이틀리뷰 타이틀리뷰 타이틀리뷰 타이틀</p>
+                        <p class="date">2022.00.00</p>
+                    </div>
+
+                    <div class="review_read">
+                        <div class="review_article flex">
+                            <p class="review_img">
+                                <img src="../../images/brandstory_img07.png" alt="">
+                            </p>
+                            <div class="review_txt">
+                                <p class="ranking">
+                                    <span>⭐</span>
+                                    <span>⭐</span>
+                                    <span>⭐</span>
+                                    <span>⭐</span>
+                                    <span>⭐</span>
+                                 </p>
+                                <b>리뷰 사진 - 더보기 전</b> <br>
+                                아직 한달밖에 안되었지만 왠지 건강해지는 기분이에요!!ㅎㅎ 
+                                직장인이라면 다 있으실 피로도와 면역력 저하 때문에 이래저래 알아보다가 맞춤형으로 먹고 싶어서 하게 되었는데 진짜 너무너무 좋아요!!!
+                                저 진짜 꾸준히 하는걸 진짜 못하는 스타일인데 이건 한 포만 챙겨먹음 되니까 세상편안......이번달에도 또 다시 짜서 다시 구독합니다*^^* 
+                                영양제 알아보신 분들은 아시겟지만 따로사다보면 소분하기도 번거롭고 챙겨먹는것도 진짜 일인데다가 추가추가하다보면 10만원 그냥 넘어가는데...
+                                여긴 진짜 너무 좋아요ㅜㅜ싸고 또 전문가의 상담도 받아가며 추가하고 빼고 추천도 받으니 좋아요
+
+                                <a class="review_more">더보기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review_item">
+                    <div class="review_rtop flex">
+                        <p class="title">리뷰 타이틀리뷰 타이틀리뷰 타이틀리뷰 타이틀리뷰 타이틀리뷰 타이틀리뷰 타이틀리뷰 타이틀</p>
+                        <p class="date">2022.00.00</p>
+                    </div>
+
+                    <div class="review_read revview_open">
+                        <div class="review_article flex">
+                            <p class="review_img">
+                                <img src="../../images/brandstory_img07.png" alt="">
+                            </p>
+                            <div class="review_txt">
+                                <p class="ranking">
+                                    <span>⭐</span>
+                                    <span>⭐</span>
+                                    <span>⭐</span>
+                                    <span>⭐</span>
+                                    <span>⭐</span>
+                                 </p>
+                                <b>리뷰 사진 - 더보기 펼침</b> <br>
+                                아직 한달밖에 안되었지만 왠지 건강해지는 기분이에요!!ㅎㅎ 
+                                직장인이라면 다 있으실 피로도와 면역력 저하 때문에 이래저래 알아보다가 맞춤형으로 먹고 싶어서 하게 되었는데 진짜 너무너무 좋아요!!!
+                                저 진짜 꾸준히 하는걸 진짜 못하는 스타일인데 이건 한 포만 챙겨먹음 되니까 세상편안......이번달에도 또 다시 짜서 다시 구독합니다*^^* 
+                                영양제 알아보신 분들은 아시겟지만 따로사다보면 소분하기도 번거롭고 챙겨먹는것도 진짜 일인데다가 추가추가하다보면 10만원 그냥 넘어가는데...
+                                여긴 진짜 너무 좋아요ㅜㅜ싸고 또 전문가의 상담도 받아가며 추가하고 빼고 추천도 받으니 좋아요
+
+                                <a class="review_more">접기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="review_item">
+                    <div class="review_rtop flex">
+                        <p class="title">리뷰 타이틀리뷰 타이틀리뷰 타이틀리뷰 타이틀리뷰 타이틀리뷰 타이틀리뷰 타이틀리뷰 타이틀</p>
+                        <p class="date">2022.00.00</p>
+                    </div>
+
+                    <div class="review_read">
+                        <p class="ranking">
+                           <span>⭐</span>
+                           <span>⭐</span>
+                           <span>⭐</span>
+                           <span>⭐</span>
+                           <span>⭐</span>
+                        </p>
+
+                        <div class="review_article flex">
+                            <p class="review_img"></p>
+                            <div class="review_txt">
+                                <b>리뷰 - 더보기 전</b> <br>
+                                아직 한달밖에 안되었지만 왠지 건강해지는 기분이에요!!ㅎㅎ 
+                                직장인이라면 다 있으실 피로도와 면역력 저하 때문에 이래저래 알아보다가 맞춤형으로 먹고 싶어서 하게 되었는데 진짜 너무너무 좋아요!!!
+                                저 진짜 꾸준히 하는걸 진짜 못하는 스타일인데 이건 한 포만 챙겨먹음 되니까 세상편안......이번달에도 또 다시 짜서 다시 구독합니다*^^* 
+                                영양제 알아보신 분들은 아시겟지만 따로사다보면 소분하기도 번거롭고 챙겨먹는것도 진짜 일인데다가 추가추가하다보면 10만원 그냥 넘어가는데...
+                                여긴 진짜 너무 좋아요ㅜㅜ싸고 또 전문가의 상담도 받아가며 추가하고 빼고 추천도 받으니 좋아요
+
+                                <a class="review_more">더보기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review_item">
+                    <div class="review_rtop flex">
+                        <p class="title">리뷰 타이틀리뷰 타이틀리뷰 타이틀리뷰 타이틀리뷰 타이틀리뷰 타이틀리뷰 타이틀리뷰 타이틀</p>
+                        <p class="date">2022.00.00</p>
+                    </div>
+
+                    <div class="review_read revview_open">
+                        <p class="ranking">
+                           <span>⭐</span>
+                           <span>⭐</span>
+                           <span>⭐</span>
+                           <span>⭐</span>
+                           <span>⭐</span>
+                        </p>
+
+                        <div class="review_article flex">
+                            <p class="review_img"></p>
+                            <div class="review_txt">
+                                <b>리뷰 - 더보기 펼침</b> <br>
+                                아직 한달밖에 안되었지만 왠지 건강해지는 기분이에요!!ㅎㅎ 
+                                직장인이라면 다 있으실 피로도와 면역력 저하 때문에 이래저래 알아보다가 맞춤형으로 먹고 싶어서 하게 되었는데 진짜 너무너무 좋아요!!!
+                                저 진짜 꾸준히 하는걸 진짜 못하는 스타일인데 이건 한 포만 챙겨먹음 되니까 세상편안......이번달에도 또 다시 짜서 다시 구독합니다*^^* 
+                                영양제 알아보신 분들은 아시겟지만 따로사다보면 소분하기도 번거롭고 챙겨먹는것도 진짜 일인데다가 추가추가하다보면 10만원 그냥 넘어가는데...
+                                여긴 진짜 너무 좋아요ㅜㅜ싸고 또 전문가의 상담도 받아가며 추가하고 빼고 추천도 받으니 좋아요
+
+                                <a class="review_more">접기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page">
+                    <a href="#" class="first"><i class="ri-arrow-left-line"></i></a>
+                    <a href="#" class="pre"><i class="ri-arrow-left-s-line"></i></a>
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#" class="next"><i class="ri-arrow-right-s-line"></i></a>
+                    <a href="#" class="last"><i class="ri-arrow-right-line"></i></a>
+                </div>
+            </section>
+        </div>
+        <!-- /////////////////// 여기까지 //////////////// -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+
+    <script>
+
+        /*===== show menu =====*/
+        const navMenu = document.getElementById('nav-menu'),
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close');
+
+if(navToggle){
+  navToggle.addEventListener('click', () =>{
+      navMenu.classList.add('show-menu');
+  })
+}
+
+/*===== hidden menu =====*/
+if(navClose){
+  navClose.addEventListener('click', () =>{
+      navMenu.classList.remove('show-menu');
+  })
+};
+
+
+
+/* ====================== nav mobile menu ========================= */
+const navFull = document.querySelectorAll('.menu_list');
+
+navFull.forEach((item) =>{
+    const navTitle = item.querySelector('.nav_link');
+
+    navTitle.addEventListener('click', () =>{
+        const openItem = document.querySelector('.nav-open');
+
+        toggleItem(item);
+
+        if(openItem && openItem!== item){
+            toggleItem(openItem);
+        }
+    })
+})
+
+const toggleItem = (item) =>{
+    const navSub = item.querySelector('.nav_in');
+ 
+    if(item.classList.contains('nav-open')){
+        navSub.removeAttribute('style');
+        item.classList.remove('nav-open');
+    }else{
+        if(navSub != null) {
+            navSub.style.height = navSub.scrollHeight + 'px';
+            item.classList.add('nav-open');
+        }
+    }
+}
+
+
+/* ------------------- 리뷰 탭 --------------*/
+var tabBtn = $(".tab_btn");   
+var tabCont = $(".myreview");   
+
+
+        tabCont.hide().eq(0).show();
+
+
+        tabBtn.click(function(){
+        var target = $(this);               
+        var index = target.index();          
+        // alert(index);
+        tabBtn.removeClass("active");          
+        target.addClass("active");                
+        tabCont.css("display","none");
+        tabCont.eq(index).css("display","block");
+        });
+
+    </script>
+    
+</body>
+</html>
+
+
+
+
+

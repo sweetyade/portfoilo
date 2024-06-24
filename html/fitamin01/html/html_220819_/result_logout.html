@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <!-- ===============================================-->
+        <!--    Document Title-->
+        <!-- ===============================================-->
+        <title>킥더허들 헬스케어</title>
+        <meta name="keywords" content="킥더허들 헬스케어">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="description" content="누구나 누릴 수 있는 일상의 건강">
+        <meta name="format-detection" content="telephone=no">
+    
+        <!-- ============================ css ======================= -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="../../css/newindex.css">
+        <link rel="stylesheet" href="../../css/m.sub.css">
+        <link rel="stylesheet" href="../../css/m.common.css">
+        <link href="../../css/fitamin_2201819.css" rel="stylesheet"> <!-- 새로 추가된 css -->
+    
+    </head>
+<body>
+    <div class="main">
+        <!-- header -->
+        <header class="header" id="header"> 
+            <nav class="nav">
+                <a href="javascript:CommonJS.goHistoryBack();" class="nav_back header_back" style="">
+                    <i class="ri-arrow-left-s-line"></i>
+                </a>
+
+                <h2 class="sub_header header_sub_header" style="">설문결과</h2>
+        
+
+                <!--///////////////////// 변경된 해더 햄버거 메뉴 컨텐츠 ///////////////////-->
+                <!--///////////////////// 여기서부터 복사하여 같은 위치에 변경해주세요 /////////////////////-->
+                <div class="nav_menu" id="nav-menu">
+
+                    <!----------- 비로그인시에만 노출됩니다 ------------->
+                    <div class="nav_login">
+                        <div class="nav_in flex">
+                          <a href="#" class="nav_user_link1">로그인</a>
+                          <a href="#" class="nav_user_link2"><i class="ri-kakao-talk-fill"></i> 카카오 1초 로그인</a>
+                        </div>
+                    </div>
+
+                    <!-- ----------- 로그인 회원정보 메뉴 ------------>
+                    <div class="nav_userinfo">
+                        <div class="nav_in">
+                            <div class="navin_top flex">
+                            <p class="title">김다민 <span>님</span></p> <!-- 회원가입 시 가입정보 이름 -->
+                            <p class="nav_code flex">추천코드 <b>ROWIIOOO</b> <a href="#" class="flex"><img src="../../images/icon_copy.svg" alt=""></a></p>
+                            </div>
+                            <div class="navin_bottom">
+                            <p class="normal_f">damin@naver.com</p>
+                            <p class="normal_f">리뷰 <a href="#">1</a> ｜ 작성가능한 리뷰 <a href="#">2</a></p>
+                            <a href="#" class="btn_logout"><img src="../../images/icon_logout.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------- 로그인 비 구독시 노출 ----------->
+                    <ul class="visual_subcard login_subcard">
+                        <li class="subcard_in">
+                            <div class="subcard_top flex">
+                                <div class="subcard_title flex">
+                                    <p class="title">핏타민 구독<span>하고 다양한 혜택 받으세요</span></p>
+                                </div>
+                            </div>
+    
+                            <div class="subcard_bottom flex">
+                                <div class="subcard_info">
+                                    <p>+ 약사상담비 무료 적용</p>
+                                    <p>+ 건강지원 20% 할인 중</p>
+                                </div>
+    
+                                <div class="subcard_date flex">
+                                </div>
+                            </div>
+                            </li>
+                    </ul>
+
+                    <!------------- 로그인 구독시 노출 ----------->
+                    <ul class="visual_subcard login_subcard">
+                        <li class="subcard_in">
+                            <div class="subcard_top flex">
+                                <div class="subcard_title flex">
+                                    <p class="title">다미니님</p> <!-- 구독신청 시 봉투에 적는 이름 노출 -->
+                                    <img src="../../images/subcard_title.svg" alt="">
+                                </div>
+                                <a href="#" class="subcard_link flex">마이페이지 <i class="ri-arrow-right-s-line"></i></a>
+                            </div>
+    
+                            <div class="subcard_bottom flex">
+                                <div class="subcard_info">
+                                    <p>+ 약사상담비 무료 적용</p>
+                                    <p>+ 건강지원 20% 할인 중</p>
+                                </div>
+    
+                                <div class="subcard_date flex">
+                                    <div class="subcard_block">
+                                        <p class="no">5</p>
+                                        <p class="txt">구독 회차</p>
+                                    </div>
+                                    <div class="subcard_block">
+                                        <p class="no2">07.05</p>
+                                        <a href="#" class="txt flex">다음 구독일 <i class="ri-arrow-right-s-line"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="subcard_in">
+                        <div class="subcard_top flex">
+                            <div class="subcard_title flex">
+                                <p class="title">피터박님</p>
+                                <img src="../../images/subcard_title.svg" alt="">
+                            </div>
+                            <a href="#" class="subcard_link flex">마이페이지 <i class="ri-arrow-right-s-line"></i></a>
+                        </div>
+
+                        <div class="subcard_bottom flex">
+                            <div class="subcard_info">
+                                <p>+ 약사상담비 무료 적용</p>
+                                <p>+ 건강지원 20% 할인 중</p>
+                            </div>
+
+                            <div class="subcard_date flex">
+                                <div class="subcard_block">
+                                    <p class="no">1</p>
+                                    <p class="txt">구독 회차</p>
+                                </div>
+                                <div class="subcard_block">
+                                    <p class="no2">07.01</p>
+                                    <a href="#" class="txt flex">다음 구독일 <i class="ri-arrow-right-s-line"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    </ul>
+
+                    <!---------- 아래부터 기본 노출 화면 --------->
+                    <div class="nav_quick">
+                        <div class="nav_in">
+                            <p class="title">핏타민 시작하기</p>
+                            <div class="flex">
+                            <div class="quick_menu">
+                                <a href="#" class="quick_link quick01">
+                                <img src="../../images/quick_icon1.png" alt="">
+                                <span>예약상담</span>
+                                </a>
+                                <p class="quick_txt">3분 설문 ➡ 1:1 약사상담</p>
+                            </div>
+                            <div class="quick_menu">
+                                <a href="#" class="quick_link quick02">
+                                <img src="../../images/quick_icon2.png" alt="">
+                                <span>즉시상담</span>
+                                </a>
+                                <p class="quick_txt">지금 바로 1:1 약사상담</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----------- 메뉴 ---------->
+                    <div class="menu_list">
+                        <a href="#" class="flex nav_link">고객후기<i class="ri-arrow-right-s-line"></i></a>
+                    </div>
+
+                    <div class="menu_list nav-open">
+                        <a href="#" class="flex nav_link">고객센터<i class="ri-arrow-down-s-line"></i></a>
+                        <div class="nav_in" style="height:115px">
+                            <div class="nav_sub flex">
+                                <a href="#">1:1 문의하기</a>
+                                <a href="#">자주묻는질문</a>
+                                <a href="#">공지사항 </a>
+                                <a href="#">이벤트</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="menu_list">
+                        <a href="#" class="flex nav_link">브랜드스토리<i class="ri-arrow-down-s-line"></i></a>
+                        <div class="nav_in">
+                            <div class="nav_sub flex">
+                                <a href="#">핏타민스토리</a>
+                                <a href="#">핏타민소개</a>
+                                <a href="#">이용방법 </a>
+                                <a href="#">섭취방법</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nav_close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+
+                </div>
+                <!--////////////////// 여기까지 ////////////////////////-->
+        
+                <div class="nav_toggle flex" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container" data-layout="container">
+            <div class="sub_wrap my_result">
+                <div class="result_top">
+                    <p class="font_l mb_1"><span class="font_w2">핏타민</span>님의 설문결과</p>
+
+                    <div class="font_n">
+                        <p><span class="font_w2">성별</span> 여</p>
+                        <p><span class="font_w2">나이</span> 33</p>
+                        <p><span class="font_w2">BMI</span> 20</p>
+                    </div>
+                </div>
+
+                <div class="mypage_result" style="">
+                    <p class="sub_title mb_1">설문결과 종합</p>
+
+                    <div class="my_block group_shadow mb_3">
+                        <div class="result_point">
+                            <p>66점</p>
+                        </div>
+                        <div class="result_info">
+                            <p class="font_m mb_1">조금만 더 힘내볼까요? 🤔</p>
+                            <p class="font_n">
+                                <b>핏타민</b>님의 체질량 지수는 정상보다 조금 높은 편이며, 
+                                식습관과 영양관리는 노력이 필요한 상태입니다. 
+                                건강에 대한 걱정은 보통이므로 <b>AI가 추천한 제품을 기반으로, 
+                                약사님과 가장 적합한 제품을 선정해보세요.</b>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="my_blockw mb_3">
+                        <p class="result_title font_l mb_2">BMI 지수</p>
+
+                        <div class="result_bar">
+                            <div class="result_bg">
+                                <p class="font_s font_w">저체중 <span class="bar_point"></span></p>
+                                <p class="font_s font_w">정상<span class="bar_point"></span></p>
+                                <p class="font_s font_w">비만<br>전단계<span class="bar_point active"></span></p>
+                                <p class="font_s font_w">1단계<br>비만<span class="bar_point"></span></p>
+                                <p class="font_s font_w">2단계<br>비만<span class="bar_point"></span></p>
+                                <p class="font_s font_w">3단계<br>비만<span class="bar_point"></span></p>
+                                <p class="bar_point point_1"></p>
+                            </div>
+                            <div class="result_bmi">
+                                <p class="font_s">18.5</p>
+                                <p class="font_s">23</p>
+                                <p class="font_s">25</p>
+                                <p class="font_s">30</p>
+                                <p class="font_s">35</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="my_blockw mb_3">
+                        <p class="result_title font_l mb_2">식습관 지수</p>
+
+                        <div class="result_bar">
+                            <div class="result_bg">
+                                <p class="font_s">위험 <span class="bar_point"></span></p>
+                                <p class="font_s">보통 <span class="bar_point active"></span></p>
+                                <p class="font_s">양호 <span class="bar_point"></span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="my_blockw myresult_slide swiper">
+                        <p class="result_title font_l mb_1">건강걱정 분야</p>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="result1 mb_2">
+                                    <p class="font_n font_w2 mb_1">주요 건강걱정 top3</p>
+                                    <div class="my_toplist">
+                                        <p class="my_topitem">
+                                            <span class="icon"><img src="../../images/survey_step09_icon13.png" alt=""></span>
+                                            <span class="font_s">체중조절</span>
+                                            <span class="top_no font_w2">1</span>
+                                        </p>
+                                        <p class="my_topitem">
+                                            <span class="icon"><img src="../../images/survey_step09_icon10.png" alt=""></span>
+                                            <span class="font_s">관절/뼈 건강</span>
+                                            <span class="top_no font_w2">2</span>
+                                        </p>
+                                        <p class="my_topitem">
+                                            <span class="icon"><img src="../../images/survey_step09_icon12.png" alt=""></span>
+                                            <span class="font_s">장 건강</span>
+                                            <span class="top_no font_w2">3</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="result2">
+                                    <p class="font_n font_w2 mb_1">기타 건강걱정</p>
+                                    <p class="font_s">
+                                        내용내용내용
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg_gray">
+                    <div class="mypage_result" style="padding: 2rem 1rem 0">
+                        <p class="sub_title">추천 영양 성분 <span class="point_c">3</span></p>
+                        
+                    </div>
+    
+    
+                    <div class="blur_gruop">
+                        <div class="block_blur">
+                            <div class="bg_gray mypage_result">
+                                <div class="my_block group_shadow mb_1 recommend_box bg_lnd">
+                                    <div class="recommend_l">
+                                        <p class="font_s">부족해지기 쉬운 마그네슘 보충</p>
+                                        <p class="font_m font_w2">마그네슘B</p>
+                                        <ul class="recommend_info">
+                                            <li>ㆍ 신경과 근육 유지에 필요</li>
+                                            <li>ㆍ 에너지 이용에 필요</li>
+                                        </ul>
+                                    </div>
+                                    <div class="recommend_r">
+                                        <img src="../../images/drug01.png" alt="">
+                                        <p class="font_s">344원/ 일</p>
+                                    </div>
+                                </div>
+                                <div class="my_block group_shadow mb_1 recommend_box bg_py">
+                                    <div class="recommend_l">
+                                        <p class="font_s">생기발랄 활기찬 하루</p>
+                                        <p class="font_m font_w2">비타민C+</p>
+                                        <ul class="recommend_info">
+                                            <li>ㆍ 활성산소를 제거하는데 필요</li>
+                                            <li>ㆍ 항산화 작용에 도움</li>
+                                            <li>ㆍ 항산화 작용에 도움</li>
+                                        </ul>
+                                    </div>
+                                    <div class="recommend_r bg_py">
+                                        <img src="../../images/drug02.png" alt="">
+                                        <p class="font_s">344원/ 일</p>
+                                    </div>
+                                </div>
+                                <div class="my_block group_shadow mb_1 recommend_box bg_po">
+                                    <div class="recommend_l">
+                                        <p class="font_s">건강하게 챙기는 햇빛 에너지</p>
+                                        <p class="font_m font_w2">비타민D 2000IU+</p>
+                                        <ul class="recommend_info">
+                                            <li>ㆍ 뼈의 형성과 유지에 필요</li>
+                                            <li>ㆍ 골다공증 발생 위험 감소에 도움</li>
+                                        </ul>
+                                    </div>
+                                    <div class="recommend_r bg_po">
+                                        <img src="../../images/drug03.png" alt="">
+                                        <p class="font_s">344원/ 일</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg_gray mypage_result">
+                                <p class="sub_title mb_1">약사 상담 필요</p>
+                                <div class="my_block group_shadow mb_1 recommend_box bg_lnd">
+                                    <div class="recommend_l">
+                                        <p class="font_s">부족해지기 쉬운 마그네슘 보충</p>
+                                        <p class="font_m font_w2">마그네슘B</p>
+                                        <ul class="recommend_info">
+                                            <li>ㆍ 신경과 근육 유지에 필요</li>
+                                            <li>ㆍ 에너지 이용에 필요</li>
+                                        </ul>
+                                    </div>
+                                    <div class="recommend_r">
+                                        <img src="../../images/drug01.png" alt="">
+                                        <p class="font_s">344원/ 일</p>
+                                    </div>
+                                </div>
+                                <div class="my_block group_shadow mb_1 recommend_box bg_py">
+                                    <div class="recommend_l">
+                                        <p class="font_s">생기발랄 활기찬 하루</p>
+                                        <p class="font_m font_w2">비타민C+</p>
+                                        <ul class="recommend_info">
+                                            <li>ㆍ 활성산소를 제거하는데 필요</li>
+                                            <li>ㆍ 항산화 작용에 도움</li>
+                                            <li>ㆍ 항산화 작용에 도움</li>
+                                        </ul>
+                                    </div>
+                                    <div class="recommend_r bg_py">
+                                        <img src="../../images/drug02.png" alt="">
+                                        <p class="font_s">344원/ 일</p>
+                                    </div>
+                                </div>
+                                <div class="my_block group_shadow mb_1 recommend_box bg_po">
+                                    <div class="recommend_l">
+                                        <p class="font_s">건강하게 챙기는 햇빛 에너지</p>
+                                        <p class="font_m font_w2">비타민D 2000IU+</p>
+                                        <ul class="recommend_info">
+                                            <li>ㆍ 뼈의 형성과 유지에 필요</li>
+                                            <li>ㆍ 골다공증 발생 위험 감소에 도움</li>
+                                        </ul>
+                                    </div>
+                                    <div class="recommend_r bg_po">
+                                        <img src="../../images/drug03.png" alt="">
+                                        <p class="font_s">344원/ 일</p>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="mypage_result bg_gray2">
+                                <p class="sub_title mb_1"><span class="underline">1:1 약사 상담</span>을 통해 <br>나에게 필요한 영양소만 담으세요!</p>
+            
+                                <img src="../../images/survey_result_box04_img01.png" alt="" class="mb_2">
+            
+                                <p class="font_s">
+                                    과학적인 알고리즘 기반으로 추천 된 영양소를 <br>
+                                    1:1 약사 상담을 통해 당신에게 꼭 필요한 영양제를 추천합니다.  <br>
+                                    이젠 불필요한 영양소 섭취,비용 부담을 약사 상담으로 덜어내세요! <br>
+                                </p>
+            
+                                <div class="tag_list">
+                                    <p class="tag font_s">#1:1상담</p>
+                                    <p class="tag font_s">#화상상담</p>
+                                    <p class="tag font_s">#약국방문상담</p>
+                                </div>
+                            </div>
+            
+                            <div class="mypage_result bg_blue2">
+                                <p class="sub_title mb_1">온라인 약사 상담</p>
+                                <p class="font_s mb_3">
+                                    언제 어디서나 휴대폰으로 편리하게 <br>
+                                    약사와 1:1 화상상담하세요.
+                                </p>
+                                <p class="sub_title mb_1">오프라인 약사 상담</p>
+                                <p class="font_s mb_3">
+                                    가까운 핏타민 약국에서<br>
+                                    약사와 1:1 직접 상담하세요.
+                                </p>
+                                <img src="../../images/survey_result_box04_img02.png" alt="">
+                            </div>
+        
+                            
+                        </div>
+                        <div class="blur_over">
+                            <p class="title">지금 로그인하고<br>추천 영양성분을 모두 확인해보세요.</p>
+    
+                            <div class="login_btn">
+                                <a href="#" class="btn btn_kakao"><i class="ri-kakao-talk-fill"></i> 카카오로 1초 만에 확인하기</a>
+                                <a href="#" class="btn btn_blue"> 다른방법으로 확인하기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- 로그인 전 설문결과 도중 이탈 시 팝업 -->
+    <div class="coupon_popup active">
+        <div class="overlay"></div>
+        <div class="coupon_pop align_center">
+            <div class="coupon_use">
+                <p class="conpon_poptxt">
+                    정말 나가시겠습니까? <br>
+                    <span style="color: #EC736D; opacity: .5">(설문 결과가 저장되지 않을 수 있습니다.)</span>
+                </p>
+            </div>
+            <div class="popup_btn flex">
+                <a href="#" class="btn coupon_cancel">취소</a>
+                <a href="#" class="btn conpon_ok">나가기</a>
+            </div>
+
+            <a href="#" class="coupon_close"><i class="ri-close-line"></i></a>
+        </div>
+    </div>
+        
+    <!-- 회원가입 완료 후 설문경과 보기전 팝업 //// 페이지가 자동으로 없어짐-->
+    <div class="coupon_popup">
+        <div class="overlay"></div>
+        <div class="coupon_pop align_center">
+            <div class="coupon_use">
+                <img src="../../images/fit_result_check.svg" alt="" class="coupon_checkimg">
+                <p class="conpon_poptxt">
+                    회원가입이 완료되었습니다. <br><br>
+                    
+                    추천인 코드는<br>회원정보수정 페이지에서 입력해주세요.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+
+    <script>
+
+        /*===== show menu =====*/
+        const navMenu = document.getElementById('nav-menu'),
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close');
+
+if(navToggle){
+  navToggle.addEventListener('click', () =>{
+      navMenu.classList.add('show-menu');
+  })
+}
+
+/*===== hidden menu =====*/
+if(navClose){
+  navClose.addEventListener('click', () =>{
+      navMenu.classList.remove('show-menu');
+  })
+};
+
+
+
+/* ====================== nav mobile menu ========================= */
+const navFull = document.querySelectorAll('.menu_list');
+
+navFull.forEach((item) =>{
+    const navTitle = item.querySelector('.nav_link');
+
+    navTitle.addEventListener('click', () =>{
+        const openItem = document.querySelector('.nav-open');
+
+        toggleItem(item);
+
+        if(openItem && openItem!== item){
+            toggleItem(openItem);
+        }
+    })
+})
+
+const toggleItem = (item) =>{
+    const navSub = item.querySelector('.nav_in');
+ 
+    if(item.classList.contains('nav-open')){
+        navSub.removeAttribute('style');
+        item.classList.remove('nav-open');
+    }else{
+        if(navSub != null) {
+            navSub.style.height = navSub.scrollHeight + 'px';
+            item.classList.add('nav-open');
+        }
+    }
+}
+
+
+/* ============ my resurlt slide==========  */
+var myResult = new Swiper(".myresult_slide", {
+  grabCursor: true,
+  spaceBetween: 16,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 0,
+  },
+});
+
+
+
+/* 추천코드 */
+
+$(".overlay").on("click", function(){
+  $(".coupon_popup, body").removeClass("active");
+});
+
+
+    </script>
+    
+</body>
+</html>
+
+
+
+
+

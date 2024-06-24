@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>	2-7-13.3단계생활습관</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="back"></div>
+      <div class="page_name">건강설문</div>
+      <div class="header_icon">
+        <p class="header_link">
+          <img src="../../images/icon/system_close_bk.svg" alt="닫기" />
+        </p>
+      </div>
+    </header>
+
+    <div class="fullpage">
+      <div class="svy_wrap">
+        <div class="svy_top">
+          <p class="title">
+            <span style="padding-bottom: 1rem; display: block;">이제 정말 거의 다 왔어요! 🙌🏻</span>
+            정확한 건강분석을 위해<br>생활습관을 알려주세요</p>
+        </div>
+
+        <div class="svy_con">
+          <div class="step">
+            <div class="stap_bar">
+              <span class="step_prg"></span>
+            </div>
+            <p class="step_txt step_txt1" style="color: #fff;">기본정보</p>
+            <p class="step_txt step_txt2" style="color: #fff;">건강목표</p>
+            <p class="step_txt step_txt3">생활습관</p>
+            <p class="step_txt step_txt4">영양상태</p>
+          </div>
+        </div>
+      </div>
+      <div class="btn_fix">
+        <button class="btn_b btn_basic">다음</button>
+      </div>
+    </div>
+
+
+    <!-- 페이지 나가기 팝업 -->
+    <div class="popup popup01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 팝업 컨텐츠 -->
+      <div class="popup_wrap">
+        <p class="pop_title">페이지를 나가시겠어요?</p>
+        <p class="pop_txt">페이지를 나가시면 작성하신 설문결과가<br>
+          저장되지 않을 수 있어요!</p>
+        <!-- 버튼 2개 -->
+        <div class="pop_btn">
+          <button class="btn_m btn_light popClose">계속진행</button>
+          <button class="btn_m btn_red popClose">나가기</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script>
+      //step 
+      $(".step_prg").animate({
+          width: "66%",
+        }, 2500, function(){
+          console.log("dddd")
+        $(".step_txt3").css("color","#00b400")
+      })
+
+    
+      /* popup */
+      $(".header_link").on("click", function () {
+        $(".popup01, body").addClass("open");
+      });
+
+      $(".overlay, .popClose").on("click", function () {
+        $(".popup, .modal, body, .btn_trans").removeClass("open");
+      });
+    </script>
+  </body>
+</html>

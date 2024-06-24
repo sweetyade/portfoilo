@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>킥더허들 헬스케어</title>
+    <meta name="keywords" content="킥더허들 헬스케어">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="누구나 누릴 수 있는 일상의 건강">
+    <meta name="format-detection" content="telephone=no">
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <script type="text/javascript" src="<c:url value='/vendors/jquery/jquery-3.6.0.min.js' />"></script>
+
+    <!-- ============================ css ======================= -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link href="../../css/m.common.css" rel="stylesheet">
+    <link href="../../css/m.fitamin.css" rel="stylesheet">
+
+
+
+    <script type="text/javascript" src="<c:url value='/bootstrap/js/bootstrap.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/vendors/popper/popper.min.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/scripts/modal.js' />"></script> <!-- 모달 스크립트 -->
+    <script type="text/javascript" src="<c:url value='/scripts/common.js' />"></script> <!-- 공통 스크립트 -->
+    <script type="text/javascript" src="<c:url value='/scripts/hybridBridge.js' />"></script> <!-- 네이티브 인터페이스 브릿지 -->
+</head>
+<body>
+    <main class="main" id="top">
+
+        <header class="header" id="header">
+            <nav class="nav">
+                <h1 class="logo"><a href="#"><img src="../../images/logo.svg" alt="" width="110px;" height="100%" title=""></a></h1>
+        
+                <div class="nav_menu" id="nav-menu">
+                    <div class="nav_user">
+                        <a href="#" class="nav_user_link">로그인</a>
+                        <a href="#" class="nav_user_link">마이 페이지</a>
+                    </div>
+        
+                    <!-- ========메뉴 =========-->
+                    <ul class="nav_list">
+                        <li class="nav_item">
+                            <a href="#" class="nav_link active_link">홈</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">핏타민 시작하기</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">마이페이지</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">브랜드 스토리 <i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="nav_dep">
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">핏타민 스토리</a>
+                                </li>
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">핏타민 소개</a>
+                                </li>
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">이용방법</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">고객후기</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">이벤트 · 공지</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">고객센터</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="nav_close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+        
+                    <div class="nav_search">
+                        <input type="text" class="search" placeholder="검색어를 입력해주세요">
+                        <button type="submit" class="search btn_basic">검색</button>
+                    </div>
+        
+                    <!-- ================= quick link ================= -->
+                    <div class="nav_quick">
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg01.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>People</span>
+                                <p>시작부터 섭취까지<br>약사와 함께</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg02.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>Service</span>
+                                <p>과학적인 데이터<br>근거 중심으로</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg03.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>Product</span>
+                                <p>단 1알까지<br>품질우선주의</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg04.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>B2B</span>
+                                <p>기업 건강 복지<br>영양제 정기배송</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="nav_toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </nav>
+        </header>
+        
+        <div class="container" data-layout="container">
+            <div class="main_wrap">
+
+                <!-- ================ main visual =============== -->
+                <section class="swiper mySwiper visual">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="../../images/main_vis_bg01.png" alt="" class="visual_img">
+                            <div class="visual_item">
+                                <p class="block_title" data-swiper-parallax="-200">영양제 잘 고른 걸까?<br>불필요한 돈을 쓰고 있지 않을까?</p>
+                                <div class="block_txt" data-swiper-parallax="-400">
+                                    <p>나에게 맞춘 하루 1팩 맞춤 영양제</p>
+                                    <p>1:1 약사 상담으로 설계하세요</p>
+                                </div>
+                            <a href="#" class="btn btn_blue" data-swiper-parallax="-500">핏타민 시작하기</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../../images/main_vis_bg05.png" alt="" class="visual_img">
+                            <div class="visual_item block_item_white">
+                                <p class="block_title" data-swiper-parallax="-200">핏타민 회원이라면 누구나<br><span>적립금 1만원 추가 지급</span></p>
+                                <div class="block_txt" data-swiper-parallax="-400">
+                                    <p><span>현대백화점</span> 모바일카드 신규가입하고</p>
+                                    <p>핏타민 <span>적립금 1만원</span> 받아가세요</p>
+                                </div>
+                                <a href="#" class="btn btn_white" data-swiper-parallax="-500">이벤트 참여하기</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../../images/main_vis_bg03.png" alt="" class="visual_img">
+                            <div class="visual_item block_item_white">
+                                <p class="block_title" data-swiper-parallax="-200">친구 초대하고<br><span>5천원 받으세요</span></p>
+                                <div class="block_txt" data-swiper-parallax="-400">
+                                    <p>친구에게 핏타민을 추천할 때마다</p>
+                                    <p><span>친구와 나 모두에게 5천원을 드려요</span></p>
+                                </div>
+                                <a href="#" class="btn btn_white" data-swiper-parallax="-500">친구 초대하기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </section>
+            
+                <!-- ============= block1 =================== -->
+                <section class="block01 container">
+                    <div class="block_item">
+                        <p class="block_title">따로 <span>고르고,</span> 따로 <span>먹는</span><br>영양제, <span>간편해 질 수 없을까?</span></p>
+                        <div class="block_txt">
+                            <p>이렇게나 많던 영양제를</p>
+                            <p>이젠 나만의 맞춤으로 하루 <span>1팩에!</span></p>
+                        </div>
+                    </div>
+            
+                    <div class="block01_img">
+                        <div class="block01_img01"><img src="../../images/main_medicinebox_.png" class=""></div>
+                        <div class="block01_img02"><img src="../../images/main_medicinebag.png" class=""></div>
+                    </div>
+            
+                    <div class="btn_wrap">
+                        <a href="#" class="btn btn_blue">핏타민 시작하기</a>
+                    </div>
+                </section>
+            
+                <!-- ============== block2 ================= -->
+                <section class="block02 container">
+                    <h3 class="section_title">쉽게, <span>나만의 영양제</span>를 만나세요.</h3>
+            
+                    <div class="block02_list">
+                        <div class="block02_card">
+                            <img src="../../images/brandstory_list_01.png" alt="">
+                            <div class="block02_item">
+                                <p class="block_step">step 1</p>
+                                <p class="block_subtitle">나를 체크하는 건강 설문</p>
+                                <p class="block_info">약사들이 설계한 과학적 설문으로,<br>나의 건강습관을 파악해요.</p>
+                            </div>
+                        </div>
+                        <div class="block02_card">
+                            <img src="../../images/brandstory_list_02.png" alt="">
+                            <div class="block02_item">
+                                <p class="block_step">step 2</p>
+                                <p class="block_subtitle">약사와 1:1 상담받기</p>
+                                <p class="block_info">회사, 카페, 집 언제 어디서나<br>약사와 1:1로 내 건강을 상담해요.</p>
+                            </div>
+                        </div>
+                        <div class="block02_card">
+                            <img src="../../images/brandstory_list_03.png" alt="">
+                            <div class="block02_item">
+                                <p class="block_step">step 3</p>
+                                <p class="block_subtitle">편리한 영양제 정기구독</p>
+                                <p class="block_info">단 1팩으로 나에게 맞춘 영양제를<br>매월 집으로 정기배송 받아요. <br><span>* 내가 원할때 언제든 취소 할 수 있어요</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            
+                <!-- ============= block3 ===================== -->
+                <section class="block03 container">
+                    <img src="../../images/main_step_bg00.png'" alt="" class="block03_bg block03_bg01">
+                    <div class="block_03_card">
+                        <div class="block03_item">
+                            <img src="../../images/main_sample01.png" alt="" class="block03_bg block03_bg02">
+                            <p class="block_step">step 1</p>
+                            <p class="block_subtitle">설문하기</p>
+                            <p class="block_info"><span class="info_point">핏타민 설문</span>으로<br>당신의 건강을 먼저 체크하세요.</p>
+                            <p class="block_tag"><span>#건강체크</span><br><span>#제품추천</span></p>
+                        </div>
+                    </div>
+                    <div class="block_03_card">
+                        <div class="block03_item alg_right">
+                            <img src="../../images/main_sample02.png" alt="" class="block03_bg block03_bg03">
+                            <p class="block_step">step 2</p>
+                            <p class="block_subtitle">상담하기</p>
+                            <p class="block_info">어디서든 <span class="info_point">약사와 1:1</span>상담하고<br>제품을 확정하세요.</p>
+                            <p class="block_tag"><span>#화상상담</span><br><span>#제품확정</span></p>
+                        </div>
+                    </div>
+                    <div class="block_03_card">
+                        <div class="block03_item">
+                            <img src="../../images/main_sample03.png" alt="" class="block03_bg block03_bg04">
+                            <p class="block_step">step 3</p>
+                            <p class="block_subtitle">구독하기</p>
+                            <p class="block_info">당신만의 하루 1팩 맞춤영양제를<br>매월 <span class="info_point">정기구독</span>하세요.</p>
+                            <p class="block_tag"><span>#하루1팩</span><br><span>#정기배송</span></p>
+                        </div>
+                    </div>
+            
+                    <div class="btn_wrap">
+                        <a href="#" class="btn btn_blue">나만의 1팩 맞춤 영양제 만들기</a>
+                    </div>
+                </section>
+            
+                <!-- =============== block4 ================== -->
+                <section class="block04 swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide block04_list01">
+                            <div class="block04_title">
+                                <img src="../../images/main_made_img_1.png" alt="">
+                                <div class="block04_top">
+                                    <p class="section_title"><span>김다민</span><img src="../../images/main_made_txtimg_1.png" alt=""></p>
+                                    <p class="block_tag"><span>#식이조절</span><span>#관리</span><span>#스킨케어</span></p>
+                                </div>
+                            </div>
+                            <div class="block04_item">
+                                <img src="../../images/medicine_bag.png" alt="">
+                                <div class="list01_txt block04_link">
+                                    <a href="#" class="link1">카데킨+
+                                        <img src="../../images/Asset_1.png" alt="">
+                                    </a>
+                                    <a href="#" class="link2">프로바이오틱스베이직
+                                        <img src="../../images/Asset_2.png" alt="">
+                                    </a>
+                                    <a href="#" class="link3">종합비타민+
+                                        <img src="../../images/Asset_3.png" alt="">
+                                    </a>
+                                    <a href="#" href="#" class="link4">히알루론산비오틴+
+                                        <img src="../../images/Asset_4.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="btn_wrap">
+                                    <a href="#" class="btn btn_blue">나만의 1팩 맞춤 영양제 만들기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide block04_list02">
+                            <div class="block04_title">
+                                <img src="../../images/main_made_img_2.png" alt="">
+                                <div class="block04_top">
+                                    <p class="section_title"><span>윤성실</span><img src="../../images/main_made_txtimg_1.png" alt=""></p>
+                                    <p class="block_tag"><span>#직장인</span><span>#회식</span><span>#야근</span></p>
+                                </div>
+                            </div>
+                            <div class="block04_item">
+                                <img src="../../images/medicine_bag01.png" alt="">
+                                <div class="list02_txt block04_link">
+                                    <a href="#" class="link1">비타민B컴플랙스+
+                                        <img src="../../images/Asset_1.png" alt="">
+                                    </a>
+                                    <a href="#" class="link2">rTG알티지오메가3+
+                                        <img src="../../images/Asset_2.png" alt="">
+                                    </a>
+                                    <a href="#" class="link3">히알루론산비오틴+
+                                        <img src="../../images/Asset_3.png" alt="">
+                                    </a>
+                                    <a href="#" class="link4">밀크시슬+
+                                        <img src="../../images/Asset_4.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="btn_wrap">
+                                    <a href="#" class="btn btn_blue">나만의 1팩 맞춤 영양제 만들기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide block04_list03">
+                            <div class="block04_title">
+                                <img src="../../images/main_made_img_3.png" alt="">
+                                <div class="block04_top">
+                                    <p class="section_title"><span>피터박</span><img src="../../images/main_made_txtimg_1.png" alt=""></p>
+                                    <p class="block_tag"><span>#체력</span><span>#흡연</span><span>#운동</span></p>
+                                </div>
+                            </div>
+                            <div class="block04_item">
+                                <img src="../../images/medicine_bag02.png" alt="">
+                                <div class="list03_txt block04_link">
+                                    <a href="#" class="link1">코큐텐+
+                                        <img src="../../images/Asset_1.png" alt="">
+                                    </a>
+                                    <a href="#" class="link2">비타민B컴플랙스
+                                        <img src="../../images/Asset_2.png" alt="">
+                                    </a>
+                                    <a href="#" class="link3">쏘팔메토옥타코사놀+
+                                        <img src="../../images/Asset_3.png" alt="">
+                                    </a>
+                                    <a href="#" class="link4">밀크시슬+
+                                        <img src="../../images/Asset_4.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="btn_wrap">
+                                    <a href="#" class="btn btn_blue">나만의 1팩 맞춤 영양제 만들기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </section>
+            
+                <!-- ============= block5 ================== -->
+                <section class="block05 container">
+                    <p class="section_subtitle">개인맞춤영양제가 처음이시라면</p>
+                    <h3 class="section_title"><span>당연히 궁금하실 거예요</span></h3>
+            
+                    <div class="faq_list">
+                        <div class="faq_item">
+                            <p class="faq_title ">개인맞춤 영양제는 어떻게 다른건가요 <i class="ri-arrow-down-s-line"></i></p>
+                            <div class="faq_txt">
+                                기존에 섭취하시던 병 또는 멀티팩 제품들은 누구에게나 동일한 구성을 제공하지만, 
+                                개인맞춤영양제 핏타민은 상담을 통해서 나에게 맞춘 나만을 위한 1팩을 제공합니다.
+                            </div>
+                        </div>
+                        <div class="faq_item">
+                            <p class="faq_title">설문 후 바로 구매가 안돼요. <i class="ri-arrow-down-s-line"></i></p>
+                            <div class="faq_txt">
+                                핏타민은 과학기반 설문 알고리즘뿐 아니라 약사 상담까지 필수로 진행하여 개인에게 맞춘 영양소를 추천합니다. <br>
+                                약사와 상담을 통해서 더 완벽한 핏타민을 설계 받아보세요.
+                            </div>
+                        </div>
+                        <div class="faq_item">
+                            <p class="faq_title">상담은 어떻게 할 수 있나요?<i class="ri-arrow-down-s-line"></i></p>
+                            <div class="faq_txt">
+                                핏타민 약사상담은 온라인 예약을 통해서 화상 상담하거나 가까운 핏타민 약국에 방문해서 상담이 가능합니다. 
+                                장소 제약없이 어디서나 핏타민 약사님을 만나보세요.
+                            </div>
+                        </div>
+                        <div class="faq_item">
+                            <p class="faq_title">구독을 하고 있어요. 구성을 바꿀 수 있나요? <i class="ri-arrow-down-s-line"></i></p>
+                            <div class="faq_txt">
+                                약사와 설계한 핏타민 구성은 3개월동안 꾸준히 섭취하는 것을 권장드립니다. <br>
+                                3개월 후 변화된 나에게 맞추어 구성을 변경해보세요.<br>
+                                구성변경은 재설문과 재상담을 통해서 가능합니다.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            
+                <!-- ============== block6 =================== -->
+                <section class="block06 container">
+                    <p class="section_subtitle">오직 당신만을 위해</p>
+                    <h3 class="section_title"><span>1팩에 건강한 디테일을 담았습니다.</span></h3>
+            
+                    <div class="block06_list">
+                        <div class="block06_item">
+                            <img src="../../images/main_detail_img01.png" alt="">
+                            <div class="block06_txt">
+                                <p class="block_subtitle">영양 전문가들과 함께합니다.</p>
+                                <p class="block_info">
+                                    약사, 영양 전문가가 함께 연구하며, <br>
+                                    우수한 품질의 원료만 사용합니다.</p>
+                            </div>
+                        </div>
+                        <div class="block06_item">
+                            <img src="../../images/main_detail_img02.png" alt="">
+                            <div class="block06_txt">
+                                <p class="block_subtitle">편리한 섭취를 돕습니다.</p>
+                                <p class="block_info">
+                                    섭취하기 용이한 알약 사이즈<br>
+                                    1팩에 담은 맞춤 영양 성분</p>
+                            </div>
+                        </div>
+                        <div class="block06_item">
+                            <img src="../../images/main_detail_img03.png" alt="">
+                            <div class="block06_txt">
+                                <p class="block_subtitle">
+                                    부담 없이 챙겨드립니다.</p>
+                                <p class="block_info">
+                                    매월 정기배송 <span>*쉬운 구독해지</span><br>
+                                    365일 무료배송, 결제일 조정 가능</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            
+                <!-- ============ == block7 ================== -->
+                <section class="block07 container">
+                    <div class="block_item">
+                        <p class="block_title"><span>나만의 맞춤 영양제,<br>이젠 약사와 1:1 상담으로</span></p>
+                        <div class="block_txt">
+                            <p>이젠 영양제에 맞추지 말고,</p>
+                            <p><span>나에게 맞추세요.</span></p>
+                        </div>
+                        <a href="#" class="btn btn_blue" data-swiper-parallax="-500">핏타민 시작하기</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="social">
+                <a href="#" class="social_link"><img src="../../images/ft_kakao.png" alt=""></a>
+                <a href="#" class="social_link"><img src="../../images/ft_insta.png" alt=""></a>
+                <a href="#" class="social_link"><img src="../../images/ft_blog.png" alt=""></a>
+            </div>
+        
+            <div class="footer_item">
+                <p class="w_bold">고객센터</p>
+                <p>이메일 : help.fitamin@kthd.co.kr<br>070-8664-0698, 1661-4739<br>(평일 9:00 ~ 18:00, 점심시간 : 12:30 ~ 13:30)</p>
+            </div>
+            <div class="footer_item">
+                <p class="w_bold">(주)킥더허들 헬스케어</p>
+                <p>대표 : 박진환<br>451-85-01446 | 제2022-서울강남-01577호<br> 서울특별시 강남구 봉은사로68길 8, 4층 <br />개인정보관리책임자 : 강영빈</p>
+            </div>
+            <div class="footer_item">
+                <p class="w_bold">(주)빅썸</p>
+                <p>대표 : 박지예<br>333-85-00488<br> 경기도 성남시 분당구 117, 10층(운중동)</p>
+            </div>
+            <div class="footer_item">
+                <p class="w_bold">상담주관기업 : (주)참약사</p>
+                <p>대표 : 김병주<br>736-88-01144<br> 서울특별시 성북구 종암로 120, 303호</p>
+            </div>
+        
+            <div class="footer_lnb footer_item">
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">규제특례 고지사항</a>
+            </div>
+        
+            <p class="copy">Copyright © Kick The Hurdle Healthcare Inc.<br> All Rights Reserved</p>
+        
+        
+            <div class="bottom_menu">
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon01_on.svg" alt="">
+                    <span>홈</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon02.svg" alt="">
+                    <span>설문</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon03.svg" alt="">
+                    <span>상담</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon04.svg" alt="">
+                    <span>구독</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon05.svg" alt="">
+                    <span>MY</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- swiper slide -->
+    <script type="text/javascript" src="../../scripts/mobile.js"></script> <!-- 추가 스크립트 -->
+</body>
+</html>
+
+
+
+
+

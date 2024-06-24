@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>1-4.영양체 추가 & 편집	-목록있음(모두있음)</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="back"><button class="btn_s listEdit">편집</button></div>
+      <h2 class="page_name">오늘 섭취할 영양제</h2>
+      <div class="header_icon">
+        <p class="header_link">
+          <img src="../../images/icon/system_close_bk.svg" alt="닫기" />
+        </p>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="inner_1 inner_tb_1">
+        <div class="box_grid_1_5 bg_gray05">
+          <div class="box_con">
+            <p class="sub">남은 섭취일정</p>
+            <p class="total"><span class="listNo">0</span>건</p>
+          </div>
+          <div class="box_con">
+            <p class="sub">완료한 섭취일정</p>
+            <p class="total"><span class="cplNo">0</span>건</p>
+          </div>
+        </div>
+        <button class="btn_b btn_white mt_0_5">알림 추가하기</button>
+      </section>
+
+      <section class="today_intake">
+        <div class="intake_list">
+          <div class="title_total">
+            <p class="title">남은 섭취일정</p>
+            <p class="total">총 <span class="listNo">0</span>건</p>
+          </div>
+
+          <div class="list" id="listTotal">
+            <div class="list_edit">
+              <div class="edit"></div>
+              <div class="card_day_time sun">
+                <p class="time">오전 07:00 <span class="icon_s icon_basic">기록가능</span></p>
+                <p class="txt">피토틱스 옐로우, 락토핏 유산균 골드</p>
+              </div>
+            </div>
+            <div class="list_edit">
+              <div class="edit"></div>
+              <div class="card_day_time sun">
+                <p class="time">오전 07:00 <span class="icon_s icon_basic">기록가능</span></p>
+                <p class="txt">피토틱스 옐로우, 락토핏 유산균 골드</p>
+              </div>
+            </div>
+            <div class="list_edit">
+              <div class="edit"></div>
+              <div class="card_day_time moon">
+                <p class="time">오후 07:00 <span class="icon_s btn_light">섭취 13시간 전</span></p>
+                <p class="txt">피토틱스 옐로우, 락토핏 유산균 골드</p>
+              </div>
+            </div>
+
+            <p class="list_none">정말 대단해요. 오늘 섭취를 모두 완료했어요!<br>
+              내일도 꼭 핏타민과 함께 건강 챙겨요 :)</p>
+          </div>
+        </div>
+
+        <div class="intake_list done">
+          <div class="title_total">
+            <p class="title">섭취 완료</p>
+            <p class="total">총 <span class="cplNo">0</span>건</p>
+          </div>
+          <div class="list" id="cplTotal">
+            <div class="card_day_time sun">
+              <p class="time">오전 07:00 <span class="icon_s icon_basic btn_img"><img src="../../images/icon/camera_green2.svg" alt="">사진기록가능</span></p>
+              <p class="txt">피토틱스 옐로우, 락토핏 유산균 골드</p>
+            </div>
+            <div class="card_day_time sun">
+              <p class="time">오전 07:00</p>
+              <p class="txt">피토틱스 옐로우, 락토핏 유산균 골드</p>
+            </div>
+            <div class="card_day_time moon">
+              <p class="time">오후 07:00</p>
+              <p class="txt">피토틱스 옐로우, 락토핏 유산균 골드</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 영양제 섭취 모달 -->
+    <div class="modal">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+      <!-- 모달 컨텐츠-->
+      <div class="modal_wrap">
+        <p class="toast" style="display: none;">알림시간 1시간 전 후로만 끌어서 기록할 수 있어요</p>
+        <div class="first_on">
+          <p class="title"><img src="../../images/icon/alarm.svg">섭취기록 방법을 알려드려요</p>
+          <p class="txt">끌어서 기록은 <span class="primary">알림시간 1시간 전 후</span>로만 할 수 있어요!<br>
+            만약 시간이 지났다면 사진으로 기록을 남겨주세요 :)</p>
+            <P class="closeBtn"></P>
+          </div>
+        <div class="modal_top">
+          <p class="modal_title">오전 07:00 영양제를 드시는군요!<br>
+            어떤 방식으로 인증할까요?</p>
+        </div>
+
+        <div class="modal_con">
+          <div class="modal_gridbtn">
+            <div class="icon_btn openToast">
+              <p class="icon"><img src="../../images/icon/search_goods.svg" alt=""></p>
+              <p class="txt">영양제 검색하기</p>
+            </div>
+            <div class="icon_btn">
+              <p class="icon"><img src="../../images/icon/qna_question.svg" alt=""></p>
+              <p class="txt">직접 입력하기</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn_wrap">
+          <button class="btn_b btn_white popClose">구독내역 추가하기</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+      //리스트 토탈
+      $( document ).ready(function(){
+      let cplTotal = $("#cplTotal .card_day_time").length;
+      let listTotal = $("#listTotal .list_edit").length;
+
+        $(".listNo").text(listTotal);
+        $(".cplNo").text(cplTotal);
+
+        $(".list_none").hide();
+
+      //섭취일정 삭제
+      $(".edit").on("click", function(){
+          $(this).parents(".list_edit").fadeOut("normal", function() {
+            $(this).remove();
+            let listTotal = $("#listTotal .list_edit").length;
+          $(".listNo").text(listTotal);
+          })
+        });
+            
+        //편집토글
+        $(".listEdit").on("click", function(){
+          $(this).toggleClass("open")
+          if($(this).hasClass("open")){
+            $(this).text("완료");
+            $(".list_edit").addClass("open");
+
+
+          }else{
+            $(this).text("편집");
+            $(".list_edit").removeClass("open");
+            let listTotal = $("#listTotal .list_edit").length;
+            if(listTotal === 0 ){
+            $(".list_none").fadeIn();
+          }
+          }
+        });
+      });
+
+      //모달
+      $(".list_edit .card_day_time").on("click", function () {
+        if(!$(".list_edit").hasClass("open")){
+          $(".modal, body").addClass("open");
+        }
+      });
+
+      $(".overlay, .popClose").on("click", function () {
+        $(".popup, .modal, body, .btn_trans").removeClass("open");
+      });
+
+      $(".closeBtn").on("click", function () {
+        $(".first_on").fadeOut();
+      });
+
+      //끌어서 섭취 토스트 알림
+      $(".openToast").on("click", function(){
+        $(".modal_wrap .toast").fadeIn("slow", function(){
+          $(this).delay(2000).fadeOut("slow")
+        })
+      })
+    </script>
+  </body>
+</html>

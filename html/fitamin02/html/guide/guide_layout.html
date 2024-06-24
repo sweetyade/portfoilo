@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/guide.css" />
+    <title>DESIGN GUIDE</title>
+  </head>
+
+  <style>
+    .margin_data {
+      background: #fafafa;
+    }
+    .margin_data div {
+      font-size: var(--span2-f);
+      color: #747474;
+      border-bottom: 1px solid #dfdfdf;
+      background-color: #fff;
+      padding: 0.5rem;
+    }
+
+    .flex_data div {
+      border: 1px solid #dfdfdf;
+      font-size: var(--p4-f);
+      color: #747474;
+      width: 400px;
+    }
+
+    .flex_data div p {
+      padding: 0.5rem 1rem;
+    }
+
+    .padding_data p {
+      border: 1px solid #dfdfdf;
+      font-size: var(--span2-f);
+      color: #747474;
+    }
+
+    .divider_data {
+      width: 360px;
+      border-top: 1px solid #dfdfdf;
+      border-left: 1px solid #dfdfdf;
+      border-right: 1px solid #dfdfdf;
+    }
+
+    .divider_data p {
+      font-size: var(--span2-f);
+      color: #747474;
+    }
+
+    .fullpage {
+      position: relative;
+    }
+  </style>
+  <body>
+    <main id="guide_main">
+      <!-- menu -->
+      <nav id="guide_nav">
+        <h1>design guide</h1>
+
+        <div class="nav_menu">
+          <a href="guide.html">typography</a>
+          <a href="guide_color.html">color</a>
+          <a href="guide_icon.html">icon</a>
+          <a href="guide_form.html">form</a>
+          <a href="guide_button.html">button</a>
+          <a href="guide_popup.html">popup</a>
+          <a href="guide_layout.html" class="active">layout</a>
+          <a href="guide_component.html">component</a>
+        </div>
+      </nav>
+
+      <!-- contents -->
+      <section class="container">
+        <div class="contents">
+          <h2>layout</h2>
+
+          <div class="guide_info">
+            <p class="p3_f">- 페이지 구성에 필요한 기본 섹션 레이아웃</p>
+          </div>
+
+          <!-- margin -->
+          <div class="guide_block">
+            <h3>margin</h3>
+            <div class="guide_data">
+              <p class="title">.mb_{no}</p>
+              <div class="data flex margin_data" style="gap: 1rem; flex-wrap: wrap">
+                <div class="mb_0_25">.mb_0_25 / margin-bottom: 0.25rem;</div>
+                <div class="mb_0_5">.mb_0_5 / margin-bottom: 0.5rem;</div>
+                <div class="mb_0_75">.mb_0_75 / margin-bottom: 0.75rem;</div>
+                <div class="mb_1">.mb_1 / margin-bottom: 1rem;</div>
+                <div class="mb_1_25">.mb_1_25 / margin-bottom: 1.25rem;</div>
+                <div class="mb_1_5">.mb_1_5 / margin-bottom: 1.5rem;</div>
+                <div class="mb_1_75">.mb_1_75 / margin-bottom: 1.75rem;</div>
+                <div class="mb_2">.mb_2 / margin-bottom: 2rem;</div>
+                <div class="mb_2_5">.mb_2 / margin-bottom: 2_5rem;</div>
+                <div class="mb_3">.mb_2 / margin-bottom: 3rem;</div>
+                <div class="mb_3_5">.mb_2 / margin-bottom: 3_5rem;</div>
+                <div class="mb_4">.mb_2 / margin-bottom: 4rem;</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- flex -->
+          <div class="guide_block">
+            <h3>flex</h3>
+            <div class="guide_data">
+              <p class="title">.flex_{type}</p>
+              <div class="data flex flex_data" style="gap: 1rem; flex-wrap: wrap">
+                <div class="flex">
+                  <p style="background-color: #fafafa">.flex<br />align │ justify</p>
+                  <p style="background-color: #ecffc8">center │ flex-start</p>
+                </div>
+                <div class="flex_center">
+                  <p style="background-color: #fafafa">.flex_center<br />>align │ justify</p>
+                  <p style="background-color: #ecffc8">center │ center</p>
+                </div>
+                <div class="flex_right">
+                  <p style="background-color: #fafafa">.flex_right<br />align │ justify</p>
+                  <p style="background-color: #ecffc8">center │ right</p>
+                </div>
+                <div class="flex_btw">
+                  <p style="background-color: #fafafa">.flex_btw<br />align │ justify</p>
+                  <p style="background-color: #ecffc8">center │ space-between</p>
+                </div>
+                <div class="flex_top">
+                  <p style="background-color: #fafafa">.flex_top<br />align │ justify</p>
+                  <p style="background-color: #ecffc8">flex-top │ flex-start</p>
+                </div>
+                <div class="flex_topcenter">
+                  <p style="background-color: #fafafa">.flex_topcenter<br />align │ justify</p>
+                  <p style="background-color: #ecffc8">flex-top │ flex-start</p>
+                </div>
+                <div class="flex_topright">
+                  <p style="background-color: #fafafa">.flex_topright<br />align │ justify</p>
+                  <p style="background-color: #ecffc8">flex-top │ flex-start</p>
+                </div>
+                <div class="flex_topbtw">
+                  <p style="background-color: #fafafa">.flex_topbtw<br />align │ justify</p>
+                  <p style="background-color: #ecffc8">flex-top │ space-between</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- padding -->
+          <div class="guide_block">
+            <h3>padding</h3>
+            <div class="guide_data">
+              <p class="title">.inner_{no}</p>
+              <div class="data flex padding_data" style="gap: 1rem; flex-wrap: wrap">
+                <p class="pd_none" style="padding: 1rem 1rem 0">.pd_none : padding-bottom: 0;</p>
+                <p class="inner_0_25">.inner_0_25 : left,right - 0.25rem</p>
+                <p class="inner_0_5">.inner_0_5 : left,right - 0.5rem</p>
+                <p class="inner_0_75">.inner_0_75 : left,right - 0.75rem</p>
+                <p class="inner_1">.inner_1 : left,right - 1rem</p>
+                <p class="inner_1_25">.inner_1_25 : left,right - 1.25rem</p>
+                <p class="inner_1_5">.inner_1_5 : left,right - 1.5rem</p>
+                <p class="inner_1_75">.inner_1_75 : left,right - 1.75rem</p>
+                <p class="inner_2">.inner_2 : left,right - 2rem</p>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">.inner_tb_{no}</p>
+              <div class="data flex padding_data" style="gap: 1rem; flex-wrap: wrap">
+                <p class="inner_tb_0_25">.inner_tb_0_25 : top,bottom - 0.25rem</p>
+                <p class="inner_tb_0_5">.inner_tb_0_5 : top,bottom - 0.5rem</p>
+                <p class="inner_tb_0_75">.inner_tb_0_75 : top,bottom - 0.75rem</p>
+                <p class="inner_tb_1">.inner_tb_1 : top,bottom - 1rem</p>
+                <p class="inner_1_25">.inner_1_25 : top,bottom - 1.25rem</p>
+                <p class="inner_tb_1_5">.inner_tb_1_5 : top,bottom - 1.5rem</p>
+                <p class="inner_tb_1_75">.inner_tb_1_75 : top,bottom - 1.75rem</p>
+                <p class="inner_tb_2">.inner_tb_2 : top,bottom - 2rem</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- fullpage -->
+          <div class="guide_block">
+            <h3>fullpage</h3>
+            <div class="guide_data">
+              <p class="title">.fullpage</p>
+              <div class="data flex">
+                <div class="fullpage inner_tb_1" style="border: 1px solid #dfdfdf; width: 360px; height: 640px; text-align: center">
+                  <p class="gray01 p4_f">온보딩,설문,완료페이지,로딩</p>
+                  <p class="gray01 p4_f">높이값 100svh으로 전체페이지</p>
+                  <p class="gray01 p4_f">배경 화이트</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- section divider -->
+          <div class="guide_block">
+            <h3>divider</h3>
+            <div class="guide_data">
+              <p class="title">.pd_bottom_{size}</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="inner_tb inner_1_5 pd_bottom divider_data">
+                  <p>.pd_bottom : bottom .5rem</p>
+                </div>
+                <div class="inner_tb inner_1_5 pd_bottom_s divider_data">
+                  <p>.pd_bottom_s : bottom 3rem</p>
+                </div>
+                <div class="inner_tb inner_1_5 pd_bottom_m divider_data">
+                  <p>.pd_bottom_m : bottom 5rem</p>
+                </div>
+                <div class="inner_tb inner_1_5 pd_bottom_l divider_data">
+                  <p>.pd_bottom_l : bottom 8rem</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      let swiper = new Swiper(".add_file", {
+        spaceBetween: 8,
+        slidesPerView: "auto",
+      });
+
+      /* popup */
+      $(".pop01").on("click", function () {
+        $(".popup01, body").addClass("open");
+      });
+
+      $(".overlay, .btnClose").on("click", function () {
+        $(".popup, .modal, body").removeClass("open");
+      });
+
+      //메인 이미지 팝업
+      let swiper2 = new Swiper(".modal_img", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+      });
+    </script>
+  </body>
+</html>

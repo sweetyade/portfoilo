@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>2-7-9.고민선택</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="back"></div>
+      <div class="page_name">건강설문</div>
+      <div class="header_icon">
+        <p class="header_link">
+          <img src="../../images/icon/system_close_bk.svg" alt="닫기" />
+        </p>
+      </div>
+    </header>
+
+    <div class="fullpage">
+      <div class="svy_wrap">
+        <div class="svy_top">
+          <p class="title">개선하고 싶은 건강목표를<br />3가지 이상 알려주세요</p>
+        </div>
+
+        <div class="svy_con">
+          <div class="grid_iconlist">
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status1_off.svg" alt="" /></p>
+              <p class="txt">뇌 건강</p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status2_off.svg" alt="" /></p>
+              <p class="txt">수면</p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status3_off.svg" alt="" /></p>
+              <p class="txt">활력/피로</p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status4_off.svg" alt="" /></p>
+              <p class="txt">면역</p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status5_off.svg" alt="" /></p>
+              <p class="txt">스트레스/긴장</p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status6_off.svg" alt="" /></p>
+              <p class="txt">혈액순환</p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status7_off.svg" alt="" /></p>
+              <p class="txt">모발&손톱</p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status8_off.svg" alt="" /></p>
+              <p class="txt">피부</p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status9_off.svg" alt="" /></p>
+              <p class="txt">눈 건강</p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status10_off.svg" alt="" /></p>
+              <p class="txt">관절/뼈 건강</p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status11_off.svg" alt="" /></p>
+              <p class="txt">간 건강</p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status12_off.svg" alt="" /></p>
+              <p class="txt">장 건강</p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status13_off.svg" alt="" /></p>
+              <p class="txt">위 건강</p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status14_off.svg" alt="" /></p>
+              <p class="txt">체중조절</p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status15_off.svg" alt="" /></p>
+              <p class="txt">혈당조절</p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status16_off.svg" alt="" /></p>
+              <p class="txt">혈압관리</p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status17_off.svg" alt="" /></p>
+              <p class="txt">혈중지질개선</p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status18_off.svg" alt="" /></p>
+              <p class="txt">갱년기 증상</p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status19_off.svg" alt="" /></p>
+              <p class="txt">남성건강</p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status20_off.svg" alt="" /></p>
+              <p class="txt">여성건강</p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status21_off.svg" alt="" /></p>
+              <p class="txt">임신/출산</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn_fix">
+        <button class="btn_b btn_basic nextBtn" disabled><span class="sltCount">0</span>개 선택했어요</button>
+        <p class="toast" style="opacity: 0">건강목표는 3가지 이상 선택해주세요!</p>
+      </div>
+    </div>
+
+    <!-- 페이지 나가기 팝업 -->
+    <div class="popup popup01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 팝업 컨텐츠 -->
+      <div class="popup_wrap">
+        <p class="pop_title">페이지를 나가시겠어요?</p>
+        <p class="pop_txt">
+          페이지를 나가시면 작성하신 설문결과가<br />
+          저장되지 않을 수 있어요!
+        </p>
+        <!-- 버튼 2개 -->
+        <div class="pop_btn">
+          <button class="btn_m btn_light popClose">계속진행</button>
+          <button class="btn_m btn_red popClose">나가기</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+      //선택
+      $(".servey_icon").click(function () {
+        var svyIcon = $(this).find(".icon img");
+        // $(this).toggleClass("select");
+        if ($(this).hasClass("select")) {
+          $(this).removeClass("select");
+
+          $(".sltCount").html(function (i, val) {
+            return val * 1 - 1;
+          });
+          if ($(".sltCount").html() <= 0) {
+            $(".nextBtn").attr("disabled", true);
+          }
+          svyIcon.attr("src", svyIcon.attr("src").replace("_on", "_off"));
+        } else {
+          $(this).addClass("select");
+
+          $(".sltCount").html(function (i, val) {
+            return val * 1 + 1;
+          });
+          $(".nextBtn").attr("disabled", false);
+          svyIcon.attr("src", svyIcon.attr("src").replace("_off", "_on"));
+        }
+      });
+
+      //toast
+      $(".nextBtn").click(function () {
+        var sltCount = $(".grid_iconlist .select").length;
+        if (sltCount < 3) {
+          $(".toast").css("opacity", "1");
+          setTimeout(function () {
+            $(".toast").css("opacity", "0");
+          }, 3000);
+        }
+      });
+
+      /* popup */
+      $(".header_link").on("click", function () {
+        $(".popup01, body").addClass("open");
+      });
+
+      $(".overlay, .popClose").on("click", function () {
+        $(".popup, .modal, body, .btn_trans").removeClass("open");
+      });
+    </script>
+  </body>
+</html>

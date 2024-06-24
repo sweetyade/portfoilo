@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>2_1_프로필 정보 수정</title>
+</head>
+<body>
+  <main class="main">
+    <!-- sidebar -->
+    <div class="sidebar">
+      
+      <h1 class="logo"><a href="#"><img src="../../images/common/logo_wt.svg" alt=""></a></h1>
+
+      <!-- 로그인정보-->
+      <div class="user_info">
+        <p class="user_img"><img src="../../images/login_bg.jpg" alt=""></p>
+        <div class="user_name">
+          <p class="base_fb light">약사이름</p>
+          <p class="small_f mt_0_5 gray04">약국명</p>
+        </div>
+      </div>
+
+      <!-- 상담스케쥴 요약 -->
+      <div class="consult_sml">
+        <div class="al_setting">
+          <p class="small_f">채팅 상담 설정</p>
+          <div class="toggle_block">
+            <input type="checkbox" class="toggle" id="ipToggle" checked />
+            <label for="ipToggle" class="toggle_btn"></label>
+          </div>
+        </div>
+        <div class="al_setting">
+          <p class="small_f">즉시 상담 설정</p>
+          <div class="toggle_block">
+            <input type="checkbox" class="toggle" id="ipToggle2" />
+            <label for="ipToggle2" class="toggle_btn"></label>
+          </div>
+        </div>
+
+        <div class="sml_list">
+          <div class="sml_data">
+            <p class="txt">예약 예정 상담</p>
+            <a class="total_no" href="#">1건</a>
+          </div>
+          <div class="sml_data">
+            <p class="txt">채팅 상담 대기</p>
+            <a class="total_no" href="#">1건</a>
+          </div>
+          <div class="sml_data">
+            <p class="txt">즉시 상담 대기</p>
+            <a class="total_no" href="#">2건</a>
+          </div>
+          <div class="sml_data">
+            <p class="txt">재상담 상담</p>
+            <a class="total_no" href="#">1건</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 메뉴 -->
+      <nav class="nav">
+        <a class="nav_link" href="#">
+          <p class="nav_menu"><i class="ri-user-settings-line"></i> 프로필 관리</p>
+        </a>
+        <div class="nav_link">
+          <p class="nav_menu sub_menu"><i class="ri-customer-service-line"></i> 상담 관리</p>
+          <div class="sub_list">
+            <a href="#" class="sub_link">상담 대기 리스트</a>
+            <a href="#" class="sub_link">예약 확정 리스트</a>
+            <a href="#" class="sub_link">상담 내역 조회</a>
+            <a href="#" class="sub_link">상담 설정</a>
+          </div>
+        </div>
+        <a class="nav_link" href="#">
+          <p class="nav_menu"><i class="ri-edit-line"></i> 게시판</p>
+        </a>
+        <a class="nav_link" href="#">
+          <p class="nav_menu"><i class="ri-question-answer-line"></i> 고객센터</p>
+        </a>
+      </nav>
+
+      <p class="logoutBtn">로그아웃 <i class="ri-logout-box-r-line"></i></p>
+    </div>
+
+    <!-- main -->
+    <div class="container">
+      <!-- header -->
+      <section class="header">
+        <div class="header_left">
+          <div class="open_toggle">
+            <div class="burger"></div>
+          </div>
+          <h2 class="header_menu">프로필 관리</h2>
+        </div>
+
+        <div class="input_search">
+          <input type="text" placeholder="예약 번호/예약자를 검색해주세요.">
+          <button class="search_input"><i class="ri-search-line"></i></button>
+        </div>
+      </section>
+
+      <!-- contents -->
+      <section class="contents">
+        <div class="contents_wrap">
+          <div class="join_wrap">
+            <div class="join_block">
+              <p class="largest_fb">회원정보</p>
+              
+              <form action="">
+                <!-- 약사 회원정보 등록 -->
+                <div class="join_info">
+                  <div class="input_block">
+                    <label for="user_email">아이디(이메일)</label>
+                    <div class="input_div flex_btw">
+                      <input type="text" id="user_email" placeholder="이메일 형식을 확인해 주세요." value="lattente20@hanmail.net" readonly>
+                    </div>
+                  </div>
+
+                  <div class="input_block mt_1_5">
+                    <label for="user_name">이름</label>
+                    <div class="input_div flex_btw">
+                      <input type="text" id="user_name" placeholder="약사이름">
+                    </div>
+                  </div>
+
+                  <div class="input_block mt_1_5">
+                    <label for="user_number">연락처</label>
+                    <div class="input_div">
+                      <input type="text" id="user_number" placeholder="연락처 형식을 확인해주세요.">
+                    </div>
+                  </div>
+
+                  <div class="input_block">
+                    <label for="pharm_name">약국명</label>
+                    <div class="input_div flex_btw">
+                      <input type="text" id="pharm_name" placeholder="약국이름">
+                    </div>
+                  </div>
+
+                  <div class="input_block mt_1_5">
+                    <label for="user_cerfi">등록증</label>
+                    <div class="input_div flex_btw">
+                      <div class="file_img"><a href="#" target="_blank"><img src="../../images/login_bg.jpg" alt=""></a></div><!-- 이미지 클릭하면 새창으로 크게보기 ㄴ-->
+                      <input type="file" id="input_block" placeholder="파일을 선택해주세요.">
+                      <button class="btn_b btn_basic">파일첨부</button>
+                    </div>
+                    <p class="input_info">파일은 pdf, jpg 파일로 업로드 해주세요. 최대 2MB까지 첨부가 가능합니다.</p>
+                  </div>
+
+                  <div class="input_block mt_1_5">
+                    <label for="pharm_txt">약국소개(약력)</label>
+                    <div class="textarea_div">
+                      <textarea name="" id="pharm_txt" cols="30" rows="5" placeholder="약국 소개글을 작성해주세요."></textarea>
+                    </div>
+                  </div>
+
+                  <div class="input_block mt_1_5">
+                    <label for="user_sign">서명이미지</label>
+                    <div class="input_div flex_btw">
+                      <div class="file_img"><a href="#" target="_blank"></a></div>
+                      <input type="file" id="user_sign" placeholder="파일을 선택해주세요.">
+                      <button class="btn_b btn_basic">등록하기</button>
+                    </div>
+                    <p class="input_info">상담결과에서 사용자에게 상담 내용을 전달할 때 서명이 출력됩니다. </p>
+                  </div>
+
+                  <div class="input_block mt_1_5">
+                    <label for="user_number">약국주소</label>
+                    <div class="input_div flex_btw">
+                      <input type="text" id="pharm_add" placeholder="우편번호">
+                      <button class="btn_b btn_basic">우편번호 찾기</button>
+                    </div>
+                    <div class="input_div mt_0_5">
+                      <input type="text" id="pharm_add" placeholder="주소">
+                    </div>
+                    <div class="input_div mt_0_5">
+                      <input type="text" id="" placeholder="상세주소">
+                    </div>
+                  </div>
+                </div>
+        
+                <!-- 비밀번호 변경 -->
+                <div class="join_info">
+                  
+                  <div class="input_block mt_1_5">
+                    <label for="user_pass">비밀번호</label>
+                    <div class="input_div flex_btw">
+                      <input type="password" id="user_pass" placeholder="비밀번호를 입력해주세요.">
+                      <button class="btn_b btn_basic">중복확인</button>
+                    </div>
+                    <p class="input_info">영문 대소문자, 숫자, 특수문자를 혼합하여 8~15자 이내로 입력해주세요.</p>
+                  </div>
+                  <div class="input_block mt_1_5">
+                    <label for="user_pass_2">비밀번호 확인</label>
+                    <div class="input_div">
+                      <input type="password" id="user_pass_2" placeholder="비밀번호를 입력해주세요.">
+                    </div>
+                    <p class="input_error"><i class="ri-error-warning-fill"></i> 영문 대소문자, 숫자, 특수문자를 혼합하여 8~15자 이내로 입력해주세요.</p>
+                  </div>
+                </div>
+        
+                <!-- 약관동의 -->
+                <div class="join_info">
+                  <div class="check_block">
+                    <input type="checkbox" id="check_all">
+                    <label for="check_all" class="flex_btw">전체 마케팅 정보 수신동의 <a href="#" class="smaller_f line_under" style="font-weight: initial;">보기</a></label>
+                  </div>
+                  <div class="check_list">
+                    <div class="check_block">
+                      <input type="checkbox" id="check_01">
+                      <label for="check_01">이메일을 받겠습니다.</label>
+                    </div>
+                    <div class="check_block">
+                      <input type="checkbox" id="check_02">
+                      <label for="check_02">알림톡 또는 휴대폰 문자메세지를 받겠습니다.</label>
+                    </div>
+                  </div>
+                  <div class="btn_wrap">
+                    <button class="btn_b btn_basic">변경하기</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="../../scripts/jquery.min.js"></script>
+  <script src="../../scripts/main.js"></script>
+
+  <script>
+
+  </script>
+</body>
+</html>

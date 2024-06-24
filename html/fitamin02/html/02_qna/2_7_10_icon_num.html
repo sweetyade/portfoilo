@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>2-7-10.선택순위설정</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="back"></div>
+      <div class="page_name">건강설문</div>
+      <div class="header_icon">
+        <p class="header_link">
+          <img src="../../images/icon/system_close_bk.svg" alt="닫기" />
+        </p>
+      </div>
+    </header>
+
+    <div class="fullpage">
+      <div class="svy_wrap">
+        <div class="svy_top">
+          <p class="title">
+            선택하신 건강고민의<br />
+            우선순위를 알려주세요!
+          </p>
+          <p class="txt">
+            개선하고 싶은 순서대로 3위까지 선택 시<br />
+            최적화된 영양 성분을 설계해 드려요
+          </p>
+        </div>
+
+        <div class="svy_con svy_ranking">
+          <div class="grid_iconlist">
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status1_off.svg" alt="" /></p>
+              <p class="txt">뇌 건강</p>
+              <p class="sltNo"></p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status2_off.svg" alt="" /></p>
+              <p class="txt">수면</p>
+              <p class="sltNo"></p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status3_off.svg" alt="" /></p>
+              <p class="txt">활력/피로</p>
+              <p class="sltNo"></p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status4_off.svg" alt="" /></p>
+              <p class="txt">면역</p>
+              <p class="sltNo"></p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status5_off.svg" alt="" /></p>
+              <p class="txt">스트레스/긴장</p>
+              <p class="sltNo"></p>
+            </div>
+            <div class="servey_icon">
+              <p class="icon"><img src="../../images/survey/status6_off.svg" alt="" /></p>
+              <p class="txt">혈액순환</p>
+              <p class="sltNo"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn_fix">
+        <button class="btn_b btn_basic nextBtn" disabled><span class="sltCount">0</span>개 선택했어요</button>
+        <p class="toast" style="opacity: 0">순위는 3위까지만 선택하실 수 있어요!</p>
+      </div>
+    </div>
+
+    <!-- 페이지 나가기 팝업 -->
+    <div class="popup popup01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 팝업 컨텐츠 -->
+      <div class="popup_wrap">
+        <p class="pop_title">페이지를 나가시겠어요?</p>
+        <p class="pop_txt">
+          페이지를 나가시면 작성하신 설문결과가<br />
+          저장되지 않을 수 있어요!
+        </p>
+        <!-- 버튼 2개 -->
+        <div class="pop_btn">
+          <button class="btn_m btn_light popClose">계속진행</button>
+          <button class="btn_m btn_red popClose">나가기</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+      //선택
+      $(".servey_icon").click(function () {
+        var svyIcon = $(this).find(".icon img");
+        var sltCount = $(".grid_iconlist .select").length;
+        var sltNo = $(this).find(".sltNo");
+        // $(this).toggleClass("select");
+        if ($(this).hasClass("select")) {
+          $(this).removeClass("select");
+          sltNo.css("opacity","0").text("");
+          $(".sltCount").html(function (i, val) {
+            return val * 1 - 1;
+          });
+
+          if ($(".sltCount").html() <= 0) {
+            $(".nextBtn").attr("disabled", true);
+          }
+          svyIcon.attr("src", svyIcon.attr("src").replace("_on", "_off"));
+
+        } else if (sltCount > 2) {
+          $(this).removeClass("select");
+          //toast
+          $(".toast").css("opacity", "1");
+          setTimeout(function () {
+            $(".toast").css("opacity", "0");
+          }, 2500);
+        } else {
+          $(this).addClass("select");
+          $(".sltCount").html(function (i, val) {
+            return val * 1 + 1;
+          });
+
+          console.log(sltCount);
+          if (sltCount === 0) {
+            sltNo.css("opacity", "1").text("1위");
+          } else if (sltCount === 1) {
+            sltNo.css("opacity", "1").text("2위");
+          } else if (sltCount === 2) {
+            sltNo.css("opacity", "1").text("3위");
+          } 
+
+          $(".nextBtn").attr("disabled", false);
+          svyIcon.attr("src", svyIcon.attr("src").replace("_off", "_on"));
+        }
+      });
+
+      //toast
+      // $(".nextBtn").click(function () {
+      //   var sltCount = $(".grid_iconlist .select").length;
+      //   if (sltCount > 3) {
+      //     $(".toast").css("opacity", "1");
+      //     setTimeout(function () {
+      //       $(".toast").css("opacity", "0");
+      //     }, 2500);
+      //   }
+      // });
+
+      /* popup */
+      $(".header_link").on("click", function () {
+        $(".popup01, body").addClass("open");
+      });
+
+      $(".overlay, .popClose").on("click", function () {
+        $(".popup, .modal, body, .btn_trans").removeClass("open");
+      });
+    </script>
+  </body>
+</html>

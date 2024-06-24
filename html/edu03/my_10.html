@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>MEDYON E-sang education</title>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+
+        <!-- fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        
+        <!-- jquery -->
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+        <link rel="stylesheet" href="css/basic.css">
+        <link rel="stylesheet" href="css/mypopup.css">
+    </head>
+    
+    <body>
+       
+        <div id="my_popup">
+            <div class="popup_header">
+                <h1>최종평가</h1>
+                <p>유의사항</p>
+            </div>
+            
+            <div class="popup_contents">
+                <p class="font_bold">설문조사입니다.</p>
+                <p class="font_s">수강항 과정에 대한 <span class="color_purple">설문조사</span>입니다.</p>
+                <p class="font_s">시험은 <span class="color_purple">설문조사 후 응시가능</span>하며, 설문시간은 <span class="color_purple">시험시간에 미포함 되며</span> 시험결과와는 무관합니다.</p>
+            </div>
+            
+            <form>
+                <div class="popup_contents">
+                    <div class="con_block">
+                        <p class="font_sbj">설문.1</p>
+                        <p>본 과정의 전반적인 학습내용에 만족하십니까?</p>
+                        <div class="question_block">
+                            <p><input type="radio" id="radio_q01" name="radio_01"><label for="radio_q01">1. 매우 그렇다.</label></p>
+                            <p><input type="radio" id="radio_q02" name="radio_01"><label for="radio_q02">2. 그렇다.</label></p>
+                            <p><input type="radio" id="radio_q03" name="radio_01"><label for="radio_q03">3. 보통이다.</label></p>
+                            <p><input type="radio" id="radio_q04" name="radio_01"><label for="radio_q04">4. 그렇지 않다.</label></p>
+                            <p><input type="radio" id="radio_q05" name="radio_01"><label for="radio_q05">5. 매우 그렇지 않다.</label></p>
+                        </div>
+                    </div>
+                    
+                    <div class="con_block">
+                        <p class="font_sbj">설문.2</p>
+                        <p>본 과정의 학습내용이 본인의 업무 활용에 도움이 되십니까?</p>
+                        <div class="question_block">
+                            <p><input type="radio" id="radio_q06" name="radio_02"><label for="radio_q06">1. 매우 그렇다.</label></p>
+                            <p><input type="radio" id="radio_q07" name="radio_02"><label for="radio_q07">2. 그렇다.</label></p>
+                            <p><input type="radio" id="radio_q08" name="radio_02"><label for="radio_q08">3. 보통이다.</label></p>
+                            <p><input type="radio" id="radio_q09" name="radio_02"><label for="radio_q09">4. 그렇지 않다.</label></p>
+                            <p><input type="radio" id="radio_q10" name="radio_02"><label for="radio_q10">5. 매우 그렇지 않다.</label></p>
+                        </div>
+                    </div>
+                    
+                    <div class="con_block">
+                        <p class="font_sbj">설문.3</p>
+                        <p>본 과정의 차시에서 제공되는 보기와 사례 구성이 적절합니까?</p>
+                        <div class="question_block">
+                            <p><input type="radio" id="radio_q11" name="radio_03"><label for="radio_q11">1. 매우 그렇다.</label></p>
+                            <p><input type="radio" id="radio_q12" name="radio_03"><label for="radio_q12">2. 그렇다.</label></p>
+                            <p><input type="radio" id="radio_q13" name="radio_03"><label for="radio_q13">3. 보통이다.</label></p>
+                            <p><input type="radio" id="radio_q14" name="radio_03"><label for="radio_q14">4. 그렇지 않다.</label></p>
+                            <p><input type="radio" id="radio_q15" name="radio_03"><label for="radio_q15">5. 매우 그렇지 않다.</label></p>
+                        </div>
+                    </div>
+                    
+                    <div class="con_block">
+                        <p class="font_sbj">설문.4</p>
+                        <p>학습 시 교육에 대한 안내, 질의 응답, 학습 돌겨 등이 적절하게 이루어졌다고 생각하십니까?</p>
+                        <div class="question_block">
+                            <p><input type="radio" id="radio_q16" name="radio_04"><label for="radio_q16">1. 매우 그렇다.</label></p>
+                            <p><input type="radio" id="radio_q17" name="radio_04"><label for="radio_q17">2. 그렇다.</label></p>
+                            <p><input type="radio" id="radio_q18" name="radio_04"><label for="radio_q18">3. 보통이다.</label></p>
+                            <p><input type="radio" id="radio_q19" name="radio_04"><label for="radio_q19">4. 그렇지 않다.</label></p>
+                            <p><input type="radio" id="radio_q20" name="radio_04"><label for="radio_q20">5. 매우 그렇지 않다.</label></p>
+                        </div>
+                    </div>
+                    
+                    <div class="con_block">
+                        <p class="font_sbj">설문.5</p>
+                        <p>학습 시 불편했던 점과 교육기관에 바라는 점이 있으시면 적어주십시오.</p>
+                        <div class="question_block">
+                            <p><input type="text" name="radio_05"></p>
+                        </div>
+                    </div>
+
+                    <div class="con_block">
+                        <p class="font_sbj">설문.6</p>
+                        <p>본 과정의 전반적인 학습내용에 만족하십니까?</p>
+                        <div class="question_block">
+                            <p><input type="radio" id="radio_q21" name="radio_06"><label for="radio_q21">1. Customer Service 교육</label></p>
+                            <p><input type="radio" id="radio_q22" name="radio_06"><label for="radio_q22">2. 외국어 교육</label></p>
+                            <p><input type="radio" id="radio_q23" name="radio_06"><label for="radio_q23">3. 대인관계, 커뮤니케이션</label></p>
+                            <p><input type="radio" id="radio_q24" name="radio_06"><label for="radio_q24">4. 컴퓨터 활용(엑셀, PPT, 한글 등)</label></p>
+                            <p><input type="radio" id="radio_q25" name="radio_06"><label for="radio_q25">5. 업무 스트레스 완화</label></p>
+                            <p><input type="radio" id="radio_q26" name="radio_06"><label for="radio_q26">6. 건강관련 교육</label></p>
+                            <p><input type="radio" id="radio_q27" name="radio_06"><label for="radio_q27">7. 그 외 교육</label></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn grid_flex">
+                    <button type="button" class="btn_purple" onclick="location.href='my_11.html'">설문제출</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

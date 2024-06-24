@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/rcommon.css">
+  <link rel="stylesheet" href="../../css/guide.css">
+  <link rel="stylesheet" href="../../css/rstyle.css">
+  <title>후기 - 후기작성</title>
+
+</head>
+<body class="on">
+    <div class="rmain_wrap bd_pg grid_btn">
+      <section class="bd_write pd_all">
+        <div class="selectbox mb_0_5">
+          <button class="selectBtn optSlt">2022년 10월 11일 구독건</button>
+          
+          <!-- 하단 팝업 -->
+          <div class="select_bt">
+            <div class="overlay"></div>
+            <div class="option_list">
+              <div class="optlist_in">
+                <p class="opt_title">2022년 10월 11일 구독건</p>
+                <p class="opt_dec">원하시는 구독건에 대한 후기를 작성하고 싶으신 경우<br>
+                  해당하는 구독내역 페이지에서 작성이 가능합니다.</p>
+   
+                <div class="opt_info">
+                   <p class="opt_txt">
+                     <span class="ltitle">구독 완료일</span>
+                     <span class="rinfo">2022년 10월 11일</span>
+                   </p>
+                   <p class="opt_txt">
+                     <span class="ltitle">결제금액</span>
+                     <span class="rinfo">11,300원</span>
+                   </p>
+                   <p class="opt_txt">
+                     <span class="ltitle">구독제품</span>
+                     <span class="rinfo">비타민D 2000IU+ 외 2개</span>
+                   </p>
+                </div>
+              </div>
+              <div class="btn_center">
+                <button class="btn_b btn_blue">확인</button>
+              </div>
+            </div>
+          </div>
+
+          <img src="../../images/icon_down.svg" alt="" class="selectArrow">
+        </div>
+
+        <div class="input_star">
+          <p class="rank_star" onclick="togglestar(1)">
+          <p class="rank_star" onclick="togglestar(2)">
+          <p class="rank_star" onclick="togglestar(3)">
+          <p class="rank_star" onclick="togglestar(4)">
+          <p class="rank_star" onclick="togglestar(5)">
+        </div>
+
+        <div class="input_basic mb_1_5">
+          <label for="textarea01" style="display:none">내용</label>
+          <textarea type="text" class="rtextarea" id="textarea01" cols="0" rows="10" placeholder="핏타민 구독건 사용후기를 작성해주세요"></textarea>
+        </div>
+
+        <div class="input_file mb_1">
+          <label for="inputfile01">파일찾기</label> 
+          <input type="file" class="input_file" id="inputfile01">
+
+          <!-- 파일이 첨부되면 추가한 파일이 순서대로 옆으로 추가 -->
+          <div class="file_add">
+            <img src="../../images/bd_sample01.png">
+            <p class="file_del"></p>
+          </div>
+          <div class="file_add">
+            <img src="../../images/bd_sample02.png">
+            <p class="file_del"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="ntc_bottom pd_base"> 
+        <div class="rnotice pd_inner mb_2_5">
+          <p class="notice_p">악의적으로 서비스의 기능 및 가치를 저하시킬 수 있는 오해의 소지가 담긴 후기는 사전고지 없이 삭제될 수 있습니다.</p>
+          <p class="notice_p">욕설, 비속어, 스팸성 도배 등의 게시글로 반복되는 동일한 단어나 문장이 담긴 후기는 사전고지 없이 삭제될 수 있습니다.</p>
+          <p class="notice_p">이미지 한개당 최대 10MB의 용량이 넘어가는 경우 업로드에 제한이 있을 수 있습니다.</p>
+          <p class="notice_p">첨부파일은 최대 2개까지만 등록이 가능합니다.</p>
+        </div>
+
+        <div class="btn_center">
+          <button class="btn_b btn_blue" disabled>작성완료</button>
+        </div>
+      </section>
+    </div>
+
+
+
+    <!-- 팝업 -->
+    <div class="rpopup on">
+      <div class="overlay"></div>
+      <div class="pop_open">
+        <div class="pop_in">
+          <p class="p_txt1">지금 페이지에서 나가시면 작성 중인<br>글이 저장되지 않고 사라져요!</p>
+        </div>
+        <div class="pop_btn">
+          <button class="btn_m btn_light p_cancel">닫기</button>
+          <button class="btn_m btn_red p_cp">나가기</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script>
+    /* popup */
+    $(".selectBtn").on("click", function(){
+    $(".select_bt, body").addClass("on");
+    });
+
+    $(".overlay, .opt_b, .pop_btn, .btn_center").on("click", function(){
+      $(".select_bt, body, .rpopup").removeClass("on");
+    });
+
+
+    /* 셀렉트 박스 선택*/
+    const label = document.querySelectorAll('.selectBtn');
+label.forEach(function(lb){
+    lb.addEventListener('click', e => {
+        let optionList = lb.nextElementSibling;
+        let optionItems = optionList.querySelectorAll('.opt_b');
+        clickLabel(lb, optionItems);
+    })
+});
+const clickLabel = (lb, optionItems) => {
+    if(lb.parentNode.classList.contains('active')) {
+        lb.parentNode.classList.remove('active');
+        optionItems.forEach((opt) => {
+            opt.removeEventListener('click', () => {
+                handleSelect(lb, opt)
+            })
+        })
+    } else {
+        lb.parentNode.classList.add('active');
+        optionItems.forEach((opt) => {
+            opt.addEventListener('click', () => {
+                handleSelect(lb, opt)
+            })
+        })
+    }
+}
+const handleSelect = (label, item) => {
+    label.innerHTML = item.textContent;
+    label.parentNode.classList.remove('active');
+    label.classList.add('optSlt');
+}
+
+
+/* ---- 별점 ---- */
+
+var stars = document.querySelectorAll(".rank_star");
+function togglestar(data) {
+  console.log(data);
+
+  for (let i=0; i<stars.length; i++) {
+    stars[i].classList.remove("star_on")
+  };
+
+  for (let i=0; i<data; i++) {
+    stars[i].classList.add("star_on")
+  }
+}
+  </script>
+</body>
+</html>

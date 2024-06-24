@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>킥더허들 헬스케어</title>
+    <meta name="keywords" content="킥더허들 헬스케어">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="누구나 누릴 수 있는 일상의 건강">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- ============================ css ======================= -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <!-- <link rel="stylesheet" href="../../css/newindex.css"> -->
+    <link rel="stylesheet" href="../../css/m.sub.css">
+    <link rel="stylesheet" href="../../css/m.common.css">
+    <link href="../../css/fitamin_2201819.css" rel="stylesheet"> <!-- 새로 추가된 css -->
+
+</head>
+
+    <div class="main">
+
+        <!-- header -->
+        <header class="header" id="header">
+            <nav class="nav">
+                <a href="javascript:CommonJS.goHistoryBack();" class="nav_back header_back" style="">
+                    <i class="ri-arrow-left-s-line"></i>
+                </a>
+
+                <h2 class="sub_header header_sub_header" style="">적립금내역</h2>
+        
+
+                <!--///////////////////// 변경된 해더 햄버거 메뉴 컨텐츠 ///////////////////-->
+                <!--///////////////////// 여기서부터 복사하여 같은 위치에 변경해주세요 /////////////////////-->
+                <div class="nav_menu" id="nav-menu">
+
+                    <!----------- 비로그인시에만 노출됩니다 ------------->
+                    <div class="nav_login">
+                        <div class="nav_in flex">
+                          <a href="#" class="nav_user_link1">로그인</a>
+                          <a href="#" class="nav_user_link2"><i class="ri-kakao-talk-fill"></i> 카카오 1초 로그인</a>
+                        </div>
+                    </div>
+
+                    <!-- ----------- 로그인 회원정보 메뉴 ------------>
+                    <div class="nav_userinfo">
+                      <div class="nav_in">
+                        <div class="navin_top flex">
+                          <p class="title">김다민 <span>님</span></p> <!-- 회원가입 시 가입정보 이름 -->
+                          <p class="nav_code flex">추천코드 <b>ROWIIOOO</b> <a href="#" class="flex"><img src="../../images/icon_copy.svg" alt=""></a></p>
+                        </div>
+                        <div class="navin_bottom">
+                          <p class="normal_f">damin@naver.com</p>
+                          <p class="normal_f">리뷰 <a href="#">1</a> ｜ 작성가능한 리뷰 <a href="#">2</a></p>
+                          <a href="#" class="btn_logout"><img src="../../images/icon_logout.svg" alt=""></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!------------- 로그인 비 구독시 노출 ----------->
+                    <ul class="visual_subcard login_subcard">
+                      <li class="subcard_in">
+                          <div class="subcard_top flex">
+                              <div class="subcard_title flex">
+                                  <p class="title">핏타민 구독<span>하고 다양한 혜택 받으세요</span></p>
+                              </div>
+                          </div>
+  
+                          <div class="subcard_bottom flex">
+                              <div class="subcard_info">
+                                  <p>+ 약사상담비 무료 적용</p>
+                                  <p>+ 건강지원 20% 할인 중</p>
+                              </div>
+  
+                              <div class="subcard_date flex">
+                              </div>
+                          </div>
+                        </li>
+                    </ul>
+
+                    <!------------- 로그인 구독시 노출 ----------->
+                    <ul class="visual_subcard login_subcard">
+                      <li class="subcard_in">
+                          <div class="subcard_top flex">
+                              <div class="subcard_title flex">
+                                  <p class="title">다미니님</p> <!-- 구독신청 시 봉투에 적는 이름 노출 -->
+                                  <img src="../../images/subcard_title.svg" alt="">
+                              </div>
+                              <a href="#" class="subcard_link flex">마이페이지 <i class="ri-arrow-right-s-line"></i></a>
+                          </div>
+  
+                          <div class="subcard_bottom flex">
+                              <div class="subcard_info">
+                                  <p>+ 약사상담비 무료 적용</p>
+                                  <p>+ 건강지원 20% 할인 중</p>
+                              </div>
+  
+                              <div class="subcard_date flex">
+                                  <div class="subcard_block">
+                                      <p class="no">5</p>
+                                      <p class="txt">구독 회차</p>
+                                  </div>
+                                  <div class="subcard_block">
+                                      <p class="no2">07.05</p>
+                                      <a href="#" class="txt flex">다음 구독일 <i class="ri-arrow-right-s-line"></i></a>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="subcard_in">
+                        <div class="subcard_top flex">
+                            <div class="subcard_title flex">
+                                <p class="title">피터박님</p>
+                                <img src="../../images/subcard_title.svg" alt="">
+                            </div>
+                            <a href="#" class="subcard_link flex">마이페이지 <i class="ri-arrow-right-s-line"></i></a>
+                        </div>
+
+                        <div class="subcard_bottom flex">
+                            <div class="subcard_info">
+                                <p>+ 약사상담비 무료 적용</p>
+                                <p>+ 건강지원 20% 할인 중</p>
+                            </div>
+
+                            <div class="subcard_date flex">
+                                <div class="subcard_block">
+                                    <p class="no">1</p>
+                                    <p class="txt">구독 회차</p>
+                                </div>
+                                <div class="subcard_block">
+                                    <p class="no2">07.01</p>
+                                    <a href="#" class="txt flex">다음 구독일 <i class="ri-arrow-right-s-line"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    </ul>
+
+                    <!---------- 아래부터 기본 노출 화면 --------->
+                    <div class="nav_quick">
+                      <div class="nav_in">
+                        <p class="title">핏타민 시작하기</p>
+                        <div class="flex">
+                          <div class="quick_menu">
+                            <a href="#" class="quick_link quick01">
+                              <img src="../../images/quick_icon1.png" alt="">
+                              <span>예약상담</span>
+                            </a>
+                            <p class="quick_txt">3분 설문 ➡ 1:1 약사상담</p>
+                          </div>
+                          <div class="quick_menu">
+                            <a href="#" class="quick_link quick02">
+                              <img src="../../images/quick_icon2.png" alt="">
+                              <span>즉시상담</span>
+                            </a>
+                            <p class="quick_txt">지금 바로 1:1 약사상담</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!----------- 메뉴 ---------->
+                    <div class="menu_list">
+                        <a href="#" class="flex nav_link">고객후기<i class="ri-arrow-right-s-line"></i></a>
+                    </div>
+
+                    <div class="menu_list nav-open">
+                        <a href="#" class="flex nav_link">고객센터<i class="ri-arrow-down-s-line"></i></a>
+                        <div class="nav_in" style="height:115px">
+                            <div class="nav_sub flex">
+                                <a href="#">1:1 문의하기</a>
+                                <a href="#">자주묻는질문</a>
+                                <a href="#">공지사항 </a>
+                                <a href="#">이벤트</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="menu_list">
+                        <a href="#" class="flex nav_link">브랜드스토리<i class="ri-arrow-down-s-line"></i></a>
+                        <div class="nav_in">
+                            <div class="nav_sub flex">
+                                <a href="#">핏타민스토리</a>
+                                <a href="#">핏타민소개</a>
+                                <a href="#">이용방법 </a>
+                                <a href="#">섭취방법</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nav_close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+
+                </div>
+                <!--////////////////// 여기까지 ////////////////////////-->
+        
+                <div class="nav_toggle flex" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </nav>
+        </header>
+
+        <!-- //////////////////// 마이페이지 컨텐츠 영역 ////////////////////// -->
+        <div class="mypage_wrap">
+            <div class="mypoint">
+                <p class="title">사용 가능한 적립금</p>
+                <p class="point_total flex">
+                    <img src="../../images/myppoint_icon.png" alt="">
+                    <b>84,600</b>
+                    <span>원</span>
+                </p>
+                <p class="txt">소멸예정 적립금 <b>0원</b></p>
+            </div>
+
+            <!------ 적립금 내역 ------->
+            <section class="mypoint_list">
+                <a href="#" class="flex point_link">적립금 내역<i class="ri-arrow-down-s-line"></i></a>
+                <div class="point_in">
+                    <div class="point_list flex">
+                        <div class="point_item">
+                            <div class="title">[적립금 지급] 추천인 구매</div>
+                            <div class="txt">2022.06.20</div>
+                        </div>
+                        <p class="point_info point_add">+ 5,000 원</p>
+                    </div>
+                    <div class="point_list flex">
+                        <div class="point_item">
+                            <div class="title">[적립금 사용] 상담예약</div>
+                            <div class="txt">2022.06.20</div>
+                        </div>
+                        <p class="point_info point_min">- 10,000 원</p>
+                    </div>
+                    <div class="point_list flex">
+                        <div class="point_item">
+                            <div class="title">[적립금 지급] 추천인 구매</div>
+                            <div class="txt">2022.06.20</div>
+                        </div>
+                        <p class="point_info point_add">+ 50,000 원</p>
+                    </div>
+                    <div class="point_list flex">
+                        <div class="point_item">
+                            <div class="title">[적립금 지급] 추천인 구매</div>
+                            <div class="txt">2022.06.20</div>
+                        </div>
+                        <p class="point_info point_add">+ 5,000 원</p>
+                    </div>
+                    <div class="point_list flex">
+                        <div class="point_item">
+                            <div class="title">[적립금 지급] 추천인 구매</div>
+                            <div class="txt">2022.06.20</div>
+                        </div>
+                        <p class="point_info point_add">+ 5,000 원</p>
+                    </div>
+                </div>
+            </section>
+
+            <!------- 적립금 슬라이드 ------>
+            <section class="point_slide">
+                <p class="title">적립금 모으는 방법</p>
+
+                <div class="swiper slide_wrap">
+                    <div class="swiper-wrapper slide_list">
+                        <div class="swiper-slide slide_item" style="background-color: #3C5DF6">
+                            <div class="slide_txt">
+                                <p class="title">친구초대 이벤트</p>
+                                <p class="txt">초대할 때마다 5,000원 무제한 적립</p>
+                            </div>
+                            <img src="../../images/point_slide01.png" alt="" class="slide01">
+                        </div>
+
+                        <div class="swiper-slide slide_item" style="background-color: #00A9E0">
+                            <div class="slide_txt">
+                                <p class="title">후기 이벤트</p>
+                                <p class="txt">후기쓰면 최대 13,000원 적립</p>
+                            </div>
+                            <img src="../../images/point_slide02.png" alt="" class="slide02">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+            <!----------- 적립금 규정사항안내 ---------->
+            <section class="notice">
+                <p class="title flex"><i class="ri-information-line"></i> 적립금 관련 규정사항</p>
+
+                <ul class="notice_list">
+                    <li class="notice_item">
+                        상품 주문 시 적립금을 사용하실 수 있습니다.
+                    </li>
+                    <li class="notice_item">
+                        최소 주문 금액 없이 적립금을 사용하실 수 있습니다.
+                    </li>
+                    <li class="notice_item">
+                        적립금을 일부 사용한 주문을 취소한 경우, 적립금이 재적립됩니다.
+                    </li>
+                    <li class="notice_item">
+                        적립금의 유효기간은 적립일로부터 180일입니다.
+                    </li>
+                    <li class="notice_item">
+                        적립금과 쿠폰은 동시에 사용 가능합니다.
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <!-- /////////////////// 여기까지 //////////////// -->
+
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+
+    <script>
+
+        /*===== show menu =====*/
+        const navMenu = document.getElementById('nav-menu'),
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close');
+
+if(navToggle){
+  navToggle.addEventListener('click', () =>{
+      navMenu.classList.add('show-menu');
+  })
+}
+
+/*===== hidden menu =====*/
+if(navClose){
+  navClose.addEventListener('click', () =>{
+      navMenu.classList.remove('show-menu');
+  })
+};
+
+
+
+/* ====================== nav mobile menu ========================= */
+const navFull = document.querySelectorAll('.menu_list');
+
+navFull.forEach((item) =>{
+    const navTitle = item.querySelector('.nav_link');
+
+    navTitle.addEventListener('click', () =>{
+        const openItem = document.querySelector('.nav-open');
+
+        toggleItem(item);
+
+        if(openItem && openItem!== item){
+            toggleItem(openItem);
+        }
+    })
+})
+
+const toggleItem = (item) =>{
+    const navSub = item.querySelector('.nav_in');
+
+    if(item.classList.contains('nav-open')){
+        navSub.removeAttribute('style');
+        item.classList.remove('nav-open');
+    }else{
+        if(navSub != null) {
+            navSub.style.height = navSub.scrollHeight + 'px';
+            item.classList.add('nav-open');
+        }
+    }
+
+}
+
+
+/* ====================== mypoint ========================= */
+const pointFull = document.querySelectorAll('.mypoint_list');
+
+pointFull.forEach((item) =>{
+    const pointTitle = item.querySelector('.point_link');
+
+    pointTitle.addEventListener('click', () =>{
+        const pointopenItem = document.querySelector('.point-open');
+
+        pointItem(item);
+
+        if(pointopenItem && pointopenItem!== item){
+            pointItem(pointopenItem);
+        }
+    })
+})
+
+const pointItem = (item) =>{
+    const pointSub = item.querySelector('.point_in');
+
+    if(item.classList.contains('point-open')){
+        pointSub.removeAttribute('style');
+        item.classList.remove('point-open');
+    }else{
+        if(pointSub != null) {
+            pointSub.style.height = pointSub.scrollHeight + 'px';
+            item.classList.add('point-open');
+        }
+    }
+
+}
+
+
+/* ---------- 적립금 이벤트 슬라이드 ------------------ */
+
+var swiper = new Swiper(".slide_wrap", {
+        slidesPerView: "1",
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+
+    </script>
+    
+</body>
+</html>
+
+
+
+
+

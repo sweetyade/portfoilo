@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/guide.css" />
+    <title>DESIGN GUIDE</title>
+  </head>
+  <body>
+    <main id="guide_main">
+      <!-- menu -->
+      <nav id="guide_nav">
+        <h1>design guide</h1>
+
+        <div class="nav_menu">
+          <a href="guide.html">typography</a>
+          <a href="guide_color.html" class="active">color</a>
+          <a href="guide_icon.html">icon</a>
+          <a href="guide_form.html">form</a>
+          <a href="guide_button.html">button</a>
+          <a href="guide_popup.html">popup</a>
+          <a href="guide_layout.html">layout</a>
+          <a href="guide_component.html">component</a>
+        </div>
+      </nav>
+
+      <!-- contents -->
+      <section class="container">
+        <div class="contents">
+          <h2>color</h2>
+
+          <div class="guide_info" >
+            <p class="small_f">- 기본컬러 베이스로 각각 2단계씩 조정</p>
+            <p class="small_f">- 텍스트 기본컬러는 gray01</p>
+            <p class="small_f">- 배경 컬러 클래스 : .bg_컬러클래스</p>
+            <p class="small_f">- 시스템컬러 : .system_컬러명 </p>
+            <p class="small_f">- .system_컬러명_lighter(-2) │ .system_컬러명_light(-1) │ .system_컬러명(0) │ .system_컬러명_dark(+1) │ .system_컬러명_dark(+2)</p>
+          </div>
+
+          <!-- base -->
+          <div class="guide_block">
+            <h3>base</h3>
+            <div class="flex" style="gap: 1rem; flex-wrap: wrap">
+              <div class="guide_data">
+                <p class="title">#2b303b │ .dark │ $dark</p>
+                <div class="data">
+                  <p class="guide_color bg_dark"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#21252d │ .darker │ $darker</p>
+                <div class="data">
+                  <p class="guide_color bg_darker"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#929aac │ .icon_color │ $icon-color</p>
+                <div class="data">
+                  <p class="guide_color bg_icon_color"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#ffffff │ .light │ $light</p>
+                <div class="data">
+                  <p class="guide_color bg_light" style="border: 1px solid #ddd"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- system_purple -->
+          <div class="guide_block">
+            <h3>system_purple(main)</h3>
+            <div class="flex" style="gap: 1rem; flex-wrap: wrap">
+              <div class="guide_data">
+                <p class="title">#EAE0FB │ _lighter │ -lighter</p>
+                <div class="data">
+                  <p class="guide_color bg_system_purple_lighter"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#845AE0 │ _light │ -light</p>
+                <div class="data">
+                  <p class="guide_color bg_system_purple_light"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#7252D3 │ .system_purple │ $system-purple</p>
+                <div class="data">
+                  <p class="guide_color bg_system_purple"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#4E37B6 │ _dark │ -dark</p>
+                <div class="data">
+                  <p class="guide_color bg_system_purple_dark"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#2D218F │ _darker │ -darker</p>
+                <div class="data">
+                  <p class="guide_color bg_system_purple_darker"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- system green-->
+          <div class="guide_block">
+            <h3>system_green</h3>
+            <div class="flex" style="gap: 1rem; flex-wrap: wrap">
+              <div class="guide_data">
+                <p class="title">#d6f7f0 │ _lighter │ -lighter</p>
+                <div class="data">
+                  <p class="guide_color bg_system_green_lighter"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#26bf93 │ _light │ -light</p>
+                <div class="data">
+                  <p class="guide_color bg_system_green_light"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#19AD79 │ .system_green │ $system-purple</p>
+                <div class="data">
+                  <p class="guide_color bg_system_green"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#0d935b │ _dark │ -dark</p>
+                <div class="data">
+                  <p class="guide_color bg_system_green_dark"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#04733e │ _darker │ -darker</p>
+                <div class="data">
+                  <p class="guide_color bg_system_green_darker"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- system -->
+          <div class="guide_block">
+            <h3>system_blue</h3>
+            <div class="flex" style="gap: 1rem; flex-wrap: wrap">
+              <div class="guide_data">
+                <p class="title">#EAE0Fd3eeffB │ _lighter │ -lighter</p>
+                <div class="data">
+                  <p class="guide_color bg_system_blue_lighter"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#0f8ff9 │ _light │ -light</p>
+                <div class="data">
+                  <p class="guide_color bg_system_blue_light"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#0072EC │ .system_blue │ $system-purple</p>
+                <div class="data">
+                  <p class="guide_color bg_system_blue"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#004fbf │ _dark │ -dark</p>
+                <div class="data">
+                  <p class="guide_color bg_system_blue_dark"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#00318e │ _darker │ -darker</p>
+                <div class="data">
+                  <p class="guide_color bg_system_blue_darker"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- system red -->
+          <div class="guide_block">
+            <h3>system_red</h3>
+            <div class="flex" style="gap: 1rem; flex-wrap: wrap">
+              <div class="guide_data">
+                <p class="title">#fde2da │ _lighter │ -lighter</p>
+                <div class="data">
+                  <p class="guide_color bg_system_red_lighter"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#e6533c │ _light │ -light</p>
+                <div class="data">
+                  <p class="guide_color bg_system_red_light"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#D83C31 │ .system_red │ $system-purple</p>
+                <div class="data">
+                  <p class="guide_color bg_system_red"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#b91e1e │ _dark │ -dark</p>
+                <div class="data">
+                  <p class="guide_color bg_system_red_dark"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#900f17 │ _darker │ -darker</p>
+                <div class="data">
+                  <p class="guide_color bg_system_red_darker"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- system -->
+          <div class="guide_block">
+            <h3>system_yellow</h3>
+            <div class="flex" style="gap: 1rem; flex-wrap: wrap">
+              <div class="guide_data">
+                <p class="title">#fffde1 │ _lighter │ -lighter</p>
+                <div class="data">
+                  <p class="guide_color bg_system_yellow_lighter"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#ffe858 │ _light │ -light</p>
+                <div class="data">
+                  <p class="guide_color bg_system_yellow_light"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#FFd945 │ .system_yellow │ $system-purple</p>
+                <div class="data">
+                  <p class="guide_color bg_system_yellow"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#daab2d │ _dark │ -dark</p>
+                <div class="data">
+                  <p class="guide_color bg_system_yellow_dark"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#aa7918 │ _darker │ -darker</p>
+                <div class="data">
+                  <p class="guide_color bg_system_yellow_darker"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- grayscale -->
+          <div class="guide_block">
+            <h3>Grayscale</h3>
+            <div class="flex" style="gap: 1rem; flex-wrap: wrap">
+              <div class="guide_data">
+                <p class="title">#2323232 │ .gray01 │ $gray01</p>
+                <div class="data">
+                  <p class="guide_color bg_gray01"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#555555 │ .bg_gray02 │ $bg_gray02</p>
+                <div class="data">
+                  <p class="guide_color bg_gray02"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#999999 │ .bg_gray03 │ $bg_gray03</p>
+                <div class="data">
+                  <p class="guide_color bg_gray03"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#eeeeee │ .gray04 │ $gray04</p>
+                <div class="data">
+                  <p class="guide_color bg_gray04"></p>
+                </div>
+              </div>
+              <div class="guide_data">
+                <p class="title">#f5f5f5 │ .gray05 │ $gray05</p>
+                <div class="data">
+                  <p class="guide_color bg_gray05"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

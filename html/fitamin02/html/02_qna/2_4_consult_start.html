@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>2-4.약사상담신청</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="back"></div>
+      <div class="page_name">약사님 상담신청</div>
+      <div class="header_icon">
+        <p class="header_link">
+          <img src="../../images/icon/system_close_bk.svg" alt="닫기" />
+        </p>
+      </div>
+    </header>
+
+    <div class="fullpage">
+      <div class="onboarding">
+        <div class="on_img trsp">
+          <img src="../../images/on_img1.png" alt="">
+        </div>
+
+        <div class="on_txt">
+          <p class="on_title">전문 약사님께 개인맞춤<br>
+            영양상담을 받아볼 수 있어요</p>
+          <p class="on_sub">채팅과 영상통화 중 선택하여 진행할 수 있어요</p>
+        </div>
+      </div>
+      <div class="btn_fix">
+        <button class="btn_b btn_basic modalOpen">상담 예약하기</button>
+      </div>
+    </div>
+
+
+    <!-- 페이지 나가기 팝업 -->
+    <div class="popup popup01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 팝업 컨텐츠 -->
+      <div class="popup_wrap">
+        <p class="pop_title">페이지를 나가시겠어요?</p>
+        <p class="pop_txt">페이지를 나가시면 작성하신 설문결과가<br>
+          저장되지 않을 수 있어요!</p>
+        <!-- 버튼 2개 -->
+        <div class="pop_btn">
+          <button class="btn_m btn_light popClose">계속진행</button>
+          <button class="btn_m btn_red popClose">나가기</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 상담예약 모달 / 결과 있을 때 -->
+    <div class="modal modal01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 모달 컨텐츠-->
+      <div class="modal_wrap">
+        <div class="modal_top">
+          <p class="modal_title">건강분석 결과가 있으시네요!</p>
+          <p class="modal_sub">
+            건강분석 결과를 선택하시면 약사님께<br>
+            더욱 더 자세한 상담을 받아보실 수 있어요
+          </p>
+        </div>
+
+        <div class="btn_wrap">
+          <button class="btn_b btn_basic modalClose">건강분석 결과 선택하기</button>
+          <button class="btn_b btn_white modalClose">바로 상담하기</button>
+          <button class="btn_b btn_trans modalClose">닫기</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 상담예약 모달 / 결과 없을 때 -->
+    <div class="modal modal02">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 모달 컨텐츠-->
+      <div class="modal_wrap">
+        <div class="modal_top">
+          <p class="modal_title">상담 전 건강분석을 하시면<br>
+            더욱 더 자세한 상담이 가능해요</p>
+          <p class="modal_sub">
+            건강분석은 현재 내 건강상태를 확인할 수 있으며<br>
+            나중에 진행하실 수도 있어요!
+          </p>
+        </div>
+
+        <div class="btn_wrap">
+          <button class="btn_b btn_basic modalClose">건강분석 하고 상담받기</button>
+          <button class="btn_b btn_white modalClose">바로 상담하기</button>
+          <button class="btn_b btn_trans modalClose">닫기</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+      /* popup */
+      $(".header_link").on("click", function () {
+        $(".popup01, body").addClass("open");
+      });
+
+      $(".modalOpen").on("click", function () {
+        $(".modal01, body").addClass("open");
+      });
+
+      $(".overlay, .popClose, .modalClose").on("click", function () {
+        $(".popup, .modal, body, .btn_trans").removeClass("open");
+      });
+    </script>
+  </body>
+</html>

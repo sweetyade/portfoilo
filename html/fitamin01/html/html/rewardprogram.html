@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>킥더허들 헬스케어</title>
+    <meta name="keywords" content="킥더허들 헬스케어">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="누구나 누릴 수 있는 일상의 건강">
+    <meta name="format-detection" content="telephone=no">
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <script type="text/javascript" src="<c:url value='/vendors/jquery/jquery-3.6.0.min.js' />"></script>
+
+    <!-- ============================ css ======================= -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link href="../../css/m.common.css" rel="stylesheet">
+    <link href="../../css/m.sub.css" rel="stylesheet">
+
+
+
+    <script type="text/javascript" src="<c:url value='/bootstrap/js/bootstrap.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/vendors/popper/popper.min.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/scripts/modal.js' />"></script> <!-- 모달 스크립트 -->
+    <script type="text/javascript" src="<c:url value='/scripts/common.js' />"></script> <!-- 공통 스크립트 -->
+    <script type="text/javascript" src="<c:url value='/scripts/hybridBridge.js' />"></script> <!-- 네이티브 인터페이스 브릿지 -->
+</head>
+<body>
+    <main class="main" id="top">
+
+        <header class="header" id="header">
+            <nav class="nav">
+                <a href="javascript:goHistoryback();" class="nav_back">
+                    <i class="ri-arrow-left-s-line"></i>
+                </a>
+
+                <h2 class="sub_header">추천보상프로그램</h2>
+        
+                <div class="nav_menu" id="nav-menu">
+                    <div class="nav_user">
+                        <a href="#" class="nav_user_link">로그인</a>
+                        <a href="#" class="nav_user_link">마이 페이지</a>
+                    </div>
+        
+                    <!-- ========메뉴 =========-->
+                    <ul class="nav_list">
+                        <li class="nav_item">
+                            <a href="#" class="nav_link active_link">홈</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">핏타민 시작하기</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">마이페이지</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">브랜드 스토리 <i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="nav_dep">
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">핏타민 스토리</a>
+                                </li>
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">핏타민 소개</a>
+                                </li>
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">이용방법</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">고객후기</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">이벤트 · 공지</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">고객센터</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="nav_close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+        
+                    <div class="nav_search">
+                        <input type="text" class="search" placeholder="검색어를 입력해주세요">
+                        <button type="submit" class="search btn_basic">검색</button>
+                    </div>
+        
+                    <!-- ================= quick link ================= -->
+                    <div class="nav_quick">
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg01.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>People</span>
+                                <p>시작부터 섭취까지<br>약사와 함께</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg02.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>Service</span>
+                                <p>과학적인 데이터<br>근거 중심으로</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg03.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>Product</span>
+                                <p>단 1알까지<br>품질우선주의</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg04.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>B2B</span>
+                                <p>기업 건강 복지<br>영양제 정기배송</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="nav_toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </nav>
+        </header>
+        
+        <div class="container" data-layout="container">
+            <div class="sub_wrap">
+                <div class="mypage bg_gray">
+                    <img src="../../images/rewardprogram_img01.png" alt="" class="mb_3">
+
+                    <div class="reward">
+                        <p class="font_m">나의 추천코드</p>
+                        <p class="font_big font_w2">1IS330JW</p>
+
+                        <div class="btn_wrap">
+                            <a href="#" class="btn btn_yellow"><img src="../../images/free-icon-kakao-talk-2111466.png" alt=""> 카톡으로 공유하기</a>
+                            <a href="#" class="btn btn_blue"><i class="ri-file-copy-line"></i> 추천 코드 복사하기</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mypage_notice">
+                    <div class="n_block mb_2">
+                        <p class="point_c font_m">참여 방법</p>
+                        <p class="font_s"><span>1.</span>친구에게 내 추천 코드를 공유!</p>
+                        <p class="font_s"><span>2.</span>친구가 내 추천 코드로 가입 시 친구에게 5,000원 지급!</p>
+                        <p class="font_s"><span>3.</span>초대 받은 친구가 제품을 구독하면 나도 5,000원 획득!</p>
+                    </div>
+                    <div class="n_block">
+                        <p class="point_c font_m"> <i class="ri-information-line"></i> 꼭 확인해 주세요</p>
+                        <p class="font_s"><span>1.</span>한 번 등록한 추천 코드는 변경할 수 없습니다. 추천 코드를 정확히 입력해주세요.</p>
+                        <p class="font_s"><span>2.</span>초대할 수 있는 친구의 수는 제한이 없습니다.</p>
+                        <p class="font_s"><span>3.</span>초대한 친구가 구독 했을 경우, 적립금이 적립됩니다.</p>
+                        <p class="font_s"><span>4.</span>적립금은 친구의 첫 구독 배송 완료 이후 7일 이내에 지급됩니다.</p>
+                        <p class="font_s"><span>5.</span>적립금 지급 후 취소/환불 시, 적립금이 회수 될 수 있습니다.</p>
+                        <p class="font_s"><span>6.</span>친구 초대 및 적립금 내역은 마이페이지에서 확인하실 수 있습니다.</p>
+                        <p class="font_s"><span>7.</span>본 이벤트는 당사 사정에 따라 세부 내용이 변경되거나, 예고없이 종료 될 수 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer sub_footer">
+            <div class="bottom_menu">
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon01.svg" alt="">
+                    <span>홈</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon02.svg" alt="">
+                    <span>설문</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon03.svg" alt="">
+                    <span>상담</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon04.svg" alt="">
+                    <span>구독</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon05_on.svg" alt="">
+                    <span>MY</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- swiper slide -->
+    <script type="text/javascript" src="../../scripts/mobile.js"></script> <!-- 추가 스크립트 -->
+</body>
+</html>
+
+
+
+
+

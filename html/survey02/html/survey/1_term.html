@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>1.사전예약동의</title>
+</head>
+<body>
+  <main class="main">
+    <div class="header">
+      <p class="header_back"><img src="../../images/back.svg" alt=""></p>
+    </div>
+
+    <div class="contents">
+      <div class="servey_top">
+        <div class="servey_title">
+          <p class="title">핏타민 스토어에 오신 것을<br>환영합니다. </p>
+          <p class="sub_txt">상담 줄서기 순서 알림을 보내기 위해<br>
+            약관동의와 휴대전화 번호, 이름이 필요합니다. </p>
+        </div>
+      </div>
+
+      <div class="select_list sub_list" id="selectList">
+        <div class="list_btn term_btn">
+          <p class="icon check"></p>
+          <p class="txt term_btn">(필수) 핏타민 스토어 개인 정보 수집 및 이용에 동의합니다.</p>
+        </div> 
+      </div>
+    </div>
+
+    <a href="#" class="term_link modalOpen">전문 보기</a>
+  </main>
+
+  <!-- 전문보기 모달 -->
+  <div class="modal modal01 open">
+    <!-- 팝업안 전체 오버레이 -->
+    <div class="overlay"></div>
+
+    <!-- 모달 컨텐츠-->
+    <div class="modal_wrap">
+      <div class="modal_top">
+        <p class="modal_title">충전권 안내사항을 확인해 주세요</p>
+      </div>
+      <div class="modal_con">
+        <div class="term_list">
+          <div class="term_data">
+            <p class="title">1. 민감정보 수집 및 이용 목적</p>
+            <p class="p5_f gray02">서비스 이용, 설문을 바탕으로 한 맞춤 서비스 제공, 민감의료정보를 통한 맞춤 건강 관리 서비스 제공, 
+            처방전/약봉투 등을 바탕으로 한 복용 약물 검토, 개인 맞춤형 건강기능식품 제안, 맞춤 건강 정보 제공, 건강 관리 서비스 제공, 
+            서비스 개선 및 신규 서비스 개발, 연구 및 시장조사 목적, 마케팅 및 광고에 활용 등</p>
+          </div>
+          <div class="term_data">
+            <p class="title">2. 민감정보 수집 항목</p>
+            <p class="p5_f gray02">생년, 성별, 키, 몸무게, 건강목표, 건강습관, 식습관, 생활습관, 의료정보, 복용의약품, 처방전 내역(질환코드, 방문병원, 처방약제, 투약기록, 방문 날짜), 알러지, 개인이 작성한 기타 문의 사항, 약사 상담 내용, 화상 상담 정보, 대면 상담 정보 등</p>
+          </div>
+          <div class="term_data">
+            <p class="title">3. 민감정보 보유 및 이용기간</p>
+            <p class="p5_f gray02">이용자의 민감정보는 서비스 이용 시작일부터 서비스 제공기간 동안에만 제한적으로 이용하고 있습니다. 그리고 관계 법령의 규정에 따라 일정한 기간 동안 회원정보를 보관하며 자세한 내용은 <개인정보 처리방침> 제2조와 같습니다.</p>
+          </div>
+          <div class="term_data">
+            <p class="title">4. 동의를 거부할 권리</p>
+            <p class="p5_f gray02">이용자는 본 민감정보 수집 및 이용에 대해 동의를 거부할 권리가 있으며, 동의 거부 시에는 회원가입 및 서비스 이용이 제한될 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal_btn">
+        <button class="btn btn_basic modalClose">확인</button>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/jquery.min.js"></script>
+  <!-- <script src="../../js/jquery-ui.min.css"></script> -->
+
+  <script>
+    //뒤로가기
+    $(document).ready(function() {
+      // on click
+      $('.header_back').click(function(e){
+        // prevent default behavior
+        e.preventDefault();
+        // Go back 1 page 
+        window.history.back();
+        // can also use 
+        // window.history.go(-1);
+      });
+    });
+
+    //설문영역 슬라이드
+
+    //선택
+    $(".list_btn").click(function(){
+      // $(this).toggleClass("active");
+      if($(this).hasClass("active")){
+        $(this).removeClass("active");
+        $(this).children(".icon").addClass("icon_bg")
+      }else if($(this).hasClass("allclear")){
+        $(this).siblings().removeClass("active");
+        $(this).addClass("active");
+      }else{
+        $(".allclear").removeClass("active")
+        $(this).addClass("active");
+        
+      }
+    })
+
+    /* popup */
+    $(".modalOpen").on("click", function(){
+    $(".modal01, body").addClass("open");
+    });
+
+    $(".overlay, .modalClose").on("click", function(){
+      $(".popup, .modal, body").removeClass("open");
+    });
+
+    //선택 - 아이콘 전체 통일
+    // $(".list_btn").click(function(){
+    //   var iconImg = $(this).find("img");
+    //   $(this).toggleClass("active");
+
+    //   if($(this).hasClass("active")){
+    //     iconImg.attr("src", iconImg.attr("src").replace("_off", "_on"));
+    //   }
+    //   else{
+    //     iconImg.attr("src", iconImg.attr("src").replace("_on", "_off"));
+    //   }
+    // });
+
+    // $(".allclear").click(function () {
+    //   $(this).siblings().removeClass("active")
+    // })
+
+
+  </script>
+</body>
+</html>

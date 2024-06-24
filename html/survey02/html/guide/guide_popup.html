@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../css/guide.css" />
+    <title>DESIGN GUIDE</title>
+  </head>
+  <style>
+    .contents{
+      max-width: 100%;
+    }
+  </style>
+  <style>
+    .popup,
+    .modal {
+      position: initial;
+      opacity: 1;
+      z-index: initial;
+    }
+
+    .overlay {
+      display: none;
+    }
+
+    .popup .popup_wrap {
+      position: initial;
+      width: 360px;
+      transform: initial;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+    .modal .modal_wrap {
+      position: relative;
+      width: 360px;
+      transform: initial;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      left: 0;
+    }
+
+    .modal .modal_wrap .modal_in .modal_con::-webkit-scrollbar {
+      width: 5px;
+      background-color: #fff;
+    }
+    .modal .modal_wrap .modal_in .modal_con::-webkit-scrollbar-thumb {
+      background: #dfdfdf;
+    }
+
+    .toast, .bottom_btn{
+      width: 360px;
+      position: initial;
+    }
+  </style>
+  <body>
+    <main id="guide_main">
+      <!-- menu -->
+      <nav id="guide_nav">
+        <h1>design guide</h1>
+
+        <div class="nav_menu">
+          <a href="guide.html">typography</a>
+          <a href="guide_color.html">color</a>
+          <a href="guide_icon.html">icon</a>
+          <a href="guide_form.html">form</a>
+          <a href="guide_button.html">button</a>
+          <a href="guide_popup.html" class="active">popup</a>
+          <a href="guide_layout.html">layout</a>
+          <a href="guide_component.html">component</a>
+        </div>
+      </nav>
+
+      <!-- contents -->
+      <section class="container">
+        <div class="contents">
+          <h2>popup</h2>
+
+          <div class="guide_info">
+            <p class="p3_f">- 팝업 건텐츠 div.popup</p>
+            <p class="p3_f">- 모달 컨첸츠 div.modal</p>
+            <p class="p3_f">- 팝업/컨텐츠 안 overlay필수 / 오픈시 overlay 및 body .open 추가</p>
+            <p class="p3_f">- 박스쉐도우는 디자인확인용/실제팝업,모달에는 적용되지 않음</p>
+          </div>
+
+          <!-- popup -->
+          <div class="guide_block">
+            <h3>popup</h3>
+            <div class="guide_data">
+              <p class="title">.popup_wrap</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <!--팝업 버튼 1개 -->
+                <div class="popup">
+                  <!-- 팝업안 전체 오버레이 -->
+                  <div class="overlay"></div>
+
+                  <!-- 팝업 컨텐츠 -->
+                  <div class="popup_wrap">
+                    <p class="pop_title">서비스를 탈퇴하시겠어요?</p>
+                    <p class="pop_txt">지금 핏타민 서비스를 탈퇴하시면 받고 있는 혜택이 모두 사라져요</p>
+                    <!-- 버튼 1개 -->
+                    <div class="pop_btn">
+                      <button class="btn_light btnClose">확인</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 팝업 버튼 2개 -->
+                <div class="popup">
+                  <!-- 팝업안 전체 오버레이 -->
+                  <div class="overlay"></div>
+
+                  <!-- 팝업 컨텐츠 -->
+                  <div class="popup_wrap">
+                    <p class="pop_title">서비스를 탈퇴하시겠어요?</p>
+                    <p class="pop_txt">지금 핏타민 서비스를 탈퇴하시면 받고 있는 혜택이 모두 사라져요</p>
+                    <!-- 버튼 2개 -->
+                    <div class="pop_btn">
+                      <button class="btn_m btn_light btnClose">확인</button>
+                      <button class="btn_m btn_basic btnClose">탈퇴하기</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 팝업 버튼 2개 -->
+                <div class="popup popup02">
+                  <!-- 팝업안 전체 오버레이 -->
+                  <div class="overlay"></div>
+
+                  <!-- 팝업 컨텐츠 -->
+                  <div class="popup_wrap">
+                    <p class="pop_title">서비스를 탈퇴하시겠어요?</p>
+                    <div class="pop_txt">
+                      <p>상담 일정 <span class="bold_f">12월 26일(수) 오후 08:00</span></p>
+                      <p>상담 일정 <span class="bold_f">12월 26일(수) 오후 08:00</span></p>
+                      <p>상담 일정 <span class="bold_f">12월 26일(수) 오후 08:00</span></p>
+                      <p>상담 일정 <span class="bold_f">12월 26일(수) 오후 08:00</span></p>
+                      <p>상담 일정 <span class="bold_f">12월 26일(수) 오후 08:00</span></p>
+                    </div>
+                    <!-- 버튼 2개 -->
+                    <div class="pop_btn">
+                      <button class="btn_m btn_light btnClose">확인</button>
+                      <button class="btn_mbtn_basic btn_red">탈퇴하기</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 싱글 텍스트 -->
+                <div class="popup popup03">
+                  <!-- 팝업안 전체 오버레이 -->
+                  <div class="overlay"></div>
+              
+                  <!-- 팝업 컨텐츠 -->
+                  <div class="popup_wrap">
+                    <p class="title_single">지금 온라인 줄서기를<br>진행할까요?</p>
+                    <!-- 버튼 2개 -->
+                    <div class="pop_btn">
+                      <button class="btn_m btn_light btnClose">확인</button>
+                      <button class="btn_m btn_basic btnClose">탈퇴하기</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- modal -->
+          <div class="guide_block">
+            <h3>popup</h3>
+            <div class="guide_data">
+              <p class="title">.popup_wrap</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="modal">
+                  <!-- 팝업안 전체 오버레이 -->
+                  <div class="overlay"></div>
+
+                  <!-- 모달 컨텐츠-->
+                  <div class="modal_wrap">
+                    <div class="modal_top">
+                      <p class="modal_title">충전권 안내사항을 확인해 주세요</p>
+                    </div>
+                    <div class="modal_con">
+                      <div class="term_list">
+                        <div class="term_data">
+                          <p class="title">1. 민감정보 수집 및 이용 목적</p>
+                          <p class="p5_f gray02">서비스 이용, 설문을 바탕으로 한 맞춤 서비스 제공, 민감의료정보를 통한 맞춤 건강 관리 서비스 제공, 
+                          처방전/약봉투 등을 바탕으로 한 복용 약물 검토, 개인 맞춤형 건강기능식품 제안, 맞춤 건강 정보 제공, 건강 관리 서비스 제공, 
+                          서비스 개선 및 신규 서비스 개발, 연구 및 시장조사 목적, 마케팅 및 광고에 활용 등</p>
+                        </div>
+                        <div class="term_data">
+                          <p class="title">2. 민감정보 수집 항목</p>
+                          <p class="p5_f gray02">생년, 성별, 키, 몸무게, 건강목표, 건강습관, 식습관, 생활습관, 의료정보, 복용의약품, 처방전 내역(질환코드, 방문병원, 처방약제, 투약기록, 방문 날짜), 알러지, 개인이 작성한 기타 문의 사항, 약사 상담 내용, 화상 상담 정보, 대면 상담 정보 등</p>
+                        </div>
+                        <div class="term_data">
+                          <p class="title">3. 민감정보 보유 및 이용기간</p>
+                          <p class="p5_f gray02">이용자의 민감정보는 서비스 이용 시작일부터 서비스 제공기간 동안에만 제한적으로 이용하고 있습니다. 그리고 관계 법령의 규정에 따라 일정한 기간 동안 회원정보를 보관하며 자세한 내용은 <개인정보 처리방침> 제2조와 같습니다.</p>
+                        </div>
+                        <div class="term_data">
+                          <p class="title">4. 동의를 거부할 권리</p>
+                          <p class="p5_f gray02">이용자는 본 민감정보 수집 및 이용에 대해 동의를 거부할 권리가 있으며, 동의 거부 시에는 회원가입 및 서비스 이용이 제한될 수 있습니다.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="btn_wrap">
+                      <button class="btn_b btn_basic">확인</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      let swiper = new Swiper(".add_file", {
+        spaceBetween: 8,
+        slidesPerView: "auto",
+      });
+
+      /* popup */
+      $(".pop01").on("click", function () {
+        $(".popup01, body").addClass("open");
+      });
+
+      $(".overlay, .btnClose").on("click", function () {
+        $(".popup, .modal, body, .btn_trans").removeClass("open");
+      });
+
+      //메인 이미지 팝업
+      let swiper2 = new Swiper(".modal_img", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+      });
+
+      // /* ---- 삭제버튼 ------- */
+      $(document).ready(function () {
+        $(".input_div").each(function () {
+          $(this)
+            .find(".clearInput")
+            .on("keyup focus", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 1");
+
+              if ($(this).val().length == 0) {
+                $(this).siblings(".btnClear").attr("style", "opacity: 0");
+              } else {
+                $(this).siblings(".btnClear").attr("style", "opacity: 1");
+              }
+            });
+
+          $(this)
+            .find(".clearInput")
+            .on("blur", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 0");
+            });
+
+          $(this)
+            .find(".btnClear")
+            .on("click touchstart", function () {
+              $(this).closest(".input_div").find(".clearInput").val("");
+              $(this).closest(".input_div").find(".btnClear").attr("style", "opacity: 0");
+              return false;
+            });
+        });
+      });
+    </script>
+  </body>
+</html>

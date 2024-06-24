@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>킥더허들 헬스케어</title>
+    <meta name="keywords" content="킥더허들 헬스케어">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="누구나 누릴 수 있는 일상의 건강">
+    <meta name="format-detection" content="telephone=no">
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <script type="text/javascript" src="<c:url value='/vendors/jquery/jquery-3.6.0.min.js' />"></script>
+
+    <!-- ============================ css ======================= -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link href="../../css/m.common.css" rel="stylesheet">
+    <link href="../../css/m.sub.css" rel="stylesheet">
+
+
+
+    <script type="text/javascript" src="<c:url value='/bootstrap/js/bootstrap.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/vendors/popper/popper.min.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/scripts/modal.js' />"></script> <!-- 모달 스크립트 -->
+    <script type="text/javascript" src="<c:url value='/scripts/common.js' />"></script> <!-- 공통 스크립트 -->
+    <script type="text/javascript" src="<c:url value='/scripts/hybridBridge.js' />"></script> <!-- 네이티브 인터페이스 브릿지 -->
+</head>
+<body>
+    <main class="main" id="top">
+
+        <header class="header" id="header">
+            <nav class="nav">
+                <a href="javascript:goHistoryback();" class="nav_back">
+                    <i class="ri-arrow-left-s-line"></i>
+                </a>
+
+                <h2 class="sub_header">상담선택</h2>
+        
+                <div class="nav_menu" id="nav-menu">
+                    <div class="nav_user">
+                        <a href="#" class="nav_user_link">로그인</a>
+                        <a href="#" class="nav_user_link">마이 페이지</a>
+                    </div>
+        
+                    <!-- ========메뉴 =========-->
+                    <ul class="nav_list">
+                        <li class="nav_item">
+                            <a href="#" class="nav_link active_link">홈</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">핏타민 시작하기</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">마이페이지</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">브랜드 스토리 <i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="nav_dep">
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">핏타민 스토리</a>
+                                </li>
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">핏타민 소개</a>
+                                </li>
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">이용방법</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">고객후기</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">이벤트 · 공지</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">고객센터</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="nav_close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+        
+                    <div class="nav_search">
+                        <input type="text" class="search" placeholder="검색어를 입력해주세요">
+                        <button type="submit" class="search btn_basic">검색</button>
+                    </div>
+        
+                    <!-- ================= quick link ================= -->
+                    <div class="nav_quick">
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg01.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>People</span>
+                                <p>시작부터 섭취까지<br>약사와 함께</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg02.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>Service</span>
+                                <p>과학적인 데이터<br>근거 중심으로</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg03.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>Product</span>
+                                <p>단 1알까지<br>품질우선주의</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg04.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>B2B</span>
+                                <p>기업 건강 복지<br>영양제 정기배송</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="nav_toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </nav>
+        </header>
+        
+        <div class="container" data-layout="container">
+            <div class="sub_wrap">
+                <div class="survey_con">
+                    <div class="sub_tab survey_tab">
+                        <a href="#" class="sub_link active">온라인 화상상담</a>
+                        <a href="#" class="sub_link">오프라인 상담</a>
+                    </div>
+
+                    <div class="mypage_notice">
+                        <div class="n_block mb_1">
+                            <p class="font_m font_w2"><img src="../../images/fit_result_check.png" alt="" class="check_img"> 화상상담으로 집에서 간편하게!</p>
+                            <p class="font_n gray_c">나에게 맞는 영양제와 섭취방법에 대해 약사님과 집에서 간편하게 화상상담을 할 수 있어요.</p>
+                        </div>
+
+                        <div class="n_block">
+                            <p class="font_m font_w2"><img src="../../images/fit_result_check.png" alt="" class="check_img"> 합리적이고 건강한 영양제 섭취</p>
+                            <p class="font_n">맞춤 상담을 통해 중복 섭취를 방지하고 의약품과 충돌을 예방할 수 있어요.</p>
+                        </div>
+                    </div>
+
+                    <p class="font_m "><img src="../../images/survey_result_sub_img01.svg" alt="">상담 방법을 <span class="font_w2 point_c">선택</span>해주세요</p>
+
+                    <div class="btn_wrap devider">
+                        <a href="#" class="btn btn_blue">상담 시작하기</a>
+                        <a href="#" class="btn btn_whiteb">원하는 시간에 상담하기</a>
+                    </div>
+                </div>
+
+                <div class="survey_con bg_gray">
+                    <p class="font_n mb_1">약사 상담 후기보기</p>
+
+                    <div class="swiper survey_slide mb_3">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img src="../../images/survey_result_sub_img02.png" alt="">
+                            <div class="slide_txt">
+                                <p class="font_w2 font_m">약사 상담은 신세계</p>
+                                <p class="font_s">#부담없이 #약사님께 #물어보자</p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="../../images/survey_result_sub_img03.png" alt="">
+                            <div class="slide_txt">
+                                <p class="font_w2 font_m">나에게 꼭 필요한것만!</p>
+                                <p class="font_s">#슬기로운 #영양생활 #시작하자</p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="../../images/survey_result_sub_img04.png" alt="">
+                            <div class="slide_txt">
+                                <p class="font_w2 font_m">외출할때도 편하게~</p>
+                                <p class="font_s">#소분포장 #간편하게 #하루한팩</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <p class="font_s">약사상담이 처음이시라면</p>
+                    <p class="font_m font_w2">당연히 궁금하실 거예요</p>
+                    <div class="faq_list group_shadow">
+                        <div class="faq_item">
+                            <p class="faq_title "><span><i class="ri-message-2-line"></i> 약사상담 꼭 받아야하나요? </span><i class="ri-arrow-down-s-line"></i></p>
+                            <div class="faq_txt">
+								설문으로 파악하기 어려운 개인별 필요 영양소를 상담을 통해, 불필요한 영양소를 줄이고 딱 맞는 영양소를 제공받을 수 있어요.  현재 섭취중인 영양제와 새로추천받은 영양제의 중복섭취를 피할
+								수 있고, 영양소 뿐만 아니라 습관개선을 도와드릴 수 있습니다.
+								핏타민은 식약처로부터 '개인맞춤형 건강기능식품 추천, 소분, 배송 서비스'로 규제특례 승인을 받은 서비스이며, 가이드라인 상 약사 상담이 필수 입니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer sub_footer">
+            <div class="bottom_menu">
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon01.svg" alt="">
+                    <span>홈</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon02.svg" alt="">
+                    <span>설문</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon03.svg" alt="">
+                    <span>상담</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon04.svg" alt="">
+                    <span>구독</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon05_on.svg" alt="">
+                    <span>MY</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- swiper slide -->
+    <script type="text/javascript" src="../../scripts/mobile.js"></script> <!-- 추가 스크립트 -->
+</body>
+</html>
+
+
+
+
+

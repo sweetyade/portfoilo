@@ -1,0 +1,146 @@
+@import "variables";
+
+/* mediaquery - mobile base (360px) */
+@mixin mobile_small {
+  @media (max-width: #{$mobile_base - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile_large {
+  @media (min-width: #{$mobile_large}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin pc_small {
+  @media (min-width: #{$pc_small}) {
+    @content;
+  }
+}
+
+@mixin pc_large {
+  @media (min-width: #{$pc_base + 1px}) {
+    @content;
+  }
+}
+
+/* typo */
+@mixin vertical_txt {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-all;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+}
+
+@mixin txtover {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin listdot {
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--text-color-2);
+  position: absolute;
+  left: 5px;
+  top: 6px;
+}
+
+/* flex */
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexcenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexbtw {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flexright {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@mixin flextop {
+  display: flex;
+  align-items: flex-start;
+}
+
+@mixin flextopcenter {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@mixin flextopbtw {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@mixin flextopright {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+@mixin list_0_25 {
+  display: grid;
+  gap: 0.25rem;
+}
+
+@mixin list_0_5 {
+  display: grid;
+  gap: 0.5rem;
+}
+
+@mixin list_0_75 {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@mixin list_1 {
+  display: grid;
+  gap: 1rem;
+}
+
+@mixin list_1_25 {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@mixin list_1_5 {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@mixin list_1_75 {
+  display: grid;
+  gap: 1.75rem;
+}
+
+@mixin list_2 {
+  display: grid;
+  gap: 2rem;
+}

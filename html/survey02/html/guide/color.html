@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+  <!-- <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'> -->
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>GUIDE COLOR</title>
+</head>
+
+<style>
+  .guide_wrap{
+    width: 100%;
+    max-width: 760px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  .info{
+    width: 100%;
+    line-height: var(--line-h);
+    margin-bottom: 5rem;
+  }
+
+  .guide_block{
+    margin: 2rem 0 5rem;
+  }
+
+  .quide_flex{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    
+  }
+
+  .quide_flex .span3_f{
+    margin-left: 1rem;
+    color: #9F9F9F;
+  }
+  .quide_flex .color{
+    width: 100px;
+    margin-right: 1rem;
+  }
+
+  .quide_flex .color .bgcolor{
+    width: 100%;
+    aspect-ratio: 1;
+    margin-bottom: .5rem;
+  }
+
+  .quide_flex .color .span4_f{
+    color: #9f9f9f;
+  }
+</style>
+<body>
+  <div class="guide_wrap">
+    <h1 class="h1_f" style="margin-bottom: 2rem;">color</h1>
+    <div class="info">
+      <p class="span3_f">- 컨텐츠의 중요도와 결과에 따라 Primary / System / Grayscale 로 나누어 사용할 수 있도록 합니다.</p>
+      <p class="span3_f">- 컨텐츠의 용도에 따라 컬러는 수정되거나 추가될 가능성은 있으나, 비슷한 톤을 가진 색상은 가이드를 따르도록 합니다.</p>
+      <p class="span3_f" style="margin-bottom: 2rem;">- 단, 소셜 로그인 버튼 등의 타 서비스의 컴포넌트를 끌어와 사용하는 경우에는 해당하는 서비스의 가이드를 따르도록 합니다.</p>
+    </div>
+
+
+    <!-- primary -->
+    <div class="guide_block">
+      <p class="h2_f" style="margin-bottom: 1rem;">Primary Color</p>
+      <div class="quide_flex">
+        <div class="color">
+          <p class="bgcolor" style="background-color: #00B400 "></p>
+          <p class="p3_fb">#00B400 </p>
+          <p class="span4_f">Green</p>
+          <p class="span4_f">rgb(0, 180, 0)</p>
+          <p class="span4_f" style="line-height: 1.5">$primary</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- system -->
+    <div class="guide_block">
+      <p class="h2_f" style="margin-bottom: 1rem;">System Color</p>
+      <div class="quide_flex">
+        <div class="color">
+          <p class="bgcolor" style="background-color: #F44432"></p>
+          <p class="p3_fb">#F44432</p>
+          <p class="span4_f">Red</p>
+          <p class="span4_f">rgb(244, 68, 50)</p>
+          <p class="span4_f" style="line-height: 1.5">$system-red</p>
+        </div>
+        <div class="color">
+          <p class="bgcolor" style="background-color: #FFC710"></p>
+          <p class="p3_fb">#FFC710</p>
+          <p class="span4_f">Yellow</p>
+          <p class="span4_f">rgb(255, 199, 16)</p>
+          <p class="span4_f" style="line-height: 1.5">$system-yellow</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- grayscale -->
+    <div class="guide_block">
+      <p class="h2_f" style="margin-bottom: 1rem;">Grayscale</p>
+      <div class="quide_flex">
+        <div class="color">
+          <p class="bgcolor" style="background-color: #2F2F2F"></p>
+          <p class="p3_fb">#2F2F2F</p>
+          <p class="span4_f">Black</p>
+          <p class="span4_f">rgb(47, 47, 47)</p>
+          <p class="span4_f" style="line-height: 1.5">$black</p>
+        </div>
+        <div class="color">
+          <p class="bgcolor" style="background-color: #747474"></p>
+          <p class="p3_fb">#747474</p>
+          <p class="span4_f">Gray01</p>
+          <p class="span4_f">rgb(116, 116, 116)</p>
+          <p class="span4_f" style="line-height: 1.5">$gray01</p>
+        </div>
+        <div class="color">
+          <p class="bgcolor" style="background-color: #9F9F9F"></p>
+          <p class="p3_fb">#9F9F9F</p>
+          <p class="span4_f">Gray02</p>
+          <p class="span4_f">rgb(159, 159, 159)</p>
+          <p class="span4_f" style="line-height: 1.5">$gray02</p>
+        </div>
+        <div class="color">
+          <p class="bgcolor" style="background-color: #C9C9C9"></p>
+          <p class="p3_fb">#C9C9C9</p>
+          <p class="span4_f">Gray03</p>
+          <p class="span4_f">rgb(201, 201, 201)</p>
+          <p class="span4_f" style="line-height: 1.5">$gray03</p>
+        </div>
+        <div class="color">
+          <p class="bgcolor" style="background-color: #DFDFDF"></p>
+          <p class="p3_fb">#DFDFDF</p>
+          <p class="span4_f">Gray04</p>
+          <p class="span4_f">rgb(223, 223, 223)</p>
+          <p class="span4_f" style="line-height: 1.5">$gray04</p>
+        </div>
+        <div class="color">
+          <p class="bgcolor" style="background-color: #F5F5F5"></p>
+          <p class="p3_fb">#F5F5F5</p>
+          <p class="span4_f">Gray05</p>
+          <p class="span4_f">rgb(245, 245, 245)</p>
+          <p class="span4_f" style="line-height: 1.5">$gray05</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

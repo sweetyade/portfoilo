@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>킥더허들 헬스케어</title>
+    <meta name="keywords" content="킥더허들 헬스케어">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="누구나 누릴 수 있는 일상의 건강">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- ============================ css ======================= -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="../../css/newindex.css">
+    <link rel="stylesheet" href="../../css/m.sub.css">
+    <link rel="stylesheet" href="../../css/m.common.css">
+    <link href="../../css/fitamin_2201819.css" rel="stylesheet"> <!-- 새로 추가된 css -->
+
+</head>
+
+    <div class="main">
+
+        <!-- header -->
+        <header class="header" id="header">
+            <nav class="nav">
+                <a href="javascript:CommonJS.goHistoryBack();" class="nav_back header_back" style="">
+                    <i class="ri-arrow-left-s-line"></i>
+                </a>
+
+                <h2 class="sub_header header_sub_header" style="">구독변경</h2>
+        
+
+                <!--///////////////////// 변경된 해더 햄버거 메뉴 컨텐츠 ///////////////////-->
+                <!--///////////////////// 여기서부터 복사하여 같은 위치에 변경해주세요 /////////////////////-->
+                <div class="nav_menu" id="nav-menu">
+
+                    <!----------- 비로그인시에만 노출됩니다 ------------->
+                    <div class="nav_login">
+                        <div class="nav_in flex">
+                          <a href="#" class="nav_user_link1">로그인</a>
+                          <a href="#" class="nav_user_link2"><i class="ri-kakao-talk-fill"></i> 카카오 1초 로그인</a>
+                        </div>
+                    </div>
+
+                    <!-- ----------- 로그인 회원정보 메뉴 ------------>
+                    <div class="nav_userinfo">
+                        <div class="nav_in">
+                            <div class="navin_top flex">
+                            <p class="title">김다민 <span>님</span></p> <!-- 회원가입 시 가입정보 이름 -->
+                            <p class="nav_code flex">추천코드 <b>ROWIIOOO</b> <a href="#" class="flex"><img src="../../images/icon_copy.svg" alt=""></a></p>
+                            </div>
+                            <div class="navin_bottom">
+                            <p class="normal_f">damin@naver.com</p>
+                            <p class="normal_f">리뷰 <a href="#">1</a> ｜ 작성가능한 리뷰 <a href="#">2</a></p>
+                            <a href="#" class="btn_logout"><img src="../../images/icon_logout.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------- 로그인 비 구독시 노출 ----------->
+                    <ul class="visual_subcard login_subcard">
+                        <li class="subcard_in">
+                            <div class="subcard_top flex">
+                                <div class="subcard_title flex">
+                                    <p class="title">핏타민 구독<span>하고 다양한 혜택 받으세요</span></p>
+                                </div>
+                            </div>
+    
+                            <div class="subcard_bottom flex">
+                                <div class="subcard_info">
+                                    <p>+ 약사상담비 무료 적용</p>
+                                    <p>+ 건강지원 20% 할인 중</p>
+                                </div>
+    
+                                <div class="subcard_date flex">
+                                </div>
+                            </div>
+                            </li>
+                    </ul>
+
+                    <!------------- 로그인 구독시 노출 ----------->
+                    <ul class="visual_subcard login_subcard">
+                        <li class="subcard_in">
+                            <div class="subcard_top flex">
+                                <div class="subcard_title flex">
+                                    <p class="title">다미니님</p> <!-- 구독신청 시 봉투에 적는 이름 노출 -->
+                                    <img src="../../images/subcard_title.svg" alt="">
+                                </div>
+                                <a href="#" class="subcard_link flex">마이페이지 <i class="ri-arrow-right-s-line"></i></a>
+                            </div>
+    
+                            <div class="subcard_bottom flex">
+                                <div class="subcard_info">
+                                    <p>+ 약사상담비 무료 적용</p>
+                                    <p>+ 건강지원 20% 할인 중</p>
+                                </div>
+    
+                                <div class="subcard_date flex">
+                                    <div class="subcard_block">
+                                        <p class="no">5</p>
+                                        <p class="txt">구독 회차</p>
+                                    </div>
+                                    <div class="subcard_block">
+                                        <p class="no2">07.05</p>
+                                        <a href="#" class="txt flex">다음 구독일 <i class="ri-arrow-right-s-line"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="subcard_in">
+                        <div class="subcard_top flex">
+                            <div class="subcard_title flex">
+                                <p class="title">피터박님</p>
+                                <img src="../../images/subcard_title.svg" alt="">
+                            </div>
+                            <a href="#" class="subcard_link flex">마이페이지 <i class="ri-arrow-right-s-line"></i></a>
+                        </div>
+
+                        <div class="subcard_bottom flex">
+                            <div class="subcard_info">
+                                <p>+ 약사상담비 무료 적용</p>
+                                <p>+ 건강지원 20% 할인 중</p>
+                            </div>
+
+                            <div class="subcard_date flex">
+                                <div class="subcard_block">
+                                    <p class="no">1</p>
+                                    <p class="txt">구독 회차</p>
+                                </div>
+                                <div class="subcard_block">
+                                    <p class="no2">07.01</p>
+                                    <a href="#" class="txt flex">다음 구독일 <i class="ri-arrow-right-s-line"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    </ul>
+
+                    <!---------- 아래부터 기본 노출 화면 --------->
+                    <div class="nav_quick">
+                        <div class="nav_in">
+                            <p class="title">핏타민 시작하기</p>
+                            <div class="flex">
+                            <div class="quick_menu">
+                                <a href="#" class="quick_link quick01">
+                                <img src="../../images/quick_icon1.png" alt="">
+                                <span>예약상담</span>
+                                </a>
+                                <p class="quick_txt">3분 설문 ➡ 1:1 약사상담</p>
+                            </div>
+                            <div class="quick_menu">
+                                <a href="#" class="quick_link quick02">
+                                <img src="../../images/quick_icon2.png" alt="">
+                                <span>즉시상담</span>
+                                </a>
+                                <p class="quick_txt">지금 바로 1:1 약사상담</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----------- 메뉴 ---------->
+                    <div class="menu_list">
+                        <a href="#" class="flex nav_link">고객후기<i class="ri-arrow-right-s-line"></i></a>
+                    </div>
+
+                    <div class="menu_list nav-open">
+                        <a href="#" class="flex nav_link">고객센터<i class="ri-arrow-down-s-line"></i></a>
+                        <div class="nav_in" style="height:115px">
+                            <div class="nav_sub flex">
+                                <a href="#">1:1 문의하기</a>
+                                <a href="#">자주묻는질문</a>
+                                <a href="#">공지사항 </a>
+                                <a href="#">이벤트</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="menu_list">
+                        <a href="#" class="flex nav_link">브랜드스토리<i class="ri-arrow-down-s-line"></i></a>
+                        <div class="nav_in">
+                            <div class="nav_sub flex">
+                                <a href="#">핏타민스토리</a>
+                                <a href="#">핏타민소개</a>
+                                <a href="#">이용방법 </a>
+                                <a href="#">섭취방법</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nav_close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+
+                </div>
+                <!--////////////////// 여기까지 ////////////////////////-->
+        
+                <div class="nav_toggle flex" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </nav>
+        </header>
+
+        <!-- //////////////////// 마이페이지 컨텐츠 영역 ////////////////////// -->
+        <div class="update_wrap">
+            <form action="">
+                <section class="update_block">
+                    <p class="title">구독일 변경</p>
+                    <div class="update_in">
+                        <div class="update_cld">
+                            <div class="cld_month flex">
+                                <a href="#"><i class="ri-arrow-left-s-line"></i></a>
+                                <p>2022.8</p>
+                                <a href="#"><i class="ri-arrow-right-s-line"></i></a>
+                            </div>
+    
+                            <div class="cld_week flex">
+                                <p>일</p>
+                                <p>월</p>
+                                <p>화</p>
+                                <p>수</p>
+                                <p>목</p>
+                                <p>금</p>
+                                <p>토</p>
+                            </div>
+    
+                            <div class="cld_week flex">
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w1_1">
+                                    <label for="w1_1"></label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w1_2">
+                                    <label for="w1_2"></label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w1_3">
+                                    <label for="w1_3"></label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w1_4">
+                                    <label for="w1_4"></label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w1_5">
+                                    <label for="w1_5"></label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w1_6" disabled>
+                                    <label for="w1_6">1</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w1_7" disabled>
+                                    <label for="w1_7">2</label>
+                                </div>
+                            </div>
+    
+                            <div class="cld_week flex">
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w2_1" disabled>
+                                    <label for="w2_1">3</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w12_2" disabled>
+                                    <label for="w2_2">4</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w2_3" disabled>
+                                    <label for="w2_3">5</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w2_4" disabled>
+                                    <label for="w2_4">6</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w2_5" disabled>
+                                    <label for="w2_5">7</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w2_6" disabled>
+                                    <label for="w2_6">8</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w2_7" disabled>
+                                    <label for="w2_7">9</label>
+                                </div>
+                            </div>
+    
+                            <div class="cld_week flex">
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w3_1" disabled>
+                                    <label for="w3_1">10</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w3_2" disabled>
+                                    <label for="w3_2">11</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w3_3" disabled>
+                                    <label for="w3_3">12</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w3_4" disabled>
+                                    <label for="w3_4">13</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w3_5" disabled>
+                                    <label for="w3_5">14</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w3_6" disabled>
+                                    <label for="w3_6">15</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w3_7" disabled>
+                                    <label for="w3_7">16</label>
+                                </div>
+                            </div>
+    
+                            <div class="cld_week flex">
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w4_1" disabled>
+                                    <label for="w4_1">17</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w4_2" disabled>
+                                    <label for="w4_2">18</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w4_3" disabled>
+                                    <label for="w4_3">19</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w4_4" disabled>
+                                    <label for="w4_4">20</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w4_5" disabled>
+                                    <label for="w4_5">21</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w4_6" disabled>
+                                    <label for="w4_6">22</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w4_7" disabled>
+                                    <label for="w4_7">23</label>
+                                </div>
+                            </div>
+    
+                            <div class="cld_week flex">
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w5_1" disabled>
+                                    <label for="w5_1">24</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w5_2" disabled>
+                                    <label for="w5_2">25</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w5_3" disabled>
+                                    <label for="w5_3">26</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w5_4" checked>
+                                    <label for="w5_4">27</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w5_5">
+                                    <label for="w5_5">28</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w5_6">
+                                    <label for="w5_6">29</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w5_7">
+                                    <label for="w5_7">30</label>
+                                </div>
+                            </div>
+    
+                            <div class="cld_week flex">
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w6_1">
+                                    <label for="w6_1">31</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w6_2">
+                                    <label for="w6_2"></label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w6_3">
+                                    <label for="w6_3"></label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w6_4">
+                                    <label for="w6_4"></label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w6_5">
+                                    <label for="w6_5"></label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w6_6">
+                                    <label for="w6_6"></label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w6_7">
+                                    <label for="w6_7"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </form>
+
+            <form action="">
+                <section class="update_block">
+                    <p class="title">배송지 변경</p>
+
+                    <div class="update_in">
+                        <div class="input_basic">
+                            <label for="name">받으시는 분</label>
+                            <input type="text" id="name" placeholder="받으시는 분 이름" class="login_input">
+                        </div>
+                        <div class="input_basic">
+                            <label for="phone">연락처</label>
+                            <input type="text" id="phone" placeholder="-없이 번호만 입력하세요" class="login_input">
+                        </div>
+                        <div class="input_mix">
+                            <label for="add">주소</label>
+                            <div class="input_button flex">
+                                <input type="text" id="add" placeholder="우편번호" class="login_input">
+                                <button class="btn btn_basic">주소검색</button>
+                            </div>
+                            <input type="text" placeholder="주소" class="login_input" style="margin-bottom: .5rem;">
+                            <input type="text" placeholder="상세주소" class="login_input" style="margin-bottom: .5rem;">
+                        </div>
+    
+                        <div class="input_basic">
+                            <label for="memo">배송 요청 사항</label>
+                            <select name="" id="memo" class="login_input">
+                                <option value="">배송 요청 사항을 선택해 주세요</option>
+                                <option value="">부재시 문앞에 놓아주세요</option>
+                                <option value="">부재시 경비실에 맡겨 주세요</option>
+                                <option value="">택배함에 넣어 주세요</option>
+                                <option value="">배송전에 연락주세요</option>
+                                <option value="">직접입력</option>
+                            </select>
+                            <textarea name="" id="" cols="30" rows="5" class="" placeholder="내용을 입력해주세요. (최대 50자)">직접입력 시 노출</textarea>
+                        </div>
+                    </div>
+                    
+                </section>
+            </form>
+
+            <section class="update_block">
+                <p class="title">결제수단 변경
+                    <span class="fail"><i class="ri-information-line"></i> 등록된 결제수단을 확인해주세요. </span> <!-- 결제수단 실패 및 오류 시 출력 -->
+                </p>
+                <div class="update_in">
+                    <div class="swiper mypay_slide">
+                        <div class="swiper-wrapper mypay_list">
+                            <div class="swiper-slide mypay_item">
+                                <div class="mypay_card flex" style="background-color: #3C5DF6;">
+                                    <div class="card_name flex"><p class="flex">KB국민카드 <i class="ri-information-line"></i></p>  <a href="#" class="card_del flex">카드 삭제 <i class="ri-arrow-right-s-line"></i></a></div>
+                                    <p class="card_no">5570 4205 **** 9044</p>
+                                    
+                                </div>
+        
+                                <p class="card_date">2022.05.28 등록</p>
+                            </div>
+    
+                            <div class="swiper-slide mypay_item">
+                                <div class="mypay_card flex" style="background-color: #3C5DF6;">
+                                    <p class="card_name flex">KB국민카드 <a href="#" class="card_del flex">카드 삭제 <i class="ri-arrow-right-s-line"></i></a></p>
+                                    <p class="card_no">5570 4205 **** 9044</p>
+                                    
+                                </div>
+        
+                                <p class="card_date">2022.05.28 등록</p>
+                            </div>
+        
+                            <div class="swiper-slide mypay_item">
+                                <a href="#" class="mypay_card add_card">
+                                    <img src="../../images/add_card.svg" alt="">
+                                    <p class="txt">간편결제 카드추가</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="update_block">
+                <p class="title">적립금/쿠폰 사용</p>
+                <div class="update_in">
+                    <div class="pay_card">
+                        <div class="srt_coupon">
+                            <div class="srt_top flex">
+                                <p class="tiele">보유 쿠폰 0 장</p>
+                                <button class="btn btn_coupon none_coupon">쿠폰사용</button>
+                            </div>
+                            <div class="srt_button flex">
+                                <p class="txt">적용 가능한 쿠폰이 없습니다.</p>
+                                <p class="point_txt">0 원</p>
+                            </div>
+                        </div>
+                        <div class="srt_coupon">
+                            <div class="srt_top flex">
+                                <p class="tiele">적립금</p>
+                                <p class="txt">사용가능 5,000 원</p>
+                            </div>
+                            <div class="used_point flex">
+                                <p>사용</p>
+                                <div class="point_input flex">
+                                    <input type="text" class="point_txt" >
+                                    <input type="button" class="point_btn" value="전액사용">
+                                </div>
+                                <div class="login_check">
+                                    <input type="checkbox" id="check01">
+                                    <p class="txt">구독 결제 시 사용 가능한 <b>적립금을 자동 사용</b>합니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="srt_coupon devider">
+                            <div class="srt_top flex">
+                                <p class="tiele">복지포인트</p>
+                                <div class="txt">사용가능 5,000 원
+                                    <p class="point_d"><span>복지포인트 : 0원 /</span> <span>특별포인트 : 0원</span></p>
+                                </div>
+                            </div>
+                            <div class="used_point flex">
+                                <p>사용</p>
+                                <div class="point_input flex">
+                                    <input type="text" class="point_txt" >
+                                    <input type="button" class="point_btn" value="전액사용">
+                                </div>
+                                <div class="login_check" style="">
+                                    <input type="checkbox" id="pointck">
+                                    <label for="pointck"><p class="txt" style="line-height:1.2;">사용 가능한 복지포인트를 <b>자동 사용</b>합니다.</p></label>
+                                </div>
+                            </div>
+                            <div class="point_notice">
+                                <p>복지포인트는 현재 조회되는 포인트이며 결제시점의 포인트와 다를 수 있습니다. </p>
+                                <p>복지포인트 자동사용 버튼을 활성화하면, 정기결제 시점에 사용 가능한 최대 금액이 적용됩니다.</p>
+                                <p>복지포인트는 특별포인트보다 먼저 사용되며, 쿠폰 및 적립금보다는 후순위로 사용됩니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+
+            <section class="update_block after_none">
+                <p class="title">구독 일정</p>
+
+                <div class="update_in">
+                    <div class="pay_card">
+                        <div class="point flex">
+                            <p>정기구독</p>
+                            <p>5,520 원 <span>/월</span></p>
+                        </div>
+                        <div class="date">
+                            <p>구독 시작일 : 2022.06.20</p>
+                            <p class="date_next">다음 결제일 : 2022.07.20 (매달 자동결제)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="login_btn">
+                <div class="con_in">
+                    <button class="btn btn_blue btn_pop">구독 변경하기</button>
+                </div>
+            </div>
+
+            <a href="#" class="font_s unSub">구독 해지</a>
+        </div>
+        <!-- /////////////////// 여기까지 //////////////// -->
+    </div>
+
+    <!-- 구독하기 버튼 클릭 시 팝업 ---->
+    <div class="coupon_popup">
+        <div class="overlay"></div>
+
+        <div class="coupon_pop">
+            <p class="popup_center">구독을 변경하시겠습니까?</p>
+
+            <div class="popup_btn flex">
+                <a href="#" class="btn coupon_cancel">취소</a>
+                <a href="#" class="btn conpon_ok">확인</a>
+            </div>
+            <a href="#" class="coupon_close"><i class="ri-close-line"></i></a>
+        </div>
+    </div>
+
+    <!-- 결제수단 미 등록 시 팝업 -->
+    <div class="coupon_popup">
+        <div class="overlay"></div>
+
+        <div class="coupon_pop">
+            <p class="popup_center">결제 수단을 선택해 주세요.</p>
+
+            <div class="popup_btn flex">
+                <a href="#" class="btn conpon_ok">확인</a>
+            </div>
+            <a href="#" class="coupon_close"><i class="ri-close-line"></i></a>
+        </div>
+    </div>
+
+    <!-- 결제실패 상태로 구독해지 클릭시 팝업 -->
+    <div class="coupon_popup unsubPop">
+        <div class="overlay"></div>
+
+        <div class="coupon_pop">
+            <p class="popup_center">결제 실패된 건이 있을 경우<br>구독 해지가 불가합니다.</p>
+
+            <div class="popup_btn flex">
+                <a href="#" class="btn conpon_ok">확인</a>
+            </div>
+            <a href="#" class="coupon_close"><i class="ri-close-line"></i></a>
+        </div>
+    </div>
+
+    <!-- //////////////////// 쿠폰팝업 ///////////-->
+    <div class="coupon_popup couponPop">
+        <div class="overlay"></div>
+
+        <!-- 쿠폰겟수 : 0개 -->
+        <div class="coupon_pop align_center">
+            <div class="coupon_use">
+                <svg width="100%" height="100%" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.5 0C4.25379 0 0 4.25379 0 9.5C0 14.7462 4.25379 19 9.5 19C14.7462 19 19 14.7462 19 9.5C19 4.25379 14.7462 0 9.5 0ZM9.5 17.3884C5.14442 17.3884 1.61161 13.8556 1.61161 9.5C1.61161 5.14442 5.14442 1.61161 9.5 1.61161C13.8556 1.61161 17.3884 5.14442 17.3884 9.5C17.3884 13.8556 13.8556 17.3884 9.5 17.3884Z" fill="#9F9F9F"/>
+                    <path d="M8.48218 13.2321C8.48218 13.5021 8.58942 13.761 8.7803 13.9519C8.97119 14.1428 9.23008 14.25 9.50003 14.25C9.76999 14.25 10.0289 14.1428 10.2198 13.9519C10.4107 13.761 10.5179 13.5021 10.5179 13.2321C10.5179 12.9622 10.4107 12.7033 10.2198 12.5124C10.0289 12.3215 9.76999 12.2143 9.50003 12.2143C9.23008 12.2143 8.97119 12.3215 8.7803 12.5124C8.58942 12.7033 8.48218 12.9622 8.48218 13.2321ZM8.99111 10.8571H10.009C10.1023 10.8571 10.1786 10.7808 10.1786 10.6875V4.91964C10.1786 4.82634 10.1023 4.75 10.009 4.75H8.99111C8.8978 4.75 8.82146 4.82634 8.82146 4.91964V10.6875C8.82146 10.7808 8.8978 10.8571 8.99111 10.8571Z" fill="#9F9F9F"/>
+                </svg>
+                <p class="conpon_poptxt">사용할 수 있는 쿠폰이 없습니다.</p>
+                <a href="#" class="close_txt">닫기</a>
+                <a href="#" class="coupon_close"><i class="ri-close-line"></i></a>
+            </div>
+        </div>
+
+        <!-- 쿠폰겟수 > O / 사용가능 : X -->
+        <div class="coupon_pop" style="display: none;">
+            <div class="coupon_use">
+                <div class="srt_coupon">
+                    <div class="srt_top flex">
+                        <p class="tiele">보유 쿠폰 0 장</p>
+                        <a href="#" class="btn btn_coupon">쿠폰사용</a>
+                    </div>
+                    <div class="srt_button flex">
+                        <p class="txt" style="margin-top: 0;">적용된 쿠폰이 없습니다.</p>
+                        <p class="point_txt">0 원</p>
+                    </div>
+                </div>
+
+                <div class="coupon_table">
+                    <div class="table_head flex">
+                        <p>쿠폰명</p>
+                        <p>할인금액</p>
+                        <p>쿠폰선택</p>
+                    </div>
+                    <div class="table_body flex">
+                        <p>무료 구독 쿠폰
+                            (테스트용)</p>
+                        <p>5,000</p>
+                        <p><a href="#" class="btn btn_coupon none_coupon">사용불가</a></p>
+                    </div>
+                </div>
+                <a href="#" class="coupon_close"><i class="ri-close-line"></i></a>
+            </div>
+        </div>
+
+        <!-- 쿠폰겟수 > O / 사용가능 : O -->
+        <div class="coupon_pop" style="display: none;">
+        <div class="coupon_use">
+            <div class="srt_coupon">
+                <div class="srt_top flex">
+                    <p class="tiele">보유 쿠폰 1 장</p>
+                    <a href="#" class="btn btn_coupon" style="display: none;">쿠폰사용</a>
+                </div>
+                <div class="srt_button flex">
+                    <p class="txt" style="margin-top: 0;">적용된 쿠폰이 없습니다.</p>
+                    <p class="point_txt">0 원</p>
+                </div>
+            </div>
+
+            <div class="coupon_table">
+                <div class="table_head flex">
+                    <p>쿠폰명</p>
+                    <p>할인금액</p>
+                    <p>쿠폰선택</p>
+                </div>
+                <div class="table_body flex">
+                    <p>무료 구독 쿠폰
+                        (테스트용)</p>
+                    <p>5,000</p>
+                    <p><a href="#" class="btn btn_coupon">적용</a></p>
+                </div>
+            </div>
+            <a href="#" class="coupon_close"><i class="ri-close-line"></i></a>
+        </div>
+        </div>
+
+        <!-- 적용 클릭 시 -->
+        <div class="coupon_pop"  style="display: none;">
+            <div class="coupon_use">
+                <div class="srt_coupon">
+                    <div class="srt_button srt_top flex">
+                        <p class="tiele" style="margin-top: 0;">무료 구독 쿠폰</p>
+                        <p class="point_txt">-5,000 원</p>
+                    </div>
+
+                    <div class="srt_top flex">
+                        <p class="tiele">보유 쿠폰 1장</p>
+                        <a href="#" class="btn btn_coupon">쿠폰사용</a>
+                    </div>
+
+                    <div class="popup_couponuse flex">
+                        <p class="tiele">무료 구독 쿠폰 <a href="#" class="cancel_btn">취소</a></p>
+                        <p class="point_txt">-5,000원</p>
+                    </div>
+                </div>
+
+                
+                <a href="#" class="coupon_close"><i class="ri-close-line"></i></a>
+            </div>
+        </div>
+
+        <!-- 푸폰 적용 완료 / 일정 시간 뒤 자동팝업 사라짐 -->
+        <div class="coupon_pop align_center" style="display: none;">
+            <div class="coupon_use">
+                <img src="../../images/fit_result_check.svg" alt="" class="coupon_checkimg">
+                <p class="conpon_poptxt">쿠폰이 적용되었습니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+
+    <script>
+
+        /*===== show menu =====*/
+        const navMenu = document.getElementById('nav-menu'),
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close');
+
+if(navToggle){
+  navToggle.addEventListener('click', () =>{
+      navMenu.classList.add('show-menu');
+  })
+}
+
+/*===== hidden menu =====*/
+if(navClose){
+  navClose.addEventListener('click', () =>{
+      navMenu.classList.remove('show-menu');
+  })
+};
+
+
+
+/* ====================== nav mobile menu ========================= */
+const navFull = document.querySelectorAll('.menu_list');
+
+navFull.forEach((item) =>{
+    const navTitle = item.querySelector('.nav_link');
+
+    navTitle.addEventListener('click', () =>{
+        const openItem = document.querySelector('.nav-open');
+
+        toggleItem(item);
+
+        if(openItem && openItem!== item){
+            toggleItem(openItem);
+        }
+    })
+})
+
+const toggleItem = (item) =>{
+    const navSub = item.querySelector('.nav_in');
+ 
+    if(item.classList.contains('nav-open')){
+        navSub.removeAttribute('style');
+        item.classList.remove('nav-open');
+    }else{
+        if(navSub != null) {
+            navSub.style.height = navSub.scrollHeight + 'px';
+            item.classList.add('nav-open');
+        }
+    }
+}
+
+
+
+
+/* ----------- 카드리스트----------- */
+var swiper = new Swiper(".mypay_slide", {
+        slidesPerView: 'auto',
+        centeredSlides: true,
+      });
+
+
+
+    /* ------------ select design ----------- */
+    $('select').each(function(){
+    var $this = $(this), numberOfOptions = $(this).children('option').length;
+  
+    $this.addClass('select-hidden'); 
+    $this.wrap('<div class="select"></div>');
+    $this.after('<div class="select-styled"></div>');
+
+    var $styledSelect = $this.next('div.select-styled');
+    $styledSelect.text($this.children('option').eq(0).text());
+  
+    var $list = $('<ul />', {
+        'class': 'select-options'
+    }).insertAfter($styledSelect);
+  
+    for (var i = 0; i < numberOfOptions; i++) {
+        $('<li />', {
+            text: $this.children('option').eq(i).text(),
+            rel: $this.children('option').eq(i).val()
+        }).appendTo($list);
+        //if ($this.children('option').eq(i).is(':selected')){
+        //  $('li[rel="' + $this.children('option').eq(i).val() + '"]').addClass('is-selected')
+        //}
+    }
+  
+    var $listItems = $list.children('li');
+  
+    $styledSelect.click(function(e) {
+        e.stopPropagation();
+        $('div.select-styled.active').not(this).each(function(){
+            $(this).removeClass('active').next('ul.select-options').hide();
+        });
+        $(this).toggleClass('active').next('ul.select-options').toggle();
+    });
+  
+    $listItems.click(function(e) {
+        e.stopPropagation();
+        $styledSelect.text($(this).text()).removeClass('active');
+        $this.val($(this).attr('rel'));
+        $list.hide();
+        //console.log($this.val());
+    });
+  
+    $(document).click(function() {
+        $styledSelect.removeClass('active');
+        $list.hide();
+    });
+
+});
+
+
+
+/* ============ popup ================ */
+$(".btn_coupon").on("click", function(){
+  $(".couponPop, body").addClass("active");
+});
+
+
+$(".btn_pop").on("click", function(){
+  $(".coupon_popup, body").addClass("active");
+});
+
+$(".unSub").on("click", function(){
+  $(".unsubPop, body").addClass("active");
+});
+
+
+$(".overlay, .popup_btn, .coupon_close").on("click", function(){
+  $(".coupon_popup, body").removeClass("active");
+});
+
+
+    </script>
+    
+</body>
+</html>
+
+
+
+
+

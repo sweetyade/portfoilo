@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>2_9_1.시간예약 - 달력</title>
+</head>
+
+<style>
+  .contents{
+    padding-top: 1rem;
+  }
+  .servey_top{
+    padding-top: 1.75rem;
+  }
+
+  .rsv_cpl .line_bg_gr.top{
+    top: 4rem;
+  }
+
+  .rsv_cpl{
+    padding-bottom: 5rem;
+  }
+
+
+  @media (min-width: 768px){
+    .servey_top{
+    padding-top: 3rem;
+  }
+
+  .rsv_cpl{
+    padding-bottom: 8rem;
+  }
+
+    .rsv_cpl .line_bg_gr.top{
+      top: 6.5rem;
+    }
+  }
+</style>
+<body>
+  <main class="main">
+    <div class="header">
+      <p class="header_back"><img src="../../images/back.svg" alt=""></p>
+    </div>
+
+    <div class="contents rsv_cpl">
+      <div class="line_bg_gr top">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="servey_top">
+        <div class="servey_title">
+          <p class="title">방문 상담 시간을 선택해주세요</p>
+          <p class="sub_txt">시간은 하나만 선택할 수 있어요</p>
+        </div>
+      </div>
+
+      <div class="select_rsv_day">
+        <div class="rsv_title">
+          <p class="title">날짜선택</p>
+
+          <p class="rsv_date">2023.07.26 <span><img src="../../images/top.svg" alt=""></span></p>
+        </div>
+
+        <div id="datepicker"></div>
+      </div>
+
+      <div class="select_rsv">
+        <div class="rsv_title">
+          <p class="p3_fb gray02">오전</p>
+
+          <div class="rsv_type">
+            <p><span class="type"></span>가능</p>
+            <p><span class="type"></span>불가</p>
+            <p><span class="type"></span>선택</p>
+          </div>
+        </div>
+
+        <div class="select_time_list">
+          <p class="slt_time disabled">10:30</p>
+          <p class="slt_time">11:00</p>
+          <p class="slt_time disabled">11:30</p>
+          <p class="slt_time disabled">12:00</p>
+        </div>
+      </div>
+
+      <div class="select_rsv">
+        <div class="rsv_title">
+          <p class="p3_fb gray02">오후</p>
+        </div>
+
+        <div class="select_time_list">
+          <p class="slt_time">12:30</p>
+          <p class="slt_time">01:00</p>
+          <p class="slt_time">01:30</p>
+          <p class="slt_time">02:00</p>
+          <p class="slt_time">02:30</p>
+          <p class="slt_time disabled">03:00</p>
+          <p class="slt_time">03:30</p>
+          <p class="slt_time">04:00</p>
+          <p class="slt_time">04:30</p>
+          <p class="slt_time">05:00</p>
+          <p class="slt_time disabled">05:30</p>
+          <p class="slt_time">06:00</p>
+          <p class="slt_time">06:30</p>
+          <p class="slt_time">07:00</p>
+          <p class="slt_time disabled">07:30</p>
+          <p class="slt_time">08:00</p>
+        </div>
+      </div>
+
+      <div class="btn_wide">
+        <button class="btn_lg btn_basic btnNext" onclick="location.href='2_9_2_1_time_cpl.html';" disabled>다음</button>
+      </div>
+  </div>
+
+  </main>
+  <script src="../../js/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script>
+    //뒤로가기
+    $(document).ready(function() {
+      // on click
+      $('.header_back').click(function(e){
+        // prevent default behavior
+        e.preventDefault();
+        // Go back 1 page 
+        window.history.back();
+        // can also use 
+        // window.history.go(-1);
+      });
+    });
+
+    
+    $(".slt_time").click(function(){
+      $(".rsv_cpl").find(".slt_time").removeClass("select");
+      if(!$(this).hasClass("disabled")){
+        $(this).addClass("select");
+        $(".btnNext").attr("disabled",false);
+      }
+    });
+
+    //달력접기
+    $(".rsv_date").click(function() {
+      $("#datepicker").slideToggle().toggleClass("cld_fold");
+      if($("#datepicker").hasClass("cld_fold")){
+        $(".rsv_date span").css("transform","rotate(180deg)")
+      }else{
+        $(".rsv_date span").css("transform","rotate(0)")
+
+      }
+    })
+
+
+    //달력
+    // 달력
+    var datePicker;
+    datePicker = $('#datepicker').datepicker({
+          prevText : '<img src="../../images/left.svg">'  // 이전달 이동 버튼 html 태그 포함 가능
+      ,   nextText : '<img src="../../images/right.svg">'  // 다음달 이동 버튼
+      // ,   showButtonPanel : true     // 오늘 날짜 바로가기 버튼
+      ,   currentText: '오늘' // 오늘 텍스트 변경
+      ,   showOtherMonths : false  // 다음달 일수까지 달력에 표시
+      ,   showMonthAfterYear : true  //  // MM YYYY -> YYYY MM 월 표시 위치 변경
+      ,   monthNames: [ '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12' ]  // 월 표시 이름
+      ,   dayNamesMin: ['일', '월', '화', '수', '목', '금', '토']  // 요일 표시 이름
+      ,   minDate : '0'      // +- 기본 일, D : 일, M : 월, Y : 년
+      // ,   maxDate : '+15D'    // +- 기본 일, D : 일, M : 월, Y : 년  ex) "+1m +1w" 선택할 수 있는 최대 날짜  +1m +1w 은 1달 1주일 뒤 까지 선택가능
+      ,   yearSuffix: '년'
+      ,   onSelect: function(dateString, inst) {
+              console.log(inst);
+              console.log(dateString)
+              console.log($(this))
+      }
+
+      // 현재 선택된 정보
+      // $('#datepicker').datepicker('setDate', new Date('2023-01-15'))
+
+    });
+  </script>
+</body>
+</html>

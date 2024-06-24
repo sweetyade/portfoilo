@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>1-6-1.후기작성페이지</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="back">
+        <img src="../../images/icon/system_back.svg" alt="뒤로가기" />
+      </div>
+      <h2 class="page_name">영양제 후기 작성</h2>
+      <div class="header_icon">
+        <button class="btn_s" disabled>등록</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="write_wrap">
+        <div class="select_block">
+          <div class="overlay"></div>
+          <button class="selectBtn" id="">작성할 영양제를 선택해주세요</button>
+          <!-- .optSlt -->
+          <ul class="optionmodal">
+            <li class="optionItem">피토틱스 블랙</li>
+            <li class="optionItem">제품명</li>
+            <li class="optionItem">제품명</li>
+            <li class="optionItem op_disabled">제품명</li>
+            <p class="toast">30회 이상 섭취해야 후기작성이 가능해요</p>
+          </ul>
+        </div>
+
+        <div class="textarea_block mt_0_75">
+          <textarea name="" id="textarea01" cols="30" rows="10" placeholder="사용후기를 작성해주세요"></textarea>
+        </div>
+
+        <div class="review_star inner_tb_1">
+          <span class="rank_star" onclick="togglestar(1)"></span>
+          <span class="rank_star" onclick="togglestar(2)"></span>
+          <span class="rank_star" onclick="togglestar(3)"></span>
+          <span class="rank_star" onclick="togglestar(4)"></span>
+          <span class="rank_star" onclick="togglestar(5)"></span>
+        </div>
+
+
+        <div class="swiper addfile_slide"> 
+          <div class="swiper-wrapper">
+            <div class="swiper-slide addfile">
+              <input type="file" id="addimg">
+              <label for="addimg"></label>
+            </div>
+            <div class="swiper-slide img_list">
+              <img src="../../images/guide_sample.png" alt="">
+              <p class="deleteImg"></p>
+            </div>
+            <div class="swiper-slide img_list">
+              <img src="../../images/guide_sample2.png" alt="">
+              <p class="deleteImg"></p>
+            </div>
+            <div class="swiper-slide img_list">
+              <img src="../../images/guide_sample3.png" alt="">
+              <p class="deleteImg"></p>
+            </div>
+            <div class="swiper-slide img_list">
+              <img src="../../images/guide_sample4.png" alt="">
+              <p class="deleteImg"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer" style="padding-bottom: 2rem">
+        <div class="footer_notice">
+          <p class="notice_txt">악의적으로 서비스의 기능 및 가치를 저하시킬 수 있는 오해의 소지가 담긴 후기는 사전고지 없이 삭제될 수 있습니다.</p>
+          <p class="notice_txt">욕설, 비속어, 스팸성 도배 등의 게시글로 반복되는 동일한 단어나 문장이 담긴 후기는 사전고지 없이 삭제될 수 있습니다.</p>
+          <p class="notice_txt">이미지 한개당 최대 10MB의 용량이 넘어가는 경우 업로드에 제한이 있을 수 있습니다.</p>
+          <p class="notice_txt">첨부파일은 최대 2개까지만 등록이 가능합니다.</p>
+        </div>
+      </footer>
+
+      <div class="btn_wrap pd_bottom_s">
+        <button class="btn_b btn_basic">등록하기</button>
+      </div>
+    </main>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script>
+      //셀렉트
+      const label = document.querySelectorAll(".selectBtn");
+      label.forEach(function (lb) {
+        lb.addEventListener("click", (e) => {
+          let optionList = lb.nextElementSibling;
+          let optionItems = optionList.querySelectorAll(".optionItem");
+          clickLabel(lb, optionItems);
+        });
+      });
+      const clickLabel = (lb, optionItems) => {
+        if (lb.parentNode.classList.contains("active")) {
+          lb.parentNode.classList.remove("active");
+          optionItems.forEach((opt) => {
+            opt.removeEventListener("click", () => {
+              handleSelect(lb, opt);
+            });
+          });
+        } else {
+          lb.parentNode.classList.add("active");
+          optionItems.forEach((opt) => {
+            opt.addEventListener("click", () => {
+              handleSelect(lb, opt);
+            });
+          });
+        }
+      };
+      const handleSelect = (label, item) => {
+        label.innerHTML = item.textContent;
+        label.parentNode.classList.remove("active");
+        label.classList.add("optSlt");
+      };
+
+
+      //별점
+      var stars = document.querySelectorAll(".rank_star");
+      function togglestar(data) {
+
+        for (let i=0; i<stars.length; i++) {
+          stars[i].classList.remove("star_on")
+        };
+
+        for (let i=0; i<data; i++) {
+          stars[i].classList.add("star_on")
+        }
+      }
+
+
+
+      //이미지추가
+      var addimg = new Swiper(".addfile_slide", {
+      slidesPerView: "auto",
+      spaceBetween: 8,
+    });
+
+    //추가된 이미지 삭제
+    $(".deleteImg").click(function () {
+      $(this).parents(".img_list").fadeOut(function() {
+        $(this).delay(1000).remove()
+      });
+    });
+
+
+    //글쓰기전 비활성화
+    $("textarea, .selectBtn")
+    </script>
+  </body>
+</html>

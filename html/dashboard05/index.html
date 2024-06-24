@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<head lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=2.0">
+
+        <!-- ============== css ================== -->
+        <link rel="stylesheet" href="css/style.css">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>ns홈쇼핑 대시보드</title>
+    </head>
+    <body>
+        <div style="text-align:center; font-size: .75rem; background-color: #222; color: #fff; width: 100%; padding: 10px;">
+            <p>상단에 메뉴로 서브페이지 확인 가능합니다.</p>
+        </div>
+        <div class="wrap">
+            <div class="header">
+                <a href="index.html" class="header_logo">
+                    <img src="images/logo.png" alt="" class="logo_img">
+                </a>
+
+                <div class="nav">
+                    <a href="index.html" class="nav_link selected">VOC 현황</a>
+                    <a href="sub1.html" class="nav_link">편성별 누적 현황(TV & CTCOM)</a>
+                    <a href="sub2.html" class="nav_link">채널별 VOC 관련 현황</a>
+                </div>
+
+                <div class="header_date">
+                    <p class="date_txt">방송일자</p>
+                    <input type="text" class="input_date" placeholder="2022-01-04 (화요일)" disabled>
+                </div>
+            </div>
+
+            <div class="main">
+                <!-- 메인 상단 바-->
+                <div class="main_bar">
+                    <div class="flex_l">
+                        <p class="bar_title">방송 OnAir <span>19:20 ~ 20:30</span></p>
+                        <p class="bar_point">
+                            <span>(프레쉬) 자동주문</span>
+                            <span>플러스</span>
+                            <span>풀세트 배송</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <!-- 주요 키워드 10 -->
+                    <div class="section_400">
+                        <p class="section_400-title"><span class="color_red">주요</span>키워드 Top10</p>
+                        <p class="best_title">
+                            <span class="best_rk">순위</span>
+                            <span class="best_key">키워드</span>
+                            <span class="best_no">건수</span>
+                        </p>
+
+                        <ol class="best_list10">
+                            <li class="point_bg">
+                                <span class="best_rk">1</span>
+                                <span class="best_key">일시불</span>
+                                <span class="best_no">2,000</span>
+                            </li>
+                            <li class="point_bg">
+                                <span class="best_rk">2</span>
+                                <span class="best_key">면도기</span>
+                                <span class="best_no">1,300</span>
+                            </li>
+                            <li class="point_bg">
+                                <span class="best_rk">3</span>
+                                <span class="best_key">도루코</span>
+                                <span class="best_no">900</span>
+                            </li>
+                            <li>
+                                <span class="best_rk">4</span>
+                                <span class="best_key">할인</span>
+                                <span class="best_no">500</span>
+                            </li>
+                            <li>
+                                <span class="best_rk">5</span>
+                                <span class="best_key">원플러스원원플러스원</span>
+                                <span class="best_no">200</span>
+                            </li>
+                            <li>
+                                <span class="best_rk">6</span>
+                                <span class="best_key">풀세트구성</span>
+                                <span class="best_no">150</span>
+                            </li>
+                            <li>
+                                <span class="best_rk">7</span>
+                                <span class="best_key">자동주문</span>
+                                <span class="best_no">100</span>
+                            </li>
+                            <li>
+                                <span class="best_rk">8</span>
+                                <span class="best_key">플러스</span>
+                                <span class="best_no">90</span>
+                            </li>
+                            <li>
+                                <span class="best_rk">9</span>
+                                <span class="best_key">프레쉬</span>
+                                <span class="best_no">80</span>
+                            </li>
+                            <li>
+                                <span class="best_rk">10</span>
+                                <span class="best_key">페이스</span>
+                                <span class="best_no">30</span>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- 주요 키워드 5 -->
+                    <div class="section_right">
+                        <div class="section_row">
+                            <div class="keyword_bg">
+                                <p class="keyword_title color_red">주요 키워드</p>
+    
+                                <div class="keyword_tag">
+                                    <span style="top: 30%; left: 20%;" class="keycolor1 keysize1">면도기</span>
+                                    <span style="top: 50%; left: 10%;" class="keycolor2 keysize2">일시불</span>
+                                    <span style="bottom: 10%; right: 20%;" class="keycolor3 keysize3">자동주문</span>
+                                    <span style="top: 10%; right: 30%;" class="keycolor4 keysize4">더블</span>
+                                    <span style="top: 60%; left: 80%;" class="keycolor5 keysize5">무료체험</span>
+                                    <span style="top: 30%; left: 20%;" class="keycolor6 keysize6">도루코페이스</span>
+                                </div>
+                            </div>
+    
+                            <div class="best5">
+                                <p class="best5_title"><span class="color_blue">주문 Call</span> 키워드 Top5</p>
+                                <p class="best_title">
+                                    <span class="best_rk">순위</span>
+                                    <span class="best_key">키워드</span>
+                                    <span class="best_no">건수</span>
+                                </p>
+                                <ol class="best_list5">
+                                    <li>
+                                        <span class="best_rk">1</span>
+                                        <span class="best_key">일시불</span>
+                                        <span class="best_no">2,000</span>
+                                    </li>
+                                    <li>
+                                        <span class="best_rk">2</span>
+                                        <span class="best_key">면도기</span>
+                                        <span class="best_no">1,300</span>
+                                    </li>
+                                    <li>
+                                        <span class="best_rk">3</span>
+                                        <span class="best_key">도루코</span>
+                                        <span class="best_no">900</span>
+                                    </li>
+                                    <li>
+                                        <span class="best_rk">4</span>
+                                        <span class="best_key">할인</span>
+                                        <span class="best_no">500</span>
+                                    </li>
+                                    <li>
+                                        <span class="best_rk">5</span>
+                                        <span class="best_key">원플러스원원플러스원</span>
+                                        <span class="best_no">200</span>
+                                    </li>
+                                </ol>
+                            </div>
+    
+                            <div class="best5">
+                                <p class="best5_title"><span class="color_green">CS Call</span> 키워드 Top5</p>
+                                <p class="best_title">
+                                    <span class="best_rk">순위</span>
+                                    <span class="best_key">키워드</span>
+                                    <span class="best_no">건수</span>
+                                </p>
+                                <ol class="best_list5">
+                                    <li>
+                                        <span class="best_rk">1</span>
+                                        <span class="best_key">일시불</span>
+                                        <span class="best_no">2,000</span>
+                                    </li>
+                                    <li>
+                                        <span class="best_rk">2</span>
+                                        <span class="best_key">면도기</span>
+                                        <span class="best_no">1,300</span>
+                                    </li>
+                                    <li>
+                                        <span class="best_rk">3</span>
+                                        <span class="best_key">도루코</span>
+                                        <span class="best_no">900</span>
+                                    </li>
+                                    <li>
+                                        <span class="best_rk">4</span>
+                                        <span class="best_key">할인</span>
+                                        <span class="best_no">500</span>
+                                    </li>
+                                    <li>
+                                        <span class="best_rk">5</span>
+                                        <span class="best_key">원플러스원</span>
+                                        <span class="best_no">200</span>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+    
+                        <div class="section_row">
+                            <div class="keyword_circle">
+                                <span style="top: 20%; right: 10%;" class="c_color1 c_size1">면도기</span>
+                                <span style="top: 10%; right: 30%;" class="c_color2 c_size2">원플러스원</span>
+                                <span style="top: 40%; right: 50%;" class="c_color3 c_size3">자동주문</span>
+                                <span style="top: 60%; left: 10%;" class="c_color4 c_size1">반품배송</span>
+                                <span style="top: 20%; left: 10%;" class="c_color1 c_size2">일주일</span>
+                                <span style="bottom: 20%; right: 10%;" class="c_color2 c_size3">방송중</span>
+                            </div>
+
+                            <div class="keyword_circle">
+                                <span style="left: 20%; bottom: 10%;" class="c_color3 c_size1">면도기</span>
+                                <span style="top: 10%; right: 30%;" class="c_color4 c_size2">원플러스원</span>
+                                <span style="top: 40%; right: 40%;" class="c_color1 c_size3">자동주문</span>
+                                <span style="top: 10%; left: 10%;" class="c_color2 c_size1">반품배송</span>
+                                <span style="bottom: 20%; right: 10%;" class="c_color3 c_size2">일주일</span>
+                                <span style="top: 20%; right: 10%;" class="c_color4 c_size3">방송중</span>
+                            </div>
+    
+                            <div class="keyword_circle">
+                                <span style="left: 60%; bottom: 10%;" class="c_color2 c_size1">면도기</span>
+                                <span style="top: 30%; right: 50%;" class="c_color1 c_size2">원플러스원</span>
+                                <span style="top: 3%; right: 30%;" class="c_color4 c_size3">자동주문</span>
+                                <span style="bottom: 10%; left: 10%;" class="c_color3 c_size1">반품배송</span>
+                                <span style="left:10%; top: 10%;" class="c_color2 c_size2">일주일</span>
+                                <span style="top: 20%; right: 10%;" class="c_color1 c_size3">방송중</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</head>

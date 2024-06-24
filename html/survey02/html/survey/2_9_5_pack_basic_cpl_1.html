@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>2_9_5.수령내차례(팩별로색상다름) - 수령전(최종)</title>
+</head>
+<body>
+  <main class="main">
+    <div class="receive_top">
+      <div class="top_title">
+        <div class="line_bg_bk top">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="top_txt">
+          <p class="name">최대오글자님</p>
+          <p class="txt">에너지가 준비되었어요<br>
+            지금 핏타민 매장으로 와주세요</p>
+        </div>
+          <div class="line_bg_bk bottom">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+      </div>
+    </div>
+
+    <div class="receive_block">
+      <div class="receive_list">
+        <p class="title">Ready made Pack</p>
+
+        <div class="receive_data">
+          <div class="data_in">
+            <div class="name_list">
+              <p class="name">만성 피로 & 면역 관리 유형</p>
+              <p class="name_en">Daily Energy</p>
+            </div>
+            <p class="no">1</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="receive_list">
+        <p class="title">Order made Pack</p>
+
+        <div class="receive_data">
+          <div class="data_in">
+            <div class="name_list">
+              <p class="name">최대오글자님 오더메이드</p>
+              <p class="name_en">1회차</p>
+            </div>
+            <p class="no">1</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="receive_list">
+        <p class="title">Ready made Pack</p>
+
+        <div class="receive_data">
+          <div class="data_in">
+            <div class="name_list">
+              <p class="name">비타민B 컴플렉스+</p>
+            </div>
+            <p class="no">1</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="map_toggle">
+      <div class="map_title">
+        <p>맞춤 영양제 찾으시는 곳</p>
+        <img src="../../images/top.svg" alt="">
+      </div>
+
+      <div class="map_con">
+        <p class="p6_fb centertxt">주문하신 맞춤 영양제를 수령을 위해<br>
+          핏타민 스토어 본 매장으로 방문해주세요!</p>
+        <p class="map_img">
+          <img src="../../images/pre_map_m.png" class="dp_m" alt="">
+          <img src="../../images/pre_map_pc.png" class="dp_pc" alt="">
+        </p>
+      </div>
+      
+      <div class="receive_fix">
+        <span></span>
+        <p class="txt">빠르게 확인할 수 있도록<br>
+          핏타민 매니저에게 화면을 보여주세요</p>
+        <span></span>
+      </div>
+    </div>
+
+    
+      
+  </main>
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/jquery-ui.min.css"></script>
+
+  <script>
+  // $(window).scrollTop(1);
+  // $(window).scroll(function() { 
+  
+  //   $(".receive_fix").css("position" , "relative")
+  // });
+
+    $(".map_title").click(function(){
+      $(this).toggleClass("open");
+      $(".map_con").slideToggle();
+    })
+  </script>
+</body>
+</html>

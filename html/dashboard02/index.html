@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout-mode="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
+  <link rel="stylesheet" href="css/sample_style.css">
+
+
+  <title>대시보드 메인 샘플</title>
+</head>
+<body class="light">
+  <main id="main">
+    <section id="sidebar">
+      <h1 class="logo"><a href="#"><img src="images/logo.png" alt=""></a></h1>
+
+      <nav id="nav">
+        <div class="nav_group">
+          <p class="title">시스템 기초 정보 관리</p>
+
+          <div class="nav_menu">
+            <p class="nav_tab"><img src="images/icon_settings.svg">시스템</p>
+            <div class="link_con">
+              <a href="#" class="nav_link">관리자</a>
+              <a href="#" class="nav_link">메뉴관리</a>
+              <a href="#" class="nav_link">공통코드 관리</a>
+            </div>
+          </div>
+          <div class="nav_menu">
+            <p class="nav_tab"><img src="images/icon_box.svg">상품관리</p>
+            <div class="link_con">
+              <a href="#" class="nav_link">상품분류코드</a>
+              <a href="#" class="nav_link">상품관리</a>
+            </div>
+          </div>
+          <div class="nav_menu">
+            <p class="nav_tab"><img src="images/icon_survey.svg">설문관리</p>
+            <div class="link_con">
+              <a href="#" class="nav_link">설문항목 관리</a>
+              <a href="#" class="nav_link">설문 테스트</a>
+            </div>
+          </div>
+          <div class="nav_menu">
+            <p class="nav_tab"><img src="images/icon_pulse.svg">운동(포즈)관리</p>
+            <div class="link_con">
+              <a href="#" class="nav_link">운동(포즈)관리</a>
+            </div>
+          </div>
+          <div class="nav_menu">
+            <p class="nav_tab"><img src="images/icon_global.svg">글로벌SCM</p>
+            <div class="link_con">
+              <a href="#" class="nav_link">물류관리(Q10)</a>
+              <a href="#" class="nav_link">이벤트 할인설정</a>
+              <a href="#" class="nav_link">상품옵션정보관리</a>
+            </div>
+          </div>
+          <div class="nav_menu">
+            <p class="nav_tab"><img src="images/icon_megaphone.svg">그로스</p>
+            <div class="link_con">
+              <a href="#" class="nav_link">일별구독통계</a>
+              <a href="#" class="nav_link">일별구독정산</a>
+              <a href="#" class="nav_link">캐시관리</a>
+              <a href="#" class="nav_link">2.0 일별섭취기록현황</a>
+              <a href="#" class="nav_link">2.0 회차별 섭취기록 유치현황</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav_group">
+          <p class="title">고객관리</p>
+
+          <div class="nav_menu">
+            <p class="nav_tab"><img src="images/icon_user.svg">시스템 사용자</p>
+            <div class="link_con">
+              <a href="#" class="nav_link">핏타민 사용자</a>
+              <a href="#" class="nav_link">핏타민사용자(기간별)</a>
+              <a href="#" class="nav_link">섭취포인트관리</a>
+            </div>
+          </div>
+          <div class="nav_menu">
+            <p class="nav_tab"><img src="images/icon_capsule.svg">서비스제공(약국 등)</p>
+            <div class="link_con">
+              <a href="#" class="nav_link">약국 관리</a>
+              <a href="#" class="nav_link">상담 정산</a>
+              <a href="#" class="nav_link">건강 QA(약사)</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav_group">
+          <p class="title">현황조회</p>
+
+          <div class="nav_menu">
+            <p class="nav_tab"><img src="images/icon_pages.svg">사이트 이력</p>
+            <div class="link_con">
+              <a href="#" class="nav_link">유입분석(핏타민2.0)</a>
+            </div>
+          </div>
+          <div class="nav_menu">
+            <p class="nav_tab"><img src="images/icon_chart.svg">현황</p>
+            <div class="link_con">
+              <a href="#" class="nav_link">핏타민 사용자 현황</a>
+              <a href="#" class="nav_link">염증이 접속 현황</a>
+              <a href="#" class="nav_link">사이트 이력 추적</a>
+              <a href="#" class="nav_link">핏타민 상담관리</a>
+              <a href="#" class="nav_link">핏타민 구독현황(조회)</a>
+              <a href="#" class="nav_link">핏타민 구독 정산 현황</a>
+              <a href="#" class="nav_link">상담 예정 현황</a>
+              <a href="#" class="nav_link">상담 매칭 현황</a>
+              <a href="#" class="nav_link">핏타민 접속 현황</a>
+              <a href="#" class="nav_link">결제 현황</a>
+              <a href="#" class="nav_link">핏타민 약사별 상담 완료율</a>
+              <a href="#" class="nav_link">핏타민 약사별 상담 현황</a>
+              <a href="#" class="nav_link">즉시상담 슬롯 현황</a>
+              <a href="#" class="nav_link">유독현황</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav_group">
+          <p class="title">개발 테스트</p>
+
+          <div class="nav_menu">
+            <p class="nav_tab"><img src="images/icon_flask.svg">개발테스트(JAVA)</p>
+            <div class="link_con">
+              <a href="#" class="nav_link">채팅</a>
+              <a href="#" class="nav_link">화상</a>
+              <a href="#" class="nav_link">게시판</a>
+              <a href="#" class="nav_link">협력사관리</a>
+            </div>
+          </div>
+          <div class="nav_menu">
+            <p class="nav_tab"><img src="images/icon_dossier.svg">Open API</p>
+            <div class="link_con">
+              <a href="#" class="nav_link">건강 기능식품</a>
+              <a href="#" class="nav_link">건강기능식품 품목제조신고</a>
+              <a href="#" class="nav_link">직품원재료</a>
+              <a href="#" class="nav_link">식품원재료(식물,동물 등)</a>
+              <a href="#" class="nav_link">품목유형코드</a>
+            </div>
+            
+          </div>
+          <div class="nav_menu">
+            <p class="nav_tab"><img src="images/icon_layout.svg">디자인</p>
+            <div class="link_con">
+              <a href="#" class="nav_link">2단 상단 폼 템플릿</a>
+            </div>
+            
+          </div>
+          <div class="nav_menu">
+            <p class="nav_tab"><img src="images/icon_notification.svg">PUSH</p>
+            <div class="link_con">
+              <a href="#" class="nav_link">PUSH</a>
+            </div>
+          </div>
+          <div class="nav_menu">
+            <p class="nav_tab"><img src="images/icon_edit.svg">게시판</p>
+            <div class="link_con">
+              <a href="#" class="nav_link">게시판 유형1</a>
+              <a href="#" class="nav_link">게시판 유형2</a>
+              <a href="#" class="nav_link">게시판 유형3</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav_group">
+          <p class="title">COMMUNITY</p>
+
+          <div class="nav_menu">
+            <p class="nav_tab"><img src="images/icon_home.svg">홈페이지(kthd.co.kr)</p>
+            <div class="link_con">
+              <a href="#" class="nav_link">Spotlight News</a>
+            </div>
+          </div>
+          <div class="nav_menu">
+            <p class="nav_tab"><img src="images/icon_home.svg">핏타민(fitamin.kr)</p>
+            <div class="link_con">
+              <a href="#" class="nav_link">FAQ 관리</a>
+              <a href="#" class="nav_link">공지사항 관리</a>
+              <a href="#" class="nav_link">구독 후기 관리</a>
+              <a href="#" class="nav_link">기업복지문의</a>
+              <a href="#" class="nav_link">1:1문의</a>
+              <a href="#" class="nav_link">주문 배송 관리</a>
+              <a href="#" class="nav_link">오프라인 생산관리</a>
+              <a href="#" class="nav_link">쿠폰 관리</a>
+              <a href="#" class="nav_link">상품 상세 이미지 관리</a>
+              <a href="#" class="nav_link">배너 관리</a>
+              <a href="#" class="nav_link">이벤트 관리(My Page)</a>
+              <a href="#" class="nav_link">건강 QA</a>
+              <a href="#" class="nav_link">핏타민 유통기한 관리</a>
+              <a href="#" class="nav_link">나의기록(사용자-시간기준)</a>
+              <a href="#" class="nav_link">장바구니</a>
+            </div>
+          </div>
+          <div class="nav_menu">
+            <p class="nav_tab"><img src="images/icon_home.svg">핏타민 약사</p>
+            <div class="link_con">
+              <a href="#" class="nav_link">1:1문의 약사관리</a>
+              <a href="#" class="nav_link">약사 공지사항</a>
+              <a href="#" class="nav_link">약사 FAQ 관리</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section id="container">
+      <div class="con_header">
+        <div class="open_toggle">
+          <div class="burger"></div>
+        </div>
+        <div class="login_info">
+          <p class="server_type">개발서버</p>
+          <div class="user_name">
+            <p class="prf"></p>
+            킥더허들
+          </div>
+        </div>
+      </div>
+
+      <div class="con_main">
+        <!-- 상단 매출 카드 -->
+        <div class="block">
+          <div class="card_list">
+            <div class="card">
+              <p class="title">매출목표</p>
+              <p class="cost">￦2,929,300,000</p>
+              <p class="point down">￦-34,100,000</p>
+              <div class="icon up">35%</div>
+            </div>
+            <div class="card">
+              <p class="title">광고예산</p>
+              <p class="cost">-</p>
+              <p class="point">-</p>
+              <div class="icon">-</div>
+            </div>
+            <div class="card">
+              <p class="title">누적매출(전체) 부가세제외 취소계산X</p>
+              <p class="cost">￦565,478,064</p>
+              <p class="point up">￦-260,198,909</p>
+              <div class="icon down">5%</div>
+            </div>
+            <div class="card">
+              <p class="title">누적광고비</p>
+              <p class="cost">￦366,168,928</p>
+              <p class="point down">￦-49,400,518</p>
+              <div class="icon down">3%</div>
+            </div>
+          </div>
+          <div class="card_list">
+            <div class="card card_grid">
+              <div>
+                <p class="title">유입량</p>
+                <p class="cost">54,903</p>
+                <p class="point down">-46,392</p>
+              </div>
+              <div>
+                <p class="title">결제수</p>
+                <p class="cost">4,500</p>
+                <p class="point down">-3,152</p>
+              </div>
+              <div>
+                <p class="title">전환율</p>
+                <p class="cost">8.20%</p>
+                <p class="point up">1%</p>
+              </div>
+              <div>
+                <p class="title">객단가</p>
+                <p class="cost">￦98,107</p>
+                <p class="point up">￦645</p>
+              </div>
+            </div>
+            <div class="card" style="display:grid; align-content: space-between;">
+              <div>
+                <p class="title">ROAS</p>
+                <p class="cost">169,87%</p>
+                <p class="point down">-48.68%</p>
+              </div>
+              <div class="graph">
+                <p style="height: 80%"></p>
+                <p style="height: 54%"></p>
+                <p style="height: 76%"></p>
+                <p style="height: 23%"></p>
+                <p style="height: 45%"></p>
+                <p style="height: 66%"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 메인 테이블 -->
+        <div class="block">
+          <div class="table">
+            <div class="table_header">자사 + 스팜 매출 순위</div>
+            <div class="table_main">
+              <table cellpadding="0" cellspacing="0">
+                <colgroup>
+                  <col width="5%" />
+                  <col width="30%" />
+                  <col width="25%" />
+                  <col width="25%" />
+                  <col width="15%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>제품</th>
+                    <th class="txt_right">매출 <img src="images/icon_tdown.svg" alt="" class="t_ilter"> </th>
+                    <th class="txt_right">광고비</th>
+                    <th class="txt_right">ROAS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="txt_center">1</td>
+                    <td class="txt_center">발효율피</td>
+                    <td class="txt_right">114,717,273</td>
+                    <td class="txt_right">66,655,382</td>
+                    <td class="txt_right">189.32%</td>
+                  </tr>
+                  <tr>
+                    <td class="txt_center">1</td>
+                    <td class="txt_center">발효율피</td>
+                    <td class="txt_right">114,717,273</td>
+                    <td class="txt_right">66,655,382</td>
+                    <td class="txt_right">189.32%</td>
+                  </tr>
+                  <tr>
+                    <td class="txt_center">1</td>
+                    <td class="txt_center">발효율피</td>
+                    <td class="txt_right">114,717,273</td>
+                    <td class="txt_right">66,655,382</td>
+                    <td class="txt_right">189.32%</td>
+                  </tr>
+                  <tr>
+                    <td class="txt_center">1</td>
+                    <td class="txt_center">발효율피</td>
+                    <td class="txt_right">114,717,273</td>
+                    <td class="txt_right">66,655,382</td>
+                    <td class="txt_right">189.32%</td>
+                  </tr>
+                  <tr>
+                    <td class="txt_center">1</td>
+                    <td class="txt_center">발효율피</td>
+                    <td class="txt_right">114,717,273</td>
+                    <td class="txt_right">66,655,382</td>
+                    <td class="txt_right">189.32%</td>
+                  </tr>
+                  <tr>
+                    <td class="txt_center">1</td>
+                    <td class="txt_center">발효율피</td>
+                    <td class="txt_right">114,717,273</td>
+                    <td class="txt_right">66,655,382</td>
+                    <td class="txt_right">189.32%</td>
+                  </tr>
+                  <tr>
+                    <td class="txt_center">1</td>
+                    <td class="txt_center">발효율피</td>
+                    <td class="txt_right">114,717,273</td>
+                    <td class="txt_right">66,655,382</td>
+                    <td class="txt_right">189.32%</td>
+                  </tr>
+                  <tr>
+                    <td class="txt_center">1</td>
+                    <td class="txt_center">발효율피</td>
+                    <td class="txt_right">114,717,273</td>
+                    <td class="txt_right">66,655,382</td>
+                    <td class="txt_right">189.32%</td>
+                  </tr>
+                  <tr>
+                    <td class="txt_center">1</td>
+                    <td class="txt_center">발효율피</td>
+                    <td class="txt_right">114,717,273</td>
+                    <td class="txt_right">66,655,382</td>
+                    <td class="txt_right">189.32%</td>
+                  </tr>
+                  <tr>
+                    <td class="txt_center">1</td>
+                    <td class="txt_center">발효율피</td>
+                    <td class="txt_right">114,717,273</td>
+                    <td class="txt_right">66,655,382</td>
+                    <td class="txt_right">189.32%</td>
+                  </tr>
+                  <tr>
+                    <td class="txt_center">1</td>
+                    <td class="txt_center">발효율피</td>
+                    <td class="txt_right">114,717,273</td>
+                    <td class="txt_right">66,655,382</td>
+                    <td class="txt_right">189.32%</td>
+                  </tr>
+                  <tr>
+                    <td class="txt_center">1</td>
+                    <td class="txt_center">발효율피</td>
+                    <td class="txt_right">114,717,273</td>
+                    <td class="txt_right">66,655,382</td>
+                    <td class="txt_right">189.32%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="table">
+            <div class="table_header">광고현황</div>
+            <div class="table_bottom">
+              <table cellpadding="0" cellspacing="0">
+                <colgroup>
+                  <col width="40%" />
+                  <col width="30%" />
+                  <col width="30%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th class="txt_left">총 합계</th>
+                    <th class="txt_right">366,168,928</th>
+                    <th class="txt_right">-43,402,308</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            <div class="table_main"> 
+              <table cellpadding="0" cellspacing="0">
+                <colgroup>
+                  <col width="40%" />
+                  <col width="30%" />
+                  <col width="30%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th class="txt_left">광고매체</th>
+                    <th class="txt_right">금액</th>
+                    <th class="txt_right"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>구글</td>
+                    <td class="txt_right">189,508,881</td>
+                    <td class="up txt_right">27,232,219</td>
+                  </tr>
+                  <tr>
+                    <td>구글</td>
+                    <td class="txt_right">189,508,881</td>
+                    <td class="down txt_right">27,232,219</td>
+                  </tr>
+                  <tr>
+                    <td>구글</td>
+                    <td class="txt_right">189,508,881</td>
+                    <td class="up txt_right">27,232,219</td>
+                  </tr>
+                  <tr>
+                    <td>구글</td>
+                    <td class="txt_right">189,508,881</td>
+                    <td class="up txt_right">27,232,219</td>
+                  </tr>
+                  <tr>
+                    <td>구글</td>
+                    <td class="txt_right">189,508,881</td>
+                    <td class="up txt_right">27,232,219</td>
+                  </tr>
+                  <tr>
+                    <td>구글</td>
+                    <td class="txt_right">189,508,881</td>
+                    <td class="up txt_right">27,232,219</td>
+                  </tr>
+                  <tr>
+                    <td>구글</td>
+                    <td class="txt_right">189,508,881</td>
+                    <td class="up txt_right">27,232,219</td>
+                  </tr>
+                </p>
+                <p>
+                  <tr>
+                    <td>구글</td>
+                    <td class="txt_right">189,508,881</td>
+                    <td class="up txt_right">27,232,219</td>
+                  </tr>
+                  <tr>
+                    <td>구글</td>
+                    <td class="txt_right">189,508,881</td>
+                    <td class="up txt_right">27,232,219</td>
+                  </tr>
+                  <tr>
+                    <td>구글</td>
+                    <td class="txt_right">189,508,881</td>
+                    <td class="up txt_right">27,232,219</td>
+                  </tr>
+                  <tr>
+                    <td>구글</td>
+                    <td class="txt_right">189,508,881</td>
+                    <td class="up txt_right">27,232,219</td>
+                  </tr>
+                  <tr>
+                    <td>구글</td>
+                    <td class="txt_right">189,508,881</td>
+                    <td class="up txt_right">27,232,219</td>
+                  </tr>
+                </p>
+                <p>
+                  <tr>
+                    <td>구글</td>
+                    <td class="txt_right">189,508,881</td>
+                    <td class="up txt_right">27,232,219</td>
+                  </tr>
+                  <tr>
+                    <td>구글</td>
+                    <td class="txt_right">189,508,881</td>
+                    <td class="up txt_right">27,232,219</td>
+                  </tr>
+                  <tr>
+                    <td>구글</td>
+                    <td class="txt_right">189,508,881</td>
+                    <td class="up txt_right">27,232,219</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 하단 제품별매출 -->
+        <div class="block">
+          <div class="table" style="padding-bottom: 0;">
+            <p class="table_header">제품별 자사 + 스팜 매출</p>
+
+            <div class="card_grid3">
+              <div class="flex border_r border_b">
+                <div class="flex_1">
+                  <p class="name">발효율피</p>
+                  <p class="title">ROAS</p>
+                  <p class="cost">169,87%</p>
+                  <p class="point up">-48.68%</p>
+                </div>
+                <div class="flex_r">
+                  <div class="flex_in">
+                    <p class="title">누적매출</p>
+                    <p class="cost">163,720,000</p>
+                    <p class="point up">-20,853,636</p>
+                  </div>
+                  <div class="flex_in">
+                    <p class="title">누적광고비</p>
+                    <p class="cost">163,720,000</p>
+                    <p class="point down">-20,853,636</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex border_r border_b">
+                <div class="flex_1">
+                  <p class="name">맨즈</p>
+                  <p class="title">ROAS</p>
+                  <p class="cost">169,87%</p>
+                  <p class="point down">-48.68%</p>
+                </div>
+                <div class="flex_r">
+                  <div class="flex_in">
+                    <p class="title">누적매출</p>
+                    <p class="cost">163,720,000</p>
+                    <p class="point down">-20,853,636</p>
+                  </div>
+                  <div class="flex_in">
+                    <p class="title">누적광고비</p>
+                    <p class="cost">163,720,000</p>
+                    <p class="point up">-20,853,636</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex border_b">
+                <div class="flex_1">
+                  <p class="name">글루코실</p>
+                  <p class="title">ROAS</p>
+                  <p class="cost">169,87%</p>
+                  <p class="point down">-48.68%</p>
+                </div>
+                <div class="flex_r">
+                  <div class="flex_in">
+                    <p class="title">누적매출</p>
+                    <p class="cost">163,720,000</p>
+                    <p class="point down">-20,853,636</p>
+                  </div>
+                  <div class="flex_in">
+                    <p class="title">누적광고비</p>
+                    <p class="cost">163,720,000</p>
+                    <p class="point down">-20,853,636</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex border_r">
+                <div class="flex_1">
+                  <p class="name">바나바</p>
+                  <p class="title">ROAS</p>
+                  <p class="cost">169,87%</p>
+                  <p class="point up">-48.68%</p>
+                </div>
+                <div class="flex_r">
+                  <div class="flex_in">
+                    <p class="title">누적매출</p>
+                    <p class="cost">163,720,000</p>
+                    <p class="point up">-20,853,636</p>
+                  </div>
+                  <div class="flex_in">
+                    <p class="title">누적광고비</p>
+                    <p class="cost">163,720,000</p>
+                    <p class="point up">-20,853,636</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex border_r">
+                <div class="flex_1">
+                  <p class="name">블랙</p>
+                  <p class="title">ROAS</p>
+                  <p class="cost">169,87%</p>
+                  <p class="point down">-48.68%</p>
+                </div>
+                <div class="flex_r">
+                  <div class="flex_in">
+                    <p class="title">누적매출</p>
+                    <p class="cost">163,720,000</p>
+                    <p class="point up">-20,853,636</p>
+                  </div>
+                  <div class="flex_in">
+                    <p class="title">누적광고비</p>
+                    <p class="cost">163,720,000</p>
+                    <p class="point down">-20,853,636</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="flex_1">
+                  <p class="name">이노시톨</p>
+                  <p class="title">ROAS</p>
+                  <p class="cost">169,87%</p>
+                  <p class="point down">-48.68%</p>
+                </div>
+                <div class="flex_r">
+                  <div class="flex_in">
+                    <p class="title">누적매출</p>
+                    <p class="cost">163,720,000</p>
+                    <p class="point down">-20,853,636</p>
+                  </div>
+                  <div class="flex_in">
+                    <p class="title">누적광고비</p>
+                    <p class="cost">163,720,000</p>
+                    <p class="point up">-20,853,636</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/jquery.min.js"></script>
+
+  <script>
+    $('.nav_tab').click(function(){
+      $(this).siblings('.link_con').slideToggle();
+      $(this).toggleClass('open');
+    })
+
+    $('.open_toggle').click(function(){
+      $('.burger').toggleClass('open')
+      if($('#sidebar').hasClass('fold')){
+        $('#sidebar').removeClass('fold');
+      } else{
+        $('#sidebar').addClass('fold');
+        $('#container').css('max-width', '100%')
+      }
+    })
+  </script>
+</body>
+</html>

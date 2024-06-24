@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/rcommon.css">
+  <link rel="stylesheet" href="../../css/guide.css">
+  <link rel="stylesheet" href="../../css/rstyle.css">
+  <title>설문페이지 - 이름입력</title>
+
+  <style>
+    .btnClear{
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  </style>
+
+</head>
+<body>
+    <div class="rmain_wrap grid_btn pd_base svy_bt">
+        <div class="svy_cont">
+          <p class="rtitle">고객님을 어떻게<br>불러드리면 좋을까요?</p>
+          <p class="rtxt mb_1_5">작성한 이름은 약사 상담 및 실제 제품에 사용돼요!</p>
+
+          <div class="input_basic mb_3">
+            <input type="text" class="rinput" placeholder="한글 또는 영문 2~5글자" id="input01">
+            <p class="btnClear"></p>
+          </div>
+        </div>
+        
+        <div class="btn_center">
+          <p class="svy_npop mb_2">작성한 이름은 어디에 보여지게 되나요?</p>
+          <button class="btn_b btn_blue" disabled>다음</button>
+        </div>
+    </div>
+
+
+    <div class="main_popup">
+      <div class="overlay"></div>
+      <div class="pop_bottom">
+        <div class="pop_in">
+          <p class="popup_title">진짜 나만의 영양제를 위해</p>
+          <p class="popup_sub">작성한 이름은 실제 제품에 표기됩니다<br>
+            한글 또는 영문으로 2~5글자 이내로 작성해주세요</p>
+          <div class="pop_dec">
+            <img src="../../images/svy_nimg.png">
+          </div>
+        </div>
+        <div class="btn_center">
+          <button class="btn_b btn_blue closeBtn">확인</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      
+      /* popup */
+    $(".svy_npop").on("click", function(){
+    $(".main_popup, body").addClass("on");
+    });
+
+    $(".closeBtn, .overlay").on("click", function(){
+    $(".main_popup, body").removeClass("on");
+    });
+
+
+          // /* ---- 삭제버튼 ------- */
+    $(document).ready(function(){
+      $('.input_basic').each(function(){
+        $(this).find('.clearInput').on('keyup focus', function(){
+          $(this).siblings('.btnClear').attr('style', 'opacity: 1');
+
+          if($(this).val().length == 0){
+            $(this).siblings('.btnClear').attr('style', 'opacity: 0');
+          } else {
+            $(this).siblings('.btnClear').attr('style', 'opacity: 1');
+          }
+        });
+      
+        // $(this).find('.clearInput').on('blur', function(){
+        //   $(this).siblings('.btnClear').attr('style', 'opacity: 0');
+        // });
+      
+        $(this).find('.btnClear').on('click touchstart', function(){
+          $(this).closest('.input_basic').find('.rinput').val('');
+          $(this).closest('.input_basic').find('.btnClear').attr('style', 'opacity: 0');
+          return false;
+        });
+      });
+    });
+    </script>
+</body>
+</html>

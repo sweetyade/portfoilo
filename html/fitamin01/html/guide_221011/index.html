@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>킥더허들 헬스케어</title>
+    <meta name="keywords" content="킥더허들 헬스케어">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="누구나 누릴 수 있는 일상의 건강">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- ============================ css ======================= -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="../../css/newindex.css"> <!-- 기존 메인 css -->
+    <link rel="stylesheet" href="../../css/m.common.css">
+    <link href="../../css/fitamin_2201819.css" rel="stylesheet"> <!-- 새로 추가된 css -->
+    <link rel="stylesheet" href="../../css/rcommon.css">
+    <link rel="stylesheet" href="../../css/guide.css">
+    <link rel="stylesheet" href="../../css/rstyle.css">
+
+</head>
+<body class="on">
+    <div class="main_wrap">
+        <div class="main">
+            <section class="block01">
+                 <!-- //////// 리뉴얼 추가 ////////// 로그인 시 구독내역 카드뷰 ////////////-->
+                 <!-- ///////////// 이부분만 추가해서 넣어주세요 /////////////// --->
+
+                <div class="visual_subcard" style="background-color: #9DEFFF; display: block;"> <!-- 결제 실패 인포카드-->
+                  <div class="subcard_in error_sub">
+                      <div class="subcard_top flex">
+                        <p class="p3_f">
+                          결제가 실패되었어요.<br>
+                          결제수단을 변경해주세요.
+                        </p>
+                      </div>
+                      <a href="#" class="er_link">결제수단 변경 <i class="ri-arrow-right-s-line"></i></a>
+                  </div>
+                </div>
+
+                <div class="visual_subcard" style="background-color: #9DEFFF; display: block;"> <!-- 결제 실패 인포카드-->
+                  <div class="subcard_in error_sub">
+                      <div class="subcard_top flex">
+                        <p class="p3_f">
+                          11월 10일에 다시 결제될거예요.<br>
+                          결제 진행 전 구독내역을 확인해주세요!
+                        </p>
+                      </div>
+                      <a href="#" class="er_link">구독내역 확인 <i class="ri-arrow-right-s-line"></i></a>
+                  </div>
+                </div>
+
+
+                <div class="visual_subcard" style="background-color: #9DEFFF; display: none;"> <!-- 구독정보 있을 때 -->
+                    <div class="subcard_in">
+                        <div class="subcard_top flex">
+                            <div class="subcard_title flex">
+                                <p class="title">다미니님</p>
+                                <img src="../../images/subcard_title.svg" alt="">
+                            </div>
+                            <a href="#" class="subcard_link flex">마이페이지 <i class="ri-arrow-right-s-line"></i></a>
+                        </div>
+
+                        <div class="subcard_bottom flex">
+                            <div class="subcard_info">
+                                <p>+ 약사상담비 무료 적용</p>
+                                <p>+ 건강지원 20% 할인 중</p>
+                            </div>
+
+                            <div class="subcard_date flex">
+                                <div class="subcard_block">
+                                    <p class="no">5</p>
+                                    <p class="txt">구독 회차</p>
+                                </div>
+                                <div class="subcard_block">
+                                    <p class="no2">07/05<!-- 결제 실패시 -> 결제실패 --></p>
+                                    <a href="#" class="txt flex">결제 일정 <!-- 결제 실패시 -> 결제수단변경 --> <i class="ri-arrow-right-s-line"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /////////////////////// 여기까지 ///////////////////////// -->
+                <div class="visual_wrap">
+                    <div class="visual_list">
+                        <div class="visual_img visual01">
+                            <img class="visual01_bg"
+                                src="../../images/visual_bg.png" alt="">
+        
+                            <h2>
+                                약사가 찾아주는 <br> <span>진짜</span> <strong>맞춤영양제</strong>
+                            </h2>
+        
+                            <img class="visual01_img"
+                                src="../../images/visual_img.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- ============= count block =================-->
+            <section class="block02">
+                <div class="section_container">
+                    <h2>이미 많은 사람들이 <br>
+                    <span>진짜 건강을</span> 만나고 있어요</h2>
+    
+                    <div class="block02_list_n">
+                        <div class="data_item">
+                            <p class="title"><span>이용 회원 수</span> (누적)</p>
+                            <div class="count">
+                                <p class="count_n"><span class="counter" data-number="259064"></span>+</p>
+                                <span>명</span>
+                            </div>
+                        </div>
+                        <div class="data_item">
+                            <p class="title"><span>영양제 종류</span> (구독 누적)</p>
+                            <div class="count">
+                                <p class="count_n"><span class="counter" data-number="30495"></span>+</p>
+                                <span>가지</span>
+                            </div>
+                        </div>
+                        <div class="data_item">
+                            <p class="title"><span>구독 만족도</span></p>
+                            <div class="count">
+                                <p class="count_n"><span class="counter" data-number="4"></span>.<span class="counter" data-number="98"></span></p>
+                                <span>점 / 5</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <p class="txt">2022년 상반기 기준</p>
+                </div>
+            </section>
+    
+            <!--==================== block07 review ====================-->
+            <section class="block07_n">
+                <div class="section_container">
+                    <h2>
+                        <span>“친구들한테 추천했어요!”</span><br> <strong>평점 4.9점</strong>의 실제 후기
+                    </h2>
+
+                    <div class="block07_slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="slide_item swiper-slide bg_y">
+                                <div class="review_user">
+                                    <div class="user_l">
+                                        <img src="../../images/index_review1.png" alt="">
+                                    </div>
+                                    <div class="user_r">
+                                        <p class="name">손민*(28세)</p>
+                                        <p class="subscription">정기구독 3회차</p>
+                                    </div>
+                                </div>
+                                <p class="review_n">
+                                    <strong>신뢰할 수 있는 약사님과의 1:1 상담</strong>은 유익했습니다. 친밀감이 생기면서 더 믿음이
+                                    갔고 즐거운 시간이였어요.
+                                </p>
+                                <p class="txt">2022.03.08</p>
+                                <p class="star">⭐⭐⭐⭐⭐</p>
+                            </div>
+                            <div class="slide_item swiper-slide bg_o">
+                                <div class="review_user">
+                                    <div class="user_l">
+                                        <img src="../../images/index_review2.png" alt="">
+                                    </div>
+                                    <div class="user_r">
+                                        <p class="name">박은*(31세)</p>
+                                        <p class="subscription">정기구독 3회차</p>
+                                    </div>
+                                </div>
+                                <p class="review_n">
+                                    어떤 영양제를 먹어야할지 몰랐는데 약사님이 <strong>저에게 맞는 영양제를 합리적인 가격으로 설계</strong>해주셔서
+                                    좋았습다!
+                                </p>
+                                <p class="txt">2022.02.21</p>
+                                <p class="star">⭐⭐⭐⭐⭐</p>
+                            </div>
+                            <div class="slide_item swiper-slide bg_p">
+                                <div class="review_user">
+                                    <div class="user_l">
+                                        <img src="../../images/index_review3.png" alt="">
+                                    </div>
+                                    <div class="user_r">
+                                        <p class="name">정다*(23세)</p>
+                                        <p class="subscription">정기구독 2회차</p>
+                                    </div>
+                                </div>
+                                <p class="review_n">
+                                    일주일 꾸준히 먹어보니 <strong>먹은 날과 안 먹은 날 컨디션이 확실히 다르더라고요.</strong> 영양제
+                                    1,2개 살 돈으로 다양하게 먹을 수 있어요.
+                                </p>
+                                <p class="txt">2022.04.23</p>
+                                <p class="star">⭐⭐⭐⭐⭐</p>
+                            </div>
+                            <div class="slide_item swiper-slide bg_b">
+                                <div class="review_user">
+                                    <div class="user_l">
+                                        <img src="../../images/index_review4.png" alt="">
+                                    </div>
+                                    <div class="user_r">
+                                        <p class="name">정은*(30세)</p>
+                                        <p class="subscription">정기구독 3회차</p>
+                                    </div>
+                                </div>
+                                <p class="review_n">
+                                    이모가 신장이 안 좋은데 약사님이 상담할 때 알아서 캐치해서 <strong>신장에 무리주지 않는 대체
+                                        영양제 추천</strong>해주셔서 믿음이 가요.
+                                </p>
+                                <p class="txt">2022.02.19</p>
+                                <p class="star">⭐⭐⭐⭐⭐</p>
+                            </div>
+                            <div class="slide_item swiper-slide bg_g">
+                                <div class="review_user">
+                                    <div class="user_l">
+                                        <img src="../../images/index_review5.png" alt="">
+                                    </div>
+                                    <div class="user_r">
+                                        <p class="name">선영*(23세)</p>
+                                        <p class="subscription">정기구독 3회차</p>
+                                    </div>
+                                </div>
+                                <p class="review_n">
+                                    벌써 4달째여서 같은 약사님에게 재상담받았는데 기억해주셔서 삼촌같은 느낌이였어여! <strong>고민이였던
+                                        것들이 많이 해소</strong>되어서 너무 좋았습니
+                                </p>
+                                <p class="txt">2022.03.27</p>
+                                <p class="star">⭐⭐⭐⭐⭐</p>
+                            </div>
+                            <div class="slide_item swiper-slide bg_l">
+                                <div class="review_user">
+                                    <div class="user_l">
+                                        <img src="../../images/index_review6.png" alt="">
+                                    </div>
+                                    <div class="user_r">
+                                        <p class="name">169*(33세)</p>
+                                        <p class="subscription">정기구독 1회차</p>
+                                    </div>
+                                </div>
+                                <p class="review_n">
+                                    매일 잊지 않고 먹을 수 있게 그날 먹을 영양제들이 <strong>오전, 오후로 나눠서 봉지에 딱
+                                        담겨있는게</strong> 너무 편해요.
+                                </p>
+                                <p class="txt">2022.01.05</p>
+                                <p class="star">⭐⭐⭐⭐⭐</p>
+                            </div>
+                            <div class="slide_item swiper-slide bg_y">
+                                <div class="review_user">
+                                    <div class="user_l">
+                                        <img src="../../images/index_review7.png" alt="">
+                                    </div>
+                                    <div class="user_r">
+                                        <p class="name">진11*(30세)</p>
+                                        <p class="subscription">정기구독 1회차</p>
+                                    </div>
+                                </div>
+                                <p class="review_n">
+                                    <strong>여러 가지 영양제를 한번에 챙길 수 있어서</strong> 편리해요. 갓타민 약사님과 상담 후
+                                    제조한다니,핏타민으로 건강해지는 비법을 전수받은 기분!
+                                </p>
+                                <p class="txt">2022.05.30</p>
+                                <p class="star">⭐⭐⭐⭐⭐</p>
+                            </div>
+                            <div class="slide_item swiper-slide bg_o">
+                                <div class="review_user">
+                                    <div class="user_l">
+                                        <img src="../../images/index_review8.png" alt="">
+                                    </div>
+                                    <div class="user_r">
+                                        <p class="name">유채*(59세)</p>
+                                        <p class="subscription">정기구독 1회차</p>
+                                    </div>
+                                </div>
+                                <p class="review_n">
+                                    약사님이 직접 필요한 영양제도 말씀해주시면서 <strong>과하게 권하는 느낌도 아니라서</strong> 너무
+                                    상담부터 만족했어요!!
+                                </p>
+                                <p class="txt">2022.05.28</p>
+                                <p class="star">⭐⭐⭐⭐⭐</p>
+                            </div>
+                            <div class="slide_item swiper-slide bg_p">
+                                <div class="review_user">
+                                    <div class="user_l">
+                                        <img src="../../images/index_review9.png" alt="">
+                                    </div>
+                                    <div class="user_r">
+                                        <p class="name">sae*(33세)</p>
+                                        <p class="subscription">정기구독 1회차</p>
+                                    </div>
+                                </div>
+                                <p class="review_n">
+                                    <strong>매달 정기적으로 배송받으니까 너무 편해요!</strong> 하루 한 포씩 챙겨먹다보니 벌써 3개월째
+                                    구독중인데 컨디션이 많이 좋아진 것 같아요!
+                                </p>
+                                <p class="txt">2022.04.04</p>
+                                <p class="star">⭐⭐⭐⭐⭐</p>
+                            </div>
+                            <div class="slide_item swiper-slide bg_y">
+                                <div class="review_user">
+                                    <div class="user_l">
+                                        <img src="../../images/index_review10.png" alt="">
+                                    </div>
+                                    <div class="user_r">
+                                        <p class="name">jen*(27세)</p>
+                                        <p class="subscription">정기구독 1회차</p>
+                                    </div>
+                                </div>
+                                <p class="review_n">
+                                    핏타민 처음 구독해보는데, 상담해주신 약사님도 너무 <strong>친절하게 비타민 설계랑 하나하나
+                                        설명</strong>도 해주셨었어요!
+                                </p>
+                                <p class="txt">2022.01.21</p>
+                                <p class="star">⭐⭐⭐⭐⭐</p>
+                            </div>
+                            <div class="slide_item swiper-slide bg_y">
+                                <div class="review_user">
+                                    <div class="user_l">
+                                        <img src="../../images/index_review1.png" alt="">
+                                    </div>
+                                    <div class="user_r">
+                                        <p class="name">손민*(28세)</p>
+                                        <p class="subscription">정기구독 3회차</p>
+                                    </div>
+                                </div>
+                                <p class="review_n">
+                                    <strong>신뢰할 수 있는 약사님과의 1:1 상담</strong>은 유익했습니다. 친밀감이 생기면서 더 믿음이
+                                    갔고 즐거운 시간이였어요.
+                                </p>
+                                <p class="txt">2022.03.08</p>
+                                <p class="star">⭐⭐⭐⭐⭐</p>
+                            </div>
+                            <div class="slide_item swiper-slide bg_o">
+                                <div class="review_user">
+                                    <div class="user_l">
+                                        <img src="../../images/index_review2.png" alt="">
+                                    </div>
+                                    <div class="user_r">
+                                        <p class="name">박은*(31세)</p>
+                                        <p class="subscription">정기구독 3회차</p>
+                                    </div>
+                                </div>
+                                <p class="review_n">
+                                    어떤 영양제를 먹어야할지 몰랐는데 약사님이 <strong>저에게 맞는 영양제를 합리적인 가격으로 설계</strong>해주셔서
+                                    좋았습다!
+                                </p>
+                                <p class="txt">2022.02.21</p>
+                                <p class="star">⭐⭐⭐⭐⭐</p>
+                            </div>
+                            <div class="slide_item swiper-slide bg_p">
+                                <div class="review_user">
+                                    <div class="user_l">
+                                        <img src="../../images/index_review3.png" alt="">
+                                    </div>
+                                    <div class="user_r">
+                                        <p class="name">정다*(23세)</p>
+                                        <p class="subscription">정기구독 2회차</p>
+                                    </div>
+                                </div>
+                                <p class="review_n">
+                                    일주일 꾸준히 먹어보니 <strong>먹은 날과 안 먹은 날 컨디션이 확실히 다르더라고요.</strong> 영양제
+                                    1,2개 살 돈으로 다양하게 먹을 수 있어요.
+                                </p>
+                                <p class="txt">2022.04.23</p>
+                                <p class="star">⭐⭐⭐⭐⭐</p>
+                            </div>
+                            <div class="slide_item swiper-slide bg_b">
+                                <div class="review_user">
+                                    <div class="user_l">
+                                        <img src="../../images/index_review4.png" alt="">
+                                    </div>
+                                    <div class="user_r">
+                                        <p class="name">정은*(30세)</p>
+                                        <p class="subscription">정기구독 3회차</p>
+                                    </div>
+                                </div>
+                                <p class="review_n">
+                                    이모가 신장이 안 좋은데 약사님이 상담할 때 알아서 캐치해서 <strong>신장에 무리주지 않는 대체
+                                        영양제 추천</strong>해주셔서 믿음이 가요.
+                                </p>
+                                <p class="txt">2022.02.19</p>
+                                <p class="star">⭐⭐⭐⭐⭐</p>
+                            </div>
+                            <div class="slide_item swiper-slide bg_g">
+                                <div class="review_user">
+                                    <div class="user_l">
+                                        <img src="../../images/index_review5.png" alt="">
+                                    </div>
+                                    <div class="user_r">
+                                        <p class="name">선영*(23세)</p>
+                                        <p class="subscription">정기구독 3회차</p>
+                                    </div>
+                                </div>
+                                <p class="review_n">
+                                    벌써 4달째여서 같은 약사님에게 재상담받았는데 기억해주셔서 삼촌같은 느낌이였어여! <strong>고민이였던
+                                        것들이 많이 해소</strong>되어서 너무 좋았습니
+                                </p>
+                                <p class="txt">2022.03.27</p>
+                                <p class="star">⭐⭐⭐⭐⭐</p>
+                            </div>
+                            <div class="slide_item swiper-slide bg_l">
+                                <div class="review_user">
+                                    <div class="user_l">
+                                        <img src="../../images/index_review6.png" alt="">
+                                    </div>
+                                    <div class="user_r">
+                                        <p class="name">169*(33세)</p>
+                                        <p class="subscription">정기구독 1회차</p>
+                                    </div>
+                                </div>
+                                <p class="review_n">
+                                    매일 잊지 않고 먹을 수 있게 그날 먹을 영양제들이 <strong>오전, 오후로 나눠서 봉지에 딱
+                                        담겨있는게</strong> 너무 편해요.
+                                </p>
+                                <p class="txt">2022.01.05</p>
+                                <p class="star">⭐⭐⭐⭐⭐</p>
+                            </div>
+                            <div class="slide_item swiper-slide bg_y">
+                                <div class="review_user">
+                                    <div class="user_l">
+                                        <img src="../../images/index_review7.png" alt="">
+                                    </div>
+                                    <div class="user_r">
+                                        <p class="name">진11*(30세)</p>
+                                        <p class="subscription">정기구독 1회차</p>
+                                    </div>
+                                </div>
+                                <p class="review_n">
+                                    <strong>여러 가지 영양제를 한번에 챙길 수 있어서</strong> 편리해요. 갓타민 약사님과 상담 후
+                                    제조한다니,핏타민으로 건강해지는 비법을 전수받은 기분!
+                                </p>
+                                <p class="txt">2022.05.30</p>
+                                <p class="star">⭐⭐⭐⭐⭐</p>
+                            </div>
+                            <div class="slide_item swiper-slide bg_o">
+                                <div class="review_user">
+                                    <div class="user_l">
+                                        <img src="../../images/index_review8.png" alt="">
+                                    </div>
+                                    <div class="user_r">
+                                        <p class="name">유채*(59세)</p>
+                                        <p class="subscription">정기구독 1회차</p>
+                                    </div>
+                                </div>
+                                <p class="review_n">
+                                    약사님이 직접 필요한 영양제도 말씀해주시면서 <strong>과하게 권하는 느낌도 아니라서</strong> 너무
+                                    상담부터 만족했어요!!
+                                </p>
+                                <p class="txt">2022.05.28</p>
+                                <p class="star">⭐⭐⭐⭐⭐</p>
+                            </div>
+                            <div class="slide_item swiper-slide bg_p">
+                                <div class="review_user">
+                                    <div class="user_l">
+                                        <img src="../../images/index_review9.png" alt="">
+                                    </div>
+                                    <div class="user_r">
+                                        <p class="name">sae*(33세)</p>
+                                        <p class="subscription">정기구독 1회차</p>
+                                    </div>
+                                </div>
+                                <p class="review_n">
+                                    <strong>매달 정기적으로 배송받으니까 너무 편해요!</strong> 하루 한 포씩 챙겨먹다보니 벌써 3개월째
+                                    구독중인데 컨디션이 많이 좋아진 것 같아요!
+                                </p>
+                                <p class="txt">2022.04.04</p>
+                                <p class="star">⭐⭐⭐⭐⭐</p>
+                            </div>
+                            <div class="slide_item swiper-slide bg_y">
+                                <div class="review_user">
+                                    <div class="user_l">
+                                        <img src="../../images/index_review10.png" alt="">
+                                    </div>
+                                    <div class="user_r">
+                                        <p class="name">jen*(27세)</p>
+                                        <p class="subscription">정기구독 1회차</p>
+                                    </div>
+                                </div>
+                                <p class="review_n">
+                                    핏타민 처음 구독해보는데, 상담해주신 약사님도 너무 <strong>친절하게 비타민 설계랑 하나하나
+                                        설명</strong>도 해주셨었어요!
+                                </p>
+                                <p class="txt">2022.01.21</p>
+                                <p class="star">⭐⭐⭐⭐⭐</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <!-- ============= count block point =================-->
+            <section class="block03">
+                <div class="section_container">
+                    <h2><span>영양제 고민,</span><br>
+                    이젠 약사에게 맡기세요!</h2>
+    
+                    <div class="block03_slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="slide_item swiper-slide">
+                                <div class="tap_tab flex">
+                                    <a href="#" class="tab_link active">최적의 영양제</a>
+                                    <a href="#" class="tab_link">믿을 수 있는</a>
+                                    <a href="#" class="tab_link">영양제 전문가</a>
+                                </div>
+    
+                                <div class="slide_data flex">
+                                    <img src="../../images/slide_icon3.svg" alt="" class="slider_img ">
+                                    <div class="slider_txt">
+                                        <p class="title" data-swiper-parallax="-30">최적의<br>영양성분 추천</p>
+                                        <p class="txt" data-swiper-parallax="-20">
+                                            논문 4,000편 분석하여<br>
+                                            <span>최적의 소비자 영양습관 분석</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide_item swiper-slide">
+                                <div class="tap_tab flex">
+                                    <a href="#" class="tab_link">최적의 영양제</a>
+                                    <a href="#" class="tab_link active">믿을 수 있는</a>
+                                    <a href="#" class="tab_link">영양제 전문가</a>
+                                </div>
+    
+                                <div class="slide_data flex">
+                                    <img src="../../images/slide_icon2.svg" alt="" class="slider_img ">
+                                    <div class="slider_txt">
+                                        <p class="title" data-swiper-parallax="-30">국내 최고의<br>약사진</p>
+                                        <p class="txt" data-swiper-parallax="-20">
+                                            <span>10년 이상 경력의 현직 약사가</span>
+                                            영양제 복용방법 직접 상담
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide_item swiper-slide">
+                                <div class="tap_tab flex">
+                                    <a href="#" class="tab_link">최적의 영양제</a>
+                                    <a href="#" class="tab_link">믿을 수 있는</a>
+                                    <a href="#" class="tab_link active">영양제 전문가</a>
+                                </div>
+    
+                                <div class="slide_data flex">
+                                    <img src="../../images/slide_icon1.svg" alt="" class="slider_img ">
+                                    <div class="slider_txt">
+                                        <p class="title" data-swiper-parallax="-30">영양제<br>전문 약사</p>
+                                        <p class="txt" data-swiper-parallax="-20">
+                                            영양제 전문교육과정 수료<br>
+                                            <span>약사 상담 만족도 5.0점 </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    
+            <!--==================== block04 ====================-->
+            <section class="block04">
+                <div class="section_container">
+                    <h2>
+                        <span>언제 어디서든 간편하게,</span><br> 내 영양제 찾기
+                    </h2>
+        
+                    <div class="block04_list">
+                        <div class="block04_item_n up_r up01">
+                            <img src="../../images/balloon.svg" alt="">
+                            <div class="block04_data">
+                                <p class="title flex">
+                                    설문/상담 <img src="../../images/icon_file.svg" alt="">
+                                </p>
+                                <p class="txt">3분 안에 내 건강을 파악하고,</p>
+                            </div>
+        
+                        </div>
+                        <div class="block04_item_n up02">
+                            <img src="../../images/balloon_2.svg" alt="">
+                            <div class="block04_data">
+                                <p class="title flex">
+                                    약사님도 <img src="../../images/icon_person.svg" alt="">
+                                </p>
+                                <p class="txt">1:1로 언제, 어디서든</p>
+                            </div>
+        
+                        </div>
+                        <div class="block04_item_n up_r up03">
+                            <img src="../../images/balloon.svg" alt="">
+                            <div class="block04_data">
+                                <p class="title flex">
+                                    영양제도 <img src="../../images/icon_drug.svg" alt="">
+                                </p>
+                                <p class="txt">원하는 대로, 원하는 만큼</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <!--==================== block05 ====================-->
+            <section class="block05">
+                <div class="section_container">
+                    <h2><span>합리적인 가격</span>까지,<br>
+                        건강을 망설이지 마세요.</h2>
+                
+    
+                    <div class="block05_content flex">
+                        <div class="contents_bar flex">
+                            <div class="contents_l">
+                                <div class="gray flex">
+                                    <p class="text">하루당<br><span>약 <strong>830원</strong></span></p>
+                                </div>
+                            </div>
+    
+                            <div class="contents_r flex">
+                                <div class="dot_line flex">
+                                    <p class="text" style="opacity:.5">- 마케팅비</p>
+                                    <p class="text" style="opacity:.7">- 상담비</p>
+                                    <p class="text">-  배송비</p>
+                                    <p class="text">- 건강지원할인 <span>(최대 20%)</span></p>
+                                </div>
+                                <div class="blue flex">
+                                    <p class="text">하루당<br><span><strong>344원</strong></span></p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        
+                        <div class="contents_txt flex">
+                            <div class="contents_l">
+                                <p class="title">주요브랜드</p>
+                                <p class="txt">(N포털 기준)</p>
+                            </div>
+                            <div class="contents_r">
+                                <p class="title">핏타민</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <p class="txt">*비타민B 컴플렉스 영양제 기준</p>
+                </div>
+            </section>
+    
+            <!--==================== block06 step====================-->
+            <section class="block06">
+                <div class="section_container">
+                    <h2>
+                        <span>3가지</span>만 하면 충분해요
+                    </h2>
+        
+                    <div class="block06_slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="slide_item swiper-slide flex">
+                                <img class="step_img" src="../../images/slide_m2.png" alt="">
+        
+                                <div class="slide_data">
+                                    <p class="step_icon_n">step 1</p>
+                                    <p class="title">건강설문</p>
+                                    <p class="txt">
+                                        설문을 통해 건강상태와 <br> 부족한 영양성분을 <br> 한번에 체크해요.
+                                    </p>
+                                    <p class="info flex">
+                                        <img src="../../images/icon_time.svg" alt="">
+                                        약 3분 소요
+                                    </p>
+                                </div>
+                            </div>
+        
+                            <div class="slide_item swiper-slide flex">
+                                <img class="step_img" src="../../images/slide_m3.png" alt="">
+        
+                                <div class="slide_data">
+                                    <p class="step_icon_n">step 2</p>
+                                    <p class="title">약사 상담하기</p>
+                                    <p class="txt">
+                                        원하는 시간에 <br> 언제 어디서든 최적의 <br> 영양제를 추천받아요.
+                                    </p>
+                                    <p class="info flex">
+                                        <img src="../../images/icon_time.svg" alt="">
+                                        최대 15분
+                                    </p>
+                                    <p class="info flex mb1">
+                                        <img src="../../images/icon_coin.svg" alt="">
+                                        상담비용 0원
+                                    </p>
+                                </div>
+                            </div>
+        
+                            <div class="slide_item swiper-slide flex">
+                                <img class="step_img" src="../../images/slide_m1.png" alt="">
+        
+                                <div class="slide_data">
+                                    <p class="step_icon_n">step 3</p>
+                                    <p class="title">구독하기</p>
+                                    <p class="txt">
+                                        완성된 맞춤영양제를 <br> 매달 편하게 <br> 무료 배송 받아요.
+                                    </p>
+                                    <p class="info flex">
+                                        <img src="../../images/icon_time.svg" alt="">
+                                        매 달 배송
+                                    </p>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== block08 img ====================-->
+            <section class="block08">
+                <img src="../../images/new_bottomimg.png" alt="">
+                <p>당신에게 가장 Fit한 하루, <br>지금 경험해보세요. </p>
+            </section>
+            <!--==================== block09 faq ====================-->
+            <section class="block09">
+                <div class="section_container">
+                    <h2>자주 묻는 질문</h2>
+        
+                    <ul class="faq_list_n">
+                        <li class="faq_item_n">
+                            <div class="faq_toggle">
+                                <p class="title">개인맞춤 영양제는 어떻게 다른가요?</p>
+                                <img src="../../images/icon_arrow.svg" alt="">
+                            </div>
+        
+                            <div class="faq_txt_n">기존에 섭취하시던 병 또는 멀티팩 제품들은 누구에게나 동일한 구성을
+                                제공하지만, 개인맞춤영양제 핏타민은 상담을 통해서 나에게 맞춘 나만을 위한 1팩을 제공합니다.</div>
+                        </li>
+                        <li class="faq_item_n">
+                            <div class="faq_toggle">
+                                <p class="title">설문 후 바로 구매할 수 있나요?</p>
+                                <img src="../../images/icon_arrow.svg" alt="">
+                            </div>
+        
+                            <div class="faq_txt_n">핏타민은 과학기반 설문 알고리즘뿐 아니라 약사 상담까지 필수로
+                                진행하여 개인에게 맞춘 영양소를 추천합니다. 약사와 상담을 통해서 더 완벽한 핏타민을 설계 받아보세요.</div>
+                        </li>
+                        <li class="faq_item_n">
+                            <div class="faq_toggle">
+                                <p class="title">상담은 어떻게 할 수 있나요?</p>
+                                <img src="../../images/icon_arrow.svg" alt="">
+                            </div>
+        
+                            <div class="faq_txt_n">핏타민 약사상담은 온라인 예약을 통해서 화상 상담하거나 가까운 핏타민
+                                약국에 방문해서 상담이 가능합니다. 장소 제약없이 어디서나 핏타민 약사님을 만나보세요.</div>
+                        </li>
+                        <li class="faq_item_n">
+                            <div class="faq_toggle">
+                                <p class="title">약사상담 꼭 받아야 하나요?</p>
+                                <img src="../../images/icon_arrow.svg" alt="">
+                            </div>
+        
+                            <div class="faq_txt_n">핏타민은 산업통산자원부로부터 '개인맞춤형 건강기능식품 추천, 소분,
+                                배송 서비스'로 규제특례 승인을 받은 서비스입니다. 개인맞춤형 건강기능식품 가이드라인상 최초 대면상담 또는 화상상담이
+                                필수입니다. 더불어 고객님의 정확한 건강, 영양 분석과 건강한 설계를 위해 약사상담을 진행합니다.</div>
+                        </li>
+                        <li class="faq_item_n">
+                            <div class="faq_toggle">
+                                <p class="title">구독 중인 제품 구성을 바꿀 수 있나요?</p>
+                                <img src="../../images/icon_arrow.svg" alt="">
+                            </div>
+        
+                            <div class="faq_txt_n">약사와 설계한 핏타민 구성은 3개월동안 꾸준히 섭취하는 것을
+                                권장드립니다. 3개월 후 변화된 나에게 맞추어 구성을 변경해보세요. 구성변경은 재설문과 재상담을 통해서 가능합니다.</div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!-- =============== top visual ================== -->
+        
+
+        <!-- ================= footer ======================-->
+
+        <!-- =================== popup ====================== -->
+        <div class="popup" id="popup" style="display: none;">
+            <div class="overlay"></div>
+            <div class="popup_wrap">
+                <div class="popup_data">
+                    <img src="../../images/popup_bg.svg" alt="" class="popup_img">
+                    <div class="popup_text">
+                        <p class="title">친구 초대하고<br>5,000원 받으세요.</p>
+                        <p class="txt">친구에게 핏타민을 추천할 때마다<br><span>친구와 나 모두에게 5,000원을 드려요</span></p>
+                    </div>
+                    <a href="javascript:void(0)" class="popup_close" onclick="closeNav()"><img src="../../images/icon_close.svg" alt=""></a>
+                </div>
+                <div class="popup_btn flex">
+                    <label for="popup_check" class="popup_check">
+                        <input type="checkbox" id="popup_check">
+                        <span>오늘 하루 그만보기</span>
+                    </label>
+                    <a href="#" class="popup_link">자세히보기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!--자동결제 실패 오픈 -->
+  <div class="rpopup on">
+    <div class="overlay"></div>
+    <div class="pop_open">
+      <div class="pop_in">
+        <p class="p2_f mb_1">자동결제에 실패하였습니다.<br>등록한 결제수단을 확인해주세요.</p>
+        <p class="p2_f system_c01">결제 실패 시 핏타민 수령이 불가합니다.</p>
+      </div>
+      <div class="pop_btn">
+        <button class="btn_m btn_light">오늘 그만보기</button>
+        <button class="btn_m btn_red">카드 변경</button>
+      </div>
+    </div>
+  </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+
+    <script>
+
+/* ============ popup ================ */
+$(".overlay, .pop_btn").on("click", function(){
+  $(".rpopup, body").removeClass("on");
+});
+
+
+    </script>
+    
+</body>
+</html>
+
+
+
+
+

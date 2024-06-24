@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>1-2.친구인증현황 - 응원메세지 보내기 전</title>
+  </head>
+  <body>
+    <div class="fullpage bg_black">
+      <div class="intake_inner">
+        <div class="progress">
+          <span class="bar"></span>
+        </div>
+        <div class="intake_top">
+          <div class="user_info">
+            <p class="img">
+              <img src="../../images/chat_sample.png" alt="프로필사진" />
+            </p>
+            <p class="user_name">내 인증현황</p>
+            <p class="icon_s icon_gray">섭취 미완료</p>
+          </div>
+          <p class="closebtn"></p>
+        </div>
+
+        <div class="intake_con">
+          <div class="center_img">
+            <p class="inner_img">
+              <img src="../../images/chat_sample.png" alt="프로필 사진" />
+            </p>
+            <p class="level_icon">
+              <img src="../../images/icon/lv1.svg" alt="" />
+            </p>
+          </div>
+
+          <div class="calender">
+            <div class="calender_in">
+              <div class="cal_top">
+                <p>월</p>
+                <p>화</p>
+                <p>수</p>
+                <p>목</p>
+                <p class="today">오늘</p>
+                <p>토</p>
+                <p>일</p>
+              </div>
+              <div class="cal_week">
+                <div class="week_in">
+                  <p class="start_day">1</p>
+                  <p class="doing_day">2</p>
+                  <p class="end_day">3</p>
+                  <p>4</p>
+                  <p class="today today_none">5</p>
+                  <p>6</p>
+                  <p>7</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="span1_fb mt_2">최대오글자님이 아직 섭취 전이예요</p>
+          <p class="p4_f gray02 mt_1">
+            아직 영양제를 먹지 않은<br />친구에게 응원 메세지를 보내볼까요?
+          </p>
+        </div>
+
+        <div class="chat_msg">
+          <p class="bubble bt_left">섭취 응원메시지를 보내보세요</p>
+          <div class="chat_write">
+            <input type="text" placeholder="메세지를 입력하세요" />
+          </div>
+          <p class="chat_btn"></p>
+        </div>
+
+        <div class="intake_msg">
+          <div class="msgtab_btn">
+            <p class="msg_btn left_btn active">이모지</p>
+            <p class="msg_btn right_btn">텍스트</p>
+          </div>
+
+          <!--이모지 메세지 -->
+          <div class="msg_tap">
+            <div class="msg_emoji">
+              <p>🔥</p>
+              <p>👍</p>
+              <p>❤</p>
+              <p>👏</p>
+              <p>💪</p>
+              <p>💯</p>
+            </div>
+          </div>
+
+          <!-- 텍스트 메세지 -->
+          <div class="msg_tap">
+            <div class="msg_list msg_txt">
+              <p>잘하고있어👍</p>
+              <p>오늘도 화이팅🔥</p>
+              <p>건강챙기자 💪</p>
+              <p>더 분발하자 😎</p>
+              <p>영양제먹자🥄</p>
+              <p>잊으면안돼 🥺</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script>
+      //섭취응원메세지 탭
+      $(".chat_write").focusin(function () {
+        $(".intake_msg").addClass("open");
+        $(".bubble").css("opacity", "0");
+      });
+
+      $(".msgtab_btn").find(".msg_btn").click(function () {
+          $(this).addClass("active");
+          $(this).siblings().removeClass("active");
+        });
+
+      let tabBtn = $(".msg_btn");
+      let tabCont = $(".msg_tap");
+
+      tabCont.hide().eq(0).show();
+
+      tabBtn.click(function () {
+        let target = $(this);
+        let index = target.index();
+        // alert(index);
+        tabBtn.removeClass("active");
+        target.addClass("active");
+        tabCont.css("display", "none");
+        tabCont.eq(index).css("display", "block");
+      });
+
+      //섭취응원 닫기
+      $(".chat_btn, .msg_tap p").on("click", function () {
+        $(".intake_msg").removeClass("open");
+      });
+    </script>
+  </body>
+</html>

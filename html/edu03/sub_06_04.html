@@ -1,0 +1,849 @@
+<html><head>
+        <meta charset="UTF-8">
+        <title>MEDYON E-sang education</title>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+
+        <!-- fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        
+        <!-- jquery -->
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+        <link rel="stylesheet" href="css/basic.css">
+        <link rel="stylesheet" href="css/sub_header.css">
+        <link rel="stylesheet" href="css/member.css">
+        <link rel="stylesheet" href="css/board.css">
+        <link rel="stylesheet" href="css/report.css">
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    </head>
+    
+    <body>
+        <div style="text-align:center; font-size: .75rem; background-color: #222; color: #fff; width: 100%; padding: 10px;">
+            <p>메뉴에 링크가 걸려있습니다. 각 페이지는 링크로 직접 확인해주세요</p>
+        </div>
+       
+        <div id="wrap">
+           <!-- ///////////// header /////////////// -->
+           <div id="header">
+            <!-- lnb -->
+             <div class="lnb block_pc">
+                 <div class="con_in grid_flex">
+                     <ul class="lnb_link grid_flex">
+                         <li><a href="#">이상에듀</a></li>
+                         <li><a href="#">국민내일배움카드</a></li>
+                         <li><a href="#">이상 라이선스</a></li>
+                     </ul>
+                     <ul class="lnb_login grid_flex">
+                         <li><a href="1_login.html">로그인</a><span></span></li>
+                         <li><a href="1_join.html">회원가입</a><span></span></li>
+                         <li><a href="1_find.html">아이디/비밀번호찾기</a></li>
+                     </ul>
+                 </div>
+             </div>
+             
+             <!-- header logo -->
+             <div class="header">
+                <div class="con_in grid_flex">
+                     <div class="social block_pc">
+                         <ul class="grid_flex">
+                             <li><a href="#" class="social_youtube">유튜브</a></li>
+                             <li><a href="#" class="social_instagram">인스타그램</a></li>
+                             <li><a href="#" class="social_kakao">카카오톡</a></li>
+                             <li><a href="#" class="social_blog">네이버 블로그</a></li>
+                         </ul>
+                     </div>
+                     <h1><a href="index.html"><img src="images/logo.png"></a></h1>
+                     <div class="mymenu block_pc">
+                         <ul class="grid_flex">
+                             <li><a href="sub_05_05.html">학습문의</a></li>
+                             <li><a href="sub_06_01.html">나의페이지</a></li>
+                             <li><a href="sub_07_01.html" class="myclass">나의강의실</a></li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+             
+             <!-- gnb -->
+             <div class="menubar">
+                 <div class="con_in grid_flex">
+                    <a class="menu-btn block_m"><i class="fas fa-bars"></i></a>
+                     <div id="gnb" class="pushy pushy-right">
+                        <div class="mymenu block_m">
+                            <ul class="grid_flex">
+                                 <li><a href="sub_05_05.html">학습문의</a></li>
+                                 <li><a href="sub_06_01.html">나의페이지</a></li>
+                                 <li><a href="sub_07_01.html" class="myclass">나의강의실</a></li>
+                             </ul>
+                        </div>
+                         <ul class="pushy-content grid_flex">
+                            <li class="pushy-submenu block_m">
+                                 <a href="index.html">메인페이지</a>
+                             </li>
+                             <li class="pushy-submenu">
+                                 <a href="#">메디온</a>
+                                 <ul class="sub">
+                                     <li><a href="sub_01_01.html">About</a>
+                                         <ul>
+                                             <li><a href="sub_01_01.html">메디온</a></li>
+                                             <li><a href="sub_01_02.html">인증현황</a></li>
+                                             <li><a href="sub_01_03.html">회사연혁</a></li>
+                                             <li><a href="sub_01_04.html">찾아오시는 길</a></li>
+                                         </ul>
+                                     </li>
+                                 </ul>
+                             </li>
+                             <li class="pushy-submenu">
+                                 <a href="#">교육</a>
+                                 <ul class="sub">
+                                     <li><a href="sub_02_01.html">직무능력향상교육</a></li>
+                                     <li><a href="sub_02_05.html">의료기관 평가인증교육</a>
+                                         <ul>
+                                             <li><a href="sub_02_06.html">요양병원</a></li>
+                                             <li><a href="sub_02_06.html">병원·종합병원</a></li>
+                                             <li><a href="sub_02_06.html">재활병원</a></li>
+                                         </ul>
+                                     </li>
+                                     <li><a href="sub_02_01.html">적정성평가 교육</a>
+                                         <ul>
+                                             <li><a href="sub_02_01.html">중·소 병원</a></li>
+                                         </ul>
+                                     </li>
+                                     <li><a href="sub_02_01.html">전문교육</a></li>
+                                     <li><a href="sub_02_01.html">산업안전보건교육</a>
+                                         <ul>
+                                             <li><a href="sub_02_01.html">보건업 근로자 정기</a></li>
+                                             <li><a href="sub_02_01.html">보건업 관리감독자</a></li>
+                                         </ul>
+                                     </li>
+                                     <li><a href="sub_02_01.html">법정필수교육</a></li>
+                                     <li><a href="sub_02_01.html">양방향 LIVE 교육</a></li>
+                                 </ul>
+                             </li>
+                             <li class="pushy-submenu">
+                                 <a href="#">의료기관평가</a>
+                                 <ul class="sub">
+                                     <li><a href="sub_03_01.html">평가인증 컨설팅</a>
+                                         <ul>
+                                             <li><a href="sub_03_02.html">요양병원</a></li>
+                                             <li><a href="sub_03_03.html">병원·종합병원</a></li>
+                                             <li><a href="sub_03_04.html">재활병원</a></li>
+                                             <li><a href="sub_03_05.html">정신병원</a></li>
+                                         </ul>
+                                     </li>
+                                     <li><a href="sub_03_06.html">적정성평가 컨설팅</a>
+                                         <ul>
+                                             <li><a href="sub_03_07.html">요양병원</a></li>
+                                             <li><a href="sub_03_08.html">병원·종합병원</a></li>
+                                         </ul>
+                                     </li>
+                                     <li><a href="sub_03_09.html">청구심사 컨설팅</a></li>
+                                     <li><a href="sub_03_10.html">현지조사 컨설팅</a></li>
+                                     <li><a href="sub_03_11.html">환자경험평가(PEI)</a></li>
+                                 </ul>
+                             </li>
+                             <li class="pushy-submenu">
+                                 <a href="#">QPIC</a>
+                                 <ul class="sub">
+                                     <li><a href="sub_04_01.html">QPIC</a></li>
+                                     <li><a href="sub_04_02.html">환자안전</a>
+                                         <ul>
+                                             <li><a href="sub_04_10.html">관련법규</a></li>
+                                             <li><a href="sub_04_03.html">서식·자료</a></li>
+                                             <li><a href="sub_04_04.html">QPS 소식</a></li>
+                                             <li><a href="sub_04_05.html">관련사이트</a></li>
+                                         </ul>
+                                     </li>
+                                     <li><a href="sub_04_10.html">감염관리</a>
+                                         <ul>
+                                             <li><a href="sub_04_10.html">관련법규</a></li>
+                                             <li><a href="sub_04_06.html">서식·자료</a></li>
+                                             <li><a href="sub_04_07.html">가이드라인</a></li>
+                                             <li><a href="sub_04_08.html">신종감염병 관리</a></li>
+                                             <li><a href="sub_04_09.html">감염 소식</a></li>
+                                             <li><a href="sub_04_11.html">관련사이트</a></li>
+                                         </ul>
+                                     </li>
+                                 </ul>
+                             </li>
+                             <li class="pushy-submenu">
+                                 <a href="#">고객지원</a>
+                                 <ul class="sub">
+                                     <li><a href="sub_05_01.html">공지사항</a></li>
+                                     <li><a href="sub_05_03.html">학습자료실</a></li>
+                                     <li><a href="#">원격지원</a></li>
+                                     <li><a href="sub_05_02.html">자주하는 질문</a></li>
+                                     <li><a href="sub_05_05.html">학습문의</a></li>
+                                     <li><a href="sub_05_04.html">신규교육문의</a></li>
+                                     <li><a href="sub_05_06.html">수강후기</a></li>
+                                 </ul>
+                             </li>
+                         </ul>
+                         <div class="social block_m">
+                             <ul class="grid_flex">
+                                 <li><a href="#" class="social_youtube">유튜브</a></li>
+                                 <li><a href="#" class="social_instagram">인스타그램</a></li>
+                                 <li><a href="#" class="social_kakao">카카오톡</a></li>
+                                 <li><a href="#" class="social_blog">네이버 블로그</a></li>
+                             </ul>
+                         </div>
+                         <div class="search block_m">
+                         <form>
+                             <input type="text" id="search_top" placeholder="검색어를 입력하세요">
+                             <button class="search_top">검색</button>
+                         </form>
+                     </div>
+                     </div>
+                     <div class="search block_pc">
+                         <form>
+                             <input type="text" id="search_top" placeholder="검색어를 입력하세요">
+                             <button class="search_top">검색</button>
+                         </form>
+                     </div>
+                 </div>
+             </div>
+             
+             
+             
+             <!-- Site Overlay -->
+             <div class="site-overlay"></div>
+        
+        
+         </div>
+            
+            
+            
+            <!-- //////////////// contents /////////////// -->
+            <div id="contents">
+                <div class="sub_header bg2">
+                    <p class="con_in">마이페이지</p>
+                </div>
+                <div class="sub_nav">
+                    <div class="con_in grid_flex">
+                        <p class="sub_title">마이페이지</p>
+                        <p class="nev_lct"><span>홈</span>&gt;<span>마이페이지</span>&gt;<span class="selected">자가진단 결과레포트</span></p>
+                    </div>
+                </div>
+                <div class="sub_contents">
+                    <div class="con_in grid_flex">
+                        <div class="sub_menu">
+                            <ul>
+                                <li><a href="sub_06_01.html">개인정보변경</a></li>
+                                <li><a href="sub_06_03.html">컨설팅문의내역</a></li>
+                                <li><a href="sub_06_03.html">신규교육문의내역</a></li>
+                                <li><a href="sub_06_05.html" class="selected">자가진단 결과레포트</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- //////////  sub contents //////////////  -->
+                        <div class="contents">
+                            <!-- board -->
+                            <div class="board_read">
+                               <div class="read_subject">
+                                   <p class="subject">[요양병원 입원급여] 적정성평가 자가진단 결과레포트</p>
+                               </div>
+                               <div class="article">
+                                   
+                                   <p class="font_s">* 귀하께서 2021-09-30 작성한 내용을 바탕으로 한 결과레포트입니다.</p>
+                                   <p class="font_s">*실제로는 상대평가이므로 적정성평가 자가진단 결과와 실제와는 다소 차이가 있을 수 있습니다.<br>
+                                   본 자가진단 결과를 확인하시고 평가에 대한 준비 방향을 결정하는데 참고 자료로 활용하시기 바랍니다.</p>
+                                   
+                                   
+                                   <div class="read_btn">
+                                       <button type="submit" value="" class="view_list">출력하기</button>
+                                   </div>
+                                   
+                                   <div class="report">
+                                      <p class="report_logo"><img src="images/report_logo.png"></p>
+                                      <p class="title_sub">요양병원 입원급여 <span>적정성평가 자가진단</span></p>
+                                      <p class="title">결과레포트</p>
+                                      
+                                      <!-- 종합점수 결과 -->
+                                      <div class="score grid_flex">
+                                          <div class="score_total">
+                                              <p class="total_title">종합점수</p>
+                                              <div class="total_border">
+                                                  <div class="total_bg">
+                                                      <p class="total_no">85</p>
+                                                      <p>점</p>
+                                                  </div>
+                                              </div>
+                                              <p>귀하는 <span>2주기 1차 기준</span> <span class="color_green">1등급</span>에 해당됩니다.</p>
+                                              <p class="font_s">현재대로 관리하시면 차기 적정성평가에서도 좋은 결과를 받으실 수 있을 것으로 판단됩니다.</p>
+                                          </div>
+                                          <div class="score_detail">
+                                              <div class="score_list grid_flex">
+                                                  <p>- 구조영역 점수</p>
+                                                  <div class="score_bg">
+                                                      <div class="bg_pink"><p>29</p><span>/30</span></div>
+                                                      <p class="color_pink">점</p>
+                                                  </div>
+                                              </div>
+                                              <div class="score_list grid_flex">
+                                                  <p>- 진료과정영역 점수</p>
+                                                  <div class="score_bg">
+                                                      <div class="bg_blue"><p>12</p><span>/13</span></div>
+                                                      <p class="color_blue">점</p>
+                                                  </div>
+                                              </div>
+                                              <div class="score_list grid_flex">
+                                                  <p>- 진료결과영역 점수</p>
+                                                  <div class="score_bg">
+                                                      <div class="bg_purple"><p>44</p><span>/57</span></div>
+                                                      <p class="color_purple">점</p>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      
+                                      <!--등급표-->
+                                      <div class="grade">
+                                          <p>적정성 평가는 2008년 1차부터 2020년 2주기 2차까지 진행하였으며, 2021년 2주기 3차 적정성평가를 앞두고 있습니다.</p>
+                                          <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                              <colgroup>
+                                                  <col width="25%">
+                                                  <col width="25%">
+                                                  <col width="25%">
+                                                  <col width="25%">
+                                              </colgroup>
+                                              <tr>
+                                                  <th>구분</th>
+                                                  <th>점수구간</th>
+                                                  <th>평가기관수</th>
+                                                  <th>비율</th>
+                                              </tr>
+                                              <tr>
+                                                  <td class="grade_point">1등급</td>
+                                                  <td class="grade_point">82점 이상</td>
+                                                  <td class="grade_point">172기관</td>
+                                                  <td class="grade_point">12.8%</td>
+                                              </tr>
+                                              <tr>
+                                                  <td>2등급</td>
+                                                  <td>74~82점</td>
+                                                  <td>301기관</td>
+                                                  <td>22.3%</td>
+                                              </tr>
+                                              <tr>
+                                                  <td>3등급</td>
+                                                  <td>66~74점</td>
+                                                  <td>425기관</td>
+                                                  <td>31.6%</td>
+                                              </tr>
+                                              <tr>
+                                                  <td>4등급</td>
+                                                  <td>58~66점</td>
+                                                  <td>270기관</td>
+                                                  <td>20.0%</td>
+                                              </tr>
+                                              <tr>
+                                                  <td>5등급</td>
+                                                  <td>58점 미만</td>
+                                                  <td>179기관</td>
+                                                  <td>13.3%</td>
+                                              </tr> 
+                                          </table>
+                                          
+                                          <p><span>2019년[2주기 1차] 평가 결과</span>를 살펴보면, 1,381개 기관이 참여했으며 <span>종합점수 평균은 69.9점</span>이었습니다.</p>
+                                          <div class="table2">
+                                              <table cellpadding="0" cellspacing="0" border="0">
+                                                  <colgroup>
+                                                      <col width="4%">
+                                                      <col width="8%">
+                                                      <col width="11%">
+                                                      <col width="11%">
+                                                      <col width="11%">
+                                                      <col width="11%">
+                                                      <col width="11%">
+                                                      <col width="11%">
+                                                      <col width="11%">
+                                                      <col width="11%">
+                                                  </colgroup>
+                                                  <tr>
+                                                      <th colspan="2">구분<span>(평가연도)</span></th>
+                                                      <th>1차<span>(2008년)</span></th>
+                                                      <th>2차<span>(2009년)</span></th>
+                                                      <th>3차<span>(2010년)</span></th>
+                                                      <th>4차<span>(2012년)</span></th>
+                                                      <th>5차<span>(2013년)</span></th>
+                                                      <th>6차<span>(2015년)</span></th>
+                                                      <th>7차<span>(2018년)</span></th>
+                                                      <th class="grade_point">2주기 1차<span>(2019년)</span></th>
+                                                  </tr>
+                                                  <tr>
+                                                      <td colspan="2" class="grade_point2">대상기관</td>
+                                                      <td>571</td>
+                                                      <td>718</td>
+                                                      <td>782</td>
+                                                      <td>937</td>
+                                                      <td>1,104</td>
+                                                      <td>1,272</td>
+                                                      <td>1,363</td>
+                                                      <td class="grade_point">1,381</td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td rowspan="4" class="grade_point2">평가지표</td>
+                                                      <td class="grade_point2">구조</td>
+                                                      <td>20</td>
+                                                      <td>23</td>
+                                                      <td>26</td>
+                                                      <td>26</td>
+                                                      <td>10</td>
+                                                      <td>9</td>
+                                                      <td>9</td>
+                                                      <td class="grade_point">4</td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td class="grade_point2">진료</td>
+                                                      <td>4</td>
+                                                      <td>7</td>
+                                                      <td>10</td>
+                                                      <td>10</td>
+                                                      <td>14</td>
+                                                      <td>13</td>
+                                                      <td>13</td>
+                                                      <td class="grade_point">11</td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td class="grade_point2">모니터링</td>
+                                                      <td>-</td>
+                                                      <td>4</td>
+                                                      <td>6</td>
+                                                      <td>10</td>
+                                                      <td>11</td>
+                                                      <td>15</td>
+                                                      <td>15</td>
+                                                      <td class="grade_point">3</td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td class="grade_point2">계</td>
+                                                      <td>24</td>
+                                                      <td>34</td>
+                                                      <td>42</td>
+                                                      <td>46</td>
+                                                      <td>35</td>
+                                                      <td>37</td>
+                                                      <td>37</td>
+                                                      <td class="grade_point">18</td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td colspan="2" class="grade_point2">종합점수</td>
+                                                      <td>구조 53.5점<br>진료 50.6점</td>
+                                                      <td>53.5점</td>
+                                                      <td>66.7점</td>
+                                                      <td>70.3점</td>
+                                                      <td>79.8점</td>
+                                                      <td>84.0점</td>
+                                                      <td>87.0점</td>
+                                                      <td class="grade_point">69.9점</td>
+                                                  </tr>
+                                              </table>
+                                          </div>
+                                      </div>
+                                   </div>
+                                   <div class="report_check_open">
+                                      <p>닫기 <i class="fas fa-caret-up"></i></p>
+                                      <!--p>작성내용 확인하기<i class="fas fa-caret-down"></i></p-->
+                                   </div>
+                                   
+                                   <!-- 레포트 작성내역 확인열기 -->
+                                   <div class="report_check_list">
+                                       <div class="report_ck_1">
+                                          <p class="color_green">1. 구조영역</p>
+                                           <div class="ck_top grid_flex">
+                                               <p class="ck_q">입력사항</p>
+                                               <p class="ck_if">세부내용</p>
+                                               <p class="ck_wr">입력란</p>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">대상기간 동안 평균 환자 수</p>
+                                               <p class="ck_if">주소영역 기간 통일</p>
+                                               <p class="ck_wr"><input type="text" placeholder="100">명</p>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">대상기간 동안 평균 의사 수</p>
+                                               <p class="ck_if">주소영역 기간 통일</p>
+                                               <p class="ck_wr"><input type="text" placeholder="100">명</p>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">대상기간 동안 평균 간호사 수</p>
+                                               <p class="ck_if">주소영역 기간 통일</p>
+                                               <p class="ck_wr"><input type="text" placeholder="100">명</p>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">대상기간 동안 평균 간호인력 수</p>
+                                               <p class="ck_if">주소영역 기간 통일</p>
+                                               <p class="ck_wr"><input type="text" placeholder="100">명</p>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">대상기간 동안 약사 재직일 수</p>
+                                               <p class="ck_if">주소영역 기간 통일</p>
+                                               <p class="ck_wr"><input type="text" placeholder="100">명</p>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">대상기간 전체 일수의 합</p>
+                                               <p class="ck_if">주소영역 기간 통일</p>
+                                               <p class="ck_wr"><input type="text" placeholder="100">명</p>
+                                           </div>
+                                       </div>
+                                       
+                                       <div class="report_ck_2">
+                                          <p class="color_green">2. 진료과정영역</p>
+                                           <div class="ck_top grid_flex">
+                                               <p class="ck_q">입력사항</p>
+                                               <p class="ck_if">세부내용</p>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">해당 월 평가받은 환자 </p>
+                                               <div class="ck_if">
+                                                   <p>- 환자군 통합운영 : 기관 내 고위험군/저위험군 환자구성비를 반영하여 하나의 표준화된 지표로 운영</p>
+                                                   <p>- 제외대상 : 환자평가표의 평가구분이 '입원평가'인 경우</p>
+                                                   <div class="ck_wr grid_flex">
+                                                       <p>1차 : <input type="text" placeholder="12"></p>
+                                                       <p>2차 : <input type="text" placeholder="12"></p>
+                                                       <p>3차 : <input type="text" placeholder="12"></p>
+                                                       <p>4차 : <input type="text" placeholder="12"></p>
+                                                       <p>5차 : <input type="text" placeholder="12"></p>
+                                                       <p>6차 : <input type="text" placeholder="12"></p>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">해당 월 유치도뇨관이 있는 환자</p>
+                                               <div class="ck_if">
+                                                   <p>- 환자군 통합운영 : 기관 내 고위험군/저위험군 환자구성비를 반영하여 하나의 표준화된 지표로 운영</p>
+                                                   <p>- 제외대상 : 환자평가표의 평가구분이 ‘입원평가＇인 경우</p>
+                                                   <div class="ck_wr grid_flex">
+                                                       <p>1차 : <input type="text" placeholder="12"></p>
+                                                       <p>2차 : <input type="text" placeholder="12"></p>
+                                                       <p>3차 : <input type="text" placeholder="12"></p>
+                                                       <p>4차 : <input type="text" placeholder="12"></p>
+                                                       <p>5차 : <input type="text" placeholder="12"></p>
+                                                       <p>6차 : <input type="text" placeholder="12"></p>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">해당 월 평가받은 치매환자 </p>
+                                               <div class="ck_if">
+                                                   <p>- 치매환자 : 청구명세서에 치매상병(F00~F03,G30)이 있거나 환자평가표의 치매에 체크된 경우</p>
+                                                   <div class="ck_wr grid_flex">
+                                                       <p>1차 : <input type="text" placeholder="12"></p>
+                                                       <p>2차 : <input type="text" placeholder="12"></p>
+                                                       <p>3차 : <input type="text" placeholder="12"></p>
+                                                       <p>4차 : <input type="text" placeholder="12"></p>
+                                                       <p>5차 : <input type="text" placeholder="12"></p>
+                                                       <p>6차 : <input type="text" placeholder="12"></p>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">해당 월 MMSE검사와 치매척도검사(CDR, GDS) 실시 환자</p>
+                                               <div class="ck_if">
+                                                   <p>- 검사실시 : 최근 6개월 이내에 MMSE검사와 최근 12개월 이내 
+                                                   치매척도 검사(CDR 또는 GDS)를 모두 실시한 경우 인정</p>
+                                                   <div class="ck_wr grid_flex">
+                                                       <p>1차 : <input type="text" placeholder="12"></p>
+                                                       <p>2차 : <input type="text" placeholder="12"></p>
+                                                       <p>3차 : <input type="text" placeholder="12"></p>
+                                                       <p>4차 : <input type="text" placeholder="12"></p>
+                                                       <p>5차 : <input type="text" placeholder="12"></p>
+                                                       <p>6차 : <input type="text" placeholder="12"></p>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                       </div>
+                                       
+                                       <div class="report_ck_2">
+                                          <p class="color_green">3. 진료과정영역</p>
+                                           <div class="ck_top grid_flex">
+                                               <p class="ck_q">입력사항</p>
+                                               <p class="ck_if">세부내용</p>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">해당 월 평가와 전월 평가를 모두 받은 환자 중 체중결과가 있는 환자</p>
+                                               <div class="ck_if">
+                                                   <p>- 해당 월 평가와 전월 평가를 모두 받은 환자 중 체중결과가 있는 환자</p>
+                                                   <p>- 만기질환, 비만(체질량지수≥25kg/㎡)</p>
+                                                   <div class="ck_wr grid_flex">
+                                                       <p>1차 : <input type="text" placeholder="12"></p>
+                                                       <p>2차 : <input type="text" placeholder="12"></p>
+                                                       <p>3차 : <input type="text" placeholder="12"></p>
+                                                       <p>4차 : <input type="text" placeholder="12"></p>
+                                                       <p>5차 : <input type="text" placeholder="12"></p>
+                                                       <p>6차 : <input type="text" placeholder="12"></p>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">전월에 비해 5% 이상 체중 감소가 있는 환자</p>
+                                               <div class="ck_if">
+                                                   <p>- (전월 평가 체중 -  해당 월 평가 체중) ≥ 전월 평가체중 x 0.05</p>
+                                                   <p>- 만기질환, 비만(체질량지수≥25kg/㎡)</p>
+                                                   <div class="ck_wr grid_flex">
+                                                       <p>1차 : <input type="text" placeholder="12"></p>
+                                                       <p>2차 : <input type="text" placeholder="12"></p>
+                                                       <p>3차 : <input type="text" placeholder="12"></p>
+                                                       <p>4차 : <input type="text" placeholder="12"></p>
+                                                       <p>5차 : <input type="text" placeholder="12"></p>
+                                                       <p>6차 : <input type="text" placeholder="12"></p>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">해당 월 평가와 전월 평가를 모두 받은 환자 중 해당월과 전월 모두 고위험군에 해당하는 환자</p>
+                                               <div class="ck_if">
+                                                   <p>- 고위험군 : 체위변경하기, 일어나 앉기, 옮겨 앉기, 방 밖으로 나오기가 ‘상당한 도움‘ 이상이거나 ‘행위발생 안함＇인 경우</p>
+                                                   <div class="ck_wr grid_flex">
+                                                       <p>1차 : <input type="text" placeholder="12"></p>
+                                                       <p>2차 : <input type="text" placeholder="12"></p>
+                                                       <p>3차 : <input type="text" placeholder="12"></p>
+                                                       <p>4차 : <input type="text" placeholder="12"></p>
+                                                       <p>5차 : <input type="text" placeholder="12"></p>
+                                                       <p>6차 : <input type="text" placeholder="12"></p>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">전월 평가에서 욕창이 없었으나 해당 월 평가에서 1단계 이상의 욕창이 새로 생긴 환자</p>
+                                               <div class="ck_if">
+                                                   <p>- 새로 생긴 욕창 : 이전  평가 이후 새로 발생한 욕창(압박성 궤양) 존재여부를  의미</p>
+                                                   <p>- 욕창이 있는 상태에서 전원된 환자는 새로 생긴 환자에 포함되지 않음</p>
+                                                   <div class="ck_wr grid_flex">
+                                                       <p>1차 : <input type="text" placeholder="12"></p>
+                                                       <p>2차 : <input type="text" placeholder="12"></p>
+                                                       <p>3차 : <input type="text" placeholder="12"></p>
+                                                       <p>4차 : <input type="text" placeholder="12"></p>
+                                                       <p>5차 : <input type="text" placeholder="12"></p>
+                                                       <p>6차 : <input type="text" placeholder="12"></p>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">해당 월 평가와 전월 평가를 모두 받은 환자 중 전월 평가에서 욕창이 있는 환자</p>
+                                               <div class="ck_if">
+                                                   <p>- 해당 월 평가와 전월 평가를 모두 받은 환자 중 전월 평가에서 욕창이 있는 환자</p>
+                                                   <div class="ck_wr grid_flex">
+                                                       <p>1차 : <input type="text" placeholder="12"></p>
+                                                       <p>2차 : <input type="text" placeholder="12"></p>
+                                                       <p>3차 : <input type="text" placeholder="12"></p>
+                                                       <p>4차 : <input type="text" placeholder="12"></p>
+                                                       <p>5차 : <input type="text" placeholder="12"></p>
+                                                       <p>6차 : <input type="text" placeholder="12"></p>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">해당 월 평가에서 욕창이 전월 평가보다 개선된 환자</p>
+                                               <div class="ck_if">
+                                                   <p>- 욕창개선 : 전월 대비 욕창 개수가 늘어나거나 욕창 중 최고단계 욕창이 더 심해진 경우</p>
+                                                   <p>- 제외대상 : 욕창의 개선과 악화가 모두 발생한 경우</p>
+                                                   <div class="ck_wr grid_flex">
+                                                       <p>1차 : <input type="text" placeholder="12"></p>
+                                                       <p>2차 : <input type="text" placeholder="12"></p>
+                                                       <p>3차 : <input type="text" placeholder="12"></p>
+                                                       <p>4차 : <input type="text" placeholder="12"></p>
+                                                       <p>5차 : <input type="text" placeholder="12"></p>
+                                                       <p>6차 : <input type="text" placeholder="12"></p>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">중증도 이상의 통증이 있는 환자</p>
+                                               <div class="ck_if">
+                                                   <p>- 해당 월 평가와 전월 평가를 모두 받은 환자 중 전월 평가에서 중증도 이상의 통증이 있는 환자</p>
+                                                   <p>- 중증도 이상 통증 : 중증도 통증 또는 격렬하거나 참을 수 없는 통증이  있는 경우(NRS, VAS 4~10점  또는 FPS 3~5점)</p>
+                                                   <div class="ck_wr grid_flex">
+                                                       <p>1차 : <input type="text" placeholder="12"></p>
+                                                       <p>2차 : <input type="text" placeholder="12"></p>
+                                                       <p>3차 : <input type="text" placeholder="12"></p>
+                                                       <p>4차 : <input type="text" placeholder="12"></p>
+                                                       <p>5차 : <input type="text" placeholder="12"></p>
+                                                       <p>6차 : <input type="text" placeholder="12"></p>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">해당 월 평가에서 통증이 전월 평가보다 개선된 환자</p>
+                                               <div class="ck_if">
+                                                   <p>- 통증 강도 및 발생빈도 분류에 따라 「통증의 강도 또는 발생빈도」가 줄어든 경우</p>
+                                                   <p>- 강도(빈도)의 개선과 빈도(강도)의 악화가 동시에 나타나는 경우 개선으로 판단하지 않음</p>
+                                                   <div class="ck_wr grid_flex">
+                                                       <p>1차 : <input type="text" placeholder="12"></p>
+                                                       <p>2차 : <input type="text" placeholder="12"></p>
+                                                       <p>3차 : <input type="text" placeholder="12"></p>
+                                                       <p>4차 : <input type="text" placeholder="12"></p>
+                                                       <p>5차 : <input type="text" placeholder="12"></p>
+                                                       <p>6차 : <input type="text" placeholder="12"></p>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">해당 월 평가와 전월 평가를 모두 받은 환자</p>
+                                               <div class="ck_if">
+                                                   <p>- 해당 월 평가와 전월 평가를 모두 받은 환자</p>
+                                                   <div class="ck_wr grid_flex">
+                                                       <p>1차 : <input type="text" placeholder="12"></p>
+                                                       <p>2차 : <input type="text" placeholder="12"></p>
+                                                       <p>3차 : <input type="text" placeholder="12"></p>
+                                                       <p>4차 : <input type="text" placeholder="12"></p>
+                                                       <p>5차 : <input type="text" placeholder="12"></p>
+                                                       <p>6차 : <input type="text" placeholder="12"></p>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">해당 월 평가에서  일상생활수행능력(ADL)이 전월 평가보다 개선된 환자</p>
+                                               <div class="ck_if">
+                                                   <p>- ADL 개선 : 환자평가표 기준에 따라 10개 ADL항목 총점이 1점이상 감소</p>
+                                                   <p>- 제외 : 전월 평가에서 10개의 ADL값이 모두 완전 자립전월과 해당 월 평가 모두 ‘의료최고도＇인 환자      </p>
+                                                   <div class="ck_wr grid_flex">
+                                                       <p>1차 : <input type="text" placeholder="12"></p>
+                                                       <p>2차 : <input type="text" placeholder="12"></p>
+                                                       <p>3차 : <input type="text" placeholder="12"></p>
+                                                       <p>4차 : <input type="text" placeholder="12"></p>
+                                                       <p>5차 : <input type="text" placeholder="12"></p>
+                                                       <p>6차 : <input type="text" placeholder="12"></p>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">해당 월 평가를 받은 당뇨병환자</p>
+                                               <div class="ck_if">
+                                                   <p>- 당뇨병환자 : 청구명세서에 당뇨상병(E10~E14)이 있거나 환자평가표의 당뇨에 체크된 경우</p>
+                                                   <p>- 제외 : 환자평가표의 평가구분이 입원평가인 경우</p>
+                                                   <div class="ck_wr grid_flex">
+                                                       <p>1차 : <input type="text" placeholder="12"></p>
+                                                       <p>2차 : <input type="text" placeholder="12"></p>
+                                                       <p>3차 : <input type="text" placeholder="12"></p>
+                                                       <p>4차 : <input type="text" placeholder="12"></p>
+                                                       <p>5차 : <input type="text" placeholder="12"></p>
+                                                       <p>6차 : <input type="text" placeholder="12"></p>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">최근 3개월 이내  HbA1c검사결과가 적정범위인 환자</p>
+                                               <div class="ck_if">
+                                                   <p>- HbA1c검사결과가 적정범위 : 4 ≤ HbA1c &lt; 8.5%</p>
+                                                   <p>- 검사결과가 없거나 검사일자가 환자평가표 작성일 이후인 경우</p>
+                                                   <div class="ck_wr grid_flex">
+                                                       <p>1차 : <input type="text" placeholder="12"></p>
+                                                       <p>2차 : <input type="text" placeholder="12"></p>
+                                                       <p>3차 : <input type="text" placeholder="12"></p>
+                                                       <p>4차 : <input type="text" placeholder="12"></p>
+                                                       <p>5차 : <input type="text" placeholder="12"></p>
+                                                       <p>6차 : <input type="text" placeholder="12"></p>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">평가 대상기간 동안 입원중인 환자 </p>
+                                               <div class="ck_if">
+                                                   <p>- 평가 대상기간 동안 입원중인 환자 </p>
+                                                   <div class="ck_wr grid_flex">
+                                                       <p>1차 : <input type="text" placeholder="12"></p>
+                                                       <p>2차 : <input type="text" placeholder="12"></p>
+                                                       <p>3차 : <input type="text" placeholder="12"></p>
+                                                       <p>4차 : <input type="text" placeholder="12"></p>
+                                                       <p>5차 : <input type="text" placeholder="12"></p>
+                                                       <p>6차 : <input type="text" placeholder="12"></p>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="grid_flex">
+                                               <p class="ck_q">입원 기간이 181일 이상인 환자</p>
+                                               <div class="ck_if">
+                                                   <p>- 181일 이상 입원 : 일당 정액수가 및 입원료 산정기준에 따름</p>
+                                                   <p>- 제외 : 의료최고도 또는 의료고도, 의료중도 환자</p>
+                                                   <div class="ck_wr grid_flex">
+                                                       <p>1차 : <input type="text" placeholder="12"></p>
+                                                       <p>2차 : <input type="text" placeholder="12"></p>
+                                                       <p>3차 : <input type="text" placeholder="12"></p>
+                                                       <p>4차 : <input type="text" placeholder="12"></p>
+                                                       <p>5차 : <input type="text" placeholder="12"></p>
+                                                       <p>6차 : <input type="text" placeholder="12"></p>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                               
+                               <div class="read_btn">
+                                   <button type="button" value="" class="view_list" onclick="location.href='sub_06_05.html'" >목록보기</button>
+                               </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>         
+            </div>
+            
+            
+            
+            <!-- //////////////////// footer ////////////// -->
+            <div id="footer">
+               <div class="footer_b block_pc">
+                   <div class="con_in">
+                       <ul class="grid_flex">
+                            <li><a href="http://esangedu.kr/" target="_blank"><img src="images/footer_banner04.png" alt="이상에듀"></a></li>
+                           <li><a href="http://hrd.esangedu.kr/hrd/" target="_blank"><img src="images/footer_banner05.png" alt="국민내일배움카드"></a></li>
+                           <li><a href="http://www.e-pass.kr/" target="_blank"><img src="images/footer_banner06.png" alt="이상라이선스"></a></li>
+                           <li><a href="http://www.dreamnurse.co.kr/" target="_blank"><img src="images/footer_banner01.png" alt="드림널스"></a></li>
+                           <li><a href="http://koreabrand.kr/" target="_blank"><img src="images/footer_banner02.png" alt="대한민국브랜드협회"></a></li>
+                           <li><a href="https://jobgo.ne.kr/main/" target="_blank"><img src="images/footer_banner03.png" alt="한국이러닝협회"></a></li>
+                       </ul>
+                   </div>
+               </div>
+                <div class="footer_lnb">
+                    <ul class="con_in grid_flex">
+                        <li><a href="#">오시는길</a><span></span></li>
+                        <li><a href="#" class="link_c">개인정보취금방침</a></li>
+                    </ul>
+                </div>
+                <div class="footer_info">
+                    <div class="con_in grid_flex">
+                        <p class="footer_logo"><img src="images/footer_logo.png"></p>
+                        <div class="footer_add">
+                            <address>
+                                이상에듀 (주)나야넷  |   대표 : 구영모  |   fax : 02.6008.2012  |  사업자등록번호 : 783-87-00353  |   개인정보관리책임자 : 최정우<br>
+                                이상에듀 : 14267) 경기 광명시 광명로 874 5층 이상에듀  |   tel : 02.6494.2010   |  원격평생교육시설신고 : 제55호<br>
+                                본사 : 08506) 서울특별시 금천구 가산디지털1로 145,804호(에이스하이엔드타워 3차)  |  TEL : 02.6494.2013  |   원격평생교육시설신고 : 제601호
+                            </address>
+                            <div class="copyright">copyright 2016 Nayanet allright &amp; reserved.</div>
+                        </div>
+                        <div class="family_site">
+                            <p class="family">Family Site</p>
+                            <ul>
+                                <li><a href="http://esangedu.kr/" target="_blank">이상에듀</a></li>
+                                <li><a href="http://hrd.esangedu.kr/" target="_blank">국민내일배움카드</a></li>
+                                <li><a href="http://www.e-pass.kr/" target="_blank">이상라이선스</a></li>
+                                <li><a href="http://nayanet.co.kr/" target="_blank">나야넷</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- side quick -->
+        <div class="side_quick">
+            <ul>
+                <li><a href="#" class="side_quick01">나의강의실</a></li>
+                <li><a href="#" class="side_quick02">학습자료실</a></li>
+                <li><a href="#" class="side_quick03">학습문의</a></li>
+            </ul>
+        </div>
+        
+    
+        
+        
+        <!-- mobile menu -->
+         <script src="js/pushy.min.js"></script>
+         
+         
+    
+</body></html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../../css/guide.css" />
+    <title>DESIGN GUIDE</title>
+  </head>
+
+  <style>
+    .popup,
+    .modal {
+      position: initial;
+      opacity: 1;
+      z-index: initial;
+    }
+
+    .overlay {
+      display: none;
+    }
+
+    .popup .popup_msg {
+      position: initial;
+      width: 360px;
+      transform: initial;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+    .modal .modal_block {
+      position: relative;
+      width: 360px;
+      transform: initial;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      left: 0;
+    }
+
+    .modal .modal_block .modal_in .modal_con::-webkit-scrollbar {
+      width: 5px;
+      background-color: #fff;
+    }
+    .modal .modal_block .modal_in .modal_con::-webkit-scrollbar-thumb {
+      background: #dfdfdf;
+    }
+
+    .modal .modal_block .toast {
+      position: absolute;
+      width: 360px;
+      transform: initial;
+      left: initial;
+    }
+  </style>
+  <body>
+    <main id="guide_main">
+      <!-- menu -->
+      <nav id="guide_nav">
+        <h1>design guide</h1>
+
+        <div class="nav_menu">
+          <a href="guide.html">typography</a>
+          <a href="guide_color.html">color</a>
+          <a href="guide_icon.html">icon</a>
+          <a href="guide_form.html">form</a>
+          <a href="guide_button.html">button</a>
+          <a href="guide_popup.html" class="active">popup</a>
+          <a href="guide_component.html">component</a>
+        </div>
+      </nav>
+
+      <!-- contents -->
+      <section class="container">
+        <div class="contents">
+          <h2>popup</h2>
+
+          <div class="guide_info">
+            <p class="txt">- 팝업 건텐츠 div.popup</p>
+            <p class="txt">- 모달 컨첸츠 div.modal</p>
+            <p class="txt">
+              - 팝업/컨텐츠 안 overlay필수 / 오픈시 overlay 및 body .open 추가
+            </p>
+          </div>
+
+          <!-- popup -->
+          <div class="guide_block">
+            <h3>popup</h3>
+            <div class="guide_data">
+              <p class="title">.popup_msg</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      let swiper = new Swiper(".add_file", {
+        spaceBetween: 8,
+        slidesPerView: "auto",
+      });
+
+      /* popup */
+      $(".pop01").on("click", function () {
+        $(".popup01, body").addClass("open");
+      });
+
+      $(".overlay, .btnClose").on("click", function () {
+        $(".popup, .modal, body").removeClass("open");
+      });
+
+      //메인 이미지 팝업
+      let swiper2 = new Swiper(".modal_img", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+      });
+    </script>
+  </body>
+</html>

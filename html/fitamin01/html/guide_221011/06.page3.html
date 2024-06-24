@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/rcommon.css">
+  <link rel="stylesheet" href="../../css/guide.css">
+  <link rel="stylesheet" href="../../css/rstyle.css">
+  <title>1:1문의하기 - 문의작성</title>
+
+  <style>
+    .input_basic .btnClear{
+      top: calc(50%);
+      transform: translateY(-50%);
+    }
+  </style>
+
+</head>
+<body class="on">
+    <div class="rmain_wrap bd_pg grid_btn">
+      <section class="bd_write pd_all">
+        <div class="selectbox mb_0_5">
+          <button class="selectBtn">문의하실 주제를 선택해주세요</button>
+          <div class="select_bt">
+            <div class="overlay"></div>
+            <div class="option_list">
+              <div class="optlist_in">
+                <p class="btn_b opt_b">서비스 관련 문의</p>
+                <p class="btn_b opt_b">구독 및 배송관련 문의</p>
+                <p class="btn_b opt_b">혜택 관련 문의</p>
+                <p class="btn_b opt_b">회원정보 관련 문의</p>
+                <p class="btn_b opt_b">기타문의</p>
+              </div>
+              
+            </div>
+          </div>
+          <img src="../../images/icon_down.svg" alt="" class="selectArrow">
+        </div>
+
+        <div class="input_basic mb_0_5">
+          <label for="input01" style="display:none">제목</label>
+          <input type="text" class="rinput" placeholder="제목을 입력해주세요" id="input01">
+          <p class="btnClear"></p>
+        </div>
+
+        <div class="input_basic mb_1_5">
+          <label for="textarea01" style="display:none">내용</label>
+          <textarea type="text" class="rtextarea" id="textarea01" cols="0" rows="10" placeholder="문의하실 내용을 작성해주세요"></textarea>
+        </div>
+
+        <div class="input_file mb_1">
+          <label for="inputfile01">파일찾기</label> 
+          <input type="file" class="input_file" id="inputfile01">
+
+          <!-- 파일이 첨부되면 추가한 파일이 순서대로 옆으로 추가 -->
+          <div class="file_add">
+            <img src="../../images/bd_sample01.png">
+            <p class="file_del"></p>
+          </div>
+          <div class="file_add">
+            <img src="../../images/bd_sample02.png">
+            <p class="file_del"></p>
+          </div>
+        </div>
+
+        <div class="input_check">
+          <input type="checkbox" class="rinput" id="checkbox01">
+          <label for="checkbox01" class="ck_circle ">답변 작성이 완료되면 문자로도 알려주세요</label>
+        </div>
+      </section>
+
+      <section class="ntc_bottom pd_base"> 
+        <div class="rnotice pd_inner mb_2_5">
+          <p class="notice_p">산업안전보건법에 따라 고객응대 근로자 보호조치를 시행하고 있습니다.</p>
+          <p class="notice_p">고객응대 근로자에게 폭언, 폭행 등을 하지 말아주세요.</p>
+          <p class="notice_p">상품 불량 및 오배송의 경우 해당하는 이미지를 등록해주세요.</p>
+          <p class="notice_p">이미지 한개당 최대 10MB의 용량이 넘어가는 경우 업로드에 제한이 있을 수 있습니다.</p>
+          <p class="notice_p">첨부파일은 최대 2개까지만 등록이 가능합니다.</p>
+        </div>
+
+        <div class="btn_center">
+          <button class="btn_b btn_blue" disabled>작성완료</button>
+        </div>
+      </section>
+    </div>
+
+
+    <!-- 팝업 -->
+    <div class="rpopup on">
+      <div class="overlay"></div>
+      <div class="pop_open">
+        <div class="pop_in">
+          <p class="p_txt1">지금 페이지를 나가시겠어요?<br>작성 중인 글이 저장되지 않고 사라져요!</p>
+        </div>
+        <div class="pop_btn">
+          <button class="btn_m btn_light p_cancel">닫기</button>
+          <button class="btn_m btn_red p_cp">나가기</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script>
+    /* popup */
+    $(".selectBtn").on("click", function(){
+    $(".select_bt, body").addClass("on");
+    });
+
+    $(".overlay, .opt_b, .pop_btn").on("click", function(){
+      $(".select_bt, body, .rpopup").removeClass("on");
+    });
+
+
+    /* 셀렉트 박스 선택*/
+    const label = document.querySelectorAll('.selectBtn');
+label.forEach(function(lb){
+    lb.addEventListener('click', e => {
+        let optionList = lb.nextElementSibling;
+        let optionItems = optionList.querySelectorAll('.opt_b');
+        clickLabel(lb, optionItems);
+    })
+});
+const clickLabel = (lb, optionItems) => {
+    if(lb.parentNode.classList.contains('active')) {
+        lb.parentNode.classList.remove('active');
+        optionItems.forEach((opt) => {
+            opt.removeEventListener('click', () => {
+                handleSelect(lb, opt)
+            })
+        })
+    } else {
+        lb.parentNode.classList.add('active');
+        optionItems.forEach((opt) => {
+            opt.addEventListener('click', () => {
+                handleSelect(lb, opt)
+            })
+        })
+    }
+}
+const handleSelect = (label, item) => {
+    label.innerHTML = item.textContent;
+    label.parentNode.classList.remove('active');
+    label.classList.add('optSlt');
+}
+
+
+    // /* ---- 삭제버튼 ------- */
+    $(document).ready(function(){
+      $('.input_basic').each(function(){
+        $(this).find('.clearInput').on('keyup focus', function(){
+          $(this).siblings('.btnClear').attr('style', 'opacity: 1');
+
+          if($(this).val().length == 0){
+            $(this).siblings('.btnClear').attr('style', 'opacity: 0');
+          } else {
+            $(this).siblings('.btnClear').attr('style', 'opacity: 1');
+          }
+        });
+      
+        // $(this).find('.clearInput').on('blur', function(){
+        //   $(this).siblings('.btnClear').attr('style', 'opacity: 0');
+        // });
+      
+        $(this).find('.btnClear').on('click touchstart', function(){
+          $(this).closest('.input_basic').find('.rinput').val('');
+          $(this).closest('.input_basic').find('.btnClear').attr('style', 'opacity: 0');
+          return false;
+        });
+      });
+    });
+
+
+  </script>
+</body>
+</html>

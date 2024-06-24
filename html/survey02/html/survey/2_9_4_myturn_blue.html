@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>2_9_4.내차례(카드색상랜덤) - 블루</title>
+</head>
+<body>
+  <main class="main">
+    <div class="fullpage" style="max-width: 48rem">
+      <div class="myturn_wrap">
+        <p class="my_icon"><img src="../../images/smile_bk.svg" alt=""></p>
+        <p class="p3_fb">내 차례가 되었어요<br>매장 카운터로 와주세요!</p>
+
+        <div class="myturn_card card_blue">
+          <div class="line_bg_bk">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="my_time">
+            <p class="txt">내 예약시간</p>
+            <p class="time">오후 6:00</p>
+          </div>
+
+          <p class="card_logo"></p>
+
+          <div class="card_pattern">
+            <div class="pattern_right"></div>
+            <div class="pattern_left"></div>
+          </div>
+
+          <div class="line_bg_bk">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </div>
+      </div>
+      <!-- 돌아가기 // 태블릿에서만 노출 -->
+      <div class="back_btn">
+        <p class="back_icon" onclick="location.href='2_servey_index.html';"><img src="../../images/arrow_back.svg" alt=""></p>
+        <p class="back_txt">돌아가기 <span class="back_time timer" data-seconds-left=30></span></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/jquery.simple.timer.js"></script>
+
+  <script>
+      //timer
+      $(function(){
+      $('.timer').startTimer({
+        onComplete: function(element){
+          $('html, body').addClass('bodyTimeoutBackground');
+        }
+      }).click(function(){ location.reload() });
+    })
+  </script>
+</body>
+</html>

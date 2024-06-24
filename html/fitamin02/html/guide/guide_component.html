@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/guide.css" />
+    <title>DESIGN GUIDE</title>
+  </head>
+
+  <style>
+    .card_day_time {
+      width: 360px;
+    }
+  </style>
+  <body>
+    <main id="guide_main">
+      <!-- menu -->
+      <nav id="guide_nav">
+        <h1>design guide</h1>
+
+        <div class="nav_menu">
+          <a href="guide.html">typography</a>
+          <a href="guide_color.html">color</a>
+          <a href="guide_icon.html">icon</a>
+          <a href="guide_form.html">form</a>
+          <a href="guide_button.html">button</a>
+          <a href="guide_popup.html">popup</a>
+          <a href="guide_layout.html">layout</a>
+          <a href="guide_component.html" class="active">component</a>
+        </div>
+      </nav>
+
+      <!-- contents -->
+      <section class="container">
+        <div class="contents">
+          <h2>component</h2>
+
+          <div class="guide_info">
+            <p class="p3_f">- 팝업 건텐츠 div.popup</p>
+            <p class="p3_f">- 모달 컨첸츠 div.modal</p>
+            <p class="p3_f">- 팝업/컨텐츠 안 overlay필수 / 오픈시 overlay 및 body .open 추가</p>
+            <p class="p3_f">- 박스쉐도우는 디자인확인용/실제팝업,모달에는 적용되지 않음</p>
+          </div>
+
+          <!-- box -->
+          <div class="guide_block">
+            <h3>box</h3>
+            <div class="guide_data">
+              <p class="title">.box</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="box_0_25 bg_gray">
+                  .box_0_25 : 라운드값 .25rem<br />
+                  기본 패딩값 1rem; .bg_gray : 배경 gray05(#f5f5f5)
+                </div>
+
+                <div class="box_0_5 bg_primary_op">
+                  .box_0_5 : 라운드값 .5rem<br />
+                  기본 패딩값 1rem; .bg_primary_op : 배경 primary opacity 0.05
+                </div>
+
+                <div class="box_0_75 bg_system_red_op">
+                  .box_0_75 : 라운드값 .75rem<br />
+                  기본 패딩값 1rem; .bg_system_red_op : 배경 system red opacity 0.05
+                </div>
+
+                <div class="box_1 bg_system_yellow_op">
+                  .box_1 : 라운드값 1rem<br />
+                  기본 패딩값 1rem, .bg_system_yellow_op : 배경 system yellow opacity 0.05
+                </div>
+
+                <div class="box_1 bg_system_yellow_op lt_0">
+                  .box_1 : 라운드값 1rem<br />
+                  기본 패딩값 1rem, .bg_system_yellow_op : 배경 system yellow opacity 0.05
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- label -->
+          <div class="guide_block">
+            <h3>label</h3>
+            <div class="guide_data">
+              <p class="title">.label</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="label green">
+                  <p class="txt">👏 참여를 완료하였습니다</p>
+                  <p class="time">29:08:27 마감</p>
+                </div>
+                <div class="label red">
+                  <p class="txt">남은 시간까지</p>
+                  <p class="time">23:00:01 남음</p>
+                </div>
+                <div class="label yellow">
+                  <p class="txt">📢 이제 곧 입찰이 마감돼요!</p>
+                  <p class="time">02:59:59 남음</p>
+                </div>
+                <div class="label dark">
+                  <p class="txt">⛔️ 입찰이 마감되었습니다</p>
+                </div>
+                <div class="label notice">
+                  <p class="txt">최대오글자님, 지금 찬스 당첨결과를 확인해보세요!</p>
+                </div>
+                <div class="label round_op">
+                  <p class="txt">📢 지금 임*현 님이 <span class="system_red bold_f">Lv 5</span><span class="bold_f">로 레벨업</span> 되었어요!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- label button -->
+          <div class="guide_block">
+            <h3>label button</h3>
+            <div class="guide_data">
+              <p class="title">.label_btn</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="label_btn right">
+                  <p class="bold_txt">핏타민 캐시</p>
+                  <p class="txt">이렇게 모으고, 사용해 보세요</p>
+                </div>
+
+                <div class="label_btn border right">
+                  <p class="bold_txt">핏타민 캐시</p>
+                  <p class="txt">이렇게 모으고, 사용해 보세요</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- bubble text -->
+          <div class="guide_block">
+            <h3>bubble text</h3>
+            <div class="guide_data">
+              <p class="title">.bubble</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <p class="bubble">5초만에 빠른 회원가입</p>
+              </div>
+            </div>
+          </div>
+
+          <!--  card -->
+          <div class="guide_block">
+            <h3>card</h3>
+            <div class="guide_data">
+              <p class="title">.card_day_time</p>
+              <div class="data" style="display: grid; gap: 1rem">
+                <div class="card_day_time sun">
+                  <p class="time">오전 07:00 <span class="icon_s icon_basic">기록가능</span></p>
+                  <p class="txt">피토틱스 옐로우, 락토핏 유산균 골드</p>
+                </div>
+                <div class="card_day_time moon">
+                  <p class="time">오전 07:00 <span class="icon_s icon_gray">섭취 13시간 전</span></p>
+                  <p class="txt">피토틱스 옐로우, 락토핏 유산균 골드</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">.alarm_item</p>
+              <div class="data" style="display: grid; gap: 1rem">
+                <div class="alarm_item">
+                  <div class="alarm_data">
+                    <p class="time">오후 04:10</p>
+                    <div class="day">
+                      <p class="on">월</p>
+                      <p class="on">화</p>
+                      <p class="on">수</p>
+                      <p>목</p>
+                      <p class="on">금</p>
+                      <p>토</p>
+                      <p>일</p>
+                    </div>
+                  </div>
+                  <div class="alarm_goods">
+                    <p class="name">비타민</p>
+                    <p class="no">외 3개</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">.goods_box_(s)</p>
+              <div class="data" style="display: grid; gap: 1rem">
+                <div class="goods_box_s">
+                  <p class="name">피토틱스 블랙</p>
+                  <p class="deletBtn"></p>
+                </div>
+
+                <div class="goods_box_s">
+                  <p class="brand_s">브랜드명</p>
+                  <p class="name">피토틱스 블랙</p>
+                </div>
+
+                <div class="goods_box_s check">
+                  <p class="name"><span class="brand">[피토틱스]</span> 블랙</p>
+                </div>
+
+                <div class="goods_box_s check select">
+                  <p class="name">피토틱스 블랙</p>
+                </div>
+
+                <div class="goods_box_s radio">
+                  <p class="name"><span class="brand">[피토틱스]</span> 블랙</p>
+                </div>
+
+                <div class="goods_box_s radio select">
+                  <p class="name">피토틱스 블랙</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--  time setting  -->
+          <div class="guide_block">
+            <h3>time setting</h3>
+            <div class="guide_data">
+              <p class="title">.card_day_time</p>
+              <div class="data" style="display: grid; gap: 1rem">
+                <div class="time_slide">
+                  <!-- 오전/오후-->
+                  <div class="slide_list">
+                    <div class="swiper slide_day">
+                      <div class="swiper-wrapper">
+                        <p class="swiper-slide">오전</p>
+                        <p class="swiper-slide">오후</p>
+                      </div>
+                    </div>
+
+                    <!-- 시간 -->
+                    <div class="swiper slide_time">
+                      <div class="swiper-wrapper">
+                        <p class="swiper-slide">00</p>
+                        <p class="swiper-slide">01</p>
+                        <p class="swiper-slide">02</p>
+                        <p class="swiper-slide">03</p>
+                        <p class="swiper-slide">04</p>
+                        <p class="swiper-slide">05</p>
+                        <p class="swiper-slide">06</p>
+                        <p class="swiper-slide">07</p>
+                        <p class="swiper-slide">08</p>
+                        <p class="swiper-slide">09</p>
+                        <p class="swiper-slide">10</p>
+                        <p class="swiper-slide">11</p>
+                      </div>
+                    </div>
+
+                    <!-- 분 -->
+                    <div class="swiper slide_min">
+                      <div class="swiper-wrapper">
+                        <p class="swiper-slide">00</p>
+                        <p class="swiper-slide">10</p>
+                        <p class="swiper-slide">20</p>
+                        <p class="swiper-slide">30</p>
+                        <p class="swiper-slide">40</p>
+                        <p class="swiper-slide">50</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- chat -->
+          <div class="guide_block">
+            <h3>chat</h3>
+            <div class="guide_data">
+              <p class="title">.chat_msg</p>
+              <div class="data" style="position: relative; height: 100px">
+                <div class="chat_msg">
+                  <div class="chat_write">
+                    <input type="text" placeholder="메세지를 입력하세요" />
+                  </div>
+                  <p class="chat_btn"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- rating -->
+          <div class="guide_block">
+            <h3>rating</h3>
+            <div class="guide_data">
+              <p class="title">.review_star</p>
+              <div class="data" style="position: relative; height: 100px">
+                <div class="review_star">
+                  <span class="rank_star" onclick="togglestar(1)"></span>
+                  <span class="rank_star" onclick="togglestar(2)"></span>
+                  <span class="rank_star" onclick="togglestar(3)"></span>
+                  <span class="rank_star" onclick="togglestar(4)"></span>
+                  <span class="rank_star" onclick="togglestar(5)"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- add img file + img list-->
+          <div class="guide_block">
+            <h3>add img file + img list</h3>
+            <div class="guide_data">
+              <p class="title">.addfile_slide</p>
+              <div class="data" style="position: relative">
+                <div class="swiper addfile_slide">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide addfile">
+                      <input type="file" id="addimg" />
+                      <label for="addimg"></label>
+                    </div>
+                    <div class="swiper-slide img_list">
+                      <img src="../../images/guide_sample.png" alt="" />
+                      <p class="deleteImg"></p>
+                    </div>
+                    <div class="swiper-slide img_list">
+                      <img src="../../images/guide_sample2.png" alt="" />
+                      <p class="deleteImg"></p>
+                    </div>
+                    <div class="swiper-slide img_list">
+                      <img src="../../images/guide_sample3.png" alt="" />
+                      <p class="deleteImg"></p>
+                    </div>
+                    <div class="swiper-slide img_list">
+                      <img src="../../images/guide_sample4.png" alt="" />
+                      <p class="deleteImg"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- tab component -->
+          <div class="guide_block">
+            <h3>tab</h3>
+            <div class="guide_data">
+              <p class="title">.tab_menu</p>
+              <div class="data">
+                <div class="swiper tab_menu">
+                  <div class="swiper-wrapper">
+                    <p class="swiper-slide tab_btn active">탭메뉴1</p>
+                    <p class="swiper-slide tab_btn">탭메뉴2</p>
+                    <p class="swiper-slide tab_btn">탭메뉴3</p>
+                    <p class="swiper-slide tab_btn">탭메뉴4</p>
+                    <p class="swiper-slide tab_btn">탭메뉴5</p>
+                    <p class="swiper-slide tab_btn">탭메뉴6</p>
+                    <p class="swiper-slide tab_btn">탭메뉴7</p>
+                    <p class="swiper-slide tab_btn">탭메뉴8</p>
+                  </div>
+                </div>
+
+                <div class="tab_menu">
+                  <p class="tab_btn active">탭메뉴1</p>
+                  <p class="tab_btn">탭메뉴2</p>
+                </div>
+
+                <div class="tab_menu">
+                  <p class="tab_btn active">탭메뉴1</p>
+                  <p class="tab_btn">탭메뉴2</p>
+                  <p class="tab_btn">탭메뉴3</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">.tab_sort</p>
+              <div class="data">
+                <div class="swiper tab_sort">
+                  <div class="swiper-wrapper">
+                    <p class="swiper-slide sort_btn active">탭메뉴1</p>
+                    <p class="swiper-slide sort_btn">탭메뉴2</p>
+                    <p class="swiper-slide sort_btn">탭메뉴3</p>
+                    <p class="swiper-slide sort_btn">탭메뉴4</p>
+                    <p class="swiper-slide sort_btn">탭메뉴5</p>
+                    <p class="swiper-slide sort_btn">탭메뉴6</p>
+                    <p class="swiper-slide sort_btn">탭메뉴7</p>
+                    <p class="swiper-slide sort_btn">탭메뉴8</p>
+                  </div>
+                </div>
+
+                <div class="tab_sort">
+                  <p class="sort_btn active">탭메뉴1</p>
+                  <p class="sort_btn">탭메뉴2</p>
+                  <p class="sort_link">나의 질문내역</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 좋아요 버튼 -->
+          <div class="guide_block">
+            <h3>like</h3>
+            <div class="guide_data">
+              <p class="title">.like_s</p>
+              <div class="data">
+                <div class="like_s">
+                  <p class="like_icon"></p>
+                  <p class="count">0</p>
+                </div>
+                <div class="like_s">
+                  <p class="like_icon"></p>
+                  <p class="count">10</p>
+                </div>
+                <div class="like_s">
+                  <p class="like_icon"></p>
+                  <p class="count">998</p>
+                </div>
+                <div class="like_s">
+                  <p class="like_icon"></p>
+                  <p class="count max_count">999</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 상세하단 -->
+          <div class="guide_block">
+            <h3>detail_bottom</h3>
+            <div class="guide_data">
+              <p class="title">.detail_bottom</p>
+              <div class="data">
+                <div class="detail_bottom" style="position: relative;">
+                  <p class="share"><img src="../../images/icon/system_share.svg" alt="" /></p>
+                  <div class="like_s clicked">
+                    <p class="like_icon"></p>
+                    <p class="count">63</p>
+                  </div>
+                  <div class="progress_wrap"><div class="progress_bar" id="myBar"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 정보테이블 -->
+          <div class="guide_block">
+            <h3>info_table</h3>
+            <div class="guide_data">
+              <p class="title">.info_table</p>
+              <div class="data">
+                <div class="info_table">
+                  <p class="sub">연령, 성별</p>
+                  <p class="desc">20대, 여성</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 설문상담관련 선택-->
+          <div class="guide_block">
+            <h3>servey_singular</h3>
+            <div class="guide_data">
+              <p class="title">.servey_singular</p>
+              <div class="data">
+                <div class="consult_list" style="display: grid; gap: .75rem">
+                  <div class="servey_singular">
+                    <p class="sbj">채팅으로 상담할래요</p>
+                  </div>
+                  <div class="servey_singular">
+                    <p class="sbj">영상통화로 상담할래요</p>
+                    <p class="txt">자세한 고민을 상담할 수 있어요!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 약사프로필 -->
+          <div class="guide_block">
+            <h3>pharm_p</h3>
+            <div class="guide_data">
+              <p class="title">.pharm_p</p>
+              <div class="data">
+                <div class="pharm_p">
+                  <p class="p_pic"><img src="../../images/cam_sample.png" alt=""></p>
+                  <div class="p_info">
+                    <div class="p_name">
+                      <p class="name">김예림 약사</p>
+                      <p class="online">상담중</p>
+                    </div>
+                    <p class="info">메디컬참약국·누적상담 999회+</p>
+                  </div>
+                  <p class="icon_round btn_basic">신규</p>
+                </div>
+                <div class="pharm_p">
+                  <p class="p_pic"><img src="../../images/cam_sample.png" alt=""></p>
+                  <div class="p_info">
+                    <div class="p_name">
+                      <p class="name">김예림 약사</p>
+                      <p class="online now">상담가능</p>
+                    </div>
+                    <p class="info">메디컬참약국·누적상담 999회+</p>
+                  </div>
+                  <p class="icon_round btn_basic">신규</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 영양제썸네일 슬라이드 -->
+          <div class="guide_block">
+            <h3>thumb_goods_data</h3>
+            <div class="guide_data">
+              <p class="title">.thumb_goods_data</p>
+              <div class="data">
+                  <div class="thumb_goods_data"">
+                    <p class="img"><img src="../../images/drug_sample.png" alt=""></p>
+                    <p class="span4_f gray02 type">스트레스 긴장완화</p>
+                    <p class="span3_fb mt_0_25 name">쏘팔케토옥타코사놀+제품명이길면 줄임표</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/swiper-bundle.min.js"></script>
+      <script>
+        //시간설정 슬라이드
+        var timeSetting = new Swiper(".slide_day, .slide_min", {
+          direction: "vertical",
+          spaceBetween: 4,
+          slidesPerView: 3,
+          centeredSlides: true,
+          initialSlide: 1,
+        });
+
+        var timeSetting2 = new Swiper(".slide_time", {
+          direction: "vertical",
+          spaceBetween: 4,
+          slidesPerView: 3,
+          centeredSlides: true,
+          initialSlide: 4,
+        });
+
+        //별점
+        var stars = document.querySelectorAll(".rank_star");
+        function togglestar(data) {
+          for (let i = 0; i < stars.length; i++) {
+            stars[i].classList.remove("star_on");
+          }
+
+          for (let i = 0; i < data; i++) {
+            stars[i].classList.add("star_on");
+          }
+        }
+
+        //이미지추가
+        var addimg = new Swiper(".addfile_slide", {
+          slidesPerView: "auto",
+          spaceBetween: 8,
+        });
+
+        //추가된 이미지 삭제
+        $(".deleteImg").click(function () {
+          $(this)
+            .parents(".img_list")
+            .fadeOut(function () {
+              $(this).delay(1000).remove();
+            });
+        });
+
+        //탭메뉴
+        var tabmenu = new Swiper(".tab_menu", {
+          slidesPerView: "auto",
+        });
+
+        $(".tab_menu")
+          .find(".tab_btn")
+          .click(function () {
+            $(this).addClass("active");
+            $(this).siblings().removeClass("active");
+          });
+
+        var tabBtn = $(".tab_menu .tab_btn");
+        var tabCont = $(".tab_con");
+
+        tabCont.hide().eq(0).show();
+
+        tabBtn.click(function () {
+          var target = $(this);
+          var index = target.index();
+          // alert(index);
+          tabBtn.removeClass("active");
+          target.addClass("active");
+          tabCont.css("display", "none");
+          tabCont.eq(index).css("display", "block");
+        });
+
+        //소트메뉴
+        var sortbtn = new Swiper(".tab_sort", {
+          slidesPerView: "auto",  
+          spaceBetween: 8,
+        });
+
+        $(".tab_sort")
+          .find(".sort_btn")
+          .click(function () {
+            $(this).addClass("active");
+            $(this).siblings().removeClass("active");
+          });
+
+        //좋아요 데아터
+        $(".like_s").click(function () {
+          $(this).toggleClass("clicked");
+
+          var count = $(this).children(".count");
+          if ($(this).hasClass("clicked")) {
+            count.html(function (i, val) {
+              return val * 1 + 1;
+            });
+
+            if (count.html() > 998) {
+              count.addClass("more_count");
+              count.html(999);
+            }
+          } else if (count.hasClass("max_count")) {
+            count.html(999);
+          } else {
+            count.html(function (i, val) {
+              return val * 1 - 1;
+            });
+
+            if (count.html() <= 998) {
+              count.removeClass("more_count");
+            }
+          }
+        });
+
+      //설문선택-단수
+      $(".servey_singular").click(function() {
+        $(this).addClass("select");
+        $(this).siblings().removeClass("select");
+        $(".btn_b").attr("disabled",false);
+      })
+
+       //하단 프로그래스바
+       window.onscroll = function () {
+        myFunction();
+      };
+
+      function myFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+      }
+      </script>
+    </main>
+  </body>
+</html>

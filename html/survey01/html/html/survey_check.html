@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- ================== css ========================= -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/lab01.css">
+
+  <title>실험실1 질염 : 나는 무슨 질염일까?</title>
+</head>
+<body>
+  <div class="lab_wrap">
+    <section class="lab_servey grid">
+      <!-- 설문 상단 -->
+      <div class="lab_top">
+        <a href="#" class="back_icon"><i class="ri-arrow-left-s-line"></i></a>
+
+        <div class="lab_step">
+          <div class="stap_txt">
+            <p class="step_info">나이에 따라 다를 수 있어요.</p>
+            <p class="step_no">1/8</p>
+          </div>
+          <div class="step_bar">
+            <div class="progressbar"><p class="prg_w" style="max-width:calc((100% / 8) * 1);" data-width="prg_bar"></p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 설문 내역 -->
+      <div class="lab_check grid">
+        <h2 class="lab_q">Q1. 현재 어떤 상태인가요?</h2>
+
+        <div class="lab_q_list">
+          <div class="q_item">
+            <input type="radio" id="qcheck01" name="checkgroup">
+            <label for="qcheck01" class="check_btn">가임기 여성이에요. <i class="ri-check-line"></i></label>
+          </div>
+          <div class="q_item">
+            <input type="radio" id="qcheck02" name="checkgroup">
+            <label for="qcheck02" class="check_btn">초경 전이에요. <i class="ri-check-line"></i></label>
+          </div>
+          <div class="q_item">
+            <input type="radio" id="qcheck03" name="checkgroup">
+            <label for="qcheck03" class="check_btn">임신 중이에요. <i class="ri-check-line"></i></label>
+          </div>
+          <div class="q_item">
+            <input type="radio" id="qcheck04" name="checkgroup">
+            <label for="qcheck04" class="check_btn">폐경이 지났어요. <i class="ri-check-line"></i></label>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    
+    // We listen to the resize event
+    window.addEventListener('resize', () => {
+      // We execute the same script as before
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+      </script>
+</body>
+</html>

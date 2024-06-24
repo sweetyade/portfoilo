@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+  <!-- <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'> -->
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>GUIDE COMPONENT</title>
+</head>
+
+<style>
+  .guide_wrap{
+    width: 100%;
+    max-width: 360px;
+    margin: 2rem auto;
+  }
+  .info{
+    width: 100%;
+    line-height: var(--line-h);
+    margin-bottom: 5rem;
+  }
+
+  .guide_block{
+    margin: 2rem 0 5rem;
+  }
+
+  .quide_flex{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .quide_flex .span3_f{
+    margin-left: 1rem;
+    color: #9F9F9F;
+  }
+
+  .bbpop{
+    margin-bottom: 1rem;
+  }
+
+</style>
+<body>
+  <div class="guide_wrap">
+    <h1 class="h1_f" style="margin-bottom: 2rem;">COMPONENT</h1>
+
+    <div class="info">
+      <p class="span3_f">- 자주 사용하는 카드 디자인 모음</p>
+    </div>
+    
+    <!-- 라운드 디자인 1-->
+    <div class="guide_block">
+      <p class="h2_f" style="margin-bottom: 1rem;">.cardround</p>
+
+      <div class="cardround_shadow">
+        <p class="p3_f">자주 사용하는 라운드 카드 디자인</p>
+        <p class="p3_f">쉐도우 없는 카드 / .cardround</p>
+        <p class="p3_f">쉐도우 있는 카드 / .cardround_shadow</p>
+      </div>
+
+      <div class="cardround bg_gr">
+        <p class="p3_f">그린색상 배경 / .bg_gr 추가</p>
+      </div>
+
+      <div class="cardround bg_red">
+        <p class="p3_f">레드색상 배경 / .bg_red 추가</p>
+      </div>
+
+      <div class="cardround bg_gray">
+        <p class="p3_f">그레이 색상 배경 / .bg_gray 추가</p>
+      </div>
+
+      <div class="card_wrap">
+        <div class="cardround bg_gray">
+          <p class="p3_f">.card_wrap > .cardround</p>
+        </div>
+        <div class="cardround bg_gray">
+          <p class="p3_f">두개씩 묶어 사용 병렬정렬</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 라운드 디자인 2 -->
+    <div class="guide_block">
+      <p class="h2_f" style="margin-bottom: 1rem;">.cardpoint</p>
+
+      <div class="card_point bg_gray">
+        <p class="p3_f">자주 사용하는 라운드 카드 디자인</p>
+      </div>
+
+      <div class="card_wrap">
+        <div class="card_point bg_gray">
+          <p class="p3_f">.card_wrap > .card_point</p>
+        </div>
+        <div class="card_point bg_gray">
+          <p class="p3_f">두개씩 묶어 사용 병렬정렬</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 라운드디자인 3 -->
+    <div class="guide_block">
+      <p class="h2_f" style="margin-bottom: 1rem;">.infocard</p>
+
+      <div class="infocard bg_gray">
+        <p class="p3_f">자주 사용하는 라운드 카드 디자인</p>
+      </div>
+
+      <div class="card_wrap">
+        <div class="card_point bg_gray">
+          <p class="p3_f">.card_wrap > .card_point</p>
+        </div>
+        <div class="card_point bg_gray">
+          <p class="p3_f">두개씩 묶어 사용 병렬정렬</p>
+        </div>
+      </div>
+    </div>
+    <!-- 버블 메세지 -->
+    <div class="guide_block">
+      <p class="bbpop bt_center">5초만에 빠른 회원가입</p>
+      <p class="bbpop bt_left">5초만에 빠른 회원가입</p>
+      <p class="bbpop bt_right">5초만에 빠른 회원가입</p>
+    </div>
+
+    <!-- 상단 탭 -->
+    <div class="guide_block">
+      <div class="tab_menu">
+        <p class="tab_link active">menu01</p>
+        <p class="tab_link">menu02</p>
+      </div>
+
+      <div class="tab_menu under_l">
+        <p class="tab_link active">menu01</p>
+        <p class="tab_link">menu02</p>
+      </div>
+
+      <div class="tab_menu">
+        <p class="tab_link">menu01</p>
+        <p class="tab_link active">menu02</p>
+        <p class="tab_link">menu03</p>
+      </div>
+
+      <div class="tab_menu under_l">
+        <p class="tab_link">menu01</p>
+        <p class="tab_link active">menu02</p>
+        <p class="tab_link">menu03</p>
+
+      </div>
+    </div>
+
+    <!-- 서브메뉴 탭 -->
+    <div class="guide_block">
+      <div class="txt_tap">
+        <p class="tap active">질문 내역</p>
+        <p class="tap">설문 내역</p>
+        <p class="tap">상담 내역</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,569 @@
+/***************************************************************
+    08. components
+***************************************************************/
+.breadcrumbs {
+  @include flex;
+  height: 1.5rem;
+
+  &-nav {
+    @include font_body_1;
+    color: var(--primary);
+    position: relative;
+    @include flex;
+    gap: 0.25rem;
+    white-space: nowrap;
+
+    &::after {
+      content: "/";
+      padding-inline: 0.5rem;
+      color: var(--text-secondary);
+    }
+
+    &:last-child {
+      color: var(--text-primary);
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.dropdown {
+  position: relative;
+  &-label {
+    @include font_input-label;
+    padding-bottom: 0.25rem;
+  }
+
+  &-btn {
+    border: 1px solid var(--input-border);
+    padding: 0.4375rem 0.875rem;
+    border-radius: 0.375rem;
+    background-color: transparent;
+    position: relative;
+    height: 2.625rem;
+    // cursor: pointer;
+    @include flex;
+    gap: 0.625rem;
+  }
+
+  &-open {
+    position: absolute;
+    right: 0.875rem;
+    width: 1rem;
+    height: 1rem;
+    background-image: url(/images/system/chevron_down.svg);
+    background-size: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  .chip {
+    position: relative;
+    z-index: 1;
+  }
+
+  .dropdown_list {
+    background-color: var(--paper-bg);
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    box-shadow: var(--gray-s-large);
+    position: absolute;
+    width: 100%;
+    top: 4.375rem;
+    display: grid;
+    gap: 0.125rem;
+    z-index: 1;
+    &-data {
+      @include font_body_1;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--action-hover);
+      }
+
+      &.active {
+        background-color: var(--primary-o-light);
+        color: var(--primary);
+      }
+
+      .exlink {
+        color: var(--text-disabled);
+      }
+    }
+  }
+}
+
+.stepper {
+  @include flexbtw;
+  position: relative;
+  gap: 0.5rem;
+
+  .stepper_default {
+    white-space: nowrap;
+    width: auto;
+    @include flex;
+    gap: 0.5rem;
+  }
+
+  .stepper_center {
+    text-align: center;
+    white-space: nowrap;
+    display: grid;
+    gap: 1rem;
+  }
+
+  &-divider {
+    height: 3px;
+    border-radius: 3rem;
+    background-color: var(--primary);
+    width: 100%;
+  }
+
+  &-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background-size: 0.875rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+  }
+
+  &-no {
+    @include font_h6;
+  }
+
+  &-nol {
+    @include font_h4;
+  }
+
+  &-title {
+    @include font_body-1;
+    color: var(--text-primary);
+  }
+
+  &-subtxt {
+    @include font_body-2;
+  }
+
+  &-pre {
+    .stepper-icon {
+      background-image: url(/images/system/check_w.svg);
+      background-color: var(--primary);
+    }
+  }
+
+  &-active {
+    .stepper-icon {
+      border: 0.3125rem solid var(--primary);
+    }
+
+    & ~ .stepper-divider {
+      background-color: var(--primary-o-light);
+    }
+  }
+
+  &-next {
+    .stepper-icon {
+      border: 0.1875rem solid var(--primary-o-light);
+    }
+  }
+
+  &.type_vertical {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+
+    .stepper-divider {
+      height: 2.5rem;
+      width: 3px;
+      margin-left: 0.5rem;
+    }
+
+    .stepper_center {
+      width: 100%;
+    }
+
+    .stepper_center ~ .stepper-divider {
+      margin-inline: auto;
+    }
+  }
+}
+
+.stepper_custom {
+  @include flex;
+  gap: 1rem;
+  .stepper_default {
+    @include flex;
+    gap: 0.75rem;
+  }
+
+  &-icon {
+    width: 2.375rem;
+    height: 2.375rem;
+    border-radius: 0.375rem;
+    @include font_h5;
+    @include flexcenter;
+
+    img {
+      width: 1.375rem;
+      height: 1.375rem;
+    }
+  }
+
+  &-title {
+    @include font_body_1;
+    white-space: nowrap;
+  }
+
+  &-subtxt {
+    @include font_body_2;
+  }
+
+  .stepper_divider {
+    width: 1.25rem;
+    height: 1.25rem;
+    background-image: url(/images/system/chevron_right.svg);
+    background-size: 1.25rem;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &-pre {
+    .stepper_custom-icon {
+      background-color: var(--primary-o-light);
+      color: var(--primary);
+    }
+
+    .stepper_custom-title,
+    .stepper_custom-subtxt {
+      color: var(--text-disabled);
+    }
+  }
+
+  &-active {
+    .stepper_custom-icon {
+      background-color: var(--primary);
+      color: var(--light-color);
+    }
+  }
+
+  &-next {
+    .stepper_custom-icon {
+      background-color: var(--action-hover);
+    }
+  }
+
+  &.stepper_v {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+
+    .stepper_divider {
+      display: none;
+    }
+  }
+}
+
+.tab_group {
+  @include flex;
+  border-bottom: 1px solid var(--divider);
+  width: fit-content;
+
+  .tab_btn {
+    @include font_btn_m;
+    padding: 0.5rem 1.25rem;
+    position: relative;
+    @include flex;
+    gap: 0.375rem;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      transition: all 0.2s ease;
+    }
+
+    &:hover {
+      color: var(--primary);
+      &::after {
+        background-color: var(--primary-o-light);
+      }
+    }
+
+    &.active {
+      color: var(--primary);
+      &::after {
+        background-color: var(--primary);
+      }
+    }
+  }
+
+  .tab_icon {
+    width: 1.125rem;
+    height: 1.125rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &.type_vertical {
+    flex-direction: column;
+    border-bottom: none;
+    width: 8.125rem;
+    border-right: 1px solid var(--divider);
+
+    .tab_btn {
+      width: 100%;
+      justify-content: center;
+
+      &::after {
+        width: 0.125rem;
+        height: 100%;
+        left: initial;
+        right: 0;
+        top: 0;
+        bottom: initial;
+      }
+    }
+  }
+}
+
+.tab_group_fill {
+  @include flex;
+  gap: 0.25rem;
+  width: fit-content;
+
+  .tab_btn {
+    @include font_btn_m;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.375rem;
+    transition: all 0.2s ease;
+    @include flex;
+    gap: 0.375rem;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: var(--primary-o-light);
+      color: var(--primary);
+    }
+
+    &.active {
+      background-color: var(--primary);
+      color: var(--light-color);
+      box-shadow: var(--primary-s-small);
+    }
+  }
+
+  .tab_icon {
+    width: 1.125rem;
+    height: 1.125rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.type_vertical {
+    flex-direction: column;
+    width: 8.125rem;
+
+    .tab_btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+.pagenation {
+  @include flex;
+  gap: 0.375rem;
+
+  a {
+    @include font_body_2;
+    @include flexcenter;
+    width: 2.375rem;
+    height: 2.375rem;
+    border-top-width: 2.375rem;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: var(--action-selected);
+    transition: all 0.2s ease;
+    background-repeat: no-repeat;
+    background-size: 1.125rem;
+    background-position: center;
+
+    &:hover {
+      background-color: var(--action-disabled-bg);
+    }
+
+    &.active {
+      background-color: var(--primary-o-light);
+      color: var(--primary);
+    }
+
+    &.first {
+      background-image: url(/images/system/chevrons_left_gr.svg);
+    }
+
+    &.pre {
+      background-image: url(/images/system/chevron_left_gr.svg);
+    }
+
+    &.next {
+      background-image: url(/images/system/chevron_right.svg);
+    }
+
+    &.last {
+      background-image: url(/images/system/chevrons_right.svg);
+    }
+  }
+
+  &.type_rounded {
+    a {
+      border-radius: 0.375rem;
+    }
+  }
+
+  &.type_outline {
+    a {
+      border-color: var(--input-border);
+      background-color: transparent;
+
+      &:hover {
+        background-color: var(--action-hover);
+      }
+
+      &.active {
+        border-color: var(--primary);
+        background-color: var(--primary-o-light);
+      }
+    }
+  }
+
+  &.color_pr {
+    a {
+      &:hover {
+        background-color: var(--primary-o-light);
+        color: var(--primary);
+      }
+
+      &.active {
+        background-color: var(--primary);
+        color: var(--light-color);
+        box-shadow: var(--primary-s-small);
+      }
+    }
+  }
+
+  &.color_gr {
+    a {
+      &:hover {
+        background-color: var(--secondary-o-light);
+        color: var(--secondary);
+      }
+
+      &.active {
+        background-color: var(--secondary);
+        color: var(--light-color);
+        box-shadow: var(--secondary-s-small);
+      }
+    }
+  }
+
+  &.color_error {
+    a {
+      &:hover {
+        background-color: var(--error-o-light);
+        color: var(--error);
+      }
+
+      &.active {
+        background-color: var(--error);
+        color: var(--light-color);
+        box-shadow: var(--error-s-small);
+      }
+    }
+  }
+
+  &.color_warning {
+    a {
+      &:hover {
+        background-color: var(--warning-o-light);
+        color: var(--warning);
+      }
+
+      &.active {
+        background-color: var(--warning);
+        color: var(--light-color);
+        box-shadow: var(--warning-s-small);
+      }
+    }
+  }
+
+  &.color_info {
+    a {
+      &:hover {
+        background-color: var(--info-o-light);
+        color: var(--info);
+      }
+
+      &.active {
+        background-color: var(--info);
+        color: var(--light-color);
+        box-shadow: var(--info-s-small);
+      }
+    }
+  }
+
+  &.color_success {
+    a {
+      &:hover {
+        background-color: var(--success-o-light);
+        color: var(--success);
+      }
+
+      &.active {
+        background-color: var(--success);
+        color: var(--light-color);
+        box-shadow: var(--success-s-small);
+      }
+    }
+  }
+
+  &.size_s {
+    a {
+      width: 1.875rem;
+      height: 1.875rem;
+      background-size: 1rem;
+      @include font_caption;
+    }
+  }
+
+  &.size_l {
+    a {
+      width: 3rem;
+      height: 3rem;
+      background-size: 1.5rem;
+      @include font_body_1;
+    }
+  }
+
+  &.disabled {
+    opacity: 0.45;
+  }
+}

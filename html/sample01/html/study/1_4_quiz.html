@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- css -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/> <!-- icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <!-- swiper -->
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <title>1_4.퀴즈</title>
+</head>
+<body class="bg_color">
+  <!-- hedaer -->
+  <header class="header header_open">
+    <div class="inner">
+      <div class="header_title">
+        <h2>퀴즈</h2>
+      </div>
+      <div class="icon_group">
+        <a href="javascript:void(0)" class="btn_icon"><i class="ri-notification-2-line"></i></a>
+      </div>
+    </div>
+
+    <div class="swiper header_menu">
+      <div class="swiper-wrapper">
+        <a href="javascript:void(0)" class="swiper-slide btn_s">클래스 리스트</a>
+        <a href="javascript:void(0)" class="swiper-slide btn_s">토론게시판</a>
+        <a href="javascript:void(0)" class="swiper-slide btn_s active">퀴즈</a>
+        <a href="javascript:void(0)" class="swiper-slide btn_s">학습자료</a>
+        <a href="javascript:void(0)" class="swiper-slide btn_s">성적평가</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main class="main">
+    <section class="class_wrap">
+      <div class="list_1_25">
+        <div class="card_board">
+          <div class="title_block">
+            <p class="title">PHP 퀴즈</p>
+            <p class="icon_round icon_primary-alp">완료</p>
+          </div>
+
+          <div class="quiz_smr">
+            <p><span>8</span> questions</p>
+            <p><span>40</span> marks</p>
+          </div>
+        </div>
+
+        <div class="card_board">
+          <div class="title_block">
+            <p class="title">프로그래밍 퀴즈</p>
+            <p class="icon_round icon_primary-alp">완료</p>
+          </div>
+
+          <div class="quiz_smr">
+            <p><span>8</span> questions</p>
+            <p><span>40</span> marks</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+
+  <script>
+    //변동높이 설정 
+    $(document).ready(function() {
+      headerHeight = $(".header").innerHeight();
+      mainHeight = (innerHeight - headerHeight)
+      $(".main").css("min-height", mainHeight);
+    });
+
+    //해더 스크롤 쉐도우 추가
+    $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+      if (scroll >= 50) {
+        $(".header").addClass("scroll");
+      } else {
+        //console.log('a');
+        $(".header").removeClass("scroll");
+      }
+    });
+
+    
+    //헤더 메뉴
+    var headerswiper = new Swiper(".header_menu", {
+      spaceBetween: 12,
+      slidesPerView: "auto",
+    });
+
+
+    
+  </script>
+</body>
+</html>

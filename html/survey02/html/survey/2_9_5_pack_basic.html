@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>2_9_5.수령내차례(팩별로색상다름) - 최종최종! 이색상만사용</title>
+</head>
+
+<style>
+  .fullpage{
+    height: 100%;
+  }
+  .myturn_wrap{
+    position: relative;
+    padding: 5rem 0 3.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .back_btn{
+    position: relative;
+    left: 0;
+    padding-left: 5.625rem;
+  }
+
+  @media (min-width: 752px){
+    .myturn_wrap{
+      padding: 6.5rem 0 2.5rem;
+    }
+
+    .myturn_wrap .myturn_card{
+      margin-bottom: 1rem;
+    }
+
+    .back_btn{
+      padding: 2.25rem 5.625rem 2.5rem;
+    }
+  }
+</style>
+<body>
+  <main class="main bg_gray07">
+    <div class="fullpage bg_light">
+      <div class="myturn_wrap">
+        <p class="my_icon"><img src="../../images/smile_bk.svg" alt=""></p>
+        <p class="p3_fb">조금만 기다려주세요<br>
+          최대한 빠르게 안내해드릴게요!</p>
+
+        <div class="myturn_card card_white">
+          <div class="line_bg_bk">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="my_pack">
+            <div class="pack_data">
+              <p class="pack_sub">최대오글자님</p>
+              <p class="pack_name">만성 피로 &면역 관리<br>
+                유형 외 2개</p>
+            </div>
+            <div class="pack_data">
+              <p class="pack_sub">내 순서</p>
+              <p class="pack_name no">2번째</p>
+            </div>
+          </div>
+
+          <div class="info_team">
+            <div class="team_data">
+              <p class="team_txt">예상 대기시간</p>
+              <p class="team_time">20~30분</p>
+            </div>
+            <div class="team_data">
+              <p class="team_txt">내 앞 대기팀</p>
+              <p class="team_time">999팀</p>
+            </div>
+          </div>
+
+          <div class="line_bg_bk">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="back_btn bg_light">
+      <p class="back_icon" onclick="location.href='1_index.html';"><img src="../../images/arrow_back.svg" alt=""></p>
+      <p class="back_txt">돌아가기 <span class="back_time timer" data-seconds-left=30></span></p>
+    </div>
+
+    <div class="map_toggle">
+      <div class="map_title">
+        <p>맞춤 영양제 찾으시는 곳</p>
+        <img src="../../images/top.svg" alt="">
+      </div>
+
+      <div class="map_con">
+        <p class="p6_fb centertxt">주문하신 맞춤 영양제를 수령을 위해<br>
+          핏타민 스토어 본 매장으로 방문해주세요!</p>
+        <p class="map_img">
+          <img src="../../images/pre_map_m.png" class="dp_m" alt="">
+          <img src="../../images/pre_map_pc.png" class="dp_pc" alt="">
+        </p>
+      </div>
+    </div>
+  </main>
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/jquery.simple.timer.js"></script>
+  <script src="../../js/jquery-ui.min.css"></script>
+
+  <script>
+
+ //timer
+ $(function(){
+      $('.timer').startTimer({
+        onComplete: function(element){
+          $('html, body').addClass('bodyTimeoutBackground');
+        }
+      }).click(function(){ location.reload() });
+    })
+
+
+    $(".map_title").click(function(){
+      $(this).toggleClass("open");
+      $(".map_con").slideToggle();
+    })
+  </script>
+</body>
+</html>

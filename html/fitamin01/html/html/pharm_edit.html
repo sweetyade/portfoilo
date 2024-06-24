@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>핏타민</title>
+    <meta name="keywords" content="킥더허들 헬스케어">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="누구나 누릴 수 있는 일상의 건강">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- ============================ css ======================= -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="../../css/pharm.css" rel="stylesheet">
+</head>
+
+    <div class="pharm_wrap flex">
+        <!-- ============== header =============== -->
+        <header class="header">
+            <div class="profile">
+                <img class="p_img" src="../../images/no_profile.gif" alt="">
+                <h1>장약국장</h1>
+                <p class="p_name">장약국</p>
+
+                <div class="btn_wrap">
+                    <button class="btn_white">로그아웃</button>
+                </div>
+            </div>
+
+            <div class="header_smr">
+                <div class="smr_check flex">
+                    <p>즉시 상담 설정</p>
+                    <div class="smr_toggle">
+                        <input type="checkbox" id="switch" />
+                        <label for="switch">Toggle</label>
+                    </div>
+                </div>
+
+                <div class="smr_block box1">
+                    <p class="flex"><span>즉시 상담 대기</span><a href="#">1건</a></p>
+                    <p class="flex"><span>예약 상담 대기</span><a href="#">0건</a></p>
+                </div>
+
+                <div class="smr_block box2 flex">
+                    <p><span>오늘 예정 상담</span><a href="#">1건</a></p>
+                </div>
+            </div>
+
+            <nav class="nav">
+                <ul class="nav_list">
+                    <li class="nav_item flex">
+                        <p><a href="#" class="nav_link active"><i class="ri-user-settings-line"></i> 프로필 관리</a></p>
+                    </li>
+                    <li class="nav_item">
+                        <p class="flex"><a href="#" class="nav_link"><i class="ri-customer-service-2-line"></i> 상담 관리</a> <i class="ri-arrow-down-s-line"></i></p>
+                        <ul class="sub_list">
+                            <li class="sub_item">
+                                <a href="#" class="sub_link">상담 대기 리스트</a>
+                            </li>
+                            <li class="sub_item">
+                                <a href="#" class="sub_link">예약 확정 리스트</a>
+                            </li>
+                            <li class="sub_item">
+                                <a href="#" class="sub_link">상담 내역 조회</a>
+                            </li>
+                            <li class="sub_item">
+                                <a href="#" class="sub_link">상담 설정</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_item flex">
+                        <p><a href="#" class="nav_link"><i class="ri-bar-chart-2-line"></i> 판매현황</a></p>
+                    </li>
+                    <li class="nav_item flex">
+                        <p><a href="#" class="nav_link"><i class="ri-file-text-line"></i> 식약청 의무 보고 자료</a></p>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- ============= main ================= -->
+        <main class="pharm_profile">
+            <div class="pharm_edit">
+                <form action="" class="passchk_form">
+                    <section class="pharm_edit-in">
+                        <h3>회원정보</h3>
+
+                        <div class="input_wrap">
+                            <label class="label_txt" for="email">아이디(이메일)</label>
+                            <input type="text" id="email" class="pharm_input" value="lattente20@hanmail.net">
+                        </div>
+                        <div class="input_wrap">
+                            <label class="label_txt" for="name">이름</label>
+                            <input type="text"  id="name" class="pharm_input" value="장약국장">
+                        </div>
+    
+                        <div class="input_wrap">
+                            <label class="label_txt" for="pharmacy">약국명</label>
+                            <input type="text"  id="pharmacy" class="pharm_input" value="장약국">
+                        </div>
+                        <div class="input_wrap">
+                            <label class="label_txt" for="reg">등록증 <span>(jpg/png,2MB이하)</span>
+                                <a href="#" target="_blank">현재 등록증</a>
+                            </label>
+                            <div class="input_in flex">
+                                <input type="file"  id="reg" class="input_w">
+                                <button class="input_btn-w">파일 첨부</button>
+                            </div>
+                        </div>
+                        <div class="input_wrap">
+                            <label class="label_txt" for="intro">소개(약력)</label>
+                            <textarea name="" id="intro" rows="3" class="input_w">
+    참약사 약국 대표
+    참약사육성협동조합 대표
+                            </textarea>
+                        </div>
+                        <div class="input_wrap">
+                            <label class="label_txt" for="sign">서명 <span>(jpg/png, 가로100px)</span>
+                                <a href="#" target="_blank">현재 서명</a></label>
+                            <div class="input_in flex">
+                                <input type="file" id="sign" class="input_w" value="장약국">
+                                <button class="input_btn-w">파일 첨부</button>
+                            </div>
+                        </div>
+                        <div class="input_wrap">
+                            <label class="label_txt" for="add">약국주소</label>
+                            <div class="input_in flex">
+                                <input type="text" id="add" class="input_w" value="06041">
+                                <button class="input_btn-w">주소 검색</button>
+                                <input type="text" class="input_f" value="서울 강남구 논현로135길 10">
+                                <input type="text" class="input_f" value="시온타워">
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="pharm_edit-in">
+                        <h3>비밀번호 변경</h3>
+                        <div class="input_wrap">
+                            <label class="label_txt" for="email">새 비밀번호</label>
+                            <input type="password" id="email" class="pharm_input" value="passssssssss">
+                        </div>
+                        <div class="input_wrap">
+                            <label class="label_txt" for="name">새 비밀번호 확인</label>
+                            <input type="password"  id="name" class="pharm_input" placeholder="동일한 비밀번호 입력">
+                        </div>
+                    </section>
+
+                    <div class="edit_check">
+                        <div class="all_check flex">
+                            <input type="checkbox" id="all_check" name="" value="1" checked="">
+                            <label for="all_check">
+                                <span>마케팅 정보 수신 동의</span>
+                            </label>
+                            <a href="/content/marketing" style="float:right;font-weight:400;" target="_blank">보기</a>
+                        </div>
+                        <div class="check flex">
+                            <input type="checkbox" id="check1" name="mb_7" value="1" checked="">
+                            <label for="check1">
+                                <span>이메일을 받겠습니다.</span>
+                            </label>
+                        </div>
+                        <div class="check flex">
+                            <input type="checkbox" id="check2" name="mb_7" value="1" checked="">
+                            <label for="check2">
+                                <span>알림톡 또는 휴대폰 문자메세지를 받겠습니다.</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="formbtn_wrap">
+                        <button class="form_btn">확인</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
+    <!-- 메뉴 -->
+    <script>
+        const accordionItems = document.querySelectorAll('.nav_item')
+
+        accordionItems.forEach((item) =>{
+            const accordionHeader = item.querySelector('.nav_link')
+
+            accordionHeader.addEventListener('click', () =>{
+                const openItem = document.querySelector('.sub-open')
+
+                toggleItem(item)
+
+                if(openItem && openItem!== item){
+                    toggleItem(openItem)
+                }
+            })
+        })
+
+        const toggleItem = (item) =>{
+            const accordionContent = item.querySelector('.sub_list')
+
+            if(item.classList.contains('sub-open')){
+                accordionContent.removeAttribute('style')
+                item.classList.remove('sub-open')
+            }else{
+                accordionContent.style.height = accordionContent.scrollHeight + 'px'
+                item.classList.add('sub-open')
+            }
+        }
+    </script>
+
+
+    <!--  하단 알림 팝업 토글 -->
+    <script>
+        $(".popup_open").on("click", function () {
+        $(".popup").toggleClass("open");
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+

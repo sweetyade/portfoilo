@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>킥더허들 헬스케어</title>
+    <meta name="keywords" content="킥더허들 헬스케어">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="누구나 누릴 수 있는 일상의 건강">
+    <meta name="format-detection" content="telephone=no">
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- ============================ css ======================= -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link href="../../css/m.common.css" rel="stylesheet">
+    <link href="../../css/m.sub.css" rel="stylesheet">
+
+
+
+    <script type="text/javascript" src="<c:url value='/bootstrap/js/bootstrap.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/vendors/popper/popper.min.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/scripts/modal.js' />"></script> <!-- 모달 스크립트 -->
+    <script type="text/javascript" src="<c:url value='/scripts/common.js' />"></script> <!-- 공통 스크립트 -->
+    <script type="text/javascript" src="<c:url value='/scripts/hybridBridge.js' />"></script> <!-- 네이티브 인터페이스 브릿지 -->
+</head>
+<body>
+
+    
+    <script>
+		$(document).ready(function() {
+			$("#chat-open").slideUp();
+			$(".chat").click(function() {
+				if( state == false ){ // slide close 상태
+					$("#chat-open").slideUp();
+					state = true; // 슬라이드를 열었음을 기록
+				} else if ( state == true ) {
+					$("#chat-open").slideDown();
+					state = false; // 슬라이드를 닫았음을 기록					
+				}					
+							
+			}); // click
+			
+			$("#chat-toggle").click(function() {
+				$("#chat-open").slideToggle();
+			});
+		}); //ready		
+		</script>
+    <main class="main" id="top">
+
+        
+
+        
+        <div class="container" data-layout="container">
+            <div class="sub_wrap my_result">
+                <div class="video">
+                    <div class="video_call">
+                        <p class="logo"><img src="../../images/video_logo.png" alt=""></p>
+                        <p class="video_time"><i class="ri-time-line"></i> 267764:45</p>
+                        <p class="video_pharmacist">
+                            <span>장약국장</span>
+                            약사 | 장약국
+                        </p>
+    
+                        <div class="video_msg">연결 대기중입니다.<br>잠시만 기다려주세요.</div>
+                    </div>
+                    <div class="video_btn">
+                            <a href="#" class="btn btn_white">설문 결과</a>
+                            <a href="#" class="btn btn_white trsp"><span>약사 추천</span></a>
+                    </div>
+                </div>
+                
+
+                
+
+                <div class="mypage_result">
+                    <p class="sub_title mb_1">설문결과 종합</p>
+
+                    <div class="my_block group_shadow mb_3">
+                        <div class="result_point">
+                            <p>66점</p>
+                        </div>
+                        <div class="result_info">
+                            <p class="font_m mb_1">조금만 더 힘내볼까요? 🤔</p>
+                            <p class="font_n">
+                                <b>핏타민</b>님의 체질량 지수는 정상보다 조금 높은 편이며, 
+                                식습관과 영양관리는 노력이 필요한 상태입니다. 
+                                건강에 대한 걱정은 보통이므로 <b>AI가 추천한 제품을 기반으로, 
+                                약사님과 가장 적합한 제품을 선정해보세요.</b>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="my_blockw mb_3">
+                        <p class="result_title font_l mb_2">BMI 지수</p>
+
+                        <div class="result_bar">
+                            <div class="result_bg">
+                                <p class="font_s font_w">저체중 <span class="bar_point"></span></p>
+                                <p class="font_s font_w">정상<span class="bar_point"></span></p>
+                                <p class="font_s font_w">비만<br>전단계<span class="bar_point active"></span></p>
+                                <p class="font_s font_w">1단계<br>비만<span class="bar_point"></span></p>
+                                <p class="font_s font_w">2단계<br>비만<span class="bar_point"></span></p>
+                                <p class="font_s font_w">3단계<br>비만<span class="bar_point"></span></p>
+                                <p class="bar_point point_1"></p>
+                            </div>
+                            <div class="result_bmi">
+                                <p class="font_s">18.5</p>
+                                <p class="font_s">23</p>
+                                <p class="font_s">25</p>
+                                <p class="font_s">30</p>
+                                <p class="font_s">35</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="my_blockw mb_3">
+                        <p class="result_title font_l mb_2">식습관 지수</p>
+
+                        <div class="result_bar">
+                            <div class="result_bg">
+                                <p class="font_s">위험 <span class="bar_point"></span></p>
+                                <p class="font_s">보통 <span class="bar_point active"></span></p>
+                                <p class="font_s">양호 <span class="bar_point"></span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="my_blockw myresult_slide swiper">
+                        <p class="result_title font_l mb_1">건강걱정 분야</p>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="result1">
+                                    <p class="font_n font_w2 mb_1">주요 건강걱정 top3</p>
+                                    <div class="my_toplist">
+                                        <p class="my_topitem">
+                                            <span class="icon"><img src="../../images/survey_step09_icon13.png" alt=""></span>
+                                            <span class="font_s">체중조절</span>
+                                            <span class="top_no font_w2">1</span>
+                                        </p>
+                                        <p class="my_topitem">
+                                            <span class="icon"><img src="../../images/survey_step09_icon10.png" alt=""></span>
+                                            <span class="font_s">관절/뼈 건강</span>
+                                            <span class="top_no font_w2">2</span>
+                                        </p>
+                                        <p class="my_topitem">
+                                            <span class="icon"><img src="../../images/survey_step09_icon12.png" alt=""></span>
+                                            <span class="font_s">장 건강</span>
+                                            <span class="top_no font_w2">3</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="result2">
+                                    <p class="font_n font_w2 mb_1">기타 건강걱정</p>
+                                    <div class="my_toplist">
+                                        <p class="my_topitem">
+                                            <span class="icon"><img src="../../images/survey_step09_icon13.png" alt=""></span>
+                                            <span class="font_s">체중조절</span>
+                                            <span class="top_no font_w2">1</span>
+                                        </p>
+                                        <p class="my_topitem">
+                                            <span class="icon"><img src="../../images/survey_step09_icon10.png" alt=""></span>
+                                            <span class="font_s">관절/뼈 건강</span>
+                                            <span class="top_no font_w2">2</span>
+                                        </p>
+                                        <p class="my_topitem">
+                                            <span class="icon"><img src="../../images/survey_step09_icon12.png" alt=""></span>
+                                            <span class="font_s">장 건강</span>
+                                            <span class="top_no font_w2">3</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="mypage_result drug_grid">
+                    <p class="sub_title mb_1">추천 영양 성분</p>
+
+                    <div class="drug_item">
+                        <p class="img bgcolor_1"><img src="../../images/drug04.png" alt=""></p>
+                        <p class="font_s">마그네슘B</p>
+                    </div>
+                    <div class="drug_item">
+                        <p class="img bgcolor_2"><img src="../../images/drug04.png" alt=""></p>
+                        <p class="font_s">비타민C</p>
+                    </div>
+                    <div class="drug_item">
+                        <p class="img bgcolor_3"><img src="../../images/drug04.png" alt=""></p>
+                        <p class="font_s">비타민D 2000IU+</p>
+                    </div>
+                </div>
+
+
+                <div class="mypage_result drug_grid devider">
+                    <p class="sub_title mb_1">약사 상담 필요</p>
+
+                    <div class="drug_item">
+                        <p class="img bgcolor_1"><img src="../../images/drug04.png" alt=""></p>
+                        <p class="font_s">마그네슘B</p>
+                    </div>
+                    <div class="drug_item">
+                        <p class="img bgcolor_2"><img src="../../images/drug04.png" alt=""></p>
+                        <p class="font_s">비타민C</p>
+                    </div>
+                    <div class="drug_item">
+                        <p class="img bgcolor_3"><img src="../../images/drug04.png" alt=""></p>
+                        <p class="font_s">비타민D 2000IU+</p>
+                    </div>
+                    <div class="drug_item">
+                        <p class="img bgcolor_1"><img src="../../images/drug04.png" alt=""></p>
+                        <p class="font_s">마그네슘B</p>
+                    </div>
+                    <div class="drug_item">
+                        <p class="img bgcolor_2"><img src="../../images/drug04.png" alt=""></p>
+                        <p class="font_s">비타민C</p>
+                    </div>
+                    <div class="drug_item">
+                        <p class="img bgcolor_3"><img src="../../images/drug04.png" alt=""></p>
+                        <p class="font_s">비타민D 2000IU+</p>
+                    </div>
+                    <div class="drug_item">
+                        <p class="img bgcolor_1"><img src="../../images/drug04.png" alt=""></p>
+                        <p class="font_s">마그네슘B</p>
+                    </div>
+                    <div class="drug_item">
+                        <p class="img bgcolor_2"><img src="../../images/drug04.png" alt=""></p>
+                        <p class="font_s">비타민C</p>
+                    </div>
+                    <div class="drug_item">
+                        <p class="img bgcolor_3"><img src="../../images/drug04.png" alt=""></p>
+                        <p class="font_s">비타민D 2000IU+</p>
+                    </div>
+                </div>
+
+                <div class="btn_wrap con_btn">
+                    <p class="font_n mb_1">약사 추천 제품을 확인하시려면 <br>
+                    아래 버튼을 클릭해주세요.</p>
+                    <a href="#" class="btn btn_blue">약사 추천 제품 보기</a>
+                </div>
+
+                <div class="chat">
+                    <div class="chat_title" id="chat-toggle">
+                        <p class="tit_l font_s"><i class="ri-message-3-line"></i> 약사님과 채팅</p>
+                        <p class="tit_l font_s">채팅창 숨기기 <i class="ri-arrow-down-s-line"></i></p>
+                    </div>
+                    <div class="chat_block" id="chat-open">
+                        <div class="chat_msg">
+                            <div class="chat_l">
+                                <p class="meg">안녕하세요 고객님 화면이 안보여서 그런데 새로고침 한번 부탁드립니다.</p>
+                            </div>
+                            <div class="chat_r">
+                                <p class="meg">네 할께요</p>
+                            </div>
+                            <div class="chat_l">
+                                <p class="meg">왼쪽 텍스트 </p>
+                            </div>
+                            <div class="chat_l">
+                                <p class="meg">왼쪽 텍스트</p>
+
+                            </div>
+                            <div class="chat_r">
+                                <p class="meg">오른쪽 텍스트</p>
+
+                            </div>
+                            <div class="chat_r">
+                                <p class="meg">오른쪽 텍스트</p>
+
+                            </div>
+                            <div class="chat_r">
+                                <p class="meg">오른쪽 텍스트</p>
+
+                            </div>
+                            <div class="chat_l">
+                                <p class="meg">왼쪽 텍스트</p>
+
+                            </div>
+                            <div class="chat_r">
+                                <p class="meg">오른쪽 텍스트</p>
+
+                            </div>
+                        </div>
+                        <div class="chat_wrt">
+                            <input type="text" placeholder="메세지를 입력해주세요">
+                            <button class="btn btn_basic">전송</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- swiper slide -->
+    <script type="text/javascript" src="../../scripts/mobile.js"></script> <!-- 추가 스크립트 -->
+
+
+
+ 
+    
+</body>
+</html>
+
+
+
+
+

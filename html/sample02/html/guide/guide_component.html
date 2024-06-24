@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/guide.css" />
+    <title>DESIGN GUIDE</title>
+  </head>
+  <body>
+    <style>
+      .dropdown{
+        max-width: 350px;
+      }
+    </style>
+    <main id="guide_main">
+      <!-- menu -->
+      <nav id="guide_nav">
+        <h1>design guide</h1>
+
+        <div class="nav_menu">
+          <a href="guide.html">typography</a>
+          <a href="guide_color.html">color</a>
+          <a href="guide_icon.html">icon</a>
+          <a href="guide_form.html">form</a>
+          <a href="guide_button.html">button</a>
+          <a href="guide_popup.html">popup</a>
+          <a href="guide_component.html" class="active">component</a>
+        </div>
+      </nav>
+
+      <!-- contents -->
+      <section class="container">
+        <div class="contents">
+          <h2>component</h2>
+
+          <div class="guide_info">
+            <p class="txt">- 사이즈 기본 m / size_s / size_l</p>
+            <p class="txt">- 타입 버티컬 type_vertical</p>
+          </div>
+
+          <!-- breadcrumbs -->
+          <div class="guide_block">
+            <h3>breadcrumbs</h3>
+            <div class="guide_data">
+              <p class="title">.</p>
+              <div class="data" style="">
+                <div class="breadcrumbs">
+                  <p class="breadcrumbs-nav"><a href="javascript:void(0)">Breadcrumb</a></p>
+                  <p class="breadcrumbs-nav"><a href="javascript:void(0)">Breadcrumb</a></p>
+                  <p class="breadcrumbs-nav"><a href="javascript:void(0)">Breadcrumb</a></p>
+                </div>
+
+                <div class="breadcrumbs">
+                  <p class="breadcrumbs-nav">
+                    <span class="breadcrumbs-icon">
+                      <img src="/images/system/star_fill_pr.svg" alt="">
+                    </span>
+                    <a href="javascript:void(0)">Breadcrumb</a>
+                  </p>
+                  <p class="breadcrumbs-nav">
+                    <span class="breadcrumbs-icon">
+                      <img src="/images/system/star_fill_pr.svg" alt="">
+                    </span>
+                    <a href="javascript:void(0)">Breadcrumb</a>
+                  </p>
+                  <p class="breadcrumbs-nav">
+                    <span class="breadcrumbs-icon">
+                      <img src="/images/system/star_fill_gr.svg" alt="">
+                    </span>
+                    <a href="javascript:void(0)">Breadcrumb</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- dropdown -->
+          <div class="guide_block" >
+            <h3>dropdown</h3>
+            <div class="guide_data">
+              <p class="title">dropdown</p>
+              <div class="data">
+                <div class="dropdown">
+                  <p class="dropdown-label">label</p>
+                  <div class="dropdown-btn">
+                    <p class="chip chip_s">chip <span class="delBtn"></span></p>
+                    <p class="chip chip_s">chip <span class="delBtn"></span></p>
+                    <p class="chip chip_s">chip <span class="delBtn"></span></p>
+                    <p class="dropdown-open"></p>
+                  </div>
+                  <ul class="dropdown_list" style="display: none;">
+                    <li class="dropdown_list-data">Show all notification content</li>
+                    <li class="dropdown_list-data active">Hide sensitive notification content</li>
+                    <li class="dropdown_list-data">Hide all notification content</li>
+                    <li class="dropdown_list-data">Toggle Dropdown</li>
+                    <li class="dropdown_list-data">Something else here</li>
+                    <li class="dropdown_list-data"><a href="#">Separated link</a></li>
+                    <li class="dropdown_list-data"><a href="#" class="exlink">Extra Link</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- stepper -->
+          <div class="guide_block" >
+            <h3>stepper</h3>
+            <div class="guide_data">
+              <p class="title">default</p>
+              <div class="data">
+                <div class="stepper">
+                  <div class="stepper_default stepper-pre">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no">01</p>
+                    <p class="stepper-title">Account Details</p>
+                  </div>
+                  <div class="stepper-divider"></div>
+                  <div class="stepper_default stepper-active">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no">02</p>
+                    <p class="stepper-title">Personal Info</p>
+                  </div>
+                  <div class="stepper-divider "></div>
+                  <div class="stepper_default stepper-next">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no">03</p>
+                    <p class="stepper-title">Social Links</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">subtitle</p>
+              <div class="data">
+                <div class="stepper">
+                  <div class="stepper_default stepper-pre">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no stepper-nol">01</p>
+                    <div class="">
+                      <p class="stepper-title">Account Details</p>
+                      <p class="stepper-subtxt">Enter your Account Details</p>
+                    </div>
+                  </div>
+                  <div class="stepper-divider"></div>
+                  <div class="stepper_default stepper-active">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no stepper-nol">02</p>
+                    <div class="">
+                      <p class="stepper-title">Personal Info</p>
+                      <p class="stepper-subtxt">Setup Information</p>
+                    </div>
+                  </div>
+                  <div class="stepper-divider "></div>
+                  <div class="stepper_default stepper-next">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no stepper-nol">03</p>
+                    <div class="">
+                      <p class="stepper-title">Social Links</p>
+                      <p class="stepper-subtxt">Add Social Links</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">center</p>
+              <div class="data">
+                <div class="stepper">
+                  <div class="stepper_center stepper-pre">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-title">Account Details</p>
+                  </div>
+                  <div class="stepper-divider"></div>
+                  <div class="stepper_center stepper-active">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-title">Personal Info</p>
+                  </div>
+                  <div class="stepper-divider "></div>
+                  <div class="stepper_center stepper-next">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-title">Social Links</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">center subtext</p>
+              <div class="data">
+                <div class="stepper">
+                  <div class="stepper_center stepper-pre">
+                    <p class="stepper-icon"></p>
+                    <div class="">
+                      <p class="stepper-title">Account Details</p>
+                      <p class="stepper-subtxt">Enter your Account Details</p>
+                    </div>
+                    
+                  </div>
+                  <div class="stepper-divider"></div>
+                  <div class="stepper_center stepper-active">
+                    <p class="stepper-icon"></p>
+                    
+                    <div>
+                      <p class="stepper-title">Personal Info</p>
+                      <p class="stepper-subtxt">Setup Information</p>
+                    </div>
+                  </div>
+                  <div class="stepper-divider "></div>
+                  <div class="stepper_center stepper-next">
+                    <p class="stepper-icon"></p>
+                    
+                    <div>
+                      <p class="stepper-title">Social Links</p>
+                      <p class="stepper-subtxt">Add Social Links</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- stepper custom-->
+          <div class="guide_block" >
+            <h3>stepper custom</h3>
+            <div class="guide_data">
+              <p class="title">custom</p>
+              <div class="data">
+                <div class="stepper_custom">
+                  <div class="stepper_default stepper_custom-pre">
+                    <div class="stepper_custom-icon">1</div>
+                    <div class="stepper_custom-title">Account Details</div>
+                  </div>
+                  <div class="stepper_divider"></div>
+                  <div class="stepper_default stepper_custom-active">
+                    <div class="stepper_custom-icon">2</div>
+                    <div class="stepper_custom-title">Account Details</div>
+                  </div>
+                  <div class="stepper_divider"></div>
+                  <div class="stepper_default stepper_custom-next">
+                    <div class="stepper_custom-icon">3</div>
+                    <div class="stepper_custom-title">Account Details</div>
+                  </div>
+                </div>
+              </div>
+              <div class="data">
+                <div class="stepper_custom">
+                  <div class="stepper_default stepper_custom-pre">
+                    <div class="stepper_custom-icon"><img src="/images/system/file_analytics_pr.svg" alt=""></div>
+                    <div>
+                      <div class="stepper_custom-title">Account Details</div>
+                      <div class="stepper_custom-subtxt">Enter your Account Details</div>
+                    </div>
+                  </div>
+                  <div class="stepper_divider"></div>
+                  <div class="stepper_default stepper_custom-active">
+                    <div class="stepper_custom-icon"><img src="/images/system/user_w.svg" alt=""></div>
+                    <div>
+                      <div class="stepper_custom-title">Personal Info</div>
+                      <div class="stepper_custom-subtxt">Setup Information</div>
+                    </div>
+                  </div>
+                  <div class="stepper_divider"></div>
+                  <div class="stepper_default stepper_custom-next">
+                    <div class="stepper_custom-icon"><img src="/images/system/brand_instagram.svg" alt=""></div>
+                    <div>
+                      <div class="stepper_custom-title">Social Links</div>
+                      <div class="stepper_custom-subtxt">Add Social Links</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- stepper vertical-->
+          <div class="guide_block">
+            <h3>stepper vertical</h3>
+            <div class="guide_data">
+              <p class="title">default</p>
+              <div class="data">
+                <div class="stepper type_vertical">
+                  <div class="stepper_default stepper-pre">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no">01</p>
+                    <p class="stepper-title">Account Details</p>
+                  </div>
+                  <div class="stepper-divider"></div>
+                  <div class="stepper_default stepper-active">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no">02</p>
+                    <p class="stepper-title">Personal Info</p>
+                  </div>
+                  <div class="stepper-divider "></div>
+                  <div class="stepper_default stepper-next">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no">03</p>
+                    <p class="stepper-title">Social Links</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">subtitle</p>
+              <div class="data">
+                <div class="stepper type_vertical">
+                  <div class="stepper_default stepper-pre">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no stepper-nol">01</p>
+                    <div class="">
+                      <p class="stepper-title">Account Details</p>
+                      <p class="stepper-subtxt">Enter your Account Details</p>
+                    </div>
+                  </div>
+                  <div class="stepper-divider"></div>
+                  <div class="stepper_default stepper-active">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no stepper-nol">02</p>
+                    <div class="">
+                      <p class="stepper-title">Personal Info</p>
+                      <p class="stepper-subtxt">Setup Information</p>
+                    </div>
+                  </div>
+                  <div class="stepper-divider "></div>
+                  <div class="stepper_default stepper-next">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no stepper-nol">03</p>
+                    <div class="">
+                      <p class="stepper-title">Social Links</p>
+                      <p class="stepper-subtxt">Add Social Links</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">center</p>
+              <div class="data">
+                <div class="stepper type_vertical">
+                  <div class="stepper_center stepper-pre">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-title">Account Details</p>
+                  </div>
+                  <div class="stepper-divider"></div>
+                  <div class="stepper_center stepper-active">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-title">Personal Info</p>
+                  </div>
+                  <div class="stepper-divider "></div>
+                  <div class="stepper_center stepper-next">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-title">Social Links</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="guide_data">
+              <p class="title">center subtext</p>
+              <div class="data">
+                <div class="stepper type_vertical">
+                  <div class="stepper_center stepper-pre">
+                    <p class="stepper-icon"></p>
+                    <div class="">
+                      <p class="stepper-title">Account Details</p>
+                      <p class="stepper-subtxt">Enter your Account Details</p>
+                    </div>
+                    
+                  </div>
+                  <div class="stepper-divider"></div>
+                  <div class="stepper_center stepper-active">
+                    <p class="stepper-icon"></p>
+                    
+                    <div>
+                      <p class="stepper-title">Personal Info</p>
+                      <p class="stepper-subtxt">Setup Information</p>
+                    </div>
+                  </div>
+                  <div class="stepper-divider "></div>
+                  <div class="stepper_center stepper-next">
+                    <p class="stepper-icon"></p>
+                    
+                    <div>
+                      <p class="stepper-title">Social Links</p>
+                      <p class="stepper-subtxt">Add Social Links</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- stepper custom vertical-->
+          <div class="guide_block">
+            <h3>stepper custom</h3>
+            <div class="guide_data">
+              <p class="title">custom vertical</p>
+              <div class="data">
+                <div class="stepper_custom stepper_v">
+                  <div class="stepper_default stepper_custom-pre">
+                    <div class="stepper_custom-icon">1</div>
+                    <div class="stepper_custom-title">Account Details</div>
+                  </div>
+                  <div class="stepper_divider"></div>
+                  <div class="stepper_default stepper_custom-active">
+                    <div class="stepper_custom-icon">2</div>
+                    <div class="stepper_custom-title">Account Details</div>
+                  </div>
+                  <div class="stepper_divider"></div>
+                  <div class="stepper_default stepper_custom-next">
+                    <div class="stepper_custom-icon">3</div>
+                    <div class="stepper_custom-title">Account Details</div>
+                  </div>
+                </div>
+              </div>
+              <div class="data">
+                <div class="stepper_custom stepper_v">
+                  <div class="stepper_default stepper_custom-pre">
+                    <div class="stepper_custom-icon"><img src="/images/system/file_analytics_pr.svg" alt=""></div>
+                    <div>
+                      <div class="stepper_custom-title">Account Details</div>
+                      <div class="stepper_custom-subtxt">Enter your Account Details</div>
+                    </div>
+                  </div>
+                  <div class="stepper_divider"></div>
+                  <div class="stepper_default stepper_custom-active">
+                    <div class="stepper_custom-icon"><img src="/images/system/user_w.svg" alt=""></div>
+                    <div>
+                      <div class="stepper_custom-title">Personal Info</div>
+                      <div class="stepper_custom-subtxt">Setup Information</div>
+                    </div>
+                  </div>
+                  <div class="stepper_divider"></div>
+                  <div class="stepper_default stepper_custom-next">
+                    <div class="stepper_custom-icon"><img src="/images/system/brand_instagram.svg" alt=""></div>
+                    <div>
+                      <div class="stepper_custom-title">Social Links</div>
+                      <div class="stepper_custom-subtxt">Add Social Links</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- tabs -->
+          <div class="guide_block">
+            <h3>tabs</h3>
+            <div class="guide_data">
+              <p class="title">tabs</p>
+              <div class="data">
+                <div class="tab_group">
+                  <a href="javascript:void(0)" class="tab_btn active">tab 1</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 2</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 3</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 4</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 5</a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="tab_group">
+                  <a href="javascript:void(0)" class="tab_btn active"><span class="tab_icon"></span>tab 1</a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 2</a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 3</a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 4</a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 5</a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="tab_group">
+                  <a href="javascript:void(0)" class="tab_btn active">tab 1<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 2<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 3<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 4<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 5<span class="tab_icon"></span></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="tab_group">
+                  <a href="javascript:void(0)" class="tab_btn active"><span class="tab_icon"></span>tab 1<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 2<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 3<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 4<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 5<span class="tab_icon"></span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">tabs fill</p>
+              <div class="data">
+                <div class="tab_group_fill">
+                  <a href="javascript:void(0)" class="tab_btn active">tab 1</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 2</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 3</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 4</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 5</a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="tab_group_fill">
+                  <a href="javascript:void(0)" class="tab_btn active"><span class="tab_icon"></span>tab 1</a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 2</a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 3</a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 4</a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 5</a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="tab_group_fill">
+                  <a href="javascript:void(0)" class="tab_btn active">tab 1<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 2<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 3<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 4<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 5<span class="tab_icon"></span></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="tab_group_fill">
+                  <a href="javascript:void(0)" class="tab_btn active"><span class="tab_icon"></span>tab 1<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 2<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 3<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 4<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 5<span class="tab_icon"></span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">tabs vertical</p>
+              <div class="data">
+                <div class="tab_group type_vertical">
+                  <a href="javascript:void(0)" class="tab_btn active">tab 1</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 2</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 3</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 4</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 5</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">tabs fill vertical</p>
+              <div class="data">
+                <div class="tab_group_fill type_vertical">
+                  <a href="javascript:void(0)" class="tab_btn active">tab 1</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 2</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 3</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 4</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 5</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- pagenation -->
+          <div class="guide_block">
+            <h3>pagenation</h3>
+            <div class="guide_data">
+              <p class="title">default</p>
+              <div class="data" >
+                <div class="pagenation">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="pagenation type_outline">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="pagenation type_rounded">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="pagenation type_rounded type_outline">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">color</p>
+              <div class="data" >
+                <div class="pagenation color_pr">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="pagenation color_gr">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="pagenation color_error">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="pagenation color_warning">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="pagenation color_info">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="pagenation color_success">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">size</p>
+              <div class="data" >
+                <div class="pagenation .size_s">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="pagenation">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="pagenation .size_l">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">disabled</p>
+              <div class="data" >
+                <div class="pagenation disabled">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="pagenation type_rounded type_border disabled">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      //dropdown
+      $(".dropdown-open").click(function () {
+        $(".dropdown_list").slideToggle();
+        })
+      
+      $(".dropdown_list-data").click(function () { 
+        $(this).toggleClass('active')
+       })
+
+      $(".dropdown-btn").find(".chip").click(function () { 
+        $(this).remove()
+       })
+
+       //tab hover icon
+    </script>
+  </body>
+</html>

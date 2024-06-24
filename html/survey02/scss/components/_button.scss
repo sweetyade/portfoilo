@@ -1,0 +1,264 @@
+/***************************************************************
+    05. buttons
+***************************************************************/
+button{
+  &:disabled{
+    background: $gray05;
+  }
+}
+.btn_wrap{
+  width: 100%;
+  max-width: 36.25rem;
+  margin: 0 auto;
+  @include grid;
+  gap: 1.5rem;
+}
+
+.btn_wide{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+
+  .btn_lg{
+    border-radius: 0;
+    @include span1fb;
+    padding: 1rem;
+    border: 0;
+
+    @include tablet{
+      padding: 1.5rem;
+    }
+  }
+}
+
+.btn_fix{
+  width: 100%;
+  padding: 0 1.25rem;
+  margin: 0 auto;
+  @include grid;
+  gap: 1.5rem;
+  position: fixed;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 36.25rem;
+  z-index: 9;
+  transition: all .3s;
+
+  @include tablet{
+    bottom: 8.125rem;
+  }
+}
+
+.next_btn{
+  position: fixed;
+  bottom: 3.75rem;
+  right: 1.25rem;
+  width: 3.5rem;
+  z-index: 9;
+  cursor: pointer;
+  transition: all .3s;
+
+  img{
+    width: 100%;
+  }
+
+  @include tablet{
+    width: 5.25rem;
+    right: 5.625rem;
+    bottom: 5rem
+  }
+
+  &.gr{
+    opacity: .2;
+  }
+}
+
+.back_btn{
+  position: fixed;
+  bottom: 2.5rem;
+  left: 1.25rem;
+  @include flex;
+  gap: .5rem;
+  z-index: 9;
+  display: none;
+
+  @include tablet{
+    left: 5.875rem;
+    gap: 1rem;
+    display: flex;
+  }
+
+  .back_icon{
+    width: 2rem;
+    cursor: pointer;
+
+    img{
+      width: 100%;
+    }
+
+    @include  tablet{
+      width: 3.5rem;
+    }
+  }
+
+  .back_txt{
+    @include span4f;
+    color: $gray03;
+    @include flex;
+    gap: .5rem;
+
+    .back_time{
+      color: $primary;
+      font-weight: $boldf;
+      @include flex;
+
+      .jst-hours{
+        display: none
+      }
+
+      .jst-minutes{
+        position: relative;
+        
+        &::after{
+          content: ":";
+          padding: .125rem;
+          position: relative;
+          top: -.125rem
+
+        }
+      }
+    }
+  }
+}
+
+.result_btn{
+  border: 3px solid $dark;
+  padding: 1rem 2.25rem;
+  border-radius: 5rem;
+  background: $light url(../images/result_btn.svg) no-repeat;
+  background-position: calc(100% - 1.5rem) center;
+
+  
+  .title{
+    @include h2fb;
+  }
+
+  .txt{
+    @include span2f;
+    padding-top: .25rem;
+  }
+}
+
+.round_btn{
+  @include span3fb;
+  border-radius: 5rem;
+  padding: 1rem 1.5rem;
+  @include flexcenter;
+  gap: .25rem;
+  width: fit-content;
+  margin: 0 auto;
+
+  @include tablet{
+    @include span1fb;
+    padding: 1.25rem 1.75rem;
+  }
+
+  img{
+    width: 1.125rem;
+
+    @include tablet{
+      width: 2rem
+    }
+  }
+}
+
+
+//size
+.btn_lg{
+  @include h2fb;
+  padding: 1rem 0;
+  border: 3px solid transparent;
+  border-radius: 3rem;
+  width: 100%;
+  @include flexcenter;
+  cursor: pointer;
+
+  @include tablet{
+    padding: 1.5rem 0;
+  }
+}
+
+.btn_ld{
+  @include flexcenter;
+  gap: .125rem;
+  @include p3fb;
+  padding: 1rem;
+  border-radius: .5rem;
+  line-height: 1;
+  cursor: pointer;
+
+  img{
+    width: 5.5556vw;
+    
+    @include tablet{
+      width: 2rem;
+    }
+
+    @include pc{
+      width: 3rem;
+    }
+  }
+
+  @include tablet{
+    padding: 1.5rem;
+  }
+
+  @include pc{
+    @include h1f;
+    padding: 2rem;
+    border-radius: .75rem;
+  }
+}
+
+//color
+.btn_white{
+  background-color: $light;
+  border-color: $dark;
+}
+
+.btn_basic{
+  background-color: $primary;
+  color: $light;
+}   
+
+.btn_light{
+  background-color: $gray06;
+  color: $gray02;
+}
+
+.btn_red{
+  background-color: $system-red-light;
+  color: $light;
+}
+
+.ld_white{
+  background-color: $light;
+  color: $primary;
+}
+
+.ld_dark{
+  background-color: #000;
+  color: $primary;
+}
+
+.ld_basic{
+  background-color: $primary;
+  color: $light;
+  transition: all .3s;
+
+  &:hover{
+    background-color: $primary-dark;
+  }
+}

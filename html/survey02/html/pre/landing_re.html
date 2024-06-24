@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../../js/jquery-ui.min.css">
+  <link rel="stylesheet" href="../../css/landing.css">
+  <title>랜딩페이지 반응형</title>
+</head>
+
+<style>
+  .main{
+    overflow-x: hidden;
+  }
+</style>
+
+<style>
+  .main{
+      overflow-x: hidden;
+  }
+
+  /* css임시추가 */
+  .dot_bg{
+    height: .375rem;
+  }
+
+  .landing_sec02.re .pt_img1{
+    width: 12.4375rem;
+  }
+
+  .landing_sec02.re .pt_img2{
+    width: 9.625rem;
+  }
+
+  .landing_sec02.re .benefit .benefit_all .pt_img3{
+    width: 5.875rem;
+  }
+
+  .landing_sec02.re .benefit .benefit_all .pt_img4{
+    width: 5.125rem;
+  }
+
+  .landing_sec02.re .pt_img5{
+    width: 9.625rem;
+  }
+
+  .landing_sec02.re .pt_img6{
+    width: 9.625rem;
+  }
+
+  @media (min-width: 752px){
+      .dot_bg{
+      height: .5rem;
+    }
+    
+      .landing_sec02.re .pt_img1{
+      width: 297px;
+        }
+
+      .landing_sec02.re .pt_img2{
+        width: 197px;
+      }
+
+      .landing_sec02.re .benefit .benefit_all .pt_img3{
+        width: 175px;
+      }
+
+      .landing_sec02.re .benefit .benefit_all .pt_img4{
+        width: 164px;
+      }
+
+      .landing_sec02.re .pt_img5{
+        width: 209px;
+      }
+
+      .landing_sec02.re .pt_img6{
+        width: 209px;
+      }
+  }
+
+  @media (min-width: 1260px){
+
+    .dot_bg{
+    height: .9375rem;
+  }
+
+
+      .landing_sec02.re .pt_img1{
+      width: 415px;
+        }
+
+      .landing_sec02.re .pt_img2{
+        width: 315px;
+      }
+
+      .landing_sec02.re .benefit .benefit_all .pt_img3{
+        width: 175px;
+      }
+
+      .landing_sec02.re .benefit .benefit_all .pt_img4{
+        width: 164px;
+      }
+
+      .landing_sec02.re .pt_img5{
+        width: 342px;
+      }
+
+      .landing_sec02.re .pt_img6{
+        width: 342px;
+      }
+  }
+</style>
+<body>
+  <main class="main">
+    <!-- section_top -->
+    <section class="landing_sec landing_top re" id="hometop">
+      <a href="#" class="rsv_find">예약내역 조회</a>
+      
+      <!-- bg img -->
+      <div class="top_move re">
+        <p class="dp_m mov"><img src="../../images/landing/mov_re_m.svg" alt=""></p>
+        <p class="dp_pc mov"><img src="../../images/landing/mov_re_pc.svg" alt=""></p>
+      </div>
+
+      <div class="landing_con">
+        <h1 class="h1 dp_m"><img src="../../images/landing/h1_re_m.png" alt=""></h1>
+        <h1 class="h1 dp_pc"><img src="../../images/landing/h1_re_pc.png" alt=""></h1>
+
+        <div class="top_btn btn_list_bg">
+          <div class="btn_list">
+            <p class="dot_bg"></p>
+            <p class="txt">핏타민 더현대 서울</p>
+            <a href="#" class="btn_line">방문 상담 예약하기</a>
+            <p class="dot_bg"></p>
+          </div>
+          <div class="btn_list">
+            <p class="dot_bg"></p>
+            <p class="txt">핏타민 앱에서</p>
+            <a href="#" class="btn_line">간편 상담 받기</a>
+            <p class="dot_bg"></p>
+          </div>
+        </div>
+      </div>
+      
+      <p class="dp_pc top_lft"><img src="../../images/landing/top_txt.png" alt=""></p>
+      <p class="dp_pc top_rgt"><img src="../../images/landing/top_txt_logo.png" alt=""></p>
+    </section>
+
+    <!-- section 01 -->
+    <section class="landing_sec landing_sec01">
+      <div class="landing_con">
+        <h2>
+          <p class="txt">핏타민 X 더현대 서울</p>
+          <p class="img dp_m"><img src="../../images/landing/section_01_h2.png" alt=""></p>
+          <p class="img dp_pc"><img src="../../images/landing/section_01_h2_pc.png" alt=""></p>
+        </h2>
+
+        <div class="section01_con">
+          <div class="con_data">
+            <p class="title">약사가 상담하는<br>개인 맞춤 영양제 구독 서비스</p>
+            <p class="txt">나에게 딱 맞는 영양제를 약사에게 상담 받고,<br>
+              한 팩 소분으로 간편하게 건강을 챙길 수 있어요.<br>
+              더현대 서울에서 핏타민을 만나보세요!</p>
+          </div>
+        </div>
+
+        <div class="section01_img store_2"></div>
+      </div>
+
+    </section>
+
+    <!-- section 02 -->
+    <section class="landing_sec landing_sec02 re"> 
+      <p class="pt_img1"><img src="../../images/landing/pt_re_01.png" alt=""></p>
+      <p class="pt_img2"><img src="../../images/landing/pt_re_line.png" alt=""></p>
+      <div class="landing_con">
+        <p class="tab">명절 혜택 <span>01</span></p>
+        <h2>
+          <div class="txt">
+            <p class="dot_bg"></p>
+            <p class="h2txt">사전 방문 예약 회원에게 드리는</p>
+            <p class="dot_bg"></p>
+          </div>
+          <p class="img dp_m"><img src="../../images/landing/section_02_re_h2.png" alt=""></p>
+          <p class="img dp_pc"><img src="../../images/landing/section_02_re_h2_pc.png" alt=""></p>
+        </h2>
+
+        <div class="benefit_wrap"> 
+          <div class="benefit">
+            <div class="img_title">
+              <p class="txt_img dp_m"><img src="../../images/landing/coupon_f40_re.png" alt=""></p>
+              <p class="txt_img dp_pc"><img src="../../images/landing/coupon_f40_re_pc.png" alt=""></p>
+            </div>
+
+            <p class="img"><img src="../../images/landing/section_02_img.png" alt=""></p>
+
+
+            <div class="benefit_all">
+              <p class="pt_img3"><img src="../../images/landing/pt_re_03.png" alt=""></p>
+              <p class="pt_img4"><img src="../../images/landing/pt_re_02.png" alt=""></p>
+              <p class="no">이벤트 기간 내 모든 회원</p>
+              <p class="txt_img dp_m"><img src="../../images/landing/coupon_f30_re.png" alt=""></p>
+              <p class="txt_img dp_pc"><img src="../../images/landing/coupon_f30_re_pc.png" alt=""></p>
+            </div>
+
+            <div class="section_btn">
+              <p class="txt">핏타민 더현대 서울<span></span></p>
+              <button class="btn_ld ld_dark">방문 상담 예약하기<img src="../../images/landing/btn_right_green.svg" alt=""></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- section 02-2 -->
+    <section class="landing_sec landing_sec02 re">
+      <p class="pt_img5"><img src="../../images/landing/pt_re_line.png" alt=""></p>
+      <p class="pt_img6"><img src="../../images/landing/pt_re_line.png" alt=""></p>
+      <div class="landing_con">
+        <p class="tab">명절 혜택 <span>02</span></p>
+        <h2 class="h2_2">
+          <div class="txt">
+            <p class="dot_bg"></p>
+            <p class="h2txt">더현대 서울 방문이 어렵다면<br>지금 앱을 설치하고 구독해보세요!</p>
+            <p class="dot_bg"></p>
+          </div>
+          <p class="img dp_m"><img src="../../images/landing/section_03_h2.png" alt=""></p>
+          <p class="img dp_pc"><img src="../../images/landing/section_03_h2_pc.png" alt=""></p>
+        </h2>
+
+        <div class="benefit_wrap">
+          <div class="benefit">
+            <p class="img section_img2"><img src="../../images/landing/section_03_img.png" alt=""></p>
+  
+            <div class="img_title txt2_img">
+              <p class="txt_img dp_m"><img src="../../images/landing/coupon_f20_re.png" alt=""></p>
+              <p class="txt_img dp_pc"><img src="../../images/landing/coupon_f20_re_pc.png" alt=""></p>
+            </div>
+
+            <div class="section_btn">
+              <p class="txt">핏타민 앱에서</p>
+              <button class="btn_ld ld_basic">간편 상담 받기<img src="../../images/landing/btn_right_bk.svg" alt=""></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section 03 -->
+    <section class="landing_sec landing_sec03 re">
+      <div class="landing_con">
+        <div class="title">
+          <p class="dot_bg"></p>
+          <p class="h2txt">핏타민 더현대 서울 오시는 길</p>
+          <p class="dot_bg"></p>
+        </div>
+
+        <div class="map_div">
+          <p class="dp_m"><img src="../../images/landing/map_re.png" alt=""></p>
+          <p class="dp_pc"><img src="../../images/landing/map_re_pc.png" alt=""></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- noti -->
+    <section class="landing_sec landing_noti re">
+      <div class="landing_con">
+
+        <div class="notice_list">
+          <p class="title txts">꼭 확인해 주세요</p>
+          <ul>
+            <li>본 이벤트는 추석 맞이 특별 이벤트입니다.</li>
+            <li>본 이벤트 기간은 2023년 9월 30일(토)까지입니다.</li>
+            <li>본 이벤트는 당사의 사정에 따라 사전 예고 없이 변경되거나 종료될 수 있습니다.</li>
+            <li>본 이벤트 기간 내에 상담 예약 및 결제를 진행해야 혜택을 받을 수 있으며, 이벤트 기간 이후 상담 예약 및 결제 건은 혜택에서 제외됩니다.</li>
+            <li>핏타민 더현대 서울에서 결제 이후 정기 구독을 희망하는 경우 핏타민 앱 다운로드가 필요합니다.</li>
+            <li>이벤트 관련 문의는 고객센터 1661-4739, 카카오톡 @Fitamin으로 연락 부탁드립니다.</li>
+            <li>고객센터 운영 시간은 평일 월 - 금요일 09:00 - 17:00입니다.</li>
+          </ul>
+        </div>
+
+        <div class="notice_list">
+          <p class="title">[ 명절 혜택1 ]</p>
+          <ul>
+            <li>방문 상담을 예약하고 핏타민 더현대 서울에서 맞춤 영양제 30일팩 구매 시 할인 혜택을 적용받을 수 있습니다.</li>
+            <li>혜택 1은 선착순 100명 한정으로, 구매 시  총 40% 할인 혜택을 받을 수 있습니다.</li>
+          </ul>
+        </div>
+
+        <div class="notice_list">
+          <p class="title">[ 명절 혜택2 ]</p>
+          <ul>
+              <li>혜택 2는 핏타민 앱 내에서 참여할 수 있는 이벤트입니다.</li>
+              <li>이벤트 페이지 내 '간편 상담 받기' 버튼을 통해 약사 상담이 완료됐을 때 쿠폰이 자동으로 지급됩니다.</li>
+              <li>할인 쿠폰은 중복 사용이 불가합니다.</li>
+          </ul>
+      </div>
+      </div>
+
+    </section>
+    <!-- section notice -->
+
+    <a href="#hometop" class="home_top"><img src="../../images/landing/home_top.svg" alt=""></a>
+  </main>
+  <script src="../../js/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script>
+        //하단버튼 스크롤 노출
+        $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();    
+        if (scroll <= 500) {
+            $(".home_top").css("opacity", "0");
+        }else{
+          $(".home_top").css("opacity", "1");
+        }
+    });
+  </script>
+</body>
+</html>

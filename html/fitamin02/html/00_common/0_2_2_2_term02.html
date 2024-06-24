@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>1-2-3-2.개인정보 수집동의</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="back"></div>
+      <div class="page_name"></div>
+      <div class="header_icon"><img src="../../images/icon/system_close_bk.svg" alt="닫기" /></div>
+    </header>
+
+    <main class="main">
+      <div class="term_wrap inner_1_25 inner_tb_1_5 pd_bottom_m">
+        <!-- 약관 버전 -->
+        <div class="select_block mb_1_5">
+          <button class="selectBtn optSlt">2022.11.18</button>
+          <ul class="optionList">
+            <li class="optionItem">2022.11.18</li>
+            <li class="optionItem">2022.01.01</li>
+            <li class="optionItem">2021.08.05</li>
+            <li class="optionItem">2021.02.22</li>
+          </ul>
+        </div>
+
+        <p class="p1_fb">개인정보 수집 및 이용동의</p>
+
+        <div class="term_div">
+          <p class="title_s">1. 민감정보 수집 및 이용 목적</p>
+          <p class="txt">
+            서비스 이용, 설문을 바탕으로 한 맞춤 서비스 제공, 민감의료정보를 통한 맞춤 건강 관리 서비스 제공, 처방전/약봉투 등을 바탕으로 한 복용 약물 검토, 개인 맞춤형 건강기능식품 제안, 맞춤 건강
+            정보 제공, 건강 관리 서비스 제공, 서비스 개선 및 신규 서비스 개발, 연구 및 시장조사 목적, 마케팅 및 광고에 활용 등
+          </p>
+        </div>
+
+        <div class="term_div">
+          <p class="title_s">2. 민감정보 수집 항목</p>
+          <p class="txt">
+            생년, 성별, 키, 몸무게, 건강목표, 건강습관, 식습관, 생활습관, 의료정보, 복용의약품, 처방전 내역(질환코드, 방문병원, 처방약제, 투약기록, 방문 날짜), 알러지, 개인이 작성한 기타 문의 사항,
+            약사 상담 내용, 화상 상담 정보, 대면 상담 정보 등
+          </p>
+        </div>
+
+        <div class="term_div">
+          <p class="title">3. 민감정보 보유 및 이용기간</p>
+          <p class="txt">
+            이용자의 민감정보는 서비스 이용 시작일부터 서비스 제공기간 동안에만 제한적으로 이용하고 있습니다. 그리고 관계 법령의 규정에 따라 일정한 기간 동안 회원정보를 보관하며 자세한 내용은
+            <개인정보 처리방침> 제2조와 같습니다.
+          </p>
+        </div>
+
+        <div class="term_div">
+          <p class="title">4. 동의를 거부할 권리</p>
+          <p class="txt">이용자는 본 민감정보 수집 및 이용에 대해 동의를 거부할 권리가 있으며, 동의 거부 시에는 회원가입 및 서비스 이용이 제한될 수 있습니다.</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+      /* 셀렉트 */
+      const label = document.querySelectorAll(".selectBtn");
+      label.forEach(function (lb) {
+        lb.addEventListener("click", (e) => {
+          let optionList = lb.nextElementSibling;
+          let optionItems = optionList.querySelectorAll(".optionItem");
+          clickLabel(lb, optionItems);
+        });
+      });
+      const clickLabel = (lb, optionItems) => {
+        if (lb.parentNode.classList.contains("active")) {
+          lb.parentNode.classList.remove("active");
+          optionItems.forEach((opt) => {
+            opt.removeEventListener("click", () => {
+              handleSelect(lb, opt);
+            });
+          });
+        } else {
+          lb.parentNode.classList.add("active");
+          optionItems.forEach((opt) => {
+            opt.addEventListener("click", () => {
+              handleSelect(lb, opt);
+            });
+          });
+        }
+      };
+      const handleSelect = (label, item) => {
+        label.innerHTML = item.textContent;
+        label.parentNode.classList.remove("active");
+        label.classList.add("optSlt");
+      };
+    </script>
+  </body>
+</html>

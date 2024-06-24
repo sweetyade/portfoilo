@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>2-4-7.회상상담 - 약사로딩중</title>
+  </head>
+  <body>
+    <div class="fullpage">
+      <div class="loading_wrap">
+        <div class="loading_img">
+          <p class="p_img"></p>
+        </div>
+        <div class="txt">
+          <p class="point_txt jst-timeout timer"  data-minutes-left=5></p>
+          <p class="title">약사님을 기다리고 있어요</p>
+          <p class="sub">약사님이 상담신청을 확인 중입니다.<br>
+            잠시만 기다려주세요.</p>
+            <p class="btn_m btn_white">다음에 연결하기</p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- 약사 기다리는중 팝업-->
+    <div class="popup popup01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 팝업 컨텐츠 -->
+      <div class="popup_wrap">
+        <p class="pop_title">약사를 기다리고 있어요</p>
+        <p class="pop_txt">상담이 가능한지 확인 중이예요<br>
+          가능할 때 카카오 알림톡으로 알려드릴까요?</p>
+        <!-- 버튼 2개 -->
+        <div class="pop_btn">
+          <button class="btn_m btn_light popClose">계속하기</button>
+          <button class="btn_m btn_red popClose">알림받기</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 약사 기다리는중 팝업-->
+    <div class="popup popup02">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 팝업 컨텐츠 -->
+      <div class="popup_wrap">
+        <p class="pop_title">약사님 연결에 실패했어요</p>
+        <p class="pop_txt">지금 상담 연결이 어렵습니다.<br>
+          상담이 가능한 일정으로 변경할까요?</p>
+        <!-- 버튼 2개 -->
+        <div class="pop_btn">
+          <button class="btn_m btn_light popClose">상담취소</button>
+          <button class="btn_m btn_red popClose">변경하기</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/jquery.simple.timer.js"></script>
+    <script>
+      //timer
+      $(function(){
+        $('.timer').startTimer({
+          onComplete: function(element){
+            $('html, body').addClass('bodyTimeoutBackground');
+          }
+        }).click(function(){ location.reload() });
+      })
+
+
+      /* popup */
+      $(".header_link").on("click", function () {
+        $(".popup01, body").addClass("open");
+      });
+
+      $(".modalOpen").on("click", function () {
+        $(".modal01, body").addClass("open");
+      });
+
+      $(".overlay, .popClose, .modalClose").on("click", function () {
+        $(".popup, .modal, body, .btn_trans").removeClass("open");
+      });
+    </script>
+  </body>
+</html>

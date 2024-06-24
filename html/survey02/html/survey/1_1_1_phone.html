@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>추천영양제 조합찾기 - 1-1-1.카카오톡으로 보내기</title>
+</head>
+
+<!-- <style>
+   .next_btn{
+    bottom: 252px;
+  }
+  @media (min-width: 752px){
+    .next_btn{
+    bottom: 22.875rem;
+  }
+  }
+</style> -->
+
+<style>
+  input:not([type=radio]):not([type=checkbox]):disabled{
+    color: #000;
+    opacity: 1 !important;
+    -webkit-text-fill-color: currentcolor;
+  }
+  input:not([type=radio]):not([type=checkbox])::-webkit-input-placeholder{
+    color: #000;
+  }
+</style>
+
+<body>
+  <main class="main">
+    <div class="header">
+      <p class="header_back"><img src="../../images/back.svg" alt=""></p>
+    </div>
+
+    <div class="contents">
+      <div class="servey_top">
+        <div class="servey_title">
+          <p class="title">나만의 에너지팩, 카카오톡<br>
+            메시지로 주소를 보내드릴게요 </p>
+        </div>
+      </div>
+
+      <div class="input_block servey_input">
+        <label for="" class="label">휴대전화 번호</label>
+        <div class="input_div">
+          <input type="text" class="clearInput" pattern="[0-9]" inputmode="numeric" value="ddd" placeholder="- 없이 숫자만 입력주세요" required>
+          <p class="btnClear"></p>
+        </div>
+        <p class="input_error">이미 줄서기 한 휴대전화 번호입니다.</p>
+      </div>
+      
+      <p class="next_btn" onclick="location.href='1_1_2_name.html';"><img src="../../images/arrow_next.svg" alt=""></p>
+    </div>
+  </main>
+
+
+  <!-- 메세지 팝업 -->
+  <div class="popup popup01">
+    <!-- 팝업안 전체 오버레이 -->
+    <div class="overlay"></div>
+
+    <!-- 팝업 컨텐츠 -->
+    <div class="popup_wrap">
+      <p class="pop_title">예약 내역이 있어요.<br>
+        다른 일정으로 <span class="primary">추가로 예약</span>할까요?</p>
+      <div class="pop_txt">
+        <p>상담 일정 <span class="bold_f">12월 26일(수) 오후 08:00</span></p>
+        <p>상담 일정 <span class="bold_f">12월 26일(수) 오후 08:00</span></p>
+        <p>상담 일정 <span class="bold_f">12월 26일(수) 오후 08:00</span></p>
+        <p>상담 일정 <span class="bold_f">12월 26일(수) 오후 08:00</span></p>
+        <p>상담 일정 <span class="bold_f">12월 26일(수) 오후 08:00</span></p>
+      </div>
+      <!-- 버튼 2개 -->
+      <div class="pop_btn">
+        <button class="btn_m btn_light btnClose">닫기</button>
+        <button class="btn_m btn_basic">줄서기 </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 태블릿 키패드 -->
+  <div class="keypad">
+    <p class="key_num">1</p>
+    <p class="key_num">2</p>
+    <p class="key_num">3</p>
+    <p class="key_num">4</p>
+    <p class="key_num">5</p>
+    <p class="key_num">6</p>
+    <p class="key_num">7</p>
+    <p class="key_num">8</p>
+    <p class="key_num">9</p>
+    <p class="key_num">010</p>
+    <p class="key_num">0</p>
+    <p class="key_del"><img src="../../images/phone_del.svg" alt=""></p>
+  </div>
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/jquery-ui.min.css"></script>
+
+  <script>
+
+    //태블릿 키패드 추가
+    $(".servey_input input").focus( function(){
+      $(".keypad").addClass("active");
+      if($(".main").width() >= 752){
+        $(".next_btn").css("bottom","22.875rem")
+      }else if(($(".main").width() < 752)){
+        $(".next_btn").css("bottom","15.75rem")
+      }
+      $(".keypad p").mousedown(function(){
+        $(this).addClass("active_key");
+      });
+
+      $(".keypad p").mouseout(function(){
+        $(this).removeClass("active_key");
+      });
+    });
+
+    //뒤로가기
+    $(document).ready(function() {
+      // on click
+      $('.header_back').click(function(e){
+        // prevent default behavior
+        e.preventDefault();
+        // Go back 1 page 
+        window.history.back();
+        // can also use 
+        // window.history.go(-1);
+      });
+    });
+    
+    // /* ---- 삭제버튼 ------- */
+    $(document).ready(function () {
+        $(".input_div").each(function () {
+          $(this)
+            .find(".clearInput")
+            .on("keyup focus", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 1");
+
+              if ($(this).val().length == 0) {
+                $(this).siblings(".btnClear").attr("style", "opacity: 0");
+              } else {
+                $(this).siblings(".btnClear").attr("style", "opacity: 1");
+              }
+            });
+
+          $(this)
+            .find(".clearInput")
+            .on("blur", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 0");
+            });
+
+          $(this)
+            .find(".btnClear")
+            .on("click touchstart", function () {
+              $(this).closest(".input_div").find(".clearInput").val("");
+              $(this)
+                .closest(".input_div")
+                .find(".btnClear")
+                .attr("style", "opacity: 0");
+              return false;
+            });
+        });
+      });
+
+      //팝업
+      $(".result_btn").click(function(){
+        $(".popup01, body").addClass("open");
+      })
+
+      $(".btnClose, .overlay").click(function(){
+        $(".popup01, body").removeClass("open");
+      })
+  </script>
+</body>
+</html>

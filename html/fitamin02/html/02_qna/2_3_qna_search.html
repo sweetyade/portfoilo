@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>	2-3.질문검색 - 검색결과 있음</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="back"><img src="../../images/icon/system_back.svg" alt=""></div>
+      <h2 class="page_name">검색하기</h2>
+      <div class="header_icon">
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- 검색상단 -->
+      <section class="search_top">
+        <div class="input_block mb_1_5">
+          <div class="input_div">
+            <input type="text" class="clearInput searchInput" placeholder="검색어를 입력해주세요." >
+            <input type="submit" class="btnSearch">
+            <div class="btnClear"></div>
+          </div>
+        </div>
+
+        <div class="search_con">
+          <div class="title_total">
+            <p class="title"><span class="primary">다이어트</span>의 검색결과</p>
+            <P class="total">총 3건</P>
+          </div>
+        </div>
+      </section>
+
+      <!-- 검색 리스트-->
+      <section class="board_pre search_list pb">
+        <div class="pre_list">
+          <div class="pre_data">
+            <p class="title">전체보기 - 20대 여자인데 요즘 너무 무기력합니다.</p>
+
+            <div class="pre_desc">
+              요즘 야근도 잦고 스트레스를 너무 많이 받아 무기력하고 입맛도 없어 식사도 거르게 돼요. 그래서인지 눈밑도 자주 떨리고 계속 피곤하기만 하고 몸도 힘이 잘 안들어가는데 영양이 부족해서
+              그런걸까요? 이런 상황에서 섭취해야하는 영양제가 있는지 궁금해요. 답변 부탁드리겠습니다.
+            </div>
+
+            <div class="pre_cmt rpl mb_0_5">
+              <div class="cmt_thumb cmt_1">
+                <p class="img"><img src="../../images/cam_sample.png" alt="" /></p>
+              </div>
+              <p class="cmt_txt">한명의 약사님이 답했어요</p>
+            </div>
+
+            <div class="flex_btw">
+              <p class="date">12월 22일</p>
+              <div class="like_s clicked">
+                <p class="like_icon"></p>
+                <p class="count">63</p>
+              </div>
+            </div>
+          </div>
+          <div class="pre_data">
+            <p class="title">20대 여자인데 요즘 너무 무기력합니다.</p>
+
+            <div class="pre_desc">
+              요즘 야근도 잦고 스트레스를 너무 많이 받아 무기력하고 입맛도 없어 식사도 거르게 돼요. 그래서인지 눈밑도 자주 떨리고 계속 피곤하기만 하고 몸도 힘이 잘 안들어가는데 영양이 부족해서
+              그런걸까요? 이런 상황에서 섭취해야하는 영양제가 있는지 궁금해요. 답변 부탁드리겠습니다.
+            </div>
+
+            <div class="pre_cmt rpl mb_0_5">
+              <div class="cmt_thumb cmt_2">
+                <p class="img"><img src="../../images/cam_sample.png" alt="" /></p>
+                <p class="img"><img src="../../images/cam_sample.png" alt="" /></p>
+              </div>
+              <p class="cmt_txt">2명의 약사님이 답했어요</p>
+            </div>
+
+            <div class="flex_btw">
+              <p class="date">12월 22일</p>
+              <div class="like_s">
+                <p class="like_icon"></p>
+                <p class="count">998</p>
+              </div>
+            </div>
+          </div>
+          <div class="pre_data">
+            <p class="title">20대 여자인데 요즘 너무 무기력합니다.</p>
+
+            <div class="pre_desc">
+              요즘 야근도 잦고 스트레스를 너무 많이 받아 무기력하고 입맛도 없어 식사도 거르게 돼요. 그래서인지 눈밑도 자주 떨리고 계속 피곤하기만 하고 몸도 힘이 잘 안들어가는데 영양이 부족해서
+              그런걸까요? 이런 상황에서 섭취해야하는 영양제가 있는지 궁금해요. 답변 부탁드리겠습니다.
+            </div>
+
+            <div class="pre_cmt rpl mb_0_5">
+              <div class="cmt_thumb cmt_2">
+                <p class="img"><img src="../../images/cam_sample.png" alt="" /></p>
+                <p class="img"><img src="../../images/cam_sample.png" alt="" /></p>
+              </div>
+              <p class="cmt_txt">2명의 약사님이 답했어요</p>
+            </div>
+
+            <div class="flex_btw">
+              <p class="date">12월 22일</p>
+              <div class="like_s">
+                <p class="like_icon"></p>
+                <p class="count max_count">999</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--영양제 직접입력 -->
+    <div class="modal modal01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+      <!-- 모달 컨텐츠-->
+      <div class="modal_wrap">
+        <p class="toast">브랜드명과 영양제명을 기입해주세요</p>
+        <div class="modal_top">
+          <p class="modal_title">영양제를 직접 입력해주세요</p>
+          <p class="modal_sub">섭취 중인 영양제의 정보를 기입해주세요 </p>
+        </div>
+
+        <div class="modal_con">
+          <div class="input_div">
+            <input type="text" id="" class="mb_0_5" placeholder="브랜드명"  />
+            <input type="text" id="" class="" placeholder="제품명"  />
+          </div>
+        </div>
+
+        <div class="btn_wrap">
+          <button class="btn_b btn_basic popClose">등록하기</button>
+          <button class="btn_b btn_trans popClose">닫기</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+      // /* ---- 삭제버튼 ------- */
+      $(document).ready(function () {
+        $(".input_div").each(function () {
+          $(this)
+            .find(".clearInput")
+            .on("keyup focus", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 1");
+
+              if ($(this).val().length == 0) {
+                $(this).siblings(".btnClear").attr("style", "opacity: 0");
+              } else {
+                $(this).siblings(".btnClear").attr("style", "opacity: 1");
+              }
+            });
+
+          $(this)
+            .find(".clearInput")
+            .on("blur", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 0");
+            });
+
+          $(this)
+            .find(".btnClear")
+            .on("click touchstart", function () {
+              $(this).closest(".input_div").find(".clearInput").val("");
+              $(this).closest(".input_div").find(".btnClear").attr("style", "opacity: 0");
+              return false;
+            });
+        });
+      });
+
+        //좋아요 데아터
+        $(".like_s").click(function () {
+        $(this).toggleClass("clicked");
+
+        var count = $(this).children(".count");
+        if ($(this).hasClass("clicked")) {
+          count.html(function (i, val) {
+            return val * 1 + 1;
+          });
+
+          if (count.html() > 998) {
+            count.addClass("more_count");
+            count.html(999);
+          }
+          console.log(count.text());
+        } else if (count.hasClass("max_count")) {
+          count.html(999);
+        } else {
+          count.html(function (i, val) {
+            return val * 1 - 1;
+          });
+
+          if (count.html() <= 998) {
+            count.removeClass("more_count");
+          }
+          console.log(count.text());
+        }
+      });
+
+    </script>
+  </body>
+</html>

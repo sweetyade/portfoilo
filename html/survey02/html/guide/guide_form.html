@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/guide.css" />
+    <title>DESIGN GUIDE</title>
+  </head>
+
+  <style>
+    .input_block,
+    .select_block {
+      max-width: 300px;
+      height: 100px;
+    }
+
+    .contents{
+      max-width: 100%;
+    }
+  </style>
+  <body>
+    <main id="guide_main">
+      <!-- menu -->
+      <nav id="guide_nav">
+        <h1>design guide</h1>
+
+        <div class="nav_menu">
+          <a href="guide.html">typography</a>
+          <a href="guide_color.html">color</a>
+          <a href="guide_icon.html">icon</a>
+          <a href="guide_form.html" class="active">form</a>
+          <a href="guide_button.html">button</a>
+          <a href="guide_popup.html">popup</a>
+          <a href="guide_layout.html">layout</a>
+          <a href="guide_component.html">component</a>
+        </div>
+      </nav>
+
+      <!-- contents -->
+      <section class="container">
+        <div class="contents">
+          <h2>form</h2>
+
+          <div class="guide_info">
+            <p class="p3_f">- </p>
+          </div>
+
+          <!-- text input -->
+          <div class="guide_block">
+            <h3>text input</h3>
+            <div class="guide_data">
+              <p class="title">text │ password │ number</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <!-- 기본인풋 -->
+                <div class="input_block">
+                  <label for="input01">가본 텍스트 인풋</label>
+                  <div class="input_div">
+                    <input type="text" id="input01" placeholder="기본 인풋스타일입니다." />
+                  </div>
+                </div>
+
+                <!-- 리드온리 -->
+                <div class="input_block">
+                  <label for="input02">리드온리, 수정불가</label>
+                  <div class="input_div">
+                    <input type="text" id="input02" placeholder="기본 인풋스타일입니다." readonly />
+                  </div>
+                </div>
+
+                <!-- 패턴체크 -->
+                <div class="input_block">
+                  <label for="input03">패턴체크</label>
+                  <div class="input_div">
+                    <input type="text" id="input03" class="clearInput" placeholder="이메일 주소를 입력해주세요." required />
+                    <div class="btnClear"></div>
+                  </div>
+                </div>
+
+                <!-- 패턴체크 형식이 맞을 때 -->
+                <div class="input_block">
+                  <label for="input04">패턴체크 - 형식이 맞을 때</label>
+                  <div class="input_div">
+                    <input type="text" id="input04" class="clearInput" value="형식이 맞을 때" placeholder="이메일 주소를 입력해주세요." required />
+                    <div class="btnClear"></div>
+                  </div>
+                </div>
+
+                <!-- 패턴체크 형식이 잘못되었을 때 -->
+                <div class="input_block">
+                  <label for="input05">형식이 잘못 되었을 때</label>
+                  <div class="input_div">
+                    <input type="text" id="input05" class="clearInput" pattern="[0-9]" value="형식이 잘못 됐을 때" placeholder="이메일 주소를 입력해주세요." required />
+                    <div class="btnClear"></div>
+                  </div>
+                  <p class="input_error">올바른 이메일 형식을 작성해주세요</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      // /* ---- 삭제버튼 ------- */
+      $(document).ready(function () {
+        $(".input_div").each(function () {
+          $(this)
+            .find(".clearInput")
+            .on("keyup focus", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 1");
+
+              if ($(this).val().length == 0) {
+                $(this).siblings(".btnClear").attr("style", "opacity: 0");
+              } else {
+                $(this).siblings(".btnClear").attr("style", "opacity: 1");
+              }
+            });
+
+          $(this)
+            .find(".clearInput")
+            .on("blur", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 0");
+            });
+
+          $(this)
+            .find(".btnClear")
+            .on("click touchstart", function () {
+              $(this).closest(".input_div").find(".clearInput").val("");
+              $(this).closest(".input_div").find(".btnClear").attr("style", "opacity: 0");
+              return false;
+            });
+        });
+      });
+
+      /* 패스워드 */
+      $(".pass_view").click(function () {
+        $(this).toggleClass("inputPass");
+        var input = $($(this).attr("toggle"));
+        if (input.attr("type") == "password") {
+          input.attr("type", "text");
+        } else {
+          input.attr("type", "password");
+        }
+      });
+
+      $(document).ready(function () {
+        $(".pass_view").on("click", function () {
+          $(this).toggleClass("pass_view-on");
+        });
+      });
+
+      /* 넘버인풋 맥스 */
+      function maxLengthChk(object) {
+        if (object.value.length > object.maxLength) {
+          object.value = object.value.slice(0, object.maxLength);
+        }
+      }
+
+      /* 셀렉트 */
+      const label = document.querySelectorAll(".selectBtn");
+      label.forEach(function (lb) {
+        lb.addEventListener("click", (e) => {
+          let optionList = lb.nextElementSibling;
+          let optionItems = optionList.querySelectorAll(".optionItem");
+          clickLabel(lb, optionItems);
+        });
+      });
+      const clickLabel = (lb, optionItems) => {
+        if (lb.parentNode.classList.contains("active")) {
+          lb.parentNode.classList.remove("active");
+          optionItems.forEach((opt) => {
+            opt.removeEventListener("click", () => {
+              handleSelect(lb, opt);
+            });
+          });
+        } else {
+          lb.parentNode.classList.add("active");
+          optionItems.forEach((opt) => {
+            opt.addEventListener("click", () => {
+              handleSelect(lb, opt);
+            });
+          });
+        }
+      };
+      const handleSelect = (label, item) => {
+        label.innerHTML = item.textContent;
+        label.parentNode.classList.remove("active");
+        label.classList.add("optSlt");
+      };
+
+      //검색 리스트
+      $(".searchInput").focusin(function(){
+        $(".search_drop").slideDown();
+      })
+
+      $(".searchInput").focusout(function(){
+        $(".search_drop").slideUp();
+      })
+
+
+      //필터정렬 
+      $(".selectBtn").on("click", function(){
+        $(".filterOption").slideToggle();
+
+        $(".optionItem ").click(function(){
+          if(!$(this).hasClass("select")){
+            $(this).addClass("select");
+            $(this).siblings().removeClass("select");
+          }
+          let optionTxt = $(".optionItem.select").text();
+          $(".selectBtn").text(optionTxt);
+        })
+      })
+    </script>
+  </body>
+</html>

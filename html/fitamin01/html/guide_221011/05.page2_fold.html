@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="../../css/m.common.css">
+  <link rel="stylesheet" href="../../css/m.fitamin.css">
+  <link rel="stylesheet" href="../../css/m.sub.css">
+  <link rel="stylesheet" href="../../css/fitamin_2201819.css">
+  <link rel="stylesheet" href="../../css/rcommon.css">
+  <link rel="stylesheet" href="../../css/guide.css">
+  <link rel="stylesheet" href="../../css/rstyle.css">
+  <title>재구독+구독변경</title>
+
+
+</head>
+<body class="on">
+    <div class="rmain_wrap sub_pg">
+
+      <!------ .sub_fold 클래스 적용시 섹션 접힘 -------->
+       <!-- 재구독시에만 보여지는 섹션-->
+       <section class="sub_sec">
+        <div class="subsec_con">
+          <p class="sub_rtitle">
+            다시 만나서 반가워요.<br>
+            이제 더 열심히 건강관리 해볼까요?
+          </p>
+
+          <div class="sub_rcon">
+            <div class="sub_ritem mb_1_5">
+              <p class="sub_ricon"><img src="../../images/icon_sub01.png"></p>
+              <p class="sub_rtxt">건강은 더하고 가격은 가볍게<span>매달 구독 시 20% 할인 + 무료배송</span></p>
+            </div>
+            <div class="sub_ritem">
+              <p class="sub_ricon"><img src="../../images/icon_sub02.png"></p>
+              <p class="sub_rtxt">쓰면 쓸수록 커지는 혜택<span>후기 작성 시 적립금 최대 13,000원 지급</span></p>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+
+      <!-- 주문내역 정보 -->
+      <section class="sub_sec sub_fold">
+        <div class="subsec_top">
+          <p class="subsec_title">구독 영양제</p>
+          <div class="subsec_fold">
+            <p class="fold_txt fold_drug">
+              <span class="fold_grugin">쏘팔메토옥타코사놀+ 제품</span>
+              <span class="fold_grugt">외 4건</span>
+            </p>
+            <img src="../../images/icon_top.svg" alt="">
+          </div>
+        </div>
+        <div class="subsec_con">
+          <div class="subsec_dreg">
+            <div class="drug_name">
+              <img src="../../images/drug_img01.png" alt="">
+              <p>쏘팔메토옥타코사놀+</p>
+            </div>
+            <p class="drug_cost">10,000원</p>
+          </div>
+          <div class="subsec_dreg">
+            <div class="drug_name">
+              <img src="../../images/drug_img01.png" alt="">
+              <p>rTG 알티지 오메가3+</p>
+            </div>
+            <p class="drug_cost">10,000원</p>
+          </div>
+          <div class="subsec_dreg">
+            <div class="drug_name">
+              <img src="../../images/drug_img02.png" alt="">
+              <p>징코추출물</p>
+            </div>
+            <p class="drug_cost">10,000원</p>
+          </div>
+          <div class="subsec_dreg">
+            <div class="drug_name">
+              <img src="../../images/drug_img03.png" alt="">
+              <p>마그네슘B</p>
+            </div>
+            <p class="drug_cost">10,000원</p>
+          </div>
+          <div class="subsec_dreg">
+            <div class="drug_name">
+              <img src="../../images/drug_img04.png" alt="">
+              <p>로사테아닌</p>
+            </div>
+            <p class="drug_cost">25,000원</p>
+          </div>
+
+          <div class="drug_all">
+            <p class="cost_name">총 영양제 금액</p>
+            <p class="cost_all">65,000원 (30일분)</p>
+          </div>
+  
+          <p class="free_del">지금 결제하면 배송비가 무료예요!</p>
+        </div>
+        
+      </section>
+
+      <!-- 결제일 변경 -->
+      <section class="sub_sec sub_fold">
+        <div class="subsec_top">
+          <p class="subsec_title">결제일 변경</p>
+          <div class="subsec_fold">
+            <p class="fold_txt">2022.11.16</p>
+            <img src="../../images/icon_top.svg" alt="">
+          </div>
+        </div>
+
+        <div class="subsec_con">
+          <p class="cldtxt">기존 결제 예정일은 11월 16일입니다.</p>
+
+          <div class="reserve_body">
+            <div class="rsrv_date">
+                <p class="rsrv_arrow" id="calendarPrevEvt"><img src="../../images/icon_left.svg" alt=""></p>
+                <p class="rsrv_cld" id="currentMonthYear">2022.11</p>
+                <p class="rsrv_arrow" id="calendarNextEvt"><img src="../../images/icon_right.svg" alt=""></p>
+            </div>
+
+            <div class="rsrv_cldr" id="calendarDateWrapper">
+                <div class="cldr_block" style="color: #9F9F9F">
+                    <p>일</p>
+                    <p>월</p>
+                    <p>화</p>
+                    <p>수</p>
+                    <p>목</p>
+                    <p>금</p>
+                    <p>토</p>
+                </div>
+                <div class="cldr_block">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p class="gray_c">1</p>
+                    <p class="gray_c">2</p>
+                    <p class="gray_c">3</p>
+                    <p class="gray_c">4</p>
+                </div>
+                <div class="cldr_block">
+                    <p class="gray_c">5</p>
+                    <p class="gray_c">6</p>
+                    <p class="gray_c">7</p>
+                    <p class="gray_c">8</p>
+                    <p class="gray_c">9</p>
+                    <p class="gray_c">10</p>
+                    <p class="gray_c">11</p>
+                </div>
+                <div class="cldr_block">
+                    <p class="gray_c">12</p>
+                    <p class="gray_c">13</p>
+                    <p class="gray_c">14</p>
+                    <p class="gray_c">15</p>
+                    <p class="gray_c">16</p>
+                    <p class="gray_c">17</p>
+                    <p class="point_c">18</p>
+                </div>
+                <div class="cldr_block">
+                    <p class="red_c">19</p>
+                    <p class="">20</p>
+                    <p class="">21</p>
+                    <p class="">22</p>
+                    <p class="">23</p>
+                    <p class="">24</p>
+                    <p class="point_c">25</p>
+                </div>
+                <div class="cldr_block">
+                    <p class="red_c">26</p>
+                    <p class="">27</p>
+                    <p class="active">28</p>
+                    <p class="">29</p>
+                    <p class="">30</p>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        </div>
+      </section>
+
+      <!-- 핏타민이름-->
+      <section class="sub_sec sub_fold">
+        <div class="subsec_top">
+          <p class="subsec_title">핏타민 이름</p>
+          <div class="subsec_fold">
+            <p class="fold_txt">최대오글자</p>
+            <img src="../../images/icon_top.svg" alt="">
+          </div>
+        </div>
+
+        <div class="subsec_con">
+          <div class="input_basic mb_1">
+            <input type="text" class="rinput" placeholder="이름을 입력해주세요." id="input03" value="최대오글자">
+          </div>
+
+          <p class="subsec_info">핏타민 약포지에 기재되는 이름을 의미합니다.</p>
+          <p class="subsec_info">작성하신 이름은 해당 주문건부터 바로 적용됩니다.</p>
+        </div>
+      </section>
+
+      <!-- 주문자정보-->
+      <section class="sub_sec sub_fold">
+        <div class="subsec_top">
+          <p class="subsec_title">주문자 정보</p>
+          <p class="subsec_fold"><img src="../../images/icon_top.svg" alt=""></p>
+        </div>
+
+        <div class="subsec_con">
+          <div class="input_basic mb_1_5">
+            <label for="input01">주문자명</label>
+            <input type="text" class="rinput" placeholder="성함을 입력해주세요" id="input01" value="김다민">
+          </div>
+          <div class="input_basic">
+            <label for="input02">연락처</label>
+            <input type="text" class="rinput" placeholder="-없이 번호만 입력해주세요" id="input02" value="010-0000-0000">
+          </div>
+        </div>
+      </section>
+
+      <!--  배송지 정보 -->
+      <section class="sub_sec sub_fold">
+        <div class="subsec_top">
+          <p class="subsec_title">배송지 정보</p>
+          <p class="subsec_fold"><img src="../../images/icon_top.svg" alt=""></p>
+        </div>
+
+        <div class="subsec_con">
+
+          <div class="input_check mb_1_5">
+            <input type="checkbox" class="rinput" id="checkbox01">
+            <label for="checkbox01" class="ck_circle">주문자 정보와 동일</label>
+          </div>
+
+          <div class="input_basic mb_1_5">
+            <label for="input04">받으시는 분</label>
+            <input type="text" class="rinput" placeholder="성함을 입력해주세요" id="input04">
+          </div>
+
+          <div class="input_basic mb_1_5">
+            <label for="input05">연락처</label>
+            <input type="text" class="rinput" placeholder="-없이 번호만 입력해주세요" id="input05">
+          </div>
+
+          <div class="input_basic mb_1_5">
+            <label for="input06">배송지 주소</label>
+            <input type="text" class="rinput mb_0_5" placeholder="터치하여 주소를 입력해주세요" id="input06">
+            <input type="text" class="rinput" placeholder="상세주소 (예시 : 101동 501호)" id="">
+          </div>
+
+          <div class="input_basic mb_1_5">
+            <label for="input05">배송 요청사항</label>
+
+            <select name="" id="input05" class="rinput">
+              <option value="">배송 시 요청사항을 선택해주세요</option>
+              <option value="">부재시 문앞에 놓아주세요</option>
+              <option value="">부재시 경비실에 맡겨 주세요</option>
+              <option value="">택배함에 넣어 주세요</option>
+              <option value="">배송전에 연락주세요</option>
+              <option value="">직접입력</option>
+            </select>
+            
+          <textarea name="" id="" cols="30" rows="5" class="rtextarea" placeholder="내용을 입력해주세요. (최대 50자)">직접입력 시 노출</textarea>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 쿠폰 -->
+      <section class="sub_sec sub_fold">
+        <div class="subsec_top">
+          <p class="subsec_title">쿠폰 및 적립금</p>
+          <p class="subsec_fold"><img src="../../images/icon_top.svg" alt=""></p>
+        </div>
+
+        <div class="subsec_con">
+          <div class="selectbox mb_1_5 input_basic">
+              <!-- 유독쿠폰 -->
+              <div class="bl_pop flex">
+                <p class="span1_f gray_c02">유독회원 전용 쿠폰을 확인하세요!</p>
+                <p class="bl_close"></p>
+              </div>
+            <label for="" class="mb_1">쿠폰</label>
+            <div class="selectBtn">사용가능 쿠폰 0장 / 보유 0장</div>
+            <!---- 쿠폰선택 모달 ---->
+            <div class="select_bt coupon_slt">
+              <div class="overlay"></div>
+              <div class="option_list">
+                <div class="optlist_in">
+                  <div class="input_check mb_1_5">
+                    <input type="radio" class="rinput" id="radio01" name="couponck">
+                    <label for="radio01" class="ck_circle">
+                       <span class="cpname">5,000원 할인쿠폰</span> 
+                      <span class="checkinfo">무료 구독 쿠폰 (테스트용)</span>
+                    </label>
+                  </div>
+                  <div class="input_check mb_1_5">
+                    <input type="radio" class="rinput" id="radio02" name="couponck">
+                    <label for="radio02" class="ck_circle">
+                      <span class="cpname">10,000원 할인쿠폰</span>
+                      <span class="checkinfo">무료 구독 쿠폰 (테스트용)</span>
+                    </label>
+                  </div>
+                  <div class="input_check mb_1_5">
+                    <input type="radio" class="rinput" id="radio03" name="couponck" disabled>
+                    <label for="radio03" class="ck_circle">
+                      <span class="cpname">10,000원 할인쿠폰</span>
+                      <span class="checkinfo">유독회원 전용쿠폰</span>
+                      <span class="checkerror">현재 결제건에서 적용이 불가한 쿠폰입니다</span>
+                    </label>
+                  </div>
+
+                </div>
+
+                <div class="btn_center">
+                  <button class="btn_b btn_blue closeBtn" disabled>쿠폰적용</button>
+                  <button class="btn_b btn_trans closeBtn">닫기</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="input_basic">
+            <label for="input08" class="mb_1">적립금</label>
+            <div class="input_btmix" style="margin-bottom: .75rem;">
+              <input type="text" class="rinput" placeholder="0원" id="input08" required>
+              <input type="submit" value="전액사용" class="btn_blue rinput">
+            </div>
+            <p class="subsec_info2">사용가능 적립금 <b>0원</b></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 복지포인트 -->
+      <section class="sub_sec sub_fold">
+        <div class="subsec_top">
+          <p class="subsec_title">할인 및 복지포인트</p>
+          <p class="subsec_fold"><img src="../../images/icon_top.svg" alt=""></p>
+        </div>
+
+        <div class="subsec_con">
+          <div class="selectbox mb_1_5 input_basic">
+            <label for="" class="mb_1">쿠폰</label>
+            <div class="selectBtn">사용가능 쿠폰 0장 / 보유 0장</div>
+            <!---- 쿠폰선택 모달 ---->
+            <div class="select_bt coupon_slt">
+              <div class="overlay"></div>
+              <div class="option_list">
+                <div class="optlist_in">
+                  <div class="input_check mb_1_5">
+                    <input type="radio" class="rinput" id="radio01" name="couponck">
+                    <label for="radio01" class="ck_circle">
+                       <span class="cpname">5,000원 할인쿠폰</span> 
+                      <span class="checkinfo">무료 구독 쿠폰 (테스트용)</span>
+                    </label>
+                  </div>
+                  <div class="input_check mb_1_5">
+                    <input type="radio" class="rinput" id="radio02" name="couponck">
+                    <label for="radio02" class="ck_circle">
+                      <span class="cpname">10,000원 할인쿠폰</span>
+                      <span class="checkinfo">무료 구독 쿠폰 (테스트용)</span>
+                    </label>
+                  </div>
+                  <div class="input_check mb_1_5">
+                    <input type="radio" class="rinput" id="radio03" name="couponck" disabled>
+                    <label for="radio03" class="ck_circle">
+                      <span class="cpname">10,000원 할인쿠폰</span>
+                      <span class="checkinfo">유독회원 전용쿠폰</span>
+                      <span class="checkerror">현재 결제건에서 적용이 불가한 쿠폰입니다</span>
+                    </label>
+                  </div>
+
+                </div>
+
+                <div class="btn_center">
+                  <button class="btn_b btn_blue closeBtn" disabled>쿠폰적용</button>
+                  <button class="btn_b btn_trans closeBtn">닫기</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="input_basic mb_1_5">
+            <label for="input08" class="mb_1">적립금</label>
+            <div class="input_btmix" style="margin-bottom: .75rem;">
+              <input type="text" class="rinput" placeholder="0원" id="input08" required>
+              <input type="submit" value="전액사용" class="btn_blue rinput">
+            </div>
+            <p class="subsec_info2">사용가능 적립금 <b>0원</b></p>
+          </div>
+
+          <div class="input_basic">
+            <label for="" class="mb_1 icon_qu">복지 포인트 <img src="../../images/icon_qu.svg" alt=""  class="pointPop"></label>
+            <div class="input_btmix" style="margin-bottom: .75rem;">
+              <input type="text" class="rinput" placeholder="0원" id="input33" required>
+              <input type="submit" value="전액사용" class="btn_blue rinput">
+            </div>
+            <p class="subsec_info2">사용가능 복지 포인트<b>999,999,999원</b></p>
+            <p class="subsec_info3">복지 포인트 999,999,999원 / 특별 포인트 999,999,999원</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 결제수단 -->
+      <section class="sub_sec sub_fold">
+        <div class="subsec_top">
+          <p class="subsec_title">결제수단</p>
+          <div class="subsec_fold">
+            <p class="fold_txt">토스뱅크 카드 (1234)</p>
+            <img src="../../images/icon_top.svg" alt="">
+          </div>
+        </div>
+
+        <div class="subsec_con">
+          <div class="swiper sunsec_card">
+            <div class="swiper-wrapper card_list">
+              <!-- 결제불가카드 .dis_card 클래스 추가 -->
+              <div class="swiper-slide card_item dis_card">
+                <div class="discard_in">
+                  <img src="../../images/icon_info02.svg" alt="" class="mb_1">
+                  <p class="discard_txt">결제 불가 카드</p>
+                </div>
+                <p class="card_name">
+                  토스뱅크 카드 (1234)
+                  <span>1234 1234 **** 1234</span>
+                </p>
+                <p class="card_del">삭제</p>
+              </div>
+              <div class="swiper-slide card_item">
+                <div class="discard_in">
+                  <img src="../../images/icon_info02.svg" alt="" class="mb_1">
+                  <p class="discard_txt">결제 불가 카드</p>
+                </div>
+                <p class="card_name">
+                  토스뱅크 카드 (1234)
+                  <span>1234 1234 **** 1234</span>
+                </p>
+                <p class="card_del">삭제</p>
+              </div>
+              <div class="swiper-slide card_item add_card">
+                <a href="#"><img src="../../images/icon_pluswt.svg"></a>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </section>
+      
+      <!-- 총 결제금액 -->
+      <section class="sub_sec sub_fold">
+        <div class="subsec_top">
+          <p class="subsec_title">총 결제금액</p>
+          <div class="subsec_fold">
+            <p class="fold_txtb">50,000원</p>
+            <img src="../../images/icon_top.svg" alt="">
+          </div>
+          <p class="fold_txts">다음 결제일은 2022년 11월 31일입니다.</p>
+        </div>
+
+        <div class="subsec_con">
+          <div class="subsec_txt">
+            <p class="txt_l">
+              영양제 금액
+              <span>쏘팔메토옥타코사놀+ 외 4종</span>
+            </p>
+            <p class="txt_r">65,000원</p>
+          </div>
+          <div class="subsec_txt">
+            <p class="txt_l">배송비</p>
+            <p class="txt_r"> + 0원</p>
+          </div>
+          <div class="subsec_txt">
+            <p class="txt_l">
+              쿠폰 사용
+              <span>무료 구독 쿠폰 (테스트용)</span>
+            </p>
+            <p class="txt_r">- 5,000원</p>
+          </div>
+          <div class="subsec_txt">
+            <p class="txt_l">적립금 사용</p>
+            <p class="txt_r">- 15,000원</p>
+          </div>
+          <div class="sebsec_total">
+            <p class="total_t">최종 결제금액</p>
+            <p class="total_c">45,000원</p>
+          </div>
+          <p class="span1_f">다음 결제일은 2022년 11월 31일입니다.</p>
+        </div>
+      </section>
+
+      <!-- 하단 동의 -->
+      <section class="sub_sec">
+        <div class="subsec_con">
+          <div class="input_check mb_1_5">
+            <input type="checkbox" class="rinput" id="checkbox02">
+            <label for="checkbox02" class="ck_circle">(필수) 주문 내용을 확인하였으며, 정기구독 결제 서비스 가입에 동의합니다.</label>
+          </div>
+
+          <p class="subsec_info">핏타민 서비스는 개인 맞춤형 제품으로 결제 완료 시 취소 및 환불이 어렵습니다.</p>
+          <p class="subsec_info">PG사 정책에 따라 카드결제 시 최소 결제금액은 1,000원입니다.</p>
+        </div>
+      </section>
+
+      <!-- 하단 해지버튼 -->
+      <p class="misc1_under gray_c02 text_center ussubBtn" style="margin-top: 2.5rem; cursor: pointer;">구독 해지하기</p>
+ 
+
+      <div class="btn_center pd_base">
+        <button class="btn_b btn_blue popUp02">구독 변경하기</button>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- 복지포인트 팝업 -->
+    <div class="main_popup sub_pgPop popup01">
+      <div class="overlay"></div>
+      <div class="pop_bottom">
+        <div class="pop_in">
+          <p class="popup_title">복지포인트 안내</p>
+          <div class="pop_dec">
+            <p class="p3_f">복지포인트는 현재 조회되는 포인트이며 결제시점의 포인트와 다를 수 있습니다.</p>
+            <p class="p3_f">복지포인트 자동사용 버튼을 활성화하면, 정기결제 시점에 사용 가능한 최대 금액이 적용됩니다.</p>
+            <p class="p3_f">복지포인트는 특별포인트보다 먼저 사용되며, 쿠폰 및 적립금보다는 후순위로 사용됩니다.</p>
+          </div>
+        </div>
+        <div class="btn_center">
+          <button class="btn_b btn_blue closeBtn">확인</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 구독정보 변경 팝업 -->
+    <div class="main_popup sub_pgPop popup02">
+      <div class="overlay"></div>
+      <div class="pop_bottom">
+        <div class="pop_in">
+          <p class="popup_title">변경된 구독정보를 확인해주세요</p>
+          <p class="popup_sub">확인 버튼을 누르시면 구독정보 변경이 완료됩니다.</p>
+          <div class="popup_info">
+            <div class="popup_infoin">
+              <p class="popup_txt">
+                <span class="ltitle">다음 결제일</span>
+                <span class="rinfo">2022년 11월 16일</span>
+              </p>
+              <p class="popup_txt">
+                <span class="ltitle">결제금액</span>
+                <span class="rinfo">11,300원</span>
+              </p>
+              <p class="popup_txt">
+                <span class="ltitle">핏타민 이름</span>
+                <span class="rinfo">최대오글자</span>
+              </p>
+              <p class="popup_txt">
+                <span class="ltitle">배송지 정보</span>
+                <span class="rinfo">서울 강남구 논현로135길 10 (논현동) 시온타워 101호</span>
+              </p>
+              <p class="popup_txt">
+                <span class="ltitle">결제수단</span>
+                <span class="rinfo">하나카드 (1234)</span>
+              </p>
+            </div>
+         </div>
+        </div>
+        <div class="btn_center">
+          <button class="btn_b btn_blue closeBtn">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 구독해지 팝업 -->
+    <div class="main_popup sub_pgPop popup04">
+      <div class="overlay"></div>
+      <div class="pop_bottom">
+        <div class="pop_in">
+          <p class="popup_title">구독을 해지하는 대신,<br>
+            결제일 변경은 어떠세요?</p>
+          <div class="popup_info">
+            <div class="popup_infoinb mb_1_5">
+              <p class="btitle">혹시 영양제가 아직 남으셨나요?</p>
+              <p class="btxt">결제일을 변경하여 남은 영양제 섭취에 대한 부담을 줄여드릴게요!</p>
+            </div>
+            <div class="popup_infoinb">
+              <p class="btitle">지금 정기구독을 해지하시면</p>
+              <p class="btxt_c">배송비 무료 혜택이 사라져요 :(</p>
+              <p class="btxt_c">건강설문 20% 할인혜택이 사라져요 :(</p>
+            </div>
+         </div>
+        </div>
+        <div class="btn_center">
+          <button class="btn_b btn_blue closeBtn">결제일 변경하기</button>
+          <button class="btn_b btn_trans closeBtn">구독해지</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 결제 실패시 페이지 들어오자마자 뜨는 팝업 -->
+    <div class="main_popup sub_pgPop on">
+      <div class="overlay"></div>
+      <div class="pop_bottom">
+        <div class="pop_in">
+          <p class="popup_title">결제수단을 변경해주세요</p>
+          <div class="popup_info">
+            <p class="info_txt">선택하신 결제 수단은 유효하지 않습니다.<br>
+              결제수단을 변경해주세요.</p>
+         </div>
+        </div>
+        <div class="btn_center">
+          <button class="btn_b btn_blue closeBtn">확인</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 카드삭제 팝업 -->
+    <div class="rpopup popup03">
+      <div class="overlay"></div>
+      <div class="pop_open">
+        <div class="pop_in">
+          <p class="p_txt1">등록된 카드를 삭제하시겠어요?</p>
+        </div>
+        <div class="pop_btn">
+          <button class="btn_m btn_light p_cancel">닫기</button>
+          <button class="btn_m btn_red p_cp">삭제</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+
+      /* -- 팝업 --*/
+      $(".selectBtn").on("click", function(){
+      $(".select_bt, body").addClass("on");
+    });
+
+    $(".pointPop").on("click", function(){
+      $(".popup01, body").addClass("on");
+    });
+
+    $(".card_del").on("click", function(){
+      $(".popup03, body").addClass("on");
+    });
+
+    $(".popUp02").on("click", function(){
+      $(".popup02, body").addClass("on");
+    });
+
+    $(".ussubBtn").on("click", function(){
+      $(".popup04, body").addClass("on");
+    });
+
+    $(".overlay, .closeBtn, .pop_btn").on("click", function(){
+      $(".select_bt, .sub_pgPop, .rpopup, body").removeClass("on");
+    });
+
+
+      
+    /*-- 쿠폰선택 --*/
+    const label = document.querySelectorAll('.selectBtn');
+label.forEach(function(lb){
+    lb.addEventListener('click', e => {
+        let optionList = lb.nextElementSibling;
+        let optionItems = optionList.querySelectorAll('.input_check');
+        clickLabel(lb, optionItems);
+    })
+});
+const clickLabel = (lb, optionItems) => {
+    if(lb.parentNode.classList.contains('active')) {
+        lb.parentNode.classList.remove('active');
+        optionItems.forEach((opt) => {
+            opt.removeEventListener('click', () => {
+                handleSelect(lb, opt)
+            })
+        })
+    } else {
+        lb.parentNode.classList.add('active');
+        optionItems.forEach((opt) => {
+            opt.addEventListener('click', () => {
+                handleSelect(lb, opt)
+            })
+        })
+    }
+}
+const handleSelect = (label, item) => {
+    label.innerHTML = item.textContent;
+    label.parentNode.classList.remove('active');
+    label.classList.add('optSlt');
+}
+
+
+
+/* 배송 요청사항  */
+$('select').each(function(){
+    var $this = $(this), numberOfOptions = $(this).children('option').length;
+  
+    $this.addClass('rselect-hidden'); 
+    $this.wrap('<div class="rselect"></div>');
+    $this.after('<div class="rselect-styled"></div>');
+
+    var $styledSelect = $this.next('div.rselect-styled');
+    $styledSelect.text($this.children('option').eq(0).text());
+  
+    var $list = $('<ul />', {
+        'class': 'rselect-options'
+    }).insertAfter($styledSelect);
+  
+    for (var i = 0; i < numberOfOptions; i++) {
+        $('<li />', {
+            text: $this.children('option').eq(i).text(),
+            rel: $this.children('option').eq(i).val()
+        }).appendTo($list);
+        //if ($this.children('option').eq(i).is(':selected')){
+        //  $('li[rel="' + $this.children('option').eq(i).val() + '"]').addClass('is-selected')
+        //}
+    }
+  
+    var $listItems = $list.children('li');
+  
+    $styledSelect.click(function(e) {
+        e.stopPropagation();
+        $('div.rselect-styled.active').not(this).each(function(){
+            $(this).removeClass('active').next('ul.rselect-options').hide();
+        });
+        $(this).toggleClass('active').next('ul.rselect-options').toggle();
+    });
+  
+    $listItems.click(function(e) {
+        e.stopPropagation();
+        $styledSelect.text($(this).text()).removeClass('active');
+        $this.val($(this).attr('rel'));
+        $list.hide();
+        //console.log($this.val());
+    });
+  
+    $(document).click(function() {
+        $styledSelect.removeClass('active');
+        $list.hide();
+    });
+
+});
+    
+    
+    
+    
+    /* 결제수단 */
+    var swiper = new Swiper(".sunsec_card", {
+        slidesPerView: 'auto',
+        centeredSlides: true,
+      });
+
+    </script>
+</body>
+</html>

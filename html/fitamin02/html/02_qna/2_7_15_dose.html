@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>2-7-15.복용중인약</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="back"></div>
+      <div class="page_name">건강설문</div>
+      <div class="header_icon">
+        <p class="header_link">
+          <img src="../../images/icon/system_close_bk.svg" alt="닫기" />
+        </p>
+      </div>
+    </header>
+
+    <div class="fullpage">
+      <div class="svy_wrap">
+        <div class="svy_top">
+          <p class="title">현재 복용중인 의약품을 알려주세요</p>
+          <p class="txt">
+            의약품을 복용 중인 경우에는 피해야 하는<br />
+            영양성분이 있을 수 있어서 주의가 필요해요!
+          </p>
+          <p class="system_red span2_f">중복선택 가능</p>
+        </div>
+
+        <div class="svy_con svy_dose">
+          <div class="grid_list_0_75">
+            <div class="servey_singular servey_plural allNone">
+              <p class="sbj">복용중이지 않음</p>
+            </div>
+            <div class="servey_singular servey_plural select">
+              <p class="sbj">간 질환</p>
+              <div class="dose_info">
+                <p class="img"><img src="../../images/drug_sample.png" alt="" /></p>
+                <p class="name">아스피린</p>
+                <p class="doseClose"></p>
+              </div>
+            </div>
+            <div class="servey_singular servey_plural">
+              <p class="sbj">갑상선호르몬</p>
+            </div>
+            <div class="servey_singular servey_plural">
+              <p class="sbj">고지혈증</p>
+            </div>
+            <div class="servey_singular servey_plural">
+              <p class="sbj">고혈압</p>
+            </div>
+            <div class="servey_singular servey_plural">
+              <p class="sbj">골다공증</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn_fix">
+        <button class="btn_b btn_basic nextBtn" disabled>다음</button>
+      </div>
+    </div>
+
+    <!-- 페이지 나가기 팝업 -->
+    <div class="popup popup01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 팝업 컨텐츠 -->
+      <div class="popup_wrap">
+        <p class="pop_title">페이지를 나가시겠어요?</p>
+        <p class="pop_txt">
+          페이지를 나가시면 작성하신 설문결과가<br />
+          저장되지 않을 수 있어요!
+        </p>
+        <!-- 버튼 2개 -->
+        <div class="pop_btn">
+          <button class="btn_m btn_light popClose">계속진행</button>
+          <button class="btn_m btn_red popClose">나가기</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 복용약등록 -->
+    <div class="modal modal01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+      <!-- 모달 컨텐츠-->
+      <div class="modal_wrap">
+        <div class="modal_top">
+          <p class="modal_title">어떤 약을 복용중이신가요?</p>
+          <p class="modal_sub">
+            처방전이나 약 봉투 사진을 가지고 계신다면<br />
+            이미지도 함께 첨부해주세요.
+          </p>
+        </div>
+
+        <div class="modal_con">
+          <div class="input_div mb_1">
+            <input type="text" id="input03" placeholder="복용중인 약의 이름을 적어주세요" />
+          </div>
+
+          <div class="swiper addfile_slide">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide addfile">
+                <input type="file" id="addimg" />
+                <label for="addimg"></label>
+              </div>
+              <div class="swiper-slide img_list">
+                <img src="../../images/guide_sample.png" alt="" />
+                <p class="deleteImg"></p>
+              </div>
+              <div class="swiper-slide img_list">
+                <img src="../../images/guide_sample2.png" alt="" />
+                <p class="deleteImg"></p>
+              </div>
+              <div class="swiper-slide img_list">
+                <img src="../../images/guide_sample3.png" alt="" />
+                <p class="deleteImg"></p>
+              </div>
+              <div class="swiper-slide img_list">
+                <img src="../../images/guide_sample4.png" alt="" />
+                <p class="deleteImg"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn_wrap">
+          <button class="btn_b btn_basic popClose">등록하기</button>
+          <button class="btn_b btn_trans popClose">닫기</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script>
+      //선택
+      $(".servey_plural").click(function () {
+        if ($(this).hasClass("select")) {
+          $(this).removeClass("select");
+        } else if ($(this).hasClass("allNone")) {
+          $(".allNone").siblings(".servey_plural").removeClass("select");
+          $(this).addClass("select");
+        } else {
+          $(this).addClass("select");
+          $(".allNone").removeClass("select");
+          $(".nextBtn").attr("disabled", false);
+          $(".modal01, body").addClass("open");
+        }
+      });
+
+      $(".doseClose").click(function () {
+        $(this).parent(".servey_plural").removeClass("select");
+      });
+
+      /* popup */
+      $(".header_link").on("click", function () {
+        $(".popup01, body").addClass("open");
+      });
+
+      $(".overlay, .popClose").on("click", function () {
+        $(".popup, .modal, body, .btn_trans").removeClass("open");
+      });
+
+      /* modal */
+      var addimg = new Swiper(".addfile_slide", {
+        slidesPerView: "auto",
+        spaceBetween: 8,
+      });
+
+      //추가된 이미지 삭제
+      $(".deleteImg").click(function () {
+        $(this)
+          .parents(".img_list")
+          .fadeOut(function () {
+            $(this).delay(1000).remove();
+          });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="_css/_feWorksheet.min.css">
+	<style>
+		/* User style */
+		nav{position:fixed;top: 0;padding-top: 20px;background-color: #fff;z-index: 5;}
+		nav a {letter-spacing: -1px;}
+		h1{padding-top: 20px;}
+		.design, .date, .dateModify {text-align: center;}
+		.priority td{background:#feeeee !important}
+		.second td{background:#fff5e8 !important}
+		.third td{background:#eef7fc !important}
+		.fourth td{background:#f4f4f4 !important}
+		.previewIframe{display:none;position:fixed;top:0;right:0;background:#fff;width:360px;border:1px solid #000;z-index:999;aspect-ratio: 9/16;}
+		table{table-layout:fixed;}
+		th:first-child{width:4%;}
+		.people{width:2%;}
+		.checkTask{width:4%;}
+		.dueDate, .dueModifyDate{width:4.5%;line-height: 1.3;}
+		.className{font-weight: bold;width:6%;}
+		.issueMemo{width: 20%;line-height: 1.3;}
+		.cancel{text-decoration:line-through;color: red;}
+		.gray{color:#ccc;}
+		.add *{background-color:#feeeee;color:#b90b0b;}
+		.del *{text-decoration: line-through;opacity: 0.5;}
+		.blue {color: blue;}
+	</style>
+	<script src="_css/_feWorksheet.min.js"></script>
+	<script>
+		/* User script(setting) */
+		$(function() {
+			$('body').feWorksheet({
+				// Options
+			});
+			$('body').setPagePreview();
+		});
+
+		$.fn.setPagePreview = function(){
+			var $body = $('body'),
+				$a = $('.fileName a'),
+				$iframe = $('<iframe class="previewIframe" id="ifrm"></iframe>');
+
+			$body.append($iframe);
+
+			$a.each(function(){
+				var $this = $(this);
+				$this.on('mouseover',function(){
+						$iframe.attr('src', $this.attr('href'));
+						$iframe.css({'display':'block'}); 
+
+						setTimeout(function(){
+							$('#ifrm').contents().find('#wrap').css({
+								'transform' : 'scale(0.16923076923076924,0.16923076923076924)',
+								'transform-origin' : '0 0'
+							});
+						}, 200);
+
+
+				}).on('mouseout',function(){
+						$iframe.css({'display':'none'});
+				});
+			});
+
+		};
+	</script>
+</head>
+<body>
+	<header><h1><em>핏타민 리브랜딩</em>, Front-end Web developer Worksheet</h1></header>
+	<!-- noticeWrap -->
+	<section class="noticeWrap">
+		<h2>Notice</h2>
+		<ul>
+			<li>Undone: 코딩중, Done: 코딩완료, Modify: 코딩 완료 후 HTML수정, Delete: 코딩 완료 후 SB삭제</li>
+		</ul>
+	</section>
+	<!-- //noticeWrap -->
+	<!-- filterWrap -->
+	<section class="filterWrap">
+		<h2>Task Key/Filter</h2>
+		<form action="/">
+			<fieldset>
+				<legend>Filter option(It'll be automatically applied)</legend>
+				<label><input type="checkbox" value="all">All</label>
+				<label><input type="checkbox"><b class='default'>0</b><i>Undone</i></label>
+				<label><input type="checkbox"><b>1</b><i>Done</i></label>
+				<label><input type="checkbox"><b>2</b><i>Modify</i></label>
+				<label><input type="checkbox"><b>3</b><i>Delete</i></label>
+			</fieldset>
+		</form>
+	</section>
+	<!-- //filterWrap -->
+	<!-- Worksheet -->
+	<section>
+		<h2>Worksheet: Web</h2>
+    <!-- 가이드 파일 -->
+		<h3>가이드</h3>
+		<table>
+			<!-- caption : 경로입력 -->
+			<caption>./guide</caption>
+			<thead>
+				<tr>
+					<th scope="col" class="menuDepth">Depth1</th>
+					<th scope="col" class="menuDepth">Depth2</th>
+					<th scope="col" class="menuDepth">Depth3</th>
+					<th scope="col" class="menuDepth">Depth4</th>
+					<th scope="col" class="fileName">File Name/ID</th>
+					<th scope="col" class="className">body class</th>
+					<th scope="col" class="dueDate">Done</th>
+					<th scope="col" class="dueModifyDate">Modify</th>
+					<th scope="col" class="people">People</th>
+					<th scope="col" class="issueMemo">Issue/Memo</th>
+					<th scope="col" class="checkTask">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+        <tr>
+					<td class="menuDepth">design guide</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">guide.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">typo</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">typo.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+        <tr>
+					<td class="menuDepth">color</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">color.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+        <tr>
+					<td class="menuDepth">icon</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">icon.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+        <tr>
+					<td class="menuDepth">grid</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">grid.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+        <tr>
+					<td class="menuDepth">button</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">button.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+        <tr>
+					<td class="menuDepth">form</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">form.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+        <tr>
+					<td class="menuDepth">component</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">component.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+        <tr>
+					<td class="menuDepth">popup</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">popup.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+			</tbody>
+		</table>
+		
+    <!-- 레이아웃 파일 -->
+    <h3>공통 레이아웃</h3>
+		<table>
+			<!-- caption : 경로입력 -->
+			<caption>./common</caption>
+			<thead>
+				<tr>
+					<th scope="col" class="menuDepth">Depth1</th>
+					<th scope="col" class="menuDepth">Depth2</th>
+					<th scope="col" class="menuDepth">Depth3</th>
+					<th scope="col" class="menuDepth">Depth4</th>
+					<th scope="col" class="fileName">File Name/ID</th>
+					<th scope="col" class="className">body class</th>
+					<th scope="col" class="dueDate">Done</th>
+					<th scope="col" class="dueModifyDate">Modify</th>
+					<th scope="col" class="people">People</th>
+					<th scope="col" class="issueMemo">Issue/Memo</th>
+					<th scope="col" class="checkTask">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="menuDepth">1.홈페이지 레이아웃</td>
+					<td class="menuDepth">1-1.header</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">header.html</td>
+					<td class="className">header</td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+        <tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">1-2.footer nav</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">nav.html</td>
+					<td class="className">nav</td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">1-3.layout</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">layout.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+			</tbody>
+		</table>
+
+    <!-- 2-4. 분석하기 설문진행 -->
+    <h3>홈</h3>
+		<table>
+			<!-- caption : 경로입력 -->
+			<caption>./home</caption>
+			<thead>
+				<tr>
+					<th scope="col" class="menuDepth">Depth1</th>
+					<th scope="col" class="menuDepth">Depth2</th>
+					<th scope="col" class="menuDepth">Depth3</th>
+					<th scope="col" class="menuDepth">Depth4</th>
+					<th scope="col" class="fileName">File Name/ID</th>
+					<th scope="col" class="className">body class</th>
+					<th scope="col" class="dueDate">Done</th>
+					<th scope="col" class="dueModifyDate">Modify</th>
+					<th scope="col" class="people">People</th>
+					<th scope="col" class="issueMemo">Issue/Memo</th>
+					<th scope="col" class="checkTask">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="menuDepth">1.첫화면</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">1_first.html</td>
+					<td class="className">full_wrap</td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+        <tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">1_1.로그인</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">1_1_login.html</td>
+					<td class="className">login</td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">1_1_2.비밀번호 찾기</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">1_1_2_find_password.html</td>
+					<td class="className">login</td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">1_1_3.비밀번호 재설정</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">1_1_3_password_re.html</td>
+					<td class="className">login</td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">1_2.학교검색하기</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">1_2_search_school.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">2.메인대시보드</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">2_dashboard.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				
+			</tbody>
+		</table>
+
+    <!-- 00:시작화면 -->
+    <h3>스터디</h3>
+    <table>
+      <!-- caption : 경로입력 -->
+      <caption>./study</caption>
+      <thead>
+        <tr>
+          <th scope="col" class="menuDepth">Depth1</th>
+          <th scope="col" class="menuDepth">Depth2</th>
+          <th scope="col" class="menuDepth">Depth3</th>
+          <th scope="col" class="menuDepth">Depth4</th>
+          <th scope="col" class="fileName">File Name/ID</th>
+          <th scope="col" class="className">body class</th>
+          <th scope="col" class="dueDate">Done</th>
+          <th scope="col" class="dueModifyDate">Modify</th>
+          <th scope="col" class="people">People</th>
+          <th scope="col" class="issueMemo">Issue/Memo</th>
+          <th scope="col" class="checkTask">Task</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="menuDepth">1.스터디 메인</td>
+          <td class="menuDepth"></td>
+          <td class="menuDepth"></td>
+          <td class="menuDepth"></td>
+          <td class="fileName">1_index.html</td>
+          <td class="className">class_first</td>
+          <td class="date"></td>
+          <td class="dateModify"></td>
+          <td class="people"></td>
+          <td class="issueMemo"></td>
+          <td class="checkTask">1</td>
+        </tr>
+        <tr>
+          <td class="menuDepth"></td>
+          <td class="menuDepth">1_2.클래스 리스트</td>
+          <td class="menuDepth"></td>
+          <td class="menuDepth"></td>
+          <td class="fileName">1_2_class_list.html</td>
+          <td class="className">class_wrap</td>
+          <td class="date"></td>
+          <td class="dateModify"></td>
+          <td class="people"></td>
+          <td class="issueMemo"></td>
+          <td class="checkTask">1</td>
+        </tr>
+        <tr>
+          <td class="menuDepth"></td>
+          <td class="menuDepth"></td>
+          <td class="menuDepth">1_2_1.클래스 자세히 보기</td>
+          <td class="menuDepth"></td>
+          <td class="fileName">.html</td>
+          <td class="className">class_wrap</td>
+          <td class="date"></td>
+          <td class="dateModify"></td>
+          <td class="people"></td>
+          <td class="issueMemo"></td>
+          <td class="checkTask">1</td>
+        </tr>
+        <tr>
+          <td class="menuDepth"></td>
+          <td class="menuDepth"></td>
+          <td class="menuDepth"></td>
+          <td class="menuDepth">1_2_1_1.클래스 강의 듣기</td>
+          <td class="fileName">.html</td>
+          <td class="className">class_wrap</td>
+          <td class="date"></td>
+          <td class="dateModify"></td>
+          <td class="people"></td>
+          <td class="issueMemo"></td>
+          <td class="checkTask">1</td>
+        </tr>
+        <tr>
+          <td class="menuDepth"></td>
+          <td class="menuDepth">1_3.토론게시판</td>
+          <td class="menuDepth"></td>
+          <td class="menuDepth"></td>
+          <td class="fileName">1_3_discscussions.html</td>
+          <td class="className">class_wrap</td>
+          <td class="date"></td>
+          <td class="dateModify"></td>
+          <td class="people"></td>
+          <td class="issueMemo"></td>
+          <td class="checkTask">1</td>
+        </tr>
+        <tr>
+          <td class="menuDepth"></td>
+          <td class="menuDepth">1_4.퀴즈</td>
+          <td class="menuDepth"></td>
+          <td class="menuDepth"></td>
+          <td class="fileName">1_4_quiz.html</td>
+          <td class="className">class_wrap</td>
+          <td class="date"></td>
+          <td class="dateModify"></td>
+          <td class="people"></td>
+          <td class="issueMemo"></td>
+          <td class="checkTask">1</td>
+        </tr>
+        <tr>
+          <td class="menuDepth"></td>
+          <td class="menuDepth">1_5.학습자료</td>
+          <td class="menuDepth"></td>
+          <td class="menuDepth"></td>
+          <td class="fileName">1_5_resource.html</td>
+          <td class="className">class_wrap</td>
+          <td class="date"></td>
+          <td class="dateModify"></td>
+          <td class="people"></td>
+          <td class="issueMemo"></td>
+          <td class="checkTask">1</td>
+        </tr>
+        <tr>
+          <td class="menuDepth"></td>
+          <td class="menuDepth">1_6.성적평가</td>
+          <td class="menuDepth"></td>
+          <td class="menuDepth"></td>
+          <td class="fileName">1_6_assemssment.html</td>
+          <td class="className"></td>
+          <td class="date"></td>
+          <td class="dateModify"></td>
+          <td class="people"></td>
+          <td class="issueMemo"></td>
+          <td class="checkTask">1</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 01:홈  -->
+    <h3>마켓</h3>
+    <table>
+			<!-- caption : 경로입력 -->
+			<caption>./shop</caption>
+			<thead>
+				<tr>
+					<th scope="col" class="menuDepth">Depth1</th>
+					<th scope="col" class="menuDepth">Depth2</th>
+					<th scope="col" class="menuDepth">Depth3</th>
+					<th scope="col" class="menuDepth">Depth4</th>
+					<th scope="col" class="fileName">File Name/ID</th>
+					<th scope="col" class="className">body class</th>
+					<th scope="col" class="dueDate">Done</th>
+					<th scope="col" class="dueModifyDate">Modify</th>
+					<th scope="col" class="people">People</th>
+					<th scope="col" class="issueMemo">Issue/Memo</th>
+					<th scope="col" class="checkTask">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+        <tr>
+					<td class="menuDepth">1.마켓 메인</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+        <tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">1_1.상품자세히 보기</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className">/</td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+        <tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">1_2.카드</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className">/</td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+        <tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">1_3.주문내역 리스트</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className">/</td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+        <tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"> </td>
+					<td class="menuDepth">1_3_1.주문내역 자세히보기</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className">/</td>
+					<td class="date">230512</td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+			</tbody>
+		</table>
+
+    <!-- 02:영양제 추천 -->
+    <h3>마이페이지</h3>
+    <table>
+			<!-- caption : 경로입력 -->
+			<caption>./my</caption>
+			<thead>
+				<tr>
+					<th scope="col" class="menuDepth">Depth1</th>
+					<th scope="col" class="menuDepth">Depth2</th>
+					<th scope="col" class="menuDepth">Depth3</th>
+					<th scope="col" class="menuDepth">Depth4</th>
+					<th scope="col" class="fileName">File Name/ID</th>
+					<th scope="col" class="className">body class</th>
+					<th scope="col" class="dueDate">Done</th>
+					<th scope="col" class="dueModifyDate">Modify</th>
+					<th scope="col" class="people">People</th>
+					<th scope="col" class="issueMemo">Issue/Memo</th>
+					<th scope="col" class="checkTask">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="menuDepth">1.마이페이지</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+        <tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">1_1.건강기록</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+        <tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">1_2.주문내역</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">1_2_1.주문내역 상세보기</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+        <tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">1_3.출석내역</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">0_1_1_detail.html</td>
+					<td class="className">rcmd_detail</td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+        <tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">1_4.성적증명서</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr> 
+        <tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">1_5.성적내역</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="className"></td>
+					<td class="date"></td>
+					<td class="dateModify"></td>
+					<td class="people"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr> 
+        
+			</tbody>
+		</table> 
+	</section>
+	<!-- //Worksheet -->
+</body>
+</html>

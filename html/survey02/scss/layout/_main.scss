@@ -1,0 +1,2873 @@
+/***************************************************************
+    13. main
+***************************************************************/
+body.open {
+  height: 100svh;
+  overflow: hidden;
+}
+
+body{
+  margin: 0 auto;
+}
+
+//common
+.line_bg_bk{
+  @include flexbtw;
+  position: absolute;
+  width: 100%;
+  left: 0;
+
+  span{
+    background: url(../images/bg_plus_bk.svg) no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: .625rem;
+    height: .625rem;
+
+    img{
+      width: 100%;
+    }
+
+    
+    @include tablet{
+      width: .75rem;
+      height: .75rem;
+    }
+  }
+
+  &.top{
+    
+    @include tablet{
+      top: 7.5rem;
+    }
+  }
+
+  &.bottom{
+    
+    @include tablet{
+      bottom: 0;
+    }
+  }
+
+  &.line_bg_gr{
+    span{
+      background: url(../images/bg_plus_gr.svg) no-repeat;
+      background-size: cover;
+      display: inline-block;
+      width: .625rem;
+      height: .625rem;
+      
+      @include tablet{
+        width: .75rem;
+        height: .75rem;
+      }
+    }
+  }
+}
+
+//common
+.line_bg_gr{
+  @include flexbtw;
+  position: absolute;
+  width: 100%;
+  padding: 0 1.25rem;
+
+  @include tablet{
+    padding: 0 2.5rem;
+  }
+
+  span{
+    background: url(../images/bg_plus_gr.svg) no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: .625rem;
+    height: .625rem;
+    
+
+    @include tablet{
+      width: .75rem;
+      height: .75rem;
+    }
+  }
+
+  &.top{
+    top: 4rem;
+    left: 0;
+
+    @include tablet{
+      top: 2.5rem;
+    }
+  }
+
+  &.bottom{
+    bottom: 8.625rem;
+    left: 0;
+
+    @include tablet{
+      bottom: 7.5rem;
+    }
+  }
+}
+
+//intro
+.intro_ani{
+  width: 100%;
+  position: relative;
+  
+  @include tablet{
+    padding: 9.625rem 0 2.125rem;
+  }
+
+  p{
+    @include h1f;
+    color: #fff;
+    font-weight: 600;
+    border: 3px solid $light;
+    border-radius: 3rem;
+    height: 3.875rem;
+    line-height: 1;
+    @include flexcenter;
+    padding: 0 1.0625rem;
+    text-transform: capitalize;
+
+    @include tablet{
+      @include h1f;
+      height: 4.625rem;
+      padding: 0 2.0625rem; 
+    }
+  }
+
+  .icon{
+    width: 3.875rem;
+    padding: 0;
+
+    @include tablet{
+      width: 4.625rem;
+    }
+  }
+
+  .logo img{
+    width: 6.6875rem;
+    
+    @include tablet{
+      width: 10.25rem;
+    }
+  }
+
+  .bg_light{
+    color: $primary;
+  }
+
+  .ani01{
+    animation: intro01 1.8s ease-in-out infinite;
+  }
+
+  .ani02{
+    animation: intro02 1.8s ease-in-out infinite;
+  }
+
+  .ani03{
+    animation: intro03 1.8s ease-in-out infinite;
+  }
+}
+
+//설문
+.contents{
+  
+  .servey_top{
+    display: grid;
+    gap: 1rem;
+
+    @include tablet{
+      gap: 2rem
+    }
+
+    .count{
+      @include flex;
+      gap: .375rem;
+      letter-spacing: 0;
+      display: none;
+      .now{
+        @include p2fb;
+        position: relative;
+
+        &::after{
+          content: '';
+          width: 100%;
+          height: .25rem;
+          background-color: $primary;
+          display: blodk;
+          position: absolute;
+          bottom: .125rem;
+          left: 0;
+        }
+      }
+      .total{
+        color: $gray03;
+        @include span1fb;
+
+        span{
+
+        }
+      }
+    }
+    
+    .servey_title{
+      display: grid;
+      gap: .5rem;
+
+      .title{
+        @include p1fb;
+      }
+      .sub_txt{
+        @include p7f;
+        color: $gray03
+      }
+    }
+  }
+
+  .select_list{
+    padding-top: 4.25rem;
+    display: grid;
+    gap: .75rem;
+
+    @include tablet{
+      padding-top: 3.75rem;
+      gap: 1.5rem;
+    }
+
+    &.sub_list{
+      padding: 3rem 0;
+    }
+
+    .list_btn{
+      @include flex;
+      gap: .5rem;
+      cursor: pointer;
+
+
+      @include tablet{
+        gap: .75rem;
+      }
+
+      .icon{
+        width: 3.375rem;
+        height: 3.375rem;
+        background-image: url(../images/servey/servey_plus.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        img{
+          width: 100%;
+        }
+
+        @include tablet{
+          width: 5.25rem;
+          height: 5.25rem;
+        }
+
+        &.check{
+          background-image: url(../images/servey/servey_check.svg);
+        }
+        
+      }
+      .txt{
+        background-color: $gray07;
+        width: calc(100% - 3.875rem);
+        border-radius: 3rem;
+        padding: 0 1.5rem;
+        @include flex;
+        height: 3.375rem;
+        @include p3f;
+        color: $gray04;
+        transition: all .3s;
+
+        @include tablet{
+          width: calc(100% - 6rem);
+          height: 5.25rem;
+          padding: 0 3rem;
+        }
+
+        &.term_btn{
+          border-radius: 5rem;
+          height:4.5rem;
+          @include tablet{
+            height: 7.5rem;
+          }
+        }
+      }
+
+      &.active{
+        .txt{
+          background-color: $primary;
+          color: $light;
+        }
+
+        .icon{
+          background-image: url(../images/servey/servey_right_on.svg);
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
+  
+
+  .select_btn{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .75rem;
+    margin-top: 8.4375rem;
+
+    @include tablet{
+      gap: 1.75rem;
+    }
+
+    p{
+      background-color: $gray07;
+      border-radius: .75rem;
+      padding: 8.875rem 0 1.875rem;
+      text-align: center;
+      color: $gray03;
+      @include p3f;
+      transition: background-color .3s;
+      background-repeat: no-repeat;
+      background-size: 5rem;
+      background-position: center 2.375rem;
+      cursor: pointer;
+
+
+      @include tablet{
+        padding: 12.625rem 0 3.875rem;
+        background-size: 6.25rem;
+        background-position: center 3.875rem;
+        border-radius: 1.5rem;
+      }
+
+      &.active{
+        background-color: $primary;
+        color: $light;
+      }
+    }
+
+    .select_place{
+      background-image: url(../images/servey/select_place.svg);
+
+      &.active{
+        background-image: url(../images/servey/select_place_on.svg);
+      }
+    }
+
+    .select_talk{
+      background-image: url(../images/servey/select_talk.svg);
+      &.active{
+        background-image: url(../images/servey/select_talk_on.svg);
+      }
+    }
+
+    .select_man{
+      background-image: url(../images/servey/select_man.svg);
+      &.active{
+        background-image: url(../images/servey/select_man_on.svg);
+      }
+      
+    }
+
+    .select_woman{
+      background-image: url(../images/servey/select_woman.svg);
+      &.active{
+        background-image: url(../images/servey/select_woman_on.svg);
+      }
+    }
+
+    .select_ok{
+      background-image: url(../images/servey/select_ok.svg);
+      &.active{
+        background-image: url(../images/servey/select_ok_on.svg);
+      }
+    }
+
+    .select_no{
+      background-image: url(../images/servey/select_no.svg);
+      &.active{
+        background-image: url(../images/servey/select_no_on.svg);
+      }
+    }
+
+    .select_clock{
+      background-image: url(../images/servey/select_clock.svg);
+      &.active{
+        background-image: url(../images/servey/select_clock_on.svg);
+      }
+    }
+
+    &.select_main{
+      margin-top: 6rem;
+
+      @include tablet{
+        margin-top: 6.875rem
+      }
+    }
+  }
+
+}
+
+.cpl_center{
+  @include gridbtw;
+  position: relative;
+  top: 45%;
+  transform: translateY(-50%);
+
+  @include tablet{
+    // height: 75svh;
+  }
+  .con{
+    text-align: center;
+    .cpl_icon{
+      width: 3rem;
+      margin: 0 auto 1rem;
+
+      @include tablet{
+        margin: 0 auto 1.5rem;
+      }
+
+      img{
+        width: 100%;
+      }
+
+      @include tablet{
+        width: 4rem;
+      }
+    }
+    .title{
+      @include p1fb;
+    }
+    
+
+    .sub_txt{
+      @include p3f;
+      color: $gray03;
+      padding-top: .75rem;
+
+      @include tablet{
+        padding-top: 1rem;
+      }
+      
+    }
+
+    .txt{
+      @include p7f;
+      color: $gray03;
+      padding-top: .375rem;
+
+      @include tablet{
+        padding-top: 1rem;
+      }
+    }
+
+    .btn_round{
+      @include p3fb;
+      padding: .625rem 1.25rem;
+      border-radius: 5rem;
+      @include flex;
+      gap: .5rem;
+      width: fit-content;
+      margin: 1.5rem auto 0;
+      cursor: pointer;
+
+      @include tablet{
+        padding: 1rem 1.75rem;
+      }
+    }
+  }
+}
+
+.refreshBtn{
+  position: fixed;
+  right: 1.25rem;
+  top:  3.125rem;
+  cursor: pointer;
+}
+
+.term_link{
+  @include misc2f;
+  color: $gray03;
+  position: fixed;
+  bottom: 2rem;
+  left: 1.25rem;
+
+  @include tablet{
+    left: 5.875rem;
+    bottom: 3.625rem;
+  }
+}
+//설문로딩
+.loading_img{
+  width: calc(100% + 2.5rem);
+  transform: translateX(-1.25rem);
+  margin-bottom: 2rem;
+  height: fit-content;
+
+  @include tablet{
+    width: calc(100% + 5rem);
+    transform: translateX(-2.5rem);
+    margin-bottom: 4rem;
+  }
+
+  img{
+    width: 100%;
+    }
+  }
+
+//설문인덱스
+.intro_servey{
+  top: 4rem;
+  display: grid;
+  gap: .25rem;
+
+  @include tablet{
+    gap: 1.5rem;
+    top: 0rem;
+  }
+
+  .line_bg_bk{
+    position: initial;
+  }
+ 
+  .flex_btw{
+    flex-wrap: wrap;
+    gap: 1rem 0;
+
+    .flex{
+      justify-content: space-between;
+      width: 100%;
+
+      @include tablet{
+        justify-content: flex-start;
+        gap: .625rem;
+      }
+    }
+  }
+
+  .c_green{
+    border-color: $primary;
+    color: $primary;
+
+    &.ani02{
+      animation: intro04 1.8s ease-in-out infinite;
+    }
+  
+    &.ani03{
+      animation: intro05 1.8s ease-in-out infinite;
+    }
+  }
+
+  .c_red{
+    border-color: $system_red_light;
+    color: $system_red_light;
+  }
+
+  .c_yellow{
+    border-color: $system_yellow;
+    color: $system_yellow;
+  }
+
+  .c_blue{
+    border-color: $system_blue;
+    color: $system_blue;
+  }
+
+  .c_green_bg{
+    background-color: $primary;
+    border-color: $primary;
+    color: $light;
+  }
+
+
+  @include tablet{
+    p:nth-child(8){
+      margin: 0 1rem;
+    }
+
+    p:nth-child(11){
+      margin: 0 1rem;
+    }
+  }
+}
+
+//나이선택
+.age_slide{
+  height: 18.5rem;
+  position: relative;
+  top: 10svh;
+  width: calc(100% + 2.5rem);
+    transform: translateX(-1.25rem);
+
+  @include tablet{
+    height: 31.25rem;
+    width: calc(100% + 11.25rem);
+    transform: translateX(-5.625rem);
+  }
+
+  &::before{
+    content: '';
+    display: block;
+    background: linear-gradient($light 0, $light 30%, transparent 100%);
+    height: 2.5rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    @include tablet{
+      height: 5rem;
+    }
+  }
+
+  &::after{
+    content: '';
+    display: block;
+    background: linear-gradient(transparent 0, $light 70%, $light 100%);
+    height: 2.5rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+
+    @include tablet{
+      height: 5rem;
+    }
+  }
+
+  .swiper-slide{
+    padding: .5rem 0;
+    width: 100%;
+    @include span5f;
+    color: $gray04;
+    height: 2.75rem;
+    @include flexcenter;
+    line-height: 1;
+    transition: all .1s;
+
+    @include tablet{
+      height: 4.625rem;
+    }
+
+    &.swiper-slide-active{
+      background-color: $primary;
+      color: $light;
+      @include span6fb;
+      height: 3.375rem;
+
+      @include tablet{
+        height: 5.875rem;
+      }
+    }
+  }
+}
+
+//예약완료
+.rsv_cpl{
+  min-height: 100svh;
+  @include tablet{
+    padding: 2.5rem 5.875rem;
+  }
+
+  .line_bg_gr.top{
+    top: 1.5rem;
+    max-width: 48rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include tablet{
+      top: 2.5rem;
+    }
+  }
+
+  .time_info{
+    background-color: $gray07;
+    border-radius: .25rem;
+    padding: 1rem 1.25rem;
+    margin-top: .5rem;
+
+    @include tablet{
+      margin-top: 1rem;
+      padding: 1.5rem 2rem;
+      border-radius: .5rem
+    }
+
+    .txt{
+      @include p7fb;
+    }
+  }
+
+  .cpl_logo{
+    width: 5rem;
+    padding: 2rem 0 1rem;
+    
+    img{
+      width: 100%;
+    }
+
+    @include tablet{
+      width: 8.125rem;
+      padding: 2.75rem 0 1.5rem;
+    }
+  }
+
+  .line_bg_gr.bottom{
+    position: initial;
+    width: 100%;
+    padding: 1.5rem 0 0;
+    left: 0;
+
+    @media  (max-height: 800px ){
+      margin-bottom: 5rem;
+    }
+
+    @media  (min-width: 768px ) and (max-height: 1024px) {
+      margin-bottom: 5rem;
+    }
+
+    @include tablet{
+      padding: 2.5rem 2.5rem 0;
+      width: calc(100% + 11.25rem);
+      transform: translateX(-5.625rem);
+    }
+  }
+
+  
+  .botton_cancle{
+    position: fixed;
+    bottom: 3rem;
+    right: 1.25rem;
+    @include misc2f;
+    color: $gray03;
+    z-index: 9;
+
+    @include tablet{
+      right: 5.875rem;
+      bottom: 3.5rem;
+    }
+  }
+}
+
+
+.time_cpl{
+  padding: 1.5rem 0 3.5rem;
+}
+
+.rsv_info{
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 16px 0px rgba(35, 36, 38, 0.10); 
+  margin-top: 1.5rem;
+  background-color: $light;
+  position: relative;
+  z-index: 1;
+
+  @include tablet{
+    margin-top: 3.375rem;
+    padding: 3.25rem 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+
+
+  .logo_center{
+    width: 8.125rem;
+    margin: 0 auto 4rem;
+    height: 1.75rem;
+
+    img{
+      width: 100%;
+    }
+  }
+
+  &.error_box{
+    padding: 7.5rem 0 8.125rem;
+    margin-top: 30%;
+  }
+
+  &.error_box + .line_bg_gr.bottom{
+    position: absolute;
+    width: 100%;
+    transform: initial;
+    margin-bottom: 0;
+  }
+
+  .rsv_time{
+    margin: 0 auto;
+    width: fit-content;
+    text-align: center;
+
+    .img{
+      width: 2rem;
+      margin: 0 auto;
+
+      @include tablet{
+        width: 4rem;
+      }
+
+      img{
+        width: 100%;
+      }
+    }
+
+    .p3_fb{
+      padding: .5rem 0 .25rem;
+
+      @include tablet{
+        padding: 1.25rem 0 .5rem
+      }
+    }
+
+    .time{
+      @include h1fb;
+      color: $primary;
+    }
+  }
+
+  .info_list{
+    background-color: $gray07;
+    padding: 1.5rem 1rem;
+    display: grid;
+    gap: .25rem;
+    border-radius: .75rem;
+    margin-top: 1rem;
+
+    @include tablet{
+      margin-top: 2rem;
+      padding: 2rem 1.5rem;
+      border-radius:  1.5rem;
+    }
+
+    p{
+      @include p6f;
+      color: $gray02;
+      position: relative;
+      padding-left: 1.125rem;
+
+      &::before{
+        content: '';
+        display: block;
+        width: .25rem;
+        height: .25rem;
+        border-radius: 50%;
+        background-color: $gray02;
+        position: absolute;
+        left: .125rem;
+        top: .3125rem;
+
+        @include tablet{
+          top: .7rem;
+        }
+      }
+    }
+  }
+}
+
+.info_team{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px  dashed $primary;
+  margin-top: 1.5rem;
+
+  @include tablet{
+    margin-top: 2rem;
+  }
+
+  .team_data{
+    text-align: center; 
+    padding-top: 1.5rem;
+
+    @include tablet{
+      padding-top: 3.25rem;
+    }
+
+    .team_txt{
+      @include span1f;
+      color: $gray03;
+    }
+
+    .team_time{
+      @include span1fb;
+      margin-top: .5rem;
+
+      @include tablet{
+        margin-top: 1rem;
+      }
+
+    }
+  }
+}
+
+.rsv_banner{
+  padding: 1rem;
+  border-radius: .625rem;
+  @include flex;
+  background-repeat: no-repeat;
+  gap: .5rem;
+  margin-top: .75rem;
+  position: relative;
+  z-index: 1;
+
+
+  .title{
+    @include p6fb;
+  }
+
+  .txt{
+    @include p6fb;
+  }
+
+  &.b_green{
+    background-color: #E0F8E9;
+    background-image: url(../images/banner_green.svg);
+    background-position: calc(100% - .625rem) bottom;
+
+    .title{
+      color: $primary;
+    }
+  }
+
+  &.b_blue{
+    padding-left: 4.25rem;
+    background-color: $light;
+    background-image: url(../images/banner_blue.svg);
+    background-position: 1rem center;
+    border: 2px solid $system-blue;
+
+    .title{
+      color: $system-blue;
+    }
+  }
+}
+
+//예약조회
+.rcmd_reservation_slide {
+  width: calc(100% + 2.5rem);
+  transform: translateX(-1.25rem);
+  padding-bottom: 1.5rem !important;
+
+  .rsv_info{
+    margin: 1.5rem 1.25rem .75rem;
+  }
+
+  .swiper-pagination-bullet-active{
+    background-color: $dark;
+  }
+}
+
+//시간예약
+.select_rsv{
+  padding: 2rem 0 .5rem;
+
+  @include tablet{
+    padding-top: 3.75rem;
+  }
+
+  .rsv_title{
+    @include flexbtw;
+
+    .rsv_type{
+      @include flexright;
+      @include span3f;
+      color: $gray01;
+      gap: 1rem;
+      line-height: 1;
+
+      @include tablet{
+        gap: 1.5rem
+      }
+
+      p{
+        @include flex;
+        gap: .25rem;
+
+        @include tablet{
+          gap: .5rem;
+        }
+
+        &:first-child .type{
+          border: 1px solid $gray06;
+        }
+
+        &:nth-child(2) .type{
+          background-color: $gray06;
+        }
+
+        &:last-child .type{
+          background-color: $primary;
+        }
+      }
+
+      .type{
+        width: .75rem;
+        height: .75rem;
+        border-radius: .125rem;
+      }
+    }
+
+  }
+
+  .select_time_list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .5rem;
+    padding-top: .75rem;
+
+    @include tablet{
+      gap: 1rem .5rem;
+      padding-top: 1.5rem
+    }
+
+    .slt_time{
+      @include p3f;
+      color: $gray02;
+      text-align: center;
+      padding: .75rem 0;
+      border: 1px solid $gray06;
+      border-radius: .25rem;
+      transition: all .3s;
+      cursor: pointer;
+
+      @include tablet{
+        padding: 1.125rem 0;
+      }
+
+      &.disabled{
+        background-color: $gray06;
+        color: $gray04;
+      }
+
+      &.select{
+        background-color: $primary;
+        color: $light;
+        font-weight: $boldf;
+      }
+    }
+  }
+}
+
+.select_rsv_day{
+  padding: 1rem 1.25rem;
+  position: relative;
+  border-top: .5rem solid $gray07;
+  border-bottom: .5rem solid $gray07;
+  width: calc(100% + 2.5rem);
+  transform: translateX(-1.25rem);
+  margin-top: 1.5rem;
+
+  @include tablet{
+    margin-top: 1.5rem;
+    width: calc(100% + 11.25rem);
+    transform: translateX(-5.625rem);
+    padding: 2rem 5.875rem;
+  }
+
+  .rsv_title{
+    @include flexbtw;
+
+    .title{
+      @include span1fb;
+    }
+
+    .rsv_date{
+      @include span2f;
+      color: $gray03;
+      @include flexright;
+      gap: .25rem;
+
+      img{
+        width: 1.25rem;
+
+        @include tablet{
+          width: 2rem;
+        }
+      }
+    }
+  }
+}
+
+//내차례
+.myturn_wrap{
+  text-align: center;
+  position: absolute;
+  width: calc(100% - 2.5rem);
+  top: 44%;
+  transform: translateY(-50%);
+
+  @include tablet{
+    width: calc(100% - 11.25rem);
+    left: 5.625rem;
+    top: 45%;
+  }
+
+  .my_icon{
+    width: 2rem;
+    margin: 0 auto .75rem;
+
+    @include tablet{
+      width: 4rem;
+      margin: 0 auto 1rem;
+    }
+    img{
+      width: 100%;
+    }
+  }
+
+  .myturn_card{
+    margin-top: 2.25rem;
+    border-radius: 1rem;
+    padding: 1rem;
+
+    @include tablet{
+      margin-top: 2rem;
+      border-radius: 1.5rem;
+      padding: 2rem;
+    }
+
+    .line_bg_bk{
+      position: initial;
+    }
+
+    .info_team{
+      margin-top: 0;
+      padding-bottom: 2.5rem;
+      border-color: rgba(35,36,38,.6);
+
+      .team_data{
+        .team_txt{
+          color: rgba(35,36,38,.6);;
+        }
+        .team_time{
+          color: $light;
+        }
+      }
+    }
+
+    .my_time{
+      padding-top: 2.75rem;
+
+      @include tablet{
+        padding-top: 3.625rem;
+      }
+
+      .txt{
+        @include span1fb;
+      }
+
+      .time{
+        @include span6fb;
+        padding-top: .25rem;
+
+        @include tablet{
+          padding-top: .75rem;
+        }
+      }
+    }
+
+    .card_logo{
+      width: 4.625rem;
+      height: 1rem;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 2.25rem auto 1.25rem;
+
+      @include tablet{
+        width: 7rem;
+        height: 1.5rem;
+        margin: 66px auto 2.3125rem;
+      }
+    }
+
+    .my_pack{
+      padding: 2rem 0 1.5rem;
+      display: grid;
+      gap: 1.5rem;
+
+      .pack_data{
+        .pack_sub{
+          @include span3f;
+          color: rgba(35,36,38,.6);
+          letter-spacing: 0
+        }
+        
+        .pack_name{
+          @include p1fb;
+          color: $light;
+
+          &.no{
+            @include span6fb;
+          }
+        }
+      }
+    }
+
+    .card_pattern{
+      display: grid;
+      gap: .75rem;
+      position: relative;
+      padding-bottom: 1.75rem;
+      width: calc(100% + 5rem);
+      transform: translateX(-2.5rem);
+      
+      @include tablet{
+        gap: 1rem;
+        padding-bottom: 2.75rem;
+        width: calc(100% + 20rem);
+        transform: translateX(-11rem);
+      }
+
+      .flex{
+        gap: .375rem;
+      }
+
+
+      // p{
+      //   padding: .625rem 1.125rem;
+      //   border-radius: 3rem;
+      //   white-space: nowrap;
+      //   border: 2px solid transparent;
+      //   @include span1fb;
+      //   line-height: 1;
+      // }
+    }
+
+    
+    .pattern_right{
+      height: 2.75rem;
+      background-repeat: repeat;
+      background-position: center;
+      animation: pattern_r 300s linear infinite;
+
+      @include mobile_lg{
+        animation: pattern_r 180s linear infinite;
+      }
+      
+      @include tablet{
+        height: 4.125rem;
+        background-size: contain;
+        animation: pattern_r 100s linear infinite;
+      }
+    }
+
+    .pattern_left{
+      height: 2.75rem;
+      background-position: center;
+      background-repeat: repeat;
+      animation: pattern_l 250s linear infinite;
+      
+      @include mobile_lg{
+        animation: pattern_l 300s linear infinite;
+      }
+
+      @include tablet{
+        height: 4.125rem;
+        background-size: contain;
+        animation: pattern_l 100s linear infinite;
+      }
+    }
+
+    &.card_blue{
+      background-color: $system-blue-dark;
+
+      .my_time{
+        color: $light;
+      }
+
+      .card_logo{
+        background-image: url(../images/logo_blue.svg);
+      }
+
+      .pattern_right{
+        background-image: url(../images/patternbg_blue.svg);
+      }
+
+      .pattern_left{
+        background-image: url(../images/patternbg_blue.svg);
+      }
+    }
+
+    &.card_yellow{
+      background-color: $system-yellow-light;
+
+
+      .card_logo{
+        background-image: url(../images/logo_yellow.svg);
+      }
+
+      .card_pattern{
+        .pattern_right{
+          background-image: url(../images/patternbg_yellow.svg);
+        }
+  
+        .pattern_left{
+          background-image: url(../images/patternbg_yellow.svg);
+        }
+      }
+
+      .my_pack{
+        .pack_data{
+          .pack_name{
+            color: $dark;
+          }
+        }
+      }
+
+      .info_team{
+        .team_data{
+          .team_time{
+            color: $dark;
+          }
+        }
+      }
+    }
+
+    &.card_orange{
+      background-color: $system-orange;
+
+      .my_time{
+        color: $light;
+      }
+
+      .card_logo{
+        background-image: url(../images/logo_orange.svg);
+      }
+
+      .card_pattern{
+        .pattern_right{
+          background-image: url(../images/patternbg_orange.svg);
+        }
+  
+        .pattern_left{
+          background-image: url(../images/patternbg_orange.svg);
+        }
+      }
+    }
+
+    &.card_pink{
+      background-color: $system-red_light;
+
+      .my_time{
+        color: $light;
+      }
+
+      .card_logo{
+        background-image: url(../images/logo_pink.svg);
+      }
+
+      .card_pattern{
+        .pattern_right{
+          background-image: url(../images/patternbg_red.svg);
+        }
+  
+        .pattern_left{
+          background-image: url(../images/patternbg_red.svg);
+        }
+      }
+    }
+
+    &.card_green{
+      background-color: $primary;
+
+      .my_time{
+        color: $light;
+      }
+
+      .card_logo{
+        background-image: url(../images/logo_pink.svg);
+      }
+
+      .card_pattern{
+        .pattern_right{
+          background-image: url(../images/patternbg_green_dark.svg);
+        }
+  
+        .pattern_left{
+          background-image: url(../images/patternbg_green_dark.svg);
+        }
+      }
+    }
+
+    &.card_white{
+      background-color: $light;
+      box-shadow: 0px 0px 16px 0px rgba(35, 36, 38, 0.10);
+
+
+      .card_logo{
+        background-image: url(../images/logo_gray.svg);
+      }
+
+      .card_pattern{
+        .pattern_right{
+          background-image: url(../images/patternbg_green.svg);
+        }
+  
+        .pattern_left{
+          background-image: url(../images/patternbg_green.svg);
+        }
+      }
+
+      .my_pack{
+        .pack_data{
+          .pack_name{
+            color: $dark;
+          }
+        }
+      }
+
+      .info_team{
+        .team_data{
+          .team_time{
+            color: $dark;
+          }
+        }
+      }
+    }
+
+    &.card_skyblue{
+      background-color: $system-blue-light;
+
+      .my_pack{
+        .pack_data{
+          .pack_name{
+            color: $dark;
+          }
+        }
+      }
+
+      .info_team{
+        .team_data{
+          .team_time{
+            color: $dark;
+          }
+        }
+      }
+    }
+
+    &.card_vividblue{
+      background-color: $system-blue-vivid;
+    }
+
+    &.card_purple{
+      background-color: $system-purple;
+    }
+
+    &.card_bluegreen{
+      background-color: $system-bluegreen;
+
+      .my_pack{
+        .pack_data{
+          .pack_name{
+            color: $dark;
+          }
+        }
+      }
+
+      .info_team{
+        .team_data{
+          .team_time{
+            color: $dark;
+          }
+        }
+      }
+    }
+
+    &.card_lightorange{
+      background-color: $system-yellow;
+
+      .my_pack{
+        .pack_data{
+          .pack_name{
+            color: $dark;
+          }
+        }
+      }
+
+      .info_team{
+        .team_data{
+          .team_time{
+            color: $dark;
+          }
+        }
+      }
+    }
+
+    &.card_gray{
+      background-color: $gray05;
+
+      .my_pack{
+        .pack_data{
+          .pack_name{
+            color: $dark;
+          }
+        }
+      }
+
+      .info_team{
+        .team_data{
+          .team_time{
+            color: $dark;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.myturn_full{
+  text-align: center;
+
+  .myturn_con{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 45%;
+    transform: translateY(-50%);
+
+    .under_txt{
+      padding-top: 6.125rem;
+    }
+
+    .line_bg{
+      @include flexbtw;
+
+      span{
+        background-size: .625rem;
+        background-repeat: no-repeat;
+        width: .625rem;
+        height: .625rem;
+        background-image: url(../images/plus_gray.svg);
+      }
+    }
+
+    .top_mark{
+      padding: 0 2.25rem;
+      .name{
+        @include span1fb;
+        padding-top: .25rem;
+      }
+      .mark{
+        @include p4fb;
+        border-radius: 3rem;
+        border: 1px solid $gray01;
+        padding: .75rem 1rem; 
+        width: fit-content;
+        margin: .5rem auto .25rem;
+        letter-spacing: 0;
+      }
+    }
+
+    .pack_data{
+      padding: 0 2.25rem;
+      margin-top: 3.75rem;
+      .txt{
+        @include span3f;
+        opacity: .6;
+        padding: .5rem 0 .25rem;
+        letter-spacing: 0
+      }
+      .title{
+        @include span6fb;
+        line-height: 1.5;
+        padding-bottom: .25rem;
+      }
+    }
+  }
+
+  &.bg_system_blue_light{
+    .line_bg{
+      span{
+        background-image: url(../images/plus_skyblue.svg);
+      }
+    }
+
+    .top_mark{
+      .mark{
+        border-color: $system-blue;
+      }
+    }
+  }
+
+  &.bg_system_blue_dark{
+    .line_bg{
+      span{
+        background-image: url(../images/plus_darkblue.svg);
+      }
+    }
+
+    .top_mark{
+      .mark{
+        border-color: #0A4AB0;
+      }
+    }
+
+    .pack_data{
+      .title{
+        color: $light;
+      }
+    }
+
+    .under_txt{
+      .p3_fb{
+        color: $light;
+      }
+    }
+  }
+
+  &.bg_system_blue_vivid{
+    .line_bg{
+      span{
+        background-image: url(../images/plus_skyblue.svg);
+      }
+    }
+
+    .top_mark{
+      .mark{
+        border-color: $system-blue;
+      }
+    }
+
+    .pack_data{
+      .title{
+        color: $light;
+      }
+    }
+
+    .under_txt{
+      .p3_fb{
+        color: $light;
+      }
+    }
+  }
+
+  &.bg_system_purple{
+    .line_bg{
+      span{
+        background-image: url(../images/plus_purple.svg);
+      }
+    }
+
+    .top_mark{
+      .mark{
+        border-color: #4F37C3;
+      }
+    }
+
+    .pack_data{
+      .title{
+        color: $light;
+      }
+    }
+
+    .under_txt{
+      .p3_fb{
+        color: $light;
+      }
+    }
+  }
+
+  &.bg_system_bluegreen{
+    .line_bg{
+      span{
+        background-image: url(../images/plus_wt.svg);
+      }
+    }
+
+    .top_mark{
+      .mark{
+        border-color: #2EB78F;
+      }
+    }
+  }
+
+  &.bg_primary{
+    .line_bg{
+      span{
+        background-image: url(../images/plus_green.svg);
+      }
+    }
+
+    .top_mark{
+      .mark{
+        border-color: $primary-dark;
+      }
+    }
+
+    .pack_data{
+      .title{
+        color: $light;
+      }
+    }
+
+    .under_txt{
+      .p3_fb{
+        color: $light;
+      }
+    }
+  }
+
+  &.bg_system_pink{
+    .line_bg{
+      span{
+        background-image: url(../images/bg_plus_bk.svg);
+      }
+    }
+
+    .top_mark{
+      .mark{
+        border-color: $system-red;
+      }
+    }
+
+    .pack_data{
+      .title{
+        color: $light;
+      }
+    }
+
+    .under_txt{
+      .p3_fb{
+        color: $light;
+      }
+    }
+  }
+
+  &.bg_system_yellow_light{
+    .line_bg{
+      span{
+        background-image: url(../images/plus_yellow.svg);
+      }
+    }
+
+    .top_mark{
+      .mark{
+        border-color: #BF7745;
+      }
+    }
+  }
+
+  &.bg_system_yellow{
+    .line_bg{
+      span{
+        background-image: url(../images/plus_yellow.svg);
+      }
+    }
+
+    .top_mark{
+      .mark{
+        border-color: #BF7745;
+      }
+    }
+  }
+
+  &.bg_system_orange{
+    .line_bg{
+      span{
+        background-image: url(../images/plus_orange.svg);
+      }
+    }
+
+    .top_mark{
+      .mark{
+        border-color: $system-orange-dark;
+      }
+    }
+
+    .pack_data{
+      .title{
+        color: $light;
+      }
+    }
+
+    .under_txt{
+      .p3_fb{
+        color: $light;
+      }
+    }
+  }
+
+  &.bg_gray05{
+    .line_bg{
+      span{
+        background-image: url(../images/plus_gray.svg);
+      }
+    }
+
+    .top_mark{
+      .mark{
+        border-color: $gray01;
+      }
+    }
+  }
+}
+
+//설문결과
+.result_top{
+  text-align: center;
+  padding: 2.5rem 0 1.5rem;
+  max-width: 48rem;
+  margin: 0 auto;
+
+  @include tablet{
+    padding-bottom: 3.75rem;
+  }
+  .title{
+    @include h2fb;
+  }
+
+  .top_slide{
+    padding: 1.25rem 1.25rem 2rem;
+    max-width: 25rem;
+
+    @include tablet{
+      padding: 2rem 0 5rem;
+      max-width: 38.125rem;
+    }
+    
+    .result_smr{
+      width: 100%;
+
+      .mobile_img{
+        @include tablet{
+          display: none;
+        }
+      }
+
+      .pc_img{
+        display: none;
+
+        @include tablet{
+          display: block;
+        }
+      }
+    }
+
+  }
+
+  .swiper-pagination{
+    position: relative;
+    bottom: -.5rem;
+
+    @include tablet{
+      bottom: -1.5rem;
+    }
+  }
+
+  .swiper-pagination-bullet-active{
+    background-color: $dark;
+  }
+
+  .top_icon{
+    @include flexcenter;
+    gap: 1.5rem;
+
+    @include tablet{
+    }
+
+    .icon_img{
+      background-color: $gray07;
+      height: 3rem;
+      width: 3rem;
+      border-radius: 50%;
+      @include flexcenter;
+      cursor: pointer;
+
+      @include tablet{
+        width: 4rem;
+        height: 4rem;
+
+        img{
+          width: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.result_con{
+  padding: 0 1.25rem 12rem;
+
+  @include tablet{
+    max-width: 768px;
+    padding: 0 5.875rem 15rem;
+    margin: 0 auto;
+  }
+
+  .total_title{
+    @include p1fb;
+    padding-top: 4.25rem;
+
+    @include tablet{
+      padding-top: 5rem;
+    }
+
+    .total_name{
+      @include p3fb;
+      @include flex;
+      gap: .5rem;
+      margin-bottom: .25rem;
+
+      .name{
+        color: $primary;
+        padding: .25rem 1rem;
+        border: 2px solid $primary;
+        border-radius: 5rem;
+      }
+    }
+  }
+
+  .result_rcmd{
+    padding-top: 3.125rem;
+
+    @include tablet{
+      padding-top: 5rem;
+    }
+
+    .title{
+      padding-bottom: 1rem;
+      @include flex;
+      gap: .5rem;
+      @include p4fb;
+
+      @include tablet{
+        padding-bottom: 1.5rem;
+      }
+    }
+  }
+
+  .rcmd_total{
+    display: grid;
+    gap: .75rem;
+
+    @include tablet{
+      gap: 1rem;
+    }
+
+    .total_info{
+      padding: 1rem 1.25rem;
+      background-color: $gray06;
+      border-radius: 1rem;
+      width: calc(100% - 2.5rem);
+      position: relative;
+
+      &::before{
+        content: '';
+        width: 1.9375rem;
+        height: 2.125rem;
+        position: absolute;
+        top: -3px;
+        left: 0;
+        background: url(../images/servey/total_info_bg.png) no-repeat;
+        background-size: cover;
+        z-index: -1;
+
+        @include tablet{
+          width: 62px;
+          height: 68px;
+          top: -6px;
+        }
+      }
+
+      @include tablet{
+        padding: 1.5rem 2rem;
+        border-radius: 1.25rem;
+        width: calc(100% - 2.875rem);
+      }
+
+      .name{
+        @include p7fb;
+        padding-bottom: .25rem;
+
+        @include tablet{
+          padding-bottom: .5rem;
+        }
+      }
+
+      .txt{
+        color: $gray02;
+        @include p7f;
+      }
+    }
+
+    .rcmd_txt{
+      background-color: $gray07;
+      border-radius: .75rem;
+      padding: 1rem 1.25rem;
+      width: fit-content;
+      @include span2fb;
+
+      @include tablet{
+        padding: 1.5rem 2rem;
+      }
+    }
+  }
+
+  .rcmd_goods_slide{
+    .rcmd_goods_list{
+      @include flextop;
+      gap: .75rem;
+      margin-top: 1rem;
+
+      @include tablet{
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+
+      .img{
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        background-color: $gray07;
+        padding: .625rem;
+        @include flexcenter;
+
+        @include tablet{
+          width: 5.125rem;
+          height: 5.125rem;
+          padding: .75rem;
+        }
+      }
+
+      .goods_info{
+        width: calc(100% - 6.625rem);
+        
+        .goods_name{
+          @include p3fb;
+        }
+
+        .goods_txt{
+          // @include vertical_txt;
+          // -webkit-line-clamp: 4;
+          margin: .25rem 0 .125rem;
+          @include p7f;
+          color: $gray02;
+
+          @include tablet{
+            margin:  .75rem 0 .5rem;
+          }
+        }
+        
+        .goods_noti{
+          color: $system-red-light;
+          @include p6f;
+          // @include vertical_txt;
+          // -webkit-line-clamp: 2;
+        }
+      }
+    }
+
+    .swiper-pagination{
+      position: relative;
+      padding-top: 2rem;
+
+      .swiper-pagination-bullet-active{
+        background-color: $gray01;
+      }
+    }
+  }
+
+  .rcmd_time{
+    display: grid;
+    gap: .75rem;
+
+    @include tablet{
+      gap: 1rem;
+    }
+
+    .rcmd_time_list{
+      padding: .75rem 1rem;
+      border-radius: 1rem;
+      background-color: $gray07;
+      @include flex;
+      gap: .625rem;
+
+      @include tablet{
+        padding: 1.5rem 2rem;
+        gap: 1rem;
+      }
+
+      .icon{
+        width: 2.25rem;
+        height: 2.25rem;
+
+        img{
+          width: 100%;
+        }
+
+        @include tablet{
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+
+      .txt{
+       color: $gray02;
+       @include p5fb;
+      }
+    }
+  }
+
+  .rcmd_food{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    padding: 2rem 1rem;
+    background-color: $gray07;
+    border-radius: 1rem;
+
+    @include tablet{
+      padding: 3.75rem 3.375rem;
+      border-radius: 1.25rem;
+      margin-bottom: .75rem;
+    }
+
+    .rcmd_food_list{
+      .icon{
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        background-color: $light;
+        
+        img{
+          width: 100%;
+        }
+
+        @include tablet{
+          width: 5.125rem;
+          height: 5.125rem;
+        }
+      }
+      .txt{
+        padding-top: .75rem;
+        color: $gray02;
+        text-align: center;
+        @include span4fb;
+
+        @include tablet{
+          padding-top: 1.25rem;
+        }
+      }
+    }
+  }
+
+  .rcmd_tip{
+    display: grid;
+    gap: .75rem;
+
+    @include tablet{
+      gap: 1rem;
+    }
+
+    .rcmd_tip_list{
+      background-color: $gray07;
+      padding: 1rem 1.25rem;
+      border-radius: .75rem;
+      @include span2fb;
+      color: $gray01;
+
+      @include tablet{
+        padding: 1.5rem 2rem;
+        border-radius: 1rem;
+      }
+    }
+  }
+
+  .rcmd_pack{
+    .rcmd_pack_list{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: .75rem;
+
+      @include tablet{
+        gap: 1.5rem;
+      }
+
+      .rcmd_pack_data{
+        border-radius: .75rem;
+        padding: 1rem .75rem;
+        position: relative;
+        text-align: center;
+        color: $light;
+        height: 14.375rem;
+
+        @include tablet{
+          padding: 2.5rem 1.25rem;
+          height: 22.5rem;
+          max-height: initial;
+        }
+
+        .pack_name{
+          padding-top: 2.375rem;
+
+          @include tablet{
+            padding-top: 3.125rem;
+          }
+
+          .name{
+            @include p3fb;
+          }
+  
+          .pack_logo{
+            background-color: $light;
+            border-radius: 3rem;
+            width: fit-content;
+            margin: 0 auto;
+            padding: .25rem .625rem;
+            @include span3fb;
+            margin-top: .25rem;
+            color: $dark;
+
+            @include tablet{
+              margin-top: .5rem;
+              @include span4fb;
+            }
+          }
+
+          .line_bg{
+            margin-top: .25rem;
+            position: relative;
+
+            @include tablet{
+              margin-top: .5rem
+            }
+          }
+        }
+
+        .pack_info{
+          @include p6fb;
+          @include flexcenter;
+          position: absolute;
+          bottom: 3rem;
+          width: 100%;
+          left: 0;
+          height: 2.25rem;
+
+          @include tablet{
+            bottom: 5.5rem;
+            height: 3.375rem;
+          }
+        }
+
+        .line_bg{
+          position: absolute;
+          left: 0;
+          width: 100%;
+          padding: 0 .75rem;
+          @include flexbtw;
+          opacity: .5;
+
+          @include tablet{
+            padding: 0 20px;
+          }
+
+          span{
+            width: .375rem;
+            height: .375rem;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            @include tablet{
+              width: .625rem;
+              height: .625rem;
+            }
+          }
+
+          &.top{
+            top: 1rem;
+
+            @include tablet{
+              top: 2.5rem;
+            }
+          }
+          &.bottom{
+            bottom: 1rem;
+
+            @include tablet{
+              bottom: 2.5rem;
+            }
+          }
+        }
+
+        &.pack_skyblue{
+          background-color: $system-blue-light;
+          color: $dark;
+
+          .line_bg{
+            span{
+              background-image: url(../images/bg_plus_bk.svg);
+            }
+          }
+        }
+
+        &.pack_blue{
+          background-color: $system-blue-dark;
+
+          .line_bg{
+            span{
+              background-image: url(../images/plus_wt.svg);
+            }
+          }
+        }
+
+        &.pack_pink{
+          background-color: $system-pink-light;
+          color: $dark;
+
+          .line_bg{
+            span{
+              background-image: url(../images/bg_plus_bk.svg);
+            }
+          }
+        }
+
+        &.pack_pruple{
+          background-color: $system-purple;
+
+          .line_bg{
+            span{
+              background-image: url(../images/plus_wt.svg);
+            }
+          }
+        }
+
+        &.pack_bluegreen{
+          background-color: $system-bluegreen;
+          color: $dark;
+
+          .line_bg{
+            span{
+              background-image: url(../images/bg_plus_bk.svg);
+            }
+          }
+        }
+
+        &.pack_green{
+          background-color: $primary;
+          color: $dark;
+
+          .line_bg{
+            span{
+              background-image: url(../images/bg_plus_bk.svg);
+            }
+          }
+        }
+
+        &.pack_red{
+          background-color: $system_red_light;
+
+          .line_bg{
+            span{
+              background-image: url(../images/plus_wt.svg);
+            }
+          }
+        }
+
+        &.pack_yellow{
+          background-color: $system-yellow-light;
+          color: $dark;
+
+          .line_bg{
+            span{
+              background-image: url(../images/bg_plus_bk.svg);
+            }
+          }
+        }
+
+        &.pack_lightorange{
+          background-color: $system-yellow;
+          color: $dark;
+
+          .line_bg{
+            span{
+              background-image: url(../images/bg_plus_bk.svg);
+            }
+          }
+        }
+
+        &.pack_orange{
+          background-color: $system_orange;
+
+          .line_bg{
+            span{
+              background-image: url(../images/plus_wt.svg);
+            }
+          }
+        }
+
+        &.pack_gray{
+          background-color: $gray03;
+
+          .line_bg{
+            span{
+              background-image: url(../images/plus_wt.svg);
+            }
+          }
+        }
+
+        &.pack_white{
+          background-color: $light;
+          color: $dark;
+          box-shadow: 0px 0px 15px 0px rgba(35, 36, 38, 0.10);
+
+          .pack_name{
+            .pack_logo{
+              background-color: $gray07;
+              color: $dark;
+            }
+          }
+
+          .line_bg{
+            span{
+              background-image: url(../images/bg_plus_bk.svg);
+            }
+          }
+        }
+      }   
+    }
+  }
+}
+
+
+.pre_rsvbtn{
+  @include span3fb;
+  color: $light;
+  background: $primary url(../images/right_wt.svg) no-repeat;
+  background-size: 1.5rem;
+  background-position: calc(100% - 1rem) center;
+  padding: 1rem 1.5rem;
+  border-radius: 3rem;
+  margin: 0 .75rem;
+
+}
+
+//수령안내 디자인변경
+.receive_top{
+  background: $primary;
+  padding: 4.625rem 0 3.5rem;
+  width: 100%;
+  max-width: 48rem;
+  position: relative;
+  margin: 0 auto;
+
+  @include tablet{
+    padding: 5.625rem 2.5rem 3.75rem;
+  }
+
+
+  &::after{
+    content: '';
+    width: 100%;
+    background-position: center bottom;
+    background-size: 22.5rem;
+    display: block;
+    height: 1.625rem;
+    background-image: url(../images/receive_bg.svg);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .top_title{
+    text-align: center;
+    height: 8.375rem;
+
+    @include tablet{
+      height: 12.375rem;
+    }
+
+    .top_txt{
+      padding:.5rem 0 0;
+      height: 6rem;
+      display: grid;
+      align-content: center;
+
+      @include tablet{
+        height: 10rem;
+      }
+    }
+    .line_bg_bk{
+      opacity: .6;
+      padding: 0 2.25rem;
+
+      @include tablet{
+        padding: 0 2.5rem;
+      }
+
+      &.top{
+        top: 4rem;
+      }
+
+      &.bottom{
+        bottom: 4.75rem;
+      }
+    }
+    .name{
+      @include span3f;
+      color: $light;
+      padding-bottom:.25rem;
+    }
+
+    .txt{
+      @include p1fb;
+      color: $light;
+      @include flexcenter;
+    }
+  }
+
+  &.cpl{
+    background-color: $gray07;
+    background-position: bottom center;
+    background-size: 22.5rem;
+
+    .top_title{
+
+      .line_bg_bk{
+        opacity: .4;
+      }
+
+      .name{
+        color: $gray02;
+      }
+  
+      .txt{
+        color: $dark;
+      }
+    }
+  }
+
+  
+}
+
+.receive_block{
+  padding: .5rem 1.25rem 4rem;
+  display: grid;
+  gap: 2.5rem;
+  margin: 0 auto;
+  max-width: 48rem;
+
+  @include tablet{
+    padding: 3.125rem 5.625rem 9.125rem;
+  }
+
+  .receive_list{
+    .title{
+      @include span3fb;
+      border-bottom: 1px solid $dark;
+      padding-bottom: .25rem;
+    }
+
+    .receive_data{
+      display: grid;
+      gap: 1rem;
+      padding-top: 1rem;
+      .data_in{
+        @include flexbtw;
+
+        &.data_check{
+          align-items: flex-start;
+
+          .no img{
+            width: 2rem;
+          }
+        }
+      }
+
+      .name_list{
+        display: grid;
+        gap: .125rem;
+        width: calc(100% - 1.875rem);
+        .name{
+          @include p4f;
+        }
+        .name_en{
+          @include span3f;
+          color: $gray03;
+
+        }
+      }
+
+      .no{
+        @include span3f;
+        width: 1.875rem;
+        text-align: center;
+      }
+    }
+  }
+
+  &.cpl{
+    
+  }
+}
+
+.map_toggle{
+  background-color: $gray07;
+  padding:  1rem 1.25rem 3.75rem;
+  display: grid;
+  gap: 1.5rem;
+
+  @include tablet{
+    padding: 2.25rem 5.625rem 5rem;
+    gap: 3rem
+  }
+
+  .map_title{
+    @include p3fb;
+    @include flexbtw;
+    cursor: pointer;
+
+    img{
+      transform: rotate(-180deg);
+      transition: all .3s;
+      width: 2rem;
+
+      @include tablet{
+        width: 3rem;
+      }
+    }
+    
+
+    &.open{
+      img{
+        transform: rotate(0);
+      }
+    }
+  }
+
+  .map_con{
+    display: none;
+  }
+
+  .map_img{
+    margin-top: .75rem;
+
+    @include tablet{
+      margin-top: 1.5rem;
+    }
+
+    .dp_pc{
+      display: none
+    }
+
+    @include tablet{
+      .dp_pc{
+        display: block;
+      }
+
+      .dp_m{
+        display: none
+      }
+    }
+  }
+}
+
+.receive_fix{
+  @include flexbtw;
+  width: 100%;
+  padding: 0 1rem;
+  transition: all .3s;
+
+  @include tablet{
+    padding: 0;
+  }
+
+  span{
+    width: 10px;
+    height: 10px;
+    background: url(../images/bg_plus_gr.svg) no-repeat;
+  }
+
+  .txt{
+    @include p6f;
+    color: $gray04;
+    text-align: center;
+  }
+}
+
+//달력
+#datepicker{
+  padding: 1rem 0 .625rem;
+  transition: opacity .3s;
+  opacity: 1;
+
+  &.cld_fold{
+    opacity: 0
+  }
+  .ui-datepicker-header{
+    @include span2fb;
+    margin: 0 auto 3rem;
+    width: fit-content;
+    @include flexcenter;
+    gap: .375rem;
+
+    @include tablet{
+      gap: .75rem;
+    }
+
+    img{
+      width: 1.25rem;
+
+      @include tablet{
+        width: 2rem;
+      }
+    }
+
+    .ui-datepicker-prev{
+      order: 1;
+    }
+
+    .ui-datepicker-next{
+      order: 3;
+    }
+
+    .ui-datepicker-title{
+      order: 2;
+      @include h2fb;
+    }
+  }
+
+  .ui-datepicker-calendar{
+    width: 100%;
+
+    thead th{
+      @include span3fb;
+      color: $dark;
+    }
+
+    tbody td{
+      text-align: center;
+      padding: 0 .75rem;
+      @include p7f;
+      height: 2.625rem;
+
+      @include tablet{
+        padding: 1.5rem;
+        height: 5.25rem;
+      }
+    }
+
+    .ui-datepicker-week-end
+      .ui-state-default{
+      color: $system-red;
+    }
+
+    
+    .ui-state-disabled{
+      color: $gray04;
+      
+      .ui-state-default{
+        color: $gray04;
+      }
+    }
+
+    .ui-state-default{
+      color: $dark;
+      position: relative;
+      z-index: 1;
+      @include flexcenter;
+      line-height: 1;
+      transition: all .2s;
+
+      &::after{
+        content: '';
+        width: 2rem;
+          height: 2rem;
+          display: block;
+          background-color: $light;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+          border-radius: 50%;
+          transition: all .2s;
+
+          @include tablet{
+            height: 4rem;
+            width: 4rem;
+          }
+      }
+
+      &.ui-state-active{
+        color: $light;
+
+        &::after{
+          background-color: #000;
+        }
+      }
+    }
+  }
+}
+
+
+//태블릿 키패드 추가
+.keypad{
+  padding: 1.5rem 1.25rem;
+  position: fixed;
+  width: 100%;
+  bottom: -100%;
+  left: 0;
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: repeat(3, 1fr);
+  opacity: 0;
+  transition: all .3s;
+
+  @include tablet{
+    padding: 1.5rem 5.625rem 2.875rem;
+  }
+
+  &.active{
+      opacity: 1;
+      bottom: 0%;
+    }
+
+  p{
+    text-align: center;
+    padding: .75rem;
+    @include p3fb;
+    border-radius: .5rem;
+    transition: all .3s;
+
+    @include tablet{
+      padding: 1rem;
+    }
+
+    &.active_key{
+      animation: keypad .5s ease-in-out;
+    }
+  }
+
+  .key_num{
+    background-color: $gray07;
+  }
+
+  .key_del{
+    background-color: $gray05;
+    color: $light;
+
+    img{
+      width: 1.5rem;
+      margin: 0 auto;
+      
+      @include tablet{
+        width: 2rem;
+      }
+    }
+  }
+
+  // .key_clear{
+  //   background-color: $system-red-light;
+  //   color: $light;
+  // }
+
+  
+}

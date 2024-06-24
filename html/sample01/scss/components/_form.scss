@@ -1,0 +1,90 @@
+/***************************************************************
+    06. form
+***************************************************************/
+
+//button
+button {
+  &:disabled {
+  }
+}
+
+//input
+input {
+  &::placeholder {
+    color: var(--text-color-2);
+  }
+}
+
+.input_block{
+  position: relative;
+  @include flex;
+  gap: 1rem;
+}
+
+input:not([type=checkbox]),
+input:not([type=radio]){
+  line-height: 1;
+  font-size: var(--normal-font-size);
+  border: 1px solid var(--border-color);
+  background-color: transparent;
+  border-radius: 1rem;
+  width: 100%;
+  padding: 1.25rem;
+
+  &.login_input,
+  &.pass_input,
+  &.find_input{
+    border-color: var(--white-color-alp);
+    color: var(--white-color);
+    background-position: 1.25rem center;
+    background-size: 1rem;
+    background-repeat: no-repeat;
+    padding-left: 3rem;
+
+    &::placeholder{
+      color: var(--white-color-alp);
+    }
+  }
+
+  &.login_input{
+    background-image: url(/images/input_user.svg);
+  }
+
+  &.pass_input{
+    background-image: url(/images/input_key.svg);
+  }
+
+  &.find_input{
+    background-image: url(/images/input_search.svg);
+  }
+
+  &.input_search{
+    border: 1px solid var(--border-color);
+    border-radius: 3rem;padding: 1rem;
+    font-size: var(--small-font-size);
+    padding-left: 2.5rem;
+
+    & + .btn_search{
+      position: absolute;
+      left: .5rem;
+    }
+  }
+}
+
+//input file
+input[type="file"] {
+  display: none;
+
+  & + label{
+    background-image: url(/images/clip_gr.svg);
+    background-size: 1rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--border-color);
+  }
+}
+
+

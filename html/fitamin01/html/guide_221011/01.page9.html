@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/rcommon.css">
+  <link rel="stylesheet" href="../../css/guide.css">
+  <link rel="stylesheet" href="../../css/rstyle.css">
+  <title>설문페이지 - 기본정보 2단계</title>
+
+  <style>
+    /* 애니메이션 추가 */
+
+    .svy_bt .svy_prg::after{
+        width: calc(100% / 3);
+        animation: progbar 1.5s ease-in-out;
+    }
+
+    .svy_bt .prg_step .step_c2{
+      background: var(--primary01);
+      animation: dotc 1.6s;
+      transition: background .5s ease-in-out;
+    }
+
+    .svy_bt .step2{
+      color: var(--primary01);
+      animation: txtc 1.6s ease-in-out;
+      background-color: #fff !important;
+    }
+
+  </style>
+</head>
+<body>
+    <div class="rmain_wrap grid_btn pd_base svy_bt">
+        <div class="svy_cont">
+          <p class="rtitle">기본정보를 확인했어요!<br>이제 건강목표를 설정해 볼까요?</p>
+          <p class="rtxt">개선하고 싶은 건강고민을 목표로<br>선택하고 핏타민과 꾸준히 관리해봐요!</p>
+
+          <div class="svy_prg">
+            <div class="prg_step">
+              <p class="prg_dot dot1 step_c"></p>
+              <p class="prg_dot dot2 step_c2"></p>
+              <p class="prg_dot dot3"></p>
+              <p class="prg_dot dot4"></p>
+            </div>
+
+            <div class="step_txt">
+              <p class="step1" style="color: #fff">기본정보</p>
+              <p class="step2">건강목표</p>
+              <p class="step3" style="color: #fff">생활습관</p>
+              <p class="step4" style="color: #fff">영양상태</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="btn_center">
+          <button class="btn_b btn_blue">다음</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../../css/style.css">
+  <title>2_9_2.예약완료 - - 약사상담예약완료</title>
+</head>
+<body>
+  <main class="main">
+    <div class="contents rsv_cpl">
+      <div class="line_bg_gr top">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <p class="cpl_logo"><img src="../../images/common/logo_green.svg" alt=""></p>
+      <div class="servey_top">
+        <div class="servey_title">
+          <p class="title">상담 시작까지<br><span class="primary">22분</span> 남았어요</p>
+          <p class="sub_txt">조금만 기다려주세요 :)</p>
+        </div>
+      </div>
+
+      <div class="rsv_info">
+        <div class="rsv_time">
+          <p class="img"><img src="../../images/smile_ani.svg" alt=""></p>
+          <p class="p3_fb">내 예약시간</p>
+          <p class="time">오후 6:00</p>
+        </div>
+
+        <div class="info_list">
+          <p>원활한 상담을 위해 상담시간 5분 전까지 매장에 도착해주세요.</p>
+          <p>상담시간 후 5분이 지나면 예약이 취소됩니다. </p>
+          <p>알림톡으로 전송되는 상담안내를 꼭 확인해주세요!</p>
+        </div>
+      </div>
+
+      <!-- 간편설문결과 있을 때 / 테블릿 미노출 -->
+      <div class="rsv_banner b_blue">
+        <p class="title">간편설문</p>
+        <p class="txt">내 건강 유형 결과보기</p>
+      </div>
+      <div class="back_btn" style="display: flex;">
+        <p class="back_icon" id="btnBackIcon"><img src="../../images/arrow_back.svg"></p>
+        <p class="back_txt">돌아가기 </p> <!-- <span class="back_time timer" data-seconds-left=30></span> -->
+    </div>
+      <p class="botton_cancle">줄서기 취소</p>
+
+      <div class="line_bg_gr bottom">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  </div>
+
+  <div class="popup open">
+    <div class="overlay"></div>
+    <div class="popup_wrap">
+      <p class="pop_title">줄서기를 취소하시겠어요?</p>
+      <div class="popup_con">
+        <p class="txt">내 앞 대기팀 <span class="bold_f">3팀</span><br>
+          예상 대기 시간 <span class="bold_f">20~30분</span></p>
+      </div>
+
+      <div class="pop_btn">
+        <button class="btn_m btn_light">닫기</button>
+        <button class="btn_m btn_red" onclick="location.href='2_9_3_cancel.html';">줄서기 취소</button>
+      </div>
+    </div>
+  </div>
+
+  <p class="refreshBtn" onClick="window.location.reload()"><img src="../../images/icon_refresh.svg" alt=""></p>
+
+  </main>
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/jquery-ui.min.css"></script>
+
+  <script>
+    //popup
+    $(".botton_cancle").click(function(){
+      $(".popup, body").addClass("open");
+    })
+
+    $(".btn_light, .overlay").click(function(){
+      $(".popup, body").removeClass("open");
+    })
+
+  </script>
+</body>
+</html>

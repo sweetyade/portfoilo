@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/guide.css" />
+    <title>DESIGN GUIDE</title>
+  </head>
+  <style>
+    .btn_b,
+    .btn_social {
+      max-width: 300px;
+    }
+  </style>
+  <body>
+    <main id="guide_main">
+      <!-- menu -->
+      <nav id="guide_nav">
+        <h1>design guide</h1>
+
+        <div class="nav_menu">
+          <a href="guide.html">typography</a>
+          <a href="guide_color.html">color</a>
+          <a href="guide_icon.html">icon</a>
+          <a href="guide_form.html">form</a>
+          <a href="guide_button.html" class="active">button</a>
+          <a href="guide_popup.html">popup</a>
+          <a href="guide_component.html">component</a>
+        </div>
+      </nav>
+
+      <!-- contents -->
+      <section class="container">
+        <div class="contents">
+          <h2>button</h2>
+
+          <div class="guide_info">
+            <p class="txt">- 색상 / color_pr / color_gr / color_warning / color_error / color_info / color_success</p>
+            <p class="txt">- 사이즈 기본 m / size_s / size_l</p>
+            <p class="txt">- 타입 기본 type_basic / type_label / type_outline / type_txt / type_round</p>
+            <p class="txt">- 기타 / .active / .disabled</p>
+          </div>
+
+          <!-- default -->
+          <div class="guide_block">
+            <h3>default</h3>
+            <div class="guide_data">
+              <p class="title">.btn | .type_label | .type_outline | .type_txt</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <button class="btn type_basic">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button</button>
+                <button class="btn type_label">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button</button>
+                <button class="btn type_outline">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button</button>
+                <button class="btn type_txt">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button</button>
+                </div>
+            </div>
+          </div>
+          <!-- icons-->
+          <div class="guide_block">
+            <h3>icon </h3>
+            <div class="guide_data">
+              <p class="title">.btn | .type_label | .type_outline | .type_txt</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <button class="btn type_basic">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  <img src="../../images/system/arrow_left_w.svg" alt="left">
+                  Button</button>
+                <button class="btn type_basic">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button<img src="../../images/system/arrow_right_w.svg" alt="left">
+                </button>
+                <button class="btn type_basic">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  <img src="../../images/system/arrow_left_w.svg" alt="left">
+                  Button<img src="../../images/system/arrow_right_w.svg" alt="left">
+                </button>
+              </div>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <button class="btn type_label">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  <img src="../../images/system/arrow_left_pr.svg" alt="left">
+                  Button
+                </button>
+                <button class="btn type_label">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button<img src="../../images/system/arrow_right_pr.svg" alt="left">
+                </button>
+                <button class="btn type_label">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  <img src="../../images/system/arrow_left_pr.svg" alt="left">Button
+                  <img src="../../images/system/arrow_right_pr.svg" alt="left">
+                </button>
+              </div>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <button class="btn type_outline">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  <img src="../../images/system/arrow_left_pr.svg" alt="left">
+                  Button
+                </button>
+                <button class="btn type_outline">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button<img src="../../images/system/arrow_right_pr.svg" alt="left">
+                </button>
+                <button class="btn type_outline">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  <img src="../../images/system/arrow_left_pr.svg" alt="left">Button
+                  <img src="../../images/system/arrow_right_pr.svg" alt="left">
+                </button>
+              </div>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <button class="btn type_txt">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  <img src="../../images/system/arrow_left_pr.svg" alt="left">Button
+                </button>
+                <button class="btn type_txt">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button<img src="../../images/system/arrow_right_pr.svg" alt="left">
+                </button>
+                <button class="btn type_txt">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  <img src="../../images/system/arrow_left_pr.svg" alt="left">Button
+                  <img src="../../images/system/arrow_right_pr.svg" alt="left">
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- size-->
+          <div class="guide_block">
+            <h3>size </h3>
+            <div class="guide_data">
+              <p class="title">.size_s | .btn | .size_l</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <button class="btn type_basic size_s">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_basic">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_basic size_l">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+              </div>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <button class="btn type_label size_s">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_label">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_label size_l">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+              </div>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <button class="btn type_outline size_s">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_outline">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_outline size_l">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+              </div>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <button class="btn type_txt size_s">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_txt">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_txt size_l">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- color -->
+          <div class="guide_block">
+            <h3>color</h3>
+            <div class="guide_data">
+              <p class="title">.color_gr | .color_error | .color_warning | .color_info | .color_success</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <button class="btn type_basic">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_basic color_gr">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_basic color_error">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_basic color_warning">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_basic color_info">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_basic color_success">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+              </div>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <button class="btn type_label">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_label color_gr">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_label color_error">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_label color_warning">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_label color_info">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_label color_success">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+              </div>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <button class="btn type_outline">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_outline color_gr">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_outline color_error">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_outline color_warning">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_outline color_info">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_outline color_success">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+              </div>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <button class="btn type_txt">
+                  <div class="ripple basicjs-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_txt color_gr">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_txt color_error">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_txt color_warning">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_txt color_info">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+                <button class="btn type_txt color_success">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Button
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- button group -->
+          <div class="guide_block">
+            <h3>button group default</h3>
+            <div class="guide_data">
+              <p class="title">.type_basic | .type_label | .type_outline | .type_txt</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="btn_group type_basic">
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                </div>
+                <div class="btn_group type_label">
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                </div>
+                <div class="btn_group type_outline">
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                </div>
+                <div class="btn_group type_txt">
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- button group icon -->
+          <div class="guide_block">
+            <h3>icon</h3>
+            <div class="guide_data">
+              <p class="title">.type_basic | .type_label | .type_outline | .type_txt</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="btn_group type_basic">
+                  <div class="btn_group-tab"><img src="../../images/system/arrow_left_w.svg" alt="left">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button<img src="../../images/system/arrow_right_w.svg" alt="left"></div>
+                </div>
+                <div class="btn_group type_label">
+                  <div class="btn_group-tab"><img src="../../images/system/arrow_left_pr.svg" alt="left">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button<img src="../../images/system/arrow_right_pr.svg" alt="left"></div>
+                </div>
+                <div class="btn_group type_outline">
+                  <div class="btn_group-tab"><img src="../../images/system/arrow_left_pr.svg" alt="left">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button<img src="../../images/system/arrow_right_pr.svg" alt="left"></div>
+                </div>
+                <div class="btn_group type_txt">
+                  <div class="btn_group-tab"><img src="../../images/system/arrow_left_pr.svg" alt="left">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button<img src="../../images/system/arrow_right_pr.svg" alt="left"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- button group size-->
+          <div class="guide_block">
+            <h3>size</h3>
+            <div class="guide_data">
+              <p class="title">.size_s | .defualt | .size_l</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="btn_group type_basic">
+                  <div class="btn_group-tab size_s">Button</div>
+                  <div class="btn_group-tab size_s">Button</div>
+                  <div class="btn_group-tab size_s">Button</div>
+                </div>
+                <div class="btn_group type_basic">
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                </div>
+                <div class="btn_group type_basic">
+                  <div class="btn_group-tab size_l">Button</div>
+                  <div class="btn_group-tab size_l">Button</div>
+                  <div class="btn_group-tab size_l">Button</div>
+                </div>
+              </div>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="btn_group type_label">
+                  <div class="btn_group-tab size_s">Button</div>
+                  <div class="btn_group-tab size_s">Button</div>
+                  <div class="btn_group-tab size_s">Button</div>
+                </div>
+                <div class="btn_group type_label">
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                </div>
+                <div class="btn_group type_label">
+                  <div class="btn_group-tab size_l">Button</div>
+                  <div class="btn_group-tab size_l">Button</div>
+                  <div class="btn_group-tab size_l">Button</div>
+                </div>
+              </div>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="btn_group type_outline">
+                  <div class="btn_group-tab size_s">Button</div>
+                  <div class="btn_group-tab size_s">Button</div>
+                  <div class="btn_group-tab size_s">Button</div>
+                </div>
+                <div class="btn_group type_outline">
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                </div>
+                <div class="btn_group type_outline">
+                  <div class="btn_group-tab size_l">Button</div>
+                  <div class="btn_group-tab size_l">Button</div>
+                  <div class="btn_group-tab size_l">Button</div>
+                </div>
+              </div>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="btn_group type_txt">
+                  <div class="btn_group-tab size_s">Button</div>
+                  <div class="btn_group-tab size_s">Button</div>
+                  <div class="btn_group-tab size_s">Button</div>
+                </div>
+                <div class="btn_group type_txt">
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                </div>
+                <div class="btn_group type_txt">
+                  <div class="btn_group-tab size_l">Button</div>
+                  <div class="btn_group-tab size_l">Button</div>
+                  <div class="btn_group-tab size_l">Button</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- button group color -->
+          <div class="guide_block">
+            <h3>color</h3>
+            <div class="guide_data">
+              <p class="title">.type_basic | .type_label | .type_outline | .type_txt</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="btn_group type_basic">
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                </div>
+                <div class="btn_group type_label">
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                </div>
+                <div class="btn_group type_outline">
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                </div>
+                <div class="btn_group type_txt">
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                  <div class="btn_group-tab">Button</div>
+                </div>
+              </div>
+
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="btn_group type_basic">
+                  <div class="btn_group-tab color_gr">Button</div>
+                  <div class="btn_group-tab color_gr">Button</div>
+                  <div class="btn_group-tab color_gr">Button</div>
+                </div>
+                <div class="btn_group type_label">
+                  <div class="btn_group-tab color_gr">Button</div>
+                  <div class="btn_group-tab color_gr">Button</div>
+                  <div class="btn_group-tab color_gr">Button</div>
+                </div>
+                <div class="btn_group type_outline">
+                  <div class="btn_group-tab color_gr">Button</div>
+                  <div class="btn_group-tab color_gr">Button</div>
+                  <div class="btn_group-tab color_gr">Button</div>
+                </div>
+                <div class="btn_group type_txt">
+                  <div class="btn_group-tab color_gr">Button</div>
+                  <div class="btn_group-tab color_gr">Button</div>
+                  <div class="btn_group-tab color_gr">Button</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- icon button -->
+          <div class="guide_block">
+            <h3>icon button</h3>
+            <div class="guide_data">
+              <p class="title">.type_round | .size_s |  .size_l</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="btn_icon size_s type_round">
+                  <img src="../../images/system/star_fill_pr.svg" alt="">
+                </div>
+                <div class="btn_icon type_round">
+                  <img src="../../images/system/star_fill_pr.svg" alt="">
+                </div>
+                <div class="btn_icon size_l type_round">
+                  <img src="../../images/system/star_fill_pr.svg" alt="">
+                </div>
+              </div>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="btn_icon size_s color_gr type_round">
+                  <img src="../../images/system/star_fill_gr.svg" alt="">
+                </div>
+                <div class="btn_icon color_gr type_round">
+                  <img src="../../images/system/star_fill_gr.svg" alt="">
+                </div>
+                <div class="btn_icon size_l color_gr type_round">
+                  <img src="../../images/system/star_fill_gr.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- icon button -->
+          <div class="guide_block">
+            <h3>icon button</h3>
+            <div class="guide_data">
+              <p class="title">.type_basic | .type_label |  .type_outline | .type_txt</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="btn_icon type_basic">
+                  <img src="../../images/system/star_w.svg" alt="">
+                </div>
+                <div class="btn_icon type_label">
+                  <img src="../../images/system/star_pr.svg" alt="">
+                </div>
+                <div class="btn_icon type_outline">
+                  <img src="../../images/system/star_pr.svg" alt="">
+                </div>
+                <div class="btn_icon">
+                  <img src="../../images/system/star_pr.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- icon button size -->
+          <div class="guide_block">
+            <h3>icon button size</h3>
+            <div class="guide_data">
+              <p class="title">.size_s | .size_l</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="btn_icon type_basic size_s">
+                  <img src="../../images/system/star_w.svg" alt="">
+                </div>
+                <div class="btn_icon type_basic">
+                  <img src="../../images/system/star_w.svg" alt="">
+                </div>
+                <div class="btn_icon type_basic size_l">
+                  <img src="../../images/system/star_w.svg" alt="">
+                </div>
+              </div>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="btn_icon type_label size_s">
+                  <img src="../../images/system/star_pr.svg" alt="">
+                </div>
+                <div class="btn_icon type_label">
+                  <img src="../../images/system/star_pr.svg" alt="">
+                </div>
+                <div class="btn_icon type_label size_l">
+                  <img src="../../images/system/star_pr.svg" alt="">
+                </div>
+              </div>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="btn_icon type_outline size_s">
+                  <img src="../../images/system/star_pr.svg" alt="">
+                </div>
+                <div class="btn_icon type_outline">
+                  <img src="../../images/system/star_pr.svg" alt="">
+                </div>
+                <div class="btn_icon type_outline size_l">
+                  <img src="../../images/system/star_pr.svg" alt="">
+                </div>
+              </div>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="btn_icon size_s">
+                  <img src="../../images/system/star_pr.svg" alt="">
+                </div>
+                <div class="btn_icon">
+                  <img src="../../images/system/star_pr.svg" alt="">
+                </div>
+                <div class="btn_icon size_l">
+                  <img src="../../images/system/star_pr.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- icon button -->
+          <div class="guide_block">
+            <h3>icon button</h3>
+            <div class="guide_data">
+              <p class="title">.type_basic | .color_gr |  .color_error | .color_warning | .color_info | .color_success</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="btn_icon type_basic">
+                  <img src="../../images/system/star_w.svg" alt="">
+                </div>
+                <div class="btn_icon type_basic color_gr">
+                  <img src="../../images/system/star_w.svg" alt="">
+                </div>
+                <div class="btn_icon type_basic color_error">
+                  <img src="../../images/system/star_w.svg" alt="">
+                </div>
+                <div class="btn_icon type_basic color_warning">
+                  <img src="../../images/system/star_w.svg" alt="">
+                </div>
+                <div class="btn_icon type_basic color_info">
+                  <img src="../../images/system/star_w.svg" alt="">
+                </div>
+                <div class="btn_icon type_basic color_success">
+                  <img src="../../images/system/star_w.svg" alt="">
+                </div>
+              </div>
+
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="btn_icon type_label">
+                  <img src="../../images/system/star_pr.svg" alt="">
+                </div>
+                <div class="btn_icon type_label color_gr">
+                  <img src="../../images/system/star_gr.svg" alt="">
+                </div>
+                <div class="btn_icon type_label color_error">
+                  <img src="../../images/system/star_red.svg" alt="">
+                </div>
+                <div class="btn_icon type_label color_warning">
+                  <img src="../../images/system/star_or.svg" alt="">
+                </div>
+                <div class="btn_icon type_label color_info">
+                  <img src="../../images/system/star_mint.svg" alt="">
+                </div>
+                <div class="btn_icon type_label color_success">
+                  <img src="../../images/system/star_green.svg" alt="">
+                </div>
+              </div>
+
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="btn_icon type_outline">
+                  <img src="../../images/system/star_pr.svg" alt="">
+                </div>
+                <div class="btn_icon type_outline color_gr">
+                  <img src="../../images/system/star_gr.svg" alt="">
+                </div>
+                <div class="btn_icon type_outline color_error">
+                  <img src="../../images/system/star_red.svg" alt="">
+                </div>
+                <div class="btn_icon type_outline color_warning">
+                  <img src="../../images/system/star_or.svg" alt="">
+                </div>
+                <div class="btn_icon type_outline color_info">
+                  <img src="../../images/system/star_mint.svg" alt="">
+                </div>
+                <div class="btn_icon type_outline color_success">
+                  <img src="../../images/system/star_green.svg" alt="">
+                </div>
+              </div>
+
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="btn_icon">
+                  <img src="../../images/system/star_pr.svg" alt="">
+                </div>
+                <div class="btn_icon color_g ">
+                  <img src="../../images/system/star_gr.svg" alt="">
+                </div>
+                <div class="btn_icon color_error">
+                  <img src="../../images/system/star_red.svg" alt="">
+                </div>
+                <div class="btn_icon color_warning">
+                  <img src="../../images/system/star_or.svg" alt="">
+                </div>
+                <div class="btn_icon color_info">
+                  <img src="../../images/system/star_mint.svg" alt="">
+                </div>
+                <div class="btn_icon color_success">
+                  <img src="../../images/system/star_green.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- toggle button -->
+          <div class="guide_block">
+            <h3>toggle button</h3>
+            <div class="guide_data">
+              <p class="title">.size_s | defualt | .size_l</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="toggle_group">
+                  <div class="toggle_btn size_l active"><img src="../../images/system/align_left.svg" alt=""></div>
+                  <div class="toggle_btn size_l"><img src="../../images/system/align_left_gr.svg" alt=""></div>
+                  <div class="toggle_btn size_l"><img src="../../images/system/align_left_gr.svg" alt=""></div>
+                  <div class="toggle_btn size_l disabled"><img src="../../images/system/align_left.svg" alt=""></div>
+                </div>
+
+                <div class="toggle_group">
+                  <div class="toggle_btn active"><img src="../../images/system/align_left.svg" alt=""></div>
+                  <div class="toggle_btn"><img src="../../images/system/align_left_gr.svg" alt=""></div>
+                  <div class="toggle_btn"><img src="../../images/system/align_left_gr.svg" alt=""></div>
+                  <div class="toggle_btn disabled"><img src="../../images/system/align_left.svg" alt=""></div>
+                </div>
+
+                <div class="toggle_group">
+                  <div class="toggle_btn size_s active"><img src="../../images/system/align_left.svg" alt=""></div>
+                  <div class="toggle_btn size_s"><img src="../../images/system/align_left_gr.svg" alt=""></div>
+                  <div class="toggle_btn size_s"><img src="../../images/system/align_left_gr.svg" alt=""></div>
+                  <div class="toggle_btn size_s disabled"><img src="../../images/system/align_left.svg" alt=""></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- chip -->
+          <div class="guide_block">
+            <h3>chip</h3>
+            <div class="guide_data">
+              <p class="title">defualt | size_s | size_l | type_outline | type_label | ccolor_pr | color_gr | color_error | color_warning | color_info | color_success</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <p class="chip">chip</p>
+                <p class="chip color_pr">chip</p>
+                <p class="chip color_gr">chip</p>
+                <p class="chip color_warning">chip</p>
+                <p class="chip color_error">chip</p>
+                <p class="chip color_info">chip</p>
+                <p class="chip color_success">chip</p>
+              </div>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <p class="chip size_s">chip</p>
+                <p class="chip size_s color_pr">chip</p>
+                <p class="chip size_s color_gr">chip</p>
+                <p class="chip size_s color_warning">chip</p>
+                <p class="chip size_s color_error">chip</p>
+                <p class="chip size_s color_info">chip</p>
+                <p class="chip size_s color_success">chip</p>
+              </div>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <p class="chip type_outline">chip</p>
+                <p class="chip type_outline color_pr">chip</p>
+                <p class="chip type_outline color_gr">chip</p>
+                <p class="chip type_outline color_warning">chip</p>
+                <p class="chip type_outline color_error">chip</p>
+                <p class="chip type_outline color_info">chip</p>
+                <p class="chip type_outline color_success">chip</p>
+              </div>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <p class="chip type_outline size_s">chip</p>
+                <p class="chip type_outline size_s color_pr">chip</p>
+                <p class="chip type_outline size_s color_gr">chip</p>
+                <p class="chip type_outline size_s color_warning">chip</p>
+                <p class="chip type_outline size_s color_error">chip</p>
+                <p class="chip type_outline size_s color_info">chip</p>
+                <p class="chip type_outline size_s color_success">chip</p>
+              </div>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <p class="chip type_label color_pr">chip</p>
+                <p class="chip type_label color_gr">chip</p>
+                <p class="chip type_label color_warning">chip</p>
+                <p class="chip type_label color_error">chip</p>
+                <p class="chip type_label color_info">chip</p>
+                <p class="chip type_label color_success">chip</p>
+              </div>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <p class="chip type_label size_s color_pr">chip</p>
+                <p class="chip type_label size_s color_gr">chip</p>
+                <p class="chip type_label size_s color_warning">chip</p>
+                <p class="chip type_label size_s color_error">chip</p>
+                <p class="chip type_label size_s color_info">chip</p>
+                <p class="chip type_label size_s color_success">chip</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
+
+<script src="../../js/jquery.min.js""></script>
+<script>
+
+//리플버튼
+var $ripple = $('.js-ripple');
+$ripple.on('click.ui.ripple', function(e) {
+
+  var $this = $(this);
+  var $offset = $this.parent().offset();
+  var $circle = $this.find('.ripple__circle');
+
+  var x = e.pageX - $offset.left;
+  var y = e.pageY - $offset.top;
+
+  $circle.css({
+    top: y + 'px',
+    left: x + 'px'
+  });
+
+  $this.addClass('is-active');
+});
+
+$ripple.on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', function(e) {
+  $(this).removeClass('is-active');
+});
+
+//토글버튼
+$(".toggle_btn").click(function(){
+  if($(this).hasClass("disabled")){
+    event.preventDefault()
+  }else{
+    $(this).addClass("active");
+    $(this).siblings().removeClass("active")
+  }
+})
+
+</script>

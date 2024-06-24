@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/guide.css" />
+    <title>DESIGN GUIDE</title>
+  </head>
+  <style>
+    .btn_b,
+    .btn_social {
+      max-width: 300px;
+    }
+
+    .btn_wide{
+      position: relative;
+    }
+
+    .contents{
+      max-width: 100%;
+    }
+  </style>
+  <body>
+    <main id="guide_main">
+      <!-- menu -->
+      <nav id="guide_nav">
+        <h1>design guide</h1>
+
+        <div class="nav_menu">
+          <a href="guide.html">typography</a>
+          <a href="guide_color.html">color</a>
+          <a href="guide_icon.html">icon</a>
+          <a href="guide_form.html">form</a>
+          <a href="guide_button.html" class="active">button</a>
+          <a href="guide_popup.html">popup</a>
+          <a href="guide_layout.html">layout</a>
+          <a href="guide_component.html">component</a>
+        </div>
+      </nav>
+
+      <!-- contents -->
+      <section class="container">
+        <div class="contents">
+          <h2>button</h2>
+
+          <div class="guide_info">
+            <p class="p3_f">- 홈에 많이 쓰이는 기본 버튼 .btn_wrap</p>
+            <p class="p3_f">- 화면 전체 하단에 픽스된 버튼 .btn_fix</p>
+            <p class="p3_f">- 화면 양옆 패딩값없이 하단 와이드 .btn_wide</p>
+          </div>
+
+          <!-- button large -->
+          <div class="guide_block">
+            <h3>button large</h3>
+            <div class="guide_data">
+              <p class="title">.btn_lg</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <button class="btn_lg btn_white">.btn_white</button>
+                <button class="btn_lg btn_basic">.btn_basic</button>
+                <button class="btn_lg btn_basic" disabled>비활성버튼 disabled</button>
+                <button class="btn_lg btn_light">.btn_light</button>
+                <button class="btn_lg btn_red">.btn_red</button>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">.wide_btn</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="btn_wide">
+                  <button class="btn_lg btn_wide btn_basic">.btn_basic</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

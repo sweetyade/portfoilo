@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.3/swiper-bundle.css"/>
+  <link rel="stylesheet" href="../../css/rcommon.css">
+  <link rel="stylesheet" href="../../css/guide.css">
+  <link rel="stylesheet" href="../../css/rstyle.css">
+  <title>나의 섭취기록</title>
+
+  <style>
+    .ntc_bottom{
+      padding-bottom: 8rem;
+    }
+
+    .sub_sec .subsec_con .subsec_dreg{
+      border-bottom: 1px solid var(--gray04);
+      padding: 1rem 0 2rem;
+    }
+
+    .sub_sec .subsec_con .subsec_dreg:last-child{
+      border-bottom: 0;
+      padding: 1rem 0 0;
+    }
+
+    .sub_sec .subsec_top .fold_txt{
+      display: block;
+    }
+
+    @media (max-width: 499px){
+      .sub_sec .subsec_con .subsec_dreg{
+      padding: .5rem 0 1.5rem;
+      }
+
+      .sub_sec .subsec_con .subsec_dreg:last-child{
+        padding: .5rem 0 0;
+      }
+    }
+  </style>
+
+
+</head>
+<body class="">
+    <div class="rmain_wrap gray_bg">
+      <!-- 인증시간 체크 -->
+      <!-- 인증시간 전 .stamp_bfr / 인증 후 .stamp_afr 클래스 변경 -->
+      <section class="bd_section stamp_bfr">
+        <div class="bd_in">
+          <p class="stamp_ck"></p>
+          <p class="stitle">오늘 남은 인증시간 <span>23:59:59</span></p>
+
+          <!-- 누적적립금액 -->
+          <div class="stamp_p">
+            <p>누적 포인트</p>
+            <p>5,000원</p>
+            <p class="stamp_pl stapmUse">포인트 사용하기</p>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="bd_section stamp_afr">
+        <div class="bd_in">
+          <p class="stamp_ck"></p>
+          <p class="stitle">오늘 인증완료!👏🏻 <span>23:59:59</span></p>
+  
+          <!-- <div class="stamp_ckb">
+            <p class="svy_q stampBfr">오늘 영양제 섭취했어요!</p>
+            <p class="join_pop">지금 섭취 완료하면 5,000원 적립!</p>
+          </div> -->
+
+          <!-- 누적적립금액 -->
+          <div class="stamp_p">
+            <p>누적 포인트</p>
+            <p>5,000원</p>
+            <p class="stamp_pl stapmUse">포인트 사용하기</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 스탬프 기록 -->
+      <section class="bd_section">
+        <div class="bd_in">
+          <p class="p4 gray_c02 mb_0_5">2022.09.11부터 인증시작</p>
+          <p class="stitle" style="text-align:left">지금까지 <span class="primary_c01" style="display: inline">12회차 섭취 인증</span>이<br> 완료되었어요!</p>
+
+          <div class="stamp_area">
+            <p class="title">11회 완료 <span class="gray_c03">(총 30회 획득가능)</span></p>
+
+            <div class="stamp_list swiper">
+              <div class="stemp_page swiper-wrapper">
+                <div class="swiper-slide">
+                  <ul>
+                  <li>
+                    <p>미인증</p>
+                  </li>
+                  <li
+                    <p>미인증</p>
+                  </li>
+                  <li>
+                    <p>미인증</p>
+                  </li>
+                  <li>
+                    <p>미인증</p>
+                  </li>
+                  <li>
+                    <p>미인증</p>
+                  </li>
+    
+                  <li>
+                    <p>미인증</p>
+                  </li>
+                  <li class="stamp_done">
+                    <p>미인증</p>
+                  </li>
+                  <li class="stamp_done">
+                    <p>미인증</p>
+                  </li>
+                  <li class="stamp_done">
+                    <p>미인증</p>
+                  </li>
+                  <li class="stamp_done">
+                    <p>미인증</p>
+                  </li>
+    
+                  <li class="stamp_done">
+                    <p>미인증</p>
+                  </li>
+                  <li class="stamp_done">
+                    <p>미인증</p>
+                  </li>
+                  <li class="stamp_done">
+                    <p>미인증</p>
+                  </li>
+                  <li class="stamp_today">
+                    <p>오늘</p>
+                  </li>
+                  <li class="stamp_date">
+                    <p>15일차</p>
+                  </li>
+    
+                  <li class="stamp_date">
+                    <p>21일차</p>
+                  </li>
+                  <li class="stamp_date">
+                    <p>22일차</p>
+                  </li>
+                  <li class="stamp_date">
+                    <p>23일차</p>
+                  </li>
+                  <li class="stamp_date">
+                    <p>24일차</p>
+                  </li>
+                  <li class="stamp_date">
+                    <p>25일차</p>
+                  </li>
+    
+                  <li class="stamp_date">
+                    <p>26일차</p>
+                  </li>
+                  <li class="stamp_date">
+                    <p>27일차</p>
+                  </li>
+                  <li class="stamp_date">
+                    <p>28일차</p>
+                  </li>
+                  <li class="stamp_date">
+                    <p>29일차</p>
+                  </li>
+                  <li class="stamp_date">
+                    <p>30일차</p>
+                  </li>
+                  </ul>
+                </div>
+
+                <div class="swiper-slide">
+                  <ul>
+                  <li>
+                    <p>미인증</p>
+                  </li>
+                  <li
+                    <p>미인증</p>
+                  </li>
+                  <li>
+                    <p>미인증</p>
+                  </li>
+                  <li>
+                    <p>미인증</p>
+                  </li>
+                  <li>
+                    <p>미인증</p>
+                  </li>
+    
+                  <li>
+                    <p>미인증</p>
+                  </li>
+                  <li class="stamp_done">
+                    <p>미인증</p>
+                  </li>
+                  <li class="stamp_done">
+                    <p>미인증</p>
+                  </li>
+                  <li class="stamp_done">
+                    <p>미인증</p>
+                  </li>
+                  <li class="stamp_done">
+                    <p>미인증</p>
+                  </li>
+    
+                  <li class="stamp_done">
+                    <p>미인증</p>
+                  </li>
+                  <li class="stamp_done">
+                    <p>미인증</p>
+                  </li>
+                  <li class="stamp_done">
+                    <p>미인증</p>
+                  </li>
+                  <li class="stamp_today">
+                    <p>오늘</p>
+                  </li>
+                  <li class="stamp_date">
+                    <p>15일차</p>
+                  </li>
+    
+                  <li class="stamp_date">
+                    <p>51일차</p>
+                  </li>
+                  <li class="stamp_date">
+                    <p>52일차</p>
+                  </li>
+                  <li class="stamp_date">
+                    <p>53일차</p>
+                  </li>
+                  <li class="stamp_date">
+                    <p>54일차</p>
+                  </li>
+                  <li class="stamp_date">
+                    <p>55일차</p>
+                  </li>
+    
+                  <li class="stamp_date">
+                    <p>56일차</p>
+                  </li>
+                  <li class="stamp_date">
+                    <p>57일차</p>
+                  </li>
+                  <li class="stamp_date">
+                    <p>58일차</p>
+                  </li>
+                  <li class="stamp_date">
+                    <p>59일차</p>
+                  </li>
+                  <li class="stamp_date">
+                    <p>60일차</p>
+                  </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          
+
+        </div>
+      </section>
+
+       <!-- 알림 설정 -->
+      <section class="bd_section al_toggle">
+        <div class="bd_in">
+          <p class="h2_f bold_f">알림설정</p>
+          <div class="bd_inr">
+            <p class="span1_f gray_c02">매일 알림을 보낼게요</p>
+            <div class="input_toggle">  
+              <input type="checkbox" class="toggle" id="ipToggle">
+              <label for="ipToggle" class="toggle_btn"></label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 포인트 사용내역 --> <!-- 접힘 .sub_fold 추가 -->
+
+      <section class="sub_sec sub_fold">
+        <div class="subsec_top">
+          <p class="subsec_title">포인트 사용내역</p>
+          <div class="subsec_fold">
+            <p class="fold_txt fold_drug">
+              <span class="fold_grugt">3회</span>
+            </p>
+            <img src="../../images/icon_top.svg" alt="">
+          </div>
+        </div>
+        <div class="subsec_con">
+          <div class="subsec_dreg">
+            <div class="stamp_pname">
+              <p class="point_name">[사용종류] 기프티콘은 브랜드+상품명 출력</p>
+              <p class="point_date">2022.06.20</p>
+            </div>
+            <p class="stamp_usep">-99,999원</p>
+          </div>
+          
+          <div class="subsec_dreg">
+            <div class="stamp_pname">
+              <p class="point_name">[기프티콘 교환] 스타벅스 상품명 최대 2줄까지 노출되며 넘어가는 경우 말줄임표 처리해주세요</p>
+              <p class="point_date">2022.06.20</p>
+            </div>
+            <p class="stamp_usep">-99,999원</p>
+          </div>
+
+          <div class="subsec_dreg">
+            <div class="stamp_pname">
+              <p class="point_name">[적립금 교환] 핏타민 적립금</p>
+              <p class="point_date">2022.06.20</p>
+            </div>
+            <p class="stamp_usep">-99,999원</p>
+          </div>
+        </div>
+        
+      </section>
+
+
+      <!-- 적립금 배너 슬라이드 -->
+      <section class="bd_section">
+        <div class="bd_in">
+          <p class="h2_f bold_f">적립금 모으는 방법</p>
+          <div class="stamp_slide swiper">
+            <div class="stamp_bnl swiper-wrapper">
+              <div class="stamp_bni swiper-slide" style="background-color: var(--primary01)">
+                <p class="p3_f blod_f">
+                  친구 초대할 때마다<br>5천원씩 무제한 적립
+                  <img src="../../images/stamp_bn1.png" alt="" class="stamp_bnimg">
+                </p>
+                
+              </div>
+              <div class="stamp_bni swiper-slide" style="background-color: #6932DE">
+                <p class="p3_f blod_f">
+                  후기 작성하면<br>최대 1만3천원 지급
+                  <img src="../../images/bn_coin.png" alt="" class="stamp_bnimg">
+                </p>
+                
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 하단 공지 -->
+      <section class="ntc_bottom pd_base">
+        <div class="rnotice pd_inner mb_2_5">
+          <p class="notice_t">꼭 읽어주세요</p>
+          <p class="notice_p">섭취기록 및 포인트 사용은 2022년 12월 1일부터 2023년 1월 31일까지 이용할 수 있습니다.</p>
+          <p class="notice_p">섭취기록 후 적립된 포인트는 기간 내 핏타민 구독시 사용할 수 있는 적립금 또는 기프티콘 교환으로 사용이 가능합니다.</p>
+          <p class="notice_p">기프티콘은 교환 신청 후 신청 철회 및 변경이 불가하며, 매주 수요일 SMS로 일괄 발송됩니다.</p>
+          <p class="notice_p">적립금으로 교환할 경우 핏타민 구독 결제시 바로 사용 가능합니다.</p>
+          <p class="notice_p">섭취기록 기간 종료(1/31)후 남은 포인트는 핏타민 구독 적립금으로 일괄 교환됩니다.</p>
+          <p class="notice_p">적립금으로 교환된 포인트의 유효기간 및 상세내용은 적립금 내역 페이지를 참고해주세요.</p>
+          <p class="notice_p">해당 이벤트는 당사의 사정에 따라 사전고지없이 변경될 수 있습니다.</p>
+          <p class="notice_p">참여자의 개인정보 입력 오류 및 스팸등록 등올 인한 발송오류는 책임지지않으며 불법적인 참여로 인한 모든 과오나 손해에 대해 전적으로 책임지지않습니다.</p>
+          <p class="notice_p">관련문의 고객센터(전화: 1661-4739 / 카카오톡: @fitamin)</p>
+        </div>
+      </section>
+
+      <div class="btn_fix pd_base">
+        <div class="pop_info">
+          <p>매일 섭취 알림을 보내드릴게요!</p>
+        </div>
+        <button class="btn_b btn_blue stampAtr">오늘 영양제 먹었어요!</button>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- 인증 완료 팝업 -->
+    <!-- 팝업 오픈 시 폭죽 애니메이션 한번 자동 재생 -->
+    <div class="main_popup stampCnf">
+      <div class="overlay"></div>
+      <div class="pop_ani">
+        <img src="../../images/stamp_emoji.svg" alt="" class="ani_emoji">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_rEzuJOjwUD.json"  background="transparent"  speed="1"  style="width: 100%; height: 100%;" Loop autoplay></lottie-player>
+      </div>
+      <div class="pop_bottom">
+        <div class="pop_in">
+          <p class="popup_title mb_1">인증이 완료되었어요!👏🏻<br>점점 더 건강해지고 있네요 :)</p>
+          <div class="popup_info">
+            <div class="popup_infoinbg">
+              <p class="popup_txt">
+                <span class="ltitle"><span class="primary_c01">200원</span> 적립완료!</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="btn_center">
+          <button class="btn_b btn_blue closeBtn">확인</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 최초진입시 팝업 -->
+    <div class="rpopup">
+      <div class="overlay"></div>
+      <div class="pop_open">
+        <div class="pop_in">
+          <p class="p_txt1">오늘부터 영양제 섭취기록을 통해<br>
+            핏타민과 건강한 습관을 유지해봐요 :)</p>
+        </div>
+        <div class="pop_btn">
+          <button class="btn_m btn_blue h2_f">기록 시작</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 섭취전으로 변경 팝업 -->
+    <div class="rpopup stampPop">
+      <div class="overlay"></div>
+      <div class="pop_open">
+        <div class="pop_in">
+          <p class="p_txt1">섭취 전으로 바꾸시겠어요?</p>
+        </div>
+        <div class="pop_btn">
+          <button class="btn_m btn_light h2_f">닫기</button>
+          <button class="btn_m btn_red h2_f">인증취소</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 최초 진입팝업 이후 --- 추가 팝업-->
+    <div class="main_popup stampCnf02">
+      <div class="overlay"></div>
+      <div class="pop_bottom">
+        <div class="pop_in">
+          <p class="popup_title">최대오글자님,<br>30일동안 같이 건강해져요 :)</p>
+          <div class="popup_info">
+            <div class="popup_infoin">
+              <p class="popup_txt">
+                <span class="ltitle">구독내용</span>
+                <span class="rinfo">비타민 d외 23종 </span>
+              </p>
+              <p class="popup_txt">
+                <span class="ltitle">결제금액</span>
+                <span class="rinfo">23,000원</span>
+              </p>
+            </div>
+            <div class="popup_infoinbg">
+              <p class="popup_txt">
+                <span class="ltitle">30일 인증 완료하면</span>
+                <span class="rinfo">10% 적립</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="btn_center">
+          <button class="btn_b btn_blue closeBtn">확인</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 최초기록시작 팝업-->
+    <div class="main_popup stampCnf03 on">
+      <div class="overlay"></div>
+      <div class="pop_bottom">
+        <div class="pop_in">
+          <p class="popup_title">인증할 때마다 <span class="primary_c01">100원</span>씩<br>포인트가 적립되요!</p>
+          <div class="popup_info">
+            <div class="popup_infoinbg">
+              <div class="bl_pop flex">
+                <p class="span1_f gray_c02">31일째부터는 <span class="primary_c01">200원</span>씩 적립!</p>
+              </div>
+              <p class="popup_txt">
+                <span class="ltitle">60일 모두 인증하면</span>
+                <span class="rinfo">+ 9,000원</span>
+              </p>
+            </div>
+            <p class="noti_txt">섭취인증 포인트는 기프티콘으로 사용하거나<br>
+              핏타민 적립금으로 바로 사용하실 수 있어요.</p>
+          </div>
+        </div>
+        <div class="btn_center">
+          <button class="btn_b btn_blue closeBtn">확인</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- 30일 지난 후 팝업 -->
+    <div class="main_popup stampCnf04">
+      <div class="overlay"></div>
+      <div class="pop_bottom">
+        <div class="pop_in">
+          <p class="popup_title">섭취기록 30일 달성! 👏🏻<br>오늘부터<span class="primary_c01">200원</span>씩 적립해드려요!</p>
+          <div class="popup_info">
+            <p class="noti_txt">섭취인증 포인트는 기프티콘으로 사용하거나<br>
+              핏타민 적립금으로 바로 사용하실 수 있어요.</p>
+          </div>
+        </div>
+        <div class="btn_center">
+          <button class="btn_b btn_blue closeBtn">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 포인트사용 팝업-->
+    <div class="main_popup stampCnf05">
+      <div class="overlay"></div>
+      <div class="pop_bottom">
+        <div class="pop_in">
+          <p class="popup_title">포인트를 어떻게 사용할까요?</p>
+          <p class="popup_sub mb_0_5">원하시는 방식으로 포인트를 사용할 수 있어요.</p>
+        </div>
+        <div class="btn_center">
+          <button class="btn_b btn_blue closeBtn mb_0_5">기프티콘으로 교환할래요</button>
+          <button class="btn_b btn_white closeBtn">핏타민 적립금으로 교환할래요</button>
+          <button class="btn_b btn_trans closeBtn">닫기</button>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.3/swiper-bundle.min.js"></script>
+
+
+    <script>
+
+                /* 스탬프 슬라이드  */
+    var swiper = new Swiper(".stamp_list", {
+      spaceBetween: 20,
+    slidesPerView:'1',
+
+    pagination: {
+          el: ".swiper-pagination",
+        },
+  });
+
+
+
+
+          /* 적립금 슬라이드  */
+    var swiper = new Swiper(".stamp_slide", {
+      spaceBetween: 20,
+    slidesPerView:'1',
+
+    pagination: {
+          el: ".swiper-pagination",
+        },
+  });
+
+
+
+      /* popup */
+      $(".stampBfr").on("click", function(){
+    $(".stampPop, body").addClass("on");
+    });
+
+    $(".stampAtr").on("click", function(){
+    $(".stampCnf, body").addClass("on");
+    });
+
+    $(".stapmUse").on("click", function(){
+    $(".stampCnf05, body").addClass("on");
+    });
+
+
+    $(".overlay, .pop_btn, .closeBtn").on("click", function(){
+      $(".main_popup, .rpopup, body").removeClass("on");
+    });
+
+    </script>
+</body>
+</html>
+
+
+

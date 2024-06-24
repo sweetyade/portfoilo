@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/guide.css" />
+    <title>DESIGN GUIDE</title>
+  </head>
+
+  <style>
+    .input_block,
+    .textarea_block,
+    .select_block {
+      width: 300px;
+    }
+  </style>
+  <body>
+    <main id="guide_main">
+      <!-- menu -->
+      <nav id="guide_nav">
+        <h1>design guide</h1>
+
+        <div class="nav_menu">
+          <a href="guide.html">typography</a>
+          <a href="guide_color.html">color</a>
+          <a href="guide_icon.html">icon</a>
+          <a href="guide_form.html" class="active">form</a>
+          <a href="guide_button.html">button</a>
+          <a href="guide_popup.html">popup</a>
+          <a href="guide_component.html">component</a>
+        </div>
+      </nav>
+
+      <!-- contents -->
+      <section class="container">
+        <div class="contents">
+          <h2>form</h2>
+
+          <div class="guide_info">
+            <p class="txt">- 인풋 섹션 .input_block</p>
+            <p class="txt">- 기본인풋 .input_basic</p>
+            <p class="txt">- 화면 전체 하단에 픽스된 버튼 .btn_fix</p>
+            <p class="txt">
+              - 화면 전체 하단에 픽스된 그라디언트 배경 포함 .btn_fix.btn_fixgr
+            </p>
+            <p class="txt">- 화면하단 와이드 픽스 .btm_wide.btn_fix</p>
+            <p class="txt">
+              - 화면하단 오른쪽 고정 픽스 (주로 글작성버튼) .btn_right
+            </p>
+          </div>
+
+          <!-- text input -->
+          <div class="guide_block">
+            <h3>text input</h3>
+            <div class="guide_data">
+              <p class="title">text │ password │ number</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      // /* ---- 삭제버튼 ------- */
+      $(document).ready(function () {
+        $(".input_block").each(function () {
+          $(this)
+            .find(".clearInput")
+            .on("keyup focus", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 1");
+
+              if ($(this).val().length == 0) {
+                $(this).siblings(".btnClear").attr("style", "opacity: 0");
+              } else {
+                $(this).siblings(".btnClear").attr("style", "opacity: 1");
+              }
+            });
+
+          $(this)
+            .find(".clearInput")
+            .on("blur", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 0");
+            });
+
+          $(this)
+            .find(".btnClear")
+            .on("click touchstart", function () {
+              $(this).closest(".input_block").find(".clearInput").val("");
+              $(this)
+                .closest(".input_block")
+                .find(".btnClear")
+                .attr("style", "opacity: 0");
+              return false;
+            });
+        });
+      });
+
+      /* 패스워드 */
+      $(".pass_view").click(function () {
+        $(this).toggleClass("inputPass");
+        var input = $($(this).attr("toggle"));
+        if (input.attr("type") == "password") {
+          input.attr("type", "text");
+        } else {
+          input.attr("type", "password");
+        }
+      });
+
+      $(document).ready(function () {
+        $(".pass_view").on("click", function () {
+          $(this).toggleClass("pass_view-on");
+        });
+      });
+
+      /* 넘버인풋 맥스 */
+      function maxLengthChk(object) {
+        if (object.value.length > object.maxLength) {
+          object.value = object.value.slice(0, object.maxLength);
+        }
+      }
+
+      /* 셀렉트 */
+      const label = document.querySelectorAll(".selectBtn");
+      label.forEach(function (lb) {
+        lb.addEventListener("click", (e) => {
+          let optionList = lb.nextElementSibling;
+          let optionItems = optionList.querySelectorAll(".optionItem");
+          clickLabel(lb, optionItems);
+        });
+      });
+      const clickLabel = (lb, optionItems) => {
+        if (lb.parentNode.classList.contains("active")) {
+          lb.parentNode.classList.remove("active");
+          optionItems.forEach((opt) => {
+            opt.removeEventListener("click", () => {
+              handleSelect(lb, opt);
+            });
+          });
+        } else {
+          lb.parentNode.classList.add("active");
+          optionItems.forEach((opt) => {
+            opt.addEventListener("click", () => {
+              handleSelect(lb, opt);
+            });
+          });
+        }
+      };
+      const handleSelect = (label, item) => {
+        label.innerHTML = item.textContent;
+        label.parentNode.classList.remove("active");
+        label.classList.add("optSlt");
+      };
+    </script>
+  </body>
+</html>

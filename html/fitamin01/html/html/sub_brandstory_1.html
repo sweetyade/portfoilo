@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>킥더허들 헬스케어</title>
+    <meta name="keywords" content="킥더허들 헬스케어">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="누구나 누릴 수 있는 일상의 건강">
+    <meta name="format-detection" content="telephone=no">
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <script type="text/javascript" src="<c:url value='/vendors/jquery/jquery-3.6.0.min.js' />"></script>
+
+    <!-- ============================ css ======================= -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link href="../../css/m.common.css" rel="stylesheet">
+    <link href="../../css/m.sub.css" rel="stylesheet">
+
+
+
+    <script type="text/javascript" src="<c:url value='/bootstrap/js/bootstrap.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/vendors/popper/popper.min.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/scripts/modal.js' />"></script> <!-- 모달 스크립트 -->
+    <script type="text/javascript" src="<c:url value='/scripts/common.js' />"></script> <!-- 공통 스크립트 -->
+    <script type="text/javascript" src="<c:url value='/scripts/hybridBridge.js' />"></script> <!-- 네이티브 인터페이스 브릿지 -->
+</head>
+<body>
+    <main class="main" id="top">
+
+        <header class="header" id="header">
+            <nav class="nav">
+                <a href="javascript:goHistoryback();" class="nav_back">
+                    <i class="ri-arrow-left-s-line"></i>
+                </a>
+
+                <h2 class="sub_header">핏타민 소개</h2>
+        
+                <div class="nav_menu" id="nav-menu">
+                    <div class="nav_user">
+                        <a href="#" class="nav_user_link">로그인</a>
+                        <a href="#" class="nav_user_link">마이 페이지</a>
+                    </div>
+        
+                    <!-- ========메뉴 =========-->
+                    <ul class="nav_list">
+                        <li class="nav_item">
+                            <a href="#" class="nav_link active_link">홈</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">핏타민 시작하기</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">마이페이지</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">브랜드 스토리 <i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="nav_dep">
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">핏타민 스토리</a>
+                                </li>
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">핏타민 소개</a>
+                                </li>
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">이용방법</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">고객후기</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">이벤트 · 공지</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">고객센터</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="nav_close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+        
+                    <div class="nav_search">
+                        <input type="text" class="search" placeholder="검색어를 입력해주세요">
+                        <button type="submit" class="search btn_basic">검색</button>
+                    </div>
+        
+                    <!-- ================= quick link ================= -->
+                    <div class="nav_quick">
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg01.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>People</span>
+                                <p>시작부터 섭취까지<br>약사와 함께</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg02.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>Service</span>
+                                <p>과학적인 데이터<br>근거 중심으로</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg03.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>Product</span>
+                                <p>단 1알까지<br>품질우선주의</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg04.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>B2B</span>
+                                <p>기업 건강 복지<br>영양제 정기배송</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="nav_toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </nav>
+        </header>
+        
+        <div class="container" data-layout="container">
+            <div class="sub_wrap">
+                <div class="sub_tab brand_tab">
+                    <a href="#" class="sub_link active">서비스</a>
+                    <a href="#" class="sub_link">사람들</a>
+                    <a href="#" class="sub_link">제품표준</a>
+                    <a href="#" class="sub_link">기업복지</a>
+                </div>
+                <div class="sub_wide">
+                    <img src="../../images/bs_service_img01.png" alt="">
+                    <div class="sub_txt">
+                        <p class="font_l mb_1">Service</p>
+                        <p class="font_s">핏타민은 약학/영양학 전문가들이 4,000편 이상의 논문을 <br>
+                            분석하여, 과학적인 연구결과를 기반으로 FAP를 구축했습니다</p>
+                    </div>
+                </div>
+                <div class="brand_block">
+                    <p class="font_title">
+                        <span class="underline">#FAP</span> <span class="font_n font_s">(Fitamin Algorithm by Pharmacists)</span>
+                    </p>
+                    <img src="../../images/bs_service_img02.png" alt="" class="mb_1">
+
+                    <p>1. SCI급 논문과 식약처 공인 자료를 선별했습니다. <br>
+                        2. RCT (Randomized Clinical Trial),Meta-analysis, <br>
+                        Systematic review의 연구결과를 분석했습니다.
+                    </p>
+                </div>
+
+                <div class="brand_block bg_gray">
+                    <p class="font_title mb_1">
+                        <span class="underline">#12가지</span>수집정보
+                    </p>
+                    <p class="font_s">FAP를 토대로, 소비자의 12가지 수집정보를 통해 소비자가 인지하고 있지 
+                        못했거나 놓치고 있었던 정보를 약사상담으로 확인하고 검증하여 
+                        소비자에게 필요한 맞춤영양을 제공합니다.
+                    </p>
+
+                    <div class="brand_table">
+                        <ul>
+                            <li>
+                                <div class="brand_ttitle">개인정보</div>
+                                <div class="brand_ticon">
+                                    <p>
+                                        <img src="../../images/bs_list_icon01.svg" alt="">
+                                        <span>나이</span>
+                                    </p>
+                                    <p>
+                                        <img src="../../images/bs_list_icon02.svg" alt="">
+                                        <span>성별</span>
+                                    </p>
+                                    <p>
+                                        <img src="../../images/bs_list_icon03.svg" alt="">
+                                        <span>키/몸무게</span>
+                                    </p>
+                                    <p>
+                                        <img src="../../images/bs_list_icon04.svg" alt="">
+                                        <span>건강목표</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="brand_ttitle">생활습관</div>
+                                <div class="brand_ticon">
+                                    <p>
+                                        <img src="../../images/bs_list_icon05.svg" alt="">
+                                        <span>식습관</span>
+                                    </p>
+                                    <p>
+                                        <img src="../../images/bs_list_icon06.svg" alt="">
+                                        <span>흡연/음주</span>
+                                    </p>
+                                    <p>
+                                        <img src="../../images/bs_list_icon07.svg" alt="">
+                                        <span>운동</span>
+                                    </p>
+                                    <p>
+                                        <img src="../../images/bs_list_icon08.svg" alt="">
+                                        <span>휴식</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="brand_ttitle">위험체크</div>
+                                <div class="brand_ticon">
+                                    <p>
+                                        <img src="../../images/bs_list_icon09.svg" alt="">
+                                        <span>섭취약물</span>
+                                    </p>
+                                    <p>
+                                        <img src="../../images/bs_list_icon10.svg" alt="">
+                                        <span>질병</span>
+                                    </p>
+                                    <p>
+                                        <img src="../../images/bs_list_icon11.svg" alt="">
+                                        <span>건강위험신호</span>
+                                    </p>
+                                    <p>
+                                        <img src="../../images/bs_list_icon12.svg" alt="">
+                                        <span>과다섭취</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <p class="font_s group_center">
+                            핏타민에게 당신의 정보를 알려주세요. 12가지 기준에 따라 
+                            수집된 정보는 FAP (Fitamin Algorithm by Pharmacists)를 통해
+                            당신의 건강 상태, 영양 상태, 생활 패턴을 분석합니다.
+                        </p>
+                    </div>
+                 </div>
+
+                <div class="brand_blockw">
+                    <p class="font_title mb_1">
+                        #FAP를 기반으로 한 <br><span class="underline">약사의 재검증</span>
+                    </p>
+                    
+                    <img src="../../images/bs_service_img03.png" alt="">
+                    
+                    <p class="text">
+                        핏타민은 과학 기반 알고리즘인 FAP로 소비자의 필요 영양을 선별하고 약사와
+                         1:1 상담을 통해 검증하여 더 완벽한 맞춤영양 서비스를 제공합니다. <br><br>
+
+설문을 통해 선별된 영양소는 약사 상담으로 영양-양물 상호 작용을 검증합니다.과학 기반 알고리즘인 
+FAP로 필요 영양을 선별하고 약사 상담으로 검증하여 핏타민은 더 완벽한 맞춤 영양 서비스를 제공합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="footer sub_footer">
+            <div class="bottom_menu">
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon01.svg" alt="">
+                    <span>홈</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon02_on.svg" alt="">
+                    <span>설문</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon03.svg" alt="">
+                    <span>상담</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon04.svg" alt="">
+                    <span>구독</span>
+                </a>
+        
+                <a href="#" class="bottom_link">
+                    <img src="../../images/ft_menu_icon05.svg" alt="">
+                    <span>MY</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- swiper slide -->
+    <script type="text/javascript" src="../../scripts/mobile.js"></script> <!-- 추가 스크립트 -->
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.3/swiper-bundle.css"/>
+  <link rel="stylesheet" href="../../css/rcommon.css">
+  <link rel="stylesheet" href="../../css/guide.css">
+  <link rel="stylesheet" href="../../css/rstyle.css">
+  <title>설문결과</title>
+
+  <style>
+
+  </style>
+</head>
+<body class="">
+  <div class="rmain_wrap rst_pg" id="Top">
+    <div class="tab_list">
+      <a href="#tab01" class="tab_link active">건강상태</a>
+      <a href="#tab02" class="tab_link">BMI & 식습관</a>
+      <a href="#tab03" class="tab_link">상담필요성분</a>
+    </div>
+    <!-- 경고,주의,개선 .rst_bad / 양호 .rst_blue / 우수 .rst_great -->
+    <!-- 결과 토탈 -->
+    <p id="tab01"></p>
+    <section class="rst_con rst_bad" style="">
+      <img src="../../images/rst_emoji1.svg" alt="" class="rst_img">
+      <p class="rst_title">최대오글자님의 건강상태는<br><b class="rst_c">무관심 방관형</b>이예요</p>
+      <div class="rst_point">
+        <div class="rst_pointin">
+          <p class="h1_f bold_f">000점</p>
+          <p class="span1_f gray_c02">건강점수</p>
+        </div>
+        <div class="rst_pointin">
+          <p class="h1_f bold_f">000%</p>
+          <p class="span1_f gray_c02">상위</p>
+        </div>
+      </div>
+      <div class="srt_total">
+        <div class="total_title">
+          <p>무관심 방관형</p>
+          <span class="btn_icon">경고단계</span>
+        </div>
+        <p class="total_txt">최대오글자님이 선택한 건강목표는 <b class="rst_c">혈중지질개선, 스트레스/긴장, 관절/뼈 건강</b> 이며 
+          현재 건강상태가 지속될 경우 질병의 발병률이 높아질 수 있어 적극적인 건강관리가 필요해요!</p>
+      </div>
+    </section>
+
+    <!--결과 비교-->
+    <section class="rst_con">
+      <p class="rst_title">건강점수 비교</p>
+
+      <div class="selectbox mb_0_5">
+        <button class="selectBtn">전체 회원과 비교할래요</button>
+        <div class="select_bt">
+          <div class="overlay"></div>
+          <div class="option_list">
+            <div class="optlist_in">
+              <p class="btn_b tab_b">전체 회원과 비교할래요</p>
+              <p class="btn_b tab_b">동일성별 회원과 비교할래요</p>
+              <p class="btn_b tab_b">직전설문과 비교할래요</p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <!--전체 회원과 비교할래요-->
+      <div class="chart_tab" style="display: block">
+        <p class="system_c01 p3_f">전체 회원 평균보다 낮아 관리가 더욱 필요해요!</p>
+        <p class="p3_f gray_c01">건강상태가 좋아지기 위해 조금 더 노력해주세요</p>
+
+        <div class="chart_list">
+          <div class="cart_user">
+            <div class="cart_bar"><span class="rst_bad" style="height: 50%;"></span></div>
+          </div>
+          <div class="cart_all">
+            <div class="cart_bar"><span style="height: 70%"></span></div>
+          </div>
+          <div class="cart_line" style="top: 30%;"></div>
+          <!-- 오른쪽 값에 따라 높이 %설정 -->
+        </div>
+
+        <div class="chart_list" style="margin-top: 1rem;">
+          <div class="cart_user">
+            <p class="h3_f bold_f gray_c02 line_h">50점</p>
+            <p class="span1_f">최대오글자님</p>
+          </div>
+          <div class="cart_all">
+            <p class="h3_f bold_f gray_c02 line_h">70점</p>
+            <p class="span1_f">전체회원</p>
+          </div>
+        </div>
+      </div>
+
+      <!--동일성별 회원과 비교할래요-->
+      <div class="chart_tab" style="display: none">
+        <p class="system_c01 p3_f">같은 성별 회원 평균보다 높아도 방심하면 안돼요!</p>
+        <p class="p3_f gray_c01">건강상태가 좋아지기 위해 조금 더 노력이 필요해요</p>
+
+        <div class="chart_list">
+          <div class="cart_user">
+            <div class="cart_bar"><span class="rst_blue" style="height: 100%;"></span></div>
+          </div>
+          <div class="cart_all">
+            <div class="cart_bar"><span style="height: 50%;"></span></div>
+          </div>
+          <div class="cart_line" style="top: 50%;"></div>
+           <!-- 오른쪽 값에 따라 높이 %설정 -->
+        </div>
+
+        <div class="chart_list" style="margin-top: 1rem;">
+          <div class="cart_user">
+            <p class="h3_f bold_f gray_c02 line_h">100점</p>
+            <p class="span1_f">최대오글자님</p>
+          </div>
+          <div class="cart_all">
+            <p class="h3_f bold_f gray_c02 line_h">50점</p>
+            <p class="span1_f">동일성별 회원</p>
+          </div>
+        </div>
+      </div>
+      
+      <!--직전설문과 비교할래요-->
+      <div class="chart_tab" style="display: none">
+        <p class="system_c01 p3_f">전체 회원 평균보다 높아도 방심하면 안돼요!</p>
+        <p class="p3_f gray_c01">건강상태가 좋아지기 위해 조금 더 노력이 필요해요</p>
+
+        <div class="chart_list">
+          <div class="cart_user">
+            <div class="cart_bar"><span class="rst_blue" style="height: 80%"></span></div>
+          </div>
+          <div class="cart_all">
+            <div class="cart_bar"><span style="height: 40%"></span></div>
+          </div>
+          <div class="cart_line" style="top: 60%;"></div>
+          <!-- 오른쪽 값에 따라 높이 %설정 -->
+        </div>
+
+        <div class="chart_list" style="margin-top: 1rem;">
+          <div class="cart_user">
+            <p class="h3_f bold_f gray_c02 line_h">80점</p>
+            <p class="span1_f">최대오글자님</p>
+          </div>
+          <div class="cart_all">
+            <p class="h3_f bold_f gray_c02 line_h">40점</p>
+            <p class="span1_f">직전설문</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- bmi, 식습관 분석 -->
+    <section class="rst_con">
+      <p class="rst_title" id="tab02">BMI 및 식습관 분석</p>
+
+      <!-- 위험 .rst_bad / 보통 .rst_yellow / 양호 .rst_great -->
+      <div class="rst_in rst_great"> 
+        <p class="sub_title">BMI 분석결과</p>
+        <div class="bmi_data">
+          <p class="bmi_img"><img src="../../images/rst_bmi2.svg"></p>
+          <!-- rst_bmi1.svg 저체중 / rst_bmi2.svg 표준 / rst_bmi3.svg 과페중 / rst_bmi4.svg 비만 / rst_bmi5.svg 고도비만 -->
+          <div class="bmi_line">
+            <p><span class="bmi_line1"></span>회원님 체형</p>
+            <p><span class="bmi_line2"></span>표준체형</p>
+          </div>
+        </div>
+  
+        <div class="bmi_table">
+          <div class="table_top">
+            <p>신장</p>
+            <p>체중</p>
+            <p>BMI 결과 <img src="../../images/icon_qu.svg" alt="" class="infop bmiP"></p>
+          </div>
+          <div class="table_bottom">
+            <p>160cm</p>
+            <p>100kg</p>
+            <p class="rst_c">31.1 (고도비만)</p>
+          </div>
+        </div>
+  
+        <div class="srt_total">
+          <div class="total_title"><p>최대오글자님의 <b class="rst_c">BMI 수치는 31.1</b>이며 <b class="rst_c">고도비만 개선</b>이 필요합니다.</p></div>
+          <p class="total_txt"></b>현재 상태를 유지할 경우 고혈압, 당뇨 등 만성질환 발병율이 높아져요. 
+            체중 감소를 위한 식사조절과 운동이 필요합니다.</p>
+        </div>
+      </div>
+      
+      <div class="rst_in rst_yellow" style="padding-bottom:0; border-bottom: 0;">
+        <p class="sub_title">식습관 분석결과</p>
+        <div class="eat_data">
+          <p class="eat_img">
+            <!-- <img src="../../images/rst_bar.svg"> -->
+          </p>
+          <div class="eat_txt">
+            <p class="eat_s">식습관 개선을 권장해요!</p>
+            <p class="eat_b rst_c">보통수준</p>
+          </div>
+        </div>
+
+        <div class="srt_tag">
+          <div class="total_title">
+            <p class="total_t">최대오글자님은 <b class="rst_c">총 4가지 항목</b>의<br>
+              식습관 개선이 필요합니다.</p>
+          </div>
+          <div class="total_tag">
+            <p class="tag_t">식사 관련 습관</p>
+            <div class="tag_list">
+              <span class="btn_icon">불규칙한 식사</span>
+              <span class="btn_icon">영양 불균형</span>
+              <span class="btn_icon">잦은 야식</span>
+            </div>
+          </div>
+          <div class="total_tag">
+            <p class="tag_t">섭취 관련 습관</p>
+            <div class="tag_list">
+              <span class="btn_icon">단백질 부족</span>
+              <span class="btn_icon">채소 및 과일 섬유질 부족</span>
+              <span class="btn_icon">중성지방 과다섭취</span>
+              <span class="btn_icon">나트륨 과다섭취</span>
+              <span class="btn_icon">밀가루 과다섭취</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="misc1_under gray_c02 conBtn" style="white-space: nowrap; cursor: pointer;">식습관 관리에 도움되는 영양제가 필요하다면 <img src="../../images/icon_right.svg" class="link_ar"></p>
+      </div>
+      <span id="tab03"></span>
+    </section>
+
+    <!-- 건강고민 --> 
+    <!-- 비로그인 시 .rst_blur 클래스 추가 -->
+    <section class="rst_con rst_con2 rst_blue">
+      <p class="rst_title">최대오글자님에게 필요한<br>영양성분을 찾았어요</p>
+      <p class="gray_c02 drugp" style="cursor: pointer;"><img src="../../images/icon_qu.svg" alt="" class="infop"><span class="misc1_under">추천결과는 약사님의 설명이 필요해요</span></p>
+
+      <div class="rst_nolist">
+        <div class="rst_noitem">
+          <p class="btn_icon">건강고민 1위</p>
+  
+          <div class="rst_noinfo">
+            <p class="noinfo_t"><img src="../../images/sur_10_on.svg" alt=""> 스트레스/긴장 <span class="rst_c">양호단계</span></p>
+            <div class="total_txt">스트레스와 긴장이 심하면 불안·우울·수면장애 등의 증상이 나타날 수 있어요</div>
+          </div>
+          <div class="rst_nodrug swiper">
+            <div class="rst_nodlist swiper-wrapper">
+              <div class="drug_item swiper-slide">
+                <p class="drug_i"><img src="../../images/drug_img01.png" alt=""></p>
+                <p class="drug_t">로사테아닌</p>
+                <p class="drug_ts">스트레스 긴장 완화 케어</p>
+              </div>
+              <div class="drug_item swiper-slide">
+                <p class="drug_i"><img src="../../images/drug_img02.png" alt=""></p>
+                <p class="drug_t">로사테아닌</p>
+                <p class="drug_ts">스트레스 긴장 완화 케어</p>
+              </div>
+              <div class="drug_item swiper-slide">
+                <p class="drug_i"><img src="../../images/drug_img03.png" alt=""></p>
+                <p class="drug_t">로사테아닌</p>
+                <p class="drug_ts">스트레스 긴장 완화 케어</p>
+              </div>
+              <div class="drug_item swiper-slide">
+                <p class="drug_i"><img src="../../images/drug_img04.png" alt=""></p>
+                <p class="drug_t">로사테아닌</p>
+                <p class="drug_ts">스트레스 긴장 완화 케어</p>
+              </div>
+              <div class="drug_item swiper-slide">
+                <p class="drug_i"><img src="../../images/drug_img05.png" alt=""></p>
+                <p class="drug_t">로사테아닌</p>
+                <p class="drug_ts">스트레스 긴장 완화 케어</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="rst_noitem">
+          <p class="btn_icon">건강고민 2위</p>
+  
+          <div class="rst_noinfo">
+            <p class="noinfo_t"><img src="../../images/sur_10_on.svg" alt=""> 스트레스/긴장 <span class="rst_c">양호단계</span></p>
+            <div class="total_txt">스트레스와 긴장이 심하면 불안·우울·수면장애 등의 증상이 나타날 수 있어요</div>
+          </div>
+          <div class="rst_nodrug swiper">
+            <div class="rst_nodlist swiper-wrapper">
+              <div class="drug_item swiper-slide">
+                <p class="drug_i"><img src="../../images/drug_img06.png" alt=""></p>
+                <p class="drug_t">로사테아닌</p>
+                <p class="drug_ts">스트레스 긴장 완화 케어</p>
+              </div>
+              <div class="drug_item swiper-slide">
+                <p class="drug_i"><img src="../../images/drug_img07.png" alt=""></p>
+                <p class="drug_t">로사테아닌</p>
+                <p class="drug_ts">스트레스 긴장 완화 케어</p>
+              </div>
+              <div class="drug_item swiper-slide">
+                <p class="drug_i"><img src="../../images/drug_img08.png" alt=""></p>
+                <p class="drug_t">로사테아닌</p>
+                <p class="drug_ts">스트레스 긴장 완화 케어</p>
+              </div>
+              <div class="drug_item swiper-slide">
+                <p class="drug_i"><img src="../../images/drug_img09.png" alt=""></p>
+                <p class="drug_t">로사테아닌</p>
+                <p class="drug_ts">스트레스 긴장 완화 케어</p>
+              </div>
+              <div class="drug_item swiper-slide">
+                <p class="drug_i"><img src="../../images/drug_img10.png" alt=""></p>
+                <p class="drug_t">로사테아닌</p>
+                <p class="drug_ts">스트레스 긴장 완화 케어</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rst_noitem">
+          <p class="btn_icon">건강고민 3위</p>
+  
+          <div class="rst_noinfo">
+            <p class="noinfo_t"><img src="../../images/sur_10_on.svg" alt=""> 스트레스/긴장 <span class="rst_c">양호단계</span></p>
+            <div class="total_txt">스트레스와 긴장이 심하면 불안·우울·수면장애 등의 증상이 나타날 수 있어요</div>
+          </div>
+          <div class="rst_nodrug swiper">
+            <div class="rst_nodlist swiper-wrapper">
+              <div class="drug_item swiper-slide">
+                <p class="drug_i"><img src="../../images/drug_img11.png" alt=""></p>
+                <p class="drug_t">로사테아닌</p>
+                <p class="drug_ts">스트레스 긴장 완화 케어</p>
+              </div>
+              <div class="drug_item swiper-slide">
+                <p class="drug_i"><img src="../../images/drug_img12.png" alt=""></p>
+                <p class="drug_t">로사테아닌</p>
+                <p class="drug_ts">스트레스 긴장 완화 케어</p>
+              </div>
+              <div class="drug_item swiper-slide">
+                <p class="drug_i"><img src="../../images/drug_img13.png" alt=""></p>
+                <p class="drug_t">로사테아닌</p>
+                <p class="drug_ts">스트레스 긴장 완화 케어</p>
+              </div>
+              <div class="drug_item swiper-slide">
+                <p class="drug_i"><img src="../../images/drug_img01.png" alt=""></p>
+                <p class="drug_t">로사테아닌</p>
+                <p class="drug_ts">스트레스 긴장 완화 케어</p>
+              </div>
+              <div class="drug_item swiper-slide">
+                <p class="drug_i"><img src="../../images/drug_img01.png" alt=""></p>
+                <p class="drug_t">로사테아닌</p>
+                <p class="drug_ts">스트레스 긴장 완화 케어</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 비로그인 시 버튼 노출 -->
+      <div class="btn_fix">
+        <button class="btn_b btn_blue conBtn">약사님과 추천결과 확인하기</button>
+      </div>
+    </section>
+
+    <section class="rst_con rst_rcmd">
+      <p class="rst_title">함께 섭취하면 더 좋은<br>기타 영양성분이 있어요! 💊</p>
+
+      <div class="rcmd_slide swiper">
+        <div class="rcmd_list swiper-wrapper">
+          <div class="rcmd_item swiper-slide">
+            <p class="rcmd_img"><img src="../../images/drug_img01.png" alt=""></p>
+            <p class="drug_t">로사테아닌</p>
+            <p class="drug_ts">스트레스 긴장 완화 케어</p>
+          </div>
+          <div class="rcmd_item swiper-slide">
+            <p class="rcmd_img"><img src="../../images/drug_img01.png" alt=""></p>
+            <p class="drug_t">로사테아닌</p>
+            <p class="drug_ts">스트레스 긴장 완화 케어</p>
+          </div>
+          <div class="rcmd_item swiper-slide">
+            <p class="rcmd_img"><img src="../../images/drug_img01.png" alt=""></p>
+            <p class="drug_t">로사테아닌</p>
+            <p class="drug_ts">스트레스 긴장 완화 케어</p>
+          </div>
+          <div class="rcmd_item swiper-slide">
+            <p class="rcmd_img"><img src="../../images/drug_img01.png" alt=""></p>
+            <p class="drug_t">로사테아닌</p>
+            <p class="drug_ts">스트레스 긴장 완화 케어</p>
+          </div>
+          <div class="rcmd_item swiper-slide">
+            <p class="rcmd_img"><img src="../../images/drug_img01.png" alt=""></p>
+            <p class="drug_t">로사테아닌</p>
+            <p class="drug_ts">스트레스 긴장 완화 케어</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="btn_center">
+      <button class="btn_b btn_blue">상담내역 보기</button>
+    </div>
+
+    <a href="#Top" class="quick_top"><img src="../../images/icon_top.svg" alt=""></a>
+  </div>
+
+
+
+  <!-- bmi 팝업-->
+  <div class="main_popup pop01">
+    <div class="overlay"></div>
+    <div class="pop_bottom">
+      <div class="pop_in">
+        <p class="popup_title">BMI는 무엇인가요?</p>
+        <p class="popup_sub">BMI(신체질량지수)는 키와 몸무게를 이용하여 지방의 양을 추정하는 비만 측정법이예요.</p>
+        <div class="pop_dec">
+          <p class="popli">저체중: 18.5 미만</p>
+          <p class="popli">정상체중: 18.5 ~ 22.9</p>
+          <p class="popli">과체중: 23.0 ~ 24.9</p>
+          <p class="popli">비만: 25.0 ~ 29.9</p>
+          <p class="popli">고도비만: 30.0 이상</p>
+        </div>
+      </div>
+      <div class="btn_center">
+        <button class="btn_b btn_blue closeBtn">확인</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 약사님 설명 -->
+  <div class="main_popup pop02">
+    <div class="overlay"></div>
+    <div class="pop_bottom">
+      <div class="pop_in">
+        <p class="popup_title">약사님의 확인이 꼭 필요한가요?</p>
+        <p class="popup_sub">약사님과 영양제 추천 결과를 확인하시고 내 맞춤 영양제를 확정지으세요.</p>
+        <div class="pop_dec">
+          <p class="popli">약사상담을 받으실 경우 고객님의 건강 분석과 함께 더욱 상세한 영양성분 추천이 가능합니다.</p>
+          <p class="popli">또한 복용 중인 의약품이 있을 경우 성분 충돌 및 기능성 중복 주의 성분을 방지할 수 있습니다.</p>
+        </div>
+      </div>
+      <div class="btn_center">
+        <button class="btn_b btn_blue closeBtn">확인</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 비로그인 시 약사님 상담 방법 선택-->
+  <div class="main_popup pop03">
+    <div class="overlay"></div>
+    <div class="pop_bottom">
+      <div class="pop_in">
+        <p class="popup_title">상담방법을 선택해주세요</p>
+        <p class="popup_sub mb_0_5">상담은 약사님과 1:1 화상상담으로 진행됩니다.</p>
+      </div>
+      <div class="btn_center">
+        <button class="btn_b btn_blue closeBtn" style="margin-bottom: .5rem;">1분 안에 즉시상담 받을래요</button>
+        <button class="btn_b btn_white closeBtn">원하는 일자에 예약상담 받을래요</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.3/swiper-bundle.min.js"></script>
+  <script>
+
+    /* 건강고민 리스트 */
+    var swiper = new Swiper(".rst_nodrug", {
+    slidesPerView:'auto',
+  });
+
+
+
+/* 추천영양성분 */
+  var swiper = new Swiper(".rcmd_slide", {
+    slidesPerView:'auto',
+  });
+
+    /* 팝업  */
+    $(".selectBtn").on("click", function(){
+    $(".select_bt, body").addClass("on");
+    });
+
+    $(".conBtn").on("click", function(){
+    $(".pop03, body").addClass("on");
+    });
+
+    $(".drugp").on("click", function(){
+    $(".pop02, body").addClass("on");
+    });
+
+    $(".bmiP").on("click", function(){
+    $(".pop01, body").addClass("on");
+    });
+
+    $(".overlay, .tab_b, .closeBtn").on("click", function(){
+      $(".select_bt, .pop01, .pop02, .pop03, body").removeClass("on");
+    });
+
+
+      /* 셀렉트 박스 선택*/
+      const label = document.querySelectorAll('.selectBtn');
+label.forEach(function(lb){
+    lb.addEventListener('click', e => {
+        let optionList = lb.nextElementSibling;
+        let optionItems = optionList.querySelectorAll('.tab_b');
+        clickLabel(lb, optionItems);
+    })
+});
+const clickLabel = (lb, optionItems) => {
+    if(lb.parentNode.classList.contains('active')) {
+        lb.parentNode.classList.remove('active');
+        optionItems.forEach((opt) => {
+            opt.removeEventListener('click', () => {
+                handleSelect(lb, opt)
+            })
+        })
+    } else {
+        lb.parentNode.classList.add('active');
+        optionItems.forEach((opt) => {
+            opt.addEventListener('click', () => {
+                handleSelect(lb, opt)
+            })
+        })
+    }
+}
+const handleSelect = (label, item) => {
+    label.innerHTML = item.textContent;
+    label.parentNode.classList.remove('active');
+    label.classList.add('optSlt');
+}
+
+
+
+
+
+
+/*  점수비교 탭 */
+var tabBtn = $(".tab_b");   
+var tabCont = $(".chart_tab");   
+
+
+        tabCont.hide().eq(0).show();
+
+
+        tabBtn.click(function(){
+        var target = $(this);               
+        var index = target.index();          
+        // alert(index);
+        tabBtn.removeClass("open");          
+        target.addClass("open");                
+        tabCont.css("display","none");
+        tabCont.eq(index).css("display","block");
+        });
+
+</script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>2-7-11.중복선택가능질문</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="back"></div>
+      <div class="page_name">건강설문</div>
+      <div class="header_icon">
+        <p class="header_link">
+          <img src="../../images/icon/system_close_bk.svg" alt="닫기" />
+        </p>
+      </div>
+    </header>
+
+    <div class="fullpage">
+      <div class="svy_wrap">
+        <div class="svy_top">
+          <p class="icon"><img src="../../images/survey/status13_on.svg" alt="" /></p>
+          <p class="title">
+            스트레스를 받으면 어떤 반응이<br />
+            나타나나요?
+          </p>
+          <p class="system_red span2_f">중복선택 가능</p>
+        </div>
+
+        <div class="svy_con">
+          <div class="grid_list_0_75">
+            <div class="servey_singular servey_plural">
+              <p class="sbj">두근거리거나 쉽게 진정이 되지 않아요</p>
+            </div>
+            <div class="servey_singular servey_plural">
+              <p class="sbj">쉽게 무기력해지고 의욕이 잘 안생겨요</p>
+            </div>
+            <div class="servey_singular servey_plural">
+              <p class="sbj">장이 예민해지고 배변활동이 불편해져요</p>
+            </div>
+            <div class="servey_singular servey_plural">
+              <p class="sbj">여드름 같은 피부 트러블이 잘 생겨요</p>
+            </div>
+            <div class="servey_singular servey_plural allNone">
+              <p class="sbj">해당없음</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn_fix">
+        <button class="btn_b btn_basic nextBtn" disabled>다음</button>
+      </div>
+    </div>
+
+    <!-- 페이지 나가기 팝업 -->
+    <div class="popup popup01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 팝업 컨텐츠 -->
+      <div class="popup_wrap">
+        <p class="pop_title">페이지를 나가시겠어요?</p>
+        <p class="pop_txt">
+          페이지를 나가시면 작성하신 설문결과가<br />
+          저장되지 않을 수 있어요!
+        </p>
+        <!-- 버튼 2개 -->
+        <div class="pop_btn">
+          <button class="btn_m btn_light popClose">계속진행</button>
+          <button class="btn_m btn_red popClose">나가기</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+      //선택
+      $(".servey_plural").click(function () {
+        if ($(this).hasClass("select")) {
+          $(this).removeClass("select");
+        } else if ($(this).hasClass("allNone")) {
+          $(".allNone").siblings(".servey_plural").removeClass("select");
+          $(this).addClass("select");
+        } else {
+          $(this).addClass("select");
+          $(".allNone").removeClass("select");
+          $(".nextBtn").attr("disabled", false);
+        }
+      });
+
+      /* popup */
+      $(".header_link").on("click", function () {
+        $(".popup01, body").addClass("open");
+      });
+
+      $(".overlay, .popClose").on("click", function () {
+        $(".popup, .modal, body, .btn_trans").removeClass("open");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,482 @@
+@charset "UTF-8";
+/* =================== board ===================== */
+/* 공지사항 */
+.board {
+  line-height: 150%;
+  margin-bottom: var(--mb-3);
+}
+
+.board_search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.board_search select {
+  width: 85px;
+}
+
+.board_search .board_searchtxt {
+  width: calc(100% - 150px);
+  margin-left: .25rem;
+  max-width: 150px;
+  border: 1px solid #ddd;
+  border-radius: 0;
+}
+
+.board_button {
+  background-color: var(--second-color);
+  color: #fff;
+  margin-left: .25rem;
+  font-size: var(--smaller-font-size);
+  padding: .5rem .75rem;
+}
+
+.board_notice {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.board_list {
+  border-top: 2px solid #555;
+}
+
+.b_no, .b_count {
+  display: none;
+}
+
+.board_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  padding: .75rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.board_top {
+  background-color: #f9f9f9;
+}
+
+.board_header {
+  font-weight: var(--font-semi-bold);
+  text-align: center;
+}
+
+.b_title {
+  width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.b_title a:hover {
+  color: var(--point-color-text);
+  text-decoration: underline;
+}
+
+.b_date {
+  width: 30%;
+  text-align: center;
+  color: #999;
+  font-size: var(--small-font-size);
+}
+
+.board_header .b_date {
+  color: #222;
+  font-size: var(--normal-font-size);
+}
+
+/* 수강후기 */
+.board_review {
+  margin-top: var(--mb-2);
+}
+
+.board_header .b_star {
+  display: none;
+}
+
+.board_review .board_item {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.board_review .b_star {
+  width: 100%;
+  color: #ffcc00;
+  font-size: var(--normal-font-size);
+}
+
+.board_review .b_review {
+  width: 100%;
+}
+
+.board_review .review_title {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+  line-height: 150%;
+  margin-top: var(--mb-0-5);
+}
+
+.board_review .review_txt {
+  font-size: var(--small-font-size);
+  line-height: 150%;
+  margin-top: var(--mb-0-5);
+}
+
+/* ======================== write form ==================== */
+.write_form {
+  border-top: 2px solid #555;
+  margin: var(--mb-2) 0;
+}
+
+.form_block {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: .5rem .25rem;
+  border-bottom: 1px solid #ddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form_label {
+  width: 20%;
+  font-weight: var(--font-semi-bold);
+  font-size: var(--small-font-size);
+}
+
+.write_form input {
+  border: 1px solid #ddd;
+  border-radius: 0;
+}
+
+.form_block textarea {
+  border: 1px solid #ddd;
+  border-radius: 0;
+}
+
+.form_block input:hover, .form_block select:hover, .form_block textarea:hover {
+  border-color: var(--point-color);
+}
+
+.form_block > input {
+  width: 70%;
+}
+
+.form_block > select {
+  width: 70%;
+}
+
+.form_phone {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.form_phone > input {
+  width: 30%;
+}
+
+.form_phone > select {
+  width: 58px;
+}
+
+.form_phone span {
+  font-size: var(--smaller-font-size);
+}
+
+.form_block textarea {
+  width: 70%;
+  resize: vertical;
+}
+
+.write_form .button {
+  border-radius: 0;
+  padding: .75rem 2rem;
+  font-weight: var(--font-semi-bold);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.write_form .button:hover {
+  background-color: var(--point-color);
+}
+
+.form_check {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 150%;
+}
+
+.form_check input {
+  margin-right: .25rem;
+  margin-top: .25rem;
+}
+
+.form_check label {
+  font-size: var(--smaller-font-size);
+}
+
+.form_check label span {
+  display: block;
+  font-size: var(--smaller-font-size);
+}
+
+/* ============ read ==================== */
+.read_top {
+  border-top: 2px solid #555;
+  padding: .5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.read_title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+.read_date {
+  color: #999;
+  font-size: var(--smaller-font-size);
+  margin-top: .5rem;
+}
+
+.read_article {
+  padding: 2rem 0;
+  border-bottom: 1px solid #ddd;
+  line-height: 1.5rem;
+  font-size: var(--normal-font-size);
+}
+
+.read_file {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.file_link {
+  background-color: #fff;
+  padding: .5rem;
+  -webkit-transition: .3s;
+  transition: .3s;
+  font-size: var(--smaller-font-size);
+  border: 1px solid #ddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.file_link i {
+  margin-right: .25rem;
+  color: var(--point-color);
+}
+
+.file_link:hover {
+  background-color: var(--point-color);
+  color: #fff;
+}
+
+.file_link:hover i {
+  color: #fff;
+}
+
+.board_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: var(--mb-2);
+}
+
+.board_btn .button {
+  padding: .75rem 1.25rem;
+  -webkit-transition: .3s;
+  transition: .3s;
+  font-size: var(--smaller-font-size);
+}
+
+.button_gray {
+  background-color: var(--second-color);
+  color: #fff;
+}
+
+.button_gray:hover {
+  background-color: var(--text-color);
+  color: #fff;
+}
+
+/* ===================== mediaquery ====================== */
+@media screen and (min-width: 321px) {
+  .form_block, .form_phone {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .form_block > select {
+    max-width: 206px;
+  }
+  .form_block > input {
+    max-width: 206px;
+  }
+  .form_phone > input {
+    max-width: 62px;
+  }
+  .form_phone span {
+    margin: 0 .25rem;
+  }
+  .form_block textarea {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* 공지사항 */
+  .board_search select {
+    width: 100px;
+  }
+  .board_search .board_searchtxt {
+    max-width: 180px;
+    padding: .5rem;
+  }
+  .board_button {
+    padding: .5rem 1rem;
+  }
+  .b_no {
+    display: block;
+    width: 10%;
+    text-align: center;
+    font-size: var(--font-small);
+  }
+  .b_title {
+    width: 60%;
+    padding-left: .5rem;
+  }
+  .b_date {
+    width: 20%;
+    color: #222;
+  }
+  .b_count {
+    display: block;
+    width: 10%;
+    text-align: center;
+  }
+  .board_header .b_no {
+    font-size: initial;
+  }
+  .board_btn .button {
+    font-size: var(--small-font-size);
+  }
+  /* 수강후기 */
+  .board_review .board_item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .board_review .b_no {
+    width: 10%;
+  }
+  .board_header .b_star {
+    display: block;
+    color: var(--text-color);
+    width: 30%;
+  }
+  .board_review .b_star {
+    width: 30%;
+    text-align: center;
+  }
+  .board_review .b_review {
+    width: 60%;
+  }
+  /* ================= read ================= */
+  .read_top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1rem;
+  }
+  .read_date {
+    margin-top: 0;
+  }
+  .read_article {
+    padding: 2rem 1rem;
+    line-height: 200%;
+  }
+  /* ====================== write ===================== */
+  .form_block {
+    padding: .75rem 1rem;
+  }
+  .form_block > input#title {
+    max-width: 500px;
+  }
+  .form_phone > input {
+    max-width: 62px;
+  }
+  .write_form .button {
+    padding: 1rem 3rem;
+  }
+  .form_check input {
+    margin-top: .25rem;
+    margin-right: .5rem;
+  }
+  .form_check label span {
+    margin-top: .25rem;
+  }
+  .form_label {
+    font-size: var(--normal-font-size);
+  }
+  .form_check {
+    line-height: 130%;
+  }
+  .form_check label {
+    font-size: var(--small-font-size);
+  }
+}

@@ -1,0 +1,173 @@
+/***************************************************************
+    04. typo
+***************************************************************/
+// @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  font-family: var(--body-font);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+.line_h {
+  line-height: $lineh;
+}
+
+.line_th {
+  text-decoration: $lineth;
+}
+
+.line_under {
+  text-decoration: $lineunder;
+}
+
+.font_b {
+  font-weight: var(--font-bold);
+}
+
+.font_m {
+  font-weight: var(--font-medium);
+}
+
+.font_h1 {
+  @include font_h1;
+}
+
+.font_h2 {
+  @include font_h2;
+}
+
+.font_h3 {
+  @include font_h3;
+}
+
+.font_h4 {
+  @include font_h4;
+}
+
+.font_h5 {
+  @include font_h5;
+}
+
+.font_h6 {
+  @include font_h6;
+}
+
+.font_subtitle_1 {
+  @include font_subtitle_1;
+}
+
+.font_subtitle_2 {
+  @include font_subtitle_2;
+}
+
+.font_body_1 {
+  @include font_body_1;
+}
+
+.font_body_2 {
+  @include font_body_2;
+}
+
+.font_caption {
+  @include font_caption;
+}
+
+.font_overline {
+  @include font_overline;
+}
+
+.font_btn_l {
+  @include font_btn_l;
+}
+
+.font_btn_m {
+  @include font_btn_m;
+}
+
+.font_btn_s {
+  @include font_btn_s;
+}
+
+.font_helper {
+  @include font_helper;
+}
+
+.font_input_label {
+  @include font_input_label;
+}
+
+.font_input_l {
+  @include font_input_l;
+}
+
+.font_input_m {
+  @include font_input_m;
+}
+
+.font_input_s {
+  @include font_input_s;
+}
+
+.font_avatar {
+  @include font_avatar;
+}
+
+.font_chip {
+  @include font_chip;
+}
+
+.font_tooltip {
+  @include font_tooltip;
+}
+
+.font_alert {
+  @include font_alert;
+}
+
+.font_table_header {
+  @include font_table_header;
+}
+
+.font_badge_label {
+  @include font_badge_label;
+}
+
+.font_toast {
+  @include font_toast;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.text_right {
+  text-align: right;
+}
+
+.text_left {
+  text-align: left;
+}
+
+.listdot {
+  position: relative;
+  padding-left: 1rem;
+  &::before {
+    content: "";
+    @include listdot;
+  }
+}
+
+// @media (max-width: #{$tablet}) {
+//   :root {
+//     font-size: 14px;
+//   }
+// }
+
+// @media (max-width: #{$mobile_large}) {
+//   :root {
+//     font-size: 12px;
+//   }
+// }

@@ -1,0 +1,266 @@
+/***************************************************************
+    03. layer
+***************************************************************/
+:root{
+
+}
+.mt_0_25{
+  margin-top: .25rem;
+}
+
+.mt_0_5{
+  margin-top: .5rem;
+}
+
+.mt_0_75{
+  margin-top: .75rem;
+}
+
+.mt_1{
+  margin-top: 1rem;
+}
+
+.mt_1_25{
+  margin-top: 1.25rem;
+}
+
+.mt_1_5{
+  margin-top: 1.5rem;
+}
+
+.mt_1_75{
+  margin-top: 1.75rem;
+}
+
+.mt_2{
+  margin-top: 2rem;
+}
+
+.mt_2_5{
+  margin-top: 2.5rem;
+}
+
+.mt_3{
+  margin-top: 3rem;
+}
+
+.mt_3_5{
+  margin-top: 3.5rem;
+}
+
+.mt_4{
+  margin-top: 4rem;
+}
+
+.mb_0_25{
+  margin-bottom: .25rem;
+}
+
+.mb_0_5{
+  margin-bottom: .5rem;
+}
+
+.mb_0_75{
+  margin-bottom: .75rem;
+}
+
+.mb_1{
+  margin-bottom: 1rem;
+}
+
+.mb_1_25{
+  margin-bottom: 1.25rem;
+}
+
+.mb_1_5{
+  margin-bottom: 1.5rem;
+}
+
+.mb_1_75{
+  margin-bottom: 1.75rem;
+}
+
+.mb_2{
+  margin-bottom: 2rem;
+}
+
+.mb_2_5{
+  margin-bottom: 2.5rem;
+}
+
+.mb_3{
+  margin-bottom: 3rem;
+}
+
+.mb_3_5{
+  margin-bottom: 3.5rem;
+}
+
+.mb_4{
+  margin-bottom: 4rem;
+}
+
+.pd_none{
+  padding-bottom: 0;
+}
+
+.inner_0_25{
+  @include inner_0_25;
+}
+
+.inner_0_5{
+  @include inner_0_5;
+}
+
+.inner_0_75{
+  @include inner_0_75;
+}
+
+.inner_1{
+  @include inner_1;
+}
+
+.inner_1_25{
+  @include inner_1_25;
+}
+
+.inner_1_5{
+  @include inner_1_5;
+}
+
+.inner_1_75{
+  @include inner_1_75;
+}
+
+.inner_2{
+  @include inner_1;
+}
+
+.inner_tb_0_25{
+  @include inner_tb_0_25;
+}
+
+.inner_tb_0_5{
+  @include inner_tb_0_5;
+}
+
+.inner_tb_0_75{
+  @include inner_tb_0_75;
+}
+
+.inner_tb_1{
+  @include inner_tb_1;
+}
+
+.inner_tb_1_25{
+  @include inner_tb_1_25;
+}
+
+.inner_tb_1_5{
+  @include inner_tb_1_5;
+}
+
+.inner_tb_1_75{
+  @include inner_tb_1_75;
+}
+
+.inner_tb_2{
+  @include inner_tb_1;
+}
+
+.pd_bottom{
+  border-bottom: .5rem solid $gray07;
+}
+
+.pd_bottom_s{
+  border-bottom: 3rem solid $gray07;
+}
+
+.pd_bottom_m{
+  border-bottom: 5rem solid $gray07;
+}
+
+.pd_bottom_l{
+  border-bottom: 8rem solid $gray07;
+}
+
+.flex{
+  @include flex;
+}
+
+.flex_center{
+  @include flexcenter;
+}
+
+.flex_btw{
+  @include flexbtw;
+}
+
+.flex_right{
+  @include flexright;
+}
+
+.flex_top{
+  @include flextop;
+}
+
+.flex_topcenter{
+  @include flextopcenter;
+}
+
+.flex_topbtw{
+  @include flextopbtw;
+}
+
+.flex_topright{
+  @include flextopright;
+}
+
+
+.grid_btw{
+  display: grid;
+  align-content: space-between;
+}
+
+.grid_center{
+  display: grid;
+  align-content: center;
+  justify-items: center;
+}
+
+
+//layout
+.fullpage{
+  height: 100svh;
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+
+  max-width: 47rem;
+  padding: 0 1.25rem;
+  margin: 0 auto;
+
+  @include tablet{
+    padding: 0 2.5rem;
+  }
+}
+
+.main{
+  min-height: 100svh;
+}
+
+.contents{
+  width: 100%;
+  max-width: 47rem;
+  padding: 1.5rem 1.25rem;
+  margin: 0 auto;
+
+  @include tablet{
+    padding: .375rem 5.625rem 3rem
+  }
+
+  @include pc{
+    
+  }
+
+}

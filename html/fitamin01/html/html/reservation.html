@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>킥더허들 헬스케어</title>
+    <meta name="keywords" content="킥더허들 헬스케어">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="누구나 누릴 수 있는 일상의 건강">
+    <meta name="format-detection" content="telephone=no">
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <script type="text/javascript" src="<c:url value='/vendors/jquery/jquery-3.6.0.min.js' />"></script>
+
+    <!-- ============================ css ======================= -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link href="../../css/m.common.css" rel="stylesheet">
+    <link href="../../css/m.sub.css" rel="stylesheet">
+
+
+
+    <script type="text/javascript" src="<c:url value='/bootstrap/js/bootstrap.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/vendors/popper/popper.min.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/scripts/modal.js' />"></script> <!-- 모달 스크립트 -->
+    <script type="text/javascript" src="<c:url value='/scripts/common.js' />"></script> <!-- 공통 스크립트 -->
+    <script type="text/javascript" src="<c:url value='/scripts/hybridBridge.js' />"></script> <!-- 네이티브 인터페이스 브릿지 -->
+</head>
+<body>
+    <main class="main" id="top">
+
+        <header class="header" id="header">
+            <nav class="nav">
+                <a href="javascript:goHistoryback();" class="nav_back">
+                    <i class="ri-arrow-left-s-line"></i>
+                </a>
+
+                <h2 class="sub_header">마케팅 정보 수신 동의</h2>
+                <div class="nav_menu" id="nav-menu">
+                    <div class="nav_user">
+                        <a href="#" class="nav_user_link">로그인</a>
+                        <a href="#" class="nav_user_link">마이 페이지</a>
+                    </div>
+        
+                    <!-- ========메뉴 =========-->
+                    <ul class="nav_list">
+                        <li class="nav_item">
+                            <a href="#" class="nav_link active_link">홈</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">핏타민 시작하기</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">마이페이지</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">브랜드 스토리 <i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="nav_dep">
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">핏타민 스토리</a>
+                                </li>
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">핏타민 소개</a>
+                                </li>
+                                <li class="nav_dep_item">
+                                    <a href="#" class="nav_dep_link">이용방법</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">고객후기</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">이벤트 · 공지</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">고객센터</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="nav_close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+        
+                    <div class="nav_search">
+                        <input type="text" class="search" placeholder="검색어를 입력해주세요">
+                        <button type="submit" class="search btn_basic">검색</button>
+                    </div>
+        
+                    <!-- ================= quick link ================= -->
+                    <div class="nav_quick">
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg01.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>People</span>
+                                <p>시작부터 섭취까지<br>약사와 함께</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg02.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>Service</span>
+                                <p>과학적인 데이터<br>근거 중심으로</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg03.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>Product</span>
+                                <p>단 1알까지<br>품질우선주의</p>
+                            </div>
+                        </a>
+                        <a href="#" class="nav_quick_link">
+                            <img src="../../images/ham_menu07_bg04.png" alt="">
+                            <div class="nav_quick_txt">
+                                <span>B2B</span>
+                                <p>기업 건강 복지<br>영양제 정기배송</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="nav_toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </nav>
+        </header>
+        
+        <div class="container" data-layout="container">
+            <div class="main_wrap">
+                <p class="font_l group_center mb_3">화상상담 예약 규정 및<br>상담 시 유의사항</p>
+                <div class="info_block">
+                    <p class="info_title">상담/결제</p>
+                    <p class="info_txt">
+                        - 예약된 시간부터 15분간 상담을 진행합니다.<br>
+                        - 상담 예약 시, 상담료는 별도로 발생하지 않습니다.<br>
+                    </p>
+                </div>
+
+                <div class="info_block">
+                    <p class="info_title">예약 취소/환불</p>
+                    <p class="info_txt">
+                        - 예약 신청 후 상담 약사가 예약을 확인한 뒤 승인하면 예약이 확정됩니다.<br>
+                        - 예약 신청시간 1시간 전까지 상담약사 승인이 이루어지지 않으면 예약은 자동 취소됩니다.<br>
+                        - 상담약사 승인(예약 확정) 전, [마이페이지] - [상담내역] - [예약 내역 확인]에서 취소 가능합니다.<br>
+                        - 상담약사 승인(예약 확정) 후 취소 시 취소 수수료는 발생하지 않습니다.<br>
+                        - 회원의 사정으로 예약한 시간에 5분 이상 늦거나 혹은 미접속으로 상담이 이루어지지 않은 경우 해당 상담 예약 건은 자동 취소 처리됩니다.<br>
+                        - 상담약사 사정으로 상담을 하지 못한 경우, 고객센터로 문의해 주시길 바랍니다.<br>
+                        - 반복적으로 예약 후 취소하여 타 고객과 상담약사에 불편을 끼치는 경우 서비스 이용이 제한될 수 있습니다.<br>
+                    </p>
+                </div>
+
+                <div class="info_block">
+                    <p class="info_title">상담시 유의사항</p>
+                    <p class="info_txt">
+                        - 화상 상담 진행시에는 상담 내용이 녹화됩니다. 녹화된 영상은 상담 내용 확인과 향후 서비스 개선을 위한 용도로만 사용됩니다.<br>
+                        - 본 화상 상담(방송)은 ㈜참약사의 허가를 받아(허가 및 감독 하에) 제공되며, 저작권 보호를 받습니다. 어떠한 형태의 복제, 재전송을 금지하고 해설 및 설명도 서면합의가 없이 배포될 수 없습니다. (저작권법 제16조~제21조 등)<br>
+                        - 산업안전보건법에 따라 고객응대 근로자 보호조치를 시행하고 있습니다. 폭언, 욕설 시에는 상담이 종료될 수 있으며, 상습적인 폭언 욕설 시 이용이 제한되며, 형사 처벌의 대상이 될 수 있습니다.<br>
+                        - 성폭력범죄의 처벌 등에 관한 특례법 제 13조 (통신매체를 이용한 음란행위)에 따라 본 화상 상담(방송, 전화, 채팅창 등)에서 출연진 또는 상담사에 대한 성적 수치심이나 혐오감을 일으키는 성희롱 및 비하 발언 등의 행위는 형사 처벌의 대상이 될 수 있습니다.<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="social">
+                <a href="#" class="social_link"><img src="../../images/ft_kakao.png" alt=""></a>
+                <a href="#" class="social_link"><img src="../../images/ft_insta.png" alt=""></a>
+                <a href="#" class="social_link"><img src="../../images/ft_blog.png" alt=""></a>
+            </div>
+        
+            <div class="footer_item">
+                <p class="w_bold">고객센터</p>
+                <p>이메일 : help.fitamin@kthd.co.kr<br>070-8664-0698, 1661-4739<br>(평일 9:00 ~ 18:00, 점심시간 : 12:30 ~ 13:30)</p>
+            </div>
+            <div class="footer_item">
+                <p class="w_bold">(주)킥더허들 헬스케어</p>
+                <p>대표 : 박진환<br>451-85-01446 | 제2022-서울강남-01577호<br> 서울특별시 강남구 봉은사로68길 8, 4층 <br />개인정보관리책임자 : 강영빈</p>
+            </div>
+            <div class="footer_item">
+                <p class="w_bold">(주)빅썸</p>
+                <p>대표 : 박지예<br>333-85-00488<br> 경기도 성남시 분당구 117, 10층(운중동)</p>
+            </div>
+            <div class="footer_item">
+                <p class="w_bold">상담주관기업 : (주)참약사</p>
+                <p>대표 : 김병주<br>736-88-01144<br> 서울특별시 성북구 종암로 120, 303호</p>
+            </div>
+        
+            <div class="footer_lnb footer_item">
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">규제특례 고지사항</a>
+            </div>
+        
+            <p class="copy">Copyright © Kick The Hurdle Healthcare Inc.<br> All Rights Reserved</p>
+        </footer>
+    </main>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- swiper slide -->
+    <script type="text/javascript" src="../../scripts/mobile.js"></script> <!-- 추가 스크립트 -->
+</body>
+</html>
+
+
+
+
+

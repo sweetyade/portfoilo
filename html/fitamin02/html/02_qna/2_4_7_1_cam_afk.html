@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>2-4-7-1.화상상담화면(약사자리비움)</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="consult_chat">
+        <!-- 비디오 영역 -->
+        <div class="video_wrap">
+          <img src="../../images/chat_sample.png" alt=""> <!-- 화상채팅 이미지 샘플, 디자인확인용-->
+        </div>
+
+        <!-- 약사 자리이탈 -->
+        <div class="video_blur">
+          <p class="icon_cam"><img src="../../images/icon/cam_wt.svg" alt=""></p>
+          <p class="p3_f light mt_0_75 mb_4">약사님이 잠시 자리를 비우셨어요</p>
+        </div>
+
+        <!-- 약사 입장중 -->
+        <div class="video_loading" style="display: none">
+          <div class="loading_bar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <p class="p3_f mt_0_75" style="margin-bottom: 8rem">약사님이 상담실에 입장중이예요!<br>
+            잠시만 기다려주세요</p>
+        </div>
+        
+        <!-- 상단 탭 버튼 -->
+        <div class="modal_btn">
+          <p class="icon_round surveyOpen">설문결과</p>
+          <p class="icon_round goodsOpen">추천 영양제</p>
+        </div>
+
+        <!-- 채팅 하단 액션 -->
+        <div class="chat_bottom">
+          <!-- my cam-->
+          <div class="my_cam">
+            <div class="cam_wrap">
+              <div class="cam">
+                <img src="../../images/chat_sample.png" alt="">
+              </div><!-- 내 화면 디자인 확인용 / 사용자 카메라에 따라 높이값 자동-->
+              <div class="mute">
+                <p class="icon_camera"><img src="../../images/icon/cam_wt.svg" alt=""></p>
+                <p class="icon_mic"><img src="../../images/icon/mic_wt.svg" alt=""></p>
+                <p class="icon_double"><img src="../../images/icon/cam_wt.svg" alt=""><img src="../../images/icon/mic_wt.svg" alt=""></p>
+              </div>
+              <div class="time">남은시간<p class="jst-timeout timer"  data-minutes-left=20></p></div>
+            </div>
+          </div>
+
+          <!-- 유저 액션버튼 -->
+          <div class="action_btn">
+            <p class="action_icon action_mic"></p>
+            <p class="action_icon action_camera"></p>
+            <p class="action_icon action_talk"></p>
+            <p class="action_icon action_noti"></p>
+          </div>
+
+          <!-- 챗 모달 -->
+          <div class="chat_modal talkOpen" style="height: 30svh; padding-bottom: 0;">
+            <div class="chat_wrap">
+              <div class="chat_con">
+                <div class="chat_left">
+                  <div class="left_con">
+                    <p class="img"><img src="../../images/chat_sample.png" alt=""></p>
+                    <p class="chat_txt">감사합니다. 확정된 영양제 중에서 결제를 희망하지 않는 제품이 있다면 결제화면에서 변경하실 수 있습니다</p>
+                  </div>
+                  <p class="date">오후 09:25</p>
+                </div>
+                <div class="chat_right">
+                  <p class="date">오후 09:25</p>
+                  <p class="chat_txt">네 알겠습니다.</p>
+                </div>
+              </div>
+            </div>
+            <div class="chat_write">
+              <div class="input_div">
+                <input type="text" placeholder="메세지를 입력해주세요">
+                <p class="file"><img src="../../images/icon/copy.svg" alt=""></p>
+              </div>
+              <input type="submit" value="" class="sand_btn">
+            </div>
+          </div>
+
+          <!-- 상단 버튼 모달 -->
+          <div class="chat_modal conModal">
+            <div class="in_con">설문결과</div>
+            <div class="in_con">추천 영양제</div>
+          </div>
+          <!-- 에러시 노티 -->
+          <div class="chat_error" style="display: none;">
+            <p class="txt" style="gap:.25rem"><img src="../../images/icon/noti_error.svg" alt="">연결이 끊어지면 화면을 아래로 끌어 새로고침 해주세요</p>
+            <p class="btn_s btn_white modalOpen">영상 또는 음성에 오류가 있어요!</p>
+          </div>
+
+          <!-- 토스트메세지 -->
+          <p class="toast" style="display: none;">상담 종료 5분 전이예요</p>
+        </div>
+      </div>
+
+
+    <!-- 음성오류확인 모달-->
+    <div class="modal modal01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 모달 컨텐츠-->
+      <div class="modal_wrap">
+        <div class="modal_top">
+          <p class="modal_title">영상 또는 음성에 오류가 있어요!</p>
+        </div>
+
+        <div class="modal_con">
+          <ul class="list_dot">
+            <li>사용하시는 기기 설정에서 카메라, 오디오 권한이 활성화 되어있는지 확인해 주세요.</li>
+            <li>카메라가 꺼져있거나 음소거 상태인지 확인해 주세요.</li>
+            <li>문제가 해결되지 않는 경우에는 기기명과 OS 버전을 카카오톡 채널로 문의해 주세요.</li>
+          </ul>
+        </div>
+        <div class="btn_wrap">
+          <button class="btn_b btn_basic modalClose">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 카메라 끄기 팝업 -->
+    <div class="popup popup01">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 팝업 컨텐츠 -->
+      <div class="popup_wrap">
+        <p class="pop_title">5초 뒤 카메라를 끄실 수 있어요</p>
+        <p class="pop_txt">본인확인을 위해 상담 시작 후 5초 동안은<br>
+          카메라를 킨 상태로 유지해주세요</p>
+        <!-- 버튼 2개 -->
+        <div class="pop_btn">
+          <button class="btn_m btn_light popClose">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 상담종료 팝업-->
+    <div class="popup popup02">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 팝업 컨텐츠 -->
+      <div class="popup_wrap">
+        <p class="pop_title">상담이 종료되었어요</p>
+        <p class="pop_txt">이제 김예림 약사님과의 상담결과와<br>
+          확정된 추천 영양제를 확인하실 수 있어요!</p>
+        <!-- 버튼 2개 -->
+        <div class="pop_btn">
+          <button class="btn_m btn_light popClose">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 상담오류 팝업 -->
+    <div class="popup popup03">
+      <!-- 팝업안 전체 오버레이 -->
+      <div class="overlay"></div>
+
+      <!-- 팝업 컨텐츠 -->
+      <div class="popup_wrap">
+        <p class="pop_title">상담에 문제가 생겼나요?</p>
+        <p class="pop_txt">신고하기 버튼을 누르시면 즉시 상담이 종료되며 불편사항을 신고하실 수 있어요.</p>
+        <!-- 버튼 2개 -->
+        <div class="pop_btn">
+          <button class="btn_m btn_light popClose">닫기</button>
+          <button class="btn_m btn_red popClose">신고하기</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/jquery.simple.timer.js"></script>
+    <script>
+      //하단 액션
+      var tabBtn = $(".icon_round");   
+      var tabCont = $(".in_con");   
+      var myCam = $(".my_cam");
+      var myCamCamera = $(".icon_camera");
+      var myCamMic = $(".icon_mic");
+      var myCamDb = $(".icon_double");
+      var actionBtn = $(".action_icon");
+      var actionMic = $(".action_mic");
+      var actionCamera = $(".action_camera");
+      var actionTalk = $(".action_talk");
+      var chatOpen = $(".talkOpen");
+
+
+      //상단 모달버튼
+      //.surveyOpen .serveyModal -> .select / .conModal
+      tabBtn.click(function(){
+        if($(this).hasClass("select")){
+          $(this).removeClass("select");
+          $(".conModal").removeClass("openModal").slideUp();
+          myCam.removeClass("cam_none");
+        }else{
+          $(this).addClass("select");
+          $(this).siblings().removeClass("select");
+          $(".conModal").addClass("openModal").slideDown();
+          myCam.addClass("cam_none");
+          chatOpen.slideUp().removeClass("openModal");
+          actionTalk.removeClass("active");
+        }
+      })
+
+      //모달내 컨텐츠 노출
+      tabCont.hide().eq(0).show();
+
+      tabBtn.click(function(){
+      var target = $(this);               
+      var index = target.index();          
+      // alert(index);
+      tabBtn.removeClass("active");          
+      target.addClass("active");                
+      tabCont.css("display","none");
+      tabCont.eq(index).css("display","block");
+      });
+
+      //카메라 타이머
+      $(function(){
+        $('.timer').startTimer({
+          onComplete: function(element){
+            $('html, body').addClass('bodyTimeoutBackground');
+          }
+        }).click(function(){ location.reload() });
+      })
+
+      //유저 액션 버튼 - 마이크
+      actionMic.click(function(){
+        var target = $(this);
+        if(target.hasClass("active")){
+          target.removeClass("active");
+          myCamMic.css("display","none");
+          myCamDb.css("display","none");
+          if(actionCamera.hasClass("active")){
+            myCamCamera.css("display","flex");
+          }
+        }else{
+          target.addClass("active");
+          if(actionCamera.hasClass("active")){
+            myCamCamera.css("display","none");
+            myCamMic.css("display","none");
+            myCamDb.css("display","flex");
+          }else{
+            myCamMic.css("display","block");
+          }
+        }
+      });
+
+      //유저 액션 버튼 - 카메라
+      actionCamera.click(function(){
+          var target = $(this);
+          if(target.hasClass("active")){
+            target.removeClass("active");
+            myCamCamera.css("display","none");
+            myCamDb.css("display","none");
+            if(actionMic.hasClass("active")){
+              myCamMic.css("display","block");
+          }
+          }else{
+            target.addClass("active");
+            if(actionMic.hasClass("active")){
+              myCamMic.removeClass("active");
+              myCamDb.css("display","flex");
+            }else{
+              myCamCamera.css("display","flex");
+            }
+            
+          }
+        })
+
+      //유저 액션 버튼 - 채팅
+      actionTalk.click(function(){
+        var target = $(this);
+        target.toggleClass("active");
+        chatOpen.slideToggle().addClass("openModal");
+      })
+
+
+
+      /* popup */
+      $(".modalOpen").on("click", function () {
+        $(".modal01, body").addClass("open");
+      });
+
+      $(".action_noti").on("click", function () {
+        $(".popup03, body").addClass("open");
+      });
+
+      $(".overlay, .modalClose, .popClose").on("click", function () {
+        $(".popup, .modal, body").removeClass("open");
+      });
+    </script>
+  </body>
+</html>

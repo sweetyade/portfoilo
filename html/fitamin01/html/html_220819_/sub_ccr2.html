@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>킥더허들 헬스케어</title>
+    <meta name="keywords" content="킥더허들 헬스케어">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="누구나 누릴 수 있는 일상의 건강">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- ============================ css ======================= -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="../../css/newindex.css">
+    <link rel="stylesheet" href="../../css/m.sub.css">
+    <link rel="stylesheet" href="../../css/m.common.css">
+    <link href="../../css/fitamin_2201819.css" rel="stylesheet"> <!-- 새로 추가된 css -->
+
+</head>
+
+    <div class="main">
+
+        <!-- header -->
+        <header class="header" id="header">
+            <nav class="nav">
+                <a href="javascript:CommonJS.goHistoryBack();" class="nav_back header_back" style="">
+                    <i class="ri-arrow-left-s-line"></i>
+                </a>
+
+                <h2 class="sub_header header_sub_header" style="">상담예약</h2>
+        
+
+                <!--///////////////////// 변경된 해더 햄버거 메뉴 컨텐츠 ///////////////////-->
+                <!--///////////////////// 여기서부터 복사하여 같은 위치에 변경해주세요 /////////////////////-->
+                <div class="nav_menu" id="nav-menu">
+
+                    <!----------- 비로그인시에만 노출됩니다 ------------->
+                    <div class="nav_login">
+                        <div class="nav_in flex">
+                          <a href="#" class="nav_user_link1">로그인</a>
+                          <a href="#" class="nav_user_link2"><i class="ri-kakao-talk-fill"></i> 카카오 1초 로그인</a>
+                        </div>
+                    </div>
+
+                    <!-- ----------- 로그인 회원정보 메뉴 ------------>
+                    <div class="nav_userinfo">
+                        <div class="nav_in">
+                            <div class="navin_top flex">
+                            <p class="title">김다민 <span>님</span></p> <!-- 회원가입 시 가입정보 이름 -->
+                            <p class="nav_code flex">추천코드 <b>ROWIIOOO</b> <a href="#" class="flex"><img src="../../images/icon_copy.svg" alt=""></a></p>
+                            </div>
+                            <div class="navin_bottom">
+                            <p class="normal_f">damin@naver.com</p>
+                            <p class="normal_f">리뷰 <a href="#">1</a> ｜ 작성가능한 리뷰 <a href="#">2</a></p>
+                            <a href="#" class="btn_logout"><img src="../../images/icon_logout.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------- 로그인 비 구독시 노출 ----------->
+                    <ul class="visual_subcard login_subcard">
+                        <li class="subcard_in">
+                            <div class="subcard_top flex">
+                                <div class="subcard_title flex">
+                                    <p class="title">핏타민 구독<span>하고 다양한 혜택 받으세요</span></p>
+                                </div>
+                            </div>
+    
+                            <div class="subcard_bottom flex">
+                                <div class="subcard_info">
+                                    <p>+ 약사상담비 무료 적용</p>
+                                    <p>+ 건강지원 20% 할인 중</p>
+                                </div>
+    
+                                <div class="subcard_date flex">
+                                </div>
+                            </div>
+                            </li>
+                    </ul>
+
+                    <!------------- 로그인 구독시 노출 ----------->
+                    <ul class="visual_subcard login_subcard">
+                        <li class="subcard_in">
+                            <div class="subcard_top flex">
+                                <div class="subcard_title flex">
+                                    <p class="title">다미니님</p> <!-- 구독신청 시 봉투에 적는 이름 노출 -->
+                                    <img src="../../images/subcard_title.svg" alt="">
+                                </div>
+                                <a href="#" class="subcard_link flex">마이페이지 <i class="ri-arrow-right-s-line"></i></a>
+                            </div>
+    
+                            <div class="subcard_bottom flex">
+                                <div class="subcard_info">
+                                    <p>+ 약사상담비 무료 적용</p>
+                                    <p>+ 건강지원 20% 할인 중</p>
+                                </div>
+    
+                                <div class="subcard_date flex">
+                                    <div class="subcard_block">
+                                        <p class="no">5</p>
+                                        <p class="txt">구독 회차</p>
+                                    </div>
+                                    <div class="subcard_block">
+                                        <p class="no2">07.05</p>
+                                        <a href="#" class="txt flex">다음 구독일 <i class="ri-arrow-right-s-line"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="subcard_in">
+                        <div class="subcard_top flex">
+                            <div class="subcard_title flex">
+                                <p class="title">피터박님</p>
+                                <img src="../../images/subcard_title.svg" alt="">
+                            </div>
+                            <a href="#" class="subcard_link flex">마이페이지 <i class="ri-arrow-right-s-line"></i></a>
+                        </div>
+
+                        <div class="subcard_bottom flex">
+                            <div class="subcard_info">
+                                <p>+ 약사상담비 무료 적용</p>
+                                <p>+ 건강지원 20% 할인 중</p>
+                            </div>
+
+                            <div class="subcard_date flex">
+                                <div class="subcard_block">
+                                    <p class="no">1</p>
+                                    <p class="txt">구독 회차</p>
+                                </div>
+                                <div class="subcard_block">
+                                    <p class="no2">07.01</p>
+                                    <a href="#" class="txt flex">다음 구독일 <i class="ri-arrow-right-s-line"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    </ul>
+
+                    <!---------- 아래부터 기본 노출 화면 --------->
+                    <div class="nav_quick">
+                        <div class="nav_in">
+                            <p class="title">핏타민 시작하기</p>
+                            <div class="flex">
+                            <div class="quick_menu">
+                                <a href="#" class="quick_link quick01">
+                                <img src="../../images/quick_icon1.png" alt="">
+                                <span>예약상담</span>
+                                </a>
+                                <p class="quick_txt">3분 설문 ➡ 1:1 약사상담</p>
+                            </div>
+                            <div class="quick_menu">
+                                <a href="#" class="quick_link quick02">
+                                <img src="../../images/quick_icon2.png" alt="">
+                                <span>즉시상담</span>
+                                </a>
+                                <p class="quick_txt">지금 바로 1:1 약사상담</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----------- 메뉴 ---------->
+                    <div class="menu_list">
+                        <a href="#" class="flex nav_link">고객후기<i class="ri-arrow-right-s-line"></i></a>
+                    </div>
+
+                    <div class="menu_list nav-open">
+                        <a href="#" class="flex nav_link">고객센터<i class="ri-arrow-down-s-line"></i></a>
+                        <div class="nav_in" style="height:115px">
+                            <div class="nav_sub flex">
+                                <a href="#">1:1 문의하기</a>
+                                <a href="#">자주묻는질문</a>
+                                <a href="#">공지사항 </a>
+                                <a href="#">이벤트</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="menu_list">
+                        <a href="#" class="flex nav_link">브랜드스토리<i class="ri-arrow-down-s-line"></i></a>
+                        <div class="nav_in">
+                            <div class="nav_sub flex">
+                                <a href="#">핏타민스토리</a>
+                                <a href="#">핏타민소개</a>
+                                <a href="#">이용방법 </a>
+                                <a href="#">섭취방법</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nav_close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+
+                </div>
+                <!--////////////////// 여기까지 ////////////////////////-->
+        
+                <div class="nav_toggle flex" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </nav>
+        </header>
+
+        <!-- //////////////////// 마이페이지 컨텐츠 영역 ////////////////////// -->
+        <div class="update_wrap">
+
+            
+            <section class="update_block">
+                <p class="title">상담 시간 예약</p>
+                <div class="update_in">
+                    <p class="slt_top flex"><img src="../../images/pfimg.png" alt=""> 상담약사</p>
+                    <div class="slt_block flex">
+                        <input type="radio" name="slt" checked id="slt01">
+                        <label for="slt01">배정된 약사님과 상담할래요</label>
+                    </div>
+                    <div class="slt_block flex">
+                        <input type="radio" name="slt" id="slt02">
+                        <label for="slt02">새로운 약사님과 상담할래요</label>
+                    </div>
+                </div>
+            </section>
+
+            <form action="">
+                <section class="update_block">
+                    <!-- <p class="title">예약정보 변경</p> -->
+                    <div class="update_in">
+                        <div class="update_cld">
+                            <div class="cld_month flex">
+                                <a href="#"><i class="ri-arrow-left-s-line"></i></a>
+                                <p>2022.8</p>
+                                <a href="#"><i class="ri-arrow-right-s-line"></i></a>
+                            </div>
+    
+                            <div class="cld_week flex">
+                                <p>일</p>
+                                <p>월</p>
+                                <p>화</p>
+                                <p>수</p>
+                                <p>목</p>
+                                <p>금</p>
+                                <p>토</p>
+                            </div>
+    
+                            <div class="cld_week flex">
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w1_1">
+                                    <label for="w1_1"></label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w1_2">
+                                    <label for="w1_2"></label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w1_3">
+                                    <label for="w1_3"></label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w1_4">
+                                    <label for="w1_4"></label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w1_5">
+                                    <label for="w1_5"></label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w1_6" disabled>
+                                    <label for="w1_6">1</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w1_7" disabled>
+                                    <label for="w1_7">2</label>
+                                </div>
+                            </div>
+    
+                            <div class="cld_week flex">
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w2_1" disabled>
+                                    <label for="w2_1">3</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w12_2" disabled>
+                                    <label for="w2_2">4</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w2_3" disabled>
+                                    <label for="w2_3">5</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w2_4" disabled>
+                                    <label for="w2_4">6</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w2_5" disabled>
+                                    <label for="w2_5">7</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w2_6" disabled>
+                                    <label for="w2_6">8</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w2_7" disabled>
+                                    <label for="w2_7">9</label>
+                                </div>
+                            </div>
+    
+                            <div class="cld_week flex">
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w3_1" disabled>
+                                    <label for="w3_1">10</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w3_2" disabled>
+                                    <label for="w3_2">11</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w3_3" disabled>
+                                    <label for="w3_3">12</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w3_4" disabled>
+                                    <label for="w3_4">13</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w3_5" disabled>
+                                    <label for="w3_5">14</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w3_6" disabled>
+                                    <label for="w3_6">15</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w3_7" disabled>
+                                    <label for="w3_7">16</label>
+                                </div>
+                            </div>
+    
+                            <div class="cld_week flex">
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w4_1" disabled>
+                                    <label for="w4_1">17</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w4_2" disabled>
+                                    <label for="w4_2">18</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w4_3" disabled>
+                                    <label for="w4_3">19</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w4_4" disabled>
+                                    <label for="w4_4">20</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w4_5" disabled>
+                                    <label for="w4_5">21</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w4_6" disabled>
+                                    <label for="w4_6">22</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w4_7" disabled>
+                                    <label for="w4_7">23</label>
+                                </div>
+                            </div>
+    
+                            <div class="cld_week flex">
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w5_1" disabled>
+                                    <label for="w5_1">24</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w5_2" disabled>
+                                    <label for="w5_2">25</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w5_3" disabled>
+                                    <label for="w5_3">26</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w5_4" checked>
+                                    <label for="w5_4">27</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w5_5">
+                                    <label for="w5_5">28</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w5_6">
+                                    <label for="w5_6">29</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w5_7">
+                                    <label for="w5_7">30</label>
+                                </div>
+                            </div>
+    
+                            <div class="cld_week flex">
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w6_1">
+                                    <label for="w6_1">31</label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w6_2">
+                                    <label for="w6_2"></label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w6_3">
+                                    <label for="w6_3"></label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w6_4">
+                                    <label for="w6_4"></label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w6_5">
+                                    <label for="w6_5"></label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w6_6">
+                                    <label for="w6_6"></label>
+                                </div>
+                                <div class="cld_day">
+                                    <input type="checkbox" id="w6_7">
+                                    <label for="w6_7"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </form>
+
+            <form action="">
+                <section class="update_block">
+                    <div class="title flex"><p class="flex"><i class="ri-time-line icon_time"></i>시간선택</p> <i class="ri-arrow-down-s-line icon_time02"></i></div>
+                    <div class="update_in more_time">
+                        <div class="update_time flex">
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_1" disabled>
+                                <label for="t1_1">11:00</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_2" disabled>
+                                <label for="t1_2">11:20</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_3" disabled>
+                                <label for="t1_3">11:40</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_4" disabled>
+                                <label for="t1_4">12:00</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_5" disabled>
+                                <label for="t1_5">12:20</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_6" disabled>
+                                <label for="t1_6">12:40</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_7" disabled>
+                                <label for="t1_7">13:00</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_8" disabled>
+                                <label for="t1_8">13:20</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_9" disabled>
+                                <label for="t1_9">13:40</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_10" disabled>
+                                <label for="t1_10">14:00</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_11" disabled>
+                                <label for="t1_11">14:20</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_12" disabled>
+                                <label for="t1_12">14:40</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_13" checked>
+                                <label for="t1_13">15:00</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_14">
+                                <label for="t1_14">15:20</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_15">
+                                <label for="t1_15">15:40</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_16">
+                                <label for="t1_16">16:00</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_17">
+                                <label for="t1_17">16:20</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_18">
+                                <label for="t1_18">16:40</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_19">
+                                <label for="t1_19">17:00</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_20">
+                                <label for="t1_20">17:20</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_21">
+                                <label for="t1_21">17:40</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_22">
+                                <label for="t1_22">18:00</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_23">
+                                <label for="t1_23">18:20</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_24">
+                                <label for="t1_24">18:40</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_25">
+                                <label for="t1_25">19:00</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_26">
+                                <label for="t1_26">19:20</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_27">
+                                <label for="t1_27">19:40</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_28">
+                                <label for="t1_28">20:00</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_29">
+                                <label for="t1_29">20:20</label>
+                            </div>
+                            <div class="time_item">
+                                <input type="checkbox" id="t1_30">
+                                <label for="t1_30">20:40</label>
+                            </div>
+                        </div>
+
+                        <div class="time_notice flex more_con">
+                            <p class="time_ok">가능</p>
+
+                            <p class="time_select">선택</p>
+
+                            <p class="time_no">불가</p>
+
+                            <p class="txt">· 상담은 15분간 진행됩니다.</p>
+                        </div>
+                    </div>
+                </section>
+            </form>
+
+
+            
+
+
+            <div class="login_btn">
+                <div class="con_in">
+                    <button class="btn btn_blue btn_pop">예약하기</button>
+                </div>
+            </div>
+        </div>
+        <!-- /////////////////// 여기까지 //////////////// -->
+    </div>
+
+    <!-- 예약정보 변경 팝업 -->
+    <div class="coupon_popup chanPop">
+        <div class="overlay"></div>
+        <div class="coupon_pop align_center">
+            <div class="coupon_use">
+                <div class="conpon_poptxt" style="">
+                    <p>아래 일자로 상담을 예약할까요?</p><br>
+                    <p>
+                        일자 : 2020/09/29 <br>
+                        시간 : 20:20~20:30<br>
+                    </p>
+                </div>
+            </div>
+            <div class="popup_btn flex">
+                <a href="#" class="btn coupon_cancel">취소</a>
+                <a href="#" class="btn conpon_ok">예약하기</a>
+            </div>
+            <a href="#" class="coupon_close"><i class="ri-close-line"></i></a>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+
+    <script>
+
+        /*===== show menu =====*/
+        const navMenu = document.getElementById('nav-menu'),
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close');
+
+if(navToggle){
+  navToggle.addEventListener('click', () =>{
+      navMenu.classList.add('show-menu');
+  })
+}
+
+/*===== hidden menu =====*/
+if(navClose){
+  navClose.addEventListener('click', () =>{
+      navMenu.classList.remove('show-menu');
+  })
+};
+
+
+
+/* ====================== nav mobile menu ========================= */
+const navFull = document.querySelectorAll('.menu_list');
+
+navFull.forEach((item) =>{
+    const navTitle = item.querySelector('.nav_link');
+
+    navTitle.addEventListener('click', () =>{
+        const openItem = document.querySelector('.nav-open');
+
+        toggleItem(item);
+
+        if(openItem && openItem!== item){
+            toggleItem(openItem);
+        }
+    })
+})
+
+const toggleItem = (item) =>{
+    const navSub = item.querySelector('.nav_in');
+ 
+    if(item.classList.contains('nav-open')){
+        navSub.removeAttribute('style');
+        item.classList.remove('nav-open');
+    }else{
+        if(navSub != null) {
+            navSub.style.height = navSub.scrollHeight + 'px';
+            item.classList.add('nav-open');
+        }
+    }
+}
+
+
+
+$(function () {
+        $(".icon_time02").on("click", function() {
+            $(".more_time").slideToggle("fast"); // 2초에 걸쳐서 진행
+        })
+    })
+
+
+    /* 상담취소 팝업 */
+$(".btn_pop").on("click", function(){
+  $(".chanPop, body").addClass("active");
+});
+
+$(".overlay, .popup_btn, .coupon_close").on("click", function(){
+  $(".chanPop, body").removeClass("active");
+});
+
+
+
+
+    </script>
+    
+</body>
+</html>
+
+
+
+
+

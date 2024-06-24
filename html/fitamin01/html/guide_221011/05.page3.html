@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/rcommon.css">
+  <link rel="stylesheet" href="../../css/guide.css">
+  <link rel="stylesheet" href="../../css/rstyle.css">
+  <title>구독해지</title>
+
+</head>
+<body class="on">
+    <div class="rmain_wrap subdis_pg">
+      <section class="sub_sec">
+        <p class="subdis_t">핏타민 구독을 해지하시려는<br>
+          이유를 알려주세요</p>
+
+          <div class="svy_btns">
+            <a href="#" class="svy_q q_selet">타 영양제 섭취를 원해요</a>
+            <a href="#" class="svy_q">서비스 이용이 복잡하고 어려워요</a>
+            <a href="#" class="svy_q">혜택이 유용하지 않아요</a>
+            <a href="#" class="svy_q">원하는 기능이 없어요<br>
+              (원하시는 기능을 기재해주세요)</a>
+            <a href="#" class="svy_q">기타 (의견 작성 필수)</a>
+          </div>
+      </section>
+        
+      <section class="sub_sec">
+        <p class="subdis_t">어떤점을 개선하면 좋을까요?<br>
+          귀한 의견을 더해주세요</p>
+
+          <div class="input_basic">
+            <textarea name="" class="rtextarea" id="" cols="30" rows="10" placeholder="작성해주신 의견은 핏타민의 발전에 큰 도움이 됩니다. 더 나은 서비스를 위해 최선을 다하겠습니다."></textarea>
+          </div>
+      </section>
+
+        <div class="btn_center">
+          <button class="btn_b btn_blue" disabled>구독 해지하기</button>
+        </div>
+    </div>
+
+        <!-- 해지 팝업 -->
+        <div class="rpopup on">
+          <div class="overlay"></div>
+          <div class="pop_open">
+            <div class="pop_in">
+              <p class="p_txt1">구독을 해지하시겠어요?</p>
+            </div>
+            <div class="pop_btn">
+              <button class="btn_m btn_light p_cancel">닫기</button>
+              <button class="btn_m btn_red p_cp">해지</button>
+            </div>
+          </div>
+        </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+    $(".overlay, .pop_btn").on("click", function(){
+      $(".rpopup, body").removeClass("on");
+    });
+    </script>
+</body>
+</html>

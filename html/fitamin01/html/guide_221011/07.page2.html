@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/rcommon.css">
+  <link rel="stylesheet" href="../../css/guide.css">
+  <link rel="stylesheet" href="../../css/rstyle.css">
+  <title>이메일로 로그인</title>
+
+
+</head>
+<body>
+    <div class="rmain_wrap user_pg pd_base">
+      <section class="user_sec">
+
+        <div class="input_basic pd_inner mb_1_5">
+          <label for="lg_email">이메일 주소</label>
+          <input type="text" class="rinput" placeholder="이메일 주소를 입력해주세요" id="lg_email" pattern="^([a-z0-9_]){6,10}$" value="형식이 잘못되었을 때" required>
+          <p class="input_info error">올바른 이메일 형식을 작성해주세요</p>
+        </div>
+        <div class="input_basic pd_inner mb_1_5">
+          <label for="lg_pass">비밀번호</label>
+          <input type="password" class="rinput" placeholder="비밀번호를 입력해주세요" pattern="" id="lg_pass" required>
+          <p class="input_info error">특수문자가 포함되어 있는지 확인해주세요</p>
+        </div>
+        <div class="input_check pd_inner mb_3">
+          <input type="checkbox" class="rinput" id="lo_ck">
+          <label for="lo_ck" class="ck_circle">이메일 주소 저장</label>
+        </div>
+
+        <div class="btn_center mb_1_5">
+          <button class="btn_b btn_blue">로그인</button>
+        </div>
+
+        <a href="#" class="misc1_under gray_c01 text_center" style="display: block">회원정보를 잊어버리셨나요?</a>
+
+        <div class="btn_fix">
+          <div class="pop_info">
+            <p>가입된 아이디가 없거나 비밀번호가 틀립니다</p>
+          </div>
+        </div>
+      </section>
+    </div>
+</body>
+</html>
