@@ -9,7 +9,8 @@
   </head>
   <body>
     <style>
-      .dropdown{
+      .dropdown,
+      .alert{
         max-width: 350px;
       }
     </style>
@@ -774,13 +775,112 @@
           </div>
 
           <!-- alert -->
-          <div class="guide_block" style="display: none;">
+          <div class="guide_block">
             <h3>alert</h3>
             <div class="guide_data">
               <p class="title">default</p>
-              <div class="data" >
-                <div class="alert">
-                  <div class="alert-icon"><div class="ic_"></div></div>
+              <div class="data" style="display: flex; gap: 1rem; flex-direction: column;">
+                <div class="alert color_error">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
+                </div>
+                <div class="alert color_warning">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
+                </div>
+                <div class="alert color_info">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
+                </div>
+                <div class="alert color_success">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
+                </div>
+              </div>
+
+              <div class="data" style="display: flex; gap: 1rem; flex-direction: column;">
+                <div class="alert type_outline color_error">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
+                </div>
+                <div class="alert type_outline color_warning">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
+                </div>
+                <div class="alert type_outline color_info">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
+                </div>
+                <div class="alert type_outline color_success">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
+                </div>
+              </div>
+              
+              <div class="data" style="display: flex; gap: 1rem; flex-direction: column;">
+                <div class="alert type_label color_error">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
+                </div>
+                <div class="alert type_label color_warning">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
+                </div>
+                <div class="alert type_label color_info">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
+                </div>
+                <div class="alert type_label color_success">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
                 </div>
               </div>
 
@@ -807,7 +907,14 @@
         $(this).remove()
        })
 
-       //tab hover icon
+      //alert
+      $(".alertDel").click(function(){
+        $(this).parents('.alert').fadeOut(function(){
+          setTimeout(() => {
+            $(this).remove()
+          }, 1500);
+        })
+      })
     </script>
   </body>
 </html>
