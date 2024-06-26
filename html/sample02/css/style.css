@@ -721,6 +721,8 @@ body {
   font-weight: 400;
   line-height: 1.2;
   color: var(--text-primary);
+  font-size: var(--font-15);
+  line-height: 1.375rem;
 }
 
 .line_h {
@@ -1481,6 +1483,10 @@ body {
   background-image: url(../images/system/chevron_right.svg);
 }
 
+.ic_chevron_right_gr {
+  background-image: url(../images/system/chevron_right_gr.svg);
+}
+
 .ic_chevron_down {
   background-image: url(../images/system/chevron_down.svg);
 }
@@ -1601,8 +1607,12 @@ body {
   background-image: url(../images/system/circle.svg);
 }
 
-.star_fill_y {
+.ic_star_fill_y {
   background-image: url(../images/system/star_fill_y.svg);
+}
+
+.ic_star_fill_gr {
+  background-image: url(../images/system/star_fill_gr.svg);
 }
 
 .ic_moon_stars {
@@ -1619,6 +1629,9 @@ body {
 
 :root.dark .ic_chevron_right {
   background-image: url(../images/system/chevron_right_d.svg);
+}
+:root.dark .ic_chevron_right_gr_d {
+  background-image: url(../images/system/chevron_right_gr_d.svg);
 }
 :root.dark .ic_chevron_down {
   background-image: url(../images/system/chevron_down_d.svg);
@@ -2492,6 +2505,7 @@ button:disabled {
   overflow: hidden;
   transform: scale(0.98);
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 .btn.type_basic {
   background-color: var(--primary);
