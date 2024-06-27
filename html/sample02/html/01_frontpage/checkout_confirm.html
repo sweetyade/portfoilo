@@ -312,32 +312,6 @@
       $('#header .inner').removeClass('overlay');
     })
     
-      //alert
-    $(".alertDel").click(function(){
-      $(this).parents('.alert').fadeOut(function(){
-        setTimeout(() => {
-          $(this).remove()
-        }, 1500);
-      })
-    })
-
-    //bag list
-    $('.dataDel').click(function(){
-      $(this).parents('.checkout-data').fadeOut(function(){
-        setTimeout(() => {
-          $(this).remove()
-        }, 1500);
-      })
-    })
-
-    //카드선택
-    $('.input_check').click(function(){
-      if($(this).children('input').is(':checked')){
-        $(this).addClass('active');
-        $(this).siblings('.input_check').removeClass('active');
-      }
-    })
-
 
   </script>
 </body>
