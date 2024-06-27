@@ -338,11 +338,22 @@
     
     //주소선택
     $(".address_data label").click(function(){
-      if($(this).children('input').is(":checked")){
-        $(this).parents('.address_data ').addClass('active')
-      }
+      $(this).siblings('input').prop('checked',true);
+      $(this).parents('.address_data').addClass('active');
+      $(this).parents().siblings().removeClass('active')
+
+      // if($(this).siblings('input:checked')){
+      //   $(this).parents('.address_data ').addClass('active');
+      //   $(this).parents().siblings().removeClass('active')
+      // }
     })
 
+    //배송옵션 선택
+    $('.speed_data').click(function(){
+      $(this).find('input').prop('checked',true);
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active')
+    })
 
     //카드선택
     $('.input_check').click(function(){
