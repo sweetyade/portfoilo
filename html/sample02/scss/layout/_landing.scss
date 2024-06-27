@@ -1561,6 +1561,85 @@ section {
     }
   }
 
+  &-confirm {
+    padding: var(--padding-6) var(--padding-6) 0;
+
+    .confirm_msg {
+      display: grid;
+      gap: var(--gap-4);
+      justify-items: center;
+      text-align: center;
+      padding-bottom: var(--padding-6);
+
+      .title {
+        @include font_h4;
+        font-weight: var(--font-medium);
+      }
+
+      .txt {
+        color: var(--text-secondary);
+        gap: var(--gap-2);
+
+        img {
+          width: 1.25rem;
+        }
+
+        strong {
+          font-weight: var(--font-medium);
+          color: var(--text-primary);
+        }
+      }
+    }
+
+    .confirm_info {
+      border: 1px solid var(--divider);
+      border-radius: 0.375rem;
+      @include flexbtw;
+      align-items: stretch;
+
+      @include tablet {
+        flex-wrap: wrap;
+      }
+
+      .info_data {
+        width: 100%;
+        border-right: 1px solid var(--divider);
+        padding: var(--padding-6);
+        display: grid;
+        gap: var(--gap-4);
+
+        @include tablet {
+          border-right: 0;
+          border-bottom: 1px solid var(--divider);
+        }
+
+        &:last-child {
+          border-right: none;
+
+          @include tablet {
+            border-bottom: none;
+          }
+        }
+
+        .title {
+          font-weight: var(--font-medium);
+          @include flex;
+          gap: var(--gap-2);
+
+          i {
+            width: 1.25rem;
+            height: 1.25rem;
+            background-size: contain;
+          }
+        }
+
+        .txt {
+          color: var(--text-secondary);
+        }
+      }
+    }
+  }
+
   &-left {
     width: 100%;
     max-width: calc(100% - 20.875rem);
@@ -1576,149 +1655,166 @@ section {
   }
 
   &-bag {
-    padding-block: var(--padding-4);
-
     .title {
       @include font_h6;
       font-weight: var(--font-medium);
-      padding-bottom: var(--padding-6);
-    }
-  }
-
-  &-list {
-    border: 1px solid var(--divider);
-    border-radius: 0.375rem;
-  }
-
-  &-data {
-    @include flexbtw;
-    padding: var(--padding-6);
-    border-bottom: 1px solid var(--divider);
-    position: relative;
-
-    @include tablet {
-      flex-direction: column;
-      justify-content: flex-start;
+      padding-bottom: var(--padding-4);
     }
 
-    @include mobile_large {
-      padding: var(--padding-4);
+    .checkout_list {
+      border: 1px solid var(--divider);
+      border-radius: 0.375rem;
     }
 
-    &:last-child {
-      border-bottom: none;
-    }
-    .data_info {
-      @include flex;
-      gap: var(--gap-4);
+    .checkout_data {
+      @include flexbtw;
+      padding: var(--padding-6);
+      border-bottom: 1px solid var(--divider);
+      position: relative;
 
       @include tablet {
-        width: 100%;
-        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-start;
       }
 
       @include mobile_large {
-        gap: var(--gap-2);
+        padding: var(--padding-4);
       }
 
-      .thumb {
-        width: 8.75rem;
-        height: 8.75rem;
-        @include flexcenter;
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .data_info {
+        @include flex;
+        gap: var(--gap-4);
 
         @include tablet {
-          width: 7rem;
-          height: 7rem;
-        }
-
-        @include pc_large {
-          width: 5rem;
-          height: 5rem;
-        }
-
-        img {
           width: 100%;
-          height: 100%;
-          max-width: 6.25rem;
-          max-height: 6.25rem;
-          object-fit: contain;
+          align-items: flex-start;
+        }
+
+        @include mobile_large {
+          gap: var(--gap-2);
+        }
+
+        .thumb {
+          width: 8.75rem;
+          height: 8.75rem;
+          @include flexcenter;
 
           @include tablet {
-            max-width: 5rem;
-            max-height: 5rem;
+            width: 7rem;
+            height: 7rem;
           }
 
-          @include tablet {
-            max-width: 4rem;
-            max-height: 4rem;
+          @include pc_large {
+            width: 5rem;
+            height: 5rem;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            max-width: 6.25rem;
+            max-height: 6.25rem;
+            object-fit: contain;
+
+            @include tablet {
+              max-width: 5rem;
+              max-height: 5rem;
+            }
+
+            @include tablet {
+              max-width: 4rem;
+              max-height: 4rem;
+            }
+          }
+        }
+        .data {
+          display: grid;
+          gap: var(--gap-2);
+          .name {
+            font-weight: var(--font-medium);
+
+            @include tablet {
+              width: 80%;
+            }
+          }
+          .store {
+            color: var(--text-disabled);
+            a {
+              color: var(--primary);
+            }
+          }
+          .star {
+            @include flex;
+            i {
+              width: 1.5rem;
+              height: 1.5rem;
+              background-size: contain;
+            }
+          }
+          .input_basic {
+            max-width: 9.375rem;
+          }
+          .chip {
+            display: inline-block;
+            margin-left: var(--padding-4);
           }
         }
       }
-      .data {
+
+      .data_cost {
         display: grid;
-        gap: var(--gap-2);
-        .name {
-          font-weight: var(--font-medium);
+        justify-items: end;
+        gap: var(--gap-4);
 
-          @include tablet {
-            width: 80%;
+        @include tablet {
+          width: 100%;
+          padding-top: var(--padding-4);
+        }
+
+        .cost {
+          color: var(--primary);
+          .bfr {
+            color: var(--text-disabled);
+            text-decoration: line-through;
           }
         }
-        .store {
-          color: var(--text-disabled);
-          a {
-            color: var(--primary);
+      }
+
+      .dataDel {
+        position: absolute;
+        width: 1.125rem;
+        height: 1.125rem;
+        background-size: cover;
+        cursor: pointer;
+        top: 1.5rem;
+        right: 1.5rem;
+
+        @include mobile_large {
+          top: 1rem;
+          right: 1rem;
+        }
+      }
+
+      &.confirm_data {
+        .data_info {
+          .thumb {
+            width: 5rem;
+            height: 5rem;
+
+            img {
+              max-width: 4.375rem;
+              max-height: 4.375rem;
+            }
+          }
+
+          .chip {
+            margin-left: 0;
           }
         }
-        .star {
-          @include flex;
-          i {
-            width: 1.5rem;
-            height: 1.5rem;
-            background-size: contain;
-          }
-        }
-        .input_basic {
-          max-width: 9.375rem;
-        }
-        .chip {
-          display: inline-block;
-          margin-left: var(--padding-4);
-        }
-      }
-    }
-
-    .data_cost {
-      display: grid;
-      justify-items: end;
-      gap: var(--gap-4);
-
-      @include tablet {
-        width: 100%;
-        padding-top: var(--padding-4);
-      }
-
-      .cost {
-        color: var(--primary);
-        .bfr {
-          color: var(--text-secondary);
-          text-decoration: line-through;
-        }
-      }
-    }
-
-    .dataDel {
-      position: absolute;
-      width: 1.125rem;
-      height: 1.125rem;
-      background-size: cover;
-      cursor: pointer;
-      top: 1.5rem;
-      right: 1.5rem;
-
-      @include mobile_large {
-        top: 1rem;
-        right: 1rem;
       }
     }
   }
@@ -1848,6 +1944,68 @@ section {
     }
   }
 
+  &-payment {
+    .payment_type {
+      @include flex;
+      gap: var(--gap-1);
+      padding-block: var(--padding-6);
+      .btn {
+        width: fit-content;
+        color: var(--text-prmary);
+        background-color: transparent;
+        box-shadow: none;
+
+        &.active {
+          background-color: var(--primary);
+          color: var(--light-color);
+          box-shadow: var(--primary-s-small);
+        }
+      }
+    }
+
+    .payment_grp {
+      max-width: 28.125rem;
+      display: grid;
+      gap: var(--gap-6);
+
+      @include tablet {
+        max-width: 100%;
+      }
+
+      .grid_3 {
+        display: flex;
+        gap: var(--gap-6);
+
+        @include tablet {
+          flex-wrap: wrap;
+        }
+
+        .input_basic {
+          width: 100%;
+
+          &:last-child,
+          &:nth-child(2) {
+            max-width: 7.875rem;
+
+            @include tablet {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .input_switch {
+      padding-block: var(--padding-4);
+    }
+
+    .btn_wrap {
+      .btn {
+        width: fit-content;
+      }
+    }
+  }
+
   &-right {
     width: 100%;
     max-width: 20.875rem;
@@ -1964,6 +2122,20 @@ section {
           color: var(--primary);
         }
       }
+    }
+
+    .detail_grp2 {
+      .sbj {
+        font-weight: var(--font-medium);
+      }
+      .txt {
+        color: var(--text-secondary);
+      }
+    }
+
+    a {
+      color: var(--primary);
+      font-weight: var(--font-medium);
     }
   }
 
@@ -2211,6 +2383,22 @@ section {
 
           &.step_4 {
             background-image: url(../images/checkout_nav_4_d.svg);
+          }
+        }
+
+        &.active {
+          .step_icon {
+            &.step_2 {
+              background-image: url(../images/checkout_nav_2_pr.svg);
+            }
+
+            &.step_3 {
+              background-image: url(../images/checkout_nav_3_pr.svg);
+            }
+
+            &.step_4 {
+              background-image: url(../images/checkout_nav_4_pr.svg);
+            }
           }
         }
       }
