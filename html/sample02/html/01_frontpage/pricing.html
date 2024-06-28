@@ -54,25 +54,30 @@
   <main id="main">
     <section class="pricing">
       <div class="inner">
-        <h2 class="">Pricing Plans</h2>
-        <p class="txt">All plans include 40+ advanced tools and features to boost your product.<br>
-          Choose the best plan to fit your needs.</p>
-  
-        <div class="pricing-toggle">
-          <p>Monthly</p>
-          <div class="input_switch">
-            <input type="checkbox" class="" id="planToggle" checked>
-            <label for="planToggle" class="switch_label">
-              <span class="swtich_btn"></span>
-            </label>
-          </div>
-          <p>Annually</p>
-  
-          <div class="btn_figure">
-            <p class="figure_icon"><i class="ic_corner_left_down_gr"></i></p>
-            <p class="figure_txt">Save up to 10%</p>
+        <div class="pricing-heading">
+          <h2 class="">Pricing Plans</h2>
+          <p class="txt">All plans include 40+ advanced tools and features to boost your product.<br>
+            Choose the best plan to fit your needs.</p>
+    
+          <div class="pricing-toggle">
+            <div class="btn_figure">
+              <p class="figure_icon ic_corner_left_down_gr"></p>
+              <p class="chip size_s color_pr type_label">Save up to 10%</p>
+            </div>
+
+            
+            <div class="input_switch">
+              <p>Monthly</p>
+              <input type="checkbox" class="" id="planToggle" >
+              <label for="planToggle" class="switch_label">
+                <span class="swtich_btn"></span>
+              </label>
+              <p>Annually</p>
+            </div>
+            
           </div>
         </div>
+        
   
         <div class="pricing-block">
           <div class="pricing-data">
@@ -85,10 +90,9 @@
     
             <div class="pricing-cost">
               <div class="cost">
-                <p class="changeCost">19 <span>$</span></p>
-                <p>/month</p>
+                <p class="changeCost"><span>$</span><span class="cng">0</span></p>
+                <p class="mo">/month</p>
               </div>
-              
             </div>
     
             <ul class="pricing-benefit">
@@ -116,7 +120,7 @@
     
             <div class="pricing-cost">
               <div class="cost">
-                <p class="changeCost">29 <span>$</span></p>
+                <p class="changeCost"><span>$</span><span class="cng">49</span></p>
                 <p>/month</p>
               </div>
               <p class="txt">USD 480/year</p>
@@ -149,8 +153,8 @@
     
             <div class="pricing-cost">
               <div class="cost">
-                <p class="changeCost">49 <span>$</span></p>
-                <p>/month</p>
+                <p class="changeCost"><span>$</span><span class="cng">99</span></p>
+                <p class="font_body">/month</p>
               </div>
               <p class="txt">USD 960/year</p>
             </div>
@@ -196,24 +200,30 @@
         <p class="title">Pick a plan that works best for you</p>
         <p class="txt">Stay cool, we have a 48-hour money back guarantee!</p>
 
-        <div class="table">
+        <div class="table mt_1_5">
           <table width="100%">
+            <colgroup>
+              <col width="24%"/>
+              <col width="25.3%"/>
+              <col width="25.3%"/>
+              <col width="25.3%"/>
+            </colgroup>
             <thead>
               <tr>
                 <th class="fixed_header">
-                  <p class="">Features</p>
+                  <p class="title">Features</p>
                   <p class="txt">Native Front Features</p>
                 </th>
                 <th>
-                  <p class="">STARTER</p>
+                  <p class="title">STARTER</p>
                   <p class="txt">Free</p>
                 </th>
                 <th>
-                  <p class="">PRO</p>
+                  <p class="title">PRO</p>
                   <p class="txt">$7.5/Month</p>
                 </th>
                 <th>
-                  <p class="">ENTERPRISE</p>
+                  <p class="title">ENTERPRISE</p>
                   <p class="txt">$16/Month</p>
                 </th>
               </tr>
@@ -237,7 +247,7 @@
                 <td><i class="ic_check_circle_pr_label"></i></td>
                 <td><i class="ic_check_circle_pr_label"></i></td>
               </tr>
-              <tr>
+              <tr> 
                 <th class="fixed_header"><p>Email Support</p></th>
                 <td><i class="ic_circle_x_gr"></i></td>
                 <td>
@@ -310,7 +320,7 @@
     </section>
 
     <!-- FAQ -->
-    <section class="faq" id="faq">
+    <section class="faq pricing_faq">
       <div class="inner">
         <p class="title">FAQ’s</p>
         <p class="txt">Let us help answer the most common questions.</p>
@@ -518,11 +528,10 @@
    //플랜
    $('.swtich_btn').click(function(){
     
-    const planCost1 = ['$25', '$35', '$45']
-    const planCost2 = ['$19', '$29', '$49']
-    const change1 = $('.plans-block .plans-data').eq(0).find('.changeCost')
-    const change2 = $('.plans-block .plans-data').eq(1).find('.changeCost')
-    const change3 = $('.plans-block .plans-data').eq(2).find('.changeCost')
+    const planCost1 = ['49', '99']
+    const planCost2 = ['40', '80']
+    const change1 = $('.pricing-block .pricing-data').eq(1).find('.cng')
+    const change2 = $('.pricing-block .pricing-data').eq(2).find('.cng')
     // console.log(planCost2[0])
     // console.log(change2)
     // console.log(change3)
@@ -530,13 +539,19 @@
     if($('#planToggle').is(':checked')){
       change1.html(planCost1[0])
       change2.html(planCost1[1])
-      change3.html(planCost1[2])
     }else{
       change1.html(planCost2[0])
       change2.html(planCost2[1])
-      change3.html(planCost2[2])
     }
    })
+
+      //faq
+    $(".faq-title").click(function(){
+      $(this).toggleClass('faqOpen');
+      $(this).siblings('.faq-answer').slideToggle();
+      $(this).parents().siblings('.faq-data').children('.faq-answer').slideUp();
+    })
+
 
   </script>
 </body>
