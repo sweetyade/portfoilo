@@ -2614,10 +2614,6 @@ section {
       @include font_h5;
       font-weight: var(--font-medium);
     }
-    .base_icon {
-    }
-    .txt {
-    }
 
     .base_link {
       display: grid;
@@ -2676,6 +2672,111 @@ section {
   .btn_wrap {
     margin: 0 auto;
     width: fit-content;
+  }
+}
+
+.help_detail {
+  max-width: 71.25rem;
+  margin: 0 auto;
+  padding-top: 3.75rem;
+  @include flextopcenter;
+  gap: var(--gap-6);
+
+  @include pc_small {
+    padding-inline: 2rem;
+  }
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  .help_article {
+    width: calc(100% - 23.875rem);
+
+    @include pc_small {
+      width: calc(100% - 280px);
+    }
+
+    @include tablet {
+      width: 100%;
+      padding-bottom: 0;
+    }
+
+    .detail_title {
+      border-bottom: 1px solid var(--divider);
+      padding-bottom: var(--padding-6);
+      .title {
+        @include font_h4;
+        font-weight: var(--font-medium);
+        padding-block: var(--padding-2);
+      }
+      .date {
+        color: var(--text-secondary);
+      }
+    }
+
+    article {
+      padding-block: var(--padding-6);
+      color: var(--text-secondary);
+      display: grid;
+      gap: var(--gap-4);
+      p {
+      }
+
+      img {
+        border: 1px solid var(--divider);
+        border-radius: 0.375rem;
+      }
+    }
+  }
+
+  .help_side {
+    width: 22.375rem;
+    overflow: hidden;
+
+    @include pc_small {
+      width: 16rem;
+    }
+
+    @include tablet {
+      width: 100%;
+    }
+
+    .side_heading {
+      @include font_h5;
+      font-weight: var(--font-medium);
+      background-color: var(--action-hover);
+      border-radius: 0.375rem;
+      padding: var(--padding-2) var(--padding-6);
+      margin-block: var(--padding-6) var(--padding-4);
+    }
+
+    .side_list {
+      width: 100%;
+      @include flex;
+      flex-direction: column;
+      gap: var(--gap-4);
+
+      li {
+        width: 100%;
+      }
+
+      a {
+        @include flexbtw;
+        gap: 0.625rem;
+      }
+      .txt {
+        width: calc(100% - 1.875rem);
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .ic_chevron_right_gr {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+    }
   }
 }
 
