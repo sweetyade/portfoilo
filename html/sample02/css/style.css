@@ -144,6 +144,7 @@
   --gray-light: #fafafa;
   --light-color: #fff;
   --chip-bg: #eeeeef;
+  --avatar-bg: #eeedf0;
   /*========== Font and typography ==========*/
   --body-font: "Public Sans", sans-serif;
   --font-46: 2.875rem;
@@ -242,6 +243,7 @@
   --chat-bg: #202534;
   --track-bg: #3a3f57;
   --gray-light: #353a52;
+  --avatar-bg: #373b50;
 }
 
 /* mediaquery - mobile base (360px) */
@@ -1757,6 +1759,26 @@ body {
   background-image: url(../images/system/lock_open_pr.svg);
 }
 
+.ic_language {
+  background-image: url(../images/system/language.svg);
+}
+
+.ic_bell {
+  background-image: url(../images/system/bell.svg);
+}
+
+.ic_layout_grid_add {
+  background-image: url(../images/system/layout_grid_add.svg);
+}
+
+.ic_plus {
+  background-image: url(../images/system/plus.svg);
+}
+
+.ic_minus {
+  background-image: url(../images/system/minus.svg);
+}
+
 /*-------- color ------------- */
 .icc_rocket_gr {
   background-image: url(../images/color/rocket_gr.svg);
@@ -1904,6 +1926,15 @@ body {
 }
 :root.dark .ic_corner_left_down_gr {
   background-image: url(../images/system/corner_left_down_d.svg);
+}
+:root.dark .ic_language {
+  background-image: url(../images/system/language_d.svg);
+}
+:root.dark .ic_bell {
+  background-image: url(../images/system/bell_d.svg);
+}
+:root.dark .ic_layout_grid_add {
+  background-image: url(../images/system/layout_grid_add_d.svg);
 }
 :root.dark .icc_rocket_gr {
   background-image: url(../images/color/rocket_d.svg);
@@ -4037,6 +4068,107 @@ button:disabled {
   background-image: url(../images/system/x_green.svg);
 }
 
+.accordion {
+  display: grid;
+  gap: var(--gap-2);
+}
+.accordion-data {
+  box-shadow: var(--gray-s-xsmall);
+  border-radius: 0.375rem;
+  background-color: var(--paper-bg);
+}
+.accordion-title {
+  padding: var(--padding-3) var(--padding-5) var(--padding-3) var(--padding-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.accordion-title .title {
+  width: calc(100% - 1.75rem);
+}
+.accordion-title i {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease;
+}
+.accordion-title.accOpen i {
+  transform: rotate(90deg);
+}
+.accordion-dec {
+  padding: 0 var(--padding-5) var(--padding-5) var(--padding-6);
+  color: var(--text-secondary);
+  display: none;
+}
+.accordion.type_outline {
+  border: 1px solid var(--divider);
+  border-radius: 0.375rem;
+  display: initial;
+  overflow: hidden;
+}
+.accordion.type_outline .accordion-data {
+  box-shadow: none;
+  background-color: var(--gray-light);
+}
+.accordion.type_outline .accordion-data:last-child .accordion-title,
+.accordion.type_outline .accordion-data:last-child .accordion-dec {
+  border-bottom: none;
+}
+.accordion.type_outline .accordion-title {
+  border-bottom: 1px solid var(--divider);
+}
+.accordion.type_outline .accordion-title.accOpen i {
+  transform: rotate(0);
+  background-image: url(../images/system/minus.svg);
+}
+.accordion.type_outline .accordion-dec {
+  padding-top: var(--padding-5);
+  background-color: var(--paper-bg);
+  border-bottom: 1px solid var(--divider);
+}
+
+.avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: relative;
+}
+.avatar .thumb {
+  width: 2.5rem;
+  height: 2.5rem;
+  overflow: hidden;
+  background-color: var(--avatar-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-15);
+  line-height: 1.125rem;
+}
+.avatar .thumb .avater_icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.avatar .badge {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  border: 2px solid var(--avatar-bg);
+  position: absolute;
+  bottom: -0.25rem;
+  right: -0.25rem;
+  background-color: var(--success);
+}
+.avatar.type_rounded .thumb {
+  border-radius: 0.375rem;
+}
+.avatar.type_circle .thumb {
+  border-radius: 50%;
+}
+.avatar.type_circle .badge {
+  bottom: 0;
+  right: 0;
+}
+
 /***************************************************************
     09. nav
 ***************************************************************/
@@ -4044,7 +4176,19 @@ button:disabled {
   width: 16.25rem;
   box-shadow: var(--gray-s-small);
   transition: width 0.5s ease;
-  background-color: var(--body-bg);
+  background-color: var(--paper-bg);
+  height: 100svh;
+  overflow-y: auto;
+}
+.sidebar::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: var(--action-hover);
+  border-radius: 3rem;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--action-focus);
 }
 .sidebar .logo {
   padding: 1.25rem 1.375rem;
@@ -4281,6 +4425,46 @@ button:disabled {
 /***************************************************************
     11. header
 ***************************************************************/
+.top_search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-2) var(--padding-6) var(--padding-2) var(--padding-4);
+  border-radius: 0.375rem;
+  box-shadow: var(--gray-s-small);
+}
+.top_search .input_basic {
+  max-width: 300px;
+}
+.top_search .input_basic input {
+  border: none;
+}
+.top_search .top_icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.top_search .top_icons .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+.top_search .top_icons .user_icon {
+  width: 2.375rem;
+  height: 2.375rem;
+  cursor: pointer;
+}
+.top_search .top_icons .user_icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
 /***************************************************************
     12. footer
 ***************************************************************/
@@ -4293,4 +4477,26 @@ button:disabled {
 body.open {
   height: 100svh;
   overflow: hidden;
+}
+body.open::-webkit-scrollbar {
+  width: 0.5rem;
+}
+body.open::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+}
+
+.body_wrap {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+}
+
+.container {
+  height: 100svh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: var(--body-bg);
+  width: calc(100% - 16.25rem);
 }

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dashboard - Analytics</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+  <div class="body_wrap">
+    <section class="sidebar ">
+      <h1 class="logo">
+        <a href="javascript:void(0)">
+          <img src="/images/common/logo.svg" alt="">
+          <p>Vuexy</p>
+        </a>
+        <!-- <div class="sidebar_toggle"></div> -->
+      </h1>
+      
+      <nav class="nav">
+        <ul class="nav-group">
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_smart_home"></p>
+              <p class="nav-menu">Dashboards</p>
+              <p class="chip size_s color_error">5</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+        </ul>
+  
+        <ul class="nav-group">
+          <li class="nav-grouptitle">
+            <p class="nav-title">APPS & PAGES</p>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link ">
+              <p class="nav-icon ic_shopping_cart"></p>
+              <p class="nav-menu">eCommerce</p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_school"></p>
+              <p class="nav-menu">Academy</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_car"></p>
+              <p class="nav-menu">Logistics</p>
+            </a>
+          </li>
+          <li class="nav-list ">
+            <a href="javascript:void(0)" class="nav-link subOpen active">
+              <p class="nav-icon ic_user"></p>
+              <p class="nav-menu">Users</p>
+              <p class="ic_chevron_down"></p>
+            </a>
+            <!-- 서브메뉴 2depth-->
+            <ul class="nav-group nav-sub subMenu">
+              <li class="nav-list ">
+                <a href="javascript:void(0)" class="nav-link subOpen">
+                  <p class="nav-icon ic_circle"></p>
+                  <p class="nav-menu">List</p>
+                  <p class="ic_chevron_down"></p>
+                </a>
+                <!-- 서브메뉴 3depth-->
+                <ul class="nav-group nav-sub subMenu">
+                  <li class="nav-list">
+                    <a href="javascript:void(0)" class="nav-link">
+                      <p class="nav-icon ic_circle"></p>
+                      <p class="nav-menu">List</p>
+                    </a>
+                  </li>
+                  <li class="nav-group">
+                    <a href="javascript:void(0)" class="nav-link">
+                      <p class="nav-icon ic_circle"></p>
+                      <p class="nav-menu">Security</p>
+                    </a>
+                  </li>
+                  <li class="nav-group">
+                    <a href="javascript:void(0)" class="nav-link">
+                      <p class="nav-icon ic_circle"></p>
+                      <p class="nav-menu">Billing & Plans</p>
+                    </a>
+                  </li>
+                  <li class="nav-group">
+                    <a href="javascript:void(0)" class="nav-link">
+                      <p class="nav-icon ic_circle"></p>
+                      <p class="nav-menu">Notifications</p>
+                    </a>
+                  </li>
+                  <li class="nav-group">
+                    <a href="javascript:void(0)" class="nav-link">
+                      <p class="nav-icon ic_circle"></p>
+                      <p class="nav-menu">Connection</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-list">
+                <a href="javascript:void(0)" class="nav-link">
+                  <p class="nav-icon ic_circle"></p>
+                  <p class="nav-menu">View</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_mail"></p>
+              <p class="nav-menu">Email</p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link ">
+              <p class="nav-icon ic_message_circle_2"></p>
+              <p class="nav-menu">Chat</p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_calendar"></p>
+              <p class="nav-menu">Calendar</p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_copy"></p>
+              <p class="nav-menu">Kanban</p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_file_invoice"></p>
+              <p class="nav-menu">Invoice</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_lock"></p>
+              <p class="nav-menu">Roles & Permiss...</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+        </ul>
+  
+        <ul class="nav-group">
+          <li class="nav-grouptitle">
+            <p class="nav-title">PAGES</p>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_file"></p>
+              <p class="nav-menu">Pages</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_shield_lock"></p>
+              <p class="nav-menu">Authentications</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_dots"></p>
+              <p class="nav-menu">Wizard Examples</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_square"></p>
+              <p class="nav-menu">Dialog Examples</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+        </ul>
+  
+        <ul class="nav-group">
+          <li class="nav-grouptitle">
+            <p class="nav-title">USER INTERFACE</p>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_typography"></p>
+              <p class="nav-menu">Typography</p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_brand_tabler"></p>
+              <p class="nav-menu">Icons</p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_chart_bar"></p>
+              <p class="nav-menu">Cards</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_atom"></p>
+              <p class="nav-menu">Components</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+        </ul>
+  
+        <ul class="nav-group">
+          <li class="nav-grouptitle">
+            <p class="nav-title">FORMS & TABLES</p>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_checkbox"></p>
+              <p class="nav-menu">Form Elements</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_layout"></p>
+              <p class="nav-menu">Form Layout</p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_checkup_list"></p>
+              <p class="nav-menu">Form Validation</p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_git_merge"></p>
+              <p class="nav-menu">Form Wizard</p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_table"></p>
+              <p class="nav-menu">Table</p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_grid_line"></p>
+              <p class="nav-menu">Mui DataGrid</p>
+            </a>
+          </li>
+        </ul>
+  
+        <ul class="nav-group">
+          <li class="nav-grouptitle">
+            <p class="nav-title">CHARTS & MISC</p>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_chart_donut_2"></p>
+              <p class="nav-menu">Charts</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link subOpen">
+              <p class="nav-icon ic_box"></p>
+              <p class="nav-menu">Others</p>
+              <p class="ic_chevron_down"></p>
+            </a>
+  
+            <!-- 서브메뉴 2depth-->
+            <ul class="nav-group nav-sub subMenu">
+              <li class="nav-list">
+                <a href="javascript:void(0)" class="nav-link">
+                  <p class="nav-icon ic_circle"></p>
+                  <p class="nav-menu">Documentation</p>
+                  <p class="ic_external_link"></p>
+                </a>
+              </li>
+  
+              <li class="nav-list">
+                <a href="javascript:void(0)" class="nav-link">
+                  <p class="nav-icon ic_circle"></p>
+                  <p class="nav-menu">Support</p>
+                  <p class="ic_external_link"></p>
+                </a>
+              </li>
+  
+              <li class="nav-list">
+                <a href="javascript:void(0)" class="nav-link subOpen">
+                  <p class="nav-icon ic_circle"></p>
+                  <p class="nav-menu">Menu Level 1</p>
+                  <p class="ic_chevron_down"></p>
+                </a>
+  
+                <!-- 서브메뉴 3depth-->
+                <ul class="nav-group nav-sub subMenu">
+                  <li class="nav-list">
+                    <a href="javascript:void(0)" class="nav-link subOpen">
+                      <p class="nav-icon ic_circle"></p>
+                      <p class="nav-menu">Menu Level 2</p>
+                      <p class="ic_chevron_down"></p>
+                    </a>
+  
+                    <!-- 서브메뉴 4depth-->
+                    <ul class="nav-group nav-sub subMenu">
+                      <li class="nav-list">
+                        <a href="javascript:void(0)" class="nav-link">
+                          <p class="nav-icon ic_circle"></p>
+                          <p class="nav-menu">Menu Level 3</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="container">
+      
+    </section>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+
+    //nav active icon
+    // const imgSrc = $('.active').find(".nav-icon img").attr('src');
+    // $('.active').find(".nav-icon img").attr('src', imgSrc.replace('.svg', '_w.svg'));
+    const imgSrc = $('.active').find(".nav-icon").css('background-image').replace(/^url\(['"](.+)['"]\)/, '$1')
+    const imgCngW = imgSrc.replace('.svg', '_w.svg')
+    const imgCngD = imgSrc.replace('_d.svg', '_w.svg')
+
+    if($('.nav-link').hasClass('active')){
+      if($('.sidebar').hasClass('sideIcon')){
+        $('.active').find(".nav-icon").css({
+        'backgroundImage' : 'url('+imgSrc+')',
+      })
+      }else{
+        $('.active').find(".nav-icon").css({
+        'backgroundImage' : 'url('+imgCngW+')',
+      })
+      if($("html").hasClass('dark')){
+        $('.active').find(".nav-icon").css({
+        'backgroundImage' : 'url('+imgCngD+')',
+      })
+      }}
+    
+    }
+
+    //메뉴토글
+    $('.subOpen').click(function(){
+      $(this).siblings('.subMenu').slideToggle('fast')
+      $(this).toggleClass('open')
+    })
+
+
+  </script>
+</body>
+</html>

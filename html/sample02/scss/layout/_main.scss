@@ -4,4 +4,27 @@
 body.open {
   height: 100svh;
   overflow: hidden;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+  }
+}
+
+.body_wrap {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  @include flextop;
+}
+
+.container {
+  height: 100svh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: var(--body-bg);
+  width: calc(100% - 16.25rem);
 }

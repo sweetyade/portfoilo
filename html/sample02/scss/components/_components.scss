@@ -746,3 +746,122 @@
     }
   }
 }
+
+.accordion {
+  display: grid;
+  gap: var(--gap-2);
+
+  &-data {
+    box-shadow: var(--gray-s-xsmall);
+    border-radius: 0.375rem;
+    background-color: var(--paper-bg);
+  }
+  &-title {
+    padding: var(--padding-3) var(--padding-5) var(--padding-3) var(--padding-6);
+    @include flexbtw;
+    .title {
+      width: calc(100% - 1.75rem);
+    }
+    i {
+      width: 1.25rem;
+      height: 1.25rem;
+      background-size: cover;
+      background-position: center;
+      transition: all 0.3s ease;
+    }
+
+    &.accOpen {
+      i {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  &-dec {
+    padding: 0 var(--padding-5) var(--padding-5) var(--padding-6);
+    color: var(--text-secondary);
+    display: none;
+  }
+
+  &.type_outline {
+    border: 1px solid var(--divider);
+    border-radius: 0.375rem;
+    display: initial;
+    overflow: hidden;
+
+    .accordion-data {
+      box-shadow: none;
+      background-color: var(--gray-light);
+
+      &:last-child {
+        .accordion-title,
+        .accordion-dec {
+          border-bottom: none;
+        }
+      }
+    }
+
+    .accordion-title {
+      border-bottom: 1px solid var(--divider);
+
+      &.accOpen {
+        i {
+          transform: rotate(0);
+          background-image: url(../images/system/minus.svg);
+        }
+      }
+    }
+
+    .accordion-dec {
+      padding-top: var(--padding-5);
+      background-color: var(--paper-bg);
+      border-bottom: 1px solid var(--divider);
+    }
+  }
+}
+
+.avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: relative;
+
+  .thumb {
+    width: 2.5rem;
+    height: 2.5rem;
+    overflow: hidden;
+    background-color: var(--avatar-bg);
+    @include flexcenter;
+    @include font_avatar;
+
+    .avater_icon {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .badge {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    border: 2px solid var(--avatar-bg);
+    position: absolute;
+    bottom: -0.25rem;
+    right: -0.25rem;
+    background-color: var(--success);
+  }
+
+  &.type_rounded {
+    .thumb {
+      border-radius: 0.375rem;
+    }
+  }
+
+  &.type_circle {
+    .thumb {
+      border-radius: 50%;
+    }
+    .badge {
+      bottom: 0;
+      right: 0;
+    }
+  }
+}

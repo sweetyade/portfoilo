@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>common - navgation - row</title>
+
+  <!-- css -->
+   <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="top_search">
+    <div class="input_basic">
+      <div class="inner">
+        <p class="input_icon_search"></p>
+        <input type="text" placeholder="input placeholder" id='password_confirm1' value="" required >
+      </div>
+    </div>
+    <div class="top_icons">
+      <div class="icon ic_language">
+      </div>
+      <div class="icon ic_moon_stars">
+      </div>
+      <div class="icon ic_layout_grid_add">
+      </div>
+      <div class="icon ic_bell">
+        <span class="type"></span>
+
+        <div class="bell_dropdown" style="display: none;">
+          <div class="title">
+            <p class="txt">Notifications</p>
+
+            <div class="icons">
+              <p class="chip">8 New</p>
+              <i class="ic_mail_opened"></i>
+            </div>
+          </div>
+
+          <div class="bell_list">
+            <div class="user_pf">
+              <div class="thumb"><img src="../../images/Avatar_5.png" alt=""></div>
+              <div class="user_pf-info">
+                <p class="name">Congratulation Flora! 🎉</p>
+                <p class="txt">Won the monthly best seller gold badge</p>
+                <p class="txt_sub">Today</p>
+              </div>
+
+              <span class="now_dot active"></span>
+            </div>
+            <div class="user_pf">
+              <div class="thumb"><img src="../../images/Avatar_icon_1.png" alt=""></div>
+              <div class="user_pf-info">
+                <p class="name">New user registered.</p>
+                <p class="txt">Accepted your connection</p>
+                <p class="txt_sub">Yesterday</p>
+              </div>
+            </div>
+            <div class="user_pf">
+              <div class="thumb"><img src="../../images/Avatar_6.png" alt=""></div>
+              <div class="user_pf-info">
+                <p class="name">New message received 👋🏻</p>
+                <p class="txt">You have new message from Natalie</p>
+                <p class="txt_sub">11 Aug</p>
+              </div>
+
+              <span class="now_dot"></span>
+              <span class="del ic_x"></span>
+            </div>
+            <div class="user_pf">
+              <div class="thumb"><img src="../../images/Avatar_icon_2.png" alt=""></div>
+              <div class="user_pf-info">
+                <p class="name">Paypal</p>
+                <p class="txt">ACME Inc. made new order $1,154</p>
+                <p class="txt_sub">25 May</p>
+              </div>
+
+              <span class="now_dot active"></span>
+            </div>
+            <div class="user_pf">
+              <div class="thumb"><img src="../../images/Avatar_7.png" alt=""></div>
+              <div class="user_pf-info">
+                <p class="name">Application has been approved 🚀</p>
+                <p class="txt">Your ABC project application has been approved.</p>
+                <p class="txt_sub">19 Mar</p>
+              </div>
+
+              <span class="now_dot active"></span>
+            </div>
+          </div>
+
+          <button class="btn type_basic">
+            <div class="ripple js-ripple">
+              <span class="ripple__circle"></span>
+            </div>
+            View All Notifications</button>
+          </div>
+      </div>
+      <div class="user_icon">
+        <div class="user_thumb">
+          <img src="../../images/Avatar_4.png" alt="">
+        </div>
+        <span class="type"></span>
+
+        <div class="user_dropdown" style="display: none;">
+          <div class="user_pf">
+            <div class="thumb"><img src="../../images/Avatar_1.png" alt=""></div>
+            <div class="user_pf-info">
+              <p class="name"></p>
+              <p class="txt"></p>
+            </div>
+          </div>
+
+          <div class="user_menu-list">
+            <div class="menu_data">
+              <i class="ic_user"></i>
+              <p class="">My Profile</p>
+            </div>
+            <div class="menu_data">
+              <i class="ic_settings"></i>
+              <p class="">Settings</p>
+            </div>
+            <div class="menu_data">
+              <i class="ic_file_dollar"></i>
+              <p class="">Billing Plan</p>
+            </div>
+          </div>
+
+          <div class="user_menu-list">
+            <div class="menu_data">
+              <i class="ic_currency_dollar"></i>
+              <p class="">Pricing</p>
+            </div>
+            <div class="menu_data">
+              <i class="ic_question_mark"></i>
+              <p class="">FAQ</p>
+            </div>
+
+            <button class="btn type_basic color_error size_s">
+              <div class="ripple js-ripple">
+                <span class="ripple__circle"></span>
+              </div>
+              Logout <img src="../../images/system/logout_box_w.svg" alt="">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+
+    //nav active icon
+    // const imgSrc = $('.active').find(".nav-icon img").attr('src');
+    // $('.active').find(".nav-icon img").attr('src', imgSrc.replace('.svg', '_w.svg'));
+    const imgSrc = $('.active').find(".nav-icon").css('background-image').replace(/^url\(['"](.+)['"]\)/, '$1')
+    const imgCngW = imgSrc.replace('.svg', '_w.svg')
+    const imgCngD = imgSrc.replace('_d.svg', '_w.svg')
+
+    if($('.nav-link').hasClass('active')){
+      if($('.sidebar').hasClass('sideIcon')){
+        $('.active').find(".nav-icon").css({
+        'backgroundImage' : 'url('+imgSrc+')',
+      })
+      }else{
+        $('.active').find(".nav-icon").css({
+        'backgroundImage' : 'url('+imgCngW+')',
+      })
+      if($("html").hasClass('dark')){
+        $('.active').find(".nav-icon").css({
+        'backgroundImage' : 'url('+imgCngD+')',
+      })
+      }}
+    
+    }
+
+    //메뉴토글
+    $('.subOpen').click(function(){
+      $(this).siblings('.subMenu').slideToggle('fast')
+      $(this).toggleClass('open')
+    })
+
+
+  </script>
+</body>
