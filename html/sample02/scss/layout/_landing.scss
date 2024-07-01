@@ -1404,6 +1404,7 @@ section {
 
       span {
         color: var(--text-secondary);
+        @include font_body_1;
       }
     }
     .btn {
@@ -1907,6 +1908,8 @@ section {
       justify-items: center;
       position: relative;
       cursor: pointer;
+      transition: all 0.3s ease;
+
       .speed_icon {
         width: 1.75rem;
         height: 1.75rem;
@@ -2224,6 +2227,12 @@ section {
     gap: var(--gap-5);
     width: 100%;
     position: relative;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-1rem);
+      box-shadow: var(--gray-s-xlarge);
+    }
 
     &:nth-child(2) {
       border-color: var(--primary);
@@ -2541,6 +2550,12 @@ section {
     justify-items: center;
     text-align: center;
     width: 100%;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: var(--gray-s-medium);
+    }
   }
 
   &-icon {
