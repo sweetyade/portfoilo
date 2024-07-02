@@ -13,6 +13,27 @@
       .alert{
         max-width: 350px;
       }
+
+      .option{
+        height: fit-content;
+        width: 250px;
+      }
+
+      .progress{
+        width: 300px;
+      }
+
+      .list{
+        width: 300px;
+      }
+
+      .card{
+        width: 400px;
+      }
+
+      .timeline{
+        width: 450px;
+      }
     </style>
     <main id="guide_main">
       <!-- menu -->
@@ -964,7 +985,7 @@
           </div>
 
           <!-- avatar -->
-          <div class="guide_block">
+          <div class="guide_block" style="display: none;">
             <h3>avatar</h3>
             <div class="guide_data">
               <p class="title">avatar</p>
@@ -1004,98 +1025,814 @@
               <div class="data" style="display: flex; gap: 1rem;">
                 <div class="avatar">
                   <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
-                  <span class="badge"></span>
+                  <span class="badge type_dot color_success"></span>
                 </div>
                 <div class="avatar type_rounded">
                   <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
-                  <span class="badge"></span>
+                  <span class="badge type_dot color_success"></span>
                 </div>
                 <div class="avatar type_circle">
                   <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
-                  <span class="badge"></span>
+                  <span class="badge type_dot color_success"></span>
                 </div>
               </div>
               <div class="data" style="display: flex; gap: 1rem;">
                 <div class="avatar">
                   <p class="thumb">AK</p>
-                  <span class="badge"></span>
+                  <span class="badge type_dot color_success"></span>
                 </div>
                 <div class="avatar type_rounded">
                   <p class="thumb">AK</p>
-                  <span class="badge"></span>
+                  <span class="badge type_dot color_success"></span>
                 </div>
                 <div class="avatar type_circle">
                   <p class="thumb">AK</p>
-                  <span class="badge"></span>
+                  <span class="badg type_dot color_success"></span>
                 </div>
               </div>
               <div class="data" style="display: flex; gap: 1rem;">
                 <div class="avatar">
                   <p class="thumb"><img src="../../images/system/star.svg" alt="" class="avater_icon"></p>
-                  <span class="badge"></span>
+                  <span class="badge type_dot color_success"></span>
                 </div>
                 <div class="avatar type_rounded">
                   <p class="thumb"><img src="../../images/system/star.svg" alt="" class="avater_icon"></p>
-                  <span class="badge"></span>
+                  <span class="badg type_dot color_success"></span>
                 </div>
                 <div class="avatar type_circle">
                   <p class="thumb"><img src="../../images/system/star.svg" alt="" class="avater_icon"></p>
-                  <span class="badge"></span>
+                  <span class="badge type_dot color_success"></span>
                 </div>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="avatar_list">
+                  <div class="avatar type_circle">
+                    <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                  </div>
+                  <div class="avatar type_circle">
+                    <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                  </div>
+                  <div class="avatar type_circle">
+                    <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                  </div>
+                  <div class="avatar type_circle">
+                    <p class="thumb">+3</p>
+                  </div>
+                </div>
+                
               </div>
             </div>
 
           </div>
 
           <!-- options -->
-          <div class="guide_block">
+          <div class="guide_block" style="display: none;">
             <h3>options</h3>
             <div class="guide_data">
               <p class="title">option</p>
               <div class="data" style="display: flex; gap: 1rem;">
-                <div class="option">
-                  <p class="option-ck"></p>
-                  <div class="option_data">
-                    <p class="option-name">Basic <span>Free</span></p>
-                    <p class="option-txt">Get 1 project with 1 teams members.</p>
+                <div class="option active">
+                  <div class="option-name">
+                    <p class="option-ck"></p>
+                    Basic <span>Free</span>
                   </div>
+                  <p class="option-txt">Get 1 project with 1 teams members.</p>
                 </div>
                 <div class="option type_icon">
-                  <div class="option_data">
-                    <div class="option_icon"><i class="ic_star"></i></div>
-                    <p class="option-name">Starter</p>
-                    <p class="option-txt">Get 1 project with 1 teams members.</p>
-                  </div>
+                  <i class="option-icon ic_star"></i>
+                  <p class="option-name">Starter</p>
+                  <p class="option-txt">Get 1 project with 1 teams members.</p>
                   <p class="option-ck"></p>
                 </div>
                 <div class="option type_icon">
-                  <div class="option_data">
-                    <p class="option-name">Basic <span>Free</span></p>
+                  <i class="option-icon_l icc_gift_gr"></i>
+                    <p class="option-name">Basic</p>
                     <p class="option-txt">Get 1 project with 1 teams members.</p>
-                    <div class="option_price">
-                      <p class=""><span>$</span>0</p>
-                      <p class="">/month</p>
+                    <div class="option-price">
+                      <p class="price"><span>$</span>0</p>
+                      <p class="mo">/month</p>
                     </div>
-                  </div>
                   <p class="option-ck"></p>
                 </div>
-                <div class="option">
-                  <p class="option-ck"></p>
-                  <div class="option_data">
-                    <p class="option-name">Basic <span>Free</span></p>
-                    <p class="option-txt">Get 1 project with 1 teams members.</p>
+                <div class="option type_img">
+                  <div class="option-img"><img src="../../images/imgsaple.png" alt=""></div>
+                </div>
+              </div>
+
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="option checkbox active">
+                  <div class="option-name">
+                    <p class="option-ck"></p>
+                    Basic <span>Free</span>
                   </div>
+                  <p class="option-txt">Get 1 project with 1 teams members.</p>
+                </div>
+                <div class="option checkbox type_icon ">
+                  <i class="option-icon ic_star"></i>
+                  <p class="option-name">Starter</p>
+                  <p class="option-txt">Get 1 project with 1 teams members.</p>
+                  <p class="option-ck"></p>
+                </div>
+                <div class="option checkbox type_icon ">
+                  <i class="option-icon_l icc_gift_gr"></i>
+                    <p class="option-name">Basic</p>
+                    <p class="option-txt">Get 1 project with 1 teams members.</p>
+                    <div class="option-price">
+                      <p class="price"><span>$</span>0</p>
+                      <p class="mo">/month</p>
+                    </div>
+                  <p class="option-ck"></p>
+                </div>
+                <div class="option checkbox type_img ">
+                  <div class="option-img"><img src="../../images/imgsaple.png" alt=""></div>
+                  <p class="option-ck"></p>
                 </div>
               </div>
             </div>
 
+          </div>
+
+          <!-- progress -->
+          <div class="guide_block" style="display: none;">
+            <h3>progress</h3>
+            <div class="guide_data">
+              <p class="title">progress</p>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="progress">
+                  <div class="progress-bar">
+                    <div class="bar"per='50'></div>
+                  </div>
+                  <div class="progress-per">50%</div>
+                </div>
+                <div class="progress color_gray">
+                  <div class="progress-bar">
+                    <div class="bar" per="80"></div>
+                  </div>
+                  <div class="progress-per">80%</div>
+                </div>
+                <div class="progress size_s">
+                  <div class="progress-bar">
+                    <div class="bar" per="42"></div>
+                  </div>
+                  <div class="progress-per">42%</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- snackbar -->
+          <div class="guide_block" style="display: none;">
+            <h3>snackbar</h3>
+            <div class="guide_data">
+              <p class="title">snackbar</p>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="snackbar">
+                  <p class="txt">Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="snackbar">
+                  <p class="txt">Lorem ipsum dolor sit amet</p>
+                  <div class="snack_btn">
+                    <button class="btn type_txt size_s">
+                      <div class="ripple js-ripple">
+                        <span class="ripple__circle"></span>
+                      </div>
+                      small
+                    </button>
+                    <div class="delBtn ic_x_w"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- tooltip -->
+          <div class="guide_block" style="display: none;">
+            <h3>tooltip</h3>
+            <div class="guide_data">
+              <p class="title">tooltip</p>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <p class="tooltip">My Tooltip</p>
+                <p class="tooltip type_bottom">My Tooltip</p>
+                <p class="tooltip type_top">My Tooltip</p>
+                <p class="tooltip type_left">My Tooltip</p>
+                <p class="tooltip type_right">My Tooltip</p>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- dialog -->
+          <div class="guide_block" style="display: none;">
+            <h3>dialog</h3>
+            <div class="guide_data">
+              <p class="title">dialog</p>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="dialog">
+                  <p class="title">Dialog Title</p>
+                  <p class="txt">Content</p>
+
+                  <div class="btn_wrap">
+                    <button class="btn type_label color_gr">
+                      <div class="ripple js-ripple">
+                        <span class="ripple__circle"></span>
+                      </div>
+                      Close
+                    </button>
+                    <button class="btn type_basic ">
+                      <div class="ripple js-ripple">
+                        <span class="ripple__circle"></span>
+                      </div>
+                      Save changes
+                    </button>
+                  </div>
+
+                  <div class="delDialog ic_x_gr"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- toast -->
+          <div class="guide_block" style="display: none;">
+            <h3>toast</h3>
+            <div class="guide_data">
+              <p class="title">toast</p>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="toast">
+                  <p class="toast-msg">Blank Toast</p>
+                </div>
+                <div class="toast">
+                  <p class="toast-error"></p>
+                  <p class="toast-msg">This didn't work.</p>
+                </div>
+                <div class="toast">
+                  <p class="toast-success"></p>
+                  <p class="toast-msg">Successfully toasted!</p>
+                </div>
+                <div class="toast">
+                  <p class="toast-loading"></p>
+                  <p class="toast-msg">Loading...</p>
+                </div>
+                <div class="toast type_avatar">
+                  <div class="avatar_data">
+                    <div class="avatar type_circle">
+                      <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">John Doe</p>
+                      <p class="txt">Sure! 8:30pm works great</p>
+                    </div>
+                  </div>
+                  <div class="delToast ic_x"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- badge -->
+          <div class="guide_block" style="display: none;">
+            <h3>badge</h3>
+            <div class="guide_data">
+              <p class="title">badge</p>
+              <div class="data" style="display: flex; gap: 1rem; align-items: flex-start;">
+                <p class="badge">Badge</p>
+                <p class="badge color_gr">Badge</p>
+                <p class="badge color_error">Badge</p>
+                <p class="badge color_warning">Badge</p>
+                <p class="badge color_info">Badge</p>
+                <p class="badge color_success">Badge</p>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <p class="badge type_label">Badge</p>
+                <p class="badge type_label color_gr">Badge</p>
+                <p class="badge type_label color_error">Badge</p>
+                <p class="badge type_label color_warning">Badge</p>
+                <p class="badge type_label color_info">Badge</p>
+                <p class="badge type_label color_success">Badge</p>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <p class="badge type_dot"></p>
+                <p class="badge type_dot color_gr"></p>
+                <p class="badge type_dot color_error"></p>
+                <p class="badge type_dot color_warning"></p>
+                <p class="badge type_dot color_info"></p>
+                <p class="badge type_dot color_success"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- list -->
+          <div class="guide_block" style="display: none;">
+            <h3>list</h3>
+            <div class="guide_data">
+              <p class="title">list</p>
+              <div class="data" style="display: flex; gap: 1rem; align-items: flex-start; flex-wrap: wrap;">
+                <div class="list">
+                  <p class="list-title">Basic list items</p>
+
+                  <ul class="">
+                    <li class="active"><a href="javascript:void(0)">Dashboard</a> <span class="chip size_s color_pr">4</span></li>
+                    <li><a href="javascript:void(0)">Widget</a></li>
+                    <li><a href="javascript:void(0)">eCommerce</a><span class="chip size_s color_success">12</span></li>
+                    <li><a href="javascript:void(0)">Academy</a></li>
+                    <li><a href="javascript:void(0)">Logistics</a></li>
+                    <li class="disabled"><a href="javascript:void(0)">Disabled</a></li>
+                  </ul>
+                </div>
+
+                <div class="list">
+                  <p class="list-title">List items with icon</p>
+
+                  <ul class="type_left">
+                    <li><i class="ic_user"></i><a href="javascript:void(0)">Account Settings</a></li>
+                    <li><i class="ic_brand_gitlab"></i><a href="javascript:void(0)">Integrations</a></li>
+                    <li><i class="ic_settings"></i><a href="javascript:void(0)">Settings</a></li>
+                    <li><i class="ic_wallet"></i><a href="javascript:void(0)">Pricing</a></li>
+                    <li><i class="ic_help"></i><a href="javascript:void(0)">Help Center</a></li>
+                  </ul>
+                </div>
+
+                <div class="list">
+                  <p class="list-title">List items with checkbox</p>
+
+                  <ul class="type_left">
+                    <li>
+                      <div class="input_check">
+                        <input type="checkbox" class="check_input" id="checkbox1" checked>
+                        <label for="checkbox1" class=""><span class="check"></span><span class="check_label">Promotion banner</span></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="input_check">
+                        <input type="checkbox" class="check_input" id="checkbox2">
+                        <label for="checkbox2" class=""><span class="check"></span><span class="check_label">Analytics dashboard</span></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="input_check">
+                        <input type="checkbox" class="check_input" id="checkbox3">
+                        <label for="checkbox3" class=""><span class="check"></span><span class="check_label">Make dribbble short</span></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="input_check">
+                        <input type="checkbox" class="check_input" id="checkbox4">
+                        <label for="checkbox4" class=""><span class="check"></span><span class="check_label">Edit Video for facebook</span></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="input_check">
+                        <input type="checkbox" class="check_input" id="checkbox5">
+                        <label for="checkbox5" class=""><span class="check"></span><span class="check_label">Design logo for client</span></label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="list">
+                  <p class="list-title">List items with switch</p>
+
+                  <ul class="">
+                    <li>
+                      <div class="input_switch">
+                        <input type="checkbox" class="" id="swtich1" />
+                        <label for="swtich1" class="switch_label">
+                          <span class="switch_txt">Menu collapse</span>
+                          <span class="swtich_btn"></span>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="input_switch">
+                        <input type="checkbox" class="" id="swtich2" />
+                        <label for="swtich2" class="switch_label">
+                          <span class="switch_txt">Card shadow</span>
+                          <span class="swtich_btn"></span>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="input_switch">
+                        <input type="checkbox" class="" id="swtich3" />
+                        <label for="swtich3" class="switch_label">
+                          <span class="switch_txt">Menu icon</span>
+                          <span class="swtich_btn"></span>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="input_switch">
+                        <input type="checkbox" class="" id="swtich4" checked/>
+                        <label for="swtich4" class="switch_label">
+                          <span class="switch_txt">Dark mode</span>
+                          <span class="swtich_btn"></span>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="input_switch">
+                        <input type="checkbox" class="" id="swtich5" />
+                        <label for="swtich5" class="switch_label">
+                          <span class="switch_txt">Content boxed</span>
+                          <span class="swtich_btn"></span>
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="list">
+                  <p class="list-title">Avatar with subtitle</p>
+
+                  <ul class="">
+                    <li>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                          <span class="badge type_dot color_success"></span>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">Shannon Paucek</p>
+                          <p class="txt">Destiney_Kiehn@yahoo.com</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_2.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">Dorothy Lockman</p>
+                          <p class="txt">Runolfsdottir@hotmail.com</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_3.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">Johanna Wilderman</p>
+                          <p class="txt">Tito.Boehm@gmail.com</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_4.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">Melody Mayert</p>
+                          <p class="txt">Romaguera23@yahoo.com</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_5.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">Emily Baumbach</p>
+                          <p class="txt">Zaria_Veum71@yahoo.com</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- card -->
+          <div class="guide_block" style="display: none;">
+            <h3>card</h3>
+            <div class="guide_data">
+              <p class="title">card</p>
+              <div class="data" style="display: flex; gap: 1rem; align-items: flex-start; flex-wrap: wrap;">
+                <div class="card">
+                  <div class="card-title">
+                    <p class="title">Card header</p>
+                  </div>
+                  <div class="card-body">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-title">
+                    <p class="title">Card header</p>
+                    <p class="subtitle">Subtitle</p>
+                  </div>
+                  <div class="card-body">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-title">
+                    <p class="title">Card header</p>
+                  </div>
+                  <div class="card-body">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                  <div class="btn_wrap">
+                    <button class="btn type_basic">
+                      <div class="ripple js-ripple">
+                        <span class="ripple__circle"></span>
+                      </div>
+                      Share
+                    </button>
+                    <button class="btn type_outline color_gr">
+                      <div class="ripple js-ripple">
+                        <span class="ripple__circle"></span>
+                      </div>
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-img"><img src="../../images/card_img.png" alt=""></div>
+                  <div class="card-body">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                  <div class="btn_wrap">
+                    <button class="btn type_basic">
+                      <div class="ripple js-ripple">
+                        <span class="ripple__circle"></span>
+                      </div>
+                      Share
+                    </button>
+                    <button class="btn type_outline color_gr">
+                      <div class="ripple js-ripple">
+                        <span class="ripple__circle"></span>
+                      </div>
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-title">
+                    <p class="title">Card header</p>
+                    <p class="subtitle">Subtitle</p>
+                  </div>
+                  <div class="card-body">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                  <div class="card-img"><img src="../../images/card_img.png" alt=""></div>
+                </div>
+
+                <div class="card ">
+                  <div class="card-title">
+                    <div class="tab_group_fill">
+                      <a href="javascript:void(0)" class="tab_btn active" id="tab1">tab 1</a>
+                      <a href="javascript:void(0)" class="tab_btn" id="tab2">tab 2</a>
+                      <a href="javascript:void(0)" class="tab_btn" id="tab3">tab 3</a>
+                      <a href="javascript:void(0)" class="tab_btn" id="tab4">tab 4</a>
+                    </div>
+                  </div>
+                  <div class="card-body card_tab" id="tab1-con">
+                    탭1This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                  <div class="card-body card_tab"  id="tab2-con" style="display: none;">
+                    탭2This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                  <div class="card-body card_tab"  id="tab3-con" style="display: none;">
+                    탭3This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                  <div class="card-body card_tab"  id="tab4-con" style="display: none;">
+                    탭4This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                </div>
+
+                <div class="card type_fill">
+                  <div class="card-title">
+                    <p class="title">Card header</p>
+                  </div>
+                  <div class="card-body">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                </div>
+
+                <div class="card type_label">
+                  <div class="card-title">
+                    <p class="title">Card header</p>
+                  </div>
+                  <div class="card-body">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                </div>
+
+                <div class="card type_outline">
+                  <div class="card-title">
+                    <p class="title">Card header</p>
+                  </div>
+                  <div class="card-body">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- timeline -->
+          <div class="guide_block" >
+            <h3>timeline</h3>
+            <div class="guide_data">
+              <p class="title">timeline</p>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="timeline">
+                  <div class="timeline-block">
+                    <div class="timeline-icon">
+                      <div class="icon color_pr"></div>
+                    </div>
+                    <div class="timeline-data">
+                      <p class="title">12 Invoices have been paid<span class="date">12 min ago</span></p>
+                      <div class="content">
+                        <p class="txt">Invoices have been paid to the company</p>
+
+                        <a  href="javascript:void(0)" class="file">
+                          <i><img src="../../images/file_pdf.svg" alt=""></i>
+                          <p class="">invoices.pdf</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="timeline-block">
+                    <div class="timeline-icon">
+                      <div class="icon color_success"></div>
+                    </div>
+                    <div class="timeline-data">
+                      <p class="title">Client Meeting<span class="date">45 min ago</span></p>
+                      <div class="content">
+                        <p class="txt">Project meeting with john @10:15am</p>
+                        <div class="avatar_data">
+                          <div class="avatar type_circle">
+                            <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                          </div>
+                          <div class="avatar_info">
+                            <p class="name">Shannon Paucek</p>
+                            <p class="txt">Destiney_Kiehn@yahoo.com</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="timeline-block">
+                    <div class="timeline-icon">
+                      <div class="icon color_info"></div>
+                    </div>
+                    <div class="timeline-data">
+                      <p class="title">Create a new project for client<span class="date">2 Day Ago</span></p>
+                      <div class="content">
+                        <p class="txt">6 team members in a project</p>
+
+                        <div class="avatar_list">
+                          <div class="avatar type_circle">
+                            <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                          </div>
+                          <div class="avatar type_circle">
+                            <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                          </div>
+                          <div class="avatar type_circle">
+                            <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                          </div>
+                          <div class="avatar type_circle">
+                            <p class="thumb">+3</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="timeline type_outline">
+                  <div class="timeline-block">
+                    <div class="timeline-icon">
+                      <div class="icon color_pr"></div>
+                    </div>
+                    <div class="timeline-data">
+                      <p class="title">12 Invoices have been paid<span class="date">12 min ago</span></p>
+                      <div class="content">
+                        <p class="txt">Invoices have been paid to the company</p>
+
+                        <a  href="javascript:void(0)" class="file">
+                          <i><img src="../../images/file_pdf.svg" alt=""></i>
+                          <p class="">invoices.pdf</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="timeline-block">
+                    <div class="timeline-icon">
+                      <div class="icon color_success"></div>
+                    </div>
+                    <div class="timeline-data">
+                      <p class="title">Client Meeting<span class="date">45 min ago</span></p>
+                      <div class="content">
+                        <p class="txt">Project meeting with john @10:15am</p>
+                        <div class="avatar_data">
+                          <div class="avatar type_circle">
+                            <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                          </div>
+                          <div class="avatar_info">
+                            <p class="name">Shannon Paucek</p>
+                            <p class="txt">Destiney_Kiehn@yahoo.com</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="timeline-block">
+                    <div class="timeline-icon">
+                      <div class="icon color_info"></div>
+                    </div>
+                    <div class="timeline-data">
+                      <p class="title">Create a new project for client<span class="date">2 Day Ago</span></p>
+                      <div class="content">
+                        <p class="txt">6 team members in a project</p>
+
+                        <div class="avatar_list">
+                          <div class="avatar type_circle">
+                            <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                          </div>
+                          <div class="avatar type_circle">
+                            <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                          </div>
+                          <div class="avatar type_circle">
+                            <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                          </div>
+                          <div class="avatar type_circle">
+                            <p class="thumb">+3</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="timeline type_wide">
+                  <div class="timeline-block">
+                    <div class="timeline-icon">
+                      <div class="icon color_pr"></div>
+                    </div>
+                    <div class="timeline-data">
+                      <p class="title">12 Invoices have been paid<span class="date">12 min ago</span></p>
+                      <div class="content">
+                        <p class="txt">Invoices have been paid to the company</p>
+
+                        <a  href="javascript:void(0)" class="file">
+                          <i><img src="../../images/file_pdf.svg" alt=""></i>
+                          <p class="">invoices.pdf</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
     <script>
+      //리플버튼
+      var $ripple = $('.js-ripple');
+      $ripple.on('click.ui.ripple', function(e) {
+
+        var $this = $(this);
+        var $offset = $this.parent().offset();
+        var $circle = $this.find('.ripple__circle');
+
+        var x = e.pageX - $offset.left;
+        var y = e.pageY - $offset.top;
+
+        $circle.css({
+          top: y + 'px',
+          left: x + 'px'
+        });
+
+        $this.addClass('is-active');
+      });
+
+      $ripple.on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', function(e) {
+        $(this).removeClass('is-active');
+      });
+
       //dropdown
       $(".dropdown-open").click(function () {
         $(".dropdown_list").slideToggle();
@@ -1124,6 +1861,77 @@
       $(this).siblings('.accordion-dec').slideToggle();
       $(this).parents().siblings('.accordion-data').children('.accordion-dec').slideUp();
       $(this).parents().siblings('.accordion-data').children('.accordion-title').removeClass('accOpen');
+    })
+
+    //option
+    $(".option").click(function(){
+      $(this).toggleClass('active')
+      $(this).siblings().removeClass('active')
+    })
+
+    //progress
+    //일정 길이가 정해져있음
+    $('.progress-bar .bar').each(function () {
+        let $this = $(this);
+        let per = $this.attr('per');
+        let perTxt = $this.parents().children('.per')
+        $this.animate({
+            width: per + "%"
+        }, 2000);
+    });
+
+    //무조껀 100%
+    // var val;
+    
+    // $('.progress-bar .bar').animate({
+    //   width: "100%"
+    // },
+    // {
+    //   duration: 3000,
+    //   progress: function( anim, prog, remainMS ) {
+    //     val = (100 * prog).toFixed(0);
+    //     $('.progress-per').text( val + "%");
+    //   },
+    //   complete: function() {
+    //     $('.progress-per')
+    //       .text("100%");
+    //   }
+    // });
+
+    //스낵바
+    $(".snackbar .delBtn").click(function(){
+      $(this).parents(".snackbar").fadeOut(function(){
+        setTimeout(() => {
+          $(this).remove()
+        }, 700);
+      })
+    })
+
+    //다이얼로그
+    $(".delDialog").click(function(){
+      $(this).parents(".dialog").fadeOut(function(){
+        setTimeout(() => {
+          $(this).remove()
+        }, 700);
+      })
+    })
+
+    //토스트 삭제
+    $(".delToast").click(function(){
+      $(this).parents(".toast").fadeOut(function(){
+        setTimeout(() => {
+          $(this).remove()
+        }, 700);
+      })
+    })
+
+    //탭
+    $(".tab_group_fill").find('.tab_btn').click(function(){
+      var t = $(this).attr('id');
+        $(this).addClass('active')
+        $(this).siblings().removeClass('active')
+        $('.card_tab').hide();
+        $('#'+ t + '-con').fadeIn('slow');
     })
     </script>
   </body>

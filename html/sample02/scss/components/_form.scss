@@ -470,7 +470,7 @@ select {
 
   label {
     @include flex;
-    gap: 1rem;
+    gap: var(--gap-2);
   }
   .check_label {
     @include font_body_1;
@@ -848,6 +848,7 @@ select {
     background-color: var(--action-focus);
     position: relative;
     transition: all 0.2s ease;
+    margin: 0.625rem 0.5rem;
 
     &::after {
       content: "";
