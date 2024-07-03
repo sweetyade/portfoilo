@@ -6,136 +6,326 @@
   <title>common - navgation - row</title>
 
   <!-- css -->
-   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+  <!-- <div class="overlay"></div> -->
   <div class="top_search">
-    <div class="input_basic">
-      <div class="inner">
-        <p class="input_icon_search"></p>
-        <input type="text" placeholder="input placeholder" id='password_confirm1' value="" required >
+    <div class="search">
+      <div class="input_basic">
+        <div class="inner">
+          <i class="ic_search"></i>
+          <input type="text" placeholder="Search ⌘K" id='' value="">
+        </div>
+      </div>
+
+      <div class="search_pop type_list_grid" style="display: none;">
+        <div class="search_pop-inner">
+          <div class="list">
+            <p class="list-title">Popular SEarch</p>
+
+            <ul class="type_left">
+              <li><i class="ic_chart_bar"></i><a href="javascript:void(0)">Analytics</a></li>
+              <li><i class="ic_chart_donut_3"></i><a href="javascript:void(0)">CRM</a></li>
+              <li><i class="ic_shopping_cart"></i><a href="javascript:void(0)">eCommerce</a></li>
+              <li><i class="ic_truck"></i><a href="javascript:void(0)">Logistics</a></li>
+            </ul>
+          </div>
+          <div class="list">
+            <p class="list-title">APPS & PAGES</p>
+
+            <ul class="type_left">
+              <li><i class="ic_calendar"></i><a href="javascript:void(0)">Calendar</a></li>
+              <li><i class="ic_lock"></i><a href="javascript:void(0)">IRoles & Permissions</a></li>
+              <li><i class="ic_settings"></i><a href="javascript:void(0)">Account Settings</a></li>
+              <li><i class="ic_copy"></i><a href="javascript:void(0)">Dialog Examples</a></li>
+            </ul>
+          </div>
+          <div class="list">
+            <p class="list-title">USER INTERFACE</p>
+
+            <ul class="type_left">
+              <li><i class="ic_typography"></i><a href="javascript:void(0)">Typography</a></li>
+              <li><i class="ic_menu_2"></i><a href="javascript:void(0)">Accordion</a></li>
+              <li><i class="ic_AlertReportProblem"></i><a href="javascript:void(0)">Alerts</a></li>
+              <li><i class="ic_checkbox"></i><a href="javascript:void(0)">Cards</a></li>
+            </ul>
+          </div>
+          <div class="list">
+            <p class="list-title">FORMS & TABLES</p>
+
+            <ul class="type_left">
+              <li><i class="ic_circle_dot"></i><a href="javascript:void(0)">Radio</a></li>
+              <li><i class="ic_file_invoice"></i><a href="javascript:void(0)">Form Layouts</a></li>
+              <li><i class="ic_table"></i><a href="javascript:void(0)">Table</a></li>
+              <li><i class="ic_edit"></i><a href="javascript:void(0)">Editor</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="search_pop type_list_column" style="display: none;">
+        <div class="search_pop-inner">
+          <div class="list">
+            <p class="list-title">Popular SEarch</p>
+
+            <ul class="type_left">
+              <li><i class="ic_chart_bar"></i><a href="javascript:void(0)">Analytics</a></li>
+              <li><i class="ic_chart_donut_3"></i><a href="javascript:void(0)">CRM</a></li>
+              <li><i class="ic_shopping_cart"></i><a href="javascript:void(0)">eCommerce</a></li>
+              <li><i class="ic_truck"></i><a href="javascript:void(0)">Logistics</a></li>
+            </ul>
+          </div>
+          <div class="list">
+            <p class="list-title">APPS & PAGES</p>
+
+            <ul class="type_left">
+              <li><i class="ic_calendar"></i><a href="javascript:void(0)">Calendar</a></li>
+              <li><i class="ic_lock"></i><a href="javascript:void(0)">IRoles & Permissions</a></li>
+              <li><i class="ic_settings"></i><a href="javascript:void(0)">Account Settings</a></li>
+              <li><i class="ic_copy"></i><a href="javascript:void(0)">Dialog Examples</a></li>
+            </ul>
+          </div>
+          <div class="list">
+            <p class="list-title">USER INTERFACE</p>
+
+            <ul class="type_left">
+              <li><i class="ic_typography"></i><a href="javascript:void(0)">Typography</a></li>
+              <li><i class="ic_menu_2"></i><a href="javascript:void(0)">Accordion</a></li>
+              <li><i class="ic_AlertReportProblem"></i><a href="javascript:void(0)">Alerts</a></li>
+              <li><i class="ic_checkbox"></i><a href="javascript:void(0)">Cards</a></li>
+            </ul>
+          </div>
+          <div class="list">
+            <p class="list-title">FORMS & TABLES</p>
+
+            <ul class="type_left">
+              <li><i class="ic_circle_dot"></i><a href="javascript:void(0)">Radio</a></li>
+              <li><i class="ic_file_invoice"></i><a href="javascript:void(0)">Form Layouts</a></li>
+              <li><i class="ic_table"></i><a href="javascript:void(0)">Table</a></li>
+              <li><i class="ic_edit"></i><a href="javascript:void(0)">Editor</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="search_pop" style="display: none;">
+        <div class="blank_msg">
+          <i class="ic_file-alert"></i>
+          <p class="">No results for “darsd”</p>
+        </div>
+
+        <div class="list">
+          <p class="list-title">Try searching for</p>
+
+          <ul class="type_left">
+            <li><i class="ic_chart_bar"></i><a href="javascript:void(0)">Analytics</a></li>
+            <li><i class="ic_chart_donut_3"></i><a href="javascript:void(0)">CRM</a></li>
+            <li><i class="ic_shopping_cart"></i><a href="javascript:void(0)">eCommerce</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="top_icons">
-      <div class="icon ic_language">
-      </div>
-      <div class="icon ic_moon_stars">
-      </div>
-      <div class="icon ic_layout_grid_add">
-      </div>
-      <div class="icon ic_bell">
-        <span class="type"></span>
-
-        <div class="bell_dropdown" style="display: none;">
-          <div class="title">
-            <p class="txt">Notifications</p>
-
-            <div class="icons">
-              <p class="chip">8 New</p>
-              <i class="ic_mail_opened"></i>
-            </div>
+    <div class="top_menu">
+      <div class="top_icons">
+        <div class="icon">
+          <i class="ic_language"></i>
+          <div class="list list_language">
+            <ul class="">
+              <li class="active">English</li>
+              <li>French</li>
+              <li>>German</li>
+              <li>Portuguese</li>
+              <li>Arabic</li>
+            </ul>
           </div>
-
-          <div class="bell_list">
-            <div class="user_pf">
-              <div class="thumb"><img src="../../images/Avatar_5.png" alt=""></div>
-              <div class="user_pf-info">
-                <p class="name">Congratulation Flora! 🎉</p>
-                <p class="txt">Won the monthly best seller gold badge</p>
-                <p class="txt_sub">Today</p>
-              </div>
-
-              <span class="now_dot active"></span>
-            </div>
-            <div class="user_pf">
-              <div class="thumb"><img src="../../images/Avatar_icon_1.png" alt=""></div>
-              <div class="user_pf-info">
-                <p class="name">New user registered.</p>
-                <p class="txt">Accepted your connection</p>
-                <p class="txt_sub">Yesterday</p>
-              </div>
-            </div>
-            <div class="user_pf">
-              <div class="thumb"><img src="../../images/Avatar_6.png" alt=""></div>
-              <div class="user_pf-info">
-                <p class="name">New message received 👋🏻</p>
-                <p class="txt">You have new message from Natalie</p>
-                <p class="txt_sub">11 Aug</p>
-              </div>
-
-              <span class="now_dot"></span>
-              <span class="del ic_x"></span>
-            </div>
-            <div class="user_pf">
-              <div class="thumb"><img src="../../images/Avatar_icon_2.png" alt=""></div>
-              <div class="user_pf-info">
-                <p class="name">Paypal</p>
-                <p class="txt">ACME Inc. made new order $1,154</p>
-                <p class="txt_sub">25 May</p>
-              </div>
-
-              <span class="now_dot active"></span>
-            </div>
-            <div class="user_pf">
-              <div class="thumb"><img src="../../images/Avatar_7.png" alt=""></div>
-              <div class="user_pf-info">
-                <p class="name">Application has been approved 🚀</p>
-                <p class="txt">Your ABC project application has been approved.</p>
-                <p class="txt_sub">19 Mar</p>
-              </div>
-
-              <span class="now_dot active"></span>
-            </div>
-          </div>
-
-          <button class="btn type_basic">
-            <div class="ripple js-ripple">
-              <span class="ripple__circle"></span>
-            </div>
-            View All Notifications</button>
-          </div>
-      </div>
-      <div class="user_icon">
-        <div class="user_thumb">
-          <img src="../../images/Avatar_4.png" alt="">
         </div>
-        <span class="type"></span>
+        <div class="icon">
+          <i class="ic_moon_stars"></i>
+          <div class="list list_theme">
+            <ul class="type_left">
+              <li class="active"><i class="ic_sun"></i>Light</li>
+              <li><i class="ic_moon_stars"></i>Dark</li>
+              <li><i class="ic_device_desktop_analytics"></i>System</li>
+            </ul>
+          </div>
+        </div>
+        <div class="icon">
+          <i class="ic_layout_grid_add"></i>
+          <div class="list_quick">
+            <div class="heading">
+              <p class="title">Shortcuts</p>
+              <i class="ic_plus"></i>
+            </div>
+            <div class="quick_menu">
+              <a href="javascript:void(0)" class="quick_link">
+                <p class="quick_icon">
+                  <i class="ic_calendar"></i>
+                </p>
+                <p class="menu">Calendar</p>
+                <p class="txt">Appointments</p>
+              </a>
+              <a href="javascript:void(0)" class="quick_link">
+                <p class="quick_icon">
+                  <i class="ic_file_dollar"></i>
+                </p>
+                <p class="menu">Invoice App</p>
+                <p class="txt">Manage Accounts</p>
+              </a>
+              <a href="javascript:void(0)" class="quick_link">
+                <p class="quick_icon">
+                  <i class="ic_user"></i>
+                </p>
+                <p class="menu">Users</p>
+                <p class="txt">Manage Users</p>
+              </a>
+              <a href="javascript:void(0)" class="quick_link">
+                <p class="quick_icon">
+                  <i class="ic_users"></i>
+                </p>
+                <p class="menu">Role Management</p>
+                <p class="txt">Permissions</p>
+              </a>
+              <a href="javascript:void(0)" class="quick_link">
+                <p class="quick_icon">
+                  <i class="ic_device_desktop_analytics"></i>
+                </p>
+                <p class="menu">Dashboard</p>
+                <p class="txt">User Dashboard</p>
+              </a>
+              <a href="javascript:void(0)" class="quick_link">
+                <p class="quick_icon">
+                  <i class="ic_settings"></i>
+                </p>
+                <p class="menu">Settings</p>
+                <p class="txt">Account Settings</p>
+              </a>
+            </div>
+            
+          </div>
+        </div>
+        <div class="icon">
+          <i class="ic_bell"><span class="badge type_dot color_error"></span></i>
+          
+          <div class="list_bell">
+            <div class="heading">
+              <div class="title">Notifications</div>
+              <div class="heading_opt">
+                <p class="chip size_s type_label color_pr">8 New</p>
+                <i class="ic_mail_opened"></i>
+              </div>
+            </div>
 
-        <div class="user_dropdown" style="display: none;">
-          <div class="user_pf">
-            <div class="thumb"><img src="../../images/Avatar_1.png" alt=""></div>
-            <div class="user_pf-info">
-              <p class="name"></p>
-              <p class="txt"></p>
+            <div class="list">
+              <div class="list-data">
+                <div class="avatar_data">
+                  <div class="avatar type_circle">
+                    <p class="thumb"><img src="../../images/avatar_2.png" alt=""></p>
+                  </div>
+                  <div class="avatar_info">
+                    <p class="name">Congratulation Flora! 🎉</p>
+                    <p class="txt">Won the monthly best seller gold badge</p>
+                    <p class="subtxt">Today</p>
+                  </div>
+                </div>
+                <span class="badge type_dot"></span>
+              </div>
+              <div class="list-data">
+                <div class="avatar_data">
+                  <div class="avatar type_circle">
+                    <p class="thumb"><img src="../../images/Avatar_icon_1.png" alt=""></p>
+                  </div>
+                  <div class="avatar_info">
+                    <p class="name">New user registered.</p>
+                    <p class="txt">Accepted your connection/p>
+                    <p class="subtxt">Yesterday</p>
+                  </div>
+                </div>
+              </div>
+              <div class="list-data ck_done">
+                <div class="avatar_data">
+                  <div class="avatar type_circle">
+                    <p class="thumb"><img src="../../images/avatar_3.png" alt=""></p>
+                  </div>
+                  <div class="avatar_info">
+                    <p class="name">New message received 👋🏻</p>
+                    <p class="txt">You have new message from Natalie</p>
+                    <p class="subtxt">11 Aug</p>
+                  </div>
+                </div>
+                <span class="badge type_dot"></span>
+                <span class="delBell ic_x"></span>
+              </div>
+              <div class="list-data">
+                <div class="avatar_data">
+                  <div class="avatar type_circle">
+                    <p class="thumb"><img src="../../images/Avatar_icon_2.png" alt=""></p>
+                  </div>
+                  <div class="avatar_info">
+                    <p class="name">Paypal</p>
+                    <p class="txt">ACME Inc. made new order $1,154</p>
+                    <p class="subtxt">25 May</p>
+                  </div>
+                </div>
+                <span class="badge type_dot"></span>
+              </div>
+              <div class="list-data">
+                <div class="avatar_data">
+                  <div class="avatar type_circle">
+                    <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                  </div>
+                  <div class="avatar_info">
+                    <p class="name">Application has been approved 🚀</p>
+                    <p class="txt">Your ABC project application has been approved.</p>
+                    <p class="subtxt">19 Mar</p>
+                  </div>
+                </div>
+                <span class="badge type_dot"></span>
+              </div>
+            </div>
+
+            <div class="btn_wrap">
+              <button class="btn type_basic">
+                <div class="ripple js-ripple">
+                  <span class="ripple__circle"></span>
+                </div>
+                View All Notifications
+              </button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="top_user">
+        <div class="avatar type_circle">
+          <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+          <span class="badge type_dot color_success"></span>
+        </div>
+
+        <div class="user_list" style="display: none;">
+          <div class="avatar_data">
+            <div class="avatar type_circle">
+              <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+            </div>
+            <div class="avatar_info">
+              <p class="name">John Doe</p>
+              <p class="txt">Admin</p>
             </div>
           </div>
 
-          <div class="user_menu-list">
-            <div class="menu_data">
-              <i class="ic_user"></i>
-              <p class="">My Profile</p>
-            </div>
-            <div class="menu_data">
-              <i class="ic_settings"></i>
-              <p class="">Settings</p>
-            </div>
-            <div class="menu_data">
-              <i class="ic_file_dollar"></i>
-              <p class="">Billing Plan</p>
-            </div>
+          <div class="list">
+            <ul class="">
+              <li class=""><a href="javascript:void(0)"><i class="ic_user"></i>My Profile</a></li>
+              <li><a href="javascript:void(0)"><i class="ic_settings"></i>Settings</a></li>
+              <li><a href="javascript:void(0)"><i class="ic_file_dollar"></i>Billing Plan</a><span class="chip size_s color_error">4</span></li>
+            </ul>
+            <ul class="">
+              <li class=""><a href="javascript:void(0)"><i class="ic_currency_dollar"></i>My Pricing</a> </li>
+              <li><a href="javascript:void(0)"><i class="ic_question_mark"></i>FAQ</a></li>
+            </ul>
           </div>
-
-          <div class="user_menu-list">
-            <div class="menu_data">
-              <i class="ic_currency_dollar"></i>
-              <p class="">Pricing</p>
-            </div>
-            <div class="menu_data">
-              <i class="ic_question_mark"></i>
-              <p class="">FAQ</p>
-            </div>
-
-            <button class="btn type_basic color_error size_s">
+          <div class="btn_wrap">
+            <button class="btn type_basic color_error">
               <div class="ripple js-ripple">
                 <span class="ripple__circle"></span>
               </div>
@@ -150,36 +340,77 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
 
-    //nav active icon
-    // const imgSrc = $('.active').find(".nav-icon img").attr('src');
-    // $('.active').find(".nav-icon img").attr('src', imgSrc.replace('.svg', '_w.svg'));
-    const imgSrc = $('.active').find(".nav-icon").css('background-image').replace(/^url\(['"](.+)['"]\)/, '$1')
-    const imgCngW = imgSrc.replace('.svg', '_w.svg')
-    const imgCngD = imgSrc.replace('_d.svg', '_w.svg')
+    //리플버튼
+    var $ripple = $('.js-ripple');
+    $ripple.on('click.ui.ripple', function(e) {
 
-    if($('.nav-link').hasClass('active')){
-      if($('.sidebar').hasClass('sideIcon')){
-        $('.active').find(".nav-icon").css({
-        'backgroundImage' : 'url('+imgSrc+')',
-      })
-      }else{
-        $('.active').find(".nav-icon").css({
-        'backgroundImage' : 'url('+imgCngW+')',
-      })
-      if($("html").hasClass('dark')){
-        $('.active').find(".nav-icon").css({
-        'backgroundImage' : 'url('+imgCngD+')',
-      })
-      }}
-    
-    }
+      var $this = $(this);
+      var $offset = $this.parent().offset();
+      var $circle = $this.find('.ripple__circle');
 
-    //메뉴토글
-    $('.subOpen').click(function(){
-      $(this).siblings('.subMenu').slideToggle('fast')
-      $(this).toggleClass('open')
+      var x = e.pageX - $offset.left;
+      var y = e.pageY - $offset.top;
+
+      $circle.css({
+        top: y + 'px',
+        left: x + 'px'
+      });
+
+      $this.addClass('is-active');
+    });
+
+    $ripple.on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', function(e) {
+      $(this).removeClass('is-active');
+    });
+
+
+    //header dropdown
+    $('.ic_language').click(function(){
+      clodeToplist();
+      $(".list_language").slideToggle();
     })
 
+    $('.ic_moon_stars').click(function(){
+      clodeToplist();
+      $(".list_theme").slideToggle();
+    })
 
+    $('.ic_layout_grid_add').click(function(){
+      clodeToplist();
+      $(".list_quick").slideToggle();
+    })
+
+    $('.ic_bell').click(function(){
+      clodeToplist();
+      $(".list_bell").slideToggle();
+    })
+
+    $('.top_user .avatar').click(function(){
+      clodeToplist();
+      $(".user_list").slideToggle();
+    })
+
+    function clodeToplist (){
+      $('.list_language, .list_theme, .list_quick, .list_bell, .user_list, .container').not(this).slideUp('fast');
+    }
+
+    //언어선택
+    $(".list_language").find('li').click(function(){
+      $(this).addClass('active')
+      $(this).siblings().removeClass('active')
+    })
+    //테마선택
+    $(".list_theme").find('li').click(function(){
+      $(this).addClass('active')
+      $(this).siblings().removeClass('active')
+
+      if($(this).children('i').hasClass('ic_sun')){
+        $('html').removeClass('dark');
+      }else if($(this).children('i').hasClass('ic_moon_stars')){
+        $('html').addClass('dark');
+      }else{
+        $('html').removeClass('dark');
+      }
+    })
   </script>
 </body>
