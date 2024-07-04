@@ -8,27 +8,36 @@
   padding: var(--padding-2) var(--padding-6) var(--padding-2) var(--padding-4);
   box-shadow: var(--gray-s-small);
   background-color: var(--paper-bg);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-fixed);
 
   .search {
+    width: calc(100% - 16rem);
     .input_basic .inner {
       flex-wrap: nowrap;
     }
 
-    i {
-      width: 2.5rem;
-      height: 2.5rem;
-      background-size: 1.5rem;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
     input {
+      padding-left: 0.5rem;
+      width: calc(100% - 2.5rem);
       border: none;
+      height: 2.5rem;
 
       &:hover,
       &:focus {
         border: none;
       }
     }
+  }
+
+  .ic_search {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: 1.5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: initial;
   }
 
   .top_menu {

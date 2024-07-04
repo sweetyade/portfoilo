@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>common - navgation - vertical</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <footer class="footer">
+    <p class="copy">© 2024, Made with ❤️ by <a href="javascript:void(0)">PIXINVENT</a></p>
+
+    <ul class="footer_lnb">
+      <li><a href="javascript:void(0)">License</a></li>
+      <li><a href="javascript:void(0)">More Themes</a></li>
+      <li><a href="javascript:void(0)">Documentation</a></li>
+      <li><a href="javascript:void(0)">Support</a></li>
+    </ul>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+
+    //nav active icon
+    const imgSrc = $('.active').find(".nav-icon").css('background-image').replace(/^url\(['"](.+)['"]\)/, '$1')
+    const imgCngW = imgSrc.replace('.svg', '_w.svg')
+    const imgCngD = imgSrc.replace('_d.svg', '_w.svg')
+
+    if($('.nav-link').hasClass('active')){
+      if($('.sidebar').hasClass('sideIcon')){
+        $('.active').find(".nav-icon").css({
+        'backgroundImage' : 'url('+imgSrc+')',
+      })
+      }else{
+        $('.active').find(".nav-icon").css({
+        'backgroundImage' : 'url('+imgCngW+')',
+      })
+      if($("html").hasClass('dark')){
+        $('.active').find(".nav-icon").css({
+        'backgroundImage' : 'url('+imgCngD+')',
+      })
+      }}
+    
+    }
+
+    //메뉴토글
+    $('.subOpen').click(function(){
+      $(this).siblings('.subMenu').slideToggle('fast')
+      $(this).toggleClass('open')
+    })
+
+
+  </script>
+</body>

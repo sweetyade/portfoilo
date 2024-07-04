@@ -8,6 +8,164 @@
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.3);
-  z-index: 1;
-  transition: all 0.2s;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.delPop {
+  width: 2.375rem;
+  height: 2.375rem;
+  background-size: 1.375rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  cursor: pointer;
+}
+
+.search_pop {
+  opacity: 0;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  transition: opacity 0.3s ease;
+
+  .input_basic .inner {
+    flex-wrap: nowrap;
+
+    input {
+      border: none;
+      height: 2.5rem;
+      padding-left: var(--padding-2);
+
+      &:focus,
+      &:hover {
+        border: none;
+      }
+    }
+  }
+
+  .ic_search {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: 1.5rem;
+    position: initial;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .overlay {
+    opacity: 1;
+  }
+
+  .pop_body {
+    width: 37.5rem;
+    height: 33.625rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--gray-s-large);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: var(--z-fixed);
+    background-color: var(--paper-bg);
+    transition: opacity 0.3s ease;
+    transform: translate(-50%, -50%);
+
+    .input_basic {
+      border-bottom: 1px solid var(--divider);
+      padding: var(--padding-3) var(--padding-4);
+      @include flexbtw;
+
+      .txt {
+        color: var(--text-disabled);
+        padding-right: 2.875rem;
+      }
+    }
+
+    .blank {
+      display: grid;
+      align-content: center;
+      height: 29.75rem;
+      justify-items: center;
+
+      .blank_msg {
+        padding-block: var(--padding-9);
+        i {
+          width: 4rem;
+          height: 4rem;
+          background-position: center;
+          background-size: cover;
+          display: block;
+          margin: 0 auto var(--padding-2);
+        }
+        .txt {
+          @include font_h5;
+        }
+      }
+
+      .list {
+        padding-bottom: var(--padding-9);
+        width: 15.625rem;
+
+        &-title {
+          text-align: center;
+          @include font_body_1;
+          color: var(--text-disabled);
+        }
+      }
+    }
+
+    .pop_con {
+      overflow-y: auto;
+      overflow-x: hidden;
+      height: 29.75rem;
+
+      & > .list {
+        width: 100%;
+
+        .list-title {
+          color: var(--text-disabled);
+          padding: var(--padding-4) var(--padding-4) var(--padding-2);
+        }
+        a {
+          width: 100%;
+        }
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: var(--padding-12);
+        gap: var(--gap-4);
+
+        & > .list {
+          .list-title {
+            padding: var(--padding-2) var(--paddiing-6);
+            color: var(--text-disabled);
+          }
+
+          ul {
+            gap: 0;
+          }
+
+          ul.type_left li {
+            padding: var(--padding-2) var(--padding-4);
+          }
+        }
+      }
+    }
+
+    .delPop {
+      position: absolute;
+      right: var(--padding-4);
+    }
+  }
+
+  &.open {
+    opacity: 1;
+    z-index: var(--z-fixed);
+  }
 }

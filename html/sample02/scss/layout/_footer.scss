@@ -1,3 +1,26 @@
 /***************************************************************
     12. footer
 ***************************************************************/
+.footer {
+  padding-top: var(--padding-4);
+  @include flexbtw;
+  position: relative;
+  z-index: 1;
+
+  .copy {
+    color: var(--text-secondary);
+
+    a {
+      color: var(--primary);
+    }
+  }
+
+  .footer_lnb {
+    @include flexright;
+    gap: var(--gap-4);
+
+    a {
+      color: var(--primary);
+    }
+  }
+}
