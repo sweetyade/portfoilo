@@ -46,62 +46,243 @@ body {
   }
 }
 
-//======= 1.Analytics ===========
-.analytics_slide {
-  background-color: var(--primary);
-  color: var(--light-color);
+.widget {
+  //======= 1.Analytics ===========
+  .analytics_slide {
+    background-color: var(--primary);
+    color: var(--light-color);
+    height: 16.25rem;
 
-  .swiper-slide {
-    background-image: url(../images/analytics_img.png);
-    background-repeat: no-repeat;
-    background-position: calc(100% + 2rem) calc(100% + 2rem);
-  }
-
-  .analytics_trf {
-    padding-block: var(--padding-3);
-    .title {
-      font-weight: var(--font-medium);
-      padding-bottom: var(--padding-4);
+    .swiper-slide {
+      background-image: url(../images/analytics_img.png);
+      background-repeat: no-repeat;
+      background-position: calc(100% + 2rem) calc(100% + 2rem);
     }
-    .trf_grid {
-      width: 17rem;
-      display: grid;
-      gap: var(--gap-4) 0;
-      grid-template-columns: repeat(2, 1fr);
 
-      .trf_data {
-        @include flex;
-        gap: var(--gap-2);
-      }
-
-      .no {
+    .analytics_trf {
+      padding-block: var(--padding-3);
+      .title {
         font-weight: var(--font-medium);
-        padding: var(--padding-2);
-        border-radius: 0.375rem;
-        width: fit-content;
-        background-color: var(--primary-700);
-        white-space: nowrap;
+        padding-bottom: var(--padding-4);
       }
+      .trf_grid {
+        width: 17rem;
+        display: grid;
+        gap: var(--gap-4) 0;
+        grid-template-columns: repeat(2, 1fr);
 
-      .txt {
-        white-space: nowrap;
+        .trf_data {
+          @include flex;
+          gap: var(--gap-2);
+        }
+
+        .no {
+          font-weight: var(--font-medium);
+          padding: var(--padding-2);
+          border-radius: 0.375rem;
+          width: fit-content;
+          background-color: var(--primary-700);
+          white-space: nowrap;
+        }
+
+        .txt {
+          white-space: nowrap;
+        }
       }
     }
   }
-}
 
-.analytics_slide_nav {
-  position: absolute;
-  top: 0.625rem;
-  right: 1.5rem;
-  z-index: 2;
+  .analytics_slide_nav {
+    position: absolute;
+    top: 0.625rem;
+    right: 1.5rem;
+    z-index: 2;
 
-  .swiper-pagination {
-    position: initial;
+    .swiper-pagination {
+      position: initial;
+    }
+
+    .swiper-pagination-bullet {
+      background-color: var(--light-color);
+      transition: all 0.2s ease;
+    }
   }
 
-  .swiper-pagination-bullet {
-    background-color: var(--light-color);
-    transition: all 0.2s ease;
+  .daily_sales {
+    padding: var(--padding-3) var(--padding-6) var(--padding-6);
+  }
+
+  .canvas_dailysales {
+    height: 76px;
+  }
+  .sales_overview {
+    .content {
+      @include flexbtw;
+      gap: 0.625rem;
+      padding-bottom: var(--padding-6);
+
+      .data {
+        width: calc((100% - 2.75rem) / 2);
+
+        .title {
+          @include flex;
+          gap: 0.625rem;
+          padding-bottom: 0.625rem;
+          .order_icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            background-color: var(--info-o-light);
+            border-radius: 0.375rem;
+            padding: 0.1875rem;
+
+            img {
+              width: 1.125rem;
+              height: 1.125rem;
+            }
+          }
+          .link_icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            background-color: var(--primary-o-light);
+            border-radius: 0.375rem;
+            padding: 0.1875rem;
+
+            img {
+              width: 1.125rem;
+              height: 1.125rem;
+            }
+          }
+        }
+
+        &-right {
+          text-align: right;
+
+          .title {
+            justify-content: flex-end;
+          }
+        }
+      }
+      .vs {
+        position: relative;
+        @include flexcenter;
+        height: 6rem;
+
+        &::before {
+          content: "";
+          width: 1px;
+          height: 1.875rem;
+          background-color: var(--divider);
+          position: absolute;
+          top: 0;
+        }
+
+        &::after {
+          content: "";
+          width: 1px;
+          height: 1.875rem;
+          background-color: var(--divider);
+          position: absolute;
+          bottom: 0;
+        }
+        .txt {
+          border-radius: 50%;
+          @include font_overline;
+          color: var(--text-disabled);
+          background-color: var(--action-hover);
+          width: 1.5rem;
+          height: 1.5rem;
+          @include flexcenter;
+        }
+      }
+    }
+    .progress {
+      background-color: var(--primary);
+      border-radius: 3rem;
+      width: 100%;
+      height: 0.625rem;
+      position: relative;
+      overflow: hidden;
+      .bar {
+        position: absolute;
+        height: 100%;
+        width: var(--prg-bar);
+        background-color: var(--info);
+        animation: prgbar 2s ease-in-out;
+      }
+    }
+  }
+
+  &.earning_reports {
+    // height: 25.1875rem;
+    .widget-con {
+      padding-top: 0;
+
+      .data_top {
+        @include flexbtw;
+        gap: var(--gap-8);
+        height: 10.0625rem;
+        padding-bottom: var(--padding-5);
+
+        .data {
+          width: 100%;
+          .font_h2 {
+            @include flex;
+            gap: 0.625rem;
+          }
+        }
+        .canvas_earning_reports {
+          width: 100%;
+        }
+      }
+
+      .data_bottom {
+        border: 1px solid var(--divider);
+        border-radius: 0.375rem;
+        @include flexbtw;
+        gap: var(--gap-6);
+        padding: var(--padding-5);
+
+        .data {
+          width: 100%;
+          display: grid;
+          gap: var(--gap-2);
+
+          .icon_title {
+            @include flex;
+            gap: var(--gap-2);
+            .icon {
+              width: 1.625rem;
+              height: 1.625rem;
+              border-radius: 0.375rem;
+              background-color: var(--bg-color);
+              @include flexcenter;
+              img {
+                width: 1.125rem;
+                height: 1.125rem;
+              }
+            }
+          }
+
+          .progress {
+            width: 100%;
+            background-color: var(--action-selected);
+            border-radius: 3rem;
+            position: relative;
+            height: 0.25rem;
+            overflow: hidden;
+
+            .bar {
+              position: absolute;
+              height: 100%;
+              left: 0;
+              width: var(--bar-w);
+              background-color: var(--bar-bg);
+              border-radius: 3rem;
+              animation: prgbar 2s;
+            }
+          }
+        }
+      }
+    }
   }
 }

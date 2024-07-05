@@ -555,8 +555,8 @@
       </div>
 
       <div class="container_body">
-        <div class="column_grid">
-          <div class="widget column_8 ">
+        <div class="column_grid mb_1_5">
+          <div class="widget column_6">
             <div class="analytics_slide_nav">
               <div class="swiper-pagination"></div>
             </div>
@@ -633,17 +633,22 @@
             </div>
 
           </div>
-          <div class="widget column_4">
+          <div class="widget column_3">
             <div class="widget-title">
               <div class="title_heading">
                 <p class="title">Average Daily Sales</p>
               </div>
-              
+            </div>
+            <div class="daily_sales">
+              <p class="text_secondary">Total Sales This Month</p>
+              <p class="font_h4">$28,450</p>
             </div>
 
-            <div class="widget-con"></div>
+            <div class="canvas_dailysales">
+              <canvas id="monthSale"></canvas>
+            </div>
           </div>
-          <div class="widget column_4">
+          <div class="widget column_3">
             <div class="widget-title">
               <div class="title_heading">
                 <p class="txt">Sales Overview</p>
@@ -654,6 +659,109 @@
               <p class="title_score">$42.5k</p>
             </div>
 
+            <div class="widget-con">
+              <div class="sales_overview">
+                <div class="content">
+                  <div class="data">
+                    <div class="title">
+                      <p class="order_icon"><img src="../../images/system/shopping-cart_blue.svg" alt=""></p>
+                      <p class="text_secondary">Order</p>
+                    </div>
+                    <div class="per">
+                      <p class="font_h5">62.2%</p>
+                      <p class="font_body_2 text_disabled">6,440</p>
+                    </div>
+                  </div>
+                  <div class="vs">
+                    <p class="txt">VS</p>
+                  </div>
+                  <div class="data data-right">
+                    <div class="title">
+                      <p class="text_secondary">Visits</p>
+                      <p class="link_icon"><img src="../../images/system/link_green.svg" alt=""></p>
+                    </div>
+                    <div class="per">
+                      <p class="font_h5">25.5%</p>
+                      <p class="font_body_2 text_disabled">12,749</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <p class="bar" style="--prg-bar: 62.2%"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column_grid">
+          <div class="widget column_6 earning_reports">
+            <div class="widget-title">
+              <div class="title_heading">
+                <p class="title">Earning Reports</p>
+                <p class="txt">Weekly Earnings Overview</p>
+                <div class="heading_abs"><i class="ic_dots_vertical_gr"></i></div>
+              </div>
+            </div>
+            <div class="widget-con">
+              <div class="data_top">
+                <div class="data">
+                  <p class="font_h2">$468 <span class="chip size_s type_label color_success">+4.2%</span></p>
+                  <p class="font_body_2 text-secondary">You informed of this week<br>compared to last week</p>
+                </div>
+
+                <div class="canvas_earning_reports">
+                  <canvas id="earningReport"></canvas>
+                </div>
+              </div>
+              <div class="data_bottom">
+                <div class="data">
+                  <div class="icon_title">
+                    <p class="icon" style="--bg-color: var(--primary-o-light)">
+                      <img src="../../images/system/currency_dollar_pr.svg" alt="">
+                    </p>
+                    <p class="font_input_m">Earnings</p>
+                  </div>
+                  <p class="font_h4">$545.69</p>
+                  <div class="progress">
+                    <div class="bar" style="--bar-bg: var(--primary); --bar-w: 75%;"></div>
+                  </div>
+                </div>
+                <div class="data">
+                  <div class="icon_title">
+                    <p class="icon" style="--bg-color: var(--info-o-light)">
+                      <img src="../../images/system/chart_pie_2_blue.svg" alt="">
+                    </p>
+                    <p class="font_input_m">Profit</p>
+                  </div>
+                  <p class="font_h4">$256.34</p>
+                  <div class="progress">
+                    <div class="bar" style="--bar-bg: var(--info); --bar-w: 65%;"></div>
+                  </div>
+                </div>
+                <div class="data">
+                  <div class="icon_title">
+                    <p class="icon" style="--bg-color: var(--error-o-light)">
+                      <img src="../../images/system/brand_paypal_red.svg" alt="">
+                    </p>
+                    <p class="font_input_m">Expense</p>
+                  </div>
+                  <p class="font_h4">$74.19</p>
+                  <div class="progress">
+                    <div class="bar" style="--bar-bg: var(--error); --bar-w: 14%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="widget column_6">
+            <div class="widget-title">
+              <div class="title_heading">
+                <p class="title">Support Tracker</p>
+                <p class="txt">Last 7 Days</p>
+                <div class="heading_abs"><i class="ic_dots_vertical_gr"></i></div>
+              </div>
+            </div>
             <div class="widget-con"></div>
           </div>
         </div>
@@ -828,8 +936,12 @@
   </div>
   
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- <script src="../../js/chart.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../../js/chartjs-plugin-datalabels@2.0.0"></script>
   <script>
     
     //리플버튼
@@ -879,7 +991,7 @@
     }
 
        //header dropdown
-       $('.ic_language').click(function(){
+      $('.ic_language').click(function(){
       if($('.list_language').hasClass('openDrop')){
         $('.list_language').removeClass('openDrop')
         $('.list_language').slideUp()
@@ -943,6 +1055,7 @@
       $(this).addClass('active')
       $(this).siblings().removeClass('active')
     })
+    
     //테마선택
     $(".list_theme").find('li').click(function(){
       $(this).addClass('active')
@@ -983,7 +1096,6 @@
 
 
     //서치 팝업 포커스
-    
     $('.delPop, .overlay').click(function(){
       $('.search_pop, body').removeClass('open')
     })
@@ -995,5 +1107,150 @@
         el: ".swiper-pagination",
       },
     });
+
+
+    //daily sales 차트
+    const Chart1 = document.getElementById("monthSale").getContext("2d");
+    var bgColor = {
+    default: "rgba(40, 199, 111, 1)",
+    half: "rgba(197, 240, 216, 0.5)",
+    quarter: "rgba(197, 240, 216, 0.05)",
+    zero: "rgba(40, 199, 111, 0)"
+  }
+  gradient = Chart1.createLinearGradient(0, 25, 0, 150);
+  gradient.addColorStop(0, bgColor.half); 
+  gradient.addColorStop(0.35, bgColor.quarter);
+  gradient.addColorStop(1, bgColor.zero);
+  new Chart(Chart1, {
+        type: "line",
+        data: {
+          labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL"],
+          datasets: [
+            {
+              label: 'Total Sales This Month',
+              data: [8, 6, 4, 5, 9, 4, 2],
+              pointRadius: 0,
+              backgroundColor: gradient,
+              pointBackgroundColor: bgColor.half,
+              borderColor: bgColor.default,
+              fill: true,
+              borderWidth: 2,
+              lineTension: 0.5,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              // 기존 툴팁 사용 안 함
+              enabled: false,
+            },
+
+            datalabels: {
+              display: false,
+            },
+          },
+
+          layout: {
+            padding: {
+              top: 0,
+              bottom: 0,
+              left: 0,
+              right: 0 ,
+            },
+          },
+
+          scales: {
+            x: {
+              display: false,
+              grid: {
+                display: false,
+              },
+            },
+            y: {
+              display: false,
+              grid: {
+                display: false,
+              },
+            },
+          },
+        }
+      });
+
+
+    //daily sales 차트
+    const Chart2 = document.getElementById("earningReport").getContext("2d");
+    new Chart(Chart2, {
+        type: "bar",
+        data: {
+          labels: ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+          datasets: [
+            {
+              label: 'Total Sales This Month',
+              data: [4, 9, 7, 5, 10, 6, 8],
+              pointRadius: 0,
+              backgroundColor: 'rgba(115, 103, 240, 0.16)',
+              borderColor: 'transperent',
+              fill: true,
+              borderWidth: 0,
+              borderRadius: 4,
+              categoryPercentage: 1.0,
+              barPercentage: 0.5,
+              borderSkipped: false,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              // 기존 툴팁 사용 안 함
+              enabled: false,
+            },
+
+            datalabels: {
+              display: false,
+            },
+          },
+
+          layout: {
+            padding: {
+              top: 0,
+              bottom: 0,
+              left: 0,
+              right: 0 ,
+            },
+          },
+          scales: {
+            x: {
+              grid: {
+                display: false,
+              },
+              ticks: { 
+                color: '#c1bfc5' ,
+            },
+            border: {
+              display: false,
+            },
+            },
+            y: {
+              display: false,
+              grid: {
+                display: false,
+              },
+            },
+          },
+        }
+      });
+
   </script>
 </body>

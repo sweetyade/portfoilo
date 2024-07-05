@@ -368,14 +368,50 @@
   align-items: stretch;
 }
 
+@mixin column_1 {
+  width: calc(100% / 12);
+}
+
 @mixin column_2 {
-  width: calc(((100% / 12) * 2) + 1rem);
+  width: calc(((100% / 12) * 2) - 1.5rem);
+}
+
+@mixin column_3 {
+  width: calc(((100% / 12) * 3) - 1.5rem);
 }
 
 @mixin column_4 {
-  width: calc(((100% / 12) * 4) + 3rem);
+  width: calc(((100% / 12) * 4) - 1.5rem);
+}
+
+@mixin column_5 {
+  width: calc(((100% / 12) * 5) - 1.5rem);
+}
+
+@mixin column_6 {
+  width: calc(((100% / 12) * 6) - 1.5rem);
+}
+
+@mixin column_7 {
+  width: calc(((100% / 12) * 7) - 1.5rem);
 }
 
 @mixin column_8 {
-  width: calc(((100% / 12) * 8) + 7rem);
+  width: calc(((100% / 12) * 8) - 1.5rem);
+}
+
+@mixin column_9 {
+  width: calc(((100% / 12) * 9) - 1.5rem);
+}
+
+@mixin column_10 {
+  width: calc(((100% / 12) * 10) - 1.5rem);
+}
+
+@mixin column_11 {
+  width: calc(((100% / 12) * 11) - 1.5rem);
+}
+
+@mixin column_12 {
+  width: 100%;
 }
