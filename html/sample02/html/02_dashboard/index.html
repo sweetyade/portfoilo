@@ -12,7 +12,7 @@
 <body>
   <div class="body_wrap">
     <!-- sidebar -->
-    <section class="sidebar ">
+    <section class="sidebar">
       <h1 class="logo">
         <a href="javascript:void(0)">
           <img src="/images/common/logo.svg" alt="">
@@ -694,7 +694,7 @@
           </div>
         </div>
 
-        <div class="column_grid">
+        <div class="column_grid mb_1_5">
           <div class="widget column_6 earning_reports">
             <div class="widget-title">
               <div class="title_heading">
@@ -724,7 +724,7 @@
                   </div>
                   <p class="font_h4">$545.69</p>
                   <div class="progress">
-                    <div class="bar" style="--bar-bg: var(--primary); --bar-w: 75%;"></div>
+                    <div class="bar" style="--bar-bg: var(--primary); --prg-bar: 75%;"></div>
                   </div>
                 </div>
                 <div class="data">
@@ -736,7 +736,7 @@
                   </div>
                   <p class="font_h4">$256.34</p>
                   <div class="progress">
-                    <div class="bar" style="--bar-bg: var(--info); --bar-w: 65%;"></div>
+                    <div class="bar" style="--bar-bg: var(--info); --prg-bar: 65%;"></div>
                   </div>
                 </div>
                 <div class="data">
@@ -748,13 +748,13 @@
                   </div>
                   <p class="font_h4">$74.19</p>
                   <div class="progress">
-                    <div class="bar" style="--bar-bg: var(--error); --bar-w: 14%;"></div>
+                    <div class="bar" style="--bar-bg: var(--error); --prg-bar: 14%;"></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="widget column_6">
+          <div class="widget column_6 ">
             <div class="widget-title">
               <div class="title_heading">
                 <p class="title">Support Tracker</p>
@@ -762,8 +762,683 @@
                 <div class="heading_abs"><i class="ic_dots_vertical_gr"></i></div>
               </div>
             </div>
-            <div class="widget-con"></div>
+            <div class="widget-con support_tracker">
+              <div class="support_info">
+                <p class="font_h2">164</p>
+                <p class="text_secondary">Total Tickets</p>
+
+                <div class="data_list">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb"  style="--avatar-bg: var(--primary-o-light)"><img src="../../images/system/ticket_pr.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">New Tickets</p>
+                      <p class="txt">142</p>
+                    </div>
+                  </div>
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb"  style="--avatar-bg: var(--info-o-light)"><img src="../../images/system/check_blue.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Open Tickets</p>
+                      <p class="txt">28</p>
+                    </div>
+                  </div>
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb"  style="--avatar-bg: var(--warning-o-light)"><img src="../../images/system/clock_orange.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Response Time</p>
+                      <p class="txt">1 Day</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="support_graph">
+                <div class="praph_bar" style="--prg-bar: 85%">
+                  <!-- <img src="../../images/support_graph.png" alt="" class="mask"> -->
+                </div>
+                <div class="praph_txt">
+                  <p class="font_body_2 text_disabled">Completed Task</p>
+                  <p class="font_h2">85%</p>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+
+        <div class="column_grid mb_1_5">
+          <div class="widget column_4">
+            <div class="widget-title">
+              <div class="title_heading">
+                <p class="title">Sales by Countries</p>
+                <p class="txt">Monthly Sales Overview</p>
+                <div class="heading_abs"><i class="ic_dots_vertical_gr"></i></div>
+              </div>
+            </div>
+            <div class="widget-con sales_countries">
+              <div class="widget-list">
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_circle">
+                      <p class="thumb"><img src="../../images/flag_us.png" alt="United States"></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">$8.45k</p>
+                      <p class="txt">United States</p>
+                    </div>
+                  </div>
+                  <div class="data_right">
+                    <div class="cost up">25.8%</div>
+                  </div>
+                </div>
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_circle">
+                      <p class="thumb"><img src="../../images/flag_br.png" alt="Brazil"></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">$7.78k</p>
+                      <p class="txt">Brazil</p>
+                    </div>
+                  </div>
+                  <div class="data_right">
+                    <div class="cost down">16.2%</div>
+                  </div>
+                </div>
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_circle">
+                      <p class="thumb"><img src="../../images/flag_in.png" alt="India"></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">$6.48k</p>
+                      <p class="txt">India</p>
+                    </div>
+                  </div>
+                  
+                  <div class="data_right">
+                    <div class="cost up">12.3%</div>
+                  </div>
+                </div>
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_circle">
+                      <p class="thumb"><img src="../../images/flag_au.png" alt="Australia"></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">$5.12k</p>
+                      <p class="txt">Australia</p>
+                    </div>
+                  </div>
+                  
+                  <div class="data_right">
+                    <div class="cost down">11.9%</div>
+                  </div>
+                </div>
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_circle">
+                      <p class="thumb"><img src="../../images/flag_fr.png" alt="France"></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">$4.45k</p>
+                      <p class="txt">France</p>
+                    </div>
+                  </div>
+
+                  <div class="data_right">
+                    <div class="cost up">16.2%</div>
+                  </div>
+                </div>
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_circle">
+                      <p class="thumb"><img src="../../images/flag_au.png" alt="China"></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">$3.90k</p>
+                      <p class="txt">China</p>
+                    </div>
+                  </div>
+                  <div class="data_right">
+                    <div class="cost up">14.8%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="widget column_4">
+            <div class="widget-title">
+              <div class="title_heading">
+                <p class="title">Total Earning</p>
+                <div class="heading_abs"><i class="ic_dots_vertical_gr"></i></div>
+              </div>
+              <p class="title_score size_l">87% <span class="per"><i class="ic_chevron_up_green"></i>25.8%</span></p>
+            </div>
+            <div class="widget-con total_earning">
+              <div class="canvas_total_earning">
+                <canvas id="totalEarning"></canvas>
+              </div>
+
+              <div class="data_bottom">
+                <div class="data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb" style="--avatar-bg: var(--primary-o-light)"><img src="../../images/system/brand_paypal_pr.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Total Revenue</p>
+                      <p class="txt">Client Payment</p>
+                    </div>
+                  </div>
+
+                  <p class="success font_m">+$126</p>
+                </div>
+                <div class="data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb" style="--avatar-bg: var(--secondary-o-light)"><img src="../../images/system/currency_dollar_gr.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Total Sales</p>
+                      <p class="txt">Refund</p>
+                    </div>
+                  </div>
+                  <p class="success font_m">+$98</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="widget column_4">
+            <div class="widget-title">
+              <div class="title_heading">
+                <p class="title">Monthly Campaign State</p>
+                <p class="txt">8.52k Social Visitors</p>
+                <div class="heading_abs"><i class="ic_dots_vertical_gr"></i></div>
+              </div>
+            </div>
+            <div class="widget-con monthly_campaign">
+              <div class="widget-list">
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb" style="--avatar-bg: var(--success-o-light)"><img src="../../images/system/mail_green.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Emails</p>
+                    </div>
+                  </div>
+                  
+                  <div class="data_right">
+                    <p class="text_secondary">12,346</p>
+                    <p class="cost up">0.3%</p>
+                  </div>
+                </div>
+
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb" style="--avatar-bg: var(--info-o-light)"><img src="../../images/system/link_blue.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Opened</p>
+                    </div>
+                  </div>
+                  <div class="data_right">
+                    <p class="text_secondary">8,734</p>
+                    <p class="cost up">2.1%</p>
+                  </div>
+                </div>
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb" style="--avatar-bg: var(--warning-o-light)"><img src="../../images/system/mouse_orange.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Clicked</p>
+                    </div>
+                  </div>
+
+                  <div class="data_right">
+                    <p class="text_secondary">967</p>
+                    <p class="cost down">1.4%</p>
+                  </div>
+                </div>
+
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb" style="--avatar-bg: var(--primary-o-light)"><img src="../../images/system/users_pr.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Subscribe</p>
+                    </div>
+                  </div>
+
+                  <div class="data_right">
+                    <p class="text_secondary">345</p>
+                    <p class="cost up">8.5%</p>
+                  </div>
+                </div>
+
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb" style="--avatar-bg: var(--secondary-o-light)"><img src="../../images/system/AlertReportProblem_gr.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Complaints</p>
+                    </div>
+                  </div>
+
+                  <div class="data_right">
+                    <p class="text_secondary">10</p>
+                    <p class="cost down">1.5%</p>
+                  </div>
+                </div>
+                
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb" style="--avatar-bg: var(--error-o-light)"><img src="../../images/system/ban_red.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Unsubscribe</p>
+                    </div>
+                  </div>
+
+                  <div class="data_right">
+                    <p class="text_secondary">86</p>
+                    <p class="cost up">0.8%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column_grid" >
+          <div class="widget column_4">
+            <div class="widget-title">
+              <div class="title_heading">
+                <p class="title">Source Visits</p>
+                <p class="txt">38.4k Visitors</p>
+                <div class="heading_abs"><i class="ic_dots_vertical_gr"></i></div>
+              </div>
+            </div>
+            <div class="widget-con source_visits">
+              <div class="widget-list">
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb"><img src="../../images/system/shadow_gr.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Source</p>
+                      <p class="txt">Direct link click</p>
+                    </div>
+                  </div>
+
+                  <div class="data_right">
+                    <p class="text_secondary">1.2k</p>
+                    <p class="chip size_s type_label color_success">+4.2%</p>
+                  </div>
+                </div>
+
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb"><img src="../../images/system/globe_gr.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Social Networks</p>
+                      <p class="txt">Social Channels</p>
+                    </div>
+                  </div>
+
+                  <div class="data_right">
+                    <p class="text_secondary">31.5k</p>
+                    <p class="chip size_s type_label color_success">+8.2%</p>
+                  </div>
+                </div>
+
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb"><img src="../../images/system/mail_gr.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Email Newsletter</p>
+                      <p class="txt">Mail Campaigns</p>
+                    </div>
+                  </div>
+
+                  <div class="data_right">
+                    <p class="text_secondary">893</p>
+                    <p class="chip size_s type_label color_success">+2.4%</p>
+                  </div>
+                </div>
+
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb"><img src="../../images/system/external_link_gr.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Referrals</p>
+                      <p class="txt">Impact Radius Visits</p>
+                    </div>
+                  </div>
+                  
+                  <div class="data_right">
+                    <p class="text_secondary">342</p>
+                    <p class="chip size_s type_label color_error">-0.4%</p>
+                  </div>
+                </div>
+
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb"><img src="../../images/system/ad_gr.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">ADVT</p>
+                      <p class="txt">Google ADVT</p>
+                    </div>
+                  </div>
+
+                  <div class="data_right">
+                    <p class="text_secondary">2.15k</p>
+                    <p class="chip size_s type_label color_success">+9.1%</p>
+                  </div>
+                </div>
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb"><img src="../../images/system/star_gr.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Other</p>
+                      <p class="txt">Many Sources</p>
+                    </div>
+                  </div>
+
+                  <div class="data_right">
+                    <p class="text_secondary">12.5k</p>
+                    <p class="chip size_s type_label color_success">+6.2%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="widget column_8">
+            <div class="widget-table_title">
+              <div class="title_left">
+                <p class="title">Project List</p>
+              </div>
+
+              <div class="title_right">
+                <div class="input_basic">
+                  <div class="inner">
+                    <input type="text" placeholder="Search Project" id='' value="" >
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="widget-table">
+              <table class="check_table">
+                <colgroup>
+                  <col width="5%">
+                  <col width="30%">
+                  <col width="13%">
+                  <col width="15%">
+                  <col width="20%">
+                  <col width="12%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th class="table_fixed">
+                      <div class="input_check">
+                        <input type="checkbox" class="check_input" id="checkAll">
+                        <label for="checkAll" class=""><span class="check"></span></label>
+                      </div>
+                    </th>
+                    <th>PROJECT</th>
+                    <th>Leader</th>
+                    <th>Team</th>
+                    <th>PROGRESS</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="table_fixed">
+                      <div class="input_check">
+                        <input type="checkbox" class="check_input" id="check1">
+                        <label for="check1" class=""><span class="check"></span></label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_icon_3.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">BGC eCommerce App</p>
+                          <p class="txt">React Project</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Eileen</td>
+                    <td>
+                      <div class="avatar_list">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                        </div>
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_2.png" alt=""></p>
+                        </div>
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_3.png" alt=""></p>
+                        </div>
+                        <div class="avatar type_circle">
+                          <p class="thumb">+3</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="progress_data">
+                        <div class="progress"><div class="bar" style="--prg-bar: 78%"></div></div>
+                        <p class="">78%</p>
+                      </div>
+                    </td>
+                    <td class="text_center"><i class="table_icon ic_dots_vertical_dgray"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="table_fixed">
+                      <div class="input_check">
+                        <input type="checkbox" class="check_input" id="check1">
+                        <label for="check1" class=""><span class="check"></span></label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_icon_4.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">Falcon Logo Design</p>
+                          <p class="txt">Figma Project</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Owen</td>
+                    <td>
+                      <div class="avatar_list">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_7.png" alt=""></p>
+                        </div>
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_5.png" alt=""></p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="progress_data">
+                        <div class="progress"><div class="bar" style="--prg-bar: 18%"></div></div>
+                        <p class="">18%</p>
+                      </div>
+                    </td>
+                    <td class="text_center"><i class="table_icon ic_dots_vertical_dgray"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="table_fixed">
+                      <div class="input_check">
+                        <input type="checkbox" class="check_input" id="check1">
+                        <label for="check1" class=""><span class="check"></span></label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_icon_5.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">Dashboard Design</p>
+                          <p class="txt">VueJs Project</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Eileen</td>
+                    <td>
+                      <div class="avatar_list">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_12.png" alt=""></p>
+                        </div>
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_10.png" alt=""></p>
+                        </div>
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_7.png" alt=""></p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="progress_data">
+                        <div class="progress"><div class="bar" style="--prg-bar: 62%"></div></div>
+                        <p class="">62%</p>
+                      </div>
+                    </td>
+                    <td class="text_center"><i class="table_icon ic_dots_vertical_dgray"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="table_fixed">
+                      <div class="input_check">
+                        <input type="checkbox" class="check_input" id="check1">
+                        <label for="check1" class=""><span class="check"></span></label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_icon_6.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">Foodista Mobile App</p>
+                          <p class="txt">Xamarin Project</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Merline</td>
+                    <td>
+                      <div class="avatar_list">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_9.png" alt=""></p>
+                        </div>
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_10.png" alt=""></p>
+                        </div>
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_2.png" alt=""></p>
+                        </div>
+                        <div class="avatar type_circle">
+                          <p class="thumb">+8</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="progress_data">
+                        <div class="progress"><div class="bar" style="--prg-bar: 8%"></div></div>
+                        <p class="">8%</p>
+                      </div>
+                    </td>
+                    <td class="text_center"><i class="table_icon ic_dots_vertical_dgray"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="table_fixed">
+                      <div class="input_check">
+                        <input type="checkbox" class="check_input" id="check1">
+                        <label for="check1" class=""><span class="check"></span></label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_icon_7.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">Blockchain Website</p>
+                          <p class="txt">Sketch Project</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Allyson</td>
+                    <td>
+                      <div class="avatar_list">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_5.png" alt=""></p>
+                        </div>
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_11.png" alt=""></p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="progress_data">
+                        <div class="progress"><div class="bar" style="--prg-bar: 92%"></div></div>
+                        <p class="">92%</p>
+                      </div>
+                    </td>
+                    <td class="text_center"><i class="table_icon ic_dots_vertical_dgray"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="table_bottom">
+                <p class="text_disabled">Showing 1 to 7 of 10 entries</p>
+
+                <div class="pagenation type_rounded color_pr">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="active">2</a>
+                  <a href="javascript:void(0)" class="">3</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
       <!-- footer -->
@@ -973,10 +1648,27 @@
     const imgCngW = imgSrc.replace('.svg', '_w.svg')
     const imgCngD = imgSrc.replace('_d.svg', '_w.svg')
 
+    $(".sidebar_toggle").click(function(){
+      $(this).toggleClass('menuClose')
+      $('.sidebar').toggleClass('sideIcon')
+      $('.container').toggleClass('con_wide')
+    })
+
+  //     $(window).bind("resize", function () {
+  //     console.log($(this).width())
+  //     if ($(this).width() > 1440) {
+  //         $('.sidebar').removeClass('sideIcon')
+  //     } else {
+  //       $('.sidebar').addClass('sideIcon')
+  //     }
+  // }).trigger('resize');
+
+
     if($('.nav-link').hasClass('active')){
+
       if($('.sidebar').hasClass('sideIcon')){
         $('.active').find(".nav-icon").css({
-        'backgroundImage' : 'url('+imgSrc+')',
+        'backgroundImage' : 'url('+imgCngW+')',
       })
       }else{
         $('.active').find(".nav-icon").css({
@@ -987,8 +1679,14 @@
         'backgroundImage' : 'url('+imgCngD+')',
       })
       }}
-    
     }
+
+
+        //메뉴토글
+        $('.subOpen').click(function(){
+      $(this).siblings('.subMenu').slideToggle('fast')
+      $(this).toggleClass('open')
+    })
 
        //header dropdown
       $('.ic_language').click(function(){

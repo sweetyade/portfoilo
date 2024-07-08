@@ -363,53 +363,52 @@
 }
 
 @mixin column_grid {
-  @include flex;
-  gap: 1rem;
-  align-items: stretch;
+  display: flex;
+  gap: 1.5rem;
 }
 
 @mixin column_1 {
-  width: calc(100% / 12);
+  width: calc((100% - 16.5rem) / 12); // -11
 }
 
 @mixin column_2 {
-  width: calc(((100% / 12) * 2) - 1.5rem);
+  width: calc((((100% - 16.5rem) / 12) * 2) + 1.5rem); //-10
 }
 
 @mixin column_3 {
-  width: calc(((100% / 12) * 3) - 1.5rem);
+  width: calc((((100% - 16.5rem) / 12) * 3) + 3rem); //-9
 }
 
 @mixin column_4 {
-  width: calc(((100% / 12) * 4) - 1.5rem);
+  width: calc((((100% - 16.5rem) / 12) * 4) + 4.5rem); //-8
 }
 
 @mixin column_5 {
-  width: calc(((100% / 12) * 5) - 1.5rem);
+  width: calc((((100% - 16.5rem) / 12) * 5) + 6rem); //-7
 }
 
 @mixin column_6 {
-  width: calc(((100% / 12) * 6) - 1.5rem);
+  width: calc((((100% - 16.5rem) / 12) * 6) + 7.5rem); //-6
 }
 
 @mixin column_7 {
-  width: calc(((100% / 12) * 7) - 1.5rem);
+  width: calc((((100% - 16.5rem) / 12) * 7) + 9rem); //-5
 }
 
 @mixin column_8 {
-  width: calc(((100% / 12) * 8) - 1.5rem);
+  width: calc((((100% - 16.5rem) / 12) * 8) + 10.5rem); //-4
 }
 
 @mixin column_9 {
-  width: calc(((100% / 12) * 9) - 1.5rem);
+  width: calc((((100% - 16.5rem) / 12) * 9) + 12rem); //-3
 }
 
 @mixin column_10 {
-  width: calc(((100% / 12) * 10) - 1.5rem);
+  width: calc((((100% - 16.5rem) / 12) * 10) + 13.5rem); //-2
 }
 
 @mixin column_11 {
-  width: calc(((100% / 12) * 11) - 1.5rem);
+  width: calc((((100% - 16.5rem) / 12) * 11) + 15rem); //-1
 }
 
 @mixin column_12 {
