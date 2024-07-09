@@ -416,21 +416,21 @@
       color: var(--primary);
     }
 
-    &.first {
-      background-image: url(/images/system/chevrons_left_gr.svg);
-    }
+    // &.first {
+    //   background-image: url(/images/system/chevrons_left_gr.svg);
+    // }
 
-    &.pre {
-      background-image: url(/images/system/chevron_left_gr.svg);
-    }
+    // &.pre {
+    //   background-image: url(/images/system/chevron_left_gr.svg);
+    // }
 
-    &.next {
-      background-image: url(/images/system/chevron_right.svg);
-    }
+    // &.next {
+    //   background-image: url(/images/system/chevron_right.svg);
+    // }
 
-    &.last {
-      background-image: url(/images/system/chevrons_right.svg);
-    }
+    // &.last {
+    //   background-image: url(/images/system/chevrons_right.svg);
+    // }
   }
 
   &.type_rounded {
@@ -889,6 +889,8 @@
     .avater_icon {
       width: 1.5rem;
       height: 1.5rem;
+      background-repeat: no-repeat;
+      background-position: center;
     }
   }
 
@@ -1579,6 +1581,16 @@
 
     .title_score {
       @include font_h4;
+      @include flex;
+      gap: var(--gap-2);
+
+      .per {
+        @include font_body_1;
+      }
+
+      &.size_l {
+        @include font_h2;
+      }
     }
   }
 
@@ -1613,6 +1625,10 @@
             text-align: left;
             position: relative;
 
+            &.checkth {
+              padding-inline: 1.25rem 1rem;
+            }
+
             &::after {
               content: "";
               position: absolute;
@@ -1641,7 +1657,7 @@
 
     tbody {
       td {
-        padding-inline: 1.25rem 16px;
+        padding-inline: 1.25rem 1rem;
         height: 3.5rem;
         border-bottom: 1px solid var(--divider);
       }
@@ -1742,26 +1758,27 @@
       .data_right {
         @include flexright;
         gap: var(--gap-4);
-
-        .cost {
-          text-align: right;
-          background-size: 1.25rem;
-          background-repeat: no-repeat;
-          background-position: left center;
-          font-weight: var(--font-medium);
-          padding-left: 1.5rem;
-
-          &.up {
-            color: var(--success);
-            background-image: url(../images/system/chevron_up_green.svg);
-          }
-
-          &.down {
-            color: var(--error);
-            background-image: url(../images/system/chevron_down_red.svg);
-          }
-        }
       }
+    }
+  }
+
+  .cost {
+    text-align: right;
+    background-size: 1.25rem;
+    background-repeat: no-repeat;
+    background-position: left center;
+    font-weight: var(--font-medium);
+    padding-left: 1.5rem;
+    @include font_body_1;
+
+    &.up {
+      color: var(--success);
+      background-image: url(../images/system/chevron_up_green.svg);
+    }
+
+    &.down {
+      color: var(--error);
+      background-image: url(../images/system/chevron_down_red.svg);
     }
   }
 

@@ -11,16 +11,15 @@
 </head>
 <body>
   <div class="body_wrap">
-    <!-- sidebar -->
     <section class="sidebar">
       <h1 class="logo">
         <a href="javascript:void(0)">
           <img src="/images/common/logo.svg" alt="">
           <p>Vuexy</p>
         </a>
-        <div class="sidebar_toggle"></div>
+        <!-- <div class="sidebar_toggle"></div> -->
       </h1>
-      
+
       <nav class="nav">
         <ul class="nav-group">
           <li class="nav-list">
@@ -919,11 +918,14 @@
                 <p class="title">Total Earning</p>
                 <div class="heading_abs"><i class="ic_dots_vertical_gr"></i></div>
               </div>
-              <p class="title_score size_l">87% <span class="per"><i class="ic_chevron_up_green"></i>25.8%</span></p>
+              <p class="title_score size_l">87% <span class="cost up">25.8%</span></p>
             </div>
             <div class="widget-con total_earning">
               <div class="canvas_total_earning">
-                <canvas id="totalEarning"></canvas>
+                <canvas id="totalEarning_1"></canvas>
+              </div>
+              <div class="canvas_total_earning">
+                <canvas id="totalEarning_2"></canvas>
               </div>
 
               <div class="data_bottom">
@@ -1078,7 +1080,7 @@
                 <div class="widget_data">
                   <div class="avatar_data">
                     <div class="avatar type_rounded">
-                      <p class="thumb"><img src="../../images/system/shadow_gr.svg" alt=""></p>
+                      <p class="thumb"><i class="ic_shadow_gr avater_icon"></i></p>
                     </div>
                     <div class="avatar_info">
                       <p class="name">Source</p>
@@ -1095,7 +1097,7 @@
                 <div class="widget_data">
                   <div class="avatar_data">
                     <div class="avatar type_rounded">
-                      <p class="thumb"><img src="../../images/system/globe_gr.svg" alt=""></p>
+                      <p class="thumb"><i class="ic_globe_gr avater_icon"></i></p>
                     </div>
                     <div class="avatar_info">
                       <p class="name">Social Networks</p>
@@ -1112,7 +1114,7 @@
                 <div class="widget_data">
                   <div class="avatar_data">
                     <div class="avatar type_rounded">
-                      <p class="thumb"><img src="../../images/system/mail_gr.svg" alt=""></p>
+                      <p class="thumb"><i class="ic_mail_gr avater_icon"></i></p>
                     </div>
                     <div class="avatar_info">
                       <p class="name">Email Newsletter</p>
@@ -1129,7 +1131,7 @@
                 <div class="widget_data">
                   <div class="avatar_data">
                     <div class="avatar type_rounded">
-                      <p class="thumb"><img src="../../images/system/external_link_gr.svg" alt=""></p>
+                      <p class="thumb"><i class="ic_external_link_gr avater_icon"></i></p>
                     </div>
                     <div class="avatar_info">
                       <p class="name">Referrals</p>
@@ -1146,7 +1148,7 @@
                 <div class="widget_data">
                   <div class="avatar_data">
                     <div class="avatar type_rounded">
-                      <p class="thumb"><img src="../../images/system/ad_gr.svg" alt=""></p>
+                      <p class="thumb"><i class="ic_ad_gr avater_icon"></i></p>
                     </div>
                     <div class="avatar_info">
                       <p class="name">ADVT</p>
@@ -1162,7 +1164,7 @@
                 <div class="widget_data">
                   <div class="avatar_data">
                     <div class="avatar type_rounded">
-                      <p class="thumb"><img src="../../images/system/star_gr.svg" alt=""></p>
+                      <p class="thumb"><i class="ic_star_gr avater_icon"></i></p>
                     </div>
                     <div class="avatar_info">
                       <p class="name">Other</p>
@@ -1206,7 +1208,7 @@
                 </colgroup>
                 <thead>
                   <tr>
-                    <th class="table_fixed">
+                    <th class="table_fixed checkth">
                       <div class="input_check">
                         <input type="checkbox" class="check_input" id="checkAll">
                         <label for="checkAll" class=""><span class="check"></span></label>
@@ -1266,8 +1268,8 @@
                   <tr>
                     <td class="table_fixed">
                       <div class="input_check">
-                        <input type="checkbox" class="check_input" id="check1">
-                        <label for="check1" class=""><span class="check"></span></label>
+                        <input type="checkbox" class="check_input" id="check2">
+                        <label for="check2" class=""><span class="check"></span></label>
                       </div>
                     </td>
                     <td>
@@ -1303,8 +1305,8 @@
                   <tr>
                     <td class="table_fixed">
                       <div class="input_check">
-                        <input type="checkbox" class="check_input" id="check1">
-                        <label for="check1" class=""><span class="check"></span></label>
+                        <input type="checkbox" class="check_input" id="check3">
+                        <label for="check3" class=""><span class="check"></span></label>
                       </div>
                     </td>
                     <td>
@@ -1343,8 +1345,8 @@
                   <tr>
                     <td class="table_fixed">
                       <div class="input_check">
-                        <input type="checkbox" class="check_input" id="check1">
-                        <label for="check1" class=""><span class="check"></span></label>
+                        <input type="checkbox" class="check_input" id="check4">
+                        <label for="check4" class=""><span class="check"></span></label>
                       </div>
                     </td>
                     <td>
@@ -1386,8 +1388,8 @@
                   <tr>
                     <td class="table_fixed">
                       <div class="input_check">
-                        <input type="checkbox" class="check_input" id="check1">
-                        <label for="check1" class=""><span class="check"></span></label>
+                        <input type="checkbox" class="check_input" id="check5">
+                        <label for="check5" class=""><span class="check"></span></label>
                       </div>
                     </td>
                     <td>
@@ -1427,13 +1429,13 @@
                 <p class="text_disabled">Showing 1 to 7 of 10 entries</p>
 
                 <div class="pagenation type_rounded color_pr">
-                  <a href="javascript:void(0)" class="first"></a>
-                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="first ic_chevrons_left_gr"></a>
+                  <a href="javascript:void(0)" class="pre ic_chevron_left_gr"></a>
                   <a href="javascript:void(0)" class="">1</a>
                   <a href="javascript:void(0)" class="active">2</a>
                   <a href="javascript:void(0)" class="">3</a>
-                  <a href="javascript:void(0)" class="next"></a>
-                  <a href="javascript:void(0)" class="last"></a>
+                  <a href="javascript:void(0)" class="next ic_chevron_right"></a>
+                  <a href="javascript:void(0)" class="last ic_chevrons_right"></a>
                 </div>
               </div>
             </div>
@@ -1857,7 +1859,7 @@
           layout: {
             padding: {
               top: 0,
-              bottom: 0,
+              bottom: 10,
               left: 0,
               right: 0 ,
             },
@@ -1883,6 +1885,14 @@
 
     //daily sales 차트
     const Chart2 = document.getElementById("earningReport").getContext("2d");
+    function getBgColors() {
+    var array  = [4, 9, 7, 5, 10, 6, 8];
+    var maxValue = Math.max.apply(this, array);
+
+    var bg = array.map(a => a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)");
+    return bg;
+  }
+
     new Chart(Chart2, {
         type: "bar",
         data: {
@@ -1892,7 +1902,8 @@
               label: 'Total Sales This Month',
               data: [4, 9, 7, 5, 10, 6, 8],
               pointRadius: 0,
-              backgroundColor: 'rgba(115, 103, 240, 0.16)',
+              // backgroundColor: 'rgba(115, 103, 240, 0.16)',
+              backgroundColor: getBgColors(),
               borderColor: 'transperent',
               fill: true,
               borderWidth: 0,
@@ -1923,7 +1934,7 @@
           layout: {
             padding: {
               top: 0,
-              bottom: 0,
+              bottom: 14,
               left: 0,
               right: 0 ,
             },
@@ -1950,5 +1961,165 @@
         }
       });
 
+  //canvas_total_earning 차트
+  const Chart3 = document.getElementById("totalEarning_1").getContext("2d");
+  new Chart(Chart3, {
+        type: "bar",
+        data: {
+          labels: ["January", "February", "March", "April", "May", "June", "July"],
+          datasets: [
+            {
+              label: 'Total Revenue',
+              data: [4, 9, 7, 5, 10, 6, 8],
+              pointRadius: 0,
+              backgroundColor: '#7367f0',
+              borderColor: 'transperent',
+              fill: true,
+              borderWidth: 0,
+              borderRadius: 4,
+              categoryPercentage: 1.0,
+              barPercentage: 0.2,
+              borderSkipped: false,
+            },
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              // 기존 툴팁 사용 안 함
+              enabled: false,
+            },
+
+            datalabels: {
+              display: false,
+            },
+          },
+
+          layout: {
+            padding: {
+              top: 0,
+              bottom: 10,
+              left: 0,
+              right: 0 ,
+            },
+          },
+          scales: {
+            x: {
+              stacked: true,
+              display: false,
+              grid: {
+                display: false,
+              },
+            border: {
+              display: false,
+            },
+            },
+            y: {
+              stacked: true,
+              display: false,
+              grid: {
+                display: false,
+              },
+            },
+          },
+        }
+      });
+
+        //canvas_total_earning 차트
+  const Chart4 = document.getElementById("totalEarning_2").getContext("2d");
+  new Chart(Chart4, {
+        type: "bar",
+        data: {
+          labels: ["January", "February", "March", "April", "May", "June", "July"],
+          datasets: [
+            {
+              label: 'Total Revenue',
+              data: [-3, -5, -2, -9, -10, -6, -8],
+              pointRadius: 0,
+              backgroundColor: '#808390',
+              borderColor: 'transperent',
+              fill: true,
+              borderWidth: 0,
+              borderRadius: 4,
+              categoryPercentage: 1.0,
+              barPercentage: 0.2,
+              borderSkipped: false,
+            },
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              // 기존 툴팁 사용 안 함
+              enabled: false,
+            },
+
+            datalabels: {
+              display: false,
+            },
+          },
+
+          layout: {
+            padding: {
+              top: 0,
+              bottom: 14,
+              left: 0,
+              right: 0 ,
+            },
+          },
+          scales: {
+            x: {
+              stacked: true,
+              display: false,
+              grid: {
+                display: false,
+              },
+            border: {
+              display: false,
+            },
+            },
+            y: {
+              stacked: true,
+              display: false,
+              grid: {
+                display: false,
+              },
+            },
+          },
+        }
+      });
+
+      //테이블 전체체크
+      const checkInput = $('.check_table tbody input')
+      $("#checkAll").click(function(){
+        const checkItem = $('.check_table tbody input:checked').length;
+        if(checkItem == 5){
+          checkInput.attr('checked', false)
+        }else{
+          checkInput.attr('checked', true)
+        }
+      });
+
+      //테이블 체크
+      checkInput.click(function(){
+        const checkItem = $('.check_table tbody input:checked').length;
+        if($('#checkAll').is(':checked')){
+          console.log('ddd')
+          $('#checkAll').prop('checked', false)
+        }else if(checkItem == 5){
+          $('#checkAll').prop('checked', true)
+        }
+      })
+      // 
   </script>
 </body>

@@ -1940,6 +1940,42 @@ body {
   background-image: url(../images/system/dots_vertical_dgray.svg);
 }
 
+.ic_chevrons_left_gr {
+  background-image: url(../images/system/chevrons_left_gr.svg);
+}
+
+.ic_chevron_left_gr {
+  background-image: url(../images/system/chevron_left_gr.svg);
+}
+
+.ic_chevrons_right {
+  background-image: url(../images/system/chevrons_right.svg);
+}
+
+.ic_shadow_gr {
+  background-image: url(../images/system/shadow_gr.svg);
+}
+
+.ic_globe_gr {
+  background-image: url(../images/system/globe_gr.svg);
+}
+
+.ic_mail_gr {
+  background-image: url(../images/system/mail_gr.svg);
+}
+
+.ic_external_link_gr {
+  background-image: url(../images/system/external_link_gr.svg);
+}
+
+.ic_star_gr {
+  background-image: url(../images/system/star_gr.svg);
+}
+
+.ic_ad_gr {
+  background-image: url(../images/system/ad_gr.svg);
+}
+
 /*-------- color ------------- */
 .icc_rocket_gr {
   background-image: url(../images/color/rocket_gr.svg);
@@ -2156,6 +2192,39 @@ body {
 }
 :root.dark .ic_edit {
   background-image: url(../images/system/edit_d.svg);
+}
+:root.dark .ic_chevrons_left_gr {
+  background-image: url(../images/system/chevrons_left_gr_d.svg);
+}
+:root.dark .ic_chevron_left_gr {
+  background-image: url(../images/system/chevron_left_gr_d.svg);
+}
+:root.dark .ic_chevrons_right {
+  background-image: url(../images/system/chevrons_right_d.svg);
+}
+:root.dark .ic_shadow_gr {
+  background-image: url(../images/system/shadow_gr_d.svg);
+}
+:root.dark .ic_globe_gr {
+  background-image: url(../images/system/globe_gr_d.svg);
+}
+:root.dark .ic_mail_gr {
+  background-image: url(../images/system/mail_gr_d.svg);
+}
+:root.dark .ic_external_link_gr {
+  background-image: url(../images/system/external_link_gr_d.svg);
+}
+:root.dark .ic_mail_gr {
+  background-image: url(../images/system/mail_gr_d.svg);
+}
+:root.dark .ic_external_link_gr {
+  background-image: url(../images/system/external_link_gr_d.svg);
+}
+:root.dark .ic_star_gr {
+  background-image: url(../images/system/star_gr_d.svg);
+}
+:root.dark .ic_ad_gr {
+  background-image: url(../images/system/ad_gr_d.svg);
 }
 :root.dark .icc_rocket_gr {
   background-image: url(../images/color/rocket_d.svg);
@@ -4038,18 +4107,6 @@ button:disabled {
   background-color: var(--primary-o-light);
   color: var(--primary);
 }
-.pagenation a.first {
-  background-image: url(/images/system/chevrons_left_gr.svg);
-}
-.pagenation a.pre {
-  background-image: url(/images/system/chevron_left_gr.svg);
-}
-.pagenation a.next {
-  background-image: url(/images/system/chevron_right.svg);
-}
-.pagenation a.last {
-  background-image: url(/images/system/chevrons_right.svg);
-}
 .pagenation.type_rounded a {
   border-radius: 0.375rem;
 }
@@ -4421,6 +4478,8 @@ button:disabled {
 .avatar .thumb .avater_icon {
   width: 1.5rem;
   height: 1.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .avatar .badge {
   width: 0.75rem;
@@ -5055,6 +5114,18 @@ button:disabled {
   font-size: var(--font-24);
   font-weight: var(--font-medium);
   line-height: 2.375rem;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-2);
+}
+.widget-title .title_score .per {
+  font-size: var(--font-15);
+  line-height: 1.375rem;
+}
+.widget-title .title_score.size_l {
+  font-size: var(--font-38);
+  font-weight: var(--font-medium);
+  line-height: 3.5rem;
 }
 .widget-table_title {
   padding: var(--padding-6);
@@ -5086,6 +5157,9 @@ button:disabled {
   text-align: left;
   position: relative;
 }
+.widget-table table.check_table thead th.checkth {
+  padding-inline: 1.25rem 1rem;
+}
 .widget-table table.check_table thead th::after {
   content: "";
   position: absolute;
@@ -5106,7 +5180,7 @@ button:disabled {
   text-transform: uppercase;
 }
 .widget-table tbody td {
-  padding-inline: 1.25rem 16px;
+  padding-inline: 1.25rem 1rem;
   height: 3.5rem;
   border-bottom: 1px solid var(--divider);
 }
@@ -5206,19 +5280,21 @@ button:disabled {
   justify-content: flex-end;
   gap: var(--gap-4);
 }
-.widget-list .widget_data .data_right .cost {
+.widget .cost {
   text-align: right;
   background-size: 1.25rem;
   background-repeat: no-repeat;
   background-position: left center;
   font-weight: var(--font-medium);
   padding-left: 1.5rem;
+  font-size: var(--font-15);
+  line-height: 1.375rem;
 }
-.widget-list .widget_data .data_right .cost.up {
+.widget .cost.up {
   color: var(--success);
   background-image: url(../images/system/chevron_up_green.svg);
 }
-.widget-list .widget_data .data_right .cost.down {
+.widget .cost.down {
   color: var(--error);
   background-image: url(../images/system/chevron_down_red.svg);
 }
