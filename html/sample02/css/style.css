@@ -625,6 +625,29 @@ button {
   justify-content: flex-end;
 }
 
+.flex_bottom {
+  display: flex;
+  align-items: flex-end;
+}
+
+.flex_bottomcenter {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.flex_bottombtw {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.flex_bottomright {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
 .inner_0_25 {
   padding-inline: 0.25rem;
 }
@@ -1632,16 +1655,28 @@ body {
   background-image: url(../images/system/copy.svg);
 }
 
-.ic_file_invoice {
-  background-image: url(../images/system/file_invoice.svg);
-}
-
 .ic_lock {
   background-image: url(../images/system/lock.svg);
 }
 
 .ic_file {
   background-image: url(../images/system/file.svg);
+}
+
+.ic_file_invoice {
+  background-image: url(../images/system/file_invoice.svg);
+}
+
+.ic_file_dollar {
+  background-image: url(../images/system/file_dollar.svg);
+}
+
+.ic_file_alert {
+  background-image: url(../images/system/file_alert.svg);
+}
+
+.ic_file_alert_light {
+  background-image: url(../images/system/file_alert_light.svg);
 }
 
 .ic_shield_lock {
@@ -1812,6 +1847,10 @@ body {
   background-image: url(../images/system/credit_card.svg);
 }
 
+.ic_credit_card_red {
+  background-image: url(../images/system/credit_card_red.svg);
+}
+
 .ic_ship {
   background-image: url(../images/system/ship.svg);
 }
@@ -1840,8 +1879,16 @@ body {
   background-image: url(../images/system/help_pr.svg);
 }
 
+.ic_currency_dollar {
+  background-image: url(../images/system/currency_dollar.svg);
+}
+
 .ic_currency_dollar_pr {
   background-image: url(../images/system/currency_dollar_pr.svg);
+}
+
+.ic_currency_dollar_green {
+  background-image: url(../images/system/currency_dollar_green.svg);
 }
 
 .ic_color_swatch_pr {
@@ -1888,14 +1935,6 @@ body {
   background-image: url(../images/system/help.svg);
 }
 
-.ic_file_dollar {
-  background-image: url(../images/system/file_dollar.svg);
-}
-
-.ic_currency_dollar {
-  background-image: url(../images/system/currency_dollar.svg);
-}
-
 .ic_question_mark {
   background-image: url(../images/system/question_mark.svg);
 }
@@ -1910,14 +1949,6 @@ body {
 
 .ic_search {
   background-image: url(../images/system/search.svg);
-}
-
-.ic_file_alert {
-  background-image: url(../images/system/file_alert.svg);
-}
-
-.ic_file_alert_light {
-  background-image: url(../images/system/file_alert_light.svg);
 }
 
 .ic_truck {
@@ -2052,14 +2083,20 @@ body {
 :root.dark .ic_copy {
   background-image: url(../images/system/copy_d.svg);
 }
+:root.dark .ic_file {
+  background-image: url(../images/system/file_d.svg);
+}
 :root.dark .ic_file_invoice {
   background-image: url(../images/system/file_invoice_d.svg);
 }
+:root.dark .ic_file_dollar {
+  background-image: url(../images/system/file_dollar_d.svg);
+}
+:root.dark .ic_file_alert_light {
+  background-image: url(../images/system/file_alert_light_d.svg);
+}
 :root.dark .ic_lock {
   background-image: url(../images/system/lock_d.svg);
-}
-:root.dark .ic_file {
-  background-image: url(../images/system/file_d.svg);
 }
 :root.dark .ic_shield_lock {
   background-image: url(../images/system/shield_lock_d.svg);
@@ -2160,9 +2197,6 @@ body {
 :root.dark .ic_help {
   background-image: url(../images/system/help_d.svg);
 }
-:root.dark .ic_file_dollar {
-  background-image: url(../images/system/file_dollar_d.svg);
-}
 :root.dark .ic_currency_dollar {
   background-image: url(../images/system/currency_dollar_d.svg);
 }
@@ -2177,9 +2211,6 @@ body {
 }
 :root.dark .ic_search {
   background-image: url(../images/system/search_d.svg);
-}
-:root.dark .ic_file_alert_light {
-  background-image: url(../images/system/file_alert_light_d.svg);
 }
 :root.dark .ic_truck {
   background-image: url(../images/system/truck_d.svg);
@@ -5292,6 +5323,14 @@ button:disabled {
 .widget.type_basic {
   padding: var(--padding-6);
 }
+.widget .avatar .thumb {
+  width: 100%;
+  height: 100%;
+}
+.widget .avatar.size_l {
+  width: 2.75rem;
+  height: 2.75rem;
+}
 
 /***************************************************************
     09. nav
@@ -6401,4 +6440,28 @@ body.open {
   padding-left: 0;
   font-weight: initial;
   width: 2.8125rem;
+}
+.widget .order_s {
+  padding-top: var(--padding-3);
+}
+.widget .order_s .canvas_order_s {
+  height: 4.5rem;
+}
+.widget .canvas_sale_s {
+  padding-top: var(--padding-3);
+  height: 5.25rem;
+}
+.widget .sale_s {
+  padding-top: 0;
+}
+.widget .revenue_growth {
+  height: 100%;
+}
+.widget .revenue_growth .list {
+  height: 100%;
+  display: grid;
+  align-content: space-between;
+}
+.widget .revenue_growth .canvas_revenue_growth {
+  height: 100%;
 }

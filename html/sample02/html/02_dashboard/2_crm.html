@@ -1,0 +1,2171 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.CRM</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+  <div class="body_wrap">
+    <section class="sidebar">
+      <h1 class="logo">
+        <a href="javascript:void(0)">
+          <img src="/images/common/logo.svg" alt="">
+          <p>Vuexy</p>
+        </a>
+        <!-- <div class="sidebar_toggle"></div> -->
+      </h1>
+
+      <nav class="nav">
+        <ul class="nav-group">
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_smart_home"></p>
+              <p class="nav-menu">Dashboards</p>
+              <p class="chip size_s color_error">5</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+        </ul>
+  
+        <ul class="nav-group">
+          <li class="nav-grouptitle">
+            <p class="nav-title">APPS & PAGES</p>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link ">
+              <p class="nav-icon ic_shopping_cart"></p>
+              <p class="nav-menu">eCommerce</p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_school"></p>
+              <p class="nav-menu">Academy</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_car"></p>
+              <p class="nav-menu">Logistics</p>
+            </a>
+          </li>
+          <li class="nav-list ">
+            <a href="javascript:void(0)" class="nav-link subOpen active">
+              <p class="nav-icon ic_user"></p>
+              <p class="nav-menu">Users</p>
+              <p class="ic_chevron_down"></p>
+            </a>
+            <!-- 서브메뉴 2depth-->
+            <ul class="nav-group nav-sub subMenu">
+              <li class="nav-list ">
+                <a href="javascript:void(0)" class="nav-link subOpen">
+                  <p class="nav-icon ic_circle"></p>
+                  <p class="nav-menu">List</p>
+                  <p class="ic_chevron_down"></p>
+                </a>
+                <!-- 서브메뉴 3depth-->
+                <ul class="nav-group nav-sub subMenu">
+                  <li class="nav-list">
+                    <a href="javascript:void(0)" class="nav-link">
+                      <p class="nav-icon ic_circle"></p>
+                      <p class="nav-menu">List</p>
+                    </a>
+                  </li>
+                  <li class="nav-group">
+                    <a href="javascript:void(0)" class="nav-link">
+                      <p class="nav-icon ic_circle"></p>
+                      <p class="nav-menu">Security</p>
+                    </a>
+                  </li>
+                  <li class="nav-group">
+                    <a href="javascript:void(0)" class="nav-link">
+                      <p class="nav-icon ic_circle"></p>
+                      <p class="nav-menu">Billing & Plans</p>
+                    </a>
+                  </li>
+                  <li class="nav-group">
+                    <a href="javascript:void(0)" class="nav-link">
+                      <p class="nav-icon ic_circle"></p>
+                      <p class="nav-menu">Notifications</p>
+                    </a>
+                  </li>
+                  <li class="nav-group">
+                    <a href="javascript:void(0)" class="nav-link">
+                      <p class="nav-icon ic_circle"></p>
+                      <p class="nav-menu">Connection</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-list">
+                <a href="javascript:void(0)" class="nav-link">
+                  <p class="nav-icon ic_circle"></p>
+                  <p class="nav-menu">View</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_mail"></p>
+              <p class="nav-menu">Email</p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link ">
+              <p class="nav-icon ic_message_circle_2"></p>
+              <p class="nav-menu">Chat</p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_calendar"></p>
+              <p class="nav-menu">Calendar</p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_copy"></p>
+              <p class="nav-menu">Kanban</p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_file_invoice"></p>
+              <p class="nav-menu">Invoice</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_lock"></p>
+              <p class="nav-menu">Roles & Permiss...</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+        </ul>
+  
+        <ul class="nav-group">
+          <li class="nav-grouptitle">
+            <p class="nav-title">PAGES</p>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_file"></p>
+              <p class="nav-menu">Pages</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_shield_lock"></p>
+              <p class="nav-menu">Authentications</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_dots"></p>
+              <p class="nav-menu">Wizard Examples</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_square"></p>
+              <p class="nav-menu">Dialog Examples</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+        </ul>
+  
+        <ul class="nav-group">
+          <li class="nav-grouptitle">
+            <p class="nav-title">USER INTERFACE</p>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_typography"></p>
+              <p class="nav-menu">Typography</p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_brand_tabler"></p>
+              <p class="nav-menu">Icons</p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_chart_bar"></p>
+              <p class="nav-menu">Cards</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_atom"></p>
+              <p class="nav-menu">Components</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+        </ul>
+  
+        <ul class="nav-group">
+          <li class="nav-grouptitle">
+            <p class="nav-title">FORMS & TABLES</p>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_checkbox"></p>
+              <p class="nav-menu">Form Elements</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_layout"></p>
+              <p class="nav-menu">Form Layout</p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_checkup_list"></p>
+              <p class="nav-menu">Form Validation</p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_git_merge"></p>
+              <p class="nav-menu">Form Wizard</p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_table"></p>
+              <p class="nav-menu">Table</p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_grid_line"></p>
+              <p class="nav-menu">Mui DataGrid</p>
+            </a>
+          </li>
+        </ul>
+  
+        <ul class="nav-group">
+          <li class="nav-grouptitle">
+            <p class="nav-title">CHARTS & MISC</p>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link">
+              <p class="nav-icon ic_chart_donut_2"></p>
+              <p class="nav-menu">Charts</p>
+              <p class="ic_chevron_right"></p>
+            </a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:void(0)" class="nav-link subOpen">
+              <p class="nav-icon ic_box"></p>
+              <p class="nav-menu">Others</p>
+              <p class="ic_chevron_down"></p>
+            </a>
+  
+            <!-- 서브메뉴 2depth-->
+            <ul class="nav-group nav-sub subMenu">
+              <li class="nav-list">
+                <a href="javascript:void(0)" class="nav-link">
+                  <p class="nav-icon ic_circle"></p>
+                  <p class="nav-menu">Documentation</p>
+                  <p class="ic_external_link"></p>
+                </a>
+              </li>
+  
+              <li class="nav-list">
+                <a href="javascript:void(0)" class="nav-link">
+                  <p class="nav-icon ic_circle"></p>
+                  <p class="nav-menu">Support</p>
+                  <p class="ic_external_link"></p>
+                </a>
+              </li>
+  
+              <li class="nav-list">
+                <a href="javascript:void(0)" class="nav-link subOpen">
+                  <p class="nav-icon ic_circle"></p>
+                  <p class="nav-menu">Menu Level 1</p>
+                  <p class="ic_chevron_down"></p>
+                </a>
+  
+                <!-- 서브메뉴 3depth-->
+                <ul class="nav-group nav-sub subMenu">
+                  <li class="nav-list">
+                    <a href="javascript:void(0)" class="nav-link subOpen">
+                      <p class="nav-icon ic_circle"></p>
+                      <p class="nav-menu">Menu Level 2</p>
+                      <p class="ic_chevron_down"></p>
+                    </a>
+  
+                    <!-- 서브메뉴 4depth-->
+                    <ul class="nav-group nav-sub subMenu">
+                      <li class="nav-list">
+                        <a href="javascript:void(0)" class="nav-link">
+                          <p class="nav-icon ic_circle"></p>
+                          <p class="nav-menu">Menu Level 3</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="container">
+      <!-- top search -->
+      <div class="top_search">
+        <div class="search">
+          <div class="input_basic">
+            <div class="inner">
+              <i class="ic_search"></i>
+              <input type="text" placeholder="Search ⌘K" id='searchOpen' value="">
+            </div>
+          </div>
+
+        </div>
+        <div class="top_menu">
+          <div class="top_icons">
+            <div class="icon">
+              <i class="ic_language"></i>
+              <div class="list list_language">
+                <ul class="">
+                  <li class="active">English</li>
+                  <li>French</li>
+                  <li>German</li>
+                  <li>Portuguese</li>
+                  <li>Arabic</li>
+                </ul>
+              </div>
+            </div>
+            <div class="icon">
+              <i class="ic_moon_stars"></i>
+              <div class="list list_theme">
+                <ul class="type_left">
+                  <li class="active"><i class="ic_sun"></i>Light</li>
+                  <li><i class="ic_moon_stars"></i>Dark</li>
+                  <li><i class="ic_device_desktop_analytics"></i>System</li>
+                </ul>
+              </div>
+            </div>
+            <div class="icon">
+              <i class="ic_layout_grid_add"></i>
+              <div class="list_quick">
+                <div class="heading">
+                  <p class="title">Shortcuts</p>
+                  <i class="ic_plus"></i>
+                </div>
+                <div class="quick_menu">
+                  <a href="javascript:void(0)" class="quick_link">
+                    <p class="quick_icon">
+                      <i class="ic_calendar"></i>
+                    </p>
+                    <p class="menu">Calendar</p>
+                    <p class="txt">Appointments</p>
+                  </a>
+                  <a href="javascript:void(0)" class="quick_link">
+                    <p class="quick_icon">
+                      <i class="ic_file_dollar"></i>
+                    </p>
+                    <p class="menu">Invoice App</p>
+                    <p class="txt">Manage Accounts</p>
+                  </a>
+                  <a href="javascript:void(0)" class="quick_link">
+                    <p class="quick_icon">
+                      <i class="ic_user"></i>
+                    </p>
+                    <p class="menu">Users</p>
+                    <p class="txt">Manage Users</p>
+                  </a>
+                  <a href="javascript:void(0)" class="quick_link">
+                    <p class="quick_icon">
+                      <i class="ic_users"></i>
+                    </p>
+                    <p class="menu">Role Management</p>
+                    <p class="txt">Permissions</p>
+                  </a>
+                  <a href="javascript:void(0)" class="quick_link">
+                    <p class="quick_icon">
+                      <i class="ic_device_desktop_analytics"></i>
+                    </p>
+                    <p class="menu">Dashboard</p>
+                    <p class="txt">User Dashboard</p>
+                  </a>
+                  <a href="javascript:void(0)" class="quick_link">
+                    <p class="quick_icon">
+                      <i class="ic_settings"></i>
+                    </p>
+                    <p class="menu">Settings</p>
+                    <p class="txt">Account Settings</p>
+                  </a>
+                </div>
+                
+              </div>
+            </div>
+            <div class="icon">
+              <i class="ic_bell"><span class="badge type_dot color_error"></span></i>
+              
+              <div class="list_bell">
+                <div class="heading">
+                  <div class="title">Notifications</div>
+                  <div class="heading_opt">
+                    <p class="chip size_s type_label color_pr">8 New</p>
+                    <i class="ic_mail_opened"></i>
+                  </div>
+                </div>
+    
+                <div class="list">
+                  <div class="list-data">
+                    <div class="avatar_data">
+                      <div class="avatar type_circle">
+                        <p class="thumb"><img src="../../images/avatar_2.png" alt=""></p>
+                      </div>
+                      <div class="avatar_info">
+                        <p class="name">Congratulation Flora! 🎉</p>
+                        <p class="txt">Won the monthly best seller gold badge</p>
+                        <p class="subtxt">Today</p>
+                      </div>
+                    </div>
+                    <span class="badge type_dot"></span>
+                  </div>
+                  <div class="list-data">
+                    <div class="avatar_data">
+                      <div class="avatar type_circle">
+                        <p class="thumb"><img src="../../images/Avatar_icon_1.png" alt=""></p>
+                      </div>
+                      <div class="avatar_info">
+                        <p class="name">New user registered.</p>
+                        <p class="txt">Accepted your connection/p>
+                        <p class="subtxt">Yesterday</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-data ck_done">
+                    <div class="avatar_data">
+                      <div class="avatar type_circle">
+                        <p class="thumb"><img src="../../images/avatar_3.png" alt=""></p>
+                      </div>
+                      <div class="avatar_info">
+                        <p class="name">New message received 👋🏻</p>
+                        <p class="txt">You have new message from Natalie</p>
+                        <p class="subtxt">11 Aug</p>
+                      </div>
+                    </div>
+                    <span class="badge type_dot"></span>
+                    <span class="delBell ic_x"></span>
+                  </div>
+                  <div class="list-data">
+                    <div class="avatar_data">
+                      <div class="avatar type_circle">
+                        <p class="thumb"><img src="../../images/Avatar_icon_2.png" alt=""></p>
+                      </div>
+                      <div class="avatar_info">
+                        <p class="name">Paypal</p>
+                        <p class="txt">ACME Inc. made new order $1,154</p>
+                        <p class="subtxt">25 May</p>
+                      </div>
+                    </div>
+                    <span class="badge type_dot"></span>
+                  </div>
+                  <div class="list-data">
+                    <div class="avatar_data">
+                      <div class="avatar type_circle">
+                        <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                      </div>
+                      <div class="avatar_info">
+                        <p class="name">Application has been approved 🚀</p>
+                        <p class="txt">Your ABC project application has been approved.</p>
+                        <p class="subtxt">19 Mar</p>
+                      </div>
+                    </div>
+                    <span class="badge type_dot"></span>
+                  </div>
+                </div>
+    
+                <div class="btn_wrap">
+                  <button class="btn type_basic">
+                    <div class="ripple js-ripple">
+                      <span class="ripple__circle"></span>
+                    </div>
+                    View All Notifications
+                  </button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="top_user">
+            <div class="avatar type_circle">
+              <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+              <span class="badge type_dot color_success"></span>
+            </div>
+    
+            <div class="user_list" style="display: none;">
+              <div class="avatar_data">
+                <div class="avatar type_circle">
+                  <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                </div>
+                <div class="avatar_info">
+                  <p class="name">John Doe</p>
+                  <p class="txt">Admin</p>
+                </div>
+              </div>
+    
+              <div class="list">
+                <ul class="">
+                  <li class=""><a href="javascript:void(0)"><i class="ic_user"></i>My Profile</a></li>
+                  <li><a href="javascript:void(0)"><i class="ic_settings"></i>Settings</a></li>
+                  <li><a href="javascript:void(0)"><i class="ic_file_dollar"></i>Billing Plan</a><span class="chip size_s color_error">4</span></li>
+                </ul>
+                <ul class="">
+                  <li class=""><a href="javascript:void(0)"><i class="ic_currency_dollar"></i>My Pricing</a> </li>
+                  <li><a href="javascript:void(0)"><i class="ic_question_mark"></i>FAQ</a></li>
+                </ul>
+              </div>
+              <div class="btn_wrap">
+                <button class="btn type_basic color_error">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  Logout <img src="../../images/system/logout_box_w.svg" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container_body">
+        <div class="column_grid mb_1_5">
+          <div class="widget column_2">
+            <div class="widget-title">
+              <div class="title_heading">
+                <p class="title">Order</p>
+                <p class="txt">Last week</p>
+              </div>
+            </div>
+            <div class="widget-con order_s">
+              <div class="canvas_order_s">
+                <canvas id="orderS"></canvas>
+              </div>
+
+              <div class="flex_btw">
+                <p class="font_h4">124k</p>
+                <p class="cost up" style="padding-left:0; background-image: none">+12.6%</p>
+              </div>
+            </div>
+          </div>
+          <div class="widget column_2">
+            <div class="widget-title">
+              <div class="title_heading">
+                <p class="title">Sales</p>
+                <p class="txt">Last Year</p>
+              </div>
+            </div>
+
+            <div class="canvas_sale_s">
+              <canvas id="saleS"></canvas>
+            </div>
+
+            <div class="widget-con sale_s">
+              <div class="flex_btw">
+                <p class="font_h4">175k</p>
+                <p class="cost down" style="padding-left:0; background-image: none">-16.2%</p>
+              </div>
+            </div>
+          </div>
+          <div class="widget column_2 type_basic">
+            <div class="avatar type_rounded size_l">
+              <p class="thumb " style="--avatar-bg: var(--error-o-light)"><img src="../../images/system/credit_card_red.svg" alt=""></p>
+            </div>
+
+            <p class="font_h5 mt_0_75">Total Profit</p>
+            <p class="text_secondary innerb_0_25">Last week</p>
+            <p class="">1.28k</p>
+            <p class="chip size_s type_label color_error mt_0_75">-12.2%</p>
+          </div>
+          <div class="widget column_2 type_basic">
+            <div class="avatar type_rounded size_l">
+              <p class="thumb " style="--avatar-bg: var(--success-o-light)"><img src="../../images/system/currency_dollar_green.svg" alt=""></p>
+            </div>
+            <p class="font_h5 mt_0_75">Total Sales</p>
+            <p class="text_secondary innerb_0_25">Last week</p>
+            <p class="">24.67k</p>
+            <p class="chip size_s type_label color_success mt_0_75">+24.5%</p>
+          </div>
+          <div class="widget column_4 type_basic">
+            <div class="flex_bottombtw revenue_growth">
+              <div class="list">
+                <div class="list_0_5">
+                  <p class="font_h5">Revenue Growth</p>
+                  <p class="text_secondary">Weekly Report</p>
+                </div>
+
+                <div class="list_0_5">
+                  <p class="font_h3">$4,673</p>
+                  <p class="chip size_s color_success type_label">+15.2%</p>
+                </div>
+              </div>
+
+              <div class="canvas_revenue_growth">
+                <canvas id="revenueGrowth"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column_grid mb_1_5">
+          <div class="widget column_6 earning_reports">
+            <div class="widget-title">
+              <div class="title_heading">
+                <p class="title">Earning Reports</p>
+                <p class="txt">Weekly Earnings Overview</p>
+                <div class="heading_abs"><i class="ic_dots_vertical_gr"></i></div>
+              </div>
+            </div>
+            <div class="widget-con">
+              <div class="data_top">
+                <div class="data">
+                  <p class="font_h2">$468 <span class="chip size_s type_label color_success">+4.2%</span></p>
+                  <p class="font_body_2 text-secondary">You informed of this week<br>compared to last week</p>
+                </div>
+
+                <div class="canvas_earning_reports">
+                  <canvas id="earningReport"></canvas>
+                </div>
+              </div>
+              <div class="data_bottom">
+                <div class="data">
+                  <div class="icon_title">
+                    <p class="icon" style="--bg-color: var(--primary-o-light)">
+                      <img src="../../images/system/currency_dollar_pr.svg" alt="">
+                    </p>
+                    <p class="font_input_m">Earnings</p>
+                  </div>
+                  <p class="font_h4">$545.69</p>
+                  <div class="progress">
+                    <div class="bar" style="--bar-bg: var(--primary); --prg-bar: 75%;"></div>
+                  </div>
+                </div>
+                <div class="data">
+                  <div class="icon_title">
+                    <p class="icon" style="--bg-color: var(--info-o-light)">
+                      <img src="../../images/system/chart_pie_2_blue.svg" alt="">
+                    </p>
+                    <p class="font_input_m">Profit</p>
+                  </div>
+                  <p class="font_h4">$256.34</p>
+                  <div class="progress">
+                    <div class="bar" style="--bar-bg: var(--info); --prg-bar: 65%;"></div>
+                  </div>
+                </div>
+                <div class="data">
+                  <div class="icon_title">
+                    <p class="icon" style="--bg-color: var(--error-o-light)">
+                      <img src="../../images/system/brand_paypal_red.svg" alt="">
+                    </p>
+                    <p class="font_input_m">Expense</p>
+                  </div>
+                  <p class="font_h4">$74.19</p>
+                  <div class="progress">
+                    <div class="bar" style="--bar-bg: var(--error); --prg-bar: 14%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="widget column_6 ">
+            <div class="widget-title">
+              <div class="title_heading">
+                <p class="title">Support Tracker</p>
+                <p class="txt">Last 7 Days</p>
+                <div class="heading_abs"><i class="ic_dots_vertical_gr"></i></div>
+              </div>
+            </div>
+            <div class="widget-con support_tracker">
+              <div class="support_info">
+                <p class="font_h2">164</p>
+                <p class="text_secondary">Total Tickets</p>
+
+                <div class="data_list">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb"  style="--avatar-bg: var(--primary-o-light)"><img src="../../images/system/ticket_pr.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">New Tickets</p>
+                      <p class="txt">142</p>
+                    </div>
+                  </div>
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb"  style="--avatar-bg: var(--info-o-light)"><img src="../../images/system/check_blue.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Open Tickets</p>
+                      <p class="txt">28</p>
+                    </div>
+                  </div>
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb"  style="--avatar-bg: var(--warning-o-light)"><img src="../../images/system/clock_orange.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Response Time</p>
+                      <p class="txt">1 Day</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="support_graph">
+                <div class="praph_bar" style="--prg-bar: 85%">
+                  <!-- <img src="../../images/support_graph.png" alt="" class="mask"> -->
+                </div>
+                <div class="praph_txt">
+                  <p class="font_body_2 text_disabled">Completed Task</p>
+                  <p class="font_h2">85%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column_grid mb_1_5">
+          <div class="widget column_4">
+            <div class="widget-title">
+              <div class="title_heading">
+                <p class="title">Sales by Countries</p>
+                <p class="txt">Monthly Sales Overview</p>
+                <div class="heading_abs"><i class="ic_dots_vertical_gr"></i></div>
+              </div>
+            </div>
+            <div class="widget-con sales_countries">
+              <div class="widget-list">
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_circle">
+                      <p class="thumb"><img src="../../images/flag_us.png" alt="United States"></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">$8.45k</p>
+                      <p class="txt">United States</p>
+                    </div>
+                  </div>
+                  <div class="data_right">
+                    <div class="cost up">25.8%</div>
+                  </div>
+                </div>
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_circle">
+                      <p class="thumb"><img src="../../images/flag_br.png" alt="Brazil"></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">$7.78k</p>
+                      <p class="txt">Brazil</p>
+                    </div>
+                  </div>
+                  <div class="data_right">
+                    <div class="cost down">16.2%</div>
+                  </div>
+                </div>
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_circle">
+                      <p class="thumb"><img src="../../images/flag_in.png" alt="India"></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">$6.48k</p>
+                      <p class="txt">India</p>
+                    </div>
+                  </div>
+                  
+                  <div class="data_right">
+                    <div class="cost up">12.3%</div>
+                  </div>
+                </div>
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_circle">
+                      <p class="thumb"><img src="../../images/flag_au.png" alt="Australia"></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">$5.12k</p>
+                      <p class="txt">Australia</p>
+                    </div>
+                  </div>
+                  
+                  <div class="data_right">
+                    <div class="cost down">11.9%</div>
+                  </div>
+                </div>
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_circle">
+                      <p class="thumb"><img src="../../images/flag_fr.png" alt="France"></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">$4.45k</p>
+                      <p class="txt">France</p>
+                    </div>
+                  </div>
+
+                  <div class="data_right">
+                    <div class="cost up">16.2%</div>
+                  </div>
+                </div>
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_circle">
+                      <p class="thumb"><img src="../../images/flag_au.png" alt="China"></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">$3.90k</p>
+                      <p class="txt">China</p>
+                    </div>
+                  </div>
+                  <div class="data_right">
+                    <div class="cost up">14.8%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="widget column_4">
+            <div class="widget-title">
+              <div class="title_heading">
+                <p class="title">Total Earning</p>
+                <div class="heading_abs"><i class="ic_dots_vertical_gr"></i></div>
+              </div>
+              <p class="title_score size_l">87% <span class="cost up">25.8%</span></p>
+            </div>
+            <div class="widget-con total_earning">
+              <div class="canvas_total_earning">
+                <canvas id="totalEarning_1"></canvas>
+              </div>
+              <div class="canvas_total_earning">
+                <canvas id="totalEarning_2"></canvas>
+              </div>
+
+              <div class="data_bottom">
+                <div class="data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb" style="--avatar-bg: var(--primary-o-light)"><img src="../../images/system/brand_paypal_pr.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Total Revenue</p>
+                      <p class="txt">Client Payment</p>
+                    </div>
+                  </div>
+
+                  <p class="success font_m">+$126</p>
+                </div>
+                <div class="data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb" style="--avatar-bg: var(--secondary-o-light)"><img src="../../images/system/currency_dollar_gr.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Total Sales</p>
+                      <p class="txt">Refund</p>
+                    </div>
+                  </div>
+                  <p class="success font_m">+$98</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="widget column_4">
+            <div class="widget-title">
+              <div class="title_heading">
+                <p class="title">Monthly Campaign State</p>
+                <p class="txt">8.52k Social Visitors</p>
+                <div class="heading_abs"><i class="ic_dots_vertical_gr"></i></div>
+              </div>
+            </div>
+            <div class="widget-con monthly_campaign">
+              <div class="widget-list">
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb" style="--avatar-bg: var(--success-o-light)"><img src="../../images/system/mail_green.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Emails</p>
+                    </div>
+                  </div>
+                  
+                  <div class="data_right">
+                    <p class="text_secondary">12,346</p>
+                    <p class="cost up">0.3%</p>
+                  </div>
+                </div>
+
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb" style="--avatar-bg: var(--info-o-light)"><img src="../../images/system/link_blue.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Opened</p>
+                    </div>
+                  </div>
+                  <div class="data_right">
+                    <p class="text_secondary">8,734</p>
+                    <p class="cost up">2.1%</p>
+                  </div>
+                </div>
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb" style="--avatar-bg: var(--warning-o-light)"><img src="../../images/system/mouse_orange.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Clicked</p>
+                    </div>
+                  </div>
+
+                  <div class="data_right">
+                    <p class="text_secondary">967</p>
+                    <p class="cost down">1.4%</p>
+                  </div>
+                </div>
+
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb" style="--avatar-bg: var(--primary-o-light)"><img src="../../images/system/users_pr.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Subscribe</p>
+                    </div>
+                  </div>
+
+                  <div class="data_right">
+                    <p class="text_secondary">345</p>
+                    <p class="cost up">8.5%</p>
+                  </div>
+                </div>
+
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb" style="--avatar-bg: var(--secondary-o-light)"><img src="../../images/system/AlertReportProblem_gr.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Complaints</p>
+                    </div>
+                  </div>
+
+                  <div class="data_right">
+                    <p class="text_secondary">10</p>
+                    <p class="cost down">1.5%</p>
+                  </div>
+                </div>
+                
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb" style="--avatar-bg: var(--error-o-light)"><img src="../../images/system/ban_red.svg" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Unsubscribe</p>
+                    </div>
+                  </div>
+
+                  <div class="data_right">
+                    <p class="text_secondary">86</p>
+                    <p class="cost up">0.8%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column_grid" >
+          <div class="widget column_4">
+            <div class="widget-title">
+              <div class="title_heading">
+                <p class="title">Source Visits</p>
+                <p class="txt">38.4k Visitors</p>
+                <div class="heading_abs"><i class="ic_dots_vertical_gr"></i></div>
+              </div>
+            </div>
+            <div class="widget-con source_visits">
+              <div class="widget-list">
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb"><i class="ic_shadow_gr avater_icon"></i></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Source</p>
+                      <p class="txt">Direct link click</p>
+                    </div>
+                  </div>
+
+                  <div class="data_right">
+                    <p class="text_secondary">1.2k</p>
+                    <p class="chip size_s type_label color_success">+4.2%</p>
+                  </div>
+                </div>
+
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb"><i class="ic_globe_gr avater_icon"></i></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Social Networks</p>
+                      <p class="txt">Social Channels</p>
+                    </div>
+                  </div>
+
+                  <div class="data_right">
+                    <p class="text_secondary">31.5k</p>
+                    <p class="chip size_s type_label color_success">+8.2%</p>
+                  </div>
+                </div>
+
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb"><i class="ic_mail_gr avater_icon"></i></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Email Newsletter</p>
+                      <p class="txt">Mail Campaigns</p>
+                    </div>
+                  </div>
+
+                  <div class="data_right">
+                    <p class="text_secondary">893</p>
+                    <p class="chip size_s type_label color_success">+2.4%</p>
+                  </div>
+                </div>
+
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb"><i class="ic_external_link_gr avater_icon"></i></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Referrals</p>
+                      <p class="txt">Impact Radius Visits</p>
+                    </div>
+                  </div>
+                  
+                  <div class="data_right">
+                    <p class="text_secondary">342</p>
+                    <p class="chip size_s type_label color_error">-0.4%</p>
+                  </div>
+                </div>
+
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb"><i class="ic_ad_gr avater_icon"></i></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">ADVT</p>
+                      <p class="txt">Google ADVT</p>
+                    </div>
+                  </div>
+
+                  <div class="data_right">
+                    <p class="text_secondary">2.15k</p>
+                    <p class="chip size_s type_label color_success">+9.1%</p>
+                  </div>
+                </div>
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb"><i class="ic_star_gr avater_icon"></i></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Other</p>
+                      <p class="txt">Many Sources</p>
+                    </div>
+                  </div>
+
+                  <div class="data_right">
+                    <p class="text_secondary">12.5k</p>
+                    <p class="chip size_s type_label color_success">+6.2%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="widget column_8">
+            <div class="widget-table_title">
+              <div class="title_left">
+                <p class="title">Project List</p>
+              </div>
+
+              <div class="title_right">
+                <div class="input_basic">
+                  <div class="inner">
+                    <input type="text" placeholder="Search Project" id='' value="" >
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="widget-table">
+              <table class="check_table">
+                <colgroup>
+                  <col width="5%">
+                  <col width="30%">
+                  <col width="13%">
+                  <col width="15%">
+                  <col width="20%">
+                  <col width="12%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th class="table_fixed checkth">
+                      <div class="input_check">
+                        <input type="checkbox" class="check_input" id="checkAll">
+                        <label for="checkAll" class=""><span class="check"></span></label>
+                      </div>
+                    </th>
+                    <th>PROJECT</th>
+                    <th>Leader</th>
+                    <th>Team</th>
+                    <th>PROGRESS</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="table_fixed">
+                      <div class="input_check">
+                        <input type="checkbox" class="check_input" id="check1">
+                        <label for="check1" class=""><span class="check"></span></label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_icon_3.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">BGC eCommerce App</p>
+                          <p class="txt">React Project</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Eileen</td>
+                    <td>
+                      <div class="avatar_list">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                        </div>
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_2.png" alt=""></p>
+                        </div>
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_3.png" alt=""></p>
+                        </div>
+                        <div class="avatar type_circle">
+                          <p class="thumb">+3</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="progress_data">
+                        <div class="progress"><div class="bar" style="--prg-bar: 78%"></div></div>
+                        <p class="">78%</p>
+                      </div>
+                    </td>
+                    <td class="text_center"><i class="table_icon ic_dots_vertical_dgray"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="table_fixed">
+                      <div class="input_check">
+                        <input type="checkbox" class="check_input" id="check2">
+                        <label for="check2" class=""><span class="check"></span></label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_icon_4.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">Falcon Logo Design</p>
+                          <p class="txt">Figma Project</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Owen</td>
+                    <td>
+                      <div class="avatar_list">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_7.png" alt=""></p>
+                        </div>
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_5.png" alt=""></p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="progress_data">
+                        <div class="progress"><div class="bar" style="--prg-bar: 18%"></div></div>
+                        <p class="">18%</p>
+                      </div>
+                    </td>
+                    <td class="text_center"><i class="table_icon ic_dots_vertical_dgray"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="table_fixed">
+                      <div class="input_check">
+                        <input type="checkbox" class="check_input" id="check3">
+                        <label for="check3" class=""><span class="check"></span></label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_icon_5.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">Dashboard Design</p>
+                          <p class="txt">VueJs Project</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Eileen</td>
+                    <td>
+                      <div class="avatar_list">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_12.png" alt=""></p>
+                        </div>
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_10.png" alt=""></p>
+                        </div>
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_7.png" alt=""></p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="progress_data">
+                        <div class="progress"><div class="bar" style="--prg-bar: 62%"></div></div>
+                        <p class="">62%</p>
+                      </div>
+                    </td>
+                    <td class="text_center"><i class="table_icon ic_dots_vertical_dgray"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="table_fixed">
+                      <div class="input_check">
+                        <input type="checkbox" class="check_input" id="check4">
+                        <label for="check4" class=""><span class="check"></span></label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_icon_6.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">Foodista Mobile App</p>
+                          <p class="txt">Xamarin Project</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Merline</td>
+                    <td>
+                      <div class="avatar_list">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_9.png" alt=""></p>
+                        </div>
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_10.png" alt=""></p>
+                        </div>
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_2.png" alt=""></p>
+                        </div>
+                        <div class="avatar type_circle">
+                          <p class="thumb">+8</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="progress_data">
+                        <div class="progress"><div class="bar" style="--prg-bar: 8%"></div></div>
+                        <p class="">8%</p>
+                      </div>
+                    </td>
+                    <td class="text_center"><i class="table_icon ic_dots_vertical_dgray"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="table_fixed">
+                      <div class="input_check">
+                        <input type="checkbox" class="check_input" id="check5">
+                        <label for="check5" class=""><span class="check"></span></label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_icon_7.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">Blockchain Website</p>
+                          <p class="txt">Sketch Project</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Allyson</td>
+                    <td>
+                      <div class="avatar_list">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_5.png" alt=""></p>
+                        </div>
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_11.png" alt=""></p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="progress_data">
+                        <div class="progress"><div class="bar" style="--prg-bar: 92%"></div></div>
+                        <p class="">92%</p>
+                      </div>
+                    </td>
+                    <td class="text_center"><i class="table_icon ic_dots_vertical_dgray"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="table_bottom">
+                <p class="text_disabled">Showing 1 to 7 of 10 entries</p>
+
+                <div class="pagenation type_rounded color_pr">
+                  <a href="javascript:void(0)" class="first ic_chevrons_left_gr"></a>
+                  <a href="javascript:void(0)" class="pre ic_chevron_left_gr"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="active">2</a>
+                  <a href="javascript:void(0)" class="">3</a>
+                  <a href="javascript:void(0)" class="next ic_chevron_right"></a>
+                  <a href="javascript:void(0)" class="last ic_chevrons_right"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- footer -->
+      <footer class="footer">
+        <p class="copy">© 2024, Made with ❤️ by <a href="javascript:void(0)">PIXINVENT</a></p>
+    
+        <ul class="footer_lnb">
+          <li><a href="javascript:void(0)">License</a></li>
+          <li><a href="javascript:void(0)">More Themes</a></li>
+          <li><a href="javascript:void(0)">Documentation</a></li>
+          <li><a href="javascript:void(0)">Support</a></li>
+        </ul>
+      </footer>
+    </section>
+  </div>
+
+  <!-- 서치 팝업 그리드 리스트 -->
+  <div class="search_pop">
+    <div class="overlay"></div>
+
+    <div class="pop_body">
+      <div class="input_basic">
+        <div class="inner">
+          <i class="ic_search"></i>
+          <input type="text" placeholder="" value="" id="popInput" autofocus>
+        </div>
+        <p class="txt">[esc]</p>
+        <i class="delPop ic_x"></i>
+      </div>
+
+      <div class="pop_con">
+        <div class="grid">
+          <div class="list">
+            <p class="list-title">Popular SEarch</p>
+
+            <ul class="type_left">
+              <li><i class="ic_chart_bar"></i><a href="javascript:void(0)">Analytics</a></li>
+              <li><i class="ic_chart_donut_3"></i><a href="javascript:void(0)">CRM</a></li>
+              <li><i class="ic_shopping_cart"></i><a href="javascript:void(0)">eCommerce</a></li>
+              <li><i class="ic_truck"></i><a href="javascript:void(0)">Logistics</a></li>
+            </ul>
+          </div>
+          <div class="list">
+            <p class="list-title">APPS & PAGES</p>
+
+            <ul class="type_left">
+              <li><i class="ic_calendar"></i><a href="javascript:void(0)">Calendar</a></li>
+              <li><i class="ic_lock"></i><a href="javascript:void(0)">IRoles & Permissions</a></li>
+              <li><i class="ic_settings"></i><a href="javascript:void(0)">Account Settings</a></li>
+              <li><i class="ic_copy"></i><a href="javascript:void(0)">Dialog Examples</a></li>
+            </ul>
+          </div>
+          <div class="list">
+            <p class="list-title">USER INTERFACE</p>
+
+            <ul class="type_left">
+              <li><i class="ic_typography"></i><a href="javascript:void(0)">Typography</a></li>
+              <li><i class="ic_menu_2"></i><a href="javascript:void(0)">Accordion</a></li>
+              <li><i class="ic_AlertReportProblem"></i><a href="javascript:void(0)">Alerts</a></li>
+              <li><i class="ic_checkbox"></i><a href="javascript:void(0)">Cards</a></li>
+            </ul>
+          </div>
+          <div class="list">
+            <p class="list-title">FORMS & TABLES</p>
+
+            <ul class="type_left">
+              <li><i class="ic_circle_dot"></i><a href="javascript:void(0)">Radio</a></li>
+              <li><i class="ic_file_invoice"></i><a href="javascript:void(0)">Form Layouts</a></li>
+              <li><i class="ic_table"></i><a href="javascript:void(0)">Table</a></li>
+              <li><i class="ic_edit"></i><a href="javascript:void(0)">Editor</a></li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- 서치 팝업 로우 리스트 -->
+  <div class="search_pop"  style="display: none;">
+    <div class="overlay"></div>
+
+    <div class="pop_body">
+      <div class="input_basic">
+        <div class="inner">
+          <i class="ic_search"></i>
+          <input type="text" placeholder="" value="" autofocus>
+        </div>
+        <p class="txt">[esc]</p>
+        <i class="delPop ic_x"></i>
+      </div>
+      
+      <div class="pop_con">
+        <div class="list">
+          <p class="list-title">Popular SEarch</p>
+
+          <ul class="type_left">
+            <li><i class="ic_chart_bar"></i><a href="javascript:void(0)">Analytics</a></li>
+            <li><i class="ic_chart_donut_3"></i><a href="javascript:void(0)">CRM</a></li>
+            <li><i class="ic_shopping_cart"></i><a href="javascript:void(0)">eCommerce</a></li>
+            <li><i class="ic_truck"></i><a href="javascript:void(0)">Logistics</a></li>
+          </ul>
+        </div>
+        <div class="list">
+          <p class="list-title">APPS & PAGES</p>
+
+          <ul class="type_left">
+            <li><i class="ic_calendar"></i><a href="javascript:void(0)">Calendar</a></li>
+            <li><i class="ic_lock"></i><a href="javascript:void(0)">IRoles & Permissions</a></li>
+            <li><i class="ic_settings"></i><a href="javascript:void(0)">Account Settings</a></li>
+            <li><i class="ic_copy"></i><a href="javascript:void(0)">Dialog Examples</a></li>
+          </ul>
+        </div>
+        <div class="list">
+          <p class="list-title">USER INTERFACE</p>
+
+          <ul class="type_left">
+            <li><i class="ic_typography"></i><a href="javascript:void(0)">Typography</a></li>
+            <li><i class="ic_menu_2"></i><a href="javascript:void(0)">Accordion</a></li>
+            <li><i class="ic_AlertReportProblem"></i><a href="javascript:void(0)">Alerts</a></li>
+            <li><i class="ic_checkbox"></i><a href="javascript:void(0)">Cards</a></li>
+          </ul>
+        </div>
+        <div class="list">
+          <p class="list-title">FORMS & TABLES</p>
+
+          <ul class="type_left">
+            <li><i class="ic_circle_dot"></i><a href="javascript:void(0)">Radio</a></li>
+            <li><i class="ic_file_invoice"></i><a href="javascript:void(0)">Form Layouts</a></li>
+            <li><i class="ic_table"></i><a href="javascript:void(0)">Table</a></li>
+            <li><i class="ic_edit"></i><a href="javascript:void(0)">Editor</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 서치 팝업  검색내역없음 -->
+  <div class="search_pop" style="display: none;">
+    <div class="overlay"></div>
+    <div class="pop_body">
+      <div class="input_basic">
+        <div class="inner">
+          <i class="ic_search"></i>
+          <input type="text" placeholder="" value="" autofocus>
+        </div>
+        <p class="txt">[esc]</p>
+        <i class="delPop ic_x"></i>
+      </div>
+
+      <div class="blank">
+        <div class="blank_msg">
+          <i class="ic_file_alert_light"></i>
+          <p class="txt">No results for “darsd”</p>
+        </div>
+
+        <div class="list">
+          <p class="list-title">Try searching for</p>
+
+          <ul class="type_left">
+            <li><i class="ic_chart_bar"></i><a href="javascript:void(0)">Analytics</a></li>
+            <li><i class="ic_chart_donut_3"></i><a href="javascript:void(0)">CRM</a></li>
+            <li><i class="ic_shopping_cart"></i><a href="javascript:void(0)">eCommerce</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- <script src="../../js/chart.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../../js/chartjs-plugin-datalabels@2.0.0"></script>
+  <script>
+    
+    //리플버튼
+    var $ripple = $('.js-ripple');
+    $ripple.on('click.ui.ripple', function(e) {
+
+      var $this = $(this);
+      var $offset = $this.parent().offset();
+      var $circle = $this.find('.ripple__circle');
+
+      var x = e.pageX - $offset.left;
+      var y = e.pageY - $offset.top;
+
+      $circle.css({
+        top: y + 'px',
+        left: x + 'px'
+      });
+
+      $this.addClass('is-active');
+    });
+
+    $ripple.on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', function(e) {
+      $(this).removeClass('is-active');
+    });
+
+
+    //nav active icon
+    const imgSrc = $('.active').find(".nav-icon").css('background-image').replace(/^url\(['"](.+)['"]\)/, '$1')
+    const imgCngW = imgSrc.replace('.svg', '_w.svg')
+    const imgCngD = imgSrc.replace('_d.svg', '_w.svg')
+
+    $(".sidebar_toggle").click(function(){
+      $(this).toggleClass('menuClose')
+      $('.sidebar').toggleClass('sideIcon')
+      $('.container').toggleClass('con_wide')
+    })
+
+  //     $(window).bind("resize", function () {
+  //     console.log($(this).width())
+  //     if ($(this).width() > 1440) {
+  //         $('.sidebar').removeClass('sideIcon')
+  //     } else {
+  //       $('.sidebar').addClass('sideIcon')
+  //     }
+  // }).trigger('resize');
+
+
+    if($('.nav-link').hasClass('active')){
+
+      if($('.sidebar').hasClass('sideIcon')){
+        $('.active').find(".nav-icon").css({
+        'backgroundImage' : 'url('+imgCngW+')',
+      })
+      }else{
+        $('.active').find(".nav-icon").css({
+        'backgroundImage' : 'url('+imgCngW+')',
+      })
+      if($("html").hasClass('dark')){
+        $('.active').find(".nav-icon").css({
+        'backgroundImage' : 'url('+imgCngD+')',
+      })
+      }}
+    }
+
+
+        //메뉴토글
+        $('.subOpen').click(function(){
+      $(this).siblings('.subMenu').slideToggle('fast')
+      $(this).toggleClass('open')
+    })
+
+       //header dropdown
+      $('.ic_language').click(function(){
+      if($('.list_language').hasClass('openDrop')){
+        $('.list_language').removeClass('openDrop')
+        $('.list_language').slideUp()
+      }else{
+        clodeToplist();
+        $('.list_language').addClass('openDrop')
+        $(".list_language").slideDown();
+      }
+    })
+
+    $('.ic_moon_stars').click(function(){
+      if($('.list_theme').hasClass('openDrop')){
+        $('.list_theme').removeClass('openDrop')
+        $('.list_theme').slideUp()
+      }else{
+        clodeToplist();
+        $('.list_theme').addClass('openDrop')
+        $(".list_theme").slideDown();
+      }
+    })
+
+    $('.ic_layout_grid_add').click(function(){
+      if($('.list_quick').hasClass('openDrop')){
+        $('.list_quick').removeClass('openDrop')
+        $('.list_quick').slideUp()
+      }else{
+        clodeToplist();
+        $('.list_quick').addClass('openDrop')
+        $(".list_quick").slideDown();
+      }
+    })
+
+    $('.ic_bell').click(function(){
+      if($('.list_bell').hasClass('openDrop')){
+        $('.list_bell').removeClass('openDrop')
+        $('.list_bell').slideUp()
+      }else{
+        clodeToplist();
+        $('.list_bell').addClass('openDrop')
+        $(".list_bell").slideDown();
+      }
+    })
+
+    $('.top_user .avatar').click(function(){
+      if($('.user_list').hasClass('openDrop')){
+        $('.user_list').removeClass('openDrop')
+        $('.user_list').slideUp()
+      }else{
+        clodeToplist();
+        $('.user_list').addClass('openDrop')
+        $(".user_list").slideDown();
+      }
+    })
+
+    function clodeToplist (){
+      $('.list_language, .list_theme, .list_quick, .list_bell, .user_list').not(this).slideUp('fast');
+    }
+
+    //언어선택
+    $(".list_language").find('li').click(function(){
+      $(this).addClass('active')
+      $(this).siblings().removeClass('active')
+    })
+    
+    //테마선택
+    $(".list_theme").find('li').click(function(){
+      $(this).addClass('active')
+      $(this).siblings().removeClass('active')
+
+      if($(this).children('i').hasClass('ic_sun')){
+        $('html').removeClass('dark');
+      }else if($(this).children('i').hasClass('ic_moon_stars')){
+        $('html').addClass('dark');
+      }else{
+        $('html').removeClass('dark');
+      }
+    })
+
+    //알림삭제
+    $(".delBell").click(function(){
+      $(this).parents('.list-data').fadeOut(function(){
+        setTimeout(() => {
+          $(this).remove()
+        }, 700);
+      })
+    })
+
+    //서치 포커트팝업 오픈
+    $('#searchOpen').keypress(function(e){
+      if(e.keyCode && e.keyCode == 13){
+        $('.search_pop, body').addClass("open");
+        $(".search_pop input").focus()
+      }
+    })
+
+    //서치팝  esc 닫기
+    $(document).on('keydown', function(e) {
+      if(e.key == "Escape") {
+        $('.search_pop, body').removeClass("open");
+      }
+    });
+
+
+    //서치 팝업 포커스
+    $('.delPop, .overlay').click(function(){
+      $('.search_pop, body').removeClass('open')
+    })
+
+
+    
+  //order s 차트
+  const Chart1 = document.getElementById("orderS").getContext("2d");
+  const borderRadius = 50;
+  const borderRadiusAllCorners = {topLeft: borderRadius, topRight: borderRadius, bottomLeft: borderRadius, bottomRight: borderRadius}
+  new Chart(Chart1, {
+        type: "bar",
+        data: {
+          labels: ["January", "February", "March", "April", "May", "June", "July"],
+          datasets: [
+            {
+              label: 'order',
+              data: [4, 9, 7, 5, 10, 6, 8],
+              pointRadius: 0,
+              backgroundColor: '#7367f0',
+              borderColor: 'transperent',
+              fill: true,
+              borderWidth: 0,
+              borderRadius: borderRadiusAllCorners,
+              categoryPercentage: 1.0,
+              barPercentage: 0.3,
+              borderSkipped: false,
+            },
+            {label: 'bg',
+              data: [10, 10, 10, 10, 10, 10, 10],
+              pointRadius: 0,
+              backgroundColor: '#eeeeef',
+              borderColor: 'transperent',
+              fill: true,
+              borderWidth: 0,
+              borderRadius: borderRadiusAllCorners,
+              categoryPercentage: 1.0,
+              barPercentage: 0.3,
+              borderSkipped: false,
+            },
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              // 기존 툴팁 사용 안 함
+              enabled: false,
+            },
+
+            datalabels: {
+              display: false,
+            },
+          },
+
+          layout: {
+            padding: {
+              top: 0,
+              bottom: 12,
+              left: 0,
+              right: 0 ,
+            },
+          },
+          scales: {
+            x: {
+              stacked: true,
+              display: false,
+              grid: {
+                display: false,
+              },
+            border: {
+              display: false,
+            },
+            },
+            yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }],
+            y: {
+              stacked: true,
+              display: false,
+              grid: {
+                display: false,
+              },
+            },
+          },
+        },
+        elements: {
+        rectangle: {
+          borderSkipped: 'bottom'
+        }
+      }
+      });
+
+
+
+    //sale s 차트
+    const Chart2 = document.getElementById("saleS").getContext("2d");
+    var bgColor = {
+    default: "rgba(40, 199, 111, 1)",
+    half: "rgba(197, 240, 216, 0.5)",
+    quarter: "rgba(197, 240, 216, 0.05)",
+    zero: "rgba(40, 199, 111, 0)"
+  }
+  gradient = Chart2.createLinearGradient(0, 25, 0, 150);
+  gradient.addColorStop(0, bgColor.half); 
+  gradient.addColorStop(0.35, bgColor.quarter);
+  gradient.addColorStop(1, bgColor.zero);
+  new Chart(Chart2, {
+        type: "line",
+        data: {
+          labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL"],
+          datasets: [
+            {
+              label: 'Total Sales This Month',
+              data: [8, 6, 4, 5, 9, 4, 2],
+              pointRadius: 0,
+              backgroundColor: gradient,
+              pointBackgroundColor: bgColor.half,
+              borderColor: bgColor.default,
+              fill: true,
+              borderWidth: 2,
+              lineTension: 0.5,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              // 기존 툴팁 사용 안 함
+              enabled: false,
+            },
+
+            datalabels: {
+              display: false,
+            },
+          },
+
+          layout: {
+            padding: {
+              top: 0,
+              bottom: 4,
+              left: 0,
+              right: 0 ,
+            },
+          },
+
+          scales: {
+            x: {
+              display: false,
+              grid: {
+                display: false,
+              },
+            },
+            y: {
+              display: false,
+              grid: {
+                display: false,
+              },
+            },
+          },
+        }
+      });
+
+
+        //canvas_revenue_growth 차트
+        const Chart3 = document.getElementById("revenueGrowth").getContext("2d");
+        function getBgColorsGreen() {
+        var array  = [4, 9, 7, 5, 10, 6, 8];
+        var maxValue = Math.max.apply(this, array);
+
+        var bg = array.map(a => a === maxValue ? "#28c76f" : "rgba(40, 199, 111, 0.24)");
+        return bg;
+      }
+  new Chart(Chart3, {
+        type: "bar",
+        data: {
+          labels: ["M", "T", "W", "T", "F", "S", "S"],
+          datasets: [
+            {
+              label: 'order',
+              data: [4, 9, 7, 5, 10, 6, 8],
+              pointRadius: 0,
+              backgroundColor: getBgColorsGreen(),
+              borderColor: 'transperent',
+              fill: true,
+              borderWidth: 0,
+              borderRadius: 50,
+              categoryPercentage: 1.0,
+              barPercentage: 0.3,
+              borderSkipped: false,
+            },
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              // 기존 툴팁 사용 안 함
+              enabled: false,
+            },
+
+            datalabels: {
+              display: false,
+            },
+          },
+
+          layout: {
+            padding: {
+              top: 32,
+              bottom: 0,
+              left: 0,
+              right: 0 ,
+            },
+          },
+          scales: {
+            x: {
+              stacked: true,
+              grid: {
+                display: false,
+              },
+              ticks: { 
+                color: '#c1bfc5' ,
+            },
+            border: {
+              display: false,
+            },
+            },
+            yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }],
+            y: {
+              stacked: true,
+              display: false,
+              grid: {
+                display: false,
+              },
+            },
+          },
+        },
+        elements: {
+        rectangle: {
+          borderSkipped: 'bottom'
+        }
+      }
+      });
+
+
+
+    //daily sales 차트
+    const Chart0 = document.getElementById("earningReport").getContext("2d");
+    function getBgColors() {
+    var array  = [4, 9, 7, 5, 10, 6, 8];
+    var maxValue = Math.max.apply(this, array);
+
+    var bg = array.map(a => a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)");
+    return bg;
+  }
+
+    new Chart(Chart0, {
+        type: "bar",
+        data: {
+          labels: ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+          datasets: [
+            {
+              label: 'Total Sales This Month',
+              data: [4, 9, 7, 5, 10, 6, 8],
+              pointRadius: 0,
+              // backgroundColor: 'rgba(115, 103, 240, 0.16)',
+              backgroundColor: getBgColors(),
+              borderColor: 'transperent',
+              fill: true,
+              borderWidth: 0,
+              borderRadius: 4,
+              categoryPercentage: 1.0,
+              barPercentage: 0.5,
+              borderSkipped: false,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              // 기존 툴팁 사용 안 함
+              enabled: false,
+            },
+
+            datalabels: {
+              display: false,
+            },
+          },
+
+          layout: {
+            padding: {
+              top: 0,
+              bottom: 14,
+              left: 0,
+              right: 0 ,
+            },
+          },
+          scales: {
+            x: {
+              grid: {
+                display: false,
+              },
+              ticks: { 
+                color: '#c1bfc5' ,
+            },
+            border: {
+              display: false,
+            },
+            },
+            y: {
+              display: false,
+              grid: {
+                display: false,
+              },
+            },
+          },
+        }
+      });
+
+        //canvas_total_earning 차트
+  const Chart9 = document.getElementById("totalEarning_2").getContext("2d");
+  new Chart(Chart9, {
+        type: "bar",
+        data: {
+          labels: ["January", "February", "March", "April", "May", "June", "July"],
+          datasets: [
+            {
+              label: 'Total Revenue',
+              data: [-3, -5, -2, -9, -10, -6, -8],
+              pointRadius: 0,
+              backgroundColor: '#808390',
+              borderColor: 'transperent',
+              fill: true,
+              borderWidth: 0,
+              borderRadius: 4,
+              categoryPercentage: 1.0,
+              barPercentage: 0.2,
+              borderSkipped: false,
+            },
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              // 기존 툴팁 사용 안 함
+              enabled: false,
+            },
+
+            datalabels: {
+              display: false,
+            },
+          },
+
+          layout: {
+            padding: {
+              top: 0,
+              bottom: 14,
+              left: 0,
+              right: 0 ,
+            },
+          },
+          scales: {
+            x: {
+              stacked: true,
+              display: false,
+              grid: {
+                display: false,
+              },
+            border: {
+              display: false,
+            },
+            },
+            y: {
+              stacked: true,
+              display: false,
+              grid: {
+                display: false,
+              },
+            },
+          },
+        }
+      });
+
+      //테이블 전체체크
+      const checkInput = $('.check_table tbody input')
+      $("#checkAll").click(function(){
+        const checkItem = $('.check_table tbody input:checked').length;
+        if(checkItem == 5){
+          checkInput.attr('checked', false)
+        }else{
+          checkInput.attr('checked', true)
+        }
+      });
+
+      //테이블 체크
+      checkInput.click(function(){
+        const checkItem = $('.check_table tbody input:checked').length;
+        if($('#checkAll').is(':checked')){
+          console.log('ddd')
+          $('#checkAll').prop('checked', false)
+        }else if(checkItem == 5){
+          $('#checkAll').prop('checked', true)
+        }
+      })
+      // 
+  </script>
+</body>
