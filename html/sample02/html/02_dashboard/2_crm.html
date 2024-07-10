@@ -632,117 +632,29 @@
         </div>
 
         <div class="column_grid mb_1_5">
-          <div class="widget column_6 earning_reports">
+          <div class="widget column_8">
             <div class="widget-title">
               <div class="title_heading">
                 <p class="title">Earning Reports</p>
-                <p class="txt">Weekly Earnings Overview</p>
+                <p class="txt">Yearly Earnings Overview</p>
                 <div class="heading_abs"><i class="ic_dots_vertical_gr"></i></div>
               </div>
             </div>
-            <div class="widget-con">
-              <div class="data_top">
-                <div class="data">
-                  <p class="font_h2">$468 <span class="chip size_s type_label color_success">+4.2%</span></p>
-                  <p class="font_body_2 text-secondary">You informed of this week<br>compared to last week</p>
-                </div>
 
-                <div class="canvas_earning_reports">
-                  <canvas id="earningReport"></canvas>
-                </div>
-              </div>
-              <div class="data_bottom">
-                <div class="data">
-                  <div class="icon_title">
-                    <p class="icon" style="--bg-color: var(--primary-o-light)">
-                      <img src="../../images/system/currency_dollar_pr.svg" alt="">
-                    </p>
-                    <p class="font_input_m">Earnings</p>
-                  </div>
-                  <p class="font_h4">$545.69</p>
-                  <div class="progress">
-                    <div class="bar" style="--bar-bg: var(--primary); --prg-bar: 75%;"></div>
-                  </div>
-                </div>
-                <div class="data">
-                  <div class="icon_title">
-                    <p class="icon" style="--bg-color: var(--info-o-light)">
-                      <img src="../../images/system/chart_pie_2_blue.svg" alt="">
-                    </p>
-                    <p class="font_input_m">Profit</p>
-                  </div>
-                  <p class="font_h4">$256.34</p>
-                  <div class="progress">
-                    <div class="bar" style="--bar-bg: var(--info); --prg-bar: 65%;"></div>
-                  </div>
-                </div>
-                <div class="data">
-                  <div class="icon_title">
-                    <p class="icon" style="--bg-color: var(--error-o-light)">
-                      <img src="../../images/system/brand_paypal_red.svg" alt="">
-                    </p>
-                    <p class="font_input_m">Expense</p>
-                  </div>
-                  <p class="font_h4">$74.19</p>
-                  <div class="progress">
-                    <div class="bar" style="--bar-bg: var(--error); --prg-bar: 14%;"></div>
-                  </div>
-                </div>
+            <div class="widget-con earning_order">
+              <div class="canvas_earning_order">
+                <canvas id="earningOrder"></canvas>
               </div>
             </div>
+            
           </div>
-          <div class="widget column_6 ">
+
+          <div class="widget column_4">
             <div class="widget-title">
               <div class="title_heading">
-                <p class="title">Support Tracker</p>
-                <p class="txt">Last 7 Days</p>
+                <p class="title">Sales</p>
+                <p class="txt">Last 6 Months</p>
                 <div class="heading_abs"><i class="ic_dots_vertical_gr"></i></div>
-              </div>
-            </div>
-            <div class="widget-con support_tracker">
-              <div class="support_info">
-                <p class="font_h2">164</p>
-                <p class="text_secondary">Total Tickets</p>
-
-                <div class="data_list">
-                  <div class="avatar_data">
-                    <div class="avatar type_rounded">
-                      <p class="thumb"  style="--avatar-bg: var(--primary-o-light)"><img src="../../images/system/ticket_pr.svg" alt=""></p>
-                    </div>
-                    <div class="avatar_info">
-                      <p class="name">New Tickets</p>
-                      <p class="txt">142</p>
-                    </div>
-                  </div>
-                  <div class="avatar_data">
-                    <div class="avatar type_rounded">
-                      <p class="thumb"  style="--avatar-bg: var(--info-o-light)"><img src="../../images/system/check_blue.svg" alt=""></p>
-                    </div>
-                    <div class="avatar_info">
-                      <p class="name">Open Tickets</p>
-                      <p class="txt">28</p>
-                    </div>
-                  </div>
-                  <div class="avatar_data">
-                    <div class="avatar type_rounded">
-                      <p class="thumb"  style="--avatar-bg: var(--warning-o-light)"><img src="../../images/system/clock_orange.svg" alt=""></p>
-                    </div>
-                    <div class="avatar_info">
-                      <p class="name">Response Time</p>
-                      <p class="txt">1 Day</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="support_graph">
-                <div class="praph_bar" style="--prg-bar: 85%">
-                  <!-- <img src="../../images/support_graph.png" alt="" class="mask"> -->
-                </div>
-                <div class="praph_txt">
-                  <p class="font_body_2 text_disabled">Completed Task</p>
-                  <p class="font_h2">85%</p>
-                </div>
               </div>
             </div>
           </div>
@@ -1553,8 +1465,8 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <!-- <script src="../../js/chart.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../../js/chart.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
   <script src="../../js/chartjs-plugin-datalabels@2.0.0"></script>
   <script>
     
@@ -1998,34 +1910,34 @@
 
 
 
-    //daily sales 차트
-    const Chart0 = document.getElementById("earningReport").getContext("2d");
+    //earningReport_w 차트
+    const Chart4 = document.getElementById("earningOrder").getContext("2d");
     function getBgColors() {
-    var array  = [4, 9, 7, 5, 10, 6, 8];
+    var array  = [28, 10, 45, 38, 15, 30, 35, 28, 8];
     var maxValue = Math.max.apply(this, array);
-
     var bg = array.map(a => a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)");
     return bg;
   }
 
-    new Chart(Chart0, {
+
+    new Chart(Chart4, {
+      plugins: [ChartDataLabels],
         type: "bar",
         data: {
-          labels: ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
           datasets: [
             {
               label: 'Total Sales This Month',
-              data: [4, 9, 7, 5, 10, 6, 8],
+              data: [28, 10, 45, 38, 15, 30, 35, 28, 8],
               pointRadius: 0,
-              // backgroundColor: 'rgba(115, 103, 240, 0.16)',
+              max: 50,
               backgroundColor: getBgColors(),
               borderColor: 'transperent',
               fill: true,
               borderWidth: 0,
-              borderRadius: 4,
+              borderRadius: 6,
               categoryPercentage: 1.0,
-              barPercentage: 0.5,
-              borderSkipped: false,
+              barPercentage: 0.4,
             }
           ]
         },
@@ -2042,15 +1954,20 @@
             },
 
             datalabels: {
-              display: false,
+              anchor: 'end',
+              align: "top",
+              offset: 8,
+              formatter: (val) => {
+                return val + 'k';
+              }
             },
           },
 
           layout: {
             padding: {
               top: 0,
-              bottom: 14,
-              left: 0,
+              bottom: 0,
+              left: 10,
               right: 0 ,
             },
           },
@@ -2060,20 +1977,30 @@
                 display: false,
               },
               ticks: { 
-                color: '#c1bfc5' ,
+                color: '#acaab1' 
             },
-            border: {
-              display: false,
-            },
+
             },
             y: {
-              display: false,
               grid: {
                 display: false,
+                borderColor: 'red'
               },
+              tickWidth: 0,
+              ticks: { 
+                color: '#acaab1',
+                maxTicksLimit: 6,
+                callback: function(value, index, ticks) {
+                    return value + 'k';
+                }
+              },
+              border: {
+              width: 1,
+              color: '#fff',
+            },
             },
           },
-        }
+        },
       });
 
         //canvas_total_earning 차트
@@ -2135,6 +2062,7 @@
             },
             },
             y: {
+              
               stacked: true,
               display: false,
               grid: {
@@ -2142,7 +2070,8 @@
               },
             },
           },
-        }
+        },
+
       });
 
       //테이블 전체체크
