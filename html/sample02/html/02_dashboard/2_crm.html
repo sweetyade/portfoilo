@@ -637,13 +637,37 @@
               <div class="title_heading">
                 <p class="title">Earning Reports</p>
                 <p class="txt">Yearly Earnings Overview</p>
-                <div class="heading_abs"><i class="ic_dots_vertical_gr"></i></div>
+                <div class="heading_abs"><i class="ic_dots_vertical_td"></i></div>
               </div>
             </div>
 
             <div class="widget-con earning_order">
+              <div class="order_tab">
+                <div class="tab_btn active">
+                  <div class="icon ic_shopping_cart_gr"></div>
+                  <p class="txt">Orders</p>
+                </div>
+                <div class="tab_btn">
+                  <div class="icon ic_chart_bar_gr"></div>
+                  <p class="txt">Sales</p>
+                </div>
+                <div class="tab_btn">
+                  <div class="icon ic_currency_dollar_gr"></div>
+                  <p class="txt">Profit</p>
+                </div>
+                <div class="tab_btn">
+                  <div class="icon ic_chart_pie_2_gr"></div>
+                  <p class="txt">Income</p>
+                </div>
+                <div class="tab_btn none">
+                  <div class="icon ic_plus_gr"></div>
+                </div>
+              </div>
               <div class="canvas_earning_order">
-                <canvas id="earningOrder"></canvas>
+                <canvas id="earningOrder" class="tab_con"></canvas>
+                <canvas id="earningOrder_2" class="tab_con" style="display: none;"></canvas>
+                <canvas id="earningOrder_3" class="tab_con" style="display: none;"></canvas>
+                <canvas id="earningOrder_4" class="tab_con" style="display: none;"></canvas>
               </div>
             </div>
             
@@ -654,19 +678,25 @@
               <div class="title_heading">
                 <p class="title">Sales</p>
                 <p class="txt">Last 6 Months</p>
-                <div class="heading_abs"><i class="ic_dots_vertical_gr"></i></div>
+                <div class="heading_abs"><i class="ic_dots_vertical_td"></i></div>
+              </div>
+            </div>
+
+            <div class="widget-con sales_rader">
+              <div class="canvas_sales_rader">
+                <canvas id="salesRedar"></canvas>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="column_grid mb_1_5">
+        <div class="column_grid mb_1_5" >
           <div class="widget column_4">
             <div class="widget-title">
               <div class="title_heading">
                 <p class="title">Sales by Countries</p>
                 <p class="txt">Monthly Sales Overview</p>
-                <div class="heading_abs"><i class="ic_dots_vertical_gr"></i></div>
+                <div class="heading_abs"><i class="ic_dots_vertical_td"></i></div>
               </div>
             </div>
             <div class="widget-con sales_countries">
@@ -765,44 +795,54 @@
           <div class="widget column_4">
             <div class="widget-title">
               <div class="title_heading">
-                <p class="title">Total Earning</p>
-                <div class="heading_abs"><i class="ic_dots_vertical_gr"></i></div>
+                <p class="title">Project Status</p>
+                <div class="heading_abs"><i class="ic_dots_vertical_td"></i></div>
               </div>
-              <p class="title_score size_l">87% <span class="cost up">25.8%</span></p>
             </div>
-            <div class="widget-con total_earning">
-              <div class="canvas_total_earning">
-                <canvas id="totalEarning_1"></canvas>
+            <div class="widget-con project_states">
+              <div class="flex_btw">
+                <div class="avatar_data">
+                  <div class="avatar type_rounded">
+                    <p class="thumb" style="--avatar-bg: var(--warning-o-light)"><img src="../../images/system/currency_dollar_orange.svg" alt=""></p>
+                  </div>
+                  <div class="avatar_info">
+                    <p class="name">$4,3742</p>
+                    <p class="txt">Your Earnings</p>
+                  </div>
+                </div>
+
+                <p class="success font_m">+10.2%</p>
               </div>
-              <div class="canvas_total_earning">
-                <canvas id="totalEarning_2"></canvas>
+              
+
+              <div class="canvas_project_states">
+                <canvas id="projectStates"></canvas>
               </div>
 
               <div class="data_bottom">
-                <div class="data">
+                <div class="data flex_btw">
                   <div class="avatar_data">
-                    <div class="avatar type_rounded">
-                      <p class="thumb" style="--avatar-bg: var(--primary-o-light)"><img src="../../images/system/brand_paypal_pr.svg" alt=""></p>
-                    </div>
                     <div class="avatar_info">
-                      <p class="name">Total Revenue</p>
-                      <p class="txt">Client Payment</p>
+                      <p class="name">Donates</p>
                     </div>
                   </div>
 
-                  <p class="success font_m">+$126</p>
+                  <div class="flex_right">
+                    <p class="text_secondary">$756.26	</p>
+                    <p class="error font_m">-139.34</p>
+                  </div>
+              
                 </div>
-                <div class="data">
+                <div class="data flex_btw mt_1">
                   <div class="avatar_data">
-                    <div class="avatar type_rounded">
-                      <p class="thumb" style="--avatar-bg: var(--secondary-o-light)"><img src="../../images/system/currency_dollar_gr.svg" alt=""></p>
-                    </div>
                     <div class="avatar_info">
-                      <p class="name">Total Sales</p>
-                      <p class="txt">Refund</p>
+                      <p class="name">Podcasts</p>
                     </div>
                   </div>
-                  <p class="success font_m">+$98</p>
+                  <div class="flex_right">
+                    <p class="text_secondary">$2,207.03</p>
+                    <p class="success font_m">+576.24</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -811,104 +851,122 @@
           <div class="widget column_4">
             <div class="widget-title">
               <div class="title_heading">
-                <p class="title">Monthly Campaign State</p>
-                <p class="txt">8.52k Social Visitors</p>
-                <div class="heading_abs"><i class="ic_dots_vertical_gr"></i></div>
+                <p class="title">Active Projects</p>
+                <p class="txt">Average 72% completed</p>
+                <div class="heading_abs"><i class="ic_dots_vertical_td"></i></div>
               </div>
             </div>
-            <div class="widget-con monthly_campaign">
+            <div class="widget-con active_project">
               <div class="widget-list">
                 <div class="widget_data">
                   <div class="avatar_data">
                     <div class="avatar type_rounded">
-                      <p class="thumb" style="--avatar-bg: var(--success-o-light)"><img src="../../images/system/mail_green.svg" alt=""></p>
+                      <p class="thumb" style="--avatar-bg: transperent"><img src="../../images/logo_laravel.png" alt=""></p>
                     </div>
                     <div class="avatar_info">
-                      <p class="name">Emails</p>
+                      <p class="name">Laravel</p>
+                      <p class="txt">Ecommerce</p>
                     </div>
                   </div>
                   
                   <div class="data_right">
-                    <p class="text_secondary">12,346</p>
-                    <p class="cost up">0.3%</p>
+                    <div class="progress_data">
+                      <div class="progress"><div class="bar" style="--prg-bar: 85%; --bar-bg: var(--error); --bar-shadow: var(--error-s-small)"></div></div>
+                      <p class="text_disabled">5%</p>
+                    </div>
                   </div>
                 </div>
 
                 <div class="widget_data">
                   <div class="avatar_data">
                     <div class="avatar type_rounded">
-                      <p class="thumb" style="--avatar-bg: var(--info-o-light)"><img src="../../images/system/link_blue.svg" alt=""></p>
+                      <p class="thumb" style="--avatar-bg: transperent"><img src="../../images/logo_figma.png" alt=""></p>
                     </div>
                     <div class="avatar_info">
-                      <p class="name">Opened</p>
+                      <p class="name">Figma</p>
+                      <p class="txt">App UI Kit</p>
                     </div>
                   </div>
                   <div class="data_right">
-                    <p class="text_secondary">8,734</p>
-                    <p class="cost up">2.1%</p>
+                    <div class="progress_data">
+                      <div class="progress"><div class="bar" style="--prg-bar: 86%; --bar-bg: var(--primary); --bar-shadow: var(--primary-s-small)"></div></div>
+                      <p class="text_disabled">86%</p>
+                    </div>
                   </div>
                 </div>
                 <div class="widget_data">
                   <div class="avatar_data">
                     <div class="avatar type_rounded">
-                      <p class="thumb" style="--avatar-bg: var(--warning-o-light)"><img src="../../images/system/mouse_orange.svg" alt=""></p>
+                      <p class="thumb" style="--avatar-bg: transperent"><img src="../../images/logo_vue.png" alt=""></p>
                     </div>
                     <div class="avatar_info">
-                      <p class="name">Clicked</p>
+                      <p class="name">VueJS</p>
+                      <p class="txt">Calendar App</p>
                     </div>
                   </div>
 
                   <div class="data_right">
-                    <p class="text_secondary">967</p>
-                    <p class="cost down">1.4%</p>
-                  </div>
-                </div>
-
-                <div class="widget_data">
-                  <div class="avatar_data">
-                    <div class="avatar type_rounded">
-                      <p class="thumb" style="--avatar-bg: var(--primary-o-light)"><img src="../../images/system/users_pr.svg" alt=""></p>
+                    <div class="progress_data">
+                      <div class="progress"><div class="bar" style="--prg-bar: 90%; --bar-bg: var(--success); --bar-shadow: var(--success-s-small)"></div></div>
+                      <p class="text_disabled">90%</p>
                     </div>
-                    <div class="avatar_info">
-                      <p class="name">Subscribe</p>
-                    </div>
-                  </div>
-
-                  <div class="data_right">
-                    <p class="text_secondary">345</p>
-                    <p class="cost up">8.5%</p>
                   </div>
                 </div>
 
                 <div class="widget_data">
                   <div class="avatar_data">
                     <div class="avatar type_rounded">
-                      <p class="thumb" style="--avatar-bg: var(--secondary-o-light)"><img src="../../images/system/AlertReportProblem_gr.svg" alt=""></p>
+                      <p class="thumb" style="--avatar-bg: transperent"><img src="../../images/logo_react-.png" alt=""></p>
                     </div>
                     <div class="avatar_info">
-                      <p class="name">Complaints</p>
+                      <p class="name">React</p>
+                      <p class="txt">Dashboard</p>
                     </div>
                   </div>
 
                   <div class="data_right">
-                    <p class="text_secondary">10</p>
-                    <p class="cost down">1.5%</p>
+                    <div class="progress_data">
+                      <div class="progress"><div class="bar" style="--prg-bar: 37%; --bar-bg: var(--info); --bar-shadow: var(--info-s-small)"></div></div>
+                      <p class="text_disabled">37%</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb" style="--avatar-bg: transperent"><img src="../../images/logo_bootstrap.png" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Bootstrap</p>
+                      <p class="txt">Website</p>
+                    </div>
+                  </div>
+
+                  <div class="data_right">
+                    <div class="progress_data">
+                      <div class="progress"><div class="bar" style="--prg-bar: 22%; --bar-bg: var(--primary); --bar-shadow: var(--primary-s-small)"></div></div>
+                      <p class="text_disabled">22%</p>
+                    </div>
                   </div>
                 </div>
                 
                 <div class="widget_data">
                   <div class="avatar_data">
                     <div class="avatar type_rounded">
-                      <p class="thumb" style="--avatar-bg: var(--error-o-light)"><img src="../../images/system/ban_red.svg" alt=""></p>
+                      <p class="thumb" style="--avatar-bg: transperent"><img src="../../images/logo_sketch.png" alt=""></p>
                     </div>
                     <div class="avatar_info">
-                      <p class="name">Unsubscribe</p>
+                      <p class="name">Sketch</p>
+                      <p class="txt">Website Design</p>
                     </div>
                   </div>
 
                   <div class="data_right">
-                    <p class="text_secondary">86</p>
-                    <p class="cost up">0.8%</p>
+                    <div class="progress_data">
+                      <div class="progress"><div class="bar" style="--prg-bar: 29%; --bar-bg: var(--warning); --bar-shadow: var(--warning-s-small)"></div></div>
+                      <p class="text_disabled">29%</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -917,302 +975,195 @@
         </div>
 
         <div class="column_grid" >
-          <div class="widget column_4">
-            <div class="widget-title">
-              <div class="title_heading">
-                <p class="title">Source Visits</p>
-                <p class="txt">38.4k Visitors</p>
-                <div class="heading_abs"><i class="ic_dots_vertical_gr"></i></div>
-              </div>
-            </div>
-            <div class="widget-con source_visits">
-              <div class="widget-list">
-                <div class="widget_data">
-                  <div class="avatar_data">
-                    <div class="avatar type_rounded">
-                      <p class="thumb"><i class="ic_shadow_gr avater_icon"></i></p>
-                    </div>
-                    <div class="avatar_info">
-                      <p class="name">Source</p>
-                      <p class="txt">Direct link click</p>
-                    </div>
-                  </div>
-
-                  <div class="data_right">
-                    <p class="text_secondary">1.2k</p>
-                    <p class="chip size_s type_label color_success">+4.2%</p>
-                  </div>
-                </div>
-
-                <div class="widget_data">
-                  <div class="avatar_data">
-                    <div class="avatar type_rounded">
-                      <p class="thumb"><i class="ic_globe_gr avater_icon"></i></p>
-                    </div>
-                    <div class="avatar_info">
-                      <p class="name">Social Networks</p>
-                      <p class="txt">Social Channels</p>
-                    </div>
-                  </div>
-
-                  <div class="data_right">
-                    <p class="text_secondary">31.5k</p>
-                    <p class="chip size_s type_label color_success">+8.2%</p>
-                  </div>
-                </div>
-
-                <div class="widget_data">
-                  <div class="avatar_data">
-                    <div class="avatar type_rounded">
-                      <p class="thumb"><i class="ic_mail_gr avater_icon"></i></p>
-                    </div>
-                    <div class="avatar_info">
-                      <p class="name">Email Newsletter</p>
-                      <p class="txt">Mail Campaigns</p>
-                    </div>
-                  </div>
-
-                  <div class="data_right">
-                    <p class="text_secondary">893</p>
-                    <p class="chip size_s type_label color_success">+2.4%</p>
-                  </div>
-                </div>
-
-                <div class="widget_data">
-                  <div class="avatar_data">
-                    <div class="avatar type_rounded">
-                      <p class="thumb"><i class="ic_external_link_gr avater_icon"></i></p>
-                    </div>
-                    <div class="avatar_info">
-                      <p class="name">Referrals</p>
-                      <p class="txt">Impact Radius Visits</p>
-                    </div>
-                  </div>
-                  
-                  <div class="data_right">
-                    <p class="text_secondary">342</p>
-                    <p class="chip size_s type_label color_error">-0.4%</p>
-                  </div>
-                </div>
-
-                <div class="widget_data">
-                  <div class="avatar_data">
-                    <div class="avatar type_rounded">
-                      <p class="thumb"><i class="ic_ad_gr avater_icon"></i></p>
-                    </div>
-                    <div class="avatar_info">
-                      <p class="name">ADVT</p>
-                      <p class="txt">Google ADVT</p>
-                    </div>
-                  </div>
-
-                  <div class="data_right">
-                    <p class="text_secondary">2.15k</p>
-                    <p class="chip size_s type_label color_success">+9.1%</p>
-                  </div>
-                </div>
-                <div class="widget_data">
-                  <div class="avatar_data">
-                    <div class="avatar type_rounded">
-                      <p class="thumb"><i class="ic_star_gr avater_icon"></i></p>
-                    </div>
-                    <div class="avatar_info">
-                      <p class="name">Other</p>
-                      <p class="txt">Many Sources</p>
-                    </div>
-                  </div>
-
-                  <div class="data_right">
-                    <p class="text_secondary">12.5k</p>
-                    <p class="chip size_s type_label color_success">+6.2%</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="widget column_8">
+          <div class="widget column_6">
             <div class="widget-table_title">
               <div class="title_left">
-                <p class="title">Project List</p>
+                <p class="title">Last Transaction</p>
               </div>
-
-              <div class="title_right">
-                <div class="input_basic">
-                  <div class="inner">
-                    <input type="text" placeholder="Search Project" id='' value="" >
-                  </div>
-                </div>
-              </div>
+              <div class="heading_abs"><i class="ic_dots_vertical_td"></i></div>
               
             </div>
-            <div class="widget-table">
-              <table class="check_table">
+
+            <div class="widget-table last_transaction">
+              <table class="list_table">
                 <colgroup>
-                  <col width="5%">
-                  <col width="30%">
-                  <col width="13%">
-                  <col width="15%">
-                  <col width="20%">
-                  <col width="12%">
+                  <col width="35%">
+                  <col width="25%">
+                  <col width="18%">
+                  <col width="22%">
                 </colgroup>
                 <thead>
                   <tr>
-                    <th class="table_fixed checkth">
-                      <div class="input_check">
-                        <input type="checkbox" class="check_input" id="checkAll">
-                        <label for="checkAll" class=""><span class="check"></span></label>
-                      </div>
                     </th>
-                    <th>PROJECT</th>
-                    <th>Leader</th>
-                    <th>Team</th>
-                    <th>PROGRESS</th>
-                    <th>Action</th>
+                    <th>Card</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th class="">Trend</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="table_fixed">
-                      <div class="input_check">
-                        <input type="checkbox" class="check_input" id="check1">
-                        <label for="check1" class=""><span class="check"></span></label>
-                      </div>
-                    </td>
                     <td>
                       <div class="avatar_data">
                         <div class="avatar type_circle">
-                          <p class="thumb"><img src="../../images/avatar_icon_3.png" alt=""></p>
+                          <p class="thumb"><img src="../../images/logo_visa.png" alt=""></p>
                         </div>
                         <div class="avatar_info">
-                          <p class="name">BGC eCommerce App</p>
-                          <p class="txt">React Project</p>
+                          <p class="name">*4230</p>
+                          <p class="txt">Credit</p>
                         </div>
                       </div>
                     </td>
-                    <td>Eileen</td>
                     <td>
-                      <div class="avatar_list">
+                      <p>Sent</p>
+                      <p class="font_body_2 text_secondary">17 Mar 2022</p>
+                    </td>
+                    <td><p class="chip size_s type_label color_success">Verified</p></td>
+                    <td class="text_right">+$1,678</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/logo_mastercard.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">*5578</p>
+                          <p class="txt">Credit</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <p>Sent</p>
+                      <p class="font_body_2 text_secondary">12 Feb 2022</p>
+                    </td>
+                    <td><p class="chip size_s type_label color_error">Rejected</p></td>
+                    <td class="text_right">-$839</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/logo_american_express.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">*4567</p>
+                          <p class="txt">ATM</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <p>Sent</p>
+                      <p class="font_body_2 text_secondary">28 Feb 2022</p>
+                    </td>
+                    <td><p class="chip size_s type_label color_success">Verified</p></td>
+                    <td class="text_right">+$435</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/logo_visa.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">*5699</p>
+                          <p class="txt">Credit</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <p>Sent</p>
+                      <p class="font_body_2 text_secondary">08 Jan 2022</p>
+                    </td>
+                    <td><p class="chip size_s type_label color_gr">Pending</p></td>
+                    <td class="text_right">+$2,345</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/logo_visa.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">*5699</p>
+                          <p class="txt">Credit</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <p>Sent</p>
+                      <p class="font_body_2 text_secondary">08 Jan 2022</p>
+                    </td>
+                    <td><p class="chip size_s type_label color_error">Rejected</p></td>
+                    <td class="text_right">+$2,345</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+
+          <div class="widget column_6 ">
+            <div class="widget-title">
+              <div class="title_heading">
+                <p class="title">
+                  <i class="ic_list_details"></i>
+                  Activity Timeline
+                </p>
+                <div class="heading_abs"><i class="ic_dots_vertical_td"></i></div>
+              </div>
+            </div>
+            <div class="widget-con">
+              <div class="timeline">
+                <div class="timeline-block">
+                  <div class="timeline-icon">
+                    <div class="icon color_pr"></div>
+                  </div>
+                  <div class="timeline-data">
+                    <p class="title">12 Invoices have been paid<span class="date">12 min ago</span></p>
+                    <div class="content">
+                      <p class="txt">Invoices have been paid to the company</p>
+
+                      <a href="javascript:void(0)" class="file">
+                        <i><img src="../../images/file_pdf.svg" alt=""></i>
+                        <p class="">invoices.pdf</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline-block">
+                  <div class="timeline-icon">
+                    <div class="icon color_success"></div>
+                  </div>
+                  <div class="timeline-data">
+                    <p class="title">Client Meeting<span class="date">45 min ago</span></p>
+                    <div class="content">
+                      <p class="txt">Project meeting with john @10:15am</p>
+                      <div class="avatar_data">
                         <div class="avatar type_circle">
                           <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
                         </div>
-                        <div class="avatar type_circle">
-                          <p class="thumb"><img src="../../images/avatar_2.png" alt=""></p>
-                        </div>
-                        <div class="avatar type_circle">
-                          <p class="thumb"><img src="../../images/avatar_3.png" alt=""></p>
-                        </div>
-                        <div class="avatar type_circle">
-                          <p class="thumb">+3</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="progress_data">
-                        <div class="progress"><div class="bar" style="--prg-bar: 78%"></div></div>
-                        <p class="">78%</p>
-                      </div>
-                    </td>
-                    <td class="text_center"><i class="table_icon ic_dots_vertical_dgray"></i></td>
-                  </tr>
-                  <tr>
-                    <td class="table_fixed">
-                      <div class="input_check">
-                        <input type="checkbox" class="check_input" id="check2">
-                        <label for="check2" class=""><span class="check"></span></label>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="avatar_data">
-                        <div class="avatar type_circle">
-                          <p class="thumb"><img src="../../images/avatar_icon_4.png" alt=""></p>
-                        </div>
                         <div class="avatar_info">
-                          <p class="name">Falcon Logo Design</p>
-                          <p class="txt">Figma Project</p>
+                          <p class="name">Shannon Paucek</p>
+                          <p class="txt">Destiney_Kiehn@yahoo.com</p>
                         </div>
                       </div>
-                    </td>
-                    <td>Owen</td>
-                    <td>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline-block">
+                  <div class="timeline-icon">
+                    <div class="icon color_info"></div>
+                  </div>
+                  <div class="timeline-data">
+                    <p class="title">Create a new project for client<span class="date">2 Day Ago</span></p>
+                    <div class="content">
+                      <p class="txt">6 team members in a project</p>
+
                       <div class="avatar_list">
                         <div class="avatar type_circle">
-                          <p class="thumb"><img src="../../images/avatar_7.png" alt=""></p>
+                          <p class="thumb"><img src="../../images/avatar_4.png" alt=""></p>
                         </div>
-                        <div class="avatar type_circle">
-                          <p class="thumb"><img src="../../images/avatar_5.png" alt=""></p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="progress_data">
-                        <div class="progress"><div class="bar" style="--prg-bar: 18%"></div></div>
-                        <p class="">18%</p>
-                      </div>
-                    </td>
-                    <td class="text_center"><i class="table_icon ic_dots_vertical_dgray"></i></td>
-                  </tr>
-                  <tr>
-                    <td class="table_fixed">
-                      <div class="input_check">
-                        <input type="checkbox" class="check_input" id="check3">
-                        <label for="check3" class=""><span class="check"></span></label>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="avatar_data">
-                        <div class="avatar type_circle">
-                          <p class="thumb"><img src="../../images/avatar_icon_5.png" alt=""></p>
-                        </div>
-                        <div class="avatar_info">
-                          <p class="name">Dashboard Design</p>
-                          <p class="txt">VueJs Project</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>Eileen</td>
-                    <td>
-                      <div class="avatar_list">
-                        <div class="avatar type_circle">
-                          <p class="thumb"><img src="../../images/avatar_12.png" alt=""></p>
-                        </div>
-                        <div class="avatar type_circle">
-                          <p class="thumb"><img src="../../images/avatar_10.png" alt=""></p>
-                        </div>
-                        <div class="avatar type_circle">
-                          <p class="thumb"><img src="../../images/avatar_7.png" alt=""></p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="progress_data">
-                        <div class="progress"><div class="bar" style="--prg-bar: 62%"></div></div>
-                        <p class="">62%</p>
-                      </div>
-                    </td>
-                    <td class="text_center"><i class="table_icon ic_dots_vertical_dgray"></i></td>
-                  </tr>
-                  <tr>
-                    <td class="table_fixed">
-                      <div class="input_check">
-                        <input type="checkbox" class="check_input" id="check4">
-                        <label for="check4" class=""><span class="check"></span></label>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="avatar_data">
-                        <div class="avatar type_circle">
-                          <p class="thumb"><img src="../../images/avatar_icon_6.png" alt=""></p>
-                        </div>
-                        <div class="avatar_info">
-                          <p class="name">Foodista Mobile App</p>
-                          <p class="txt">Xamarin Project</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>Merline</td>
-                    <td>
-                      <div class="avatar_list">
                         <div class="avatar type_circle">
                           <p class="thumb"><img src="../../images/avatar_9.png" alt=""></p>
                         </div>
@@ -1220,76 +1171,17 @@
                           <p class="thumb"><img src="../../images/avatar_10.png" alt=""></p>
                         </div>
                         <div class="avatar type_circle">
-                          <p class="thumb"><img src="../../images/avatar_2.png" alt=""></p>
-                        </div>
-                        <div class="avatar type_circle">
-                          <p class="thumb">+8</p>
+                          <p class="thumb">+3</p>
                         </div>
                       </div>
-                    </td>
-                    <td>
-                      <div class="progress_data">
-                        <div class="progress"><div class="bar" style="--prg-bar: 8%"></div></div>
-                        <p class="">8%</p>
-                      </div>
-                    </td>
-                    <td class="text_center"><i class="table_icon ic_dots_vertical_dgray"></i></td>
-                  </tr>
-                  <tr>
-                    <td class="table_fixed">
-                      <div class="input_check">
-                        <input type="checkbox" class="check_input" id="check5">
-                        <label for="check5" class=""><span class="check"></span></label>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="avatar_data">
-                        <div class="avatar type_circle">
-                          <p class="thumb"><img src="../../images/avatar_icon_7.png" alt=""></p>
-                        </div>
-                        <div class="avatar_info">
-                          <p class="name">Blockchain Website</p>
-                          <p class="txt">Sketch Project</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>Allyson</td>
-                    <td>
-                      <div class="avatar_list">
-                        <div class="avatar type_circle">
-                          <p class="thumb"><img src="../../images/avatar_5.png" alt=""></p>
-                        </div>
-                        <div class="avatar type_circle">
-                          <p class="thumb"><img src="../../images/avatar_11.png" alt=""></p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="progress_data">
-                        <div class="progress"><div class="bar" style="--prg-bar: 92%"></div></div>
-                        <p class="">92%</p>
-                      </div>
-                    </td>
-                    <td class="text_center"><i class="table_icon ic_dots_vertical_dgray"></i></td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <div class="table_bottom">
-                <p class="text_disabled">Showing 1 to 7 of 10 entries</p>
-
-                <div class="pagenation type_rounded color_pr">
-                  <a href="javascript:void(0)" class="first ic_chevrons_left_gr"></a>
-                  <a href="javascript:void(0)" class="pre ic_chevron_left_gr"></a>
-                  <a href="javascript:void(0)" class="">1</a>
-                  <a href="javascript:void(0)" class="active">2</a>
-                  <a href="javascript:void(0)" class="">3</a>
-                  <a href="javascript:void(0)" class="next ic_chevron_right"></a>
-                  <a href="javascript:void(0)" class="last ic_chevrons_right"></a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+          
 
         </div>
       </div>
@@ -1655,6 +1547,11 @@
   const Chart1 = document.getElementById("orderS").getContext("2d");
   const borderRadius = 50;
   const borderRadiusAllCorners = {topLeft: borderRadius, topRight: borderRadius, bottomLeft: borderRadius, bottomRight: borderRadius}
+  const darkColor = {
+    if(html){
+
+    }
+  }
   new Chart(Chart1, {
         type: "bar",
         data: {
@@ -1676,7 +1573,7 @@
             {label: 'bg',
               data: [10, 10, 10, 10, 10, 10, 10],
               pointRadius: 0,
-              backgroundColor: '#eeeeef',
+              backgroundColor: 'rgba(47, 43, 61, 0.08)',
               borderColor: 'transperent',
               fill: true,
               borderWidth: 0,
@@ -1723,11 +1620,6 @@
               display: false,
             },
             },
-            yAxes: [{
-            ticks: {
-                beginAtZero: true
-            }
-        }],
             y: {
               stacked: true,
               display: false,
@@ -1750,11 +1642,11 @@
     const Chart2 = document.getElementById("saleS").getContext("2d");
     var bgColor = {
     default: "rgba(40, 199, 111, 1)",
-    half: "rgba(197, 240, 216, 0.5)",
-    quarter: "rgba(197, 240, 216, 0.05)",
+    half: "rgba(40, 199, 111, 0.3)",
+    quarter: "rgba(40, 199, 111, 0.05)",
     zero: "rgba(40, 199, 111, 0)"
   }
-  gradient = Chart2.createLinearGradient(0, 25, 0, 150);
+  gradient = Chart2.createLinearGradient(0, 0, 0, 90);
   gradient.addColorStop(0, bgColor.half); 
   gradient.addColorStop(0.35, bgColor.quarter);
   gradient.addColorStop(1, bgColor.zero);
@@ -1887,11 +1779,6 @@
               display: false,
             },
             },
-            yAxes: [{
-            ticks: {
-                beginAtZero: true
-            }
-        }],
             y: {
               stacked: true,
               display: false,
@@ -1918,8 +1805,6 @@
     var bg = array.map(a => a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)");
     return bg;
   }
-
-
     new Chart(Chart4, {
       plugins: [ChartDataLabels],
         type: "bar",
@@ -1965,10 +1850,100 @@
 
           layout: {
             padding: {
-              top: 0,
+              top: 40,
               bottom: 0,
               left: 10,
-              right: 0 ,
+              right: 10 ,
+            },
+          },
+          scales: {
+            x: {
+              grid: {
+                display: false,
+              },
+              ticks: { 
+                color: '#acaab1' 
+            },
+
+            },
+            y: {
+              grid: {
+                display: false,
+              },
+              tickWidth: 0,
+              ticks: { 
+                color: '#acaab1',
+                maxTicksLimit: 6,
+                callback: function(value, index, ticks) {
+                    return value + 'k';
+                }
+              },
+              border: {
+              display: false,
+            },
+            },
+          },
+        },
+      });
+
+
+    //earningReport_w 차트
+    const Chart4_2 = document.getElementById("earningOrder_2").getContext("2d");
+    function getBgColors2() {
+    var array  = [23, 66, 12, 45, 24, 77, 56, 34, 87];
+    var maxValue = Math.max.apply(this, array);
+    var bg = array.map(a => a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)");
+    return bg;
+  }
+    new Chart(Chart4_2, {
+      plugins: [ChartDataLabels],
+        type: "bar",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+          datasets: [
+            {
+              label: 'Total Sales This Month',
+              data: [23, 66, 12, 45, 24, 77, 56, 34, 87],
+              pointRadius: 0,
+              max: 50,
+              backgroundColor: getBgColors2(),
+              borderColor: 'transperent',
+              fill: true,
+              borderWidth: 0,
+              borderRadius: 6,
+              categoryPercentage: 1.0,
+              barPercentage: 0.4,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              // 기존 툴팁 사용 안 함
+              enabled: false,
+            },
+
+            datalabels: {
+              anchor: 'end',
+              align: "top",
+              offset: 8,
+              formatter: (val) => {
+                return val + 'k';
+              }
+            },
+          },
+
+          layout: {
+            padding: {
+              top: 40,
+              bottom: 0,
+              left: 10,
+              right: 10 ,
             },
           },
           scales: {
@@ -1995,34 +1970,309 @@
                 }
               },
               border: {
-              width: 1,
-              color: '#fff',
+                display: false,
             },
             },
           },
         },
       });
 
-        //canvas_total_earning 차트
-  const Chart9 = document.getElementById("totalEarning_2").getContext("2d");
-  new Chart(Chart9, {
+    //earningReport_w 차트
+    const Chart4_3 = document.getElementById("earningOrder_3").getContext("2d");
+    function getBgColors3() {
+    var array  = [55, 34, 76, 28, 95, 33, 75, 17, 67];
+    var maxValue = Math.max.apply(this, array);
+    var bg = array.map(a => a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)");
+    return bg;
+  }
+    new Chart(Chart4_3, {
+      plugins: [ChartDataLabels],
         type: "bar",
         data: {
-          labels: ["January", "February", "March", "April", "May", "June", "July"],
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
           datasets: [
             {
-              label: 'Total Revenue',
-              data: [-3, -5, -2, -9, -10, -6, -8],
+              label: 'Total Sales This Month',
+              data: [55, 34, 76, 28, 95, 33, 75, 17, 67],
               pointRadius: 0,
-              backgroundColor: '#808390',
+              max: 50,
+              backgroundColor: getBgColors3(),
               borderColor: 'transperent',
               fill: true,
               borderWidth: 0,
-              borderRadius: 4,
+              borderRadius: 6,
               categoryPercentage: 1.0,
-              barPercentage: 0.2,
-              borderSkipped: false,
+              barPercentage: 0.4,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false,
             },
+            tooltip: {
+              // 기존 툴팁 사용 안 함
+              enabled: false,
+            },
+
+            datalabels: {
+              anchor: 'end',
+              align: "top",
+              offset: 8,
+              clamp: true,
+              formatter: (val) => {
+                return val + 'k';
+              }
+            },
+          },
+
+          layout: {
+            padding: {
+              top: 40,
+              bottom: 0,
+              left: 10,
+              right: 10 ,
+            },
+          },
+          scales: {
+            x: {
+              grid: {
+                display: false,
+              },
+              ticks: { 
+                color: '#acaab1' 
+            },
+
+            },
+            y: {
+              grid: {
+                display: false,
+                borderColor: 'red'
+              },
+              tickWidth: 0,
+              ticks: { 
+                color: '#acaab1',
+                maxTicksLimit: 6,
+                callback: function(value, index, ticks) {
+                    return value + 'k';
+                }
+              },
+              border: {
+                display: false,
+            },
+            },
+          },
+        },
+      });
+
+
+    //earningReport_w 차트
+    const Chart4_4 = document.getElementById("earningOrder_4").getContext("2d");
+    function getBgColors4() {
+    var array  = [23, 31, 37, 44, 29, 16, 9, 37, 26];
+    var maxValue = Math.max.apply(this, array);
+    var bg = array.map(a => a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)");
+    return bg;
+  }
+    new Chart(Chart4_4, {
+      plugins: [ChartDataLabels],
+        type: "bar",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+          datasets: [
+            {
+              label: 'Total Sales This Month',
+              data: [23, 31, 37, 44, 29, 16, 9, 37, 26],
+              pointRadius: 0,
+              max: 50,
+              backgroundColor: getBgColors4(),
+              borderColor: 'transperent',
+              fill: true,
+              borderWidth: 0,
+              borderRadius: 6,
+              categoryPercentage: 1.0,
+              barPercentage: 0.4,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              // 기존 툴팁 사용 안 함
+              enabled: false,
+            },
+
+            datalabels: {
+              anchor: 'end',
+              align: "top",
+              offset: 8,
+              formatter: (val) => {
+                return val + 'k';
+              }
+            },
+          },
+
+          layout: {
+            padding: {
+              top: 40,
+              bottom: 0,
+              left: 10,
+              right: 10 ,
+            },
+          },
+          scales: {
+            x: {
+              grid: {
+                display: false,
+              },
+              ticks: { 
+                color: '#acaab1' 
+            },
+
+            },
+            y: {
+              grid: {
+                display: false,
+                borderColor: 'red'
+              },
+              tickWidth: 0,
+              ticks: { 
+                color: '#acaab1',
+                maxTicksLimit: 6,
+                callback: function(value, index, ticks) {
+                    return value + 'k';
+                }
+              },
+              border: {
+                display: false,
+            },
+            },
+          },
+        },
+      });
+
+
+    //salesRedar 차트
+    const Chart5 = document.getElementById("salesRedar").getContext("2d");
+    new Chart(Chart5, {
+      plugins: [ChartDataLabels],
+        type: "radar",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+          datasets: [
+            {
+              label: 'Sales',
+              data: [5,8,10,3,2,6],
+              pointRadius: 0,
+              backgroundColor: "rgba(115, 103, 240, 0.9)",
+              borderColor: 'transperent',
+              fill: true,
+              borderWidth: 0,
+            },
+            {
+              label: 'Visits',
+              data: [3,5,2,1,8,6],
+              pointRadius: 0,
+              backgroundColor: "rgba(0, 186, 209, 0.9)",
+              borderColor: 'transperent',
+              fill: true,
+              borderWidth: 0,
+
+            },
+            
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: "bottom",
+              labels: {
+                boxWidth : 12,
+                boxHeight: 12,
+                padding : 14,
+                color: "#c1bfc5",
+                useBorderRadius : true,
+                borderRadius: 6,
+                font: {
+                  size: 13,
+                  
+                },
+              }
+            },
+            tooltip: {
+              enabled: false,
+            },
+            datalabels: {
+              display: false,
+            },
+          },
+
+          layout: {
+            padding: {
+              top: 0,
+              bottom: 0,
+              left: 0,
+              right: 0 ,
+            },
+          },
+          scales: {
+            r: {
+            min: 0, // MIN
+            max: 10, // MAX
+            pointLabels: {
+                color: '#c1bfc5',
+                font: {
+                  size: 13,
+                }
+              },
+            beginAtZero: true,
+              ticks: {
+              stepSize: 5,
+              display:false,
+              },
+            },
+          },
+        },
+      });
+
+
+  //canvas_project_states
+  const Chart6 = document.getElementById("projectStates").getContext("2d");
+    var bgColor2 = {
+    default: "rgba(255, 159, 67, 1)",
+    half: "rgba(255, 159, 67, 0.5)",
+    quarter: "rgba(255, 159, 67, 0.05)",
+    zero: "rgba(255, 159, 67, 0)"
+  }
+  gradient = Chart6.createLinearGradient(0, 0, 0, 280);
+  gradient.addColorStop(0, bgColor2.half); 
+  gradient.addColorStop(0.35, bgColor2.quarter);
+  gradient.addColorStop(1, bgColor2.zero);
+  new Chart(Chart6, {
+        type: "line",
+        data: {
+          labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9","10","11","12","13","14","15","16"],
+          datasets: [
+            {
+              label: 'Total Sales This Month',
+              data: [3, 3, 6, 6, 5, 5, 3, 3,5,5,7,7,6,6,9,9],
+              pointRadius: 0,
+              backgroundColor: gradient,
+              pointBackgroundColor: bgColor2.half,
+              borderColor: bgColor2.default,
+              fill: true,
+              borderWidth: 4,
+            }
           ]
         },
         options: {
@@ -2044,57 +2294,50 @@
 
           layout: {
             padding: {
-              top: 0,
-              bottom: 14,
+              top:24,
+              bottom: 24,
               left: 0,
               right: 0 ,
             },
           },
+
           scales: {
             x: {
-              stacked: true,
               display: false,
               grid: {
                 display: false,
               },
-            border: {
-              display: false,
-            },
+              
             },
             y: {
-              
-              stacked: true,
               display: false,
+              beginAtZero: true,
               grid: {
                 display: false,
               },
             },
           },
-        },
-
-      });
-
-      //테이블 전체체크
-      const checkInput = $('.check_table tbody input')
-      $("#checkAll").click(function(){
-        const checkItem = $('.check_table tbody input:checked').length;
-        if(checkItem == 5){
-          checkInput.attr('checked', false)
-        }else{
-          checkInput.attr('checked', true)
         }
       });
 
-      //테이블 체크
-      checkInput.click(function(){
-        const checkItem = $('.check_table tbody input:checked').length;
-        if($('#checkAll').is(':checked')){
-          console.log('ddd')
-          $('#checkAll').prop('checked', false)
-        }else if(checkItem == 5){
-          $('#checkAll').prop('checked', true)
+
+
+
+
+      //earning reports tab
+      $(".earning_order").find('.tab_btn').click(function(e){
+
+        if($(this).hasClass('none')){
+          e.preventDefault();
+          console.log('리포트 선택메뉴 띄우기')
+        }else{
+          const tabIndex = $(".tab_btn").index(this);
+          $(this).addClass('active')
+          $(this).siblings().removeClass('active');
+          $(".tab_con").hide()
+          $(".tab_con").eq(tabIndex).fadeIn("slow"); 
+          return false;
         }
       })
-      // 
   </script>
 </body>

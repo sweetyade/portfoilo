@@ -1612,6 +1612,10 @@ body {
   background-image: url(../images/system/shopping_cart_pr.svg);
 }
 
+.ic_shopping_cart_gr {
+  background-image: url(../images/system/shopping_cart_gr.svg);
+}
+
 .ic_school {
   background-image: url(../images/system/school.svg);
 }
@@ -1702,6 +1706,10 @@ body {
 
 .ic_chart_bar {
   background-image: url(../images/system/chart_bar.svg);
+}
+
+.ic_chart_bar_gr {
+  background-image: url(../images/system/chart_bar_gr.svg);
 }
 
 .ic_atom {
@@ -1888,6 +1896,10 @@ body {
   background-image: url(../images/system/currency_dollar_pr.svg);
 }
 
+.ic_currency_dollar_gr {
+  background-image: url(../images/system/currency_dollar_gr.svg);
+}
+
 .ic_currency_dollar_green {
   background-image: url(../images/system/currency_dollar_green.svg);
 }
@@ -1914,6 +1926,10 @@ body {
 
 .ic_plus {
   background-image: url(../images/system/plus.svg);
+}
+
+.ic_plus_gr {
+  background-image: url(../images/system/plus_gr.svg);
 }
 
 .ic_minus {
@@ -1972,12 +1988,12 @@ body {
   background-image: url(../images/system/dots_vertical_gr.svg);
 }
 
-.ic_chevron_up_green {
-  background-image: url(../images/system/chevron_up_green.svg);
+.ic_dots_vertical_td {
+  background-image: url(../images/system/dots_vertical_td.svg);
 }
 
-.ic_dots_vertical_dgray {
-  background-image: url(../images/system/dots_vertical_dgray.svg);
+.ic_chevron_up_green {
+  background-image: url(../images/system/chevron_up_green.svg);
 }
 
 .ic_chevrons_left_gr {
@@ -2006,6 +2022,14 @@ body {
 
 .ic_ad_gr {
   background-image: url(../images/system/ad_gr.svg);
+}
+
+.ic_chart_pie_2_gr {
+  background-image: url(../images/system/chart_pie_2_gr.svg);
+}
+
+.ic_list_details {
+  background-image: url(../images/system/list_details.svg);
 }
 
 /*-------- color ------------- */
@@ -2038,6 +2062,9 @@ body {
 }
 :root.dark .ic_chevron_right {
   background-image: url(../images/system/chevron_right_d.svg);
+}
+:root.dark .ic_shopping_cart_gr {
+  background-image: url(../images/system/shopping_cart_gr_d.svg);
 }
 :root.dark .ic_chevron_right_gr {
   background-image: url(../images/system/chevron_right_gr_d.svg);
@@ -2169,7 +2196,7 @@ body {
   background-image: url(../images/system/ship_d.svg);
 }
 :root.dark .ic_corner_left_down_gr {
-  background-image: url(../images/system/corner_left_down_d.svg);
+  background-image: url(../images/system/corner_left_down_gr_d.svg);
 }
 :root.dark .ic_language {
   background-image: url(../images/system/language_d.svg);
@@ -2182,6 +2209,9 @@ body {
 }
 :root.dark .ic_plus {
   background-image: url(../images/system/plus_d.svg);
+}
+:root.dark .ic_plus_gr {
+  background-image: url(../images/system/plus_gr_d.svg);
 }
 :root.dark .ic_minus {
   background-image: url(../images/system/minus_d.svg);
@@ -2248,6 +2278,21 @@ body {
 }
 :root.dark .ic_ad_gr {
   background-image: url(../images/system/ad_gr_d.svg);
+}
+:root.dark .ic_chart_bar_gr {
+  background-image: url(../images/system/chart_bar_gr_d.svg);
+}
+:root.dark .ic_chart_pie_2_gr {
+  background-image: url(../images/system/chart_pie_2_gr_d.svg);
+}
+:root.dark .ic_currency_dollar_gr {
+  background-image: url(../images/system/currency_dollar_gr_d.svg);
+}
+:root.dark .ic_dots_vertical_gr {
+  background-image: url(../images/system/dots_vertical_gr_d.svg);
+}
+:root.dark .ic_dots_vertical_td {
+  background-image: url(../images/system/dots_vertical_td_d.svg);
 }
 :root.dark .icc_rocket_gr {
   background-image: url(../images/color/rocket_d.svg);
@@ -5112,26 +5157,20 @@ select:disabled ~ .input_label {
   font-size: var(--font-18);
   font-weight: var(--font-medium);
   line-height: 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-3);
+}
+.widget-title .title_heading .title i {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-size: cover;
 }
 .widget-title .title_heading .txt {
   font-size: var(--font-13);
   font-weight: var(--font-medium);
   line-height: 1.25rem;
   color: var(--text-secondary);
-}
-.widget-title .title_heading .heading_abs {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-}
-.widget-title .title_heading .heading_abs .color_success {
-  color: var(--success);
-}
-.widget-title .title_heading .heading_abs .ic_dots_vertical_gr {
-  width: 1.375rem;
-  height: 1.375rem;
-  display: block;
-  cursor: pointer;
 }
 .widget-title .title_score {
   font-size: var(--font-24);
@@ -5196,6 +5235,31 @@ select:disabled ~ .input_label {
 .widget-table table.check_table thead th:first-child::after {
   display: none;
 }
+.widget-table table.check_table tbody td {
+  border-bottom: 1px solid var(--divider);
+}
+.widget-table table.list_table thead th {
+  padding: var(--padding-4) var(--padding-2);
+  border-bottom: 1px solid var(--divider);
+  text-align: left;
+}
+.widget-table table.list_table thead th:first-child {
+  padding-left: var(--padding-6);
+}
+.widget-table table.list_table thead th:last-child {
+  text-align: right;
+  padding-right: var(--padding-8);
+}
+.widget-table table.list_table tbody td {
+  padding: 10px var(--padding-2);
+}
+.widget-table table.list_table tbody td:first-child {
+  padding-left: var(--padding-6);
+}
+.widget-table table.list_table tbody td:last-child {
+  text-align: right;
+  padding-right: var(--padding-8);
+}
 .widget-table thead th {
   font-size: var(--font-12);
   line-height: 1.5rem;
@@ -5205,7 +5269,6 @@ select:disabled ~ .input_label {
 .widget-table tbody td {
   padding-inline: 1.25rem 1rem;
   height: 3.5rem;
-  border-bottom: 1px solid var(--divider);
 }
 .widget-table .table_icon {
   width: 2.375rem;
@@ -5233,30 +5296,6 @@ select:disabled ~ .input_label {
 .widget-table .avatar_list .avatar .thumb {
   width: 1.625rem;
   height: 1.625rem;
-}
-.widget-table .progress_data {
-  display: flex;
-  align-items: center;
-  gap: var(--gap-3);
-  white-space: nowrap;
-}
-.widget-table .progress_data .progress {
-  width: 100%;
-  position: relative;
-  height: 0.375rem;
-  border-radius: 5rem;
-  background-color: var(--action-selected);
-}
-.widget-table .progress_data .progress .bar {
-  width: var(--prg-bar);
-  background-color: var(--primary);
-  position: absolute;
-  left: 0;
-  top: 0;
-  border-radius: 5rem;
-  height: 100%;
-  box-shadow: var(--primary-s-small);
-  animation: prgbar 1s linear;
 }
 .widget-table .table_bottom {
   display: flex;
@@ -5303,6 +5342,20 @@ select:disabled ~ .input_label {
   justify-content: flex-end;
   gap: var(--gap-4);
 }
+.widget .heading_abs {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+.widget .heading_abs .color_success {
+  color: var(--success);
+}
+.widget .heading_abs i {
+  width: 1.375rem;
+  height: 1.375rem;
+  display: block;
+  cursor: pointer;
+}
 .widget .cost {
   text-align: right;
   background-size: 1.25rem;
@@ -5321,12 +5374,36 @@ select:disabled ~ .input_label {
   color: var(--error);
   background-image: url(../images/system/chevron_down_red.svg);
 }
+.widget .progress_data {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-3);
+  white-space: nowrap;
+}
+.widget .progress_data .progress {
+  width: calc(100% - 2.875rem);
+  position: relative;
+  height: 0.375rem;
+  border-radius: 5rem;
+  background-color: var(--action-selected);
+}
+.widget .progress_data .progress .bar {
+  width: var(--prg-bar);
+  background-color: var(--primary);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 5rem;
+  height: 100%;
+  box-shadow: var(--primary-s-small);
+  animation: prgbar 1s linear;
+}
+.widget .progress_data .progress + p {
+  width: 2.125rem;
+  text-align: right;
+}
 .widget.type_basic {
   padding: var(--padding-6);
-}
-.widget .avatar .thumb {
-  width: 100%;
-  height: 100%;
 }
 .widget .avatar.size_l {
   width: 2.75rem;
