@@ -1754,12 +1754,14 @@
     $(".list_language").find('li').click(function(){
       $(this).addClass('active')
       $(this).siblings().removeClass('active')
+      $(".list_language").slideUp()
     })
     
     //테마선택
     $(".list_theme").find('li').click(function(){
       $(this).addClass('active')
-      $(this).siblings().removeClass('active')
+      $(this).siblings().removeClass('active');
+      $(".list_theme").slideUp()
 
       if($(this).children('i').hasClass('ic_sun')){
         $('html').removeClass('dark');
@@ -1777,6 +1779,11 @@
           $(this).remove()
         }, 700);
       })
+    });
+
+    //유저메뉴
+    $(".top_user .user_list li, .top_user .user_list .btn").click(function () { 
+      $(".top_user .user_list").slideUp()
     })
 
     //서치 포커트팝업 오픈
@@ -1812,12 +1819,12 @@
     //daily sales 차트
     const Chart1 = document.getElementById("monthSale").getContext("2d");
     var bgColor = {
-    default: "rgba(40, 199, 111, 1)",
-    half: "rgba(197, 240, 216, 0.5)",
-    quarter: "rgba(197, 240, 216, 0.05)",
+      default: "rgba(40, 199, 111, 1)",
+    half: "rgba(40, 199, 111, 0.3)",
+    quarter: "rgba(40, 199, 111, 0.05)",
     zero: "rgba(40, 199, 111, 0)"
   }
-  gradient = Chart1.createLinearGradient(0, 25, 0, 150);
+  gradient = Chart1.createLinearGradient(0, 0, 0, 120);
   gradient.addColorStop(0, bgColor.half); 
   gradient.addColorStop(0.35, bgColor.quarter);
   gradient.addColorStop(1, bgColor.zero);
@@ -1829,6 +1836,8 @@
             {
               label: 'Total Sales This Month',
               data: [8, 6, 4, 5, 9, 4, 2],
+              min: 0,
+              max: 10,
               pointRadius: 0,
               backgroundColor: gradient,
               pointBackgroundColor: bgColor.half,
@@ -1867,12 +1876,14 @@
 
           scales: {
             x: {
+              
               display: false,
               grid: {
                 display: false,
               },
             },
             y: {
+              beginAtZero: true,
               display: false,
               grid: {
                 display: false,

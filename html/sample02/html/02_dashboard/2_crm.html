@@ -1495,12 +1495,14 @@
     $(".list_language").find('li').click(function(){
       $(this).addClass('active')
       $(this).siblings().removeClass('active')
+      $(".list_language").slideUp()
     })
     
     //테마선택
     $(".list_theme").find('li').click(function(){
       $(this).addClass('active')
       $(this).siblings().removeClass('active')
+      $(".list_theme").slideUp()
 
       if($(this).children('i').hasClass('ic_sun')){
         $('html').removeClass('dark');
@@ -1518,6 +1520,11 @@
           $(this).remove()
         }, 700);
       })
+    })
+
+    //유저메뉴
+    $(".top_user .user_list li, .top_user .user_list .btn").click(function () { 
+      $(".top_user .user_list").slideUp()
     })
 
     //서치 포커트팝업 오픈
