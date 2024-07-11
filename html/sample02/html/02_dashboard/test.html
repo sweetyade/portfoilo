@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Getting Started with Chart JS with www.chartjs3.com</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      .chartMenu {
+        width: 100vw;
+        height: 40px;
+        background: #1A1A1A;
+        color: rgba(54, 162, 235, 1);
+      }
+      .chartMenu p {
+        padding: 10px;
+        font-size: 20px;
+      }
+      .chartCard {
+        width: 100vw;
+        height: calc(100vh - 40px);
+        background: rgba(54, 162, 235, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .chartBox {
+        width: 700px;
+        padding: 20px;
+        border-radius: 20px;
+        border: solid 3px rgba(54, 162, 235, 1);
+        background: white;
+      }
+
+      .darkmode{
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chartMenu">
+      <p>WWW.CHARTJS3.COM (Chart JS <span id="chartVersion"></span>)</p>
+    </div>
+    <div class="chartCard">
+      <div class="chartBox" id="backgroundColorChart">
+        <canvas id="myChart"></canvas>
+        <input type="checkbox" onchange="darkMode(this)" name="" id="checkbox">
+        <span id="checkboxText">Dark Mode or Light Mode</span>
+      </div>
+    </div>
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../../js/chartjs-plugin-datalabels@2.0.0"></script>
+    <script>
+    // setup 
+    const data = {
+      labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+      datasets: [{
+        label: 'Weekly Sales',
+        data: [18, 12, 6, 9, 12, 3, 9],
+        backgroundColor: [
+          'rgba(255, 26, 104, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(153, 102, 255, 0.2)',
+          'rgba(255, 159, 64, 0.2)',
+          'rgba(0, 0, 0, 0.2)'
+        ],
+        borderColor: [
+          'rgba(255, 26, 104, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)',
+          'rgba(0, 0, 0, 1)'
+        ],
+        borderWidth: 1
+      }]
+    };
+
+    // config 
+    const config = {
+      type: 'bar',
+      data,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+          }
+        }
+      }
+    };
+
+    // render init block
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+
+    const checkbox = document.getElementById('checkbox');
+
+    function darkMode(){
+      const x = myChart.config.options.scales.x;
+      const y = myChart.config.options.scales.y;
+      const bgColorChart = document.getElementById('backgroundColorChart');
+
+
+      if(checkbox.checked === true){
+        Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(150,150,150,.8)';
+        bgColorChart.style.backgroundColor = 'black';
+        x.grid.borderColor = 'white';
+        y.grid.borderColor = 'white';
+        x.grid.color = 'rgba(255,255,255,0.5)';
+        y.grid.color = 'rgba(255,255,255,0.5)';
+        Chart.defaults.color = 'white'
+        document.getElementById('checkboxText').classList.add('darkmode')
+        // myChart.config.data.datasets[0].backgroundColor = myChart.config.data.datasets[0].borderColor;
+        //loop and check if q matches the blck color code ===> make white
+        myChart.config.data.datasets[0].backgroundColor = myChart.config.data.datasets[0].borderColor.map(color => {
+          let solid = color;
+          if(color == 'rgba(0,0,0,0.1)'){
+            solide = rgba(255,255,255,1)
+          }
+          return solid;
+        })
+      }
+      if(checkbox.checked === false){
+        Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(0,0,0,.8)';
+        bgColorChart.style.backgroundColor = 'white';
+        x.grid.borderColor = '#666';
+        y.grid.borderColor = '#666';
+        x.grid.color = 'rgba(0,0,0,0.1)';
+        y.grid.color = 'rgba(0,0,0,0.1)';
+        Chart.defaults.color = '#666'
+        document.getElementById('checkboxText').classList.remove('darkmode')
+        myChart.config.data.datasets[0].backgroundColor = myChart.config.data.datasets[0].borderColor.map(color => {
+          // console.log(color)
+          const cleared = color.substr(0, color.length -2);
+          console.log(cleared)
+          return `${cleared}0.2)`
+        })
+      }
+
+      myChart.update()
+    }
+
+    // Instantly assign Chart.js version
+    const chartVersion = document.getElementById('chartVersion');
+    chartVersion.innerText = Chart.version;
+    </script>
+
+  </body>
+</html>
