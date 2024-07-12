@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="" id="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1760,15 +1760,20 @@
     //테마선택
     $(".list_theme").find('li').click(function(){
       $(this).addClass('active')
-      $(this).siblings().removeClass('active');
-      $(".list_theme").slideUp()
+      $(this).siblings().removeClass('active')
 
       if($(this).children('i').hasClass('ic_sun')){
         $('html').removeClass('dark');
+        $(".list_theme").slideUp()
+        darkMode()
       }else if($(this).children('i').hasClass('ic_moon_stars')){
         $('html').addClass('dark');
+        $(".list_theme").slideUp()
+        darkMode()
       }else{
         $('html').removeClass('dark');
+        $(".list_theme").slideUp()
+        darkMode()
       }
     })
 
@@ -1779,11 +1784,6 @@
           $(this).remove()
         }, 700);
       })
-    });
-
-    //유저메뉴
-    $(".top_user .user_list li, .top_user .user_list .btn").click(function () { 
-      $(".top_user .user_list").slideUp()
     })
 
     //서치 포커트팝업 오픈
@@ -1816,161 +1816,185 @@
     });
 
 
+
     //daily sales 차트
     const Chart1 = document.getElementById("monthSale").getContext("2d");
     var bgColor = {
-      default: "rgba(40, 199, 111, 1)",
-    half: "rgba(40, 199, 111, 0.3)",
-    quarter: "rgba(40, 199, 111, 0.05)",
-    zero: "rgba(40, 199, 111, 0)"
-  }
-  gradient = Chart1.createLinearGradient(0, 0, 0, 120);
-  gradient.addColorStop(0, bgColor.half); 
-  gradient.addColorStop(0.35, bgColor.quarter);
-  gradient.addColorStop(1, bgColor.zero);
-  new Chart(Chart1, {
-        type: "line",
-        data: {
-          labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL"],
-          datasets: [
-            {
-              label: 'Total Sales This Month',
-              data: [8, 6, 4, 5, 9, 4, 2],
-              min: 0,
-              max: 10,
-              pointRadius: 0,
-              backgroundColor: gradient,
-              pointBackgroundColor: bgColor.half,
-              borderColor: bgColor.default,
-              fill: true,
-              borderWidth: 2,
-              lineTension: 0.5,
-            }
-          ]
+        default: "rgba(40, 199, 111, 1)",
+        half: "rgba(40, 199, 111, 0.3)",
+        quarter: "rgba(40, 199, 111, 0.05)",
+        zero: "rgba(40, 199, 111, 0)"
+      }
+    var gradient = Chart1.createLinearGradient(0, 25, 0, 90);
+        gradient.addColorStop(0, bgColor.half); 
+        gradient.addColorStop(0.35, bgColor.quarter);
+        gradient.addColorStop(1, bgColor.zero);
+    new Chart(Chart1, {
+      type: "line",
+      data: {
+        labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL"],
+        datasets: [
+          {
+            label: 'Total Sales This Month',
+            data: [8, 6, 4, 5, 9, 4, 2],
+            pointRadius: 0,
+            backgroundColor: gradient,
+            pointBackgroundColor: bgColor.half,
+            borderColor: bgColor.default,
+            fill: true,
+            borderWidth: 2,
+            lineTension: 0.5,
+          }
+        ]
+      },
+      options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false,
         },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              display: false,
-            },
-            tooltip: {
-              // 기존 툴팁 사용 안 함
-              enabled: false,
-            },
-
-            datalabels: {
-              display: false,
-            },
-          },
-
-          layout: {
-            padding: {
-              top: 0,
-              bottom: 10,
-              left: 0,
-              right: 0 ,
-            },
-          },
-
-          scales: {
-            x: {
-              
-              display: false,
-              grid: {
-                display: false,
-              },
-            },
-            y: {
-              beginAtZero: true,
-              display: false,
-              grid: {
-                display: false,
-              },
-            },
-          },
-        }
-      });
-
-
-    //daily sales 차트
-    const Chart2 = document.getElementById("earningReport").getContext("2d");
-    function getBgColors() {
-    var array  = [4, 9, 7, 5, 10, 6, 8];
-    var maxValue = Math.max.apply(this, array);
-
-    var bg = array.map(a => a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)");
-    return bg;
-  }
-
-    new Chart(Chart2, {
-        type: "bar",
-        data: {
-          labels: ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
-          datasets: [
-            {
-              label: 'Total Sales This Month',
-              data: [4, 9, 7, 5, 10, 6, 8],
-              pointRadius: 0,
-              // backgroundColor: 'rgba(115, 103, 240, 0.16)',
-              backgroundColor: getBgColors(),
-              borderColor: 'transperent',
-              fill: true,
-              borderWidth: 0,
-              borderRadius: 4,
-              categoryPercentage: 1.0,
-              barPercentage: 0.5,
-              borderSkipped: false,
-            }
-          ]
+        tooltip: {
+          // 기존 툴팁 사용 안 함
+          enabled: false,
         },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              display: false,
-            },
-            tooltip: {
-              // 기존 툴팁 사용 안 함
-              enabled: false,
-            },
 
-            datalabels: {
-              display: false,
-            },
-          },
+        datalabels: {
+          display: false,
+        },
+      },
 
-          layout: {
-            padding: {
-              top: 0,
-              bottom: 14,
-              left: 0,
-              right: 0 ,
-            },
+      layout: {
+        padding: {
+          top: 0,
+          bottom: 10,
+          left: 0,
+          right: 0 ,
+        },
+      },
+
+      scales: {
+        x: {
+          display: false,
+          grid: {
+            display: false,
           },
-          scales: {
-            x: {
-              grid: {
-                display: false,
-              },
-              ticks: { 
-                color: '#c1bfc5' ,
-            },
-            border: {
-              display: false,
-            },
-            },
-            y: {
-              display: false,
-              grid: {
-                display: false,
-              },
-            },
+        },
+        y: {
+          display: false,
+          grid: {
+            display: false,
           },
+        },
+      },
+    }
+  });
+
+
+
+  
+      
+//canvas_earning_reports 차트
+function getBgColors() {
+  var array = [4, 9, 7, 5, 10, 6, 8];
+  var maxValue = Math.max.apply(this, array);
+
+  var bg = array.map((a) =>
+    a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)"
+  );
+  return bg;
+}
+
+const data = {
+  labels: ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+  datasets: [
+    {
+      label: "Total Sales This Month",
+      data: [4, 9, 7, 5, 10, 6, 8],
+      pointRadius: 0,
+      backgroundColor: getBgColors(),
+      borderColor: "transperent",
+      fill: true,
+      borderWidth: 0,
+      borderRadius: 4,
+      categoryPercentage: 1.0,
+      barPercentage: 0.5,
+      borderSkipped: false,
+    },
+  ],
+};
+
+const config = {
+  type: "bar",
+  data,
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        // 기존 툴팁 사용 안 함
+        enabled: false,
+      },
+
+      datalabels: {
+        display: false,
+      },
+    },
+
+    layout: {
+      padding: {
+        top: 0,
+        bottom: 14,
+        left: 0,
+        right: 0,
+      },
+    },
+    scales: {
+      x: {
+        grid: {
+          display: false,
+        },
+        border: {
+          display: false,
+        },
+        ticks:{
+          color: "#acaab1"
         }
-      });
+      },
+      y: {
+        display: false,
+        grid: {
+          display: false,
+        },
+      },
+    },
+  },
+};
+
+//테마선택
+
+const Chart2 = new Chart(
+  document.getElementById("earningReport"), 
+  config,
+
+);
+
+function darkMode() {
+  const dark = document.getElementById("dark").classList.contains('dark')
+  let x = Chart2.config.options.scales.x;
+
+  if (dark === true) {
+    x.ticks.color = "rgba(225, 222, 245, 0.4)";
+  }
+  if (dark === false) {
+    x.ticks.color = "#acaab1";
+  }
+  Chart2.update()
+}
+
 
   //canvas_total_earning 차트
   const Chart3 = document.getElementById("totalEarning_1").getContext("2d");
@@ -2132,5 +2156,7 @@
         }
       })
       // 
+
+
   </script>
 </body>
