@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="" id="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1357,9 +1357,11 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="../../js/chart.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
-  <script src="../../js/chartjs-plugin-datalabels@2.0.0"></script>
+  <!-- <script src="../../js/chart.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../../js/chartjs-plugin-datalabels@2.0.0"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
   <script>
     
     //리플버튼
@@ -1396,16 +1398,6 @@
       $('.sidebar').toggleClass('sideIcon')
       $('.container').toggleClass('con_wide')
     })
-
-  //     $(window).bind("resize", function () {
-  //     console.log($(this).width())
-  //     if ($(this).width() > 1440) {
-  //         $('.sidebar').removeClass('sideIcon')
-  //     } else {
-  //       $('.sidebar').addClass('sideIcon')
-  //     }
-  // }).trigger('resize');
-
 
     if($('.nav-link').hasClass('active')){
 
@@ -1506,10 +1498,13 @@
 
       if($(this).children('i').hasClass('ic_sun')){
         $('html').removeClass('dark');
+        darkMode()
       }else if($(this).children('i').hasClass('ic_moon_stars')){
         $('html').addClass('dark');
+        darkMode()
       }else{
         $('html').removeClass('dark');
+        darkMode()
       }
     })
 
@@ -1548,51 +1543,42 @@
       $('.search_pop, body').removeClass('open')
     })
 
-
-    
-  //order s 차트
-  const Chart1 = document.getElementById("orderS").getContext("2d");
-  const borderRadius = 50;
-  const borderRadiusAllCorners = {topLeft: borderRadius, topRight: borderRadius, bottomLeft: borderRadius, bottomRight: borderRadius}
-  const darkColor = {
-    if(html){
-
-    }
-  }
-  new Chart(Chart1, {
-        type: "bar",
-        data: {
-          labels: ["January", "February", "March", "April", "May", "June", "July"],
-          datasets: [
-            {
-              label: 'order',
-              data: [4, 9, 7, 5, 10, 6, 8],
-              pointRadius: 0,
-              backgroundColor: '#7367f0',
-              borderColor: 'transperent',
-              fill: true,
-              borderWidth: 0,
-              borderRadius: borderRadiusAllCorners,
-              categoryPercentage: 1.0,
-              barPercentage: 0.3,
-              borderSkipped: false,
-            },
-            {label: 'bg',
-              data: [10, 10, 10, 10, 10, 10, 10],
-              pointRadius: 0,
-              backgroundColor: 'rgba(47, 43, 61, 0.08)',
-              borderColor: 'transperent',
-              fill: true,
-              borderWidth: 0,
-              borderRadius: borderRadiusAllCorners,
-              categoryPercentage: 1.0,
-              barPercentage: 0.3,
-              borderSkipped: false,
-            },
-          ]
+    // chart 1 ============= order s 차트
+    const borderRadius = 50;
+    const borderRadiusAllCorners = {topLeft: borderRadius, topRight: borderRadius, bottomLeft: borderRadius, bottomRight: borderRadius}
+    const data1 = {
+      labels: ["January", "February", "March", "April", "May", "June", "July"],
+      datasets: [
+        {
+          label: "order",
+          data: [4, 9, 7, 5, 10, 6, 8],
+          pointRadius: 0,
+          backgroundColor: "#7367f0",
+          borderColor: "transperent",
+          fill: true,
+          borderWidth: 0,
+          borderRadius: borderRadiusAllCorners,
+          categoryPercentage: 1.0,
+          barPercentage: 0.3,
+          borderSkipped: false,
         },
-        options: {
-          responsive: true,
+        {
+          label: 'bg',
+          data: [10, 10, 10, 10, 10, 10, 10],
+          pointRadius: 0,
+          backgroundColor: 'rgba(47, 43, 61, 0.08)',
+          borderColor: 'transperent',
+          fill: true,
+          borderWidth: 0,
+          borderRadius: borderRadiusAllCorners,
+          categoryPercentage: 1.0,
+          barPercentage: 0.3,
+          borderSkipped: false,
+        },
+      ],
+    };
+    const options1  = {
+      responsive: true,
           maintainAspectRatio: false,
           plugins: {
             legend: {
@@ -1607,7 +1593,6 @@
               display: false,
             },
           },
-
           layout: {
             padding: {
               top: 0,
@@ -1620,32 +1605,28 @@
             x: {
               stacked: true,
               display: false,
-              grid: {
-                display: false,
-              },
-            border: {
-              display: false,
-            },
             },
             y: {
               stacked: true,
               display: false,
-              grid: {
-                display: false,
-              },
             },
           },
-        },
-        elements: {
+          elements: {
         rectangle: {
           borderSkipped: 'bottom'
         }
       }
-      });
+    };
+    const orderS = document.getElementById('orderS')
+    const Chart1 = new Chart(orderS, {
+      type: "bar",
+    data: data1,
+    options: options1
+})
 
 
 
-    //sale s 차트
+  //    chart 2 ====================== sale s 차트
     const Chart2 = document.getElementById("saleS").getContext("2d");
     var bgColor = {
     default: "rgba(40, 199, 111, 1)",
@@ -1653,88 +1634,87 @@
     quarter: "rgba(40, 199, 111, 0.05)",
     zero: "rgba(40, 199, 111, 0)"
   }
-  gradient = Chart2.createLinearGradient(0, 0, 0, 90);
-  gradient.addColorStop(0, bgColor.half); 
-  gradient.addColorStop(0.35, bgColor.quarter);
-  gradient.addColorStop(1, bgColor.zero);
-  new Chart(Chart2, {
-        type: "line",
-        data: {
-          labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL"],
-          datasets: [
-            {
-              label: 'Total Sales This Month',
-              data: [8, 6, 4, 5, 9, 4, 2],
-              pointRadius: 0,
-              backgroundColor: gradient,
-              pointBackgroundColor: bgColor.half,
-              borderColor: bgColor.default,
-              fill: true,
-              borderWidth: 2,
-              lineTension: 0.5,
-            }
-          ]
+        gradient = Chart2.createLinearGradient(0, 0, 0, 90);
+        gradient.addColorStop(0, bgColor.half); 
+        gradient.addColorStop(0.35, bgColor.quarter);
+        gradient.addColorStop(1, bgColor.zero);
+    new Chart(Chart2, {
+      type: "line",
+      data: {
+        labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL"],
+        datasets: [
+          {
+            label: 'Total Sales This Month',
+            data: [8, 6, 4, 5, 9, 4, 2],
+            pointRadius: 0,
+            backgroundColor: gradient,
+            pointBackgroundColor: bgColor.half,
+            borderColor: bgColor.default,
+            fill: true,
+            borderWidth: 2,
+            lineTension: 0.5,
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          },
+          tooltip: {
+            // 기존 툴팁 사용 안 함
+            enabled: false,
+          },
+
+          datalabels: {
+            display: false,
+          },
         },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              display: false,
-            },
-            tooltip: {
-              // 기존 툴팁 사용 안 함
-              enabled: false,
-            },
 
-            datalabels: {
+        layout: {
+          padding: {
+            top: 0,
+            bottom: 4,
+            left: 0,
+            right: 0 ,
+          },
+        },
+
+        scales: {
+          x: {
+            display: false,
+            grid: {
               display: false,
             },
           },
-
-          layout: {
-            padding: {
-              top: 0,
-              bottom: 4,
-              left: 0,
-              right: 0 ,
+          y: {
+            display: false,
+            grid: {
+              display: false,
             },
           },
-
-          scales: {
-            x: {
-              display: false,
-              grid: {
-                display: false,
-              },
-            },
-            y: {
-              display: false,
-              grid: {
-                display: false,
-              },
-            },
-          },
-        }
-      });
+        },
+      },
+      
+    });
 
 
-        //canvas_revenue_growth 차트
-        const Chart3 = document.getElementById("revenueGrowth").getContext("2d");
-        function getBgColorsGreen() {
+    // chart3  ==================== revenueGrowth 차트
+    function getBgColorsGreen() {
         var array  = [4, 9, 7, 5, 10, 6, 8];
         var maxValue = Math.max.apply(this, array);
 
-        var bg = array.map(a => a === maxValue ? "#28c76f" : "rgba(40, 199, 111, 0.24)");
+
+        var bg = array.map(a =>  a === maxValue ? "#28c76f" : "rgba(40, 199, 111, 0.24)");
         return bg;
       }
-  new Chart(Chart3, {
-        type: "bar",
-        data: {
-          labels: ["M", "T", "W", "T", "F", "S", "S"],
-          datasets: [
-            {
-              label: 'order',
+    const data2 = {
+      labels: ["M", "T", "W", "T", "F", "S", "S"],
+      datasets: [
+        {
+          label: 'order',
               data: [4, 9, 7, 5, 10, 6, 8],
               pointRadius: 0,
               backgroundColor: getBgColorsGreen(),
@@ -1745,12 +1725,12 @@
               categoryPercentage: 1.0,
               barPercentage: 0.3,
               borderSkipped: false,
-            },
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
+        }
+      ],
+    };
+    const options2  = {
+      responsive: true,
+      maintainAspectRatio: false,
           plugins: {
             legend: {
               display: false,
@@ -1764,7 +1744,6 @@
               display: false,
             },
           },
-
           layout: {
             padding: {
               top: 32,
@@ -1778,13 +1757,14 @@
               stacked: true,
               grid: {
                 display: false,
+                borderColor: 'transparent'
               },
-              ticks: { 
-                color: '#c1bfc5' ,
-            },
-            border: {
-              display: false,
-            },
+              ticks:{
+                color : "rgba(47, 43, 61, 0.4)",
+              },
+              border: {
+                display: false,
+              },
             },
             y: {
               stacked: true,
@@ -1792,32 +1772,31 @@
               grid: {
                 display: false,
               },
+              border: {
+              display: false,
+            },
             },
           },
-        },
-        elements: {
+          elements: {
         rectangle: {
           borderSkipped: 'bottom'
         }
       }
-      });
+    };
 
 
+    const revenueGrowth = document.getElementById('revenueGrowth')
+    const Chart3 = new Chart(revenueGrowth, {
+      type: "bar",
+      data: data2,
+      options: options2
+    })
 
-    //earningReport_w 차트
-    const Chart4 = document.getElementById("earningOrder").getContext("2d");
-    function getBgColors() {
-    var array  = [28, 10, 45, 38, 15, 30, 35, 28, 8];
-    var maxValue = Math.max.apply(this, array);
-    var bg = array.map(a => a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)");
-    return bg;
-  }
-    new Chart(Chart4, {
-      plugins: [ChartDataLabels],
-        type: "bar",
-        data: {
-          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
-          datasets: [
+
+    // chart4 ===================== earningOrder 차트 1
+    const data3 = {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+      datasets: [
             {
               label: 'Total Sales This Month',
               data: [28, 10, 45, 38, 15, 30, 35, 28, 8],
@@ -1832,10 +1811,11 @@
               barPercentage: 0.4,
             }
           ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
+    }
+    const options3 = {
+      
+      responsive: true,
+      maintainAspectRatio: false,
           plugins: {
             legend: {
               display: false,
@@ -1851,7 +1831,8 @@
               offset: 8,
               formatter: (val) => {
                 return val + 'k';
-              }
+              },
+              color: "rgba(47, 43, 61, 0.9)"
             },
           },
 
@@ -1867,6 +1848,7 @@
             x: {
               grid: {
                 display: false,
+                borderColor : "rgba(47, 43, 61, 0.12)"
               },
               ticks: { 
                 color: '#acaab1' 
@@ -1876,6 +1858,7 @@
             y: {
               grid: {
                 display: false,
+                borderColor : "rgba(47, 43, 61, 0.12)"
               },
               tickWidth: 0,
               ticks: { 
@@ -1890,27 +1873,29 @@
             },
             },
           },
-        },
-      });
-
-
-    //earningReport_w 차트
-    const Chart4_2 = document.getElementById("earningOrder_2").getContext("2d");
-    function getBgColors2() {
-    var array  = [23, 66, 12, 45, 24, 77, 56, 34, 87];
-    var maxValue = Math.max.apply(this, array);
-    var bg = array.map(a => a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)");
-    return bg;
-  }
-    new Chart(Chart4_2, {
+    }
+    function getBgColors() {
+      var array  = [28, 10, 45, 38, 15, 30, 35, 28, 8];
+      var maxValue = Math.max.apply(this, array);
+      var bg = array.map(a => a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)");
+      return bg;
+    }
+    const earningOrder = document.getElementById('earningOrder')
+    const Chart4 = new Chart(earningOrder, {
       plugins: [ChartDataLabels],
-        type: "bar",
-        data: {
-          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
-          datasets: [
+      type: "bar",
+      data: data3,
+      options: options3
+    })
+
+
+     // chart4-2 ===================== earningOrder 차트 2
+    const data4 = {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+      datasets: [
             {
               label: 'Total Sales This Month',
-              data: [23, 66, 12, 45, 24, 77, 56, 34, 87],
+              data:[23, 66, 12, 45, 24, 77, 56, 34, 87],
               pointRadius: 0,
               max: 50,
               backgroundColor: getBgColors2(),
@@ -1922,85 +1907,29 @@
               barPercentage: 0.4,
             }
           ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              display: false,
-            },
-            tooltip: {
-              // 기존 툴팁 사용 안 함
-              enabled: false,
-            },
-
-            datalabels: {
-              anchor: 'end',
-              align: "top",
-              offset: 8,
-              formatter: (val) => {
-                return val + 'k';
-              }
-            },
-          },
-
-          layout: {
-            padding: {
-              top: 40,
-              bottom: 0,
-              left: 10,
-              right: 10 ,
-            },
-          },
-          scales: {
-            x: {
-              grid: {
-                display: false,
-              },
-              ticks: { 
-                color: '#acaab1' 
-            },
-
-            },
-            y: {
-              grid: {
-                display: false,
-                borderColor: 'red'
-              },
-              tickWidth: 0,
-              ticks: { 
-                color: '#acaab1',
-                maxTicksLimit: 6,
-                callback: function(value, index, ticks) {
-                    return value + 'k';
-                }
-              },
-              border: {
-                display: false,
-            },
-            },
-          },
-        },
-      });
-
-    //earningReport_w 차트
-    const Chart4_3 = document.getElementById("earningOrder_3").getContext("2d");
-    function getBgColors3() {
-    var array  = [55, 34, 76, 28, 95, 33, 75, 17, 67];
-    var maxValue = Math.max.apply(this, array);
-    var bg = array.map(a => a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)");
-    return bg;
-  }
-    new Chart(Chart4_3, {
+    }
+    function getBgColors2() {
+      var array  = [23, 66, 12, 45, 24, 77, 56, 34, 87];
+      var maxValue = Math.max.apply(this, array);
+      var bg = array.map(a => a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)");
+      return bg;
+    }
+    const earningOrder_2 = document.getElementById('earningOrder_2')
+    const Chart4_2 = new Chart(earningOrder_2, {
       plugins: [ChartDataLabels],
-        type: "bar",
-        data: {
-          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
-          datasets: [
+      type: "bar",
+      data: data4,
+      options: options3
+    })
+
+
+     // chart4-3 ===================== earningOrder 차트 3
+    const data5 = {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+      datasets: [
             {
               label: 'Total Sales This Month',
-              data: [55, 34, 76, 28, 95, 33, 75, 17, 67],
+              data:[55, 34, 76, 28, 95, 33, 75, 17, 67],
               pointRadius: 0,
               max: 50,
               backgroundColor: getBgColors3(),
@@ -2012,248 +1941,248 @@
               barPercentage: 0.4,
             }
           ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              display: false,
-            },
-            tooltip: {
-              // 기존 툴팁 사용 안 함
-              enabled: false,
-            },
-
-            datalabels: {
-              anchor: 'end',
-              align: "top",
-              offset: 8,
-              clamp: true,
-              formatter: (val) => {
-                return val + 'k';
-              }
-            },
-          },
-
-          layout: {
-            padding: {
-              top: 40,
-              bottom: 0,
-              left: 10,
-              right: 10 ,
-            },
-          },
-          scales: {
-            x: {
-              grid: {
-                display: false,
-              },
-              ticks: { 
-                color: '#acaab1' 
-            },
-
-            },
-            y: {
-              grid: {
-                display: false,
-                borderColor: 'red'
-              },
-              tickWidth: 0,
-              ticks: { 
-                color: '#acaab1',
-                maxTicksLimit: 6,
-                callback: function(value, index, ticks) {
-                    return value + 'k';
-                }
-              },
-              border: {
-                display: false,
-            },
-            },
-          },
-        },
-      });
+    }
+    function getBgColors3() {
+      var array  = [55, 34, 76, 28, 95, 33, 75, 17, 67];
+      var maxValue = Math.max.apply(this, array);
+      var bg = array.map(a => a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)");
+      return bg;
+    }
+    const earningOrder_3 = document.getElementById('earningOrder_3')
+    const Chart4_3 = new Chart(earningOrder_3, {
+      plugins: [ChartDataLabels],
+      type: "bar",
+      data: data5,
+      options: options3
+    })
 
 
-    //earningReport_w 차트
-    const Chart4_4 = document.getElementById("earningOrder_4").getContext("2d");
+         // chart4-4 ===================== earningOrder 차트 4
+      const data6 = {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+        datasets: [
+          {
+            label: 'Total Sales This Month',
+            data:[23, 31, 37, 44, 29, 16, 9, 37, 26],
+            pointRadius: 0,
+            max: 50,
+            backgroundColor: getBgColors4(),
+            borderColor: 'transperent',
+            fill: true,
+            borderWidth: 0,
+            borderRadius: 6,
+            categoryPercentage: 1.0,
+            barPercentage: 0.4,
+          }
+        ]
+      }
     function getBgColors4() {
-    var array  = [23, 31, 37, 44, 29, 16, 9, 37, 26];
-    var maxValue = Math.max.apply(this, array);
-    var bg = array.map(a => a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)");
-    return bg;
-  }
-    new Chart(Chart4_4, {
+      var array  = [23, 31, 37, 44, 29, 16, 9, 37, 26];
+      var maxValue = Math.max.apply(this, array);
+      var bg = array.map(a => a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)");
+      return bg;
+    }
+    const earningOrder_4 = document.getElementById('earningOrder_4')
+    const Chart4_4 = new Chart(earningOrder_4, {
       plugins: [ChartDataLabels],
-        type: "bar",
-        data: {
-          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
-          datasets: [
-            {
-              label: 'Total Sales This Month',
-              data: [23, 31, 37, 44, 29, 16, 9, 37, 26],
-              pointRadius: 0,
-              max: 50,
-              backgroundColor: getBgColors4(),
-              borderColor: 'transperent',
-              fill: true,
-              borderWidth: 0,
-              borderRadius: 6,
-              categoryPercentage: 1.0,
-              barPercentage: 0.4,
+      type: "bar",
+      data: data6,
+      options: options3
+    })
+
+
+     //salesRedar 차트
+    const data7 = {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+      datasets: [
+        {
+          label: 'Sales',
+          data: [5,8,10,3,2,6],
+          pointRadius: 0,
+          backgroundColor: "rgba(115, 103, 240, 0.9)",
+          borderColor: 'transperent',
+          fill: true,
+          borderWidth: 0,
+        },
+        {
+          label: 'Visits',
+          data: [3,5,2,1,8,6],
+          pointRadius: 0,
+          backgroundColor: "rgba(0, 186, 209, 0.9)",
+          borderColor: 'transperent',
+          fill: true,
+          borderWidth: 0,
+
+        },
+        
+      ]
+    };
+    const options4 = {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: "bottom",
+          labels: {
+            boxWidth : 12,
+            boxHeight: 12,
+            padding : 14,
+            color: "rgba(47, 43, 61, 0.7)",
+            useBorderRadius : true,
+            borderRadius: 6,
+            font: {
+              size: 13,
+            },
+          }
+        },
+        tooltip: {
+          enabled: false,
+        },
+        datalabels: {
+          display: false,
+        },
+      },
+      layout: {
+        padding: {
+          top: 0,
+          bottom: 0,
+          left: 0,
+          right: 0 ,
+        },
+      },
+      scales: {
+        r: {
+        min: 0, // MIN
+        max: 10, // MAX
+        pointLabels: {
+            color: 'rgba(47, 43, 61, 0.4)',
+            font: {
+              size: 13,
             }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              display: false,
-            },
-            tooltip: {
-              // 기존 툴팁 사용 안 함
-              enabled: false,
-            },
-
-            datalabels: {
-              anchor: 'end',
-              align: "top",
-              offset: 8,
-              formatter: (val) => {
-                return val + 'k';
-              }
-            },
           },
-
-          layout: {
-            padding: {
-              top: 40,
-              bottom: 0,
-              left: 10,
-              right: 10 ,
-            },
+          grid:{
+            color: "rgba(47, 43, 61, 0.12)"
           },
-          scales: {
-            x: {
-              grid: {
-                display: false,
-              },
-              ticks: { 
-                color: '#acaab1' 
-            },
-
-            },
-            y: {
-              grid: {
-                display: false,
-                borderColor: 'red'
-              },
-              tickWidth: 0,
-              ticks: { 
-                color: '#acaab1',
-                maxTicksLimit: 6,
-                callback: function(value, index, ticks) {
-                    return value + 'k';
-                }
-              },
-              border: {
-                display: false,
-            },
-            },
+        beginAtZero: true,
+          ticks: {
+          stepSize: 5,
+          display:false,
           },
         },
-      });
+      },
+    };
+    const salesRedar = document.getElementById('salesRedar')
+    const Chart5 = new Chart(salesRedar, {
+      type: "radar",
+      data: data7,
+      options: options4
+})
 
 
-    //salesRedar 차트
-    const Chart5 = document.getElementById("salesRedar").getContext("2d");
-    new Chart(Chart5, {
-      plugins: [ChartDataLabels],
-        type: "radar",
-        data: {
-          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-          datasets: [
-            {
-              label: 'Sales',
-              data: [5,8,10,3,2,6],
-              pointRadius: 0,
-              backgroundColor: "rgba(115, 103, 240, 0.9)",
-              borderColor: 'transperent',
-              fill: true,
-              borderWidth: 0,
-            },
-            {
-              label: 'Visits',
-              data: [3,5,2,1,8,6],
-              pointRadius: 0,
-              backgroundColor: "rgba(0, 186, 209, 0.9)",
-              borderColor: 'transperent',
-              fill: true,
-              borderWidth: 0,
 
-            },
-            
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              position: "bottom",
-              labels: {
-                boxWidth : 12,
-                boxHeight: 12,
-                padding : 14,
-                color: "#c1bfc5",
-                useBorderRadius : true,
-                borderRadius: 6,
-                font: {
-                  size: 13,
-                  
-                },
-              }
-            },
-            tooltip: {
-              enabled: false,
-            },
-            datalabels: {
-              display: false,
-            },
-          },
+    // 차트 테마별 색상 변경
+    function darkMode() {
+    const dark = document.getElementById("dark").classList.contains('dark')
+    let barColor = Chart1.data.datasets[1];
+    let chart3LabelColor = Chart3.options.scales.x;
 
-          layout: {
-            padding: {
-              top: 0,
-              bottom: 0,
-              left: 0,
-              right: 0 ,
-            },
-          },
-          scales: {
-            r: {
-            min: 0, // MIN
-            max: 10, // MAX
-            pointLabels: {
-                color: '#c1bfc5',
-                font: {
-                  size: 13,
-                }
-              },
-            beginAtZero: true,
-              ticks: {
-              stepSize: 5,
-              display:false,
-              },
-            },
-          },
-        },
-      });
+    let chart4LabelColorX = Chart4.options.scales.x;
+    let chart4LabelColorY = Chart4.options.scales.y;
+    let chart4labelColor = Chart4.options.plugins.datalabels;
+
+    let chart4_2LabelColorX = Chart4_2.options.scales.x;
+    let chart4_2LabelColorY = Chart4_2.options.scales.y;
+    let chart4_2labelColor = Chart4_2.options.plugins.datalabels;
+
+    let chart4_3LabelColorX = Chart4_3.options.scales.x;
+    let chart4_3LabelColorY = Chart4_3.options.scales.y;
+    let chart4_3labelColor = Chart4_3.options.plugins.datalabels;
+
+    let chart4_4LabelColorX = Chart4_4.options.scales.x;
+    let chart4_4LabelColorY = Chart4_4.options.scales.y;
+    let chart4_4labelColor = Chart4_4.options.plugins.datalabels;
+
+    let chart5LabelColor = Chart5.options.plugins.legend;
+    let chart5PointLabel = Chart5.options.scales.r;
 
 
-  //canvas_project_states
+        if (dark === true) {
+          barColor.backgroundColor = "rgba(225, 222, 245, 0.08) "
+          chart3LabelColor.ticks.color = "rgba(225, 222, 245, 0.4)"
+
+          chart4LabelColorX.ticks.color = "rgba(225, 222, 245, 0.4)"
+          chart4LabelColorY.ticks.color = "rgba(225, 222, 245, 0.4)"
+          chart4LabelColorX.grid.borderColor = "rgba(225, 222, 245, 0.12)"
+          chart4LabelColorY.grid.borderColor = "rgba(225, 222, 245, 0.12)"
+          chart4labelColor.color = "rgba(225, 222, 245, 0.9)" 
+
+          chart4_2LabelColorX.ticks.color = "rgba(225, 222, 245, 0.4)"
+          chart4_2LabelColorY.ticks.color = "rgba(225, 222, 245, 0.4)"
+          chart4_2LabelColorX.grid.borderColor = "rgba(225, 222, 245, 0.12)"
+          chart4_2LabelColorY.grid.borderColor = "rgba(225, 222, 245, 0.12)"
+          chart4_2labelColor.color = "rgba(225, 222, 245, 0.9)" 
+
+          chart4_3LabelColorX.ticks.color = "rgba(225, 222, 245, 0.4)"
+          chart4_3LabelColorY.ticks.color = "rgba(225, 222, 245, 0.4)"
+          chart4_3LabelColorX.grid.borderColor = "rgba(225, 222, 245, 0.12)"
+          chart4_3LabelColorY.grid.borderColor = "rgba(225, 222, 245, 0.12)"
+          chart4_3labelColor.color = "rgba(225, 222, 245, 0.9)" 
+
+          chart4_4LabelColorX.ticks.color = "rgba(225, 222, 245, 0.4)"
+          chart4_4LabelColorY.ticks.color = "rgba(225, 222, 245, 0.4)"
+          chart4_4LabelColorX.grid.borderColor = "rgba(225, 222, 245, 0.12)"
+          chart4_4LabelColorY.grid.borderColor = "rgba(225, 222, 245, 0.12)"
+          chart4_4labelColor.color = "rgba(225, 222, 245, 0.9)" 
+
+          chart5LabelColor.labels.color = "rgba(225, 222, 245, 0.7)"
+          chart5PointLabel.pointLabels.color = "rgba(225, 222, 245, 0.4)"
+          chart5PointLabel.grid.color = "rgba(225, 222, 245, 0.12)"
+          
+        }
+        if (dark === false) {
+          barColor.backgroundColor = "rgba(47, 43, 61, 0.08)"
+          chart3LabelColor.ticks.color = "rgba(47, 43, 61, 0.4)"
+          
+          chart4LabelColorX.ticks.color = "rgba(47, 43, 61, 0.4)"
+          chart4LabelColorY.ticks.color = "rgba(47, 43, 61, 0.4)"
+          chart4LabelColorX.grid.borderColor = "rgba(47, 43, 61, 0.12)"
+          chart4LabelColorY.grid.borderColor = "rgba(47, 43, 61, 0.12)"
+          chart4labelColor.color = "rgba(47, 43, 61, 0.9)" 
+
+          chart4_2LabelColorX.ticks.color = "rgba(47, 43, 61, 0.4)"
+          chart4_2LabelColorY.ticks.color = "rgba(47, 43, 61, 0.4)"
+          chart4_2LabelColorX.grid.borderColor = "rgba(47, 43, 61, 0.12)"
+          chart4_2LabelColorY.grid.borderColor = "rgba(47, 43, 61, 0.12)"
+          chart4_2labelColor.color = "rgba(47, 43, 61, 0.9)" 
+
+          chart4_3LabelColorX.ticks.color = "rgba(47, 43, 61, 0.4)"
+          chart4_3LabelColorY.ticks.color = "rgba(47, 43, 61, 0.4)"
+          chart4_3LabelColorX.grid.borderColor = "rgba(47, 43, 61, 0.12)"
+          chart4_3LabelColorY.grid.borderColor = "rgba(47, 43, 61, 0.12)"
+          chart4_3labelColor.color = "rgba(47, 43, 61, 0.9)" 
+
+          chart4_4LabelColorX.ticks.color = "rgba(47, 43, 61, 0.4)"
+          chart4_4LabelColorY.ticks.color = "rgba(47, 43, 61, 0.4)"
+          chart4_4LabelColorX.grid.borderColor = "rgba(47, 43, 61, 0.12)"
+          chart4_4LabelColorY.grid.borderColor = "rgba(47, 43, 61, 0.12)"
+          chart4_4labelColor.color = "rgba(47, 43, 61, 0.9)" 
+
+          chart5LabelColor.labels.color  = "rgba(47, 43, 61, 0.7)"
+          chart5PointLabel.pointLabels.color = "rgba(47, 43, 61, 0.4)"
+          chart5PointLabel.grid.color = "rgba(47, 43, 61, 0.12)"
+          
+        }
+        Chart1.update()
+        Chart3.update()
+        Chart4.update()
+        Chart4_2.update()
+        Chart4_3.update()
+        Chart4_4.update()
+        Chart5.update()
+      }
+
+
+  // //canvas_project_states
   const Chart6 = document.getElementById("projectStates").getContext("2d");
     var bgColor2 = {
     default: "rgba(255, 159, 67, 1)",
