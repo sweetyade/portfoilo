@@ -809,6 +809,14 @@ button {
   width: 100%;
 }
 
+.column_mix {
+  display: grid;
+  gap: var(--gap-6);
+}
+.column_mix .widget {
+  width: 100%;
+}
+
 /***************************************************************
     04. typo
 ***************************************************************/
@@ -5151,6 +5159,7 @@ button:disabled {
 .widget-title .title_heading {
   display: grid;
   gap: 2px;
+  position: relative;
 }
 .widget-title .title_heading .title {
   font-size: var(--font-18);
@@ -5188,11 +5197,29 @@ button:disabled {
   font-weight: var(--font-medium);
   line-height: 3.5rem;
 }
+.widget .heading_abs {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.widget .heading_abs .color_success {
+  color: var(--success);
+}
+.widget .heading_abs i {
+  width: 1.375rem;
+  height: 1.375rem;
+  display: block;
+  cursor: pointer;
+}
 .widget-table_title {
   padding: var(--padding-6);
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.widget-table_title .heading_abs {
+  top: 1.5rem;
+  right: 1.5rem;
 }
 .widget-table_title .title_left .title {
   font-size: var(--font-18);
@@ -5340,20 +5367,6 @@ button:disabled {
   align-items: center;
   justify-content: flex-end;
   gap: var(--gap-4);
-}
-.widget .heading_abs {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-}
-.widget .heading_abs .color_success {
-  color: var(--success);
-}
-.widget .heading_abs i {
-  width: 1.375rem;
-  height: 1.375rem;
-  display: block;
-  cursor: pointer;
 }
 .widget .cost {
   text-align: right;
@@ -6632,4 +6645,122 @@ body.open {
 }
 .widget .last_transaction .avatar .thumb img {
   width: 1.875rem;
+}
+.widget .best_month {
+  height: 100%;
+  display: grid;
+  align-content: space-between;
+  background-image: url(../images/best_month.png);
+  background-repeat: no-repeat;
+  background-size: 7.25rem;
+  background-position: calc(100% - 1.5rem) bottom;
+}
+.widget .best_month .font_h5 {
+  padding-bottom: 0.125rem;
+}
+.widget .statics {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 4rem;
+}
+.widget .statics .avatar_data {
+  width: 25%;
+}
+.widget .statics .avatar_data .avatar .thumb img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.widget .statics .avatar_data .avatar_info .name {
+  font-size: var(--font-18);
+  font-weight: var(--font-medium);
+  line-height: 1.75rem;
+}
+.widget .profit {
+  padding-top: var(--padding-3);
+}
+.widget .profit .canvas_profit {
+  height: 4.5625rem;
+}
+.widget .profit .cost {
+  font-size: var(--font-13);
+  line-height: 1.25rem;
+  padding-left: 0;
+  background: none;
+}
+.widget .expenses {
+  padding-top: var(--padding-3);
+}
+.widget .monthly_report {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.widget .monthly_report .con_left {
+  width: calc(100% - 7.5rem);
+  display: grid;
+  align-content: space-between;
+  height: 100%;
+}
+.widget .monthly_report .con_left .cost {
+  text-align: left;
+}
+.widget .monthly_report .canvas_monthly_report {
+  width: 7.5rem;
+  height: 7.5rem;
+}
+.widget .revenue_report {
+  width: calc((100% - 10.5rem) / 8 * 5 + 7.5rem);
+}
+.widget .revenue_report .heading_abs {
+  gap: var(--gap-4);
+}
+.widget .revenue_report .heading_abs p {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-2);
+}
+.widget .revenue_report .heading_abs .revenue_report_dot1 {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: var(--primary);
+}
+.widget .revenue_report .heading_abs .revenue_report_dot2 {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: var(--warning);
+}
+.widget .budget {
+  width: calc((100% - 10.5rem) / 8 * 3 + 3rem);
+  display: grid;
+  gap: var(--gap-8);
+  height: 100%;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+}
+.widget .expenses .canvas_expenses {
+  position: relative;
+  padding-bottom: var(--padding-3);
+  height: 4.4375rem;
+}
+.widget .expenses .expenses_prg {
+  width: auto;
+  height: 100%;
+  border-radius: 100px 100px 0 0;
+  border: 1px solid;
+  aspect-ratio: 1/0.5;
+  margin: 0 auto;
+}
+.widget .expenses .prog_per {
+  font-size: var(--font-24);
+  font-weight: var(--font-medium);
+  line-height: 2.375rem;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  position: absolute;
 }

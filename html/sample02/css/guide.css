@@ -810,6 +810,14 @@ button {
   width: 100%;
 }
 
+.column_mix {
+  display: grid;
+  gap: var(--gap-6);
+}
+.column_mix .widget {
+  width: 100%;
+}
+
 /***************************************************************
     04. typo
 ***************************************************************/
@@ -5152,6 +5160,7 @@ select:disabled ~ .input_label {
 .widget-title .title_heading {
   display: grid;
   gap: 2px;
+  position: relative;
 }
 .widget-title .title_heading .title {
   font-size: var(--font-18);
@@ -5189,11 +5198,29 @@ select:disabled ~ .input_label {
   font-weight: var(--font-medium);
   line-height: 3.5rem;
 }
+.widget .heading_abs {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.widget .heading_abs .color_success {
+  color: var(--success);
+}
+.widget .heading_abs i {
+  width: 1.375rem;
+  height: 1.375rem;
+  display: block;
+  cursor: pointer;
+}
 .widget-table_title {
   padding: var(--padding-6);
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.widget-table_title .heading_abs {
+  top: 1.5rem;
+  right: 1.5rem;
 }
 .widget-table_title .title_left .title {
   font-size: var(--font-18);
@@ -5341,20 +5368,6 @@ select:disabled ~ .input_label {
   align-items: center;
   justify-content: flex-end;
   gap: var(--gap-4);
-}
-.widget .heading_abs {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-}
-.widget .heading_abs .color_success {
-  color: var(--success);
-}
-.widget .heading_abs i {
-  width: 1.375rem;
-  height: 1.375rem;
-  display: block;
-  cursor: pointer;
 }
 .widget .cost {
   text-align: right;

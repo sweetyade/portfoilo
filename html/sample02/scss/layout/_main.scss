@@ -583,4 +583,140 @@ body {
       }
     }
   }
+
+  .best_month {
+    height: 100%;
+    display: grid;
+    align-content: space-between;
+    background-image: url(../images/best_month.png);
+    background-repeat: no-repeat;
+    background-size: 7.25rem;
+    background-position: calc(100% - 1.5rem) bottom;
+
+    .font_h5 {
+      padding-bottom: 0.125rem;
+    }
+  }
+
+  .statics {
+    @include flexbtw;
+    padding-top: 4rem;
+
+    .avatar_data {
+      width: 25%;
+
+      .avatar {
+        .thumb img {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+
+      .avatar_info {
+        .name {
+          @include font_h5;
+        }
+      }
+    }
+  }
+
+  .profit {
+    padding-top: var(--padding-3);
+
+    .canvas_profit {
+      height: 4.5625rem;
+    }
+
+    .cost {
+      @include font_body_2;
+      padding-left: 0;
+      background: none;
+    }
+  }
+
+  .expenses {
+    padding-top: var(--padding-3);
+  }
+
+  .monthly_report {
+    @include flexbtw;
+    height: 100%;
+
+    .con_left {
+      width: calc(100% - 7.5rem);
+      display: grid;
+      align-content: space-between;
+      height: 100%;
+
+      .cost {
+        text-align: left;
+      }
+    }
+    .canvas_monthly_report {
+      width: 7.5rem;
+      height: 7.5rem;
+    }
+  }
+
+  .revenue_report {
+    width: calc((100% - 10.5rem) / 8 * 5 + 7.5rem);
+
+    .heading_abs {
+      gap: var(--gap-4);
+
+      p {
+        @include flex;
+        gap: var(--gap-2);
+      }
+
+      .revenue_report_dot1 {
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 50%;
+        background-color: var(--primary);
+      }
+
+      .revenue_report_dot2 {
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 50%;
+        background-color: var(--warning);
+      }
+    }
+  }
+  .budget {
+    width: calc((100% - 10.5rem) / 8 * 3 + 3rem);
+    display: grid;
+    gap: var(--gap-8);
+    height: 100%;
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .expenses {
+    .canvas_expenses {
+      position: relative;
+      padding-bottom: var(--padding-3);
+      height: 4.4375rem;
+    }
+    .expenses_prg {
+      width: auto;
+      height: 100%;
+      border-radius: 100px 100px 0 0;
+      border: 1px solid;
+      aspect-ratio: 1/0.5;
+      margin: 0 auto;
+    }
+
+    .prog_per {
+      @include font_h4;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      position: absolute;
+    }
+  }
+  .earning_report_3 {
+  }
 }

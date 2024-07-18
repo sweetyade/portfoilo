@@ -1552,6 +1552,7 @@
     .title_heading {
       display: grid;
       gap: 2px;
+      position: relative;
 
       .title {
         @include font_h5;
@@ -1586,9 +1587,31 @@
     }
   }
 
+  .heading_abs {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    .color_success {
+      color: var(--success);
+    }
+
+    i {
+      width: 1.375rem;
+      height: 1.375rem;
+      display: block;
+      cursor: pointer;
+    }
+  }
+
   &-table_title {
     padding: var(--padding-6);
     @include flexbtw;
+
+    .heading_abs {
+      top: 1.5rem;
+      right: 1.5rem;
+    }
 
     .title_left {
       .title {
@@ -1765,23 +1788,6 @@
         @include flexright;
         gap: var(--gap-4);
       }
-    }
-  }
-
-  .heading_abs {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-
-    .color_success {
-      color: var(--success);
-    }
-
-    i {
-      width: 1.375rem;
-      height: 1.375rem;
-      display: block;
-      cursor: pointer;
     }
   }
 
