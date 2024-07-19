@@ -127,6 +127,7 @@ body {
   .canvas_dailysales {
     height: 76px;
   }
+
   .sales_overview {
     .content {
       @include flexbtw;
@@ -624,7 +625,7 @@ body {
     padding-top: var(--padding-3);
 
     .canvas_profit {
-      height: 4.5625rem;
+      height: 5rem;
     }
 
     .cost {
@@ -632,10 +633,6 @@ body {
       padding-left: 0;
       background: none;
     }
-  }
-
-  .expenses {
-    padding-top: var(--padding-3);
   }
 
   .monthly_report {
@@ -655,11 +652,29 @@ body {
     .canvas_monthly_report {
       width: 7.5rem;
       height: 7.5rem;
+      padding: var(--padding-1);
+      position: relative;
+      .total {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        p {
+          line-height: 1.2;
+        }
+      }
+
+      canvas {
+        position: relative;
+        z-index: 1;
+      }
     }
   }
 
   .revenue_report {
     width: calc((100% - 10.5rem) / 8 * 5 + 7.5rem);
+    height: 100%;
 
     .heading_abs {
       gap: var(--gap-4);
@@ -683,6 +698,24 @@ body {
         background-color: var(--warning);
       }
     }
+
+    .widget-con {
+      height: calc(100% - 3.25rem);
+      display: grid;
+      align-content: center;
+    }
+
+    .canvas_revenue_report1 {
+      height: 131px;
+      position: relative;
+      bottom: -0.5rem;
+      padding-left: 14px;
+    }
+
+    .canvas_revenue_report2 {
+      padding-left: 14px;
+      height: 150px;
+    }
   }
   .budget {
     width: calc((100% - 10.5rem) / 8 * 3 + 3rem);
@@ -695,25 +728,95 @@ body {
   }
 
   .expenses {
+    padding-top: var(--padding-3);
+    padding-inline: var(--padding-4);
     .canvas_expenses {
       position: relative;
-      padding-bottom: var(--padding-3);
-      height: 4.4375rem;
+      height: 4.875rem;
+      //   padding-bottom: var(--padding-3);
+      //   height: 4.4375rem;
     }
-    .expenses_prg {
-      width: auto;
-      height: 100%;
-      border-radius: 100px 100px 0 0;
-      border: 1px solid;
-      aspect-ratio: 1/0.5;
-      margin: 0 auto;
-    }
+    // .expenses_prg {
+    //   width: auto;
+    //   height: 100%;
+    //   border-radius: 6.25rem 6.25rem 0 0;
+    //   border-left: 0.1875rem solid var(--divider);
+    //   border-right: 0.1875rem solid var(--divider);
+    //   border-top: 0.1875rem solid var(--divider);
+    //   aspect-ratio: 1/0.5;
+    //   margin: 0 auto;
+    //   position: relative;
 
+    //   &::before {
+    //     content: "";
+    //     width: 0.1875rem;
+    //     height: 0.1875rem;
+    //     position: absolute;
+    //     left: -0.1875rem;
+    //     bottom: 0;
+    //     background-color: var(--divider);
+    //     border-radius: 50%;
+    //   }
+
+    //   &::after {
+    //     content: "";
+    //     width: 0.1875rem;
+    //     height: 0.1875rem;
+    //     position: absolute;
+    //     right: -3px;
+    //     bottom: 0;
+    //     background-color: var(--divider);
+    //     border-radius: 50%;
+    //   }
+
+    //   .bar {
+    //     position: absolute;
+    //     width: 126px;
+    //     height: calc(100% + 0.25rem);
+    //     top: -0.25rem;
+    //     left: -0.25rem;
+    //     // background-image: conic-gradient(from -90deg, var(--warning));
+    //     background-image: conic-gradient(
+    //       from -90deg at 50% 0,
+    //       #fff 50%,
+    //       var(--warning) 0
+    //     );
+    //     transform: rotate(180deg) scaleX(-1);
+    //     border-radius: 0 0 6.25rem 6.25rem;
+    //     z-index: 1;
+
+    //     &::before {
+    //       content: "";
+    //       width: 0.5rem;
+    //       height: 0.5rem;
+    //       position: absolute;
+    //       left: 0;
+    //       top: -0.25rem;
+    //       background-color: var(--warning);
+    //       border-radius: 50%;
+    //     }
+
+    //     &::after {
+    //       content: "";
+    //       width: 0.5rem;
+    //       height: 0.5rem;
+    //       position: absolute;
+    //       right: 0;
+    //       top: -0.25rem;
+    //       background-color: #000;
+    //       border-radius: 50%;
+    //       transform-origin: -59px bottom;
+    //       transform: rotate(10deg) scaleX(-1);
+    //     }
+    //   }
+    // }
+    .expensesDounut {
+    }
     .prog_per {
       @include font_h4;
       left: 50%;
       transform: translateX(-50%);
-      bottom: 0;
+      bottom: 0.25rem;
       position: absolute;
     }
   }

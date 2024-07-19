@@ -651,9 +651,10 @@
                 </div>
                 <div class="widget-con expenses">
                   <div class="canvas_expenses">
-                    <div class="expenses_prg">
+                    <!-- <div class="expenses_prg">
                       <div class="bar"></div>
-                    </div>
+                    </div> -->
+                    <canvas id="expensesDounut"></canvas>
                     <p class="prog_per">78%</p>
                   </div>
 
@@ -676,6 +677,10 @@
                 </div>
                 <div class="canvas_monthly_report">
                   <canvas id="monthlyReport"></canvas>
+                  <div class="total">
+                    <p class="font_h4">184</p>
+                    <p class="font_body_2 success">Total</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -693,9 +698,15 @@
                 </div>
               </div>
 
-              <div class="canvas_revenue_report">
-                <canvas id="revenueReport"></canvas>
+              <div class="widget-con">
+                <div class="canvas_revenue_report1">
+                  <canvas id="revenueReport"></canvas>
+                </div>
+                <div class="canvas_revenue_report2">
+                  <canvas id="revenueReport2"></canvas>
+                </div>
               </div>
+              
             </div>
             <div class="budget">
               <button class="btn type_label">
@@ -1668,89 +1679,361 @@
 
    // chart 1 ============= profit 차트
   function getPointColors() {
-  var array = [1, 4, 2, 5, 3, 7];
-  var maxValue = Math.max.apply(this, array);
-  var bg = array.map((a) =>
-    a === maxValue ? "#fff" : "#00bad1"
-  );
-  return bg;
-}
+    var array = [1, 4, 2, 5, 3, 7];
+    var maxValue = Math.max.apply(this, array);
+    var bg = array.map((a) =>
+      a === maxValue ? "#fff" : "#00bad1"
+    );
+    return bg;
+  }
 
-function getPointSize() {
-  var array = [1, 4, 2, 5, 3, 7];
-  var maxValue = Math.max.apply(this, array);
-  var bg = array.map((a) =>
-    a === maxValue ? 5 : 3
-  );
-  return bg;
-}
+  function getPointSize() {
+    var array = [1, 4, 2, 5, 3, 7];
+    var maxValue = Math.max.apply(this, array);
+    var bg = array.map((a) =>
+      a === maxValue ? 5 : 3
+    );
+    return bg;
+  }
 
-    const data1 = {
-      labels: ["1", "2", "3", "4", "4", "5"],
-      datasets: [
-        {
-          label: "order",
-          data: [1, 4, 2, 5, 3, 7],
-          pointRadius: getPointSize(),
-          backgroundColor: getPointColors(),
-          borderColor: "#00bad1",
-          fill: false,
-          borderWidth: 2,
-          pointHoverRadius: getPointSize() ,
-        },
-
-      ],
-    };
-    const options1  = {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          display: false,
-        },
-        tooltip: {
-          enabled: false,
-        },
-
-        datalabels: {
-          display: false,
-        },
+  const data1 = {
+    labels: ["1", "2", "3", "4", "4", "5"],
+    datasets: [
+      {
+        label: "order",
+        data: [1, 4, 2, 5, 3, 7],
+        pointRadius: getPointSize(),
+        backgroundColor: getPointColors(),
+        borderColor: "#00bad1",
+        fill: false,
+        borderWidth: 2,
+        pointHoverRadius: getPointSize() ,
       },
-      layout: {
-        padding: {
-          top: 0,
-          bottom: 12,
-          left: 0,
-          right: 0 ,
-        },
-      },
-      scales: {
-        x: {
-          grid: {
-            display: true,
-            color: "#e6e5e7",
-            borderColor: 'transparent',
-            drawTicks: false,
-            borderDash:  [5, 5]
-          },
-          
-          ticks:{
-            display: false,
 
-          }
+    ],
+  };
+  const options1  = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        enabled: false,
+      },
+
+      datalabels: {
+        display: false,
+      },
+    },
+    layout: {
+      padding: {
+        top: 0,
+        bottom: 12,
+        left: 0,
+        right: 0 ,
+      },
+    },
+    scales: {
+      x: {
+        grid: {
+          display: true,
+          color: "#e6e5e7",
+          borderColor: 'transparent',
+          drawTicks: false,
+          borderDash:  [5, 5]
         },
-        y: {
-          display: false
+        
+        ticks:{
+          display: false,
+
         }
       },
-    };
-    const profitLine = document.getElementById('profitLine')
-    const Chart1 = new Chart(profitLine, {
-      type: "line",
+      y: {
+        display: false
+      }
+    },
+  };
+  const profitLine = document.getElementById('profitLine')
+  const Chart1 = new Chart(profitLine, {
+    type: "line",
     data: data1,
     options: options1
 })
 
+
+   // chart 2 ============= expense 차트
+  const data2Value = 78;
+  const data2 = {
+    labels: ["1"],
+    
+    datasets: [
+      {
+        label: "bg",
+        data: [data2Value, 100 - data2Value],
+        backgroundColor: ['#ff9f43',"#ffffff00"],
+        borderColor : ['#ff9f43',"#ffffff00"],
+        borderWidth: 5,
+        cutout:"90%",
+        borderRadius:  30,
+        offset: -2,
+      },
+      {
+        label: "data",
+        data: [100, 100 - 100],
+        backgroundColor: "#e6e5e7",
+        borderColor :"#e6e5e7",
+        borderWidth: 1,
+        cutout: "96%",
+        borderRadius:  10,
+        animation: false,
+        offset: 0,
+      },
+    ],
+  };
+  const options2  = {
+    responsive: true,
+    maintainAspectRatio: false,
+    rotation: -90,
+    circumference: 180,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        enabled: false,
+      },
+      datalabels: {
+        display: false,
+      },
+    },
+    layout: {
+      padding: {
+        top: 0,
+        bottom: 12,
+        left: 0,
+        right: 0 ,
+      },
+    },
+  };
+    const expensesDounut = document.getElementById('expensesDounut');
+    const Chart2 = new Chart(expensesDounut, {
+      type: "doughnut",
+    data: data2,
+    options: options2
+})
+
+
+   // chart 3 ============= expense 차트
+  const data3 = {
+    labels: ["1","2","3","4"],
+    
+    datasets: [
+      {
+        label: "bg",
+        data: ["24","34","44","82"],
+        backgroundColor: ["#24b364","#53d28c","#7edda9","#a9e9c5"],
+        borderWidth: 0,
+        cutout:"68%",
+      },
+    ],
+  };
+  const options3  = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        // enabled: false,
+      },
+      datalabels: {
+        // display: false,
+      },
+    },
+  };
+    const monthlyReport = document.getElementById('monthlyReport');
+    const Chart3 = new Chart(monthlyReport, {
+      type: "doughnut",
+    data: data3,
+    options: options3
+})
+
+
+
+    // chart4 ===================== revenue report 차트 1
+    const data4 = {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+      datasets: [
+            {
+              label: 'Total Sales This Month',
+              data: [286, 257, 198, 203, 266, 297, 264, 271, 133],
+              pointRadius: 0,
+              backgroundColor: "#7367f0",
+              borderColor: 'transperent',
+              fill: true,
+              borderWidth: 0,
+              borderRadius: 6,
+              // categoryPercentage: 1.0,
+              barPercentage: 0.2,
+              borderSkipped: false,
+            },
+          ]
+    }
+    const options4 = {
+      
+      responsive: true,
+      maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              enabled: false,
+            },
+
+            datalabels: {
+              display: false,
+            },
+          },
+
+          layout: {
+            padding: {
+              top: 0,
+              bottom: 0,
+              left: 0,
+              right:0,
+            },
+          },
+          scales: {
+            x: {
+              grid: {
+                display: false,
+                borderColor : "transparent"
+              },
+              ticks: { 
+                // display: false,
+                color: '#acaab1',
+                padding: 0,
+            },
+
+            },
+            y: {
+              grid: {
+                display: false,
+                borderColor : "transparent"
+              },
+              
+              ticks: { 
+                maxTicksLimit: 4,
+                color: '#acaab1',
+                beginAtZero: false,
+                padding: 2,
+                font: {
+                  size: 13,
+                },
+                callback: function(val, index) {
+                  if (index === 0) return ''; 
+                  return this.getLabelForValue(val);
+                },
+              },
+              border: {
+              display: false,
+            },
+            },
+          },
+    }
+    const revenueReport = document.getElementById('revenueReport')
+    const Chart4 = new Chart(revenueReport, {
+      type: "bar",
+      data: data4,
+      options: options4
+    })
+
+    // chart4-2 ===================== revenue report 차트 2
+    const data5 = {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+      datasets: [
+            {
+              label: 'Total Sales This Month',
+              data: [-156, -183, -198, -146, -99, -54, -87, -179, -189],
+              pointRadius: 0,
+              backgroundColor: "#ff9f43",
+              borderColor: 'transperent',
+              fill: true,
+              min: -200,
+              borderWidth: 0,
+              borderRadius: 6,
+              // categoryPercentage: 1.0,
+              barPercentage: 0.2,
+              borderSkipped: false,
+            },
+          ]
+    }
+    const options5 = {
+      
+      responsive: true,
+      maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              enabled: false,
+            },
+
+            datalabels: {
+              display: false,
+            },
+          },
+          layout: {
+            padding: {
+              top: 0,
+              bottom: 0,
+              left: 0,
+              right:0,
+            },
+          },
+          scales: {
+            x: {
+              grid: {
+                display: false,
+                borderColor : "transparent"
+              },
+              ticks: { 
+                padding :16,
+                color: '#acaab1' ,
+            },
+
+            },
+            y: {
+              grid: {
+                display: false,
+                borderColor : "transparent"
+              },
+              tickWidth: 0,
+              ticks: { 
+                stepSize: 100,
+                color: '#acaab1',
+                font: {
+                  size: 13,
+                },
+                padding: 0,
+              },
+              border: {
+              display: false,
+            },
+            },
+          },
+    }
+    const revenueReport2 = document.getElementById('revenueReport2')
+    const Chart5 = new Chart(revenueReport2, {
+      type: "bar",
+      data: data5,
+      options: options5
+    })
 
   </script>
 </body>

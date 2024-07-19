@@ -6680,16 +6680,13 @@ body.open {
   padding-top: var(--padding-3);
 }
 .widget .profit .canvas_profit {
-  height: 4.5625rem;
+  height: 5rem;
 }
 .widget .profit .cost {
   font-size: var(--font-13);
   line-height: 1.25rem;
   padding-left: 0;
   background: none;
-}
-.widget .expenses {
-  padding-top: var(--padding-3);
 }
 .widget .monthly_report {
   display: flex;
@@ -6709,9 +6706,26 @@ body.open {
 .widget .monthly_report .canvas_monthly_report {
   width: 7.5rem;
   height: 7.5rem;
+  padding: var(--padding-1);
+  position: relative;
+}
+.widget .monthly_report .canvas_monthly_report .total {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.widget .monthly_report .canvas_monthly_report .total p {
+  line-height: 1.2;
+}
+.widget .monthly_report .canvas_monthly_report canvas {
+  position: relative;
+  z-index: 1;
 }
 .widget .revenue_report {
   width: calc((100% - 10.5rem) / 8 * 5 + 7.5rem);
+  height: 100%;
 }
 .widget .revenue_report .heading_abs {
   gap: var(--gap-4);
@@ -6733,6 +6747,21 @@ body.open {
   border-radius: 50%;
   background-color: var(--warning);
 }
+.widget .revenue_report .widget-con {
+  height: calc(100% - 3.25rem);
+  display: grid;
+  align-content: center;
+}
+.widget .revenue_report .canvas_revenue_report1 {
+  height: 131px;
+  position: relative;
+  bottom: -0.5rem;
+  padding-left: 14px;
+}
+.widget .revenue_report .canvas_revenue_report2 {
+  padding-left: 14px;
+  height: 150px;
+}
 .widget .budget {
   width: calc((100% - 10.5rem) / 8 * 3 + 3rem);
   display: grid;
@@ -6742,18 +6771,13 @@ body.open {
   justify-items: center;
   text-align: center;
 }
+.widget .expenses {
+  padding-top: var(--padding-3);
+  padding-inline: var(--padding-4);
+}
 .widget .expenses .canvas_expenses {
   position: relative;
-  padding-bottom: var(--padding-3);
-  height: 4.4375rem;
-}
-.widget .expenses .expenses_prg {
-  width: auto;
-  height: 100%;
-  border-radius: 100px 100px 0 0;
-  border: 1px solid;
-  aspect-ratio: 1/0.5;
-  margin: 0 auto;
+  height: 4.875rem;
 }
 .widget .expenses .prog_per {
   font-size: var(--font-24);
@@ -6761,6 +6785,6 @@ body.open {
   line-height: 2.375rem;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 0;
+  bottom: 0.25rem;
   position: absolute;
 }
