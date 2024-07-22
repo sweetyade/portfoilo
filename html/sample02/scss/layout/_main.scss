@@ -717,6 +717,7 @@ body {
       height: 8.125rem;
     }
   }
+
   .budget {
     width: calc((100% - 10.5rem) / 8 * 3 + 3rem);
     display: grid;
@@ -825,6 +826,7 @@ body {
       position: absolute;
     }
   }
+
   .earning_report_3 {
     height: calc(100% - 74px);
     display: grid;
@@ -932,6 +934,15 @@ body {
 
     table tbody {
       color: var(--text-secondary);
+    }
+  }
+
+  &.popular_instructors {
+    & > .flex_btw {
+      padding: var(--padding-4) var(--padding-6);
+      border-top: 1px solid var(--divider);
+      border-bottom: 1px solid var(--divider);
+      margin-top: var(--padding-6);
     }
   }
 }
