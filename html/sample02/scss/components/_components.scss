@@ -891,6 +891,7 @@
       height: 1.5rem;
       background-repeat: no-repeat;
       background-position: center;
+      background-size: cover;
     }
   }
 
@@ -1423,7 +1424,7 @@
     height: 100%;
     background-color: var(--divider);
     position: absolute;
-    left: 5px;
+    left: 9px;
   }
   &-block {
     @include flextop;
@@ -1434,7 +1435,7 @@
   }
   &-icon {
     height: 2.25rem;
-    width: 0.75rem;
+    width: 1.25rem;
     @include flexcenter;
     background-color: var(--paper-bg);
 
@@ -1458,10 +1459,17 @@
         box-shadow: 0 0 0 3px var(--success-o-light);
       }
     }
+
+    i {
+      width: 1.25rem;
+      height: 1.25rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 
   &-data {
-    width: 100%;
+    width: calc(100% - 2.25rem);
 
     .title {
       height: 2.25rem;
@@ -1620,6 +1628,38 @@
     }
 
     .title_right {
+    }
+  }
+
+  &-table_input {
+    padding: var(--padding-6);
+    @include flexbtw;
+    gap: var(--gap-6);
+
+    .left {
+      @include flex;
+      gap: var(--gap-4);
+      width: 100%;
+
+      .input_basic {
+        @include flex;
+        gap: var(--gap-2);
+        width: fit-content;
+
+        label {
+          color: var(--text-disabled);
+        }
+
+        select {
+          width: fit-content;
+        }
+      }
+    }
+
+    .right {
+      @include flexright;
+      gap: var(--gap-4);
+      width: 100%;
     }
   }
 

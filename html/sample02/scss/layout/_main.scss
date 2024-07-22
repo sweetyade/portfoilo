@@ -706,15 +706,15 @@ body {
     }
 
     .canvas_revenue_report1 {
-      height: 131px;
+      height: 8.1875rem;
       position: relative;
       bottom: -0.5rem;
-      padding-left: 14px;
+      padding-left: 0.875rem;
     }
 
     .canvas_revenue_report2 {
-      padding-left: 14px;
-      height: 150px;
+      padding-left: 0.875rem;
+      height: 8.125rem;
     }
   }
   .budget {
@@ -725,6 +725,11 @@ body {
     align-content: center;
     justify-items: center;
     text-align: center;
+    padding: var(--padding-12);
+
+    .canvas_budget {
+      height: 72px;
+    }
   }
 
   .expenses {
@@ -821,5 +826,112 @@ body {
     }
   }
   .earning_report_3 {
+    height: calc(100% - 74px);
+    display: grid;
+    align-content: space-between;
+
+    .widget-list {
+      gap: var(--gap-5);
+    }
+    .canvas_earning_report_3 {
+      height: 12.5rem;
+    }
+
+    .cost {
+      color: var(--text-disabled);
+    }
+  }
+
+  .popular_product {
+    height: calc(100% - 74px);
+    .widget-list {
+      height: 100%;
+    }
+
+    .avatar .thumb {
+      background-color: transparent;
+    }
+  }
+
+  &.order_countries {
+    .tab_group {
+      width: 100%;
+
+      .tab_btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    .timeline {
+      display: grid;
+      gap: var(--gap-5);
+
+      &::before {
+        height: 50%;
+      }
+      &-data {
+        .title {
+          @include font_body_2;
+          height: auto;
+        }
+
+        .content {
+          padding-block: 2px 0;
+          gap: 2px;
+        }
+      }
+
+      &:first-child {
+        padding-bottom: var(--padding-4);
+        margin-bottom: var(--padding-4);
+        border-bottom: 1px dashed var(--divider);
+      }
+    }
+  }
+
+  .transactions {
+    height: calc(100% - 4.625rem);
+
+    .widget-list {
+      height: 100%;
+    }
+
+    .avatar {
+      .thumb {
+        width: 2.125rem;
+        height: 2.125rem;
+
+        .avater_icon {
+          width: 1.375rem;
+          height: 1.375rem;
+        }
+      }
+    }
+  }
+
+  &.issue_table {
+    .widget-table_input {
+      .left {
+        .input_basic {
+          select {
+            min-width: 6.25rem;
+          }
+        }
+      }
+    }
+
+    .avatar {
+      .thumb {
+        .avater_icon {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+    }
+
+    table tbody {
+      color: var(--text-secondary);
+    }
   }
 }

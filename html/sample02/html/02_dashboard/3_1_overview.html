@@ -708,13 +708,24 @@
               </div>
               
             </div>
+
             <div class="budget">
-              <button class="btn type_label">
-                <div class="ripple js-ripple">
-                  <span class="ripple__circle"></span>
-                </div>
-                2023<img src="../../images/system/chevron_down_pr.svg" alt="left">
-              </button>
+              <div class="btn_list">
+                <button class="btn type_label">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  <span class="sltText">2023</span><img src="../../images/system/chevron_down_pr.svg" alt="left">
+                </button>
+  
+                <ul class="">
+                  <li>2023</li>
+                  <li>2022</li>
+                  <li>2022</li>
+                  <li>2020</li>
+                </ul>
+              </div>
+              
 
               <div>
                 <p class="font_h3">$25,825</p>
@@ -722,7 +733,7 @@
               </div>
 
               <div class="canvas_budget">
-                <canvas id="budget"></canvas>
+                <canvas id="budgetLine"></canvas>
               </div>
 
               <button class="btn type_basic">
@@ -913,19 +924,19 @@
             </div>
 
             <div class="tab_group">
-              <a href="javascript:void(0)" class="tab_btn active">New</a>
-              <a href="javascript:void(0)" class="tab_btn">Preparing</a>
-              <a href="javascript:void(0)" class="tab_btn">Shipping</a>
+              <a href="javascript:void(0)" class="tab_btn active" id="tab1">New</a>
+              <a href="javascript:void(0)" class="tab_btn" id="tab2">Preparing</a>
+              <a href="javascript:void(0)" class="tab_btn" id="tab3">Shipping</a>
             </div>
 
-            <div class="widget-con">
+            <div class="widget-con" id="tab1-con">
               <div class="timeline type_outline">
                 <div class="timeline-block">
                   <div class="timeline-icon">
-                    <div class="icon color_pr"></div>
+                    <i class="ic_AlertCheckCircle_green"></i>
                   </div>
                   <div class="timeline-data">
-                    <p class="title">SENDER</p>
+                    <p class="title success">SENDER</p>
                     <div class="content">
                       <p class="txt">Myrtle Ullrich</p>
                       <p class="txt text_secondary">101 Boulder, California(CA), 95959</p>
@@ -934,10 +945,10 @@
                 </div>
                 <div class="timeline-block">
                   <div class="timeline-icon">
-                    <div class="icon color_pr"></div>
+                    <i class="ic_map_pin_pr"></i>
                   </div>
                   <div class="timeline-data">
-                    <p class="title">RECEIVER</p>
+                    <p class="title primary">RECEIVER</p>
                     <div class="content">
                       <p class="txt">Barry Schowalter</p>
                       <p class="txt text_secondary">939 Orange, California(CA), 92118</p>
@@ -948,10 +959,10 @@
               <div class="timeline type_outline">
                 <div class="timeline-block">
                   <div class="timeline-icon">
-                    <div class="icon color_pr"></div>
+                    <i class="ic_AlertCheckCircle_green"></i>
                   </div>
                   <div class="timeline-data">
-                    <p class="title">SENDER</p>
+                    <p class="title success">SENDER</p>
                     <div class="content">
                       <p class="txt">Myrtle Ullrich</p>
                       <p class="txt text_secondary">101 Boulder, California(CA), 95959</p>
@@ -960,10 +971,118 @@
                 </div>
                 <div class="timeline-block">
                   <div class="timeline-icon">
-                    <div class="icon color_pr"></div>
+                    <i class="ic_map_pin_pr"></i>
                   </div>
                   <div class="timeline-data">
-                    <p class="title">RECEIVER</p>
+                    <p class="title primary">RECEIVER</p>
+                    <div class="content">
+                      <p class="txt">Barry Schowalter</p>
+                      <p class="txt text_secondary">939 Orange, California(CA), 92118</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="widget-con" id="tab2-con" style="display: none;">
+              <div class="timeline type_outline">
+                <div class="timeline-block">
+                  <div class="timeline-icon">
+                    <i class="ic_AlertCheckCircle_green"></i>
+                  </div>
+                  <div class="timeline-data">
+                    <p class="title success">SENDER</p>
+                    <div class="content">
+                      <p class="txt">Myrtle Ullrich</p>
+                      <p class="txt text_secondary">101 Boulder, California(CA), 95959</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline-block">
+                  <div class="timeline-icon">
+                    <i class="ic_map_pin_pr"></i>
+                  </div>
+                  <div class="timeline-data">
+                    <p class="title primary">RECEIVER</p>
+                    <div class="content">
+                      <p class="txt">Barry Schowalter</p>
+                      <p class="txt text_secondary">939 Orange, California(CA), 92118</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline type_outline">
+                <div class="timeline-block">
+                  <div class="timeline-icon">
+                    <i class="ic_AlertCheckCircle_green"></i>
+                  </div>
+                  <div class="timeline-data">
+                    <p class="title success">SENDER</p>
+                    <div class="content">
+                      <p class="txt">Myrtle Ullrich</p>
+                      <p class="txt text_secondary">101 Boulder, California(CA), 95959</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline-block">
+                  <div class="timeline-icon">
+                    <i class="ic_map_pin_pr"></i>
+                  </div>
+                  <div class="timeline-data">
+                    <p class="title primary">RECEIVER</p>
+                    <div class="content">
+                      <p class="txt">Barry Schowalter</p>
+                      <p class="txt text_secondary">939 Orange, California(CA), 92118</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="widget-con" id="tab3-con" style="display: none;">
+              <div class="timeline type_outline">
+                <div class="timeline-block">
+                  <div class="timeline-icon">
+                    <i class="ic_AlertCheckCircle_green"></i>
+                  </div>
+                  <div class="timeline-data">
+                    <p class="title success">SENDER</p>
+                    <div class="content">
+                      <p class="txt">Myrtle Ullrich</p>
+                      <p class="txt text_secondary">101 Boulder, California(CA), 95959</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline-block">
+                  <div class="timeline-icon">
+                    <i class="ic_map_pin_pr"></i>
+                  </div>
+                  <div class="timeline-data">
+                    <p class="title primary">RECEIVER</p>
+                    <div class="content">
+                      <p class="txt">Barry Schowalter</p>
+                      <p class="txt text_secondary">939 Orange, California(CA), 92118</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline type_outline">
+                <div class="timeline-block">
+                  <div class="timeline-icon">
+                    <i class="ic_AlertCheckCircle_green"></i>
+                  </div>
+                  <div class="timeline-data">
+                    <p class="title success">SENDER</p>
+                    <div class="content">
+                      <p class="txt">Myrtle Ullrich</p>
+                      <p class="txt text_secondary">101 Boulder, California(CA), 95959</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline-block">
+                  <div class="timeline-icon">
+                    <i class="ic_map_pin_pr"></i>
+                  </div>
+                  <div class="timeline-data">
+                    <p class="title primary">RECEIVER</p>
                     <div class="content">
                       <p class="txt">Barry Schowalter</p>
                       <p class="txt text_secondary">939 Orange, California(CA), 92118</p>
@@ -985,12 +1104,12 @@
               </div>
             </div>
 
-            <div class="widget-con source_visits">
+            <div class="widget-con transactions">
               <div class="widget-list">
                 <div class="widget_data">
                   <div class="avatar_data">
                     <div class="avatar type_rounded">
-                      <p class="thumb" style="--avatar-bg: var(--primary-o-light)"><i class="ic_wallet_gr"></i></p>
+                      <p class="thumb" style="--avatar-bg: var(--primary-o-light)"><i class="ic_wallet_pr avater_icon"></i></p>
                     </div>
                     <div class="avatar_info">
                       <p class="name">Wallet</p>
@@ -1006,7 +1125,7 @@
                 <div class="widget_data">
                   <div class="avatar_data">
                     <div class="avatar type_rounded">
-                      <p class="thumb" style="--avatar-bg: var(--success-o-light)"><i class="ic_building_bank_green"></i></p>
+                      <p class="thumb" style="--avatar-bg: var(--success-o-light)"><i class="ic_building_bank_green avater_icon"></i></p>
                     </div>
                     <div class="avatar_info">
                       <p class="name">Bank Transfer</p>
@@ -1022,7 +1141,7 @@
                 <div class="widget_data">
                   <div class="avatar_data">
                     <div class="avatar type_rounded">
-                      <p class="thumb" style="--avatar-bg: var(--error-o-light)"><i class="ic_brand_paypal_red"></i></p>
+                      <p class="thumb" style="--avatar-bg: var(--error-o-light)"><i class="ic_brand_paypal_red avater_icon"></i></p>
                     </div>
                     <div class="avatar_info">
                       <p class="name">PayPal</p>
@@ -1038,7 +1157,7 @@
                 <div class="widget_data">
                   <div class="avatar_data">
                     <div class="avatar type_rounded">
-                      <p class="thumb"><i class="ic_credit_card_gr"></i></p>
+                      <p class="thumb"><i class="ic_credit_card_gr avater_icon"></i></p>
                     </div>
                     <div class="avatar_info">
                       <p class="name">Master Card</p>
@@ -1054,7 +1173,7 @@
                 <div class="widget_data">
                   <div class="avatar_data">
                     <div class="avatar type_rounded">
-                      <p class="thumb" style="--avatar-bg: var(--info-o-light)"><i class="ic_currency_dollar_blue"></i></p>
+                      <p class="thumb" style="--avatar-bg: var(--info-o-light)"><i class="ic_currency_dollar_blue avater_icon"></i></p>
                     </div>
                     <div class="avatar_info">
                       <p class="name">Bank Transaction</p>
@@ -1070,7 +1189,7 @@
                 <div class="widget_data">
                   <div class="avatar_data">
                     <div class="avatar type_rounded">
-                      <p class="thumb" style="--avatar-bg: var(--error-o-light)"><i class="ic_brand_paypal_red"></i></p>
+                      <p class="thumb" style="--avatar-bg: var(--error-o-light)"><i class="ic_brand_paypal_red avater_icon"></i></p>
                     </div>
                     <div class="avatar_info">
                       <p class="name">PayPal</p>
@@ -1086,7 +1205,7 @@
                 <div class="widget_data">
                   <div class="avatar_data">
                     <div class="avatar type_rounded">
-                      <p class="thumb" style="--avatar-bg: var(--success-o-light)"><i class="ic_building_bank_green"></i></p>
+                      <p class="thumb" style="--avatar-bg: var(--success-o-light)"><i class="ic_building_bank_green avater_icon"></i></p>
                     </div>
                     <div class="avatar_info">
                       <p class="name">Bank Transfer</p>
@@ -1102,20 +1221,16 @@
             </div>
           </div>
 
-          <div class="widget column_8">
-            <div class="widget-table_title">
-              <div class="flex" style="gap: var(--gap-4)">
-                <div class="flex" style="gap: var(--gap-2)">
-                  <p class="text_disabled">Show</p>
-                  <div class="input_basic">
-                    <div class="inner">
-                      <select name="" id="select3">
-                        <option value="">10</option>
-                        <option value="">15</option>
-                        <option value="">20</option>
-                      </select>
-                    </div>
-                  </div>
+          <div class="widget column_8 issue_table">
+            <div class="widget-table_input">
+              <div class="left">
+                <div class="input_basic">
+                  <label for="showlist">Show</label>
+                  <select name="" id="showlist">
+                    <option value="">10</option>
+                    <option value="">15</option>
+                    <option value="">20</option>
+                  </select>
                 </div>
 
                 <button class="btn type_basic">
@@ -1126,7 +1241,7 @@
                   Create Invoice</button>
               </div>
 
-              <div class="flex_right" style="gap: var(--gap-4)">
+              <div class="right">
                 <div class="input_basic">
                   <div class="inner">
                     <input type="text" placeholder="Search Invoice" id="" value="">
@@ -1149,12 +1264,12 @@
             <div class="widget-table">
               <table class="check_table">
                 <colgroup>
-                  <col width="5%">
-                  <col width="30%">
-                  <col width="13%">
-                  <col width="15%">
+                  <col width="6%">
                   <col width="20%">
-                  <col width="12%">
+                  <col width="18%">
+                  <col width="18%">
+                  <col width="20%">
+                  <col width="18%">
                 </colgroup>
                 <thead>
                   <tr>
@@ -1182,15 +1297,17 @@
                     <td><p class="primary">#4910</p></td>
                     <td>
                       <div class="avatar type_circle">
-                        <p class="thumb" style="--avatar-bg: var(--success-o-light)"><img src="../../images/system/check_green.svg" alt="" class="avater_icon"></p>
+                        <p class="thumb" style="--avatar-bg: var(--success-o-light)"><i class="ic_check_green avater_icon"></i></p>
                       </div>
                     </td>
                     <td>$3428</td>
                     <td>22 Oct 2019</td>
                     <td>
-                      <i class="table_icon ic_trash_gr"></i>
-                      <i class="table_icon ic_eye_gr"></i>
-                      <i class="table_icon ic_dots_vertical_gr"></i>
+                      <div class="flex">
+                        <i class="table_icon ic_trash_gr"></i>
+                        <i class="table_icon ic_eye_gr"></i>
+                        <i class="table_icon ic_dots_vertical_gr"></i>
+                      </div>
                     </td>
                   </tr>
                   <tr>
@@ -1203,15 +1320,17 @@
                     <td><p class="primary">#4909</p></td>
                     <td>
                       <div class="avatar type_circle">
-                        <p class="thumb" style="--avatar-bg: var(--success-o-light)"><img src="../../images/system/check_green.svg" alt="" class="avater_icon"></p>
+                        <p class="thumb" style="--avatar-bg: var(--success-o-light)"><i class="ic_check_green avater_icon"></i></p>
                       </div>
                     </td>
                     <td>$2872</td>
                     <td>18 Oct 2019</td>
                     <td>
-                      <i class="table_icon ic_trash_gr"></i>
-                      <i class="table_icon ic_eye_gr"></i>
-                      <i class="table_icon ic_dots_vertical_gr"></i>
+                      <div class="flex">
+                        <i class="table_icon ic_trash_gr"></i>
+                        <i class="table_icon ic_eye_gr"></i>
+                        <i class="table_icon ic_dots_vertical_gr"></i>
+                      </div>
                     </td>
                   </tr>
                   <tr>
@@ -1224,15 +1343,17 @@
                     <td><p class="primary">#4908</p></td>
                     <td>
                       <div class="avatar type_circle">
-                        <p class="thumb" style="--avatar-bg: var(--info-o-light)"><img src="../../images/system/arrow_down_blue.svg" alt="" class="avater_icon"></p>
+                        <p class="thumb" style="--avatar-bg: var(--info-o-light)"><i class="ic_arrow_down_blue avater_icon"></i></p>
                       </div>
                     </td>
                     <td>$4077</td>
                     <td>01 Feb 2020</td>
                     <td>
-                      <i class="table_icon ic_trash_gr"></i>
-                      <i class="table_icon ic_eye_gr"></i>
-                      <i class="table_icon ic_dots_vertical_gr"></i>
+                      <div class="flex">
+                        <i class="table_icon ic_trash_gr"></i>
+                        <i class="table_icon ic_eye_gr"></i>
+                        <i class="table_icon ic_dots_vertical_gr"></i>
+                      </div>
                     </td>
                   </tr>
                   <tr>
@@ -1245,15 +1366,17 @@
                     <td><p class="primary">#4907</p></td>
                     <td>
                       <div class="avatar type_circle">
-                        <p class="thumb"><img src="../../images/system/mail_gr.svg" alt="" class="avater_icon"></p>
+                        <p class="thumb"><i class="ic_mail_gr avater_icon"></i></p>
                       </div>
                     </td>
                     <td>$2060</td>
                     <td>08 Dec 2019</td>
                     <td>
-                      <i class="table_icon ic_trash_gr"></i>
-                      <i class="table_icon ic_eye_gr"></i>
-                      <i class="table_icon ic_dots_vertical_gr"></i>
+                      <div class="flex">
+                        <i class="table_icon ic_trash_gr"></i>
+                        <i class="table_icon ic_eye_gr"></i>
+                        <i class="table_icon ic_dots_vertical_gr"></i>
+                      </div>
                     </td>
                   </tr>
                   <tr>
@@ -1266,15 +1389,17 @@
                     <td><p class="primary">#4906</p></td>
                     <td>
                       <div class="avatar type_circle">
-                        <p class="thumb" style="--avatar-bg: var(--warning-o-light)"><img src="../../images/system/chart_pie_2_orange.svg" alt="" class="avater_icon"></p>
+                        <p class="thumb" style="--avatar-bg: var(--warning-o-light)"><i class="ic_chart_pie_2_orange avater_icon"></i></p>
                       </div>
                     </td>
                     <td>$3128</td>
                     <td>10 Sep 2019</td>
                     <td>
-                      <i class="table_icon ic_trash_gr"></i>
-                      <i class="table_icon ic_eye_gr"></i>
-                      <i class="table_icon ic_dots_vertical_gr"></i>
+                      <div class="flex">
+                        <i class="table_icon ic_trash_gr"></i>
+                        <i class="table_icon ic_eye_gr"></i>
+                        <i class="table_icon ic_dots_vertical_gr"></i>
+                      </div>
                     </td>
                   </tr>
                   <tr>
@@ -1287,15 +1412,17 @@
                     <td><p class="primary">#4905</p></td>
                     <td>
                       <div class="avatar type_circle">
-                        <p class="thumb"><img src="../../images/system/mail_gr.svg" alt="" class="avater_icon"></p>
+                        <p class="thumb"><i class="ic_mail_gr avater_icon"></i></p>
                       </div>
                     </td>
                     <td>$2032</td>
                     <td>30 Nov 2019</td>
                     <td>
-                      <i class="table_icon ic_trash_gr"></i>
-                      <i class="table_icon ic_eye_gr"></i>
-                      <i class="table_icon ic_dots_vertical_gr"></i>
+                      <div class="flex">
+                        <i class="table_icon ic_trash_gr"></i>
+                        <i class="table_icon ic_eye_gr"></i>
+                        <i class="table_icon ic_dots_vertical_gr"></i>
+                      </div>
                     </td>
                   </tr>
                 </tbody>
@@ -1676,7 +1803,27 @@
       $('.search_pop, body').removeClass('open')
     })
 
+    //버튼 셀럭트
+    $(".btn_list .btn").click(function(){
+      $(".btn_list ul").slideToggle();
+    })
 
+    
+    $(".btn_list li").click(function(){
+      const thisText = $(this).html()
+      $(".btn_list .sltText").html(thisText);
+      $(".btn_list ul").slideUp()
+    })
+
+
+  //탭
+    $(".order_countries").find('.tab_btn').click(function(){
+      var t = $(this).attr('id');
+        $(this).addClass('active')
+        $(this).siblings().removeClass('active')
+        $('.order_countries .widget-con').hide();
+        $('#'+ t + '-con').fadeIn('slow');
+    })
    // chart 1 ============= profit 차트
   function getPointColors() {
     var array = [1, 4, 2, 5, 3, 7];
@@ -1686,7 +1833,6 @@
     );
     return bg;
   }
-
   function getPointSize() {
     var array = [1, 4, 2, 5, 3, 7];
     var maxValue = Math.max.apply(this, array);
@@ -1695,7 +1841,6 @@
     );
     return bg;
   }
-
   const data1 = {
     labels: ["1", "2", "3", "4", "4", "5"],
     datasets: [
@@ -1817,11 +1962,11 @@
       },
     },
   };
-    const expensesDounut = document.getElementById('expensesDounut');
-    const Chart2 = new Chart(expensesDounut, {
-      type: "doughnut",
-    data: data2,
-    options: options2
+  const expensesDounut = document.getElementById('expensesDounut');
+  const Chart2 = new Chart(expensesDounut, {
+    type: "doughnut",
+  data: data2,
+  options: options2
 })
 
 
@@ -1854,11 +1999,11 @@
       },
     },
   };
-    const monthlyReport = document.getElementById('monthlyReport');
-    const Chart3 = new Chart(monthlyReport, {
-      type: "doughnut",
-    data: data3,
-    options: options3
+  const monthlyReport = document.getElementById('monthlyReport');
+  const Chart3 = new Chart(monthlyReport, {
+    type: "doughnut",
+  data: data3,
+  options: options3
 })
 
 
@@ -1914,8 +2059,7 @@
                 borderColor : "transparent"
               },
               ticks: { 
-                // display: false,
-                color: '#acaab1',
+                display: false,
                 padding: 0,
             },
 
@@ -1963,7 +2107,6 @@
               backgroundColor: "#ff9f43",
               borderColor: 'transperent',
               fill: true,
-              min: -200,
               borderWidth: 0,
               borderRadius: 6,
               // categoryPercentage: 1.0,
@@ -2003,7 +2146,9 @@
                 borderColor : "transparent"
               },
               ticks: { 
-                padding :16,
+                font:{
+                  size: 13,
+                },
                 color: '#acaab1' ,
             },
 
@@ -2035,5 +2180,198 @@
       options: options5
     })
 
+
+    //chart 5 budgetLine 자트
+    const data6 = {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+      datasets: [
+            {
+              label: 'Total Sales This Month',
+              data: [13, 16, 11, 16, 12, 17, 19, 15, 16],
+              pointRadius: 0,
+              borderColor: '#7367f0',
+              fill: false,
+              borderWidth: 2,
+              tension: 0.4
+            },
+            {
+              label: 'Total Sales This Month',
+              data: [5, 6, 8, 6, 5, 7, 9, 8, 6],
+              pointRadius: 0,
+              borderColor: '#e6e5e7',
+              borderDash: [5, 5],
+              fill: false,
+              borderWidth: 2,
+              tension: 0.4
+            },
+          ]
+    }
+    const options6 = {
+      
+      responsive: true,
+      maintainAspectRatio: false,
+      
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              enabled: false,
+            },
+
+            datalabels: {
+              display: false,
+            },
+          },
+
+          layout: {
+            padding: {
+              top: 0,
+              bottom: 0,
+              left: 0,
+              right:0,
+            },
+          },
+          scales: {
+            x: {
+              display: false,
+            },
+            y: {
+              beginAtZero: true,
+              display: false,
+            },
+          },
+    }
+    const budgetLine = document.getElementById('budgetLine')
+    const Chart6 = new Chart(budgetLine, {
+      type: "line",
+      data: data6,
+      options: options6
+    })
+
+
+    //chart 6 earningReport3 차트
+  function getBgColors() {
+  var array = [4, 9, 7, 5, 10, 6, 8];
+  var maxValue = Math.max.apply(this, array);
+  var bg = array.map((a) =>
+    a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)"
+  );
+  return bg;
+}
+  const data7 = {
+    labels: ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+    datasets: [
+      {
+        label: "Total Sales This Month",
+        data: [4, 9, 7, 5, 10, 6, 8],
+        pointRadius: 0,
+        backgroundColor: getBgColors(),
+        borderColor: "transperent",
+        fill: true,
+        borderWidth: 0,
+        borderRadius: 4,
+        categoryPercentage: 1.0,
+        barPercentage: 0.5,
+        borderSkipped: false,
+      },
+    ],
+  };
+  const options7 = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        // 기존 툴팁 사용 안 함
+        enabled: false,
+      },
+
+      datalabels: {
+        display: false,
+      },
+    },
+
+    layout: {
+      padding: {
+        top: 50,
+        bottom: 0,
+        left: 0,
+        right: 0,
+      },
+    },
+    scales: {
+      x: {
+        grid: {
+          display: false,
+          borderColor: 'transparent',
+        },
+        border: {
+          display: false,
+        },
+        ticks:{
+          color: "#acaab1",
+        }
+      },
+      y: {
+        display: false,
+        grid: {
+          display: false,
+        },
+      },
+    },
+  };
+  const earningReport3 = document.getElementById('earningReport3')
+  const Chart7 = new Chart(earningReport3, {
+    type: "bar",
+    data: data7,
+    options: options7,
+  })
+
+
+   // 차트 테마별 색상 변경
+  function darkMode() {
+    const dark = document.getElementById("dark").classList.contains('dark')
+    let chart1ScaleX = Chart1.options.scales.x;
+    let chart2Data = Chart2.data.datasets[1];
+    let chart4Scalex = Chart4.options.scales.x;
+    let chart4ScaleY = Chart4.options.scales.y;
+    let chart5ScaleX = Chart5.options.scales.x;
+    let chart5ScaleY = Chart5.options.scales.y;
+    let chart6Data = Chart6.data.datasets[1];
+    let chart7ScaleX = Chart7.options.scales.x;
+
+
+    if (dark === true) {
+      chart1ScaleX.grid.color = "rgba(225, 222, 245, 0.12)"
+      chart2Data.borderColor = "rgba(225, 222, 245, 0.12)"
+      chart2Data.backgroundColor = "rgba(225, 222, 245, 0.12)"
+      chart4ScaleY.ticks.color = "rgba(225, 222, 245, 0.4)"
+      chart5ScaleX.ticks.color = "rgba(225, 222, 245, 0.4)"
+      chart5ScaleY.ticks.color = "rgba(225, 222, 245, 0.4)"
+      chart6Data.borderColor = "rgba(225, 222, 245, 0.12)"
+      chart7ScaleX.ticks.color = "rgba(225, 222, 245, 0.4)"
+      
+    }
+    if (dark === false) {
+      chart1ScaleX.grid.color = "rgba(47, 43, 61, 0.12)"
+      chart2Data.borderColor  = "rgba(47, 43, 61, 0.12)"
+      chart2Data.backgroundColor = "rgba(47, 43, 61, 0.12)"
+      chart4ScaleY.ticks.color = "rgba(47, 43, 61, 0.4)"
+      chart5ScaleX.ticks.color = "rgba(47, 43, 61, 0.4)"
+      chart5ScaleY.ticks.color = "rgba(47, 43, 61, 0.4)"
+      chart6Data.borderColor = "rgba(47, 43, 61, 0.12)"
+      chart7ScaleX.ticks.color = "rgba(47, 43, 61, 0.4)"
+      
+    }
+    Chart1.update()
+    Chart2.update()
+    Chart4.update()
+    Chart5.update()
+    Chart6.update()
+    Chart7.update()
+  }
   </script>
 </body>
