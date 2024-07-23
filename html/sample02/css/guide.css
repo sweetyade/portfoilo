@@ -441,6 +441,11 @@ button {
     width: var(--prg-bar);
   }
 }
+@keyframes p {
+  0% {
+    --p: 0;
+  }
+}
 /***************************************************************
     03. layout
 ***************************************************************/
@@ -1644,8 +1649,16 @@ body {
   background-image: url(../images/system/users.svg);
 }
 
+.ic_users_pr {
+  background-image: url(../images/system/users_pr.svg);
+}
+
 .ic_mail {
   background-image: url(../images/system/mail.svg);
+}
+
+.ic_book_blue {
+  background-image: url(../images/system/book_blue.svg);
 }
 
 .ic_mail_gr {
@@ -1662,6 +1675,14 @@ body {
 
 .ic_calendar {
   background-image: url(../images/system/calendar.svg);
+}
+
+.ic_calendar_pr {
+  background-image: url(../images/system/calendar_pr.svg);
+}
+
+.ic_clock_pr {
+  background-image: url(../images/system/clock_pr.svg);
 }
 
 .ic_copy {
@@ -2090,6 +2111,58 @@ body {
 
 .ic_eye_gr {
   background-image: url(../images/system/eye_gr.svg);
+}
+
+.ic_brand_dribbble_orange {
+  background-image: url(../images/system/brand_dribbble_orange.svg);
+}
+
+.ic_camera_green {
+  background-image: url(../images/system/camera_green.svg);
+}
+
+.ic_code_blue {
+  background-image: url(../images/system/code_blue.svg);
+}
+
+.ic_microphone_2_red {
+  background-image: url(../images/system/microphone_2_red.svg);
+}
+
+.ic_video_pr {
+  background-image: url(../images/system/video_pr.svg);
+}
+
+.ic_video_red {
+  background-image: url(../images/system/video_red.svg);
+}
+
+.ic_palette_orange {
+  background-image: url(../images/system/palette_orange.svg);
+}
+
+.ic_brand_angular_red {
+  background-image: url(../images/system/brand_angular_red.svg);
+}
+
+.ic_brand_react_native_blue {
+  background-image: url(../images/system/brand_react_native_blue.svg);
+}
+
+.ic_pencil_green {
+  background-image: url(../images/system/pencil_green.svg);
+}
+
+.ic_Lightbulb_blue {
+  background-image: url(../images/system/Lightbulb_blue.svg);
+}
+
+.ic_Laptop_pr {
+  background-image: url(../images/system/Laptop_pr.svg);
+}
+
+.ic_Check_orange {
+  background-image: url(../images/system/Check_orange.svg);
 }
 
 /*-------- color ------------- */
@@ -3028,6 +3101,7 @@ button:disabled {
   background-color: var(--chip-bg);
   padding-inline: 0.75rem;
   border-radius: 0.375rem;
+  white-space: nowrap;
   height: 2rem;
   width: -moz-fit-content;
   width: fit-content;
@@ -4625,8 +4699,8 @@ select:disabled ~ .input_label {
   position: relative;
 }
 .avatar .thumb {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   background-color: var(--avatar-bg);
   display: flex;
@@ -4635,7 +4709,7 @@ select:disabled ~ .input_label {
   font-size: var(--font-15);
   line-height: 1.125rem;
 }
-.avatar .thumb .avater_icon {
+.avatar .thumb .avatar_icon {
   width: 1.5rem;
   height: 1.5rem;
   background-repeat: no-repeat;
@@ -4670,6 +4744,7 @@ select:disabled ~ .input_label {
 }
 .avatar_list .avatar .thumb {
   border: 2px solid var(--avatar-bg);
+  width: 2.5rem;
 }
 .avatar_list .avatar:last-child {
   width: 2.5rem;
@@ -4687,6 +4762,13 @@ select:disabled ~ .input_label {
   font-size: var(--font-13);
   line-height: 1.25rem;
   color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: var(--gap-2);
+}
+.avatar_data .avatar_info .txt .avatar {
+  width: 1.375rem;
+  height: 1.375rem;
 }
 .avatar_data .avatar_info .subtxt {
   font-size: var(--font-13);
@@ -5244,6 +5326,11 @@ select:disabled ~ .input_label {
   background-color: var(--paper-bg);
   overflow: hidden;
   position: relative;
+}
+.widget.bg_none {
+  background-color: transparent;
+  box-shadow: none;
+  padding-block: var(--padding-6);
 }
 .widget-title {
   padding: var(--padding-6) var(--padding-6) 0;
