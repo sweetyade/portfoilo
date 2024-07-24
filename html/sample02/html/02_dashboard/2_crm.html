@@ -1357,10 +1357,10 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <!-- <script src="../../js/chart.js"></script> -->
+  <script src="../../js/chart.js"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="../../js/chartjs-plugin-datalabels@2.0.0"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
   <script>
     
@@ -1543,6 +1543,22 @@
       $('.search_pop, body').removeClass('open')
     })
 
+    
+      //earning reports tab
+      $(".earning_order").find('.tab_btn').click(function(e){
+        if($(this).hasClass('none')){
+          e.preventDefault();
+          console.log('리포트 선택메뉴 띄우기')
+        }else{
+          const tabIndex = $(".tab_btn").index(this);
+          $(this).addClass('active')
+          $(this).siblings().removeClass('active');
+          $(".tab_con").hide()
+          $(".tab_con").eq(tabIndex).fadeIn("slow"); 
+          return false;
+        }
+      })
+
     // chart 1 ============= order s 차트
     const borderRadius = 50;
     const borderRadiusAllCorners = {topLeft: borderRadius, topRight: borderRadius, bottomLeft: borderRadius, bottomRight: borderRadius}
@@ -1620,86 +1636,66 @@
     const orderS = document.getElementById('orderS')
     const Chart1 = new Chart(orderS, {
       type: "bar",
-    data: data1,
-    options: options1
-})
+      data: data1,
+      options: options1
+  })
 
-
-
-  //    chart 2 ====================== sale s 차트
-    const Chart2 = document.getElementById("saleS").getContext("2d");
-    var bgColor = {
-    default: "rgba(40, 199, 111, 1)",
-    half: "rgba(40, 199, 111, 0.3)",
-    quarter: "rgba(40, 199, 111, 0.05)",
-    zero: "rgba(40, 199, 111, 0)"
-  }
-        gradient = Chart2.createLinearGradient(0, 0, 0, 90);
-        gradient.addColorStop(0, bgColor.half); 
-        gradient.addColorStop(0.35, bgColor.quarter);
-        gradient.addColorStop(1, bgColor.zero);
-    new Chart(Chart2, {
-      type: "line",
-      data: {
-        labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL"],
-        datasets: [
+  //chart 2 ====================== sale s 차트
+  const saleS = document.getElementById('saleS').getContext('2d')
+    var gradient1 = saleS.createLinearGradient(0,0,0,80)
+    gradient1.addColorStop(0, 'rgba(40, 199, 111, 0.23)')
+    gradient1.addColorStop(1, 'rgba(40, 199, 111, 0)')
+    const data2 = {
+      labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL"],
+      datasets: [
           {
             label: 'Total Sales This Month',
             data: [8, 6, 4, 5, 9, 4, 2],
             pointRadius: 0,
-            backgroundColor: gradient,
-            pointBackgroundColor: bgColor.half,
-            borderColor: bgColor.default,
+            backgroundColor: gradient1,
+            borderColor: "rgba(40, 199, 111, 1)",
             fill: true,
             borderWidth: 2,
             lineTension: 0.5,
           }
         ]
+    }
+    const options2 = {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false,
+        },
+        tooltip: {
+          enabled: false,
+        },
+
+        datalabels: {
+          display: false,
+        },
       },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            display: false,
-          },
-          tooltip: {
-            // 기존 툴팁 사용 안 함
-            enabled: false,
-          },
-
-          datalabels: {
+      scales: {
+        x: {
+          display: false,
+          grid: {
             display: false,
           },
         },
-
-        layout: {
-          padding: {
-            top: 0,
-            bottom: 4,
-            left: 0,
-            right: 0 ,
-          },
-        },
-
-        scales: {
-          x: {
+        y: {
+          display: false,
+          beginAtZero: true,
+          grid: {
             display: false,
-            grid: {
-              display: false,
-            },
-          },
-          y: {
-            display: false,
-            grid: {
-              display: false,
-            },
           },
         },
       },
-      
-    });
-
+    }
+    const Chart2 = new Chart(saleS, {
+      type: "line",
+      data: data2,
+      options: options2
+    })
 
     // chart3  ==================== revenueGrowth 차트
     function getBgColorsGreen() {
@@ -1710,7 +1706,7 @@
         var bg = array.map(a =>  a === maxValue ? "#28c76f" : "rgba(40, 199, 111, 0.24)");
         return bg;
       }
-    const data2 = {
+    const data3 = {
       labels: ["M", "T", "W", "T", "F", "S", "S"],
       datasets: [
         {
@@ -1728,7 +1724,7 @@
         }
       ],
     };
-    const options2  = {
+    const options3  = {
       responsive: true,
       maintainAspectRatio: false,
           plugins: {
@@ -1788,13 +1784,13 @@
     const revenueGrowth = document.getElementById('revenueGrowth')
     const Chart3 = new Chart(revenueGrowth, {
       type: "bar",
-      data: data2,
-      options: options2
+      data: data3,
+      options: options3
     })
 
 
     // chart4 ===================== earningOrder 차트 1
-    const data3 = {
+    const data4 = {
       labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
       datasets: [
             {
@@ -1812,7 +1808,7 @@
             }
           ]
     }
-    const options3 = {
+    const options4 = {
       
       responsive: true,
       maintainAspectRatio: false,
@@ -1884,13 +1880,13 @@
     const Chart4 = new Chart(earningOrder, {
       plugins: [ChartDataLabels],
       type: "bar",
-      data: data3,
-      options: options3
+      data: data4,
+      options: options4
     })
 
 
      // chart4-2 ===================== earningOrder 차트 2
-    const data4 = {
+    const data4_2 = {
       labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
       datasets: [
             {
@@ -1918,13 +1914,13 @@
     const Chart4_2 = new Chart(earningOrder_2, {
       plugins: [ChartDataLabels],
       type: "bar",
-      data: data4,
-      options: options3
+      data: data4_2,
+      options: options4
     })
 
 
      // chart4-3 ===================== earningOrder 차트 3
-    const data5 = {
+    const data4_3 = {
       labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
       datasets: [
             {
@@ -1952,13 +1948,13 @@
     const Chart4_3 = new Chart(earningOrder_3, {
       plugins: [ChartDataLabels],
       type: "bar",
-      data: data5,
-      options: options3
+      data: data4_3,
+      options: options4
     })
 
 
          // chart4-4 ===================== earningOrder 차트 4
-      const data6 = {
+      const data4_4 = {
         labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
         datasets: [
           {
@@ -1986,13 +1982,13 @@
     const Chart4_4 = new Chart(earningOrder_4, {
       plugins: [ChartDataLabels],
       type: "bar",
-      data: data6,
-      options: options3
+      data: data4_4,
+      options: options4
     })
 
 
      //salesRedar 차트
-    const data7 = {
+    const data5 = {
       labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
       datasets: [
         {
@@ -2017,17 +2013,18 @@
         
       ]
     };
-    const options4 = {
+    const options5 = {
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
         legend: {
           position: "bottom",
           labels: {
-            boxWidth : 8,
+            boxWidth : 12,
+            boxHeight: 12,
             color: "rgba(47, 43, 61, 0.7)",
-            usePointStyle: true,
-            pointStyle: "circle",
+            useBorderRadius: true,
+            borderRadius: 6,
             padding: 14,
             font: {
               size: 13,
@@ -2073,11 +2070,77 @@
     const salesRedar = document.getElementById('salesRedar')
     const Chart5 = new Chart(salesRedar, {
       type: "radar",
-      data: data7,
-      options: options4
+      data: data5,
+      options: options5
 })
 
+  // //canvas_project_states
+  const projectStates = document.getElementById('projectStates').getContext('2d')
+  var gradient2 = projectStates.createLinearGradient(0,0,0,220)
+  // var gradient2 = projectStates.createLinearGradient(0,0,0,projectStates.canvas.clientHeight)
+    gradient2.addColorStop(0, 'rgba(255, 159, 67, 0.23)')
+    gradient2.addColorStop(1, 'rgba(255, 159, 67, 0)')
+    const data6 = {
+      labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9","10","11","12","13","14","15","16"],
+      datasets: [
+          {
+            label: 'Total Sales This Month',
+            data: [3, 3, 6, 6, 5, 5, 3, 3,5,5,7,7,6,6,9,9],
+            pointRadius: 0,
+            backgroundColor: gradient2,
+            borderColor: "rgba(255, 159, 67,1)",
+            fill: true,
+            borderWidth: 4,
+          }
+        ]
+    }
+    const options6 = {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false,
+        },
+        tooltip: {
+          enabled: false,
+        },
 
+        datalabels: {
+          display: false,
+        },
+      },
+
+      layout: {
+        padding: {
+          top:24,
+          bottom: 24,
+          left: 0,
+          right: 0 ,
+        },
+      },
+
+      scales: {
+        x: {
+          display: false,
+          grid: {
+            display: false,
+          },
+          
+        },
+        y: {
+          display: false,
+          beginAtZero: true,
+          grid: {
+            display: false,
+          },
+        },
+      },
+    }
+    const Chart6 = new Chart(projectStates, {
+      type: "line",
+      data: data6,
+      options: options6
+    })
 
     // 차트 테마별 색상 변경
     function darkMode() {
@@ -2181,98 +2244,8 @@
       }
 
 
-  // //canvas_project_states
-  const Chart6 = document.getElementById("projectStates").getContext("2d");
-    var bgColor2 = {
-    default: "rgba(255, 159, 67, 1)",
-    half: "rgba(255, 159, 67, 0.5)",
-    quarter: "rgba(255, 159, 67, 0.05)",
-    zero: "rgba(255, 159, 67, 0)"
-  }
-  gradient = Chart6.createLinearGradient(0, 0, 0, 280);
-  gradient.addColorStop(0, bgColor2.half); 
-  gradient.addColorStop(0.35, bgColor2.quarter);
-  gradient.addColorStop(1, bgColor2.zero);
-  new Chart(Chart6, {
-        type: "line",
-        data: {
-          labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9","10","11","12","13","14","15","16"],
-          datasets: [
-            {
-              label: 'Total Sales This Month',
-              data: [3, 3, 6, 6, 5, 5, 3, 3,5,5,7,7,6,6,9,9],
-              pointRadius: 0,
-              backgroundColor: gradient,
-              pointBackgroundColor: bgColor2.half,
-              borderColor: bgColor2.default,
-              fill: true,
-              borderWidth: 4,
-            }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              display: false,
-            },
-            tooltip: {
-              // 기존 툴팁 사용 안 함
-              enabled: false,
-            },
-
-            datalabels: {
-              display: false,
-            },
-          },
-
-          layout: {
-            padding: {
-              top:24,
-              bottom: 24,
-              left: 0,
-              right: 0 ,
-            },
-          },
-
-          scales: {
-            x: {
-              display: false,
-              grid: {
-                display: false,
-              },
-              
-            },
-            y: {
-              display: false,
-              beginAtZero: true,
-              grid: {
-                display: false,
-              },
-            },
-          },
-        }
-      });
 
 
 
-
-
-      //earning reports tab
-      $(".earning_order").find('.tab_btn').click(function(e){
-
-        if($(this).hasClass('none')){
-          e.preventDefault();
-          console.log('리포트 선택메뉴 띄우기')
-        }else{
-          const tabIndex = $(".tab_btn").index(this);
-          $(this).addClass('active')
-          $(this).siblings().removeClass('active');
-          $(".tab_con").hide()
-          $(".tab_con").eq(tabIndex).fadeIn("slow"); 
-          return false;
-        }
-      })
   </script>
 </body>
