@@ -1617,11 +1617,11 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <!-- <script src="../../js/chart.js"></script> -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="../../js/chartjs-plugin-datalabels@2.0.0"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+  <script src="../../js/chart.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+  <script src="../../js/chartjs-plugin-datalabels@2.0.0"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script> -->
   <script>
     
     //리플버튼
@@ -1829,7 +1829,7 @@
     var array = [1, 4, 2, 5, 3, 7];
     var maxValue = Math.max.apply(this, array);
     var bg = array.map((a) =>
-      a === maxValue ? "#fff" : "#00bad1"
+      a === maxValue ? "#fff" : "rgba(0, 186, 209, 1)"
     );
     return bg;
   }
@@ -1849,7 +1849,7 @@
         data: [1, 4, 2, 5, 3, 7],
         pointRadius: getPointSize(),
         backgroundColor: getPointColors(),
-        borderColor: "#00bad1",
+        borderColor: "rgba(0, 186, 209, 1)",
         fill: false,
         borderWidth: 2,
         pointHoverRadius: getPointSize() ,
@@ -1884,19 +1884,20 @@
       x: {
         grid: {
           display: true,
-          color: "#e6e5e7",
+          color: "rgba(47, 43, 61, 0.12)",
           borderColor: 'transparent',
           drawTicks: false,
-          borderDash:  [5, 5]
         },
-        
+        border:{
+          dash: [5, 5],
+          display: false,
+        },
         ticks:{
           display: false,
-
         }
       },
       y: {
-        display: false
+        display: false,
       }
     },
   };
@@ -1915,20 +1916,20 @@
     
     datasets: [
       {
-        label: "bg",
+        label: "data",
         data: [data2Value, 100 - data2Value],
-        backgroundColor: ['#ff9f43',"#ffffff00"],
-        borderColor : ['#ff9f43',"#ffffff00"],
+        backgroundColor: ['rgba(255, 159, 67, 1)',"#ffffff00"],
+        borderColor : ['rgba(255, 159, 67, 1)',"#ffffff00"],
         borderWidth: 5,
         cutout:"90%",
         borderRadius:  30,
         offset: -2,
       },
       {
-        label: "data",
+        label: "bg",
         data: [100, 100 - 100],
-        backgroundColor: "#e6e5e7",
-        borderColor :"#e6e5e7",
+        backgroundColor: "rgba(47, 43, 61, 0.12)",
+        borderColor :"rgba(47, 43, 61, 0.12)",
         borderWidth: 1,
         cutout: "96%",
         borderRadius:  10,
@@ -1978,7 +1979,7 @@
       {
         label: "bg",
         data: ["24","34","44","82"],
-        backgroundColor: ["#24b364","#53d28c","#7edda9","#a9e9c5"],
+        backgroundColor: ["rgba(36, 179, 100, 1)","rgba(83, 210, 140, 1)","rgba(126, 221, 169, 1)","rgba(169, 233, 197, 1)"],
         borderWidth: 0,
         cutout:"68%",
       },
@@ -1991,12 +1992,6 @@
       legend: {
         display: false,
       },
-      tooltip: {
-        // enabled: false,
-      },
-      datalabels: {
-        // display: false,
-      },
     },
   };
   const monthlyReport = document.getElementById('monthlyReport');
@@ -2006,8 +2001,6 @@
   options: options3
 })
 
-
-
     // chart4 ===================== revenue report 차트 1
     const data4 = {
       labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
@@ -2016,12 +2009,11 @@
               label: 'Total Sales This Month',
               data: [286, 257, 198, 203, 266, 297, 264, 271, 133],
               pointRadius: 0,
-              backgroundColor: "#7367f0",
+              backgroundColor: "rgba(115, 103, 240, 1)",
               borderColor: 'transperent',
               fill: true,
               borderWidth: 0,
               borderRadius: 6,
-              // categoryPercentage: 1.0,
               barPercentage: 0.2,
               borderSkipped: false,
             },
@@ -2062,7 +2054,9 @@
                 display: false,
                 padding: 0,
             },
-
+            border:{
+              display: false,
+            },
             },
             y: {
               grid: {
@@ -2070,9 +2064,10 @@
                 borderColor : "transparent"
               },
               
+              
               ticks: { 
                 maxTicksLimit: 4,
-                color: '#acaab1',
+                color: 'rgba(47, 43, 61, 0.4)',
                 beginAtZero: false,
                 padding: 2,
                 font: {
@@ -2104,7 +2099,7 @@
               label: 'Total Sales This Month',
               data: [-156, -183, -198, -146, -99, -54, -87, -179, -189],
               pointRadius: 0,
-              backgroundColor: "#ff9f43",
+              backgroundColor: "rgba(255, 159, 67, 1)",
               borderColor: 'transperent',
               fill: true,
               borderWidth: 0,
@@ -2149,9 +2144,11 @@
                 font:{
                   size: 13,
                 },
-                color: '#acaab1' ,
+                color: 'rgba(47, 43, 61, 0.4)' ,
             },
-
+            border:{
+              display: false,
+            },
             },
             y: {
               grid: {
@@ -2161,7 +2158,7 @@
               tickWidth: 0,
               ticks: { 
                 stepSize: 100,
-                color: '#acaab1',
+                color: 'rgba(47, 43, 61, 0.4)',
                 font: {
                   size: 13,
                 },
@@ -2189,7 +2186,7 @@
               label: 'Total Sales This Month',
               data: [13, 16, 11, 16, 12, 17, 19, 15, 16],
               pointRadius: 0,
-              borderColor: '#7367f0',
+              borderColor: 'rgba(115, 103, 240, 1)',
               fill: false,
               borderWidth: 2,
               tension: 0.4
@@ -2198,7 +2195,7 @@
               label: 'Total Sales This Month',
               data: [5, 6, 8, 6, 5, 7, 9, 8, 6],
               pointRadius: 0,
-              borderColor: '#e6e5e7',
+              borderColor: 'rgba(47, 43, 61, 0.12)',
               borderDash: [5, 5],
               fill: false,
               borderWidth: 2,
@@ -2255,7 +2252,7 @@
   var array = [4, 9, 7, 5, 10, 6, 8];
   var maxValue = Math.max.apply(this, array);
   var bg = array.map((a) =>
-    a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)"
+    a === maxValue ? "rgba(115, 103, 240, 1)" : "rgba(115, 103, 240, 0.16)"
   );
   return bg;
 }
@@ -2312,7 +2309,7 @@
           display: false,
         },
         ticks:{
-          color: "#acaab1",
+          color: "rgba(47, 43, 61, 0.4)",
         }
       },
       y: {

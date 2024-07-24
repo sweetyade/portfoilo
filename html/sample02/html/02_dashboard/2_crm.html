@@ -1569,7 +1569,7 @@
           label: "order",
           data: [4, 9, 7, 5, 10, 6, 8],
           pointRadius: 0,
-          backgroundColor: "#7367f0",
+          backgroundColor: "rgba(115, 103, 240, 1)",
           borderColor: "transperent",
           fill: true,
           borderWidth: 0,
@@ -1779,8 +1779,6 @@
         }
       }
     };
-
-
     const revenueGrowth = document.getElementById('revenueGrowth')
     const Chart3 = new Chart(revenueGrowth, {
       type: "bar",
@@ -1847,7 +1845,7 @@
                 borderColor : "rgba(47, 43, 61, 0.12)"
               },
               ticks: { 
-                color: '#acaab1' 
+                color: 'rgba(47, 43, 61, 0.4)' 
             },
 
             },
@@ -1858,7 +1856,7 @@
               },
               tickWidth: 0,
               ticks: { 
-                color: '#acaab1',
+                color: 'rgba(47, 43, 61, 0.4)',
                 maxTicksLimit: 6,
                 callback: function(value, index, ticks) {
                     return value + 'k';
