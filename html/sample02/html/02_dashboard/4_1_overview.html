@@ -1410,11 +1410,11 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <!-- <script src="../../js/chart.js"></script> -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="../../js/chartjs-plugin-datalabels@2.0.0"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+  <script src="../../js/chart.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+  <script src="../../js/chartjs-plugin-datalabels@2.0.0"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script> -->
   <script>
     
     //리플버튼
@@ -1605,7 +1605,7 @@
         label: "order",
         data: [35, 20, 14, 12, 10, 9],
         pointRadius: 0,
-        backgroundColor: ["#7367f0", "#00bad1", "#28c76f", "#808390", "#ff4c51", "#ff9f43"],
+        backgroundColor: ["rgba(115, 103, 240, 1)", "rgba(0, 186, 209, 1)", "rgba(40, 199, 111, 1)", "rgba(128, 131, 144, 1)", "rgba(255, 76, 81, 1)", "rgba(255, 159, 67, 1)"],
         borderRadius: 6,
         fill: false,
       },
@@ -1643,10 +1643,13 @@
       x:{
         grid: {
           display: true,
-          color: "#e6e5e7",
+          color: "rgba(47, 43, 61, 0.12)",
           borderColor: 'transparent',
           drawTicks: false,
-          borderDash:  [5, 5]
+        },
+        border:{
+          display: false,
+          dash: [5,5]
         },
         ticks:{
           padding: 16,
@@ -1688,7 +1691,7 @@
       {
         label: "bg",
         data: ["24","34","44","82","13","34"],
-        backgroundColor: ["#209f59","#24b364","#28c76f","#53d28c","#7edda9","#a9e9c5"],
+        backgroundColor: ["rgba(32, 159, 89, 1)","rgba(36, 179, 100, 1)","rgba(40, 199, 111, 1)","rgba(83, 210, 140, 1)","rgba(126, 221, 169, 1)","rgba(169, 233, 197, 1)"],
         borderWidth: 0,
         cutout:"68%",
       },
