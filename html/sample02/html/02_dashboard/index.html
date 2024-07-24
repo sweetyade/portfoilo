@@ -1616,8 +1616,9 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- <script src="../../js/chart.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../../js/chart.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script> -->
   <script src="../../js/chartjs-plugin-datalabels@2.0.0"></script>
   <script>
     
@@ -1815,325 +1816,8 @@
       },
     });
 
-
-
-    //daily sales 차트
-    const Chart1 = document.getElementById("monthSale").getContext("2d");
-    var bgColor = {
-        default: "rgba(40, 199, 111, 1)",
-        half: "rgba(40, 199, 111, 0.3)",
-        quarter: "rgba(40, 199, 111, 0.05)",
-        zero: "rgba(40, 199, 111, 0)"
-      }
-    var gradient = Chart1.createLinearGradient(0, 25, 0, 90);
-        gradient.addColorStop(0, bgColor.half); 
-        gradient.addColorStop(0.35, bgColor.quarter);
-        gradient.addColorStop(1, bgColor.zero);
-    new Chart(Chart1, {
-      type: "line",
-      data: {
-        labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL"],
-        datasets: [
-          {
-            label: 'Total Sales This Month',
-            data: [8, 6, 4, 5, 9, 4, 2],
-            pointRadius: 0,
-            backgroundColor: gradient,
-            pointBackgroundColor: bgColor.half,
-            borderColor: bgColor.default,
-            fill: true,
-            borderWidth: 2,
-            lineTension: 0.5,
-          }
-        ]
-      },
-      options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          display: false,
-        },
-        tooltip: {
-          // 기존 툴팁 사용 안 함
-          enabled: false,
-        },
-
-        datalabels: {
-          display: false,
-        },
-      },
-
-      layout: {
-        padding: {
-          top: 0,
-          bottom: 10,
-          left: 0,
-          right: 0 ,
-        },
-      },
-
-      scales: {
-        x: {
-          display: false,
-          grid: {
-            display: false,
-          },
-        },
-        y: {
-          display: false,
-          grid: {
-            display: false,
-          },
-        },
-      },
-    }
-  });
-
-
-
-  
-      
-//canvas_earning_reports 차트
-function getBgColors() {
-  var array = [4, 9, 7, 5, 10, 6, 8];
-  var maxValue = Math.max.apply(this, array);
-  var bg = array.map((a) =>
-    a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)"
-  );
-  return bg;
-}
-
-const data = {
-  labels: ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
-  datasets: [
-    {
-      label: "Total Sales This Month",
-      data: [4, 9, 7, 5, 10, 6, 8],
-      pointRadius: 0,
-      backgroundColor: getBgColors(),
-      borderColor: "transperent",
-      fill: true,
-      borderWidth: 0,
-      borderRadius: 4,
-      categoryPercentage: 1.0,
-      barPercentage: 0.5,
-      borderSkipped: false,
-    },
-  ],
-};
-
-const config = {
-  type: "bar",
-  data,
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
-        display: false,
-      },
-      tooltip: {
-        // 기존 툴팁 사용 안 함
-        enabled: false,
-      },
-
-      datalabels: {
-        display: false,
-      },
-    },
-
-    layout: {
-      padding: {
-        top: 0,
-        bottom: 14,
-        left: 0,
-        right: 0,
-      },
-    },
-    scales: {
-      x: {
-        grid: {
-          display: false,
-        },
-        border: {
-          display: false,
-        },
-        ticks:{
-          color: "#acaab1"
-        }
-      },
-      y: {
-        display: false,
-        grid: {
-          display: false,
-        },
-      },
-    },
-  },
-};
-
-
-const Chart2 = new Chart(
-  document.getElementById("earningReport"), 
-  config,
-);
-
-//테마선택
-function darkMode() {
-  const dark = document.getElementById("dark").classList.contains('dark')
-  let x = Chart2.config.options.scales.x;
-
-  if (dark === true) {
-    x.ticks.color = "rgba(225, 222, 245, 0.4)";
-  }
-  if (dark === false) {
-    x.ticks.color = "#acaab1";
-  }
-  Chart2.update()
-}
-
-
-  //canvas_total_earning 차트
-  const Chart3 = document.getElementById("totalEarning_1").getContext("2d");
-  new Chart(Chart3, {
-        type: "bar",
-        data: {
-          labels: ["January", "February", "March", "April", "May", "June", "July"],
-          datasets: [
-            {
-              label: 'Total Revenue',
-              data: [4, 9, 7, 5, 10, 6, 8],
-              pointRadius: 0,
-              backgroundColor: '#7367f0',
-              borderColor: 'transperent',
-              fill: true,
-              borderWidth: 0,
-              borderRadius: 4,
-              categoryPercentage: 1.0,
-              barPercentage: 0.2,
-              borderSkipped: false,
-            },
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              display: false,
-            },
-            tooltip: {
-              // 기존 툴팁 사용 안 함
-              enabled: false,
-            },
-
-            datalabels: {
-              display: false,
-            },
-          },
-
-          layout: {
-            padding: {
-              top: 0,
-              bottom: 10,
-              left: 0,
-              right: 0 ,
-            },
-          },
-          scales: {
-            x: {
-              stacked: true,
-              display: false,
-              grid: {
-                display: false,
-              },
-            border: {
-              display: false,
-            },
-            },
-            y: {
-              stacked: true,
-              display: false,
-              grid: {
-                display: false,
-              },
-            },
-          },
-        }
-      });
-
-        //canvas_total_earning 차트
-  const Chart4 = document.getElementById("totalEarning_2").getContext("2d");
-  new Chart(Chart4, {
-        type: "bar",
-        data: {
-          labels: ["January", "February", "March", "April", "May", "June", "July"],
-          datasets: [
-            {
-              label: 'Total Revenue',
-              data: [-3, -5, -2, -9, -10, -6, -8],
-              pointRadius: 0,
-              backgroundColor: '#808390',
-              borderColor: 'transperent',
-              fill: true,
-              borderWidth: 0,
-              borderRadius: 4,
-              categoryPercentage: 1.0,
-              barPercentage: 0.2,
-              borderSkipped: false,
-            },
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              display: false,
-            },
-            tooltip: {
-              // 기존 툴팁 사용 안 함
-              enabled: false,
-            },
-
-            datalabels: {
-              display: false,
-            },
-          },
-
-          layout: {
-            padding: {
-              top: 0,
-              bottom: 14,
-              left: 0,
-              right: 0 ,
-            },
-          },
-          scales: {
-            x: {
-              stacked: true,
-              display: false,
-              grid: {
-                display: false,
-              },
-            border: {
-              display: false,
-            },
-            },
-            y: {
-              stacked: true,
-              display: false,
-              grid: {
-                display: false,
-              },
-            },
-          },
-        }
-      });
-
-      //테이블 전체체크
-      const checkInput = $('.check_table tbody input')
+     //테이블 전체체크
+    const checkInput = $('.check_table tbody input')
       $("#checkAll").click(function(){
         const checkItem = $('.check_table tbody input:checked').length;
         if(checkItem == 5){
@@ -2154,6 +1838,255 @@ function darkMode() {
         }
       })
       // 
+
+
+
+
+    //chart1 =================== month Sale 차트
+    const monthSale = document.getElementById('monthSale').getContext('2d')
+    var gradient1 = monthSale.createLinearGradient(0,0,0,80)
+    gradient1.addColorStop(0, 'rgba(40, 199, 111, 0.23)')
+    gradient1.addColorStop(1, 'rgba(40, 199, 111, 0)')
+    const data1 = {
+      labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL"],
+      datasets: [
+          {
+            label: 'Total Sales This Month',
+            data: [8, 6, 4, 5, 9, 4, 2],
+            pointRadius: 0,
+            backgroundColor: gradient1,
+            borderColor: "rgba(40, 199, 111, 1)",
+            fill: true,
+            borderWidth: 2,
+            lineTension: 0.5,
+          }
+        ]
+    }
+    const options1 = {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false,
+        },
+        tooltip: {
+          enabled: false,
+        },
+
+        datalabels: {
+          display: false,
+        },
+      },
+      scales: {
+        x: {
+          display: false,
+          grid: {
+            display: false,
+          },
+        },
+        y: {
+          display: false,
+          beginAtZero: true,
+          grid: {
+            display: false,
+          },
+        },
+      },
+    }
+    const Chart1 = new Chart(monthSale, {
+      type: "line",
+      data: data1,
+      options: options1
+    })
+
+
+  //chart2 ===================== canvas_earning_reports 차트
+    function getBgColors() {
+      var array = [4, 9, 7, 5, 10, 6, 8];
+      var maxValue = Math.max.apply(this, array);
+      var bg = array.map((a) =>
+        a === maxValue ? "rgba(115, 103, 240, 1)" : "rgba(115, 103, 240, 0.16)"
+      );
+      return bg;
+    }
+    const data2 = {
+      labels: ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+      datasets: [
+        {
+          label: "Total Sales This Month",
+          data: [4, 9, 7, 5, 10, 6, 8],
+          pointRadius: 0,
+          backgroundColor: getBgColors(),
+          borderColor: "transperent",
+          fill: true,
+          borderWidth: 0,
+          borderRadius: 4,
+          categoryPercentage: 1.0,
+          barPercentage: 0.5,
+          borderSkipped: false,
+        },
+      ],
+    }
+    const options2 = {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false,
+        },
+        tooltip: {
+          enabled: false,
+        },
+
+        datalabels: {
+          display: false,
+        },
+      },
+
+      layout: {
+        padding: {
+          top: 0,
+          bottom: 14,
+          left: 0,
+          right: 0,
+        },
+      },
+      scales: {
+        x: {
+          grid: {
+            display: false,
+          },
+          border: {
+            display: false,
+          },
+          ticks:{
+            color: "rgba(47, 43, 61, 0.4)"
+          }
+        },
+        y: {
+          display: false,
+          grid: {
+            display: false,
+          },
+        },
+      },
+    }
+    const earningReport = document.getElementById('earningReport')
+    const Chart2 = new Chart(earningReport, {
+      type: "bar",
+      data: data2,
+      options: options2
+    })
+      
+  //chart3 ================ canvas_total_earning 차트
+    const data3 = {
+      labels: ["January", "February", "March", "April", "May", "June", "July"],
+      datasets: [
+        {
+          label: 'Total Revenue',
+          data: [4, 9, 7, 5, 10, 6, 8],
+          pointRadius: 0,
+          backgroundColor: 'rgba(115, 103, 240, 1)',
+          borderColor: 'transperent',
+          fill: true,
+          borderWidth: 0,
+          borderRadius: 4,
+          categoryPercentage: 1.0,
+          barPercentage: 0.2,
+          borderSkipped: false,
+        },
+      ],
+    }
+    const options3 = {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false,
+        },
+        tooltip: {
+          enabled: false,
+        },
+
+        datalabels: {
+          display: false,
+        },
+      },
+
+      layout: {
+        padding: {
+          top: 0,
+          bottom: 10,
+          left: 0,
+          right: 0,
+        },
+      },
+      scales: {
+        x: {
+          stacked: true,
+          display: false,
+          grid: {
+            display: false,
+          },
+        border: {
+          display: false,
+        },
+        },
+        y: {
+          stacked: true,
+          display: false,
+          grid: {
+            display: false,
+          },
+        },
+      },
+    }
+    const totalEarning_1 = document.getElementById('totalEarning_1')
+    const Chart3 = new Chart(totalEarning_1, {
+      type: "bar",
+      data: data3,
+      options: options3
+    })
+
+  //chart3-2 ==================== canvas_total_earning2 차트
+    const data4 = {
+      labels: ["January", "February", "March", "April", "May", "June", "July"],
+      datasets: [
+        {
+          label: 'Total Revenue',
+          data: [-3, -5, -2, -9, -10, -6, -8],
+          pointRadius: 0,
+          backgroundColor: 'rgba(128, 131, 144, 1)',
+          borderColor: 'transperent',
+          fill: true,
+          borderWidth: 0,
+          borderRadius: 4,
+          categoryPercentage: 1.0,
+          barPercentage: 0.2,
+          borderSkipped: false,
+        },
+      ],
+    }
+    const totalEarning_2 = document.getElementById('totalEarning_2')
+    const Chart4 = new Chart(totalEarning_2, {
+      type: "bar",
+      data: data4,
+      options: options3
+    })
+
+    //테마선택
+    function darkMode() {
+      const dark = document.getElementById("dark").classList.contains('dark')
+      let chart2ScalesX = Chart2.options.scales.x;
+
+      if (dark === true) {
+        chart2ScalesX.ticks.color = "rgba(225, 222, 245, 0.4)";
+      }
+      if (dark === false) {
+        x.ticks.color = "rgba(47, 43, 61, 0.4)";
+      }
+      Chart2.update()
+    }
 
 
   </script>
