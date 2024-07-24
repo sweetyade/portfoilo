@@ -441,9 +441,14 @@ button {
     width: var(--prg-bar);
   }
 }
-@keyframes p {
+@keyframes barlabel {
   0% {
-    --p: 0;
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: var(--w);
+    opacity: 1;
   }
 }
 /***************************************************************
@@ -1637,6 +1642,10 @@ body {
   background-image: url(../images/system/car.svg);
 }
 
+.ic_car_gr {
+  background-image: url(../images/system/car_gr.svg);
+}
+
 .ic_user {
   background-image: url(../images/system/user.svg);
 }
@@ -1647,6 +1656,10 @@ body {
 
 .ic_users {
   background-image: url(../images/system/users.svg);
+}
+
+.ic_users_red {
+  background-image: url(../images/system/users_red.svg);
 }
 
 .ic_users_pr {
@@ -1681,8 +1694,20 @@ body {
   background-image: url(../images/system/calendar_pr.svg);
 }
 
+.ic_clock {
+  background-image: url(../images/system/clock.svg);
+}
+
+.ic_clock_gr {
+  background-image: url(../images/system/clock_gr.svg);
+}
+
 .ic_clock_pr {
   background-image: url(../images/system/clock_pr.svg);
+}
+
+.ic_clock_blue {
+  background-image: url(../images/system/clock_blue.svg);
 }
 
 .ic_copy {
@@ -1779,6 +1804,10 @@ body {
 
 .ic_box {
   background-image: url(../images/system/box.svg);
+}
+
+.ic_box_pr {
+  background-image: url(../images/system/box_pr.svg);
 }
 
 .ic_circle {
@@ -2017,6 +2046,22 @@ body {
   background-image: url(../images/system/truck.svg);
 }
 
+.ic_truck_pr {
+  background-image: url(../images/system/truck_pr.svg);
+}
+
+.ic_truck_blue {
+  background-image: url(../images/system/truck_blue.svg);
+}
+
+.ic_git_fork_red {
+  background-image: url(../images/system/git_fork_red.svg);
+}
+
+.ic_percentage_orange {
+  background-image: url(../images/system/percentage_orange.svg);
+}
+
 .ic_AlertReportProblem {
   background-image: url(../images/system/AlertReportProblem.svg);
 }
@@ -2165,6 +2210,14 @@ body {
   background-image: url(../images/system/Check_orange.svg);
 }
 
+.ic_arrow_down_circle {
+  background-image: url(../images/system/arrow_down_circle.svg);
+}
+
+.ic_arrow_up_circle {
+  background-image: url(../images/system/arrow_up_circle.svg);
+}
+
 /*-------- color ------------- */
 .icc_rocket_gr {
   background-image: url(../images/color/rocket_gr.svg);
@@ -2222,6 +2275,9 @@ body {
 }
 :root.dark .ic_car {
   background-image: url(../images/system/car_d.svg);
+}
+:root.dark .ic_car_gr {
+  background-image: url(../images/system/car_gr_d.svg);
 }
 :root.dark .ic_user {
   background-image: url(../images/system/user_d.svg);
@@ -2435,6 +2491,18 @@ body {
 }
 :root.dark .ic_eye_gr {
   background-image: url(../images/system/eye_gr_d.svg);
+}
+:root.dark .ic_clock {
+  background-image: url(../images/system/clock_d.svg);
+}
+:root.dark .ic_clock_gr {
+  background-image: url(../images/system/clock_gr_d.svg);
+}
+:root.dark .ic_arrow_down_circle {
+  background-image: url(../images/system/arrow_down_circle_d.svg);
+}
+:root.dark .ic_arrow_up_circle {
+  background-image: url(../images/system/arrow_up_circle_d.svg);
 }
 :root.dark .icc_rocket_gr {
   background-image: url(../images/color/rocket_d.svg);
@@ -5332,8 +5400,18 @@ select:disabled ~ .input_label {
   box-shadow: none;
   padding-block: var(--padding-6);
 }
+.widget.privew_card {
+  border-bottom: 3px solid var(--border-c);
+  padding: var(--padding-6) var(--padding-6) 1.3125rem;
+  display: grid;
+  gap: var(--gap-1);
+}
+.widget.privew_card .flex {
+  gap: var(--gap-4);
+}
 .widget-title {
   padding: var(--padding-6) var(--padding-6) 0;
+  position: relative;
 }
 .widget-title .title_heading {
   display: grid;
@@ -5375,6 +5453,15 @@ select:disabled ~ .input_label {
   font-size: var(--font-38);
   font-weight: var(--font-medium);
   line-height: 3.5rem;
+}
+.widget-title .btn_list {
+  position: absolute;
+  top: var(--padding-6);
+  right: var(--padding-6);
+}
+.widget-title .btn_list ul {
+  max-height: 12.5rem;
+  overflow-y: auto;
 }
 .widget .heading_abs {
   position: absolute;

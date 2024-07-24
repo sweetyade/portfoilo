@@ -1297,4 +1297,125 @@ body {
       }
     }
   }
+
+  .vehicles_overview {
+    .labels {
+      @include flex;
+
+      p {
+        width: var(--w);
+        color: var(--text-secondary);
+        position: relative;
+        animation: barlabel 0.85s ease-out;
+        opacity: 1;
+        white-space: nowrap;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 2px;
+          background-color: var(--divider);
+          height: 0.625rem;
+          margin-top: var(--padding-1);
+        }
+      }
+    }
+    .canvas_vehicles_overview {
+      height: 94px;
+    }
+    .list_0_75 {
+      .flex_btw {
+        border-bottom: 1px solid var(--divider);
+        padding-bottom: var(--gap-3);
+      }
+
+      .list_name {
+        @include flex;
+        gap: var(--gap-2);
+
+        i {
+          width: 1.5rem;
+          height: 1.5rem;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+
+      .list_per {
+        @include flexright;
+        gap: var(--gap-6);
+
+        p {
+          min-width: 46px;
+        }
+      }
+    }
+  }
+
+  .delivery_performance {
+    height: calc(100% - 4.625rem);
+
+    .widget-list {
+      height: 100%;
+    }
+
+    .cost {
+      width: fit-content;
+    }
+
+    .avatar {
+      .thumb {
+        .avatar_icon {
+          width: 1.625rem;
+          height: 1.625rem;
+        }
+      }
+    }
+  }
+
+  .route_vehicles {
+    tbody {
+      td {
+        color: var(--text-secondary);
+      }
+    }
+    .flex {
+      gap: var(--gap-4);
+    }
+
+    .avatar {
+      .thumb {
+        .avatar_icon {
+          width: 1.75rem;
+        }
+      }
+    }
+
+    .progress_data {
+      .progress {
+        height: 0.5rem;
+      }
+    }
+  }
+
+  .shipment_statistics {
+    .canvas_shipment_statistics {
+      height: 18.125rem;
+    }
+  }
+
+  .delivery_exceptions {
+    .canvas_delivery_exceptions {
+      height: 25.3125rem;
+      position: relative;
+
+      .total {
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    }
+  }
 }

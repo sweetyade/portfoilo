@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>4.Academy - 4-1.Overview</title>
+  <title>5.Logistics - 5-1.Overview</title>
 
   <!-- css -->
   <link rel="stylesheet" href="../../css/style.css">
@@ -554,196 +554,151 @@
 
       <div class="container_body">
         <div class="column_grid mb_1_5">
-          <div class="widget column_8 welcom_first bg_none">
-            <p class="font_h5">Welcome back, <span class="font_h4">Felecia 👋🏻</span></p>
-            <p class="text_secondary mt_0_5">Your progress this week is Awesome. let's keep it up<br>
-              and get a lot of points reward!</p>
-            <div class="flex_btw mt_1">
-              <div class="avatar_data">
-                <div class="avatar type_rounded">
-                  <p class="thumb" style="--avatar-bg: var(--primary-o-light)"><i class="ic_Laptop_pr avatar_icon"></i></p>
-                </div>
-                <div class="avatar_info">
-                  <p class="name">Hours Spent</p>
-                  <p class="txt" style="--txt-c: var(--primary)">34h</p>
-                </div>
+          <div class="widget column_3 privew_card" style="--border-c: var(--primary)">
+            <div class="flex">
+              <div class="avatar type_rounded">
+                <p class="thumb" style="--avatar-bg: var(--primary-o-light)"><i class="ic_truck_pr avatar_icon"></i></p>
               </div>
-
-              <div class="avatar_data">
-                <div class="avatar type_rounded">
-                  <p class="thumb" style="--avatar-bg: var(--info-o-light)"><i class="ic_Lightbulb_blue avatar_icon"></i></p>
-                </div>
-                <div class="avatar_info">
-                  <p class="name">Test Results</p>
-                  <p class="txt" style="--txt-c: var(--info)">82%</p>
-                </div>
-              </div>
-
-              <div class="avatar_data">
-                <div class="avatar type_rounded">
-                  <p class="thumb" style="--avatar-bg: var(--warning-o-light)"><i class="ic_Check_orange avatar_icon"></i></p>
-                </div>
-                <div class="avatar_info">
-                  <p class="name">Course Completed</p>
-                  <p class="txt" style="--txt-c: var(--warning)">14</p>
-                </div>
-              </div>
+              <p class="font_h4">42</p>
             </div>
+            <p class="text_secondary">On route vehicles</p>
+            <p class="per">+18.2% <span class="font_body_2 text_disabled">than last week</span></p>
           </div>
-          <div class="widget column_4 bg_none time_spendings">
-            <div class="con_left">
-              <div>
-                <p class="font_h5">Time spendings</p>
-                <p class="text_secondary mt_0_25">Weekly report</p>
+          <div class="widget column_3 privew_card" style="--border-c: var(--warning)">
+            <div class="flex">
+              <div class="avatar type_rounded">
+                <p class="thumb" style="--avatar-bg: var(--warning-o-light)"><i class="ic_alert_triangle_orange avatar_icon"></i></p>
               </div>
-              <div>
-                <p class="font_h4 mb_0_5">231<span class="text_secondary">h</span> 14<span class="text_secondary">m</span></p>
-                <p class="chip size_s type_label color_success">+18.4%</p>
-              </div>
+              <p class="font_h4">8</p>
             </div>
-
-            <div class="canvas_time_spendings">
-              <canvas id="timeSpendings"></canvas>
-              <div class="total">
-                <p class="font_h4">231h</p>
-                <p class="font_body_2 success">Total</p>
+            <p class="text_secondary">Vehicles with errors</p>
+            <p class="per">-8.7% <span class="font_body_2 text_disabled">than last week</span></p>
+          </div>
+          <div class="widget column_3 privew_card" style="--border-c: var(--error)">
+            <div class="flex">
+              <div class="avatar type_rounded">
+                <p class="thumb" style="--avatar-bg: var(--error-o-light)"><i class="ic_git_fork_red avatar_icon"></i></p>
               </div>
+              <p class="font_h4">27</p>
             </div>
+            <p class="text_secondary">Deviated from route</p>
+            <p class="per">+4.3% <span class="font_body_2 text_disabled">than last week</span></p>
+          </div>
+          <div class="widget column_3 privew_card" style="--border-c: var(--info)">
+            <div class="flex">
+              <div class="avatar type_rounded">
+                <p class="thumb" style="--avatar-bg: var(--info-o-light)"><i class="ic_clock_blue avatar_icon"></i></p>
+              </div>
+              <p class="font_h4">13</p>
+            </div>
+            <p class="text_secondary">Late vehicles</p>
+            <p class="per">-2.5% <span class="font_body_2 text_disabled">than last week</span></p>
           </div>
         </div>
 
         <div class="column_grid mb_1_5">
-          <div class="widget column_8">
+          <div class="widget column_6">
             <div class="widget-title">
               <div class="title_heading">
-                <p class="title">Topic you are interested in</p>
+                <p class="title">Vehicles overview</p>
                 <div class="heading_abs"><i class="ic_dots_vertical_td"></i></div>
               </div>
             </div>
 
-            <div class="widget-con topic_interested">
-              <div class="canvas_topic_interested">
-                <canvas id="topicInterested"></canvas>
+            <div class="widget-con vehicles_overview">
+              <div class="labels">
+                <p class="" style="--w: 39.7%">On the way</p>
+                <p class="" style="--w: 28.3%">Unloading</p>
+                <p class="" style="--w: 17.4%">Loading</p>
+                <p class="" style="--w: 14.6%">Waiting</p>
               </div>
-              <div class="topic_labal">
-                <div class="flex_top">
-                  <span class="dot" style="--dot-color: var(--primary)"></span>
-                  <div class="">
-                    <p class="">UI Design</p>
-                    <p class="font_h5">35%</p>
+              <div class="canvas_vehicles_overview">
+                <canvas id="vehiclesOverview"></canvas>
+              </div>
+
+              <div class="list_0_75">
+                <div class="flex_btw">
+                  <div class="list_name">
+                    <i class="ic_car"></i>
+                    <p>On the way</p>
+                  </div>
+
+                  <div class="list_per">
+                    <p class="font_m">2hr 10min</p>
+                    <p class="text_secondary">39.7%</p>
                   </div>
                 </div>
-                <div class="flex_top">
-                  <span class="dot" style="--dot-color: var(--info)"></span>
-                  <div class="">
-                    <p class="">UX Design</p>
-                    <p class="font_h5">20%</p>
+                <div class="flex_btw">
+                  <div class="list_name">
+                    <i class="ic_arrow_down_circle"></i>
+                    <p>Unloading</p>
+                  </div>
+
+                  <div class="list_per">
+                    <p class="font_m">3hr 15min</p>
+                    <p class="text_secondary">28.3%</p>
                   </div>
                 </div>
-                <div class="flex_top">
-                  <span class="dot" style="--dot-color: var(--success)"></span>
-                  <div class="">
-                    <p class="">Music</p>
-                    <p class="font_h5">14%</p>
+                <div class="flex_btw">
+                  <div class="list_name">
+                    <i class="ic_arrow_up_circle"></i>
+                    <p>Loading</p>
+                  </div>
+
+                  <div class="list_per">
+                    <p class="font_m">1hr 24min</p>
+                    <p class="text_secondary">17.4%</p>
                   </div>
                 </div>
-                <div class="flex_top">
-                  <span class="dot" style="--dot-color: var(--secondary)"></span>
-                  <div class="">
-                    <p class="">Animation</p>
-                    <p class="font_h5">12%</p>
+                <div class="flex_btw">
+                  <div class="list_name">
+                    <i class="ic_clock"></i>
+                    <p>Waiting</p>
                   </div>
-                </div>
-                <div class="flex_top">
-                  <span class="dot" style="--dot-color: var(--error)"></span>
-                  <div class="">
-                    <p class="">React</p>
-                    <p class="font_h5">10%</p>
-                  </div>
-                </div>
-                <div class="flex_top">
-                  <span class="dot" style="--dot-color: var(--warning)"></span>
-                  <div class="">
-                    <p class="">SEO</p>
-                    <p class="font_h5">9%</p>
+
+                  <div class="list_per">
+                    <p class="font_m">5hr 19min</p>
+                    <p class="text_secondary">14.6%</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="widget column_4 popular_instructors">
+          <div class="widget column_6">
             <div class="widget-title">
               <div class="title_heading">
-                <p class="title">Popular Instructors</p>
-                <div class="heading_abs"><i class="ic_dots_vertical_td"></i></div>
+                <p class="title">Shipment statistics</p>
+                <p class="txt">Total number of deliveries 23.8k</p>
+              </div>
+
+              <div class="btn_list">
+                <button class="btn type_label">
+                  <div class="ripple js-ripple">
+                    <span class="ripple__circle"></span>
+                  </div>
+                  <span class="sltText">January</span><img src="../../images/system/chevron_down_pr.svg" alt="left">
+                </button>
+  
+                <ul class="">
+                  <li>January</li>
+                  <li>Febryary</li>
+                  <li>March</li>
+                  <li>April</li>
+                  <li>May</li>
+                  <li>June</li>
+                  <li>July</li>
+                  <li>August</li>
+                  <li>September</li>
+                  <li>October</li>
+                  <li>Nobember</li>
+                  <li>December</li>
+                </ul>
               </div>
             </div>
-            <div class="flex_btw">
-              <p class="text_secondary">INSTRUCTORS</p>
-              <p class="text_secondary">COURSES</p>
-            </div>
 
-            <div class="widget-con">
-              <div class="widget-list">
-                <div class="widget_data">
-                  <div class="avatar_data">
-                    <div class="avatar type_circle">
-                      <p class="thumb"><img src="../../images/avatar_4.png" alt=""></p>
-                    </div>
-                    <div class="avatar_info">
-                      <p class="name">Maven Analytics</p>
-                      <p class="txt">Business Intelligence</p>
-                    </div>
-                  </div>
-                  <div class="data_right">
-                    <p class="font_m">33</p>
-                  </div>
-                </div>
-
-                <div class="widget_data">
-                  <div class="avatar_data">
-                    <div class="avatar type_circle">
-                      <p class="thumb"><img src="../../images/avatar_10.png" alt=""></p>
-                    </div>
-                    <div class="avatar_info">
-                      <p class="name">Maven Analytics</p>
-                      <p class="txt">Digital Marketing</p>
-                    </div>
-                  </div>
-                  <div class="data_right">
-                    <p class="font_m">52</p>
-                  </div>
-                </div>
-
-                <div class="widget_data">
-                  <div class="avatar_data">
-                    <div class="avatar type_circle">
-                      <p class="thumb"><img src="../../images/avatar_9.png" alt=""></p>
-                    </div>
-                    <div class="avatar_info">
-                      <p class="name">Maven Analytics</p>
-                      <p class="txt">UI/UX Design</p>
-                    </div>
-                  </div>
-                  <div class="data_right">
-                    <p class="font_m">12</p>
-                  </div>
-                </div>
-
-                <div class="widget_data">
-                  <div class="avatar_data">
-                    <div class="avatar type_circle">
-                      <p class="thumb"><img src="../../images/avatar_7.png" alt=""></p>
-                    </div>
-                    <div class="avatar_info">
-                      <p class="name">Maven Analytics</p>
-                      <p class="txt">React Native</p>
-                    </div>
-                  </div>
-                  <div class="data_right">
-                    <p class="font_m">8</p>
-                  </div>
-                </div>
+            <div class="widget-con shipment_statistics">
+              <div class="canvas_shipment_statistics">
+                <canvas id="shipmentStatistics"></canvas>
               </div>
             </div>
           </div>
@@ -753,218 +708,329 @@
           <div class="widget column_4">
             <div class="widget-title">
               <div class="title_heading">
-                <p class="title">Top Courses</p>
+                <p class="title">Delivery Performance</p>
+                <p class="txt">12% increase in this month</p>
                 <div class="heading_abs"><i class="ic_dots_vertical_td"></i></div>
               </div>
             </div>
 
-            <div class="widget-con top_courses">
+            <div class="widget-con delivery_performance">
               <div class="widget-list">
                 <div class="widget_data">
                   <div class="avatar_data">
                     <div class="avatar type_rounded">
-                      <p class="thumb" style="--avatar-bg: var(--primary-o-light)"><i class="ic_video_pr avatar_icon"></i></p>
+                      <p class="thumb" style="--avatar-bg: var(--primary-o-light)"><i class="ic_box_pr avatar_icon"></i></p>
                     </div>
                     <div class="avatar_info">
-                      <p class="name">Basic Fundamentals of Photography</p>
+                      <p class="name">Packages in transit</p>
+                      <p class="cost up">25.8%</p>
                     </div>
                   </div>
 
                   <div class="data_right">
-                    <p class="chip size_s type_label color_gr">1.2k Views</p>
+                    <p class="font_m text_secondary">10k</p>
                   </div>
                 </div>
 
                 <div class="widget_data">
                   <div class="avatar_data">
                     <div class="avatar type_rounded">
-                      <p class="thumb" style="--avatar-bg: var(--info-o-light)"><i class="ic_code_blue avatar_icon"></i></p>
+                      <p class="thumb" style="--avatar-bg: var(--info-o-light)"><i class="ic_truck_blue avatar_icon"></i></p>
                     </div>
                     <div class="avatar_info">
-                      <p class="name">Basic Front-end Development Course</p>
+                      <p class="name">Packages out for delivery</p>
+                      <p class="cost up">4.3%</p>
                     </div>
                   </div>
 
                   <div class="data_right">
-                    <p class="chip size_s type_label color_gr">834 Views</p>
+                    <p class="font_m text_secondary">5k</p>
                   </div>
                 </div>
 
                 <div class="widget_data">
                   <div class="avatar_data">
                     <div class="avatar type_rounded">
-                      <p class="thumb" style="--avatar-bg: var(--success-o-light)"><i class="ic_camera_green avatar_icon"></i></p>
+                      <p class="thumb" style="--avatar-bg: var(--success-o-light)"><i class="ic_AlertCheckCircle_green avatar_icon"></i></p>
                     </div>
                     <div class="avatar_info">
-                      <p class="name">Basic Fundamentals of Photography </p>
+                      <p class="name">Packages delivered</p>
+                      <p class="cost down">12.5%</p>
                     </div>
                   </div>
 
                   <div class="data_right">
-                    <p class="chip size_s type_label color_gr">3.7k Views</p>
+                    <p class="font_m text_secondary">15k</p>
                   </div>
                 </div>
 
                 <div class="widget_data">
                   <div class="avatar_data">
                     <div class="avatar type_rounded">
-                      <p class="thumb" style="--avatar-bg: var(--warning-o-light)"><i class="ic_brand_dribbble_orange avatar_icon"></i></p>
+                      <p class="thumb" style="--avatar-bg: var(--warning-o-light)"><i class="ic_percentage_orange avatar_icon"></i></p>
                     </div>
                     <div class="avatar_info">
-                      <p class="name">Advance Dribble Base Visual Design</p>
+                      <p class="name">Delivery success rate</p>
+                      <p class="cost up">35.6%</p>
                     </div>
                   </div>
 
                   <div class="data_right">
-                    <p class="chip size_s type_label color_gr">2.5k Views</p>
+                    <p class="font_m text_secondary">95%</p>
                   </div>
                 </div>
 
                 <div class="widget_data">
                   <div class="avatar_data">
                     <div class="avatar type_rounded">
-                      <p class="thumb" style="--avatar-bg: var(--error-o-light)"><i class="ic_microphone_2_red avatar_icon"></i></p>
+                      <p class="thumb"><i class="ic_clock_gr avatar_icon"></i></p>
                     </div>
                     <div class="avatar_info">
-                      <p class="name">Your First Singing Lesson</p>
+                      <p class="name">Average delivery time</p>
+                      <p class="cost down">2.15%</p>
                     </div>
                   </div>
 
                   <div class="data_right">
-                    <p class="chip size_s type_label color_gr">948 Views</p>
+                    <p class="font_m text_secondary">2.5 Days</p>
+                  </div>
+                </div>
+
+                <div class="widget_data">
+                  <div class="avatar_data">
+                    <div class="avatar type_rounded">
+                      <p class="thumb" style="--avatar-bg: var(--error-o-light)"><i class="ic_users_red avatar_icon"></i></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">Customer satisfaction</p>
+                      <p class="cost up">5.7%</p>
+                    </div>
+                  </div>
+
+                  <div class="data_right">
+                    <p class="font_m text_secondary">4.5/5</p>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div class="widget column_4">
-            <div class="widget-con upcoming">
-              <p class="upcoming_img"></p>
-
-              <div class="list_0_25">
-                <p class="font_h5">Upcoming Webinar</p>
-                <p class="font_body_2 text_secondary">Next Generation Frontend Architecture Using Layout Engine And React Native Web.</p>
-              </div>
-              <div class="flex_btw">
-                <div class="avatar_data">
-                  <div class="avatar type_rounded">
-                    <p class="thumb"><i class="ic_calendar_pr avatar_icon"></i></p>
-                  </div>
-                  <div class="avatar_info">
-                    <p class="name">17 Nov 23</p>
-                    <p class="txt">Date</p>
-                  </div>
-                </div>
-                <div class="avatar_data">
-                  <div class="avatar type_rounded">
-                    <p class="thumb"><i class="ic_clock_pr avatar_icon"></i></p>
-                  </div>
-                  <div class="avatar_info">
-                    <p class="name">32 minutes</p>
-                    <p class="txt">Duration</p>
-                  </div>
-                </div>
-              </div>
-              <button class="btn type_basic">
-                <div class="ripple js-ripple">
-                  <span class="ripple__circle"></span>
-                </div>
-                Join the event </button>
             </div>
           </div>
 
           <div class="widget column_4">
             <div class="widget-title">
               <div class="title_heading">
-                <p class="title">Assignment Progress</p>
+                <p class="title">Delivery exceptions</p>
                 <div class="heading_abs"><i class="ic_dots_vertical_td"></i></div>
               </div>
             </div>
 
-            <div class="widget-con assianment_progress">
-              <div class="widget-list">
-                <div class="widget_data">
-                  <div class="circle_prg"style="--p: 72; --c: var(--primary)">
-                    <p class="per"><strong>72</strong>%</p>
-                  </div>
-
-                  <div class="txt">
-                    <p class="font_m">User experience Design</p>
-                    <p class="font_body_2 text_secondary">120 Tasks</p>
-                  </div>
-
-                  <p class="more"><i class="ic_chevron_right_gr"></i></p>
+            <div class="widget-con delivery_exceptions">
+              <div class="canvas_delivery_exceptions">
+                <canvas id="deliveryExceptions"></canvas>
+                <div class="total">
+                  <p class="font_h4"><strong>30</strong>%</p>
+                  <p class="text_secondary">AVG. Exceptions</p>
                 </div>
+              </div>
+            </div>
+          </div>
 
-                <div class="widget_data">
-                  <div class="circle_prg"style="--p: 48; --c: var(--success)">
-                    <p class="per"><strong>48</strong>%</p>
+          <div class="widget column_4 order_countries">
+            <div class="widget-title">
+              <div class="title_heading">
+                <p class="title">Orders by Countries</p>
+                <p class="txt">62 deliveries in progress</p>
+                <div class="heading_abs"><i class="ic_dots_vertical_td"></i></div>
+              </div>
+            </div>
+            <div class="tab_group">
+              <a href="javascript:void(0)" class="tab_btn active" id="tab1">New</a>
+              <a href="javascript:void(0)" class="tab_btn" id="tab2">Preparing</a>
+              <a href="javascript:void(0)" class="tab_btn" id="tab3">Shipping</a>
+            </div>
+            <div class="widget-con" id="tab1-con">
+              <div class="timeline type_outline">
+                <div class="timeline-block">
+                  <div class="timeline-icon">
+                    <i class="ic_AlertCheckCircle_green"></i>
                   </div>
-
-                  <div class="txt">
-                    <p class="font_m">Basic fundamentals</p>
-                    <p class="font_body_2 text_secondary">32 Tasks</p>
+                  <div class="timeline-data">
+                    <p class="title success">SENDER</p>
+                    <div class="content">
+                      <p class="txt">Myrtle Ullrich</p>
+                      <p class="txt text_secondary">101 Boulder, California(CA), 95959</p>
+                    </div>
                   </div>
-
-                  <p class="more"><i class="ic_chevron_right_gr"></i></p>
                 </div>
-
-                <div class="widget_data">
-                  <div class="circle_prg"style="--p: 15; --c: var(--error)">
-                    <p class="per"><strong>15</strong>%</p>
+                <div class="timeline-block">
+                  <div class="timeline-icon">
+                    <i class="ic_map_pin_pr"></i>
                   </div>
-
-                  <div class="txt">
-                    <p class="font_m">React native components</p>
-                    <p class="font_body_2 text_secondary">182 Tasks</p>
+                  <div class="timeline-data">
+                    <p class="title primary">RECEIVER</p>
+                    <div class="content">
+                      <p class="txt">Barry Schowalter</p>
+                      <p class="txt text_secondary">939 Orange, California(CA), 92118</p>
+                    </div>
                   </div>
-
-                  <p class="more"><i class="ic_chevron_right_gr"></i></p>
                 </div>
-
-                <div class="widget_data">
-                  <div class="circle_prg"style="--p: 28; --c: var(--info)">
-                    <p class="per"><strong>28</strong>%</p>
+              </div>
+              <div class="timeline type_outline">
+                <div class="timeline-block">
+                  <div class="timeline-icon">
+                    <i class="ic_AlertCheckCircle_green"></i>
                   </div>
-
-                  <div class="txt">
-                    <p class="font_m">Basic of music theory</p>
-                    <p class="font_body_2 text_secondary">56 Tasks</p>
+                  <div class="timeline-data">
+                    <p class="title success">SENDER</p>
+                    <div class="content">
+                      <p class="txt">Myrtle Ullrich</p>
+                      <p class="txt text_secondary">101 Boulder, California(CA), 95959</p>
+                    </div>
                   </div>
-
-                  <p class="more"><i class="ic_chevron_right_gr"></i></p>
+                </div>
+                <div class="timeline-block">
+                  <div class="timeline-icon">
+                    <i class="ic_map_pin_pr"></i>
+                  </div>
+                  <div class="timeline-data">
+                    <p class="title primary">RECEIVER</p>
+                    <div class="content">
+                      <p class="txt">Barry Schowalter</p>
+                      <p class="txt text_secondary">939 Orange, California(CA), 92118</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="widget-con" id="tab2-con" style="display: none;">
+              <div class="timeline type_outline">
+                <div class="timeline-block">
+                  <div class="timeline-icon">
+                    <i class="ic_AlertCheckCircle_green"></i>
+                  </div>
+                  <div class="timeline-data">
+                    <p class="title success">SENDER</p>
+                    <div class="content">
+                      <p class="txt">Myrtle Ullrich</p>
+                      <p class="txt text_secondary">101 Boulder, California(CA), 95959</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline-block">
+                  <div class="timeline-icon">
+                    <i class="ic_map_pin_pr"></i>
+                  </div>
+                  <div class="timeline-data">
+                    <p class="title primary">RECEIVER</p>
+                    <div class="content">
+                      <p class="txt">Barry Schowalter</p>
+                      <p class="txt text_secondary">939 Orange, California(CA), 92118</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline type_outline">
+                <div class="timeline-block">
+                  <div class="timeline-icon">
+                    <i class="ic_AlertCheckCircle_green"></i>
+                  </div>
+                  <div class="timeline-data">
+                    <p class="title success">SENDER</p>
+                    <div class="content">
+                      <p class="txt">Myrtle Ullrich</p>
+                      <p class="txt text_secondary">101 Boulder, California(CA), 95959</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline-block">
+                  <div class="timeline-icon">
+                    <i class="ic_map_pin_pr"></i>
+                  </div>
+                  <div class="timeline-data">
+                    <p class="title primary">RECEIVER</p>
+                    <div class="content">
+                      <p class="txt">Barry Schowalter</p>
+                      <p class="txt text_secondary">939 Orange, California(CA), 92118</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="widget-con" id="tab3-con" style="display: none;">
+              <div class="timeline type_outline">
+                <div class="timeline-block">
+                  <div class="timeline-icon">
+                    <i class="ic_AlertCheckCircle_green"></i>
+                  </div>
+                  <div class="timeline-data">
+                    <p class="title success">SENDER</p>
+                    <div class="content">
+                      <p class="txt">Myrtle Ullrich</p>
+                      <p class="txt text_secondary">101 Boulder, California(CA), 95959</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline-block">
+                  <div class="timeline-icon">
+                    <i class="ic_map_pin_pr"></i>
+                  </div>
+                  <div class="timeline-data">
+                    <p class="title primary">RECEIVER</p>
+                    <div class="content">
+                      <p class="txt">Barry Schowalter</p>
+                      <p class="txt text_secondary">939 Orange, California(CA), 92118</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline type_outline">
+                <div class="timeline-block">
+                  <div class="timeline-icon">
+                    <i class="ic_AlertCheckCircle_green"></i>
+                  </div>
+                  <div class="timeline-data">
+                    <p class="title success">SENDER</p>
+                    <div class="content">
+                      <p class="txt">Myrtle Ullrich</p>
+                      <p class="txt text_secondary">101 Boulder, California(CA), 95959</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline-block">
+                  <div class="timeline-icon">
+                    <i class="ic_map_pin_pr"></i>
+                  </div>
+                  <div class="timeline-data">
+                    <p class="title primary">RECEIVER</p>
+                    <div class="content">
+                      <p class="txt">Barry Schowalter</p>
+                      <p class="txt text_secondary">939 Orange, California(CA), 92118</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="column_grid ">
+        <div class="column_grid">
           <div class="widget column_12">
             <div class="widget-table_title">
               <div class="title_left">
-                <p class="title">Course you are taking</p>
+                <p class="title">On route vehicles</p>
               </div>
 
-              <div class="title_right" style="width: 18.75rem;">
-                <div class="input_basic">
-                  <div class="inner">
-                    <input type="text" placeholder="Search Course" id="" value="">
-                  </div>
-                </div>
-              </div>
-              
+              <div class="heading_abs"><i class="ic_dots_vertical_td"></i></div>
             </div>
-
+              
             <div class="widget-table">
-              <table class="check_table course_table">
+              <table class="check_table route_vehicles">
                 <colgroup>
                   <col width="5%">
-                  <col width="30%">
-                  <col width="15%">
-                  <col width="25%">
-                  <col width="25%">
+                  <col width="19%">
+                  <col width="19%">
+                  <col width="19%">
+                  <col width="19%">
+                  <col width="19%">
                 </colgroup>
                 <thead>
                   <tr>
@@ -974,10 +1040,11 @@
                         <label for="checkAll" class=""><span class="check"></span></label>
                       </div>
                     </th>
-                    <th>Course Name</th>
-                    <th>Time</th>
+                    <th>LOCATION</th>
+                    <th>STARTING ROUTE</th>
+                    <th>ENDING ROUTE</th>
+                    <th>WARNINGS</th>
                     <th>progress</th>
-                    <th>Status</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -989,42 +1056,22 @@
                       </div>
                     </td>
                     <td>
-                      <div class="avatar_data">
-                        <div class="avatar type_rounded">
-                          <p class="thumb" style="--avatar-bg: var(--error-o-light)"><i class="ic_brand_angular_red avatar_icon"></i></p>
+                      <div class="flex">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><i class="ic_car_gr avatar_icon"></i></p>
                         </div>
-                        <div class="avatar_info">
-                          <p class="name">Basics of Angular</p>
-                          <div class="txt">
-                            <div class="avatar type_circle">
-                              <p class="thumb"><img src="../../images/avatar_8.png" alt=""></p>
-                            </div>
-                            Tommy Sicilia</div>
-                        </div>
+                        <p class="font_m text_primary">VOL-653CD1</p>
                       </div>
                     </td>
-                    <td>24h 13m</td>
+                    <td>Sicily, Italy</td>
+                    <td>Tallin, EST</td>
+                    <td>
+                      <p class="chip size_s type_label color_success">No Warnings</p>
+                    </td>
                     <td>
                       <div class="progress_data">
-                        <p class="per">88%</p>
                         <div class="progress"><div class="bar" style="--prg-bar: 88%"></div></div>
-                        <p class="font_body_2 text_secondary">8/12</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="table_icons">
-                        <div class="flex">
-                          <i class="ic_users_pr"></i>
-                          <p class="text_secondary">1.2k</p>
-                        </div>
-                        <div class="flex">
-                          <i class="ic_book_blue"></i>
-                          <p class="text_secondary">12</p>
-                        </div>
-                        <div class="flex">
-                          <i class="ic_video_red"></i>
-                          <p class="text_secondary">43</p>
-                        </div>
+                        <p class="">88%</p>
                       </div>
                     </td>
                   </tr>
@@ -1036,42 +1083,22 @@
                       </div>
                     </td>
                     <td>
-                      <div class="avatar_data">
-                        <div class="avatar type_rounded">
-                          <p class="thumb" style="--avatar-bg: var(--warning-o-light)"><i class="ic_palette_orange avatar_icon"></i></p>
+                      <div class="flex">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><i class="ic_car_gr avatar_icon"></i></p>
                         </div>
-                        <div class="avatar_info">
-                          <p class="name">UI/UX Design</p>
-                          <div class="txt">
-                            <div class="avatar type_circle">
-                              <p class="thumb"><img src="../../images/avatar_3.png" alt=""></p>
-                            </div>
-                            Waldemar Mannering</div>
-                        </div>
+                        <p class="font_m text_primary">VOL-243685</p>
                       </div>
                     </td>
-                    <td>234h 13m</td>
+                    <td>Rotterdam</td>
+                    <td>Brussels, Belgium</td>
+                    <td>
+                      <p class="chip size_s type_label color_warning">Temperature Not Optimal</p>
+                    </td>
                     <td>
                       <div class="progress_data">
-                        <p class="per">21%</p>
-                        <div class="progress"><div class="bar" style="--prg-bar: 21%"></div></div>
-                        <p class="font_body_2 text_secondary">12/34</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="table_icons">
-                        <div class="flex">
-                          <i class="ic_users_pr"></i>
-                          <p class="text_secondary">456</p>
-                        </div>
-                        <div class="flex">
-                          <i class="ic_book_blue"></i>
-                          <p class="text_secondary">8</p>
-                        </div>
-                        <div class="flex">
-                          <i class="ic_video_red"></i>
-                          <p class="text_secondary">16</p>
-                        </div>
+                        <div class="progress"><div class="bar" style="--prg-bar: 32%"></div></div>
+                        <p class="">32%</p>
                       </div>
                     </td>
                   </tr>
@@ -1083,42 +1110,22 @@
                       </div>
                     </td>
                     <td>
-                      <div class="avatar_data">
-                        <div class="avatar type_rounded">
-                          <p class="thumb" style="--avatar-bg: var(--info-o-light)"><i class="ic_brand_react_native_blue avatar_icon"></i></p>
+                      <div class="flex">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><i class="ic_car_gr avatar_icon"></i></p>
                         </div>
-                        <div class="avatar_info">
-                          <p class="name">React Native</p>
-                          <div class="txt">
-                            <div class="avatar type_circle">
-                              <p class="thumb"><img src="../../images/avatar_12.png" alt=""></p>
-                            </div>
-                            Louetta Esses</div>
-                        </div>
+                        <p class="font_m text_primary">VOL-348975</p>
                       </div>
                     </td>
-                    <td>47h 13m</td>
+                    <td>Abu Dhabi, UAE</td>
+                    <td>Boston, USA</td>
+                    <td>
+                      <p class="chip size_s type_label color_error">Ecu Not Responding</p>
+                    </td>
                     <td>
                       <div class="progress_data">
-                        <p class="per">23%</p>
-                        <div class="progress"><div class="bar" style="--prg-bar: 23%"></div></div>
-                        <p class="font_body_2 text_secondary">7/16</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="table_icons">
-                        <div class="flex">
-                          <i class="ic_users_pr"></i>
-                          <p class="text_secondary">2.4k</p>
-                        </div>
-                        <div class="flex">
-                          <i class="ic_book_blue"></i>
-                          <p class="text_secondary">24</p>
-                        </div>
-                        <div class="flex">
-                          <i class="ic_video_red"></i>
-                          <p class="text_secondary">89</p>
-                        </div>
+                        <div class="progress"><div class="bar" style="--prg-bar: 45%"></div></div>
+                        <p class="">45%</p>
                       </div>
                     </td>
                   </tr>
@@ -1130,42 +1137,22 @@
                       </div>
                     </td>
                     <td>
-                      <div class="avatar_data">
-                        <div class="avatar type_rounded">
-                          <p class="thumb" style="--avatar-bg: var(--success-o-light)"><i class="ic_pencil_green avatar_icon"></i></p>
+                      <div class="flex">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><i class="ic_car_gr avatar_icon"></i></p>
                         </div>
-                        <div class="avatar_info">
-                          <p class="name">Art & Drawing</p>
-                          <div class="txt">
-                            <div class="avatar type_circle">
-                              <p class="thumb"><img src="../../images/avatar_6.png" alt=""></p>
-                            </div>
-                            Tressa Gass</div>
-                        </div>
+                        <p class="font_m text_primary">VOL-934788</p>
                       </div>
                     </td>
-                    <td>458h 13m</td>
+                    <td>Schipol, Amsterdam</td>
+                    <td>Changi, Singapore</td>
+                    <td>
+                      <p class="chip size_s type_label color_warning">Temperature Not Optimal</p>
+                    </td>
                     <td>
                       <div class="progress_data">
-                        <p class="per">67%</p>
                         <div class="progress"><div class="bar" style="--prg-bar: 67%"></div></div>
-                        <p class="font_body_2 text_secondary">20/26</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="table_icons">
-                        <div class="flex">
-                          <i class="ic_users_pr"></i>
-                          <p class="text_secondary">348</p>
-                        </div>
-                        <div class="flex">
-                          <i class="ic_book_blue"></i>
-                          <p class="text_secondary"></p>45</p>
-                        </div>
-                        <div class="flex">
-                          <i class="ic_video_red"></i>
-                          <p class="text_secondary">110</p>
-                        </div>
+                        <p class="">67%</p>
                       </div>
                     </td>
                   </tr>
@@ -1177,42 +1164,22 @@
                       </div>
                     </td>
                     <td>
-                      <div class="avatar_data">
-                        <div class="avatar type_rounded">
-                          <p class="thumb" style="--avatar-bg: var(--primary-o-light)"><i class="ic_star_pr avatar_icon"></i></p>
+                      <div class="flex">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><i class="ic_car_gr avatar_icon"></i></p>
                         </div>
-                        <div class="avatar_info">
-                          <p class="name">Basic Fundamentals</p>
-                          <div class="txt">
-                            <div class="avatar type_circle">
-                              <p class="thumb"><img src="../../images/avatar_10.png" alt=""></p>
-                            </div>
-                            Ardis Balderson</div>
-                        </div>
+                        <p class="font_m text_primary">VOL-345789</p>
                       </div>
                     </td>
-                    <td>12h 13m</td>
+                    <td>Cleveland, Ohio, USA</td>
+                    <td>Cleveland, Ohio, USA</td>
+                    <td>
+                      <p class="chip size_s type_label color_info">Oil Leakage</p>
+                    </td>
                     <td>
                       <div class="progress_data">
-                        <p class="per">25%</p>
-                        <div class="progress"><div class="bar" style="--prg-bar: 25%"></div></div>
-                        <p class="font_body_2 text_secondary">2/8</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="table_icons">
-                        <div class="flex">
-                          <i class="ic_users_pr"></i>
-                          <p class="text_secondary">8.6k</p>
-                        </div>
-                        <div class="flex">
-                          <i class="ic_book_blue"></i>
-                          <p class="text_secondary">13</p>
-                        </div>
-                        <div class="flex">
-                          <i class="ic_video_red"></i>
-                          <p class="text_secondary">69</p>
-                        </div>
+                        <div class="progress"><div class="bar" style="--prg-bar: 8%"></div></div>
+                        <p class="">8%</p>
                       </div>
                     </td>
                   </tr>
@@ -1411,8 +1378,8 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <!-- <script src="../../js/chart.js"></script> -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="../../js/chartjs-plugin-datalabels@2.0.0"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+  <!-- <script src="../../js/chartjs-plugin-datalabels@2.0.0"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
   <script>
@@ -1596,18 +1563,82 @@
       $('.search_pop, body').removeClass('open')
     })
 
+      //버튼 셀럭트
+    $(".btn_list .btn").click(function(){
+      $(".btn_list ul").slideToggle();
+    })
 
-    //chart1 ================ topic interested 차트
+    
+    $(".btn_list li").click(function(){
+      const thisText = $(this).html()
+      $(".btn_list .sltText").html(thisText);
+      $(".btn_list ul").slideUp()
+    })
+
+
+    
+  //탭
+    $(".order_countries").find('.tab_btn').click(function(){
+      var t = $(this).attr('id');
+        $(this).addClass('active')
+        $(this).siblings().removeClass('active')
+        $('.order_countries .widget-con').hide();
+        $('#'+ t + '-con').fadeIn('slow');
+    })
+
+
+        //chart1 ================ vehicles overview 차트
   const data1 = {
-    labels: ["UI Design", "UX Design", "Music", "Animation", "React", 'SEO'],
+    labels: ["vehicles overview"],
     datasets: [
       {
-        label: "order",
-        data: [35, 20, 14, 12, 10, 9],
+        label: "On the way",
+        data: [39.7],
         pointRadius: 0,
-        backgroundColor: ["#7367f0", "#00bad1", "#28c76f", "#808390", "#ff4c51", "#ff9f43"],
-        borderRadius: 6,
+        backgroundColor: "#f3f2f3",
+        borderRadius: {
+          topLeft: 6,
+          topRight: 0,
+          bottomLeft: 6,
+          bottomRight: 0
+        },
         fill: false,
+        barThickness: 46,
+        borderSkipped: false,
+        
+      },
+      {
+        label: "Unloading",
+        data: [28.3],
+        pointRadius: 0,
+        backgroundColor: "#7367f0",
+        borderRadius: 0,
+        fill: false,
+        borderRadius: 0,
+        barThickness: 46,
+      },
+      {
+        label: "Loading",
+        data: [17.4],
+        pointRadius: 0,
+        backgroundColor:"#00bad1",
+        borderRadius: 0,
+        fill: false,
+        barThickness: 46,
+      },
+      {
+        label: "Waiting",
+        data: [14.6],
+        pointRadius: 0,
+        backgroundColor:  "#2f2b3d",
+        borderRadius: {
+          topLeft: 0,
+          topRight: 6,
+          bottomLeft: 0,
+          bottomRight: 6
+        },
+        fill: false,
+        barThickness: 46,
       },
 
     ],
@@ -1625,54 +1656,42 @@
       },
 
       datalabels: {
-        formatter: function(value, context) { // Show the label instead of the value
-            return context.chart.data.labels[context.dataIndex];
-        },
-        color: "#fff"
-      },
-    },
-    layout: {
-      padding: {
-        top: 0,
-        bottom: 0,
-        left: 0,
-        right: 0 ,
+        formatter: (val) => {
+                return val + '%';
+              },
+        color: ((context, args) => {
+          let datasetIndex = context.datasetIndex;
+          let colorMap = ["rgba(47, 43, 61, 0.9)", "#fff", "#fff", "#fff"];
+          return colorMap[datasetIndex];
+        })
       },
     },
     scales: {
       x:{
+        barThickness: 46,
+        stacked: true,
         grid: {
-          display: true,
-          color: "#e6e5e7",
+          display: false,
           borderColor: 'transparent',
-          drawTicks: false,
-          borderDash:  [5, 5]
         },
         ticks:{
-          padding: 16,
-          color: "rgba(47, 43, 61, 0.4)",
-          maxTicksLimit: 5,
-          callback: function(value, index, ticks) {
-            return value + '%';
-          },
-          font:{
-            size: 13,
-          }
+          display: false,
         }
       },
       y:{
+        stacked: true,
         grid:{
           display: false,
+          borderColor: 'transparent',
         },
         ticks:{
           display: false,
-          color: "rgba(47, 43, 61, 0.4)",
         }
       }
     },
   };
-  const topicInterested = document.getElementById('topicInterested')
-  const Chart1 = new Chart(topicInterested, {
+  const vehiclesOverview = document.getElementById('vehiclesOverview')
+  const Chart1 = new Chart(vehiclesOverview, {
     plugins: [ChartDataLabels],
     type: "bar",
     data: data1,
@@ -1680,65 +1699,211 @@
 })
 
 
-   // chart 2 ============= time spendings 차트
-  const data2 = {
-    labels: ["1","2","3","4","5","6"],
-    
-    datasets: [
+    // chart2 ===================== shipment statistics 차트
+    const shipmentStatistics = document.getElementById('shipmentStatistics').getContext('2d')
+    // var gradient = shipmentStatistics.createLinearGradient(0,0,0,shipmentStatistics.canvas.clientHeight)
+    var gradient = shipmentStatistics.createLinearGradient(0,0,0,200)
+    gradient.addColorStop(0, 'rgba(115, 103, 240, 0.5)')
+    gradient.addColorStop(1, 'rgba(115, 103, 240, 0)')
+    const data2 = {
+      labels: ["1 Jan","2 Jan","3 Jan","4 Jan","5 Jan","6 Jan","7 Jan","8 Jan","9 Jan","10 Jan"],
+      datasets: [
       {
-        label: "bg",
-        data: ["24","34","44","82","13","34"],
-        backgroundColor: ["#209f59","#24b364","#28c76f","#53d28c","#7edda9","#a9e9c5"],
-        borderWidth: 0,
-        cutout:"68%",
-      },
-    ],
-  };
-  const options2  = {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
-        display: false,
-      },
-      tooltip: {
-        // enabled: false,
-        callbacks: {
+              type: "line",
+              label: 'Delivery',
+              data: [23, 26, 24, 28, 29, 40, 34, 33, 24, 29],
+              pointRadius: 5,
+              pointBorderWidth: 3,
+              pointBackgroundColor:"#fff",
+              backgroundColor : gradient,
+              borderColor: '#7367f0',
+              fill: true,
+              borderWidth: 3,
+              tension: 0.4,
+              
+            },
+            {
+              type: "bar",
+              label: 'Shipment',
+              data: [38, 47, 33, 39, 32, 50, 48, 37, 42, 38],
+              pointRadius: 0,
+              backgroundColor: "#ff9f43",
+              borderColor: 'transperent',
+              fill: true,
+              borderWidth: 0,
+              borderRadius: 6,
+              categoryPercentage: 1.0,
+              barPercentage: 0.25,
+            },
+            
+          ]
+    }
+    const options2 = {
+      responsive: true,
+      maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: "bottom",
+              labels: {
+                usePointStyle: true,
+                pointStyle: "circle",
+                boxWidth : 8,
+                padding: 16,
+                color: "rgba(47, 43, 61, 0.7)",
+                font: {
+                  size: 13,
+                },
+              }
+            },
+            tooltip: {
+              enabled: false,
+            },
+
+            datalabels: {
+              display: false,
+            },
+          },
+          scales: {
+            x: {
+              grid: {
+              display: false,
+              borderColor: 'transparent',
+            },
+              ticks: { 
+                color: '#acaab1' ,
+                font:{
+                  size: 13,
+                }
+            },
+
+            },
+            y: {
+              grid: {
+                display: true,
+                color: "#e6e5e7",
+                borderColor: 'transparent',
+                drawTicks: false,
+                borderDash:  [5, 5]
+              },
+              tickWidth: 0,
+              ticks: { 
+                color: '#acaab1',
+                padding: 10,
+                maxTicksLimit: 6,
+                callback: function(value, index, ticks) {
+                    return value + '%';
+                },
+                font:{
+                  size: 13,
+                }
+              },
+              border: {
+              display: false,
+            },
+            },
+          },
+    }
+    const Chart2 = new Chart(shipmentStatistics, {
+      data: data2,
+      options: options2
+    })
+
+
+    // chart 3 ============= expense 차트
+      const data3 = {
+        labels: ["Incorrect address","Weather conditions","Federal Holidays","Damage during transit"],
+        
+        datasets: [
+          {
+            label: "bg",
+            data: ["5","6","6","13"],
+            backgroundColor: ["rgba(40, 199, 111, 1)","rgba(40, 199, 111, 0.8)","rgba(40, 199, 111, 0.6)","rgba(40, 199, 111, 0.4)"],
+            borderWidth: 0,
+            cutout:"68%",
+          },
+        ],
+      };
+      const options3  = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: "bottom",
+            title:{
+              display: true,
+              padding: 12,
+            },
+              labels: {
+                usePointStyle: true,
+                pointStyle: "circle",
+                boxWidth : 8,
+                padding: 16,
+                color: "rgba(47, 43, 61, 0.9)",
+                font: {
+                  size: 13,
+                },
+              }
+          },
+          
+          tooltip:{
+            callbacks: {
             label: function (tooltipItem, data) {
-              return tooltipItem.formattedValue + 'h';
+              return tooltipItem.formattedValue + '%';
             }
-        }
-      },
-      datalabels: {
-        display: false,
-      },
-    },
-  };
-  const timeSpendings = document.getElementById('timeSpendings');
-  const Chart2 = new Chart(timeSpendings, {
-    type: "doughnut",
-  data: data2,
-  options: options2
-})
+            }
+          }
+        },
+      };
+      const deliveryExceptions = document.getElementById('deliveryExceptions');
+      const Chart3 = new Chart(deliveryExceptions, {
+        type: "doughnut",
+        data: data3,
+        options: options3
+      })
 
 
-   // 차트 테마별 색상 변경
+    
+  // 차트 테마별 색상 변경
   function darkMode() {
     const dark = document.getElementById("dark").classList.contains('dark')
-    let chart1ScaleX = Chart1.options.scales.x;
-
+    let chart1Bar = Chart1.data.datasets;
+    let chart1Label = Chart1.options.plugins.datalabels;
+    let chart2Label = Chart2.options.plugins.legend;
+    let chart2ScaleX = Chart2.options.scales.x;
+    let chart2ScaleY = Chart2.options.scales.y;
+    let chart3Label = Chart3.options.plugins.legend;
 
     if (dark === true) {
-      chart1ScaleX.grid.color = "rgba(225, 222, 245, 0.12)"
-      chart1ScaleX.ticks.color = "rgba(225, 222, 245, 0.4)"
-      
+      chart1Bar[0].backgroundColor = "#3a3d53"
+      chart1Bar[3].backgroundColor = "#f7f4ff"
+      chart1Label.color = ((context, args) => {
+          let datasetIndex = context.datasetIndex;
+          let colorMap = ["rgba(225, 222, 245, 0.9)", "#fff", "#fff", "rgba(47, 51, 73, 1)"];
+          return colorMap[datasetIndex];
+        })
+      chart2Label.labels.color = "rgba(225, 222, 245, 0.9)"
+      chart2ScaleX.ticks.color = "rgba(225, 222, 245, 0.4)"
+      chart2ScaleY.ticks.color = "rgba(225, 222, 245, 0.4)"
+      chart2ScaleY.grid.color = "rgba(225, 222, 245, 0.12)"
+      chart3Label.labels.color = "rgba(225, 222, 245, 0.9)"
     }
     if (dark === false) {
-      chart1ScaleX.grid.color = "rgba(47, 43, 61, 0.12)"
-      chart1ScaleX.ticks.color  = "rgba(47, 43, 61, 0.4)"
-      
+      chart1Bar[0].backgroundColor = "#f3f2f3"
+      chart1Bar[3].backgroundColor = "#2f2b3d"
+      chart1Label.color = ((context, args) => {
+          let datasetIndex = context.datasetIndex;
+          let colorMap = ["rgba(47, 43, 61, 0.9)", "#fff", "#fff", "#fff"];
+          return colorMap[datasetIndex];
+        })
+      chart2Label.labels.color = "rgba(47, 43, 61, 0.9)"
+      chart2ScaleX.ticks.color = "rgba(47, 43, 61, 0.4)"
+      chart2ScaleY.ticks.color = "rgba(47, 43, 61, 0.4)"
+      chart2ScaleY.grid.color = "rgba(47, 43, 61, 0.12)"
+      chart3Label.labels.color = "rgba(225, 222, 245, 0.9)"
     }
     Chart1.update() 
+    Chart2.update() 
+    Chart3.update() 
   }
   </script>
 </body>

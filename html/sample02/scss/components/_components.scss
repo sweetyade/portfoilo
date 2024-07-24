@@ -1568,8 +1568,20 @@
     padding-block: var(--padding-6);
   }
 
+  &.privew_card {
+    border-bottom: 3px solid var(--border-c);
+    padding: var(--padding-6) var(--padding-6) 1.3125rem;
+    display: grid;
+    gap: var(--gap-1);
+
+    .flex {
+      gap: var(--gap-4);
+    }
+  }
+
   &-title {
     padding: var(--padding-6) var(--padding-6) 0;
+    position: relative;
 
     .title_heading {
       display: grid;
@@ -1605,6 +1617,17 @@
 
       &.size_l {
         @include font_h2;
+      }
+    }
+
+    .btn_list {
+      position: absolute;
+      top: var(--padding-6);
+      right: var(--padding-6);
+
+      ul {
+        max-height: 12.5rem;
+        overflow-y: auto;
       }
     }
   }

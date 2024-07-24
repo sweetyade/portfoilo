@@ -440,9 +440,14 @@ button {
     width: var(--prg-bar);
   }
 }
-@keyframes p {
+@keyframes barlabel {
   0% {
-    --p: 0;
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: var(--w);
+    opacity: 1;
   }
 }
 /***************************************************************
@@ -1636,6 +1641,10 @@ body {
   background-image: url(../images/system/car.svg);
 }
 
+.ic_car_gr {
+  background-image: url(../images/system/car_gr.svg);
+}
+
 .ic_user {
   background-image: url(../images/system/user.svg);
 }
@@ -1646,6 +1655,10 @@ body {
 
 .ic_users {
   background-image: url(../images/system/users.svg);
+}
+
+.ic_users_red {
+  background-image: url(../images/system/users_red.svg);
 }
 
 .ic_users_pr {
@@ -1680,8 +1693,20 @@ body {
   background-image: url(../images/system/calendar_pr.svg);
 }
 
+.ic_clock {
+  background-image: url(../images/system/clock.svg);
+}
+
+.ic_clock_gr {
+  background-image: url(../images/system/clock_gr.svg);
+}
+
 .ic_clock_pr {
   background-image: url(../images/system/clock_pr.svg);
+}
+
+.ic_clock_blue {
+  background-image: url(../images/system/clock_blue.svg);
 }
 
 .ic_copy {
@@ -1778,6 +1803,10 @@ body {
 
 .ic_box {
   background-image: url(../images/system/box.svg);
+}
+
+.ic_box_pr {
+  background-image: url(../images/system/box_pr.svg);
 }
 
 .ic_circle {
@@ -2016,6 +2045,22 @@ body {
   background-image: url(../images/system/truck.svg);
 }
 
+.ic_truck_pr {
+  background-image: url(../images/system/truck_pr.svg);
+}
+
+.ic_truck_blue {
+  background-image: url(../images/system/truck_blue.svg);
+}
+
+.ic_git_fork_red {
+  background-image: url(../images/system/git_fork_red.svg);
+}
+
+.ic_percentage_orange {
+  background-image: url(../images/system/percentage_orange.svg);
+}
+
 .ic_AlertReportProblem {
   background-image: url(../images/system/AlertReportProblem.svg);
 }
@@ -2164,6 +2209,14 @@ body {
   background-image: url(../images/system/Check_orange.svg);
 }
 
+.ic_arrow_down_circle {
+  background-image: url(../images/system/arrow_down_circle.svg);
+}
+
+.ic_arrow_up_circle {
+  background-image: url(../images/system/arrow_up_circle.svg);
+}
+
 /*-------- color ------------- */
 .icc_rocket_gr {
   background-image: url(../images/color/rocket_gr.svg);
@@ -2221,6 +2274,9 @@ body {
 }
 :root.dark .ic_car {
   background-image: url(../images/system/car_d.svg);
+}
+:root.dark .ic_car_gr {
+  background-image: url(../images/system/car_gr_d.svg);
 }
 :root.dark .ic_user {
   background-image: url(../images/system/user_d.svg);
@@ -2434,6 +2490,18 @@ body {
 }
 :root.dark .ic_eye_gr {
   background-image: url(../images/system/eye_gr_d.svg);
+}
+:root.dark .ic_clock {
+  background-image: url(../images/system/clock_d.svg);
+}
+:root.dark .ic_clock_gr {
+  background-image: url(../images/system/clock_gr_d.svg);
+}
+:root.dark .ic_arrow_down_circle {
+  background-image: url(../images/system/arrow_down_circle_d.svg);
+}
+:root.dark .ic_arrow_up_circle {
+  background-image: url(../images/system/arrow_up_circle_d.svg);
 }
 :root.dark .icc_rocket_gr {
   background-image: url(../images/color/rocket_d.svg);
@@ -5331,8 +5399,18 @@ button:disabled {
   box-shadow: none;
   padding-block: var(--padding-6);
 }
+.widget.privew_card {
+  border-bottom: 3px solid var(--border-c);
+  padding: var(--padding-6) var(--padding-6) 1.3125rem;
+  display: grid;
+  gap: var(--gap-1);
+}
+.widget.privew_card .flex {
+  gap: var(--gap-4);
+}
 .widget-title {
   padding: var(--padding-6) var(--padding-6) 0;
+  position: relative;
 }
 .widget-title .title_heading {
   display: grid;
@@ -5374,6 +5452,15 @@ button:disabled {
   font-size: var(--font-38);
   font-weight: var(--font-medium);
   line-height: 3.5rem;
+}
+.widget-title .btn_list {
+  position: absolute;
+  top: var(--padding-6);
+  right: var(--padding-6);
+}
+.widget-title .btn_list ul {
+  max-height: 12.5rem;
+  overflow-y: auto;
 }
 .widget .heading_abs {
   position: absolute;
@@ -7322,6 +7409,93 @@ body.open {
 .widget.time_spendings .canvas_time_spendings .total {
   position: absolute;
   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.widget .vehicles_overview .labels {
+  display: flex;
+  align-items: center;
+}
+.widget .vehicles_overview .labels p {
+  width: var(--w);
+  color: var(--text-secondary);
+  position: relative;
+  animation: barlabel 0.85s ease-out;
+  opacity: 1;
+  white-space: nowrap;
+}
+.widget .vehicles_overview .labels p::after {
+  content: "";
+  display: block;
+  width: 2px;
+  background-color: var(--divider);
+  height: 0.625rem;
+  margin-top: var(--padding-1);
+}
+.widget .vehicles_overview .canvas_vehicles_overview {
+  height: 94px;
+}
+.widget .vehicles_overview .list_0_75 .flex_btw {
+  border-bottom: 1px solid var(--divider);
+  padding-bottom: var(--gap-3);
+}
+.widget .vehicles_overview .list_0_75 .list_name {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-2);
+}
+.widget .vehicles_overview .list_0_75 .list_name i {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.widget .vehicles_overview .list_0_75 .list_per {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--gap-6);
+}
+.widget .vehicles_overview .list_0_75 .list_per p {
+  min-width: 46px;
+}
+.widget .delivery_performance {
+  height: calc(100% - 4.625rem);
+}
+.widget .delivery_performance .widget-list {
+  height: 100%;
+}
+.widget .delivery_performance .cost {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.widget .delivery_performance .avatar .thumb .avatar_icon {
+  width: 1.625rem;
+  height: 1.625rem;
+}
+.widget .route_vehicles tbody td {
+  color: var(--text-secondary);
+}
+.widget .route_vehicles .flex {
+  gap: var(--gap-4);
+}
+.widget .route_vehicles .avatar .thumb .avatar_icon {
+  width: 1.75rem;
+}
+.widget .route_vehicles .progress_data .progress {
+  height: 0.5rem;
+}
+.widget .shipment_statistics .canvas_shipment_statistics {
+  height: 18.125rem;
+}
+.widget .delivery_exceptions .canvas_delivery_exceptions {
+  height: 25.3125rem;
+  position: relative;
+}
+.widget .delivery_exceptions .canvas_delivery_exceptions .total {
+  position: absolute;
+  top: 38%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
