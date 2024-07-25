@@ -893,6 +893,11 @@
       background-position: center;
       background-size: cover;
     }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .badge {
@@ -918,6 +923,11 @@
       bottom: 0;
       right: 0;
     }
+  }
+
+  &.size_s {
+    width: 1.875rem;
+    height: 1.875rem;
   }
 }
 
@@ -1812,6 +1822,26 @@
         width: 100%;
         height: 100%;
       }
+
+      &.size_s {
+        width: 1.875rem;
+        height: 1.875rem;
+
+        .thumb .avatar_icon {
+          width: 1.125rem;
+          height: 1.125rem;
+        }
+      }
+
+      &.size_38 {
+        width: 2.375rem;
+        height: 2.375rem;
+
+        img {
+          max-width: 1.875rem;
+          max-height: 1.875rem;
+        }
+      }
     }
 
     .avatar_list .avatar {
@@ -1926,6 +1956,33 @@
     &.size_l {
       width: 2.75rem;
       height: 2.75rem;
+    }
+  }
+
+  .widget_smr {
+    @include flextopbtw;
+    width: 100%;
+    padding-inline: var(--padding-6);
+    border-right: 1px solid var(--divider);
+
+    .list_0_25 {
+      width: calc(100% - 2.75rem);
+    }
+
+    .avatar {
+      width: 2.75rem;
+      height: 2.75rem;
+
+      .thumb {
+        .avatar_icon {
+          width: 1.75rem;
+          height: 1.75rem;
+        }
+      }
+    }
+
+    .flex {
+      gap: var(--gap-2);
     }
   }
 }
