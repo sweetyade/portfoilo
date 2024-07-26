@@ -6,9 +6,10 @@
   <title>3.eCommerce - 3-2.Product List</title>
 
   <!-- css -->
-  <link href="../../css/froala_editor.css" rel="stylesheet" type="text/css" />
+  
   <!-- <link rel="stylesheet" href="../../css/fileUpload.css"> -->
   <link rel="stylesheet" href="../../css/style.css">
+  <link href="../../css/froala_editor.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
   <div class="body_wrap">
@@ -584,7 +585,7 @@
         </div>
 
         <div class="container_grid ">
-          <div class="column_9 list_1_5">
+          <div class="column_8 list_1_5">
             <div class="widget">
               <div class="content_title">
                 <p class="title">Product information</p>
@@ -684,24 +685,146 @@
                 <p class="title">Inventory</p>
               </div>
 
-              <div class="content_body flex_topbtw">
-                <div class="list">
-                  <ul class="type_left">
-                    <li class="active"><i class="ic_user"></i><a href="javascript:void(0)">Restock</a></li>
-                    <li><i class="ic_brand_gitlab"></i><a href="javascript:void(0)">Shipping</a></li>
-                    <li><i class="ic_settings"></i><a href="javascript:void(0)">Global Delivery</a></li>
-                    <li><i class="ic_wallet"></i><a href="javascript:void(0)">Attributes</a></li>
-                    <li><i class="ic_help"></i><a href="javascript:void(0)">Advanced</a></li>
-                  </ul>
+              <div class="content_body inventory">
+                <div class="tab_group_fill type_vertical">
+                  <a href="javascript:void(0)" class="tab_btn active"><i class="ic_box"></i>Restock</a>
+                  <a href="javascript:void(0)" class="tab_btn"><i class="ic_car"></i>Shipping</a>
+                  <a href="javascript:void(0)" class="tab_btn"><i class="ic_world"></i>Global Delivery</a>
+                  <a href="javascript:void(0)" class="tab_btn"><i class="ic_link"></i>Attributes</a>
+                  <a href="javascript:void(0)" class="tab_btn"><i class="ic_lock"></i>Advanced</a>
                 </div>
+
+                <div class="list_1 tab_con">
+                  <p class="font_m">Options</p>
+                  <div class="input_wrap">
+                    <div class="input_basic">
+                      <div class="inner">
+                        <input type="text" class="inputPass" placeholder="Add Quantity" id="addq" value="">
+                        <label for="addq" class="input_label">Add to stock</label>
+                      </div>
+                    </div>
+                    <button class="btn type_basic">
+                      <div class="ripple js-ripple">
+                        <span class="ripple__circle"></span>
+                      </div>
+                      Confirm
+                    </button>
+                  </div>
+                  <div class="list_0_5">
+                    <p>Product in stock now: 8</p>
+                    <p>Product in transit: 62</p>
+                    <p>Last time restocked: 24th June, 2023</p>
+                    <p>Total stock over lifetime: 2,430</p>
+                  </div>
+                </div>
+
+                <div class="tab_con" style="display: none"><p class="font_m">Shipping</p></div>
+                <div class="tab_con" style="display: none"><p class="font_m">Global Delivery</p></div>
+                <div class="tab_con" style="display: none"><p class="font_m">Attributes</p></div>
+                <div class="tab_con" style="display: none"><p class="font_m">Advanced</p></div>
               </div>
             </div>
 
           </div>
-          <div class="column_3">
+
+          <div class="column_4">
+            <div class="widget mb_1_5">
+              <div class="content_title">
+                <p class="title">Pricing</p>
+              </div>
+
+              <div class="content_body pricing">
+                <div class="list_1_5">
+                  <div class="input_basic">
+                    <div class="inner">
+                      <input type="text" class="" placeholder="Price" id="price" value="">
+                      <label for="price" class="input_label">Base Price</label>
+                    </div>
+                  </div>
+                  <div class="input_basic">
+                    <div class="inner">
+                      <input type="text" class="" placeholder="Discounted Price" id="disprice" value="">
+                      <label for="disprice" class="input_label">Discounted Price</label>
+                    </div>
+                  </div>
+                  <div class="input_check">
+                    <input type="checkbox" class="check_input" id="checkbox1" checked="">
+                    <label for="checkbox1" class=""><span class="check"></span><span class="check_label">Charge tax on this product</span></label>
+                  </div>
+                </div>
+
+                <div class="input_switch">
+                  <input type="checkbox" class="" id="swtich3" checked="">
+                  <label for="swtich3" class="switch_label">
+                    <span class="swtich_btn"></span>
+                    <span class="switch_txt">In stock</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
             <div class="widget">
               <div class="content_title">
-                <p class="title">Inventory</p>
+                <p class="title">Organize</p>
+              </div>
+
+              <div class="content_body organize">
+                <div class="list_1_5">
+                  <div class="input_basic">
+                    <div class="inner">
+                      <select name="" id="vendor_s">
+                        <option value="">Select Vendor</option>
+                        <option value="">셀렉트 옵션2</option>
+                        <option value="">셀렉트 옵션3</option>
+                      </select>
+                      <label for="vendor_s" class="input_label">Vendor</label>
+                    </div>
+                  </div>
+
+                  <div class="input_wrap">
+                    <div class="input_basic">
+                      <div class="inner">
+                        <select name="" id="cate_s">
+                          <option value="">Select Category</option>
+                          <option value="">셀렉트 옵션2</option>
+                          <option value="">셀렉트 옵션3</option>
+                        </select>
+                        <label for="cate_s" class="input_label">Category</label>
+                      </div>
+                    </div>
+                    <div class="btn_icon type_label">
+                      <img src="../../images/system/plus_pr.svg" alt="">
+                    </div>
+                  </div>
+                  
+                  <div class="input_basic">
+                    <div class="inner">
+                      <select name="" id="coll_s">
+                        <option value="">Select Collection</option>
+                        <option value="">셀렉트 옵션2</option>
+                        <option value="">셀렉트 옵션3</option>
+                      </select>
+                      <label for="coll_s" class="input_label">Collection</label>
+                    </div>
+                  </div>
+
+                  <div class="input_basic">
+                    <div class="inner">
+                      <select name="" id="status_s">
+                        <option value="">Published</option>
+                        <option value="">셀렉트 옵션2</option>
+                        <option value="">셀렉트 옵션3</option>
+                      </select>
+                      <label for="status_s" class="input_label">Status</label>
+                    </div>
+                  </div>
+
+                  <div class="input_basic">
+                    <div class="inner">
+                      <input type="text" placeholder="Enter Tags" id="" value="">
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1084,6 +1207,21 @@
     $(function(){
       $("#fileUpload").fileUpload();
     });
+
+
+     //인벤토리 탭
+     $(".inventory").find('.tab_btn').click(function(e){
+        if($(this).hasClass('none')){
+          e.preventDefault();
+        }else{
+          const tabIndex = $(".tab_btn").index(this);
+          $(this).addClass('active')
+          $(this).siblings().removeClass('active');
+          $(".tab_con").hide()
+          $(".tab_con").eq(tabIndex).fadeIn("slow"); 
+          return false;
+        }
+      })
 
   </script>
 </body>

@@ -10,7 +10,7 @@
   --primary-dark: #675dd8;
   --primary-700: #6258cc;
   --primary-800: #5c52c0;
-  --primary-900: #564db4;
+  --primary-900: rgb(86, 77, 180);
   --primary-o-lighter: rgba(115, 103, 240, 0.08);
   --primary-o-light: rgba(115, 103, 240, 0.16);
   --primary-o: rgba(115, 103, 240, 0.24);
@@ -1655,6 +1655,14 @@ body {
   background-image: url(../images/system/school.svg);
 }
 
+.ic_world {
+  background-image: url(../images/system/world.svg);
+}
+
+.ic_link {
+  background-image: url(../images/system/link.svg);
+}
+
 .ic_car {
   background-image: url(../images/system/car.svg);
 }
@@ -2548,6 +2556,12 @@ body {
 }
 :root.dark .ic_upload_gr {
   background-image: url(../images/system/upload_gr_d.svg);
+}
+:root.dark .ic_world {
+  background-image: url(../images/system/world_d.svg);
+}
+:root.dark .ic_link {
+  background-image: url(../images/system/link_d.svg);
 }
 :root.dark .icc_rocket_gr {
   background-image: url(../images/color/rocket_d.svg);
@@ -3724,7 +3738,6 @@ select:disabled ~ .input_label {
 .input_check label {
   display: flex;
   align-items: center;
-  gap: var(--gap-2);
 }
 .input_check .check_label {
   font-size: var(--font-15);

@@ -9,7 +9,7 @@
   --primary-dark: #675dd8;
   --primary-700: #6258cc;
   --primary-800: #5c52c0;
-  --primary-900: #564db4;
+  --primary-900: rgb(86, 77, 180);
   --primary-o-lighter: rgba(115, 103, 240, 0.08);
   --primary-o-light: rgba(115, 103, 240, 0.16);
   --primary-o: rgba(115, 103, 240, 0.24);
@@ -1654,6 +1654,14 @@ body {
   background-image: url(../images/system/school.svg);
 }
 
+.ic_world {
+  background-image: url(../images/system/world.svg);
+}
+
+.ic_link {
+  background-image: url(../images/system/link.svg);
+}
+
 .ic_car {
   background-image: url(../images/system/car.svg);
 }
@@ -2548,6 +2556,12 @@ body {
 :root.dark .ic_upload_gr {
   background-image: url(../images/system/upload_gr_d.svg);
 }
+:root.dark .ic_world {
+  background-image: url(../images/system/world_d.svg);
+}
+:root.dark .ic_link {
+  background-image: url(../images/system/link_d.svg);
+}
 :root.dark .icc_rocket_gr {
   background-image: url(../images/color/rocket_d.svg);
 }
@@ -2974,7 +2988,6 @@ select:disabled ~ .input_label {
 .input_check label {
   display: flex;
   align-items: center;
-  gap: var(--gap-2);
 }
 .input_check .check_label {
   font-size: var(--font-15);
@@ -6618,6 +6631,89 @@ body.open {
 
 .content_body {
   padding: 0 var(--padding-6) var(--padding-6);
+}
+.content_body.inventory {
+  display: flex;
+  align-items: flex-start;
+}
+.content_body.inventory .tab_group_fill {
+  width: 14rem;
+  border-right: 1px solid var(--divider);
+  padding-right: var(--padding-6);
+}
+.content_body.inventory .tab_group_fill .tab_btn {
+  justify-content: flex-start;
+}
+.content_body.inventory .tab_group_fill .tab_btn i {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-size: cover;
+}
+.content_body.inventory .tab_group_fill .tab_btn:hover .ic_box {
+  background-image: url(../images/system/box_pr.svg);
+}
+.content_body.inventory .tab_group_fill .tab_btn:hover .ic_car {
+  background-image: url(../images/system/car_pr.svg);
+}
+.content_body.inventory .tab_group_fill .tab_btn:hover .ic_world {
+  background-image: url(../images/system/world_pr.svg);
+}
+.content_body.inventory .tab_group_fill .tab_btn:hover .ic_link {
+  background-image: url(../images/system/link_pr.svg);
+}
+.content_body.inventory .tab_group_fill .tab_btn:hover .ic_lock {
+  background-image: url(../images/system/lock_pr.svg);
+}
+.content_body.inventory .tab_group_fill .tab_btn.active .ic_box {
+  background-image: url(../images/system/box_w.svg);
+}
+.content_body.inventory .tab_group_fill .tab_btn.active .ic_car {
+  background-image: url(../images/system/car_w.svg);
+}
+.content_body.inventory .tab_group_fill .tab_btn.active .ic_world {
+  background-image: url(../images/system/world_w.svg);
+}
+.content_body.inventory .tab_group_fill .tab_btn.active .ic_link {
+  background-image: url(../images/system/link_w.svg);
+}
+.content_body.inventory .tab_group_fill .tab_btn.active .ic_lock {
+  background-image: url(../images/system/lock_w.svg);
+}
+.content_body.inventory .tab_con {
+  width: calc(100% - 14rem);
+  padding-left: var(--padding-6);
+}
+.content_body.inventory .tab_con .input_wrap {
+  gap: var(--gap-4);
+}
+.content_body.inventory .tab_con .input_wrap .input_basic {
+  width: calc(100% - 113px);
+}
+.content_body.inventory .tab_con .input_wrap button {
+  width: 6.0625rem;
+}
+.content_body.pricing .input_switch {
+  border-top: 1px solid var(--divider);
+  padding-top: var(--padding-2);
+  margin-top: var(--padding-2);
+  justify-content: space-between;
+}
+.content_body.pricing .input_switch .switch_label {
+  width: 100%;
+  justify-content: space-between;
+}
+.content_body.pricing .input_switch .swtich_btn {
+  order: 2;
+}
+.content_body.pricing .input_switch .switch_txt {
+  order: 1;
+  color: var(--text-secondary);
+}
+.content_body.organize .input_wrap {
+  gap: var(--gap-4);
+}
+.content_body.organize .input_wrap .input_basic {
+  width: calc(100% - 3.375rem);
 }
 
 .widget .analytics_slide {

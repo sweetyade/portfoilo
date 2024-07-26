@@ -74,6 +74,111 @@ body {
 
 .content_body {
   padding: 0 var(--padding-6) var(--padding-6);
+
+  &.inventory {
+    @include flextop;
+
+    .tab_group_fill {
+      width: 14rem;
+      border-right: 1px solid var(--divider);
+      padding-right: var(--padding-6);
+
+      .tab_btn {
+        justify-content: flex-start;
+
+        i {
+          width: 1.125rem;
+          height: 1.125rem;
+          background-size: cover;
+        }
+
+        &:hover {
+          .ic_box {
+            background-image: url(../images/system/box_pr.svg);
+          }
+          .ic_car {
+            background-image: url(../images/system/car_pr.svg);
+          }
+          .ic_world {
+            background-image: url(../images/system/world_pr.svg);
+          }
+          .ic_link {
+            background-image: url(../images/system/link_pr.svg);
+          }
+          .ic_lock {
+            background-image: url(../images/system/lock_pr.svg);
+          }
+        }
+
+        &.active {
+          .ic_box {
+            background-image: url(../images/system/box_w.svg);
+          }
+          .ic_car {
+            background-image: url(../images/system/car_w.svg);
+          }
+          .ic_world {
+            background-image: url(../images/system/world_w.svg);
+          }
+          .ic_link {
+            background-image: url(../images/system/link_w.svg);
+          }
+          .ic_lock {
+            background-image: url(../images/system/lock_w.svg);
+          }
+        }
+      }
+    }
+
+    .tab_con {
+      width: calc(100% - 14rem);
+      padding-left: var(--padding-6);
+
+      .input_wrap {
+        gap: var(--gap-4);
+
+        .input_basic {
+          width: calc(100% - 113px);
+        }
+        button {
+          width: 6.0625rem;
+        }
+      }
+    }
+  }
+
+  &.pricing {
+    .input_switch {
+      border-top: 1px solid var(--divider);
+      padding-top: var(--padding-2);
+      margin-top: var(--padding-2);
+      justify-content: space-between;
+
+      .switch_label {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .swtich_btn {
+        order: 2;
+      }
+
+      .switch_txt {
+        order: 1;
+        color: var(--text-secondary);
+      }
+    }
+  }
+
+  &.organize {
+    .input_wrap {
+      gap: var(--gap-4);
+
+      .input_basic {
+        width: calc(100% - 3.375rem);
+      }
+    }
+  }
 }
 
 .widget {
