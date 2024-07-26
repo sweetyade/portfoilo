@@ -1617,3 +1617,39 @@ body {
     }
   }
 }
+
+.category_list {
+  table {
+    thead {
+      th {
+        &.text_right {
+          text-align: right;
+        }
+
+        &.text_center {
+          text-align: center;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    tbody {
+      td {
+        color: var(--text-secondary);
+
+        .name {
+          color: var(--text-primary);
+          font-weight: var(--font-medium);
+        }
+      }
+    }
+  }
+
+  .avatar {
+    width: 2.375rem;
+    height: 2.375rem;
+  }
+}
