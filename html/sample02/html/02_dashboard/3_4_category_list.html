@@ -578,7 +578,7 @@
                   </div>
                 </div>
 
-                <button class="btn type_basic">
+                <button class="btn type_basic popOpen">
                   <div class="ripple js-ripple">
                     <span class="ripple__circle"></span>
                   </div>
@@ -1026,6 +1026,90 @@
   </div>
   
 
+  <!-- add category -->
+  <div class="side_pop">
+    <div class="overlay"></div>
+
+    <div class="pop_con">
+      <p class="title">Add Category</p>
+
+      <div class="pop_body">
+        <div class="list_1_5">
+          <div class="input_basic">
+            <div class="inner">
+              <input type="txt" class="" placeholder="Enter category title" id="passcheck6" value="">
+              <label for="passcheck6" class="input_label">Title</label>
+            </div>
+          </div>
+          <div class="input_basic">
+            <div class="inner">
+              <input type="txt" class="" placeholder="Enter slug" id="passcheck6" value="">
+              <label for="passcheck6" class="input_label">Slug</label>
+            </div>
+          </div>
+          <div class="input_wrap">
+            <div class="input_basic">
+              <div class="inner">
+                <input type="txt" class="" placeholder="No file chosen" id="passcheck6" value="">
+                <label for="passcheck6" class="input_label">Attachment</label>
+              </div>
+            </div>
+  
+            <button class="btn type_label">
+              <div class="ripple js-ripple">
+                <span class="ripple__circle"></span>
+              </div>
+              Choose
+            </button>
+          </div>
+          <div class="input_basic">
+            <div class="inner">
+              <select name="" id="select3">
+                <option value="">Select parent Category</option>
+                <option value="">셀렉트 옵션2</option>
+                <option value="">셀렉트 옵션3</option>
+              </select>
+              <label for="select3" class="input_label">Parent category</label>
+            </div>
+          </div>
+
+          <div class="editor">
+            <label for="input_no" class="input_label">Description (Optional)</label>
+            <div id="editorjs"></div>
+          </div>
+  
+          <div class="input_basic">
+            <div class="inner">
+              <select name="" id="select3">
+                <option value="">Select category status</option>
+                <option value="">셀렉트 옵션2</option>
+                <option value="">셀렉트 옵션3</option>
+              </select>
+              <label for="select3" class="input_label">Select category status</label>
+            </div>
+          </div>
+  
+          <div class="btn_wrap">
+            <button class="btn type_basic">
+              <div class="ripple js-ripple">
+                <span class="ripple__circle"></span>
+              </div>
+              Add
+            </button>
+            <button class="btn type_label color_error">
+              <div class="ripple js-ripple">
+                <span class="ripple__circle"></span>
+              </div>
+              Discard
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <i class="ic_x_gr closePop"></i>
+    </div>
+  </div>
+
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -1220,34 +1304,24 @@
 
     //텍스트 에디터
     var editor = new FroalaEditor('#editorjs', {
-      toolbarButtons : ['bold', 'italic', 'underline', 'alignLeft', 'alignCenter', 'formatOLSimple', 'alignRight'],
+      toolbarButtons : ['bold', 'italic', 'underline', 'alignLeft', 'alignCenter', 'alignRight'],
       charCounterCount: false,
       attribution: false,
       wordCounterCount: false,
       quickInsertEnabled: false,
-      placeholderText: 'Keep your account secure with authentication step.',
+      toolbarBottom: true,
+      placeholderText: 'Enter category description...',
       heightMax : 100,
     });
 
-    //파일 업로드
-    $(function(){
-      $("#fileUpload").fileUpload();
-    });
 
+    //팝업
+    $(".popOpen").click(function(){
+      $(".side_pop, body").addClass("open")
+    })
 
-     //인벤토리 탭
-     $(".inventory").find('.tab_btn').click(function(e){
-        if($(this).hasClass('none')){
-          e.preventDefault();
-        }else{
-          const tabIndex = $(".tab_btn").index(this);
-          $(this).addClass('active')
-          $(this).siblings().removeClass('active');
-          $(".tab_con").hide()
-          $(".tab_con").eq(tabIndex).fadeIn("slow"); 
-          return false;
-        }
-      })
-
+    $(".closePop, overlay").click(function(){
+      $(".side_pop, body").removeClass("open")
+    })
   </script>
 </body>

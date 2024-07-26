@@ -3679,7 +3679,7 @@ button:disabled {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: var(--gap-6);
+  gap: var(--gap-4);
 }
 
 input:not([type=checkgox]),
@@ -6235,6 +6235,77 @@ select:disabled ~ .input_label {
 .search_pop.open {
   opacity: 1;
   z-index: var(--z-fixed);
+}
+
+.side_pop {
+  opacity: 0;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  transition: opacity 0.3s ease;
+}
+.side_pop .overlay {
+  opacity: 1;
+}
+.side_pop .pop_con {
+  width: 23.125rem;
+  height: 100%;
+  position: fixed;
+  right: -100%;
+  top: 0;
+  background-color: var(--paper-bg);
+  transition: right 0.3s ease-in-out;
+}
+.side_pop .pop_con .title {
+  border-bottom: 1px solid var(--divider);
+  padding: var(--padding-6);
+  font-size: var(--font-18);
+  font-weight: var(--font-medium);
+  line-height: 1.75rem;
+}
+.side_pop .pop_con .pop_body {
+  padding: var(--padding-6);
+}
+.side_pop .pop_con .closePop {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: cover;
+  top: 1.625rem;
+  right: 1.5rem;
+  cursor: pointer;
+}
+.side_pop .pop_con .editor .fr-toolbar .fr-btn-grp {
+  margin: 0;
+}
+.side_pop .pop_con .editor .fr-toolbar .fr-command.fr-btn {
+  margin: 0;
+  height: 34px;
+}
+.side_pop .pop_con .editor .fr-toolbar .fr-command.fr-btn svg.fr-svg {
+  height: 20px;
+  width: 24px;
+  margin: 0 7px;
+}
+.side_pop .pop_con .editor .fr-btn-grp {
+  float: right;
+}
+.side_pop .pop_con .editor .fr-box.fr-basic .fr-element {
+  padding: 7px 14px;
+}
+.side_pop .pop_con .editor .fr-wrapper.show-placeholder .fr-placeholder {
+  top: 0 !important;
+  left: 0 !important;
+}
+.side_pop.open {
+  opacity: 1;
+  z-index: var(--z-fixed);
+}
+.side_pop.open .pop_con {
+  right: 0;
 }
 
 /***************************************************************
