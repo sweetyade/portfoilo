@@ -54,6 +54,11 @@ body {
   @include flexbtw;
   padding-bottom: var(--padding-6);
 
+  .font_h4 {
+    @include flex;
+    gap: var(--gap-2);
+  }
+
   .flex_right {
     gap: var(--gap-4);
   }
@@ -66,6 +71,12 @@ body {
 .content_title {
   padding: var(--padding-6);
   @include flexbtw;
+  position: relative;
+
+  .heading_abs {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
 
   .title {
     @include font_h5;
@@ -1669,6 +1680,64 @@ body {
 
     & + .font_m {
       color: var(--c);
+    }
+  }
+}
+
+.order_detail_total {
+  padding: var(--padding-6);
+  @include flex;
+  align-items: flex-end;
+  flex-direction: column;
+
+  .flex_btw {
+    gap: var(--gap-12);
+
+    .font_m {
+      width: 3.25rem;
+    }
+  }
+}
+
+.shipping_activity {
+  .now + .timeline-block {
+    &::before {
+      background: none;
+    }
+    .timeline-icon {
+      .icon {
+        background-color: var(--secondary);
+        box-shadow: 0 0 0 3px var(--secondary-o-light);
+      }
+    }
+  }
+
+  .now,
+  .timeline-block:has(~ .now) {
+    .icon {
+      background-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-o-light);
+    }
+  }
+
+  .now {
+    &.timeline-block {
+      &::before {
+        background-color: transparent;
+        background-image: url(../images/timeline_bg.svg);
+      }
+    }
+  }
+}
+
+:root.dark {
+  .shipping_activity {
+    .now {
+      &.timeline-block {
+        &::before {
+          background-image: url(../images/timeline_bg_d.svg);
+        }
+      }
     }
   }
 }

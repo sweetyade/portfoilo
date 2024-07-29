@@ -1647,6 +1647,10 @@ body {
   background-image: url(../images/system/shopping_cart_pr.svg);
 }
 
+.ic_shopping_cart_green {
+  background-image: url(../images/system/shopping_cart_green.svg);
+}
+
 .ic_shopping_cart_gr {
   background-image: url(../images/system/shopping_cart_gr.svg);
 }
@@ -4881,6 +4885,10 @@ select:disabled ~ .input_label {
   width: 100%;
   height: 100%;
 }
+.avatar .thumb i {
+  width: 1.5rem;
+  height: 1.5rem;
+}
 .avatar .badge {
   width: 0.75rem;
   height: 0.75rem;
@@ -5379,14 +5387,6 @@ select:disabled ~ .input_label {
 .timeline {
   position: relative;
 }
-.timeline::before {
-  content: "";
-  width: 2px;
-  height: 100%;
-  background-color: var(--divider);
-  position: absolute;
-  left: 9px;
-}
 .timeline-block {
   display: flex;
   align-items: flex-start;
@@ -5394,6 +5394,25 @@ select:disabled ~ .input_label {
   width: 100%;
   position: relative;
   z-index: 1;
+}
+.timeline-block::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: var(--divider);
+  position: absolute;
+  left: 9px;
+  z-index: -1;
+}
+.timeline-block.color_pr::before {
+  background-color: var(--primary);
+}
+.timeline-block.type_dashed::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: transparent;
+  background-image: url(../images/timeline_bg.svg);
 }
 .timeline-icon {
   height: 2.25rem;
@@ -5419,6 +5438,10 @@ select:disabled ~ .input_label {
 .timeline-icon .icon.color_success {
   background-color: var(--success);
   box-shadow: 0 0 0 3px var(--success-o-light);
+}
+.timeline-icon .icon.color_gr {
+  background-color: var(--secondary);
+  box-shadow: 0 0 0 3px var(--secondary-o-light);
 }
 .timeline-icon i {
   width: 1.25rem;
@@ -5473,20 +5496,6 @@ select:disabled ~ .input_label {
   height: 100%;
   background-color: transparent;
   background-image: url(../images/timeline_bg.svg);
-}
-.timeline.type_outline .timeline-icon .icon {
-  background-color: transparent;
-  border: 2px solid transparent;
-  box-shadow: none;
-}
-.timeline.type_outline .timeline-icon .icon.color_pr {
-  border-color: var(--primary);
-}
-.timeline.type_outline .timeline-icon .icon.color_info {
-  border-color: var(--info);
-}
-.timeline.type_outline .timeline-icon .icon.color_success {
-  border-color: var(--success);
 }
 
 .widget {
@@ -5859,6 +5868,10 @@ select:disabled ~ .input_label {
 }
 .widget .widget_smr .flex {
   gap: var(--gap-2);
+}
+
+:root.dark .timeline-block.type_dashed::before {
+  background-image: url(../images/timeline_bg_d.svg);
 }
 
 /***************************************************************

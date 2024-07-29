@@ -898,6 +898,11 @@
       width: 100%;
       height: 100%;
     }
+
+    i {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
 
   .badge {
@@ -1436,20 +1441,46 @@
 
 .timeline {
   position: relative;
-  &::before {
-    content: "";
-    width: 2px;
-    height: 100%;
-    background-color: var(--divider);
-    position: absolute;
-    left: 9px;
-  }
+  // &::before {
+  //   content: "";
+  //   width: 2px;
+  //   height: 100%;
+  //   background-color: var(--divider);
+  //   position: absolute;
+  //   left: 9px;
+  // }
   &-block {
     @include flextop;
     gap: var(--gap-4);
     width: 100%;
     position: relative;
     z-index: 1;
+
+    &::before {
+      content: "";
+      width: 2px;
+      height: 100%;
+      background-color: var(--divider);
+      position: absolute;
+      left: 9px;
+      z-index: -1;
+    }
+
+    &.color_pr {
+      &::before {
+        background-color: var(--primary);
+      }
+    }
+
+    &.type_dashed {
+      &::before {
+        content: "";
+        width: 2px;
+        height: 100%;
+        background-color: transparent;
+        background-image: url(../images/timeline_bg.svg);
+      }
+    }
   }
   &-icon {
     height: 2.25rem;
@@ -1475,6 +1506,11 @@
       &.color_success {
         background-color: var(--success);
         box-shadow: 0 0 0 3px var(--success-o-light);
+      }
+
+      &.color_gr {
+        background-color: var(--secondary);
+        box-shadow: 0 0 0 3px var(--secondary-o-light);
       }
     }
 
@@ -1543,25 +1579,25 @@
       background-image: url(../images/timeline_bg.svg);
     }
 
-    .timeline-icon {
-      .icon {
-        background-color: transparent;
-        border: 2px solid transparent;
-        box-shadow: none;
+    // .timeline-icon {
+    //   .icon {
+    //     background-color: transparent;
+    //     border: 2px solid transparent;
+    //     box-shadow: none;
 
-        &.color_pr {
-          border-color: var(--primary);
-        }
+    //     &.color_pr {
+    //       border-color: var(--primary);
+    //     }
 
-        &.color_info {
-          border-color: var(--info);
-        }
+    //     &.color_info {
+    //       border-color: var(--info);
+    //     }
 
-        &.color_success {
-          border-color: var(--success);
-        }
-      }
-    }
+    //     &.color_success {
+    //       border-color: var(--success);
+    //     }
+    //   }
+    // }
   }
 }
 
@@ -1983,6 +2019,18 @@
 
     .flex {
       gap: var(--gap-2);
+    }
+  }
+}
+
+:root.dark {
+  .timeline {
+    &-block {
+      &.type_dashed {
+        &::before {
+          background-image: url(../images/timeline_bg_d.svg);
+        }
+      }
     }
   }
 }
