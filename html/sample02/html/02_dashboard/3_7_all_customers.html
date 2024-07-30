@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3.eCommerce - 3-5.Order list</title>
+  <title>3.eCommerce - 3-7.All Customers</title>
 
   <!-- css -->
   <link rel="stylesheet" href="../../css/style.css">
@@ -553,45 +553,6 @@
       </div>
 
       <div class="container_body">
-        <div class="widget innerb_1_5 flex column_12 mb_1_5">
-          <div class="widget_smr">
-            <div class="list_0_25">
-              <p class="font_h4">56</p>
-              <p class="text_secondary">Pending Payment</p>
-            </div>
-            <div class="avatar type_rounded">
-              <p class="thumb"><i class="ic_calendar_stats avatar_icon"></i></p>
-            </div>
-          </div>
-          <div class="widget_smr">
-            <div class="list_0_25">
-              <p class="font_h4">12,689</p>
-              <p class="text_secondary">Completed</p>
-            </div>
-            <div class="avatar type_rounded">
-              <p class="thumb"><i class="ic_checks avatar_icon"></i></p>
-            </div>
-          </div>
-          <div class="widget_smr">
-            <div class="list_0_25">
-              <p class="font_h4">124</p>
-              <p class="text_secondary">Refunded</p>
-            </div>
-            <div class="avatar type_rounded">
-              <p class="thumb"><i class="ic_wallet avatar_icon"></i></p>
-            </div>
-          </div>
-          <div class="widget_smr">
-            <div class="list_0_25">
-              <p class="font_h4">32</p>
-              <p class="text_secondary">Failed</p>
-            </div>
-            <div class="avatar type_rounded">
-              <p class="thumb"><i class="ic_alert_octagon avatar_icon"></i></p>
-            </div>
-          </div>
-        </div>
-
         <div class="widget column_12">
           <div class="widget-table_input">
             <div class="left">
@@ -620,14 +581,22 @@
                 <img src="../../images/system/upload_gr.svg" alt="left">
                 Export
               </button>
+
+              <button class="btn type_basic">
+                <div class="ripple js-ripple">
+                  <span class="ripple__circle"></span>
+                </div>
+                <img src="../../images/system/plus_w.svg" alt="left">
+                Add Customer
+              </button>
             </div>
             
           </div>
-          <div class="widget-table order_list">
+
+          <div class="widget-table">
             <table class="check_table">
               <colgroup>
                 <col width="5%">
-                <col width="8%">
                 <col width="16%">
                 <col width="23%">
                 <col width="12%">
@@ -643,13 +612,10 @@
                       <label for="checkAll" class=""><span class="check"></span></label>
                     </div>
                   </th>
-                  <th>Order</th>
-                  <th>date</th>
-                  <th>customers</th>
-                  <th>Payment</th>
-                  <th>status</th>
-                  <th>method</th>
-                  <th>Action</th>
+                  <th>Customers</th>
+                  <th>customer id</th>
+                  <th>COUNTRY</th>
+                  <th>Total Spent</th>
                 </tr>
               </thead>
               <tbody>
@@ -661,299 +627,29 @@
                     </div>
                   </td>
                   <td>
-                    <p class="primary">#6979</p>
-                  </td>
-                  <td class="text_secondary">Apr 15, 2023, 10:21</td>
-                  <td>
                     <div class="avatar_data">
                       <div class="avatar type_circle">
                         <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
                       </div>
                       <div class="avatar_info">
-                        <p class="name">Cristine Easom</p>
-                        <p class="txt">ceasomw@theguardian.com</p>
+                        <p class="name">Jordan Stevenson</p>
+                        <p class="txt">Benedetto Rossiter</p>
                       </div>
                     </div>
                   </td>
-                  <td class="flex"><span class="pay_dot" style="--c: var(--warning)"></span> <span class="font_m" style="--c: var(--warning)">Pending</span>
-                  </td>
+                  <td>#345889</td>
                   <td>
-                    <p class="chip type_label size_s color_success">Delivered</p>
+                    <div class="avatar_data">
+                      <div class="avatar type_circle size_22">
+                        <p class="thumb"><img src="../../images/flag_us.png" alt="" class="avatar_icon"></p>
+                      </div>
+                      <div class="avatar_info">
+                        <p class="text_secondary">United States</p>
+                      </div>
+                    </div>
                   </td>
                   <td class="text_secondary flex">
                     <span class="card_logo"><img src="../../images/card_logo1.png" alt=""></span> <span class="">...2356</span>
-                  </td>
-                  <td>
-                    <i class="table_icon ic_dots_vertical_gr"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="table_fixed">
-                    <div class="input_check">
-                      <input type="checkbox" class="check_input" id="check2">
-                      <label for="check2" class=""><span class="check"></span></label>
-                    </div>
-                  </td>
-                  <td>
-                    <p class="primary">#6624</p>
-                  </td>
-                  <td class="text_secondary">Apr 17, 2023, 6:43</td>
-                  <td>
-                    <div class="avatar_data">
-                      <div class="avatar type_circle">
-                        <p class="thumb"><img src="../../images/avatar_2.png" alt=""></p>
-                      </div>
-                      <div class="avatar_info">
-                        <p class="name">Fayre Screech</p>
-                        <p class="txt">fscreechs@army.mil</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="flex"><span class="pay_dot" style="--c: var(--error)"></span> <span class="font_m" style="--c: var(--error)">Failed</span>
-                  </td>
-                  <td>
-                    <p class="chip type_label size_s color_success">Delivered</p>
-                  </td>
-                  <td class="text_secondary flex">
-                    <span class="card_logo"><img src="../../images/card_logo1.png" alt=""></span> <span class="">...2077</span>
-                  </td>
-                  <td>
-                    <i class="table_icon ic_dots_vertical_gr"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="table_fixed">
-                    <div class="input_check">
-                      <input type="checkbox" class="check_input" id="check3">
-                      <label for="check3" class=""><span class="check"></span></label>
-                    </div>
-                  </td>
-                  <td>
-                    <p class="primary">#9305</p>
-                  </td>
-                  <td class="text_secondary">Apr 17, 2023, 8:05</td>
-                  <td>
-                    <div class="avatar_data">
-                      <div class="avatar type_circle">
-                        <p class="thumb"><img src="../../images/avatar_3.png" alt=""></p>
-                      </div>
-                      <div class="avatar_info">
-                        <p class="name">Pauline Pfaffe</p>
-                        <p class="txt">ppfaffe1i@wikia.com</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="flex"><span class="pay_dot" style="--c: var(--secondary)"></span> <span class="font_m" style="--c: var(--secondary)">Cancelled</span>
-                  </td>
-                  <td>
-                    <p class="chip type_label size_s color_pr">Out for Delivery</p>
-                  </td>
-                  <td class="text_secondary flex">
-                    <span class="card_logo"><img src="../../images/card_logo2.png" alt=""></span> <span class="">...@gmail.com</span>
-                  </td>
-                  <td>
-                    <i class="table_icon ic_dots_vertical_gr"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="table_fixed">
-                    <div class="input_check">
-                      <input type="checkbox" class="check_input" id="check4">
-                      <label for="check4" class=""><span class="check"></span></label>
-                    </div>
-                  </td>
-                  <td>
-                    <p class="primary">#8005</p>
-                  </td>
-                  <td class="text_secondary">Apr 22, 2023, 3:01</td>
-                  <td>
-                    <div class="avatar_data">
-                      <div class="avatar type_circle">
-                        <p class="thumb"><img src="../../images/avatar_4.png" alt=""></p>
-                      </div>
-                      <div class="avatar_info">
-                        <p class="name">Maurits Nealey</p>
-                        <p class="txt">mnealeyf@japanpost.jp</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="flex"><span class="pay_dot" style="--c: var(--success)"></span> <span class="font_m" style="--c: var(--success)">Paid</span>
-                  </td>
-                  <td>
-                    <p class="chip type_label size_s color_warning">Dispatched</p>
-                  </td>
-                  <td class="text_secondary flex">
-                    <span class="card_logo"><img src="../../images/card_logo1.png" alt=""></span> <span class="">...1555</span>
-                  </td>
-                  <td>
-                    <i class="table_icon ic_dots_vertical_gr"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="table_fixed">
-                    <div class="input_check">
-                      <input type="checkbox" class="check_input" id="check5">
-                      <label for="check5" class=""><span class="check"></span></label>
-                    </div>
-                  </td>
-                  <td>
-                    <p class="primary">#8114</p>
-                  </td>
-                  <td class="text_secondary">Apr 8, 2023, 3:39</td>
-                  <td>
-                    <div class="avatar_data">
-                      <div class="avatar type_circle">
-                        <p class="thumb"><img src="../../images/avatar_5.png" alt=""></p>
-                      </div>
-                      <div class="avatar_info">
-                        <p class="name">Ulysses Goodlife</p>
-                        <p class="txt">ugoodlife2p@blogger.com</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="flex"><span class="pay_dot" style="--c: var(--error)"></span> <span class="font_m" style="--c: var(--error)">Failed</span>
-                  </td>
-                  <td>
-                    <p class="chip type_label size_s color_pr">Out for Delivery</p>
-                  </td>
-                  <td class="text_secondary flex">
-                    <span class="card_logo"><img src="../../images/card_logo1.png" alt=""></span> <span class="">...4509</span>
-                  </td>
-                  <td>
-                    <i class="table_icon ic_dots_vertical_gr"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="table_fixed">
-                    <div class="input_check">
-                      <input type="checkbox" class="check_input" id="check6">
-                      <label for="check6" class=""><span class="check"></span></label>
-                    </div>
-                  </td>
-                  <td>
-                    <p class="primary">#6890</p>
-                  </td>
-                  <td class="text_secondary">Aug 1, 2022, 7:24</td>
-                  <td>
-                    <div class="avatar_data">
-                      <div class="avatar type_circle">
-                        <p class="thumb"><img src="../../images/avatar_6.png" alt=""></p>
-                      </div>
-                      <div class="avatar_info">
-                        <p class="name">Etienne Duke</p>
-                        <p class="txt">eduke1z@dell.com</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="flex"><span class="pay_dot" style="--c: var(--secondary)"></span> <span class="font_m" style="--c: var(--secondary)">Cancelled</span>
-                  </td>
-                  <td>
-                    <p class="chip type_label size_s color_info">Ready to Pickup</p>
-                  </td>
-                  <td class="text_secondary flex">
-                    <span class="card_logo"><img src="../../images/card_logo1.png" alt=""></span> <span class="">...3507</span>
-                  </td>
-                  <td>
-                    <i class="table_icon ic_dots_vertical_gr"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="table_fixed">
-                    <div class="input_check">
-                      <input type="checkbox" class="check_input" id="check7">
-                      <label for="check7" class=""><span class="check"></span></label>
-                    </div>
-                  </td>
-                  <td>
-                    <p class="primary">#5911</p>
-                  </td>
-                  <td class="text_secondary">Aug 14, 2022, 3:26</td>
-                  <td>
-                    <div class="avatar_data">
-                      <div class="avatar type_circle">
-                        <p class="thumb"><img src="../../images/avatar_7.png" alt=""></p>
-                      </div>
-                      <div class="avatar_info">
-                        <p class="name">Hilliard Merck</p>
-                        <p class="txt">hmerck2n@printfriendly.com</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="flex"><span class="pay_dot" style="--c: var(--secondary)"></span> <span class="font_m" style="--c: var(--secondary)">Cancelled</span>
-                  </td>
-                  <td>
-                    <p class="chip type_label size_s color_success">Delivered</p>
-                  </td>
-                  <td class="text_secondary flex">
-                    <span class="card_logo"><img src="../../images/card_logo2.png" alt=""></span> <span class="">...@gmail.com</span>
-                  </td>
-                  <td>
-                    <i class="table_icon ic_dots_vertical_gr"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="table_fixed">
-                    <div class="input_check">
-                      <input type="checkbox" class="check_input" id="check8">
-                      <label for="check8" class=""><span class="check"></span></label>
-                    </div>
-                  </td>
-                  <td>
-                    <p class="primary">#5531</p>
-                  </td>
-                  <td class="text_secondary">Aug 20, 2022, 3:21</td>
-                  <td>
-                    <div class="avatar_data">
-                      <div class="avatar type_circle">
-                        <p class="thumb"><img src="../../images/avatar_8.png" alt=""></p>
-                      </div>
-                      <div class="avatar_info">
-                        <p class="name">Cletus Arias</p>
-                        <p class="txt">carias21@rambler.ru</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="flex"><span class="pay_dot" style="--c: var(--error)"></span> <span class="font_m" style="--c: var(--error)">Failed</span>
-                  </td>
-                  <td>
-                    <p class="chip type_label size_s color_warning">Dispatched</p>
-                  </td>
-                  <td class="text_secondary flex">
-                    <span class="card_logo"><img src="../../images/card_logo1.png" alt=""></span> <span class="">...5851</span>
-                  </td>
-                  <td>
-                    <i class="table_icon ic_dots_vertical_gr"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="table_fixed">
-                    <div class="input_check">
-                      <input type="checkbox" class="check_input" id="check9">
-                      <label for="check9" class=""><span class="check"></span></label>
-                    </div>
-                  </td>
-                  <td>
-                    <p class="primary">#8044</p>
-                  </td>
-                  <td class="text_secondary">Aug 22, 2022, 6:36</td>
-                  <td>
-                    <div class="avatar_data">
-                      <div class="avatar type_circle">
-                        <p class="thumb"><img src="../../images/avatar_9.png" alt=""></p>
-                      </div>
-                      <div class="avatar_info">
-                        <p class="name">Nowell Cornford</p>
-                        <p class="txt">ncornfordn@sogou.com</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="flex"><span class="pay_dot" style="--c: var(--secondary)"></span> <span class="font_m" style="--c: var(--secondary)">Cancelled</span>
-                  </td>
-                  <td>
-                    <p class="chip type_label size_s color_pr">Out for Delivery</p>
-                  </td>
-                  <td class="text_secondary flex">
-                    <span class="card_logo"><img src="../../images/card_logo2.png" alt=""></span> <span class="">...@gmail.com</span>
                   </td>
                   <td>
                     <i class="table_icon ic_dots_vertical_gr"></i>
