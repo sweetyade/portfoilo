@@ -542,7 +542,7 @@
       })
 
       /* 패스워드 */
-      $(".input_icon-pass").click(function () {
+      $(".input_icon_pass").click(function () {
         $(this).toggleClass("inputPass");
         var input = $($(this).attr("toggle"));
         if (input.attr("type") == "password") {
@@ -553,8 +553,8 @@
       });
 
       $(document).ready(function () {
-        $(".input_icon-pass").on("click", function () {
-          $(this).toggleClass("input_icon-passOn");
+        $(".input_icon_pass").on("click", function () {
+          $(this).toggleClass("input_icon_passOn");
         });
       });
 

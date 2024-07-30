@@ -367,6 +367,19 @@
       background-color: var(--primary);
       color: var(--light-color);
       box-shadow: var(--primary-s-small);
+
+      .ic_user {
+        background-image: url(../images/system/user_w.svg);
+      }
+      .ic_lock {
+        background-image: url(../images/system/lock_w.svg);
+      }
+      .ic_map_pin {
+        background-image: url(../images/system/map_pin_w.svg);
+      }
+      .ic_bell {
+        background-image: url(../images/system/bell_w.svg);
+      }
     }
   }
 
@@ -1785,6 +1798,10 @@
     padding: var(--padding-6);
     @include flexbtw;
     gap: var(--gap-6);
+
+    .title {
+      @include font_h5;
+    }
 
     .left {
       @include flex;
