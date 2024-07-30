@@ -4935,6 +4935,8 @@ button:disabled {
   background-size: cover;
 }
 .avatar .thumb .avatar_img {
+  width: 90%;
+  height: 90%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -4972,7 +4974,7 @@ button:disabled {
   width: 1.875rem;
   height: 1.875rem;
 }
-.avatar.size_30 .thumb .avatar_icon {
+.avatar.size_30 .avatar_icon {
   width: 1.125rem;
   height: 1.125rem;
 }
@@ -5759,19 +5761,6 @@ button:disabled {
 .widget-table table.check_table thead th.checkth {
   padding-inline: 1.25rem 1rem;
 }
-.widget-table table.check_table thead th::after {
-  content: "";
-  position: absolute;
-  right: var(--padding-4);
-  width: 2px;
-  height: 0.875rem;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: var(--divider);
-}
-.widget-table table.check_table thead th:first-child::after {
-  display: none;
-}
 .widget-table table.check_table tbody td {
   border-bottom: 1px solid var(--divider);
 }
@@ -5920,14 +5909,6 @@ button:disabled {
 .widget.type_basic {
   padding: var(--padding-6);
 }
-.widget .avatar.size_l {
-  width: 2.75rem;
-  height: 2.75rem;
-}
-.widget .avatar.size_l i {
-  width: 1.75rem;
-  height: 1.75rem;
-}
 .widget .widget_smr {
   display: flex;
   align-items: flex-start;
@@ -5938,14 +5919,6 @@ button:disabled {
 }
 .widget .widget_smr .list_0_25 {
   width: calc(100% - 2.75rem);
-}
-.widget .widget_smr .avatar {
-  width: 2.75rem;
-  height: 2.75rem;
-}
-.widget .widget_smr .avatar .thumb .avatar_icon {
-  width: 1.75rem;
-  height: 1.75rem;
 }
 .widget .widget_smr .flex {
   gap: var(--gap-2);

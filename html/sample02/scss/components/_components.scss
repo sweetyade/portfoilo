@@ -901,6 +901,8 @@
     }
 
     .avatar_img {
+      width: 90%;
+      height: 90%;
       object-fit: contain;
     }
   }
@@ -949,7 +951,7 @@
     width: 1.875rem;
     height: 1.875rem;
 
-    .thumb .avatar_icon {
+    .avatar_icon {
       width: 1.125rem;
       height: 1.125rem;
     }
@@ -1831,21 +1833,6 @@
             &.checkth {
               padding-inline: 1.25rem 1rem;
             }
-
-            &::after {
-              content: "";
-              position: absolute;
-              right: var(--padding-4);
-              width: 2px;
-              height: 0.875rem;
-              top: 50%;
-              transform: translateY(-50%);
-              background-color: var(--divider);
-            }
-
-            &:first-child::after {
-              display: none;
-            }
           }
         }
 
@@ -2023,18 +2010,6 @@
     padding: var(--padding-6);
   }
 
-  .avatar {
-    &.size_l {
-      width: 2.75rem;
-      height: 2.75rem;
-
-      i {
-        width: 1.75rem;
-        height: 1.75rem;
-      }
-    }
-  }
-
   .widget_smr {
     @include flextopbtw;
     width: 100%;
@@ -2043,18 +2018,6 @@
 
     .list_0_25 {
       width: calc(100% - 2.75rem);
-    }
-
-    .avatar {
-      width: 2.75rem;
-      height: 2.75rem;
-
-      .thumb {
-        .avatar_icon {
-          width: 1.75rem;
-          height: 1.75rem;
-        }
-      }
     }
 
     .flex {
