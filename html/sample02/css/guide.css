@@ -198,7 +198,7 @@
   --padding-7: 1.75rem;
   --padding-8: 2rem;
   --padding-9: 2.25rem;
-  --padding-11: 2.5rem;
+  --padding-10: 2.5rem;
   --padding-12: 3rem;
   --padding-14: 3.5rem;
   --padding-15: 3.75rem;
@@ -1619,6 +1619,10 @@ body {
   background-image: url(../images/system/external_link_gr.svg);
 }
 
+.ic_user_plus {
+  background-image: url(../images/system/user_plus.svg);
+}
+
 .ic_upload_gr {
   background-image: url(../images/system/upload_gr.svg);
 }
@@ -1673,6 +1677,22 @@ body {
 
 .ic_mouse_orange {
   background-image: url(../images/system/mouse_orange.svg);
+}
+
+.ic_device_mobile_red {
+  background-image: url(../images/system/device_mobile_red.svg);
+}
+
+.ic_brand_apple_gr {
+  background-image: url(../images/system/brand_apple_gr.svg);
+}
+
+.ic_brand_android_green {
+  background-image: url(../images/system/brand_android_green.svg);
+}
+
+.ic_brand_windows_blue {
+  background-image: url(../images/system/brand_windows_blue.svg);
 }
 
 .ic_car {
@@ -2361,8 +2381,6 @@ body {
 }
 
 :root.dark {
-  /*------
-
   /*-------- color ------------- */
 }
 :root.dark .ic_chevron_right {
@@ -2649,6 +2667,12 @@ body {
 }
 :root.dark .ic_alert_octagon {
   background-image: url(../images/system/alert_octagon_D.svg);
+}
+:root.dark .ic_brand_apple_gr {
+  background-image: url(../images/system/brand_apple_gr_d.svg);
+}
+:root.dark .ic_user_plus {
+  background-image: url(../images/system/user_plus_d.svg);
 }
 :root.dark .icc_rocket_gr {
   background-image: url(../images/color/rocket_d.svg);
@@ -3749,7 +3773,7 @@ button:disabled {
   background-size: cover;
 }
 
-.input_icon-pass {
+.input_icon_pass {
   position: absolute;
   right: 0.75rem;
   width: 1rem;
@@ -3758,7 +3782,7 @@ button:disabled {
   background-size: cover;
   cursor: pointer;
 }
-.input_icon-pass.input_icon_passOn {
+.input_icon_pass.input_icon_passOn {
   background-image: url(/images/system/eye_off.svg);
 }
 
@@ -3825,11 +3849,11 @@ select:disabled ~ .input_label {
 .input_check label {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .input_check .check_label {
   font-size: var(--font-15);
   line-height: 1.375rem;
-  cursor: pointer;
 }
 .input_check .check_input ~ label .check {
   width: 1.125rem;
@@ -4178,6 +4202,18 @@ select:disabled ~ .input_label {
 :root.dark select option {
   background-color: var(--paper-bg);
 }
+:root.dark .input_icon_pass {
+  position: absolute;
+  right: 0.75rem;
+  width: 1rem;
+  height: 1rem;
+  background-image: url(/images/system/eye_d.svg);
+  background-size: cover;
+  cursor: pointer;
+}
+:root.dark .input_icon_pass.input_icon_passOn {
+  background-image: url(/images/system/eye_off_d.svg);
+}
 
 /***************************************************************
     08. components
@@ -4515,6 +4551,18 @@ select:disabled ~ .input_label {
 .tab_group_fill .tab_btn:hover {
   background-color: var(--primary-o-light);
   color: var(--primary);
+}
+.tab_group_fill .tab_btn:hover .ic_user {
+  background-image: url(../images/system/user_pr.svg);
+}
+.tab_group_fill .tab_btn:hover .ic_lock {
+  background-image: url(../images/system/lock_pr.svg);
+}
+.tab_group_fill .tab_btn:hover .ic_map_pin {
+  background-image: url(../images/system/map_pin_pr.svg);
+}
+.tab_group_fill .tab_btn:hover .ic_bell {
+  background-image: url(../images/system/bell_pr.svg);
 }
 .tab_group_fill .tab_btn.active {
   background-color: var(--primary);
@@ -5973,7 +6021,7 @@ select:disabled ~ .input_label {
 }
 .sidebar::-webkit-scrollbar {
   width: 0.5rem;
-  background-color: var(--light-color);
+  background-color: var(--paper-bg);
 }
 .sidebar::-webkit-scrollbar-thumb {
   background-color: var(--action-hover);

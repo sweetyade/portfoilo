@@ -403,7 +403,7 @@
   background-size: cover;
 }
 
-.input_icon-pass {
+.input_icon_pass {
   position: absolute;
   right: 0.75rem;
   width: 1rem;
@@ -475,11 +475,11 @@ select {
 
   label {
     @include flex;
+    cursor: pointer;
     // gap: var(--gap-2);
   }
   .check_label {
     @include font_body_1;
-    cursor: pointer;
   }
 
   .check_input {
@@ -923,6 +923,20 @@ select {
 
     option {
       background-color: var(--paper-bg);
+    }
+  }
+
+  .input_icon_pass {
+    position: absolute;
+    right: 0.75rem;
+    width: 1rem;
+    height: 1rem;
+    background-image: url(/images/system/eye_d.svg);
+    background-size: cover;
+    cursor: pointer;
+
+    &.input_icon_passOn {
+      background-image: url(/images/system/eye_off_d.svg);
     }
   }
 }

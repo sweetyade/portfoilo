@@ -634,14 +634,14 @@
 
           <div class="column_8">
             <div class="tab_group_fill mb_1_5">
-              <a href="javascript:void(0)" class="tab_btn active"><i class="ic_user tab_icon"></i>Overview</a>
-              <a href="javascript:void(0)" class="tab_btn"><i class="ic_lock tab_icon"></i>Security</a>
-              <a href="javascript:void(0)" class="tab_btn"><i class="ic_map_pin tab_icon"></i>Address & Billing</a>
-              <a href="javascript:void(0)" class="tab_btn"><i class="ic_bell tab_icon"></i>Notifications</a>
+              <a href="javascript:void(0)" class="tab_btn active" id="tab1"><i class="ic_user tab_icon"></i>Overview</a>
+              <a href="javascript:void(0)" class="tab_btn" id="tab2"><i class="ic_lock tab_icon"></i>Security</a>
+              <a href="javascript:void(0)" class="tab_btn" id="tab3"><i class="ic_map_pin tab_icon"></i>Address & Billing</a>
+              <a href="javascript:void(0)" class="tab_btn" id="tab4"><i class="ic_bell tab_icon"></i>Notifications</a>
             </div>
 
             <!-- overview -->
-            <div class="tab_con" style="display: none;">
+            <div class="tab_con" id="tab1-con">
               <div class="customer_overview mb_1_5">
                 <div class="widget type_basic">
                   <div class="avatar type_rounded">
@@ -772,8 +772,8 @@
             </div>
 
             <!-- security -->
-            <div class="tab_con">
-              <div class="widget">
+            <div class="tab_con" id="tab2-con" style="display: none;">
+              <div class="widget mb_1_5">
                 <div class="content_title">
                   <p class="title">Change Password</p>
                 </div>
@@ -813,15 +813,577 @@
                       Change Passwoard
                     </button>
                   </div>
-                 
+                
+                </div>
+              </div>
+
+              <div class="widget mb_1_5 customer_security">
+                <div class="content_title">
+                  <p class="title">Two-step verification</p>
+                  <p class="txt">Keep your account secure with authentication step.</p>
+                </div>
+
+                <div class="content_body">
+                  <div class="input_wrap">
+                    <div class="input_basic">
+                      <div class="inner">
+                        <input type="text" class="" placeholder="+1(968) 819-2547" id="sms" value="">
+                        <label for="sms" class="input_label">SMS</label>
+                      </div>
+                    </div>
+
+                    <div class="flex">
+                      <div class="avatar">
+                        <p class="thumb" style="--avatar-bg: transperent"><i class="ic_edit avatar_icon"></i></p>
+                      </div>
+                      <div class="avatar">
+                        <p class="thumb" style="--avatar-bg: transperent"><i class="ic_user_plus avatar_icon"></i></p>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text_secondary mt_1">Two-factor authentication adds an additional layer of security to your account by requiring more than just a password to log in. <a href="javascript:void(0)" class="primary">Learn more.</a></p>
+                </div>
+              </div>
+
+              <div class="widget customer_security">
+                <div class="content_title">
+                  <p class="title">Recent devices</p>
+                </div>
+
+                <div class="widget-table">
+                  <table class="check_table">
+                    <colgroup>
+                      <col width="34%">
+                      <col width="22%">
+                      <col width="22%">
+                      <col width="22%">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>BROWSER</th>
+                        <th>DEVICE</th>
+                        <th>LOCATION</th>
+                        <th>RECENT ACTIVITY</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="flex">
+                            <i class="ic_brand_windows_blue"></i>
+                            <p class="">Chrome on Windows</p>
+                          </div>
+                        </td>
+                        <td class="text_secondary">Dell XPS 15</td>
+                        <td class="text_secondary">United States</td>
+                        <td class="text_secondary">10, Jan 2020 20:07</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="flex">
+                            <i class="ic_brand_android_green"></i>
+                            <p class="">Chrome on Android</p>
+                          </div>
+                        </td>
+                        <td class="text_secondary">Google Pixel 3a</td>
+                        <td class="text_secondary">Ghana</td>
+                        <td class="text_secondary">11, Jan 2020 10:16</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="flex">
+                            <i class="ic_brand_apple_gr"></i>
+                            <p class="">Chrome on MacOS</p>
+                          </div>
+                        </td>
+                        <td class="text_secondary">Apple iMac</td>
+                        <td class="text_secondary">Mayotte</td>
+                        <td class="text_secondary">11, Jan 2020 12:10</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="flex">
+                            <i class="ic_device_mobile_red"></i>
+                            <p class="">Chrome on IPhone</p>
+                          </div>
+                        </td>
+                        <td class="text_secondary">Apple iPhone XR</td>
+                        <td class="text_secondary">Mauritania</td>
+                        <td class="text_secondary">12, Jan 2020 8:29</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
 
             <!-- address -->
+            <div class="tab_con" id="tab3-con" style="display: none;">
+              <div class="widget mb_1_5">
+                <div class="content_title">
+                  <p class="title">Address Book</p>
+                  <div class="heading_abs">
+                    <p class="chip size_s type_label color_pr">Add new address</p>
+                  </div>
+                </div>
 
+                <div class="content_body">
+                  <div class="addbook">
+                    <div class="addbook-title">
+                      <div class="title">
+                        <i class="ic_chevron_right"></i>
+  
+                        <div class="add_info">
+                          <div class="name">
+                            <p class="font_m">Home</p>
+                            <p class="chip size_s type_label color_success">Default Address</p>
+                          </div>
+                          <p class="text_secondary">23 Shatinon Mekalan</p>
+                        </div>
+                      </div>
+  
+                      <div class="buttons">
+                        <i class="ic_edit_gr"></i>
+                        <i class="ic_trash_gr"></i>
+                        <i class="ic_dots_vertical_gr"></i>
+                      </div>
+                    </div>
+
+                    <div class="addbook-more">
+                      <p class="font_m mb_0_25">Violet Mendoza</p>
+                      <p>45 Roker Terrace<br>Latheronwheel<br>KW5 8NW,<br>LondonUK</p>
+                    </div>
+                    
+                  </div>
+                  <div class="addbook">
+                    <div class="addbook-title">
+                      <div class="title">
+                        <i class="ic_chevron_right"></i>
+  
+                        <div class="">
+                          <div class="name">
+                            <p class="font_m mb_0_25">Office</p>
+                          </div>
+                          <p class="text_secondary">45 Roker Terrace</p>
+                        </div>
+                      </div>
+  
+                      <div class="buttons">
+                        <i class="ic_edit_gr"></i>
+                        <i class="ic_trash_gr"></i>
+                        <i class="ic_dots_vertical_gr"></i>
+                      </div>
+                    </div>
+
+                    <div class="addbook-more">
+                      <p class="font_m mb_0_25">Violet Mendoza</p>
+                      <p>45 Roker Terrace<br>Latheronwheel<br>KW5 8NW,<br>LondonUK</p>
+                    </div>
+                    
+                  </div>
+                  <div class="addbook">
+                    <div class="addbook-title">
+                      <div class="title">
+                        <i class="ic_chevron_right"></i>
+  
+                        <div class="">
+                          <div class="name">
+                            <p class="font_m">Family</p>
+                          </div>
+                          <p class="text_secondary">512 Water Plant</p>
+                        </div>
+                      </div>
+  
+                      <div class="buttons">
+                        <i class="ic_edit_gr"></i>
+                        <i class="ic_trash_gr"></i>
+                        <i class="ic_dots_vertical_gr"></i>
+                      </div>
+                    </div>
+
+                    <div class="addbook-more">
+                      <p class="font_m">Violet Mendoza</p>
+                      <p>45 Roker Terrace<br>Latheronwheel<br>KW5 8NW,<br>LondonUK</p>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="widget">
+                <div class="content_title">
+                  <p class="title">Payment Methods</p>
+                  <div class="heading_abs">
+                    <p class="chip size_s type_label color_pr">New payment Methods</p>
+                  </div>
+                </div>
+
+                <div class="content_body">
+                  <div class="addbook">
+                    <div class="addbook-title">
+                      <div class="title">
+                        <i class="ic_chevron_right"></i>
+  
+                        <div class="avatar_data">
+                          <div class="avatar type_rounded">
+                            <p class="thumb"><img src="../../images/logo_mastercard.png" alt="" class="avatar_img"></p>
+                          </div>
+                          <div class="avatar_info">
+                            <p class="name">Mastercard</p>
+                            <p class="txt">Expires Apr 2028</p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="buttons">
+                        <i class="ic_edit_gr"></i>
+                        <i class="ic_trash_gr"></i>
+                        <i class="ic_dots_vertical_gr"></i>
+                      </div>
+                    </div>
+
+                    <div class="addbook-more">
+                      <div class="flex_top">
+                        <div class="list_0_25 more_1">
+                          <div class="flex">
+                            <p class="text_secondary">Name</p>
+                            <p class="font_m">Violet Mendoza</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">Number</p>
+                            <p class="font_m">**** 4487</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">Expires</p>
+                            <p class="font_m">08/2028</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">Type</p>
+                            <p class="font_m">Master Card</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">Issuer</p>
+                            <p class="font_m">VICBANK</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">ID</p>
+                            <p class="font_m">DH73DJ8</p>
+                          </div>
+                        </div>
+                        <div class="list_0_25 more_2">
+                          <div class="flex">
+                            <p class="text_secondary">Billing Phone</p>
+                            <p class="font_m">USA</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">Number</p>
+                            <p class="font_m">+7634 983 637</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">Email</p>
+                            <p class="font_m">vafgot@vultukir.org</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">Origin</p>
+                            <p class="font_m">United States <span class="origin_img"><img src="../../images/flag_us.png" alt=""></span></p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">CVC Check</p>
+                            <p class="font_m">Passed <span class="cvc_check" style="--bg: var(--success-o-light)"><i class="ic_check_green" ></i></span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="addbook">
+                    <div class="addbook-title">
+                      <div class="title">
+                        <i class="ic_chevron_right"></i>
+  
+                        <div class="avatar_data">
+                          <div class="avatar type_rounded">
+                            <p class="thumb"><img src="../../images/logo_american_express.png" alt="" class="avatar_img"></p>
+                          </div>
+                          <div class="avatar_info">
+                            <p class="name">American Express <span class="cnip size_s type_label color_success"></span></p>
+                            <p class="txt">45 Roker Terrace</p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="buttons">
+                        <i class="ic_edit_gr"></i>
+                        <i class="ic_trash_gr"></i>
+                        <i class="ic_dots_vertical_gr"></i>
+                      </div>
+                    </div>
+
+                    <div class="addbook-more">
+                      <div class="flex_top">
+                        <div class="list_0_25 more_1">
+                          <div class="flex">
+                            <p class="text_secondary">Name</p>
+                            <p class="font_m">Violet Mendoza</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">Number</p>
+                            <p class="font_m">**** 4487</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">Expires</p>
+                            <p class="font_m">08/2028</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">Type</p>
+                            <p class="font_m">Master Card</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">Issuer</p>
+                            <p class="font_m">VICBANK</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">ID</p>
+                            <p class="font_m">DH73DJ8</p>
+                          </div>
+                        </div>
+                        <div class="list_0_25 more_2">
+                          <div class="flex">
+                            <p class="text_secondary">Billing Phone</p>
+                            <p class="font_m">USA</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">Number</p>
+                            <p class="font_m">+7634 983 637</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">Email</p>
+                            <p class="font_m">vafgot@vultukir.org</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">Origin</p>
+                            <p class="font_m">United States <span class="origin_img"><img src="../../images/flag_us.png" alt=""></span></p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">CVC Check</p>
+                            <p class="font_m">Passed <span class="cvc_check" style="--bg: var(--success-o-light)"><i class="ic_check_green" ></i></span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="addbook">
+                    <div class="addbook-title">
+                      <div class="title">
+                        <i class="ic_chevron_right"></i>
+  
+                        <div class="avatar_data">
+                          <div class="avatar type_rounded">
+                            <p class="thumb"><img src="../../images/logo_visa.png" alt="" class="avatar_img"></p>
+                          </div>
+                          <div class="avatar_info">
+                            <p class="name">VISA</p>
+                            <p class="txt">512 Water Plant</p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="buttons">
+                        <i class="ic_edit_gr"></i>
+                        <i class="ic_trash_gr"></i>
+                        <i class="ic_dots_vertical_gr"></i>
+                      </div>
+                    </div>
+
+                    <div class="addbook-more">
+                      <div class="flex_top">
+                        <div class="list_0_25 more_1">
+                          <div class="flex">
+                            <p class="text_secondary">Name</p>
+                            <p class="font_m">Violet Mendoza</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">Number</p>
+                            <p class="font_m">**** 4487</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">Expires</p>
+                            <p class="font_m">08/2028</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">Type</p>
+                            <p class="font_m">Master Card</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">Issuer</p>
+                            <p class="font_m">VICBANK</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">ID</p>
+                            <p class="font_m">DH73DJ8</p>
+                          </div>
+                        </div>
+                        <div class="list_0_25 more_2">
+                          <div class="flex">
+                            <p class="text_secondary">Billing Phone</p>
+                            <p class="font_m">USA</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">Number</p>
+                            <p class="font_m">+7634 983 637</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">Email</p>
+                            <p class="font_m">vafgot@vultukir.org</p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">Origin</p>
+                            <p class="font_m">United States <span class="origin_img"><img src="../../images/flag_us.png" alt=""></span></p>
+                          </div>
+                          <div class="flex">
+                            <p class="text_secondary">CVC Check</p>
+                            <p class="font_m">Passed <span class="cvc_check" style="--bg: var(--success-o-light)"><i class="ic_check_green" ></i></span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <!-- notifications -->
+            <div class="tab_con" id="tab4-con" style="display: none;">
+              <div class="widget">
+                <div class="content_title">
+                  <p class="title">Notifications</p>
+                  <div class="txt">You will receive notification for the below selected items.</div>
+                </div>
+
+                <div class="widget-table">
+                  <table class="check_table">
+                    <colgroup>
+                      <col width="46%">
+                      <col width="18%">
+                      <col width="18%">
+                      <col width="18%">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>Type</th>
+                        <th>Email</th>
+                        <th>Browser</th>
+                        <th>App</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>New for you</td>
+                        <td>
+                          <div class="input_check">
+                            <input type="checkbox" class="check_input" id="checkbox0" checked>
+                            <label for="checkbox0" class=""><span class="check"></span></label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="input_check">
+                            <input type="checkbox" class="check_input" id="checkbox1">
+                            <label for="checkbox1" class=""><span class="check"></span></label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="input_check">
+                            <input type="checkbox" class="check_input" id="checkbox2">
+                            <label for="checkbox2" class=""><span class="check"></span></label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Account activity</td>
+                        <td>
+                          <div class="input_check">
+                            <input type="checkbox" class="check_input" id="checkbox4">
+                            <label for="checkbox4" class=""><span class="check"></span></label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="input_check">
+                            <input type="checkbox" class="check_input" id="checkbox5" checked>
+                            <label for="checkbox5" class=""><span class="check"></span></label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="input_check">
+                            <input type="checkbox" class="check_input" id="checkbox6" checked>
+                            <label for="checkbox6" class=""><span class="check"></span></label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>A new browser used to sign in</td>
+                        <td>
+                          <div class="input_check">
+                            <input type="checkbox" class="check_input" id="checkbox7" checked>
+                            <label for="checkbox7" class=""><span class="check"></span></label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="input_check">
+                            <input type="checkbox" class="check_input" id="checkbox8" checked>
+                            <label for="checkbox8" class=""><span class="check"></span></label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="input_check">
+                            <input type="checkbox" class="check_input" id="checkbox9" checked>
+                            <label for="checkbox9" class=""><span class="check"></span></label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>A new device is linked</td>
+                        <td>
+                          <div class="input_check">
+                            <input type="checkbox" class="check_input" id="checkbox10">
+                            <label for="checkbox10" class=""><span class="check"></span></label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="input_check">
+                            <input type="checkbox" class="check_input" id="checkbox11" checked>
+                            <label for="checkbox11" class=""><span class="check"></span></label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="input_check">
+                            <input type="checkbox" class="check_input" id="checkbox12">
+                            <label for="checkbox12" class=""><span class="check"></span></label>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="btn_wrap inner_1_5 innerb_1_5">
+                  <button class="btn type_basic">
+                    <div class="ripple js-ripple">
+                      <span class="ripple__circle"></span>
+                    </div>
+                    Save Changes
+                  </button>
+                  <button class="btn type_label color_gr">
+                    <div class="ripple js-ripple">
+                      <span class="ripple__circle"></span>
+                    </div>
+                    Discard
+                  </button>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -1200,6 +1762,16 @@
         });
       });
 
+      //탭
+    $(".tab_group_fill").find('.tab_btn').click(function(){
+      var t = $(this).attr('id');
+        $(this).addClass('active')
+        $(this).siblings().removeClass('active')
+        $('.tab_con').hide();
+        $('#'+ t + '-con').fadeIn('slow');
+    })
+
+    
     //alert
     $(".alertDel").click(function(){
         $(this).parents('.alert').fadeOut(function(){
@@ -1207,6 +1779,12 @@
             $(this).remove()
           }, 1500);
         })
+      })
+
+      //address billing
+      $(".addbook-title .title").click(function () { 
+        $(this).toggleClass('moreOpen');
+        $(this).parent('.addbook-title').siblings('.addbook-more').slideToggle()
       })
   </script>
 </body>
