@@ -441,6 +441,14 @@ button {
     width: var(--prg-bar);
   }
 }
+@keyframes prgbar2 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(100% / var(--prg-bar) * 100);
+  }
+}
 @keyframes barlabel {
   0% {
     width: 0;
@@ -1878,12 +1886,24 @@ body {
   background-image: url(../images/system/circle.svg);
 }
 
+.ic_star_fill_pr {
+  background-image: url(../images/system/star_fill_pr.svg);
+}
+
 .ic_star_fill_y {
   background-image: url(../images/system/star_fill_y.svg);
 }
 
 .ic_star_fill_gr {
   background-image: url(../images/system/star_fill_gr.svg);
+}
+
+.ic_star_fill_td {
+  background-image: url(../images/system/star_fill_td.svg);
+}
+
+.ic_star_fill_ad {
+  background-image: url(../images/system/star_fill_ad.svg);
 }
 
 .ic_moon_stars {
@@ -2672,6 +2692,9 @@ body {
 }
 :root.dark .ic_user_plus {
   background-image: url(../images/system/user_plus_d.svg);
+}
+:root.dark .ic_star_fill_ad {
+  background-image: url(../images/system/star_fill_ad_d.svg);
 }
 :root.dark .icc_rocket_gr {
   background-image: url(../images/color/rocket_d.svg);
@@ -5870,8 +5893,7 @@ button:disabled {
   text-transform: uppercase;
 }
 .widget-table tbody td {
-  padding-inline: 1.25rem 1rem;
-  height: 3.5rem;
+  padding: var(--padding-4);
 }
 .widget-table .table_icon {
   width: 2.375rem;
@@ -5999,6 +6021,16 @@ button:disabled {
 }
 .widget .widget_smr .flex {
   gap: var(--gap-2);
+}
+
+.ranking {
+  display: flex;
+  align-items: center;
+}
+.ranking i {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: cover;
 }
 
 :root.dark .timeline-block.type_dashed::before {

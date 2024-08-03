@@ -1154,11 +1154,11 @@ body {
     //   }
     // }
 
-    @property --p {
-      syntax: "<number>";
-      inherits: true;
-      initial-value: 0;
-    }
+    // @property --p {
+    //   syntax: "<number>";
+    //   inherits: true;
+    //   initial-value: 0;
+    // }
 
     .circle_prg {
       --w: 3.625rem;
@@ -1482,7 +1482,7 @@ body {
   }
 }
 
-// ====================== eCommerce
+// ====================== eCommerce =======================
 .editor {
   .input_label {
     padding-bottom: var(--padding-1);
@@ -1860,6 +1860,92 @@ body {
         }
       }
     }
+  }
+}
+
+.manage_reviews {
+  padding: var(--padding-6);
+  @include flexbtw;
+  height: 12.75rem;
+
+  .reviews_info {
+    width: 100%;
+    padding-right: var(--padding-6);
+    border-right: 1px solid var(--divider);
+    display: grid;
+    gap: var(--gap-2);
+
+    .font_h3 {
+      @include flex;
+      gap: var(--gap-2);
+    }
+
+    i {
+      width: 2rem;
+      height: 2rem;
+      background-size: cover;
+    }
+  }
+
+  .chart_manage_reviews {
+    width: 100%;
+    height: 100%;
+    padding-left: var(--padding-6);
+    display: grid;
+
+    .progress_bar {
+      @include flexbtw;
+      gap: var(--gap-2);
+
+      .data_label {
+        width: 2.375rem;
+        @include font_body_2;
+        color: var(--text-secondary);
+      }
+      .data_bar {
+        height: 0.5rem;
+        border-radius: 3rem;
+        width: calc(100% - 4.875rem);
+        position: relative;
+        background-color: var(--primary-o-lighter);
+
+        .bar {
+          --total: 130; //최대높이 기준 조금 더 높게 설정
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: calc((100% / var(--total)) * var(--prg-bar));
+          background-color: var(--primary);
+          box-shadow: var(--primary-s-small);
+          border-radius: 3rem;
+          // animation: prgbar2 1s ease-in-out;
+        }
+      }
+
+      .data_total {
+        @include font_body_2;
+        color: var(--text-secondary);
+        width: 1.5rem;
+      }
+    }
+  }
+}
+
+.manage_reviews_statistics {
+  padding: var(--padding-6);
+  @include flexbtw;
+  height: 12.75rem;
+
+  .statistics_info {
+    display: grid;
+    height: 100%;
+    align-content: space-between;
+  }
+
+  .canvas_manage_reviews_statistics {
+    width: 14.375rem;
+    height: 100%;
   }
 }
 

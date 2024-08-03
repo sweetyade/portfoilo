@@ -553,7 +553,416 @@
       </div>
 
       <div class="container_body">
-        
+        <div class="container_grid mb_1_5">
+          <div class="widget column_6 manage_reviews">
+            <div class="reviews_info">
+              <p class="font_h3 primary">4.89 <i class="ic_star_fill_pr"></i></p>
+              <p class="font_m">Total 187 reviews</p>
+              <p class="text_secondary">All reviews are from genuine customers</p>
+              <p class="chip size_s type_label color_pr">+5 This week</p>
+            </div>
+
+            <div class="chart_manage_reviews">
+              <div class="progress_bar">
+                <p class="data_label">5 star</p>
+                <p class="data_bar">
+                  <span class="bar" style="--prg-bar: 124"></span>
+                </p>
+                <div class="data_total">124</div>
+              </div>
+              <div class="progress_bar">
+                <p class="data_label">4 star</p>
+                <p class="data_bar">
+                  <span class="bar" style="--prg-bar: 40"></span>
+                </p>
+                <div class="data_total">40</div>
+              </div>
+              <div class="progress_bar">
+                <p class="data_label">3 star</p>
+                <p class="data_bar">
+                  <span class="bar" style="--prg-bar: 12"></span>
+                </p>
+                <div class="data_total">12</div>
+              </div>
+              <div class="progress_bar">
+                <p class="data_label">2 star</p>
+                <p class="data_bar">
+                  <span class="bar" style="--prg-bar: 7"></span>
+                </p>
+                <div class="data_total">7</div>
+              </div>
+              <div class="progress_bar">
+                <p class="data_label">1 star</p>
+                <p class="data_bar">
+                  <span class="bar" style="--prg-bar: 2"></span>
+                </p>
+                <div class="data_total">2</div>
+              </div>
+            </div>
+          </div>
+          <div class="widget column_6 manage_reviews_statistics">
+            <div class="statistics_info">
+              <div class="list_0_5">
+                <p class="font_h5">Reviews statistics</p>
+                <p>12 New reviews <span class="chip size_s type_label color_success">+8.4%</span></p>
+              </div>
+
+              <div class="lit_0_5">
+                <p><span class="success">87%</span> Positive reviews </p>
+                <p class="text_secondary font_body_2">Weekly Report</p>
+              </div>
+            </div>
+
+            <div class="canvas_manage_reviews_statistics">
+              <canvas id="manageReviewsStatistics"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="widget column_12">
+          <div class="widget-table_input">
+            <div class="left">
+              <div class="input_basic">
+                <div class="inner" style="width: 250px;">
+                  <input type="text" placeholder="Search Review" id="" value="">
+                </div>
+              </div>
+            </div>
+
+            <div class="right">
+              <div class="input_basic" style="max-width: 100px;">
+                <div class="inner">
+                  <select name="" id="">
+                    <option value="">10</option>
+                    <option value="">15</option>
+                    <option value="">20</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="input_basic" style="max-width: 100px;">
+                <div class="inner">
+                  <select name="" id="">
+                    <option value="">All</option>
+                    <option value="">5 star</option>
+                    <option value="">4 star</option>
+                    <option value="">3 star</option>
+                    <option value="">2 star</option>
+                    <option value="">1 star</option>
+                  </select>
+                </div>
+              </div>
+
+              <button class="btn type_label color_gr">
+                <div class="ripple js-ripple">
+                  <span class="ripple__circle"></span>
+                </div>
+                <img src="../../images/system/upload_gr.svg" alt="left">
+                Export
+              </button>
+            </div>
+            
+          </div>
+
+          <div class="widget-table">
+            <table class="check_table">
+              <colgroup>
+                <col width="3%">
+                <col width="17%">
+                <col width="19%">
+                <col width="21%">
+                <col width="13%">
+                <col width="12%">
+                <col width="10%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th class="table_fixed checkth">
+                    <div class="input_check">
+                      <input type="checkbox" class="check_input" id="checkAll">
+                      <label for="checkAll" class=""><span class="check"></span></label>
+                    </div>
+                  </th>
+                  <th>Product</th>
+                  <th>Reviewer</th>
+                  <th>Review</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="table_fixed">
+                    <div class="input_check">
+                      <input type="checkbox" class="check_input" id="check1">
+                      <label for="check1" class=""><span class="check"></span></label>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="avatar_data">
+                      <div class="avatar type_rounded size_38">
+                        <p class="thumb"><img src="../../images/goods_img_10.png" alt="" class="avatar_img"></p>
+                      </div>
+                      <div class="avatar_info">
+                        <p class="name">OnePlus 7Pro</p>
+                        <p class="txt">OnePlus</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="avatar_data">
+                      <div class="avatar type_circle size_34">
+                        <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                      </div>
+                      <div class="avatar_info">
+                        <p class="name primary">Jordan Stevenson</p>
+                        <p class="txt">dayna19@yahoo.com</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="list_0_25">
+                      <div class="ranking">
+                        <i class="ic_star_fill_y"></i>
+                        <i class="ic_star_fill_y"></i>
+                        <i class="ic_star_fill_y"></i>
+                        <i class="ic_star_fill_y"></i>
+                        <i class="ic_star_fill_y"></i>
+                      </div>
+                      <p class="font_m">I just love it!</p>
+                      <p class="font_body_2 text_secondary">I bought this hat for my boyfriend, but then i 
+                        found out he cheated on me so I kept it and I love it!! 
+                        I wear it all the time and there is no problem with 
+                        the fit even though its a mens" hat.</p>
+                    </div>
+                  </td>
+                  <td class="text_secondary">Mar 17, 2023</td>
+                  <td>
+                    <p class="chip sizs_s type_label color_success">Published</p>
+                  </td>
+                  <td>
+                    <i class="table_icon ic_dots_vertical_gr"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table_fixed">
+                    <div class="input_check">
+                      <input type="checkbox" class="check_input" id="check2">
+                      <label for="check2" class=""><span class="check"></span></label>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="avatar_data">
+                      <div class="avatar type_rounded size_38">
+                        <p class="thumb"><img src="../../images/goods_img_11.png" alt="" class="avatar_img"></p>
+                      </div>
+                      <div class="avatar_info">
+                        <p class="name">Magic Mouse</p>
+                        <p class="txt">Google</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="avatar_data">
+                      <div class="avatar type_circle size_34">
+                        <p class="thumb"><img src="../../images/avatar_2.png" alt=""></p>
+                      </div>
+                      <div class="avatar_info">
+                        <p class="name primary">Benedetto Rossiter</p>
+                        <p class="txt">lorena@yahoo.com</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="list_0_25">
+                      <div class="ranking">
+                        <i class="ic_star_fill_y"></i>
+                        <i class="ic_star_fill_y"></i>
+                        <i class="ic_star_fill_y"></i>
+                        <i class="ic_star_fill_y"></i>
+                        <i class="ic_star_fill_ad"></i>
+                      </div>
+                      <p class="font_m">Really nice</p>
+                      <p class="font_body_2 text_secondary">Material is great and very comfortable and stylish.</p>
+                    </div>
+                  </td>
+                  <td class="text_secondary">Mar 17, 2023</td>
+                  <td>
+                    <p class="chip sizs_s type_label color_warning">Pending</p>
+                  </td>
+                  <td>
+                    <i class="table_icon ic_dots_vertical_gr"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table_fixed">
+                    <div class="input_check">
+                      <input type="checkbox" class="check_input" id="check3">
+                      <label for="check3" class=""><span class="check"></span></label>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="avatar_data">
+                      <div class="avatar type_rounded size_38">
+                        <p class="thumb"><img src="../../images/goods_img_12.png" alt="" class="avatar_img"></p>
+                      </div>
+                      <div class="avatar_info">
+                        <p class="name">Wooden Chair</p>
+                        <p class="txt">Insofar</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="avatar_data">
+                      <div class="avatar type_circle size_34">
+                        <p class="thumb"><img src="../../images/avatar_3.png" alt=""></p>
+                      </div>
+                      <div class="avatar_info">
+                        <p class="name primary">Bentlee Emblin</p>
+                        <p class="txt">bemblinf@gmail.com</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="list_0_25">
+                      <div class="ranking">
+                        <i class="ic_star_fill_y"></i>
+                        <i class="ic_star_fill_y"></i>
+                        <i class="ic_star_fill_y"></i>
+                        <i class="ic_star_fill_ad"></i>
+                        <i class="ic_star_fill_ad"></i>
+                      </div>
+                      <p class="font_m">Good product</p>
+                      <p class="font_body_2 text_secondary">A really well built shoe. It looks great and wears just as well. A great staple in ball caps.</p>
+                    </div>
+                  </td>
+                  <td class="text_secondary">Mar 17, 2023</td>
+                  <td>
+                    <p class="chip sizs_s type_label color_success">Published</p>
+                  </td>
+                  <td>
+                    <i class="table_icon ic_dots_vertical_gr"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table_fixed">
+                    <div class="input_check">
+                      <input type="checkbox" class="check_input" id="check4">
+                      <label for="check4" class=""><span class="check"></span></label>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="avatar_data">
+                      <div class="avatar type_rounded size_38">
+                        <p class="thumb"><img src="../../images/goods_img_14.png" alt="" class="avatar_img"></p>
+                      </div>
+                      <div class="avatar_info">
+                        <p class="name">Air Jordan</p>
+                        <p class="txt">Nike</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="avatar_data">
+                      <div class="avatar type_circle size_34">
+                        <p class="thumb"><img src="../../images/avatar_4.png" alt=""></p>
+                      </div>
+                      <div class="avatar_info">
+                        <p class="name primary">Bertha Biner</p>
+                        <p class="txt">bbinerh@gmail.com</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="list_0_25">
+                      <div class="ranking">
+                        <i class="ic_star_fill_y"></i>
+                        <i class="ic_star_fill_y"></i>
+                        <i class="ic_star_fill_y"></i>
+                        <i class="ic_star_fill_y"></i>
+                        <i class="ic_star_fill_y"></i>
+                      </div>
+                      <p class="font_m">Buy the product, you will not regret it!</p>
+                      <p class="font_body_2 text_secondary">Excellent value for money and still being updated every year!</p>
+                    </div>
+                  </td>
+                  <td class="text_secondary">Jan 08, 2023</td>
+                  <td>
+                    <p class="chip sizs_s type_label color_success">Published</p>
+                  </td>
+                  <td>
+                    <i class="table_icon ic_dots_vertical_gr"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table_fixed">
+                    <div class="input_check">
+                      <input type="checkbox" class="check_input" id="check5">
+                      <label for="check5" class=""><span class="check"></span></label>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="avatar_data">
+                      <div class="avatar type_rounded size_38">
+                        <p class="thumb"><img src="../../images/goods_img_8.png" alt="" class="avatar_img"></p>
+                      </div>
+                      <div class="avatar_info">
+                        <p class="name">Nintendo Switch</p>
+                        <p class="txt">Nintendo</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="avatar_data">
+                      <div class="avatar type_circle size_34">
+                        <p class="thumb"><img src="../../images/avatar_5.png" alt=""></p>
+                      </div>
+                      <div class="avatar_info">
+                        <p class="name primary">Beverlie Krabbe</p>
+                        <p class="txt">bkrabbe1d@gmail.com</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="list_0_25">
+                      <div class="ranking">
+                        <i class="ic_star_fill_y"></i>
+                        <i class="ic_star_fill_y"></i>
+                        <i class="ic_star_fill_y"></i>
+                        <i class="ic_star_fill_y"></i>
+                        <i class="ic_star_fill_ad"></i>
+                      </div>
+                      <p class="font_m">Ready for the heat!</p>
+                      <p class="font_body_2 text_secondary">As good as the heat Rdy T-shirt but without the sleeves. Love the stripes on the back.</p>
+                    </div>
+                  </td>
+                  <td class="text_secondary">Jan 27, 2023</td>
+                  <td>
+                    <p class="chip sizs_s type_label color_warning">Pending</p>
+                  </td>
+                  <td>
+                    <i class="table_icon ic_dots_vertical_gr"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="table_bottom">
+              <p class="text_disabled">Showing 1 to 10 of 100 entries</p>
+
+              <div class="pagenation type_rounded color_pr">
+                <a href="javascript:void(0)" class="first ic_chevrons_left_gr"></a>
+                <a href="javascript:void(0)" class="pre ic_chevron_left_gr"></a>
+                <a href="javascript:void(0)" class="">1</a>
+                <a href="javascript:void(0)" class="active">2</a>
+                <a href="javascript:void(0)" class="">3</a>
+                <a href="javascript:void(0)" class="next ic_chevron_right"></a>
+                <a href="javascript:void(0)" class="last ic_chevrons_right"></a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- footer -->
       <footer class="footer">
@@ -870,10 +1279,13 @@
 
       if($(this).children('i').hasClass('ic_sun')){
         $('html').removeClass('dark');
+        darkMode()
       }else if($(this).children('i').hasClass('ic_moon_stars')){
         $('html').addClass('dark');
+        darkMode()
       }else{
         $('html').removeClass('dark');
+        darkMode()
       }
     })
 
@@ -912,5 +1324,109 @@
       $('.search_pop, body').removeClass('open')
     })
 
+
+      // chart1  ==================== revenueGrowth 차트
+      function getBgColorsGreen() {
+      var array  = [4, 9, 7, 5, 10, 6, 8];
+      var maxValue = Math.max.apply(this, array);
+
+
+      var bg = array.map(a =>  a === maxValue ? "#28c76f" : "rgba(40, 199, 111, 0.24)");
+      return bg;
+    }
+    const data1 = {
+      labels: ["M", "T", "W", "T", "F", "S", "S"],
+      datasets: [
+        {
+          label: 'order',
+              data: [4, 9, 7, 5, 10, 6, 8],
+              pointRadius: 0,
+              backgroundColor: getBgColorsGreen(),
+              borderColor: 'transperent',
+              fill: true,
+              borderWidth: 0,
+              borderRadius: 50,
+              categoryPercentage: 1.0,
+              barPercentage: 0.3,
+              borderSkipped: false,
+        }
+      ],
+    };
+    const options1  = {
+      responsive: true,
+      maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              // 기존 툴팁 사용 안 함
+              enabled: false,
+            },
+
+            datalabels: {
+              display: false,
+            },
+          },
+          layout: {
+            padding: {
+              top: 32,
+              bottom: 0,
+              left: 0,
+              right: 0 ,
+            },
+          },
+          scales: {
+            x: {
+              stacked: true,
+              grid: {
+                display: false,
+                borderColor: 'transparent'
+              },
+              ticks:{
+                color : "rgba(47, 43, 61, 0.4)",
+              },
+              border: {
+                display: false,
+              },
+            },
+            y: {
+              stacked: true,
+              display: false,
+              grid: {
+                display: false,
+              },
+              border: {
+              display: false,
+            },
+            },
+          },
+          elements: {
+        rectangle: {
+          borderSkipped: 'bottom'
+        }
+      }
+    };
+    const manageReviewsStatistics = document.getElementById('manageReviewsStatistics')
+    const Chart1 = new Chart(manageReviewsStatistics, {
+      type: "bar",
+      data: data1,
+      options: options1
+    })
+
+        // 차트 테마별 색상 변경
+        function darkMode() {
+    const dark = document.getElementById("dark").classList.contains('dark')
+    let chart1LabelColorX = Chart1.options.scales.x;
+
+
+        if (dark === true) {
+          chart1LabelColorX.ticks.color = "rgba(225, 222, 245, 0.4)"
+        }
+        if (dark === false) {
+          chart1LabelColorX.ticks.color = "rgba(47, 43, 61, 0.4)"
+        }
+        Chart1.update()
+      }
   </script>
 </body>

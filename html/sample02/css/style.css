@@ -441,6 +441,14 @@ button {
     width: var(--prg-bar);
   }
 }
+@keyframes prgbar2 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(100% / var(--prg-bar) * 100);
+  }
+}
 @keyframes barlabel {
   0% {
     width: 0;
@@ -1878,12 +1886,24 @@ body {
   background-image: url(../images/system/circle.svg);
 }
 
+.ic_star_fill_pr {
+  background-image: url(../images/system/star_fill_pr.svg);
+}
+
 .ic_star_fill_y {
   background-image: url(../images/system/star_fill_y.svg);
 }
 
 .ic_star_fill_gr {
   background-image: url(../images/system/star_fill_gr.svg);
+}
+
+.ic_star_fill_td {
+  background-image: url(../images/system/star_fill_td.svg);
+}
+
+.ic_star_fill_ad {
+  background-image: url(../images/system/star_fill_ad.svg);
 }
 
 .ic_moon_stars {
@@ -2672,6 +2692,9 @@ body {
 }
 :root.dark .ic_user_plus {
   background-image: url(../images/system/user_plus_d.svg);
+}
+:root.dark .ic_star_fill_ad {
+  background-image: url(../images/system/star_fill_ad_d.svg);
 }
 :root.dark .icc_rocket_gr {
   background-image: url(../images/color/rocket_d.svg);
@@ -5870,8 +5893,7 @@ button:disabled {
   text-transform: uppercase;
 }
 .widget-table tbody td {
-  padding-inline: 1.25rem 1rem;
-  height: 3.5rem;
+  padding: var(--padding-4);
 }
 .widget-table .table_icon {
   width: 2.375rem;
@@ -5999,6 +6021,16 @@ button:disabled {
 }
 .widget .widget_smr .flex {
   gap: var(--gap-2);
+}
+
+.ranking {
+  display: flex;
+  align-items: center;
+}
+.ranking i {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: cover;
 }
 
 :root.dark .timeline-block.type_dashed::before {
@@ -7663,13 +7695,6 @@ body.open {
 .widget .assianment_progress .widget-list {
   height: 100%;
 }
-@property --p {
-  .widget .assianment_progress {
-    syntax: "<number>";
-    inherits: true;
-    initial-value: 0;
-  }
-}
 .widget .assianment_progress .circle_prg {
   --w: 3.625rem;
   --p: 72;
@@ -8219,6 +8244,90 @@ body.open {
   width: 0.75rem;
   height: 0.75rem;
   background-size: cover;
+}
+
+.manage_reviews {
+  padding: var(--padding-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 12.75rem;
+}
+.manage_reviews .reviews_info {
+  width: 100%;
+  padding-right: var(--padding-6);
+  border-right: 1px solid var(--divider);
+  display: grid;
+  gap: var(--gap-2);
+}
+.manage_reviews .reviews_info .font_h3 {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-2);
+}
+.manage_reviews .reviews_info i {
+  width: 2rem;
+  height: 2rem;
+  background-size: cover;
+}
+.manage_reviews .chart_manage_reviews {
+  width: 100%;
+  height: 100%;
+  padding-left: var(--padding-6);
+  display: grid;
+}
+.manage_reviews .chart_manage_reviews .progress_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-2);
+}
+.manage_reviews .chart_manage_reviews .progress_bar .data_label {
+  width: 2.375rem;
+  font-size: var(--font-13);
+  line-height: 1.25rem;
+  color: var(--text-secondary);
+}
+.manage_reviews .chart_manage_reviews .progress_bar .data_bar {
+  height: 0.5rem;
+  border-radius: 3rem;
+  width: calc(100% - 4.875rem);
+  position: relative;
+  background-color: var(--primary-o-lighter);
+}
+.manage_reviews .chart_manage_reviews .progress_bar .data_bar .bar {
+  --total: 130;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: calc(100% / var(--total) * var(--prg-bar));
+  background-color: var(--primary);
+  box-shadow: var(--primary-s-small);
+  border-radius: 3rem;
+}
+.manage_reviews .chart_manage_reviews .progress_bar .data_total {
+  font-size: var(--font-13);
+  line-height: 1.25rem;
+  color: var(--text-secondary);
+  width: 1.5rem;
+}
+
+.manage_reviews_statistics {
+  padding: var(--padding-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 12.75rem;
+}
+.manage_reviews_statistics .statistics_info {
+  display: grid;
+  height: 100%;
+  align-content: space-between;
+}
+.manage_reviews_statistics .canvas_manage_reviews_statistics {
+  width: 14.375rem;
+  height: 100%;
 }
 
 :root.dark .shipping_activity .now.timeline-block::before {

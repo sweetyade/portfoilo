@@ -1917,8 +1917,7 @@
 
     tbody {
       td {
-        padding-inline: 1.25rem 1rem;
-        height: 3.5rem;
+        padding: var(--padding-4);
       }
     }
 
@@ -2053,6 +2052,16 @@
     .flex {
       gap: var(--gap-2);
     }
+  }
+}
+
+.ranking {
+  @include flex;
+
+  i {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: cover;
   }
 }
 
