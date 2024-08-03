@@ -446,7 +446,7 @@ button {
     width: 0;
   }
   100% {
-    width: calc(100% / var(--prg-bar) * 100);
+    width: calc(100% / var(--total) * var(--prg-bar));
   }
 }
 @keyframes barlabel {
@@ -8305,6 +8305,7 @@ body.open {
   background-color: var(--primary);
   box-shadow: var(--primary-s-small);
   border-radius: 3rem;
+  animation: prgbar2 1s ease-in-out;
 }
 .manage_reviews .chart_manage_reviews .progress_bar .data_total {
   font-size: var(--font-13);
