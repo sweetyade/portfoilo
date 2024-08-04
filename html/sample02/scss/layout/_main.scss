@@ -1949,6 +1949,50 @@ body {
   }
 }
 
+.how_block {
+  @include flexbtw;
+  gap: var(--gap-6);
+
+  .how_data {
+    width: 100%;
+    display: grid;
+    gap: var(--gap-2);
+    text-align: center;
+
+    .how_icon {
+      width: 4.375rem;
+      height: 4.375rem;
+      border-radius: 50%;
+      border: 1px dashed var(--primary);
+      @include flexcenter;
+      margin: 0 auto;
+
+      i {
+        width: 2.625rem;
+        height: 2.625rem;
+        background-size: cover;
+        background-size: center;
+      }
+    }
+  }
+}
+
+.share_block {
+  display: grid;
+  height: 100%;
+  align-content: space-between;
+
+  .sharelink_block {
+    .btn_wrap {
+      gap: var(--gap-2);
+
+      .btn_icon {
+        background-color: var(--btn-bg);
+      }
+    }
+  }
+}
+
 :root.dark {
   .shipping_activity {
     .now {
