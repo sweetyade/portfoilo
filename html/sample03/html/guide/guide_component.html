@@ -1,0 +1,2001 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/guide.css" />
+    <title>DESIGN GUIDE</title>
+  </head>
+  <body>
+    <style>
+      .dropdown,
+      .alert{
+        max-width: 350px;
+      }
+
+      .option{
+        height: fit-content;
+        width: 250px;
+      }
+
+      .progress{
+        width: 300px;
+      }
+
+      .list{
+        width: 300px;
+      }
+
+      .card{
+        width: 400px;
+      }
+
+      .timeline{
+        width: 450px;
+      }
+    </style>
+    <main id="guide_main">
+      <!-- menu -->
+      <nav id="guide_nav">
+        <h1>design guide</h1>
+
+        <div class="nav_menu">
+          <a href="guide.html">typography</a>
+          <a href="guide_color.html">color</a>
+          <a href="guide_icon.html">icon</a>
+          <a href="guide_form.html">form</a>
+          <a href="guide_button.html">button</a>
+          <a href="guide_popup.html">popup</a>
+          <a href="guide_component.html" class="active">component</a>
+        </div>
+      </nav>
+
+      <!-- contents -->
+      <section class="container">
+        <div class="contents">
+          <h2>component</h2>
+
+          <div class="guide_info">
+            <p class="txt">- 사이즈 기본 m / size_s / size_l</p>
+            <p class="txt">- 타입 버티컬 type_vertical</p>
+          </div>
+
+          <!-- breadcrumbs -->
+          <div class="guide_block">
+            <h3>breadcrumbs</h3>
+            <div class="guide_data">
+              <p class="title">.</p>
+              <div class="data" style="">
+                <div class="breadcrumbs">
+                  <p class="breadcrumbs-nav"><a href="javascript:void(0)">Breadcrumb</a></p>
+                  <p class="breadcrumbs-nav"><a href="javascript:void(0)">Breadcrumb</a></p>
+                  <p class="breadcrumbs-nav"><a href="javascript:void(0)">Breadcrumb</a></p>
+                </div>
+
+                <div class="breadcrumbs">
+                  <p class="breadcrumbs-nav">
+                    <span class="breadcrumbs-icon">
+                      <img src="/images/system/star_fill_pr.svg" alt="">
+                    </span>
+                    <a href="javascript:void(0)">Breadcrumb</a>
+                  </p>
+                  <p class="breadcrumbs-nav">
+                    <span class="breadcrumbs-icon">
+                      <img src="/images/system/star_fill_pr.svg" alt="">
+                    </span>
+                    <a href="javascript:void(0)">Breadcrumb</a>
+                  </p>
+                  <p class="breadcrumbs-nav">
+                    <span class="breadcrumbs-icon">
+                      <img src="/images/system/star_fill_gr.svg" alt="">
+                    </span>
+                    <a href="javascript:void(0)">Breadcrumb</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- dropdown -->
+          <div class="guide_block">
+            <h3>dropdown</h3>
+            <div class="guide_data">
+              <p class="title">dropdown</p>
+              <div class="data">
+                <div class="dropdown">
+                  <p class="dropdown-label">label</p>
+                  <div class="dropdown-btn">
+                    <p class="chip chip_s">chip <span class="delBtn"></span></p>
+                    <p class="chip chip_s">chip <span class="delBtn"></span></p>
+                    <p class="chip chip_s">chip <span class="delBtn"></span></p>
+                    <p class="dropdown-open"></p>
+                  </div>
+                  <ul class="dropdown_list" style="display: none;">
+                    <li class="dropdown_list-data">Show all notification content</li>
+                    <li class="dropdown_list-data active">Hide sensitive notification content</li>
+                    <li class="dropdown_list-data">Hide all notification content</li>
+                    <li class="dropdown_list-data">Toggle Dropdown</li>
+                    <li class="dropdown_list-data">Something else here</li>
+                    <li class="dropdown_list-data"><a href="#">Separated link</a></li>
+                    <li class="dropdown_list-data"><a href="#" class="exlink">Extra Link</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- stepper -->
+          <div class="guide_block">
+            <h3>stepper</h3>
+            <div class="guide_data">
+              <p class="title">default</p>
+              <div class="data">
+                <div class="stepper">
+                  <div class="stepper_default stepper-pre">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no">01</p>
+                    <p class="stepper-title">Account Details</p>
+                  </div>
+                  <div class="stepper-divider"></div>
+                  <div class="stepper_default stepper-active">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no">02</p>
+                    <p class="stepper-title">Personal Info</p>
+                  </div>
+                  <div class="stepper-divider "></div>
+                  <div class="stepper_default stepper-next">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no">03</p>
+                    <p class="stepper-title">Social Links</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">subtitle</p>
+              <div class="data">
+                <div class="stepper">
+                  <div class="stepper_default stepper-pre">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no stepper-nol">01</p>
+                    <div class="">
+                      <p class="stepper-title">Account Details</p>
+                      <p class="stepper-subtxt">Enter your Account Details</p>
+                    </div>
+                  </div>
+                  <div class="stepper-divider"></div>
+                  <div class="stepper_default stepper-active">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no stepper-nol">02</p>
+                    <div class="">
+                      <p class="stepper-title">Personal Info</p>
+                      <p class="stepper-subtxt">Setup Information</p>
+                    </div>
+                  </div>
+                  <div class="stepper-divider "></div>
+                  <div class="stepper_default stepper-next">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no stepper-nol">03</p>
+                    <div class="">
+                      <p class="stepper-title">Social Links</p>
+                      <p class="stepper-subtxt">Add Social Links</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">center</p>
+              <div class="data">
+                <div class="stepper">
+                  <div class="stepper_center stepper-pre">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-title">Account Details</p>
+                  </div>
+                  <div class="stepper-divider"></div>
+                  <div class="stepper_center stepper-active">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-title">Personal Info</p>
+                  </div>
+                  <div class="stepper-divider "></div>
+                  <div class="stepper_center stepper-next">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-title">Social Links</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">center subtext</p>
+              <div class="data">
+                <div class="stepper">
+                  <div class="stepper_center stepper-pre">
+                    <p class="stepper-icon"></p>
+                    <div class="">
+                      <p class="stepper-title">Account Details</p>
+                      <p class="stepper-subtxt">Enter your Account Details</p>
+                    </div>
+                    
+                  </div>
+                  <div class="stepper-divider"></div>
+                  <div class="stepper_center stepper-active">
+                    <p class="stepper-icon"></p>
+                    
+                    <div>
+                      <p class="stepper-title">Personal Info</p>
+                      <p class="stepper-subtxt">Setup Information</p>
+                    </div>
+                  </div>
+                  <div class="stepper-divider "></div>
+                  <div class="stepper_center stepper-next">
+                    <p class="stepper-icon"></p>
+                    
+                    <div>
+                      <p class="stepper-title">Social Links</p>
+                      <p class="stepper-subtxt">Add Social Links</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- stepper custom-->
+          <div class="guide_block">
+            <h3>stepper custom</h3>
+            <div class="guide_data">
+              <p class="title">custom</p>
+              <div class="data">
+                <div class="stepper_custom">
+                  <div class="stepper_default stepper_custom-pre">
+                    <div class="stepper_custom-icon">1</div>
+                    <div class="stepper_custom-title">Account Details</div>
+                  </div>
+                  <div class="stepper_divider"></div>
+                  <div class="stepper_default stepper_custom-active">
+                    <div class="stepper_custom-icon">2</div>
+                    <div class="stepper_custom-title">Account Details</div>
+                  </div>
+                  <div class="stepper_divider"></div>
+                  <div class="stepper_default stepper_custom-next">
+                    <div class="stepper_custom-icon">3</div>
+                    <div class="stepper_custom-title">Account Details</div>
+                  </div>
+                </div>
+              </div>
+              <div class="data">
+                <div class="stepper_custom">
+                  <div class="stepper_default stepper_custom-pre">
+                    <div class="stepper_custom-icon"><img src="/images/system/file_analytics_pr.svg" alt=""></div>
+                    <div>
+                      <div class="stepper_custom-title">Account Details</div>
+                      <div class="stepper_custom-subtxt">Enter your Account Details</div>
+                    </div>
+                  </div>
+                  <div class="stepper_divider"></div>
+                  <div class="stepper_default stepper_custom-active">
+                    <div class="stepper_custom-icon"><img src="/images/system/user_w.svg" alt=""></div>
+                    <div>
+                      <div class="stepper_custom-title">Personal Info</div>
+                      <div class="stepper_custom-subtxt">Setup Information</div>
+                    </div>
+                  </div>
+                  <div class="stepper_divider"></div>
+                  <div class="stepper_default stepper_custom-next">
+                    <div class="stepper_custom-icon"><img src="/images/system/brand_instagram.svg" alt=""></div>
+                    <div>
+                      <div class="stepper_custom-title">Social Links</div>
+                      <div class="stepper_custom-subtxt">Add Social Links</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- stepper vertical-->
+          <div class="guide_block">
+            <h3>stepper vertical</h3>
+            <div class="guide_data">
+              <p class="title">default</p>
+              <div class="data">
+                <div class="stepper type_vertical">
+                  <div class="stepper_default stepper-pre">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no">01</p>
+                    <p class="stepper-title">Account Details</p>
+                  </div>
+                  <div class="stepper-divider"></div>
+                  <div class="stepper_default stepper-active">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no">02</p>
+                    <p class="stepper-title">Personal Info</p>
+                  </div>
+                  <div class="stepper-divider "></div>
+                  <div class="stepper_default stepper-next">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no">03</p>
+                    <p class="stepper-title">Social Links</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">subtitle</p>
+              <div class="data">
+                <div class="stepper type_vertical">
+                  <div class="stepper_default stepper-pre">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no stepper-nol">01</p>
+                    <div class="">
+                      <p class="stepper-title">Account Details</p>
+                      <p class="stepper-subtxt">Enter your Account Details</p>
+                    </div>
+                  </div>
+                  <div class="stepper-divider"></div>
+                  <div class="stepper_default stepper-active">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no stepper-nol">02</p>
+                    <div class="">
+                      <p class="stepper-title">Personal Info</p>
+                      <p class="stepper-subtxt">Setup Information</p>
+                    </div>
+                  </div>
+                  <div class="stepper-divider "></div>
+                  <div class="stepper_default stepper-next">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-no stepper-nol">03</p>
+                    <div class="">
+                      <p class="stepper-title">Social Links</p>
+                      <p class="stepper-subtxt">Add Social Links</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">center</p>
+              <div class="data">
+                <div class="stepper type_vertical">
+                  <div class="stepper_center stepper-pre">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-title">Account Details</p>
+                  </div>
+                  <div class="stepper-divider"></div>
+                  <div class="stepper_center stepper-active">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-title">Personal Info</p>
+                  </div>
+                  <div class="stepper-divider "></div>
+                  <div class="stepper_center stepper-next">
+                    <p class="stepper-icon"></p>
+                    <p class="stepper-title">Social Links</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="guide_data">
+              <p class="title">center subtext</p>
+              <div class="data">
+                <div class="stepper type_vertical">
+                  <div class="stepper_center stepper-pre">
+                    <p class="stepper-icon"></p>
+                    <div class="">
+                      <p class="stepper-title">Account Details</p>
+                      <p class="stepper-subtxt">Enter your Account Details</p>
+                    </div>
+                    
+                  </div>
+                  <div class="stepper-divider"></div>
+                  <div class="stepper_center stepper-active">
+                    <p class="stepper-icon"></p>
+                    
+                    <div>
+                      <p class="stepper-title">Personal Info</p>
+                      <p class="stepper-subtxt">Setup Information</p>
+                    </div>
+                  </div>
+                  <div class="stepper-divider "></div>
+                  <div class="stepper_center stepper-next">
+                    <p class="stepper-icon"></p>
+                    
+                    <div>
+                      <p class="stepper-title">Social Links</p>
+                      <p class="stepper-subtxt">Add Social Links</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- stepper custom vertical-->
+          <div class="guide_block">
+            <h3>stepper custom</h3>
+            <div class="guide_data">
+              <p class="title">custom vertical</p>
+              <div class="data">
+                <div class="stepper_custom stepper_v">
+                  <div class="stepper_default stepper_custom-pre">
+                    <div class="stepper_custom-icon">1</div>
+                    <div class="stepper_custom-title">Account Details</div>
+                  </div>
+                  <div class="stepper_divider"></div>
+                  <div class="stepper_default stepper_custom-active">
+                    <div class="stepper_custom-icon">2</div>
+                    <div class="stepper_custom-title">Account Details</div>
+                  </div>
+                  <div class="stepper_divider"></div>
+                  <div class="stepper_default stepper_custom-next">
+                    <div class="stepper_custom-icon">3</div>
+                    <div class="stepper_custom-title">Account Details</div>
+                  </div>
+                </div>
+              </div>
+              <div class="data">
+                <div class="stepper_custom stepper_v">
+                  <div class="stepper_default stepper_custom-pre">
+                    <div class="stepper_custom-icon"><img src="/images/system/file_analytics_pr.svg" alt=""></div>
+                    <div>
+                      <div class="stepper_custom-title">Account Details</div>
+                      <div class="stepper_custom-subtxt">Enter your Account Details</div>
+                    </div>
+                  </div>
+                  <div class="stepper_divider"></div>
+                  <div class="stepper_default stepper_custom-active">
+                    <div class="stepper_custom-icon"><img src="/images/system/user_w.svg" alt=""></div>
+                    <div>
+                      <div class="stepper_custom-title">Personal Info</div>
+                      <div class="stepper_custom-subtxt">Setup Information</div>
+                    </div>
+                  </div>
+                  <div class="stepper_divider"></div>
+                  <div class="stepper_default stepper_custom-next">
+                    <div class="stepper_custom-icon"><img src="/images/system/brand_instagram.svg" alt=""></div>
+                    <div>
+                      <div class="stepper_custom-title">Social Links</div>
+                      <div class="stepper_custom-subtxt">Add Social Links</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- tabs -->
+          <div class="guide_block" >
+            <h3>tabs</h3>
+            <div class="guide_data">
+              <p class="title">tabs</p>
+              <div class="data">
+                <div class="tab_group">
+                  <a href="javascript:void(0)" class="tab_btn active">tab 1</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 2</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 3</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 4</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 5</a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="tab_group">
+                  <a href="javascript:void(0)" class="tab_btn active"><span class="tab_icon"></span>tab 1</a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 2</a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 3</a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 4</a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 5</a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="tab_group">
+                  <a href="javascript:void(0)" class="tab_btn active">tab 1<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 2<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 3<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 4<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 5<span class="tab_icon"></span></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="tab_group">
+                  <a href="javascript:void(0)" class="tab_btn active"><span class="tab_icon"></span>tab 1<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 2<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 3<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 4<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 5<span class="tab_icon"></span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">tabs fill</p>
+              <div class="data">
+                <div class="tab_group_fill">
+                  <a href="javascript:void(0)" class="tab_btn active">tab 1</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 2</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 3</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 4</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 5</a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="tab_group_fill">
+                  <a href="javascript:void(0)" class="tab_btn active"><span class="tab_icon"></span>tab 1</a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 2</a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 3</a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 4</a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 5</a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="tab_group_fill">
+                  <a href="javascript:void(0)" class="tab_btn active">tab 1<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 2<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 3<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 4<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 5<span class="tab_icon"></span></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="tab_group_fill">
+                  <a href="javascript:void(0)" class="tab_btn active"><span class="tab_icon"></span>tab 1<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 2<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 3<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 4<span class="tab_icon"></span></a>
+                  <a href="javascript:void(0)" class="tab_btn"><span class="tab_icon"></span>tab 5<span class="tab_icon"></span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">tabs vertical</p>
+              <div class="data">
+                <div class="tab_group type_vertical">
+                  <a href="javascript:void(0)" class="tab_btn active">tab 1</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 2</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 3</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 4</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 5</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">tabs fill vertical</p>
+              <div class="data">
+                <div class="tab_group_fill type_vertical">
+                  <a href="javascript:void(0)" class="tab_btn active">tab 1</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 2</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 3</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 4</a>
+                  <a href="javascript:void(0)" class="tab_btn">tab 5</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- pagenation -->
+          <div class="guide_block" >
+            <h3>pagenation</h3>
+            <div class="guide_data">
+              <p class="title">default</p>
+              <div class="data" >
+                <div class="pagenation">
+                  <a href="javascript:void(0)" class="first ic_chevrons_left_gr"></a>
+                  <a href="javascript:void(0)" class="pre ic_chevron_left_gr"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next ic_chevron_right"></a>
+                  <a href="javascript:void(0)" class="last ic_chevrons_right"></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="pagenation type_outline">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="pagenation type_rounded">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="pagenation type_rounded type_outline">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">color</p>
+              <div class="data" >
+                <div class="pagenation color_pr">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="pagenation color_gr">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="pagenation color_error">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="pagenation color_warning">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="pagenation color_info">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="pagenation color_success">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">size</p>
+              <div class="data" >
+                <div class="pagenation .size_s">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="pagenation">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="pagenation .size_l">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">disabled</p>
+              <div class="data" >
+                <div class="pagenation disabled">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+              <div class="data">
+                <div class="pagenation type_rounded type_border disabled">
+                  <a href="javascript:void(0)" class="first"></a>
+                  <a href="javascript:void(0)" class="pre"></a>
+                  <a href="javascript:void(0)" class="">1</a>
+                  <a href="javascript:void(0)" class="">2</a>
+                  <a href="javascript:void(0)" class="active">3</a>
+                  <a href="javascript:void(0)" class="">4</a>
+                  <a href="javascript:void(0)" class="">5</a>
+                  <a href="javascript:void(0)" class="next"></a>
+                  <a href="javascript:void(0)" class="last"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- alert -->
+          <div class="guide_block">
+            <h3>alert</h3>
+            <div class="guide_data">
+              <p class="title">default</p>
+              <div class="data" style="display: flex; gap: 1rem; flex-direction: column;">
+                <div class="alert color_error">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
+                </div>
+                <div class="alert color_warning">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
+                </div>
+                <div class="alert color_info">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
+                </div>
+                <div class="alert color_success">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
+                </div>
+              </div>
+
+              <div class="data" style="display: flex; gap: 1rem; flex-direction: column;">
+                <div class="alert type_outline color_error">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
+                </div>
+                <div class="alert type_outline color_warning">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
+                </div>
+                <div class="alert type_outline color_info">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
+                </div>
+                <div class="alert type_outline color_success">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
+                </div>
+              </div>
+              
+              <div class="data" style="display: flex; gap: 1rem; flex-direction: column;">
+                <div class="alert type_label color_error">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
+                </div>
+                <div class="alert type_label color_warning">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
+                </div>
+                <div class="alert type_label color_info">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
+                </div>
+                <div class="alert type_label color_success">
+                  <div class="alert-icon"></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <div class="alert-content">Alert content</div>
+                  </div>
+                  <div class="alertDel"></div>
+                </div>
+              </div>
+
+            </div>
+
+
+          </div>
+
+          <!-- Accordion -->
+          <div class="guide_block">
+            <h3>Accordion</h3>
+            <div class="guide_data">
+              <p class="title">accordion</p>
+              <div class="data" style="display: flex; gap: 1rem; flex-direction: column;">
+                <div class="accordion">
+                  <div class="accordion-data">
+                    <div class="accordion-title">
+                      <p class="title">Accordion 1</p>
+                      <i class="ic_chevron_right"></i>
+                    </div>
+                    <div class="accordion-dec">
+                      Content
+                    </div> 
+                  </div>
+                  <div class="accordion-data">
+                    <div class="accordion-title">
+                      <p class="title">Accordion 1</p>
+                      <i class="ic_chevron_right"></i>
+                    </div>
+                    <div class="accordion-dec">
+                      Content
+                    </div> 
+                  </div>
+                  <div class="accordion-data">
+                    <div class="accordion-title">
+                      <p class="title">Accordion 1</p>
+                      <i class="ic_chevron_right"></i>
+                    </div>
+                    <div class="accordion-dec">
+                      Content
+                    </div> 
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">accordion .outline</p>
+              <div class="data" style="display: flex; gap: 1rem; flex-direction: column;">
+                <div class="accordion type_outline">
+                  <div class="accordion-data">
+                    <div class="accordion-title">
+                      <p class="title">Accordion 1</p>
+                      <i class="ic_plus"></i>
+                    </div>
+                    <div class="accordion-dec">
+                      Content
+                    </div> 
+                  </div>
+                  <div class="accordion-data">
+                    <div class="accordion-title">
+                      <p class="title">Accordion 1</p>
+                      <i class="ic_plus"></i>
+                    </div>
+                    <div class="accordion-dec">
+                      Content
+                    </div> 
+                  </div>
+                  <div class="accordion-data">
+                    <div class="accordion-title">
+                      <p class="title">Accordion 1</p>
+                      <i class="ic_plus"></i>
+                    </div>
+                    <div class="accordion-dec">
+                      Content
+                    </div> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- avatar -->
+          <div class="guide_block" >
+            <h3>avatar</h3>
+            <div class="guide_data">
+              <p class="title">avatar</p>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="avatar">
+                  <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                </div>
+                <div class="avatar type_rounded">
+                  <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                </div>
+                <div class="avatar type_circle">
+                  <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                </div>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="avatar">
+                  <p class="thumb">AK</p>
+                </div>
+                <div class="avatar type_rounded">
+                  <p class="thumb">AK</p>
+                </div>
+                <div class="avatar type_circle">
+                  <p class="thumb">AK</p>
+                </div>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="avatar">
+                  <p class="thumb"><i class="ic_star" class="avater_icon"></i></p>
+                </div>
+                <div class="avatar type_rounded">
+                  <p class="thumb"><i class="ic_star" class="avater_icon"></i></p>
+                </div>
+                <div class="avatar type_circle">
+                  <p class="thumb"><i class="ic_star" class="avater_icon"></i></p>
+                </div>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="avatar">
+                  <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                  <span class="badge type_dot color_success"></span>
+                </div>
+                <div class="avatar type_rounded">
+                  <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                  <span class="badge type_dot color_success"></span>
+                </div>
+                <div class="avatar type_circle">
+                  <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                  <span class="badge type_dot color_success"></span>
+                </div>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="avatar">
+                  <p class="thumb">AK</p>
+                  <span class="badge type_dot color_success"></span>
+                </div>
+                <div class="avatar type_rounded">
+                  <p class="thumb">AK</p>
+                  <span class="badge type_dot color_success"></span>
+                </div>
+                <div class="avatar type_circle">
+                  <p class="thumb">AK</p>
+                  <span class="badg type_dot color_success"></span>
+                </div>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="avatar">
+                  <p class="thumb"><i class="ic_star" class="avater_icon"></i></p>
+                  <span class="badge type_dot color_success"></span>
+                </div>
+                <div class="avatar type_rounded">
+                  <p class="thumb"><i class="ic_star" class="avater_icon"></i></p>
+                  <span class="badg type_dot color_success"></span>
+                </div>
+                <div class="avatar type_circle">
+                  <p class="thumb"><i class="ic_star" class="avater_icon"></i></p>
+                  <span class="badge type_dot color_success"></span>
+                </div>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="avatar_list">
+                  <div class="avatar type_circle">
+                    <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                  </div>
+                  <div class="avatar type_circle">
+                    <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                  </div>
+                  <div class="avatar type_circle">
+                    <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                  </div>
+                  <div class="avatar type_circle">
+                    <p class="thumb">+3</p>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
+          </div>
+
+          <!-- options -->
+          <div class="guide_block" >
+            <h3>options</h3>
+            <div class="guide_data">
+              <p class="title">option</p>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="option active">
+                  <div class="option-name">
+                    <p class="option-ck"></p>
+                    Basic <span>Free</span>
+                  </div>
+                  <p class="option-txt">Get 1 project with 1 teams members.</p>
+                </div>
+                <div class="option type_icon">
+                  <i class="option-icon ic_star"></i>
+                  <p class="option-name">Starter</p>
+                  <p class="option-txt">Get 1 project with 1 teams members.</p>
+                  <p class="option-ck"></p>
+                </div>
+                <div class="option type_icon">
+                  <i class="option-icon_l icc_gift_gr"></i>
+                    <p class="option-name">Basic</p>
+                    <p class="option-txt">Get 1 project with 1 teams members.</p>
+                    <div class="option-price">
+                      <p class="price"><span>$</span>0</p>
+                      <p class="mo">/month</p>
+                    </div>
+                  <p class="option-ck"></p>
+                </div>
+                <div class="option type_img">
+                  <div class="option-img"><img src="../../images/imgsaple.png" alt=""></div>
+                </div>
+              </div>
+
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="option checkbox active">
+                  <div class="option-name">
+                    <p class="option-ck"></p>
+                    Basic <span>Free</span>
+                  </div>
+                  <p class="option-txt">Get 1 project with 1 teams members.</p>
+                </div>
+                <div class="option checkbox type_icon ">
+                  <i class="option-icon ic_star"></i>
+                  <p class="option-name">Starter</p>
+                  <p class="option-txt">Get 1 project with 1 teams members.</p>
+                  <p class="option-ck"></p>
+                </div>
+                <div class="option checkbox type_icon ">
+                  <i class="option-icon_l icc_gift_gr"></i>
+                    <p class="option-name">Basic</p>
+                    <p class="option-txt">Get 1 project with 1 teams members.</p>
+                    <div class="option-price">
+                      <p class="price"><span>$</span>0</p>
+                      <p class="mo">/month</p>
+                    </div>
+                  <p class="option-ck"></p>
+                </div>
+                <div class="option checkbox type_img ">
+                  <div class="option-img"><img src="../../images/imgsaple.png" alt=""></div>
+                  <p class="option-ck"></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- progress -->
+          <div class="guide_block" >
+            <h3>progress</h3>
+            <div class="guide_data">
+              <p class="title">progress</p>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="progress">
+                  <div class="progress-bar">
+                    <div class="bar"per='50'></div>
+                  </div>
+                  <div class="progress-per">50%</div>
+                </div>
+                <div class="progress color_gray">
+                  <div class="progress-bar">
+                    <div class="bar" per="80"></div>
+                  </div>
+                  <div class="progress-per">80%</div>
+                </div>
+                <div class="progress size_s">
+                  <div class="progress-bar">
+                    <div class="bar" per="42"></div>
+                  </div>
+                  <div class="progress-per">42%</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- snackbar -->
+          <div class="guide_block" >
+            <h3>snackbar</h3>
+            <div class="guide_data">
+              <p class="title">snackbar</p>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="snackbar">
+                  <p class="txt">Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="snackbar">
+                  <p class="txt">Lorem ipsum dolor sit amet</p>
+                  <div class="snack_btn">
+                    <button class="btn type_txt size_s">
+                      <div class="ripple js-ripple">
+                        <span class="ripple__circle"></span>
+                      </div>
+                      small
+                    </button>
+                    <div class="delBtn ic_x_w"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- tooltip -->
+          <div class="guide_block" >
+            <h3>tooltip</h3>
+            <div class="guide_data">
+              <p class="title">tooltip</p>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <p class="tooltip">My Tooltip</p>
+                <p class="tooltip type_bottom">My Tooltip</p>
+                <p class="tooltip type_top">My Tooltip</p>
+                <p class="tooltip type_left">My Tooltip</p>
+                <p class="tooltip type_right">My Tooltip</p>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- dialog -->
+          <div class="guide_block" >
+            <h3>dialog</h3>
+            <div class="guide_data">
+              <p class="title">dialog</p>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="dialog">
+                  <p class="title">Dialog Title</p>
+                  <p class="txt">Content</p>
+
+                  <div class="btn_wrap">
+                    <button class="btn type_label color_gr">
+                      <div class="ripple js-ripple">
+                        <span class="ripple__circle"></span>
+                      </div>
+                      Close
+                    </button>
+                    <button class="btn type_basic ">
+                      <div class="ripple js-ripple">
+                        <span class="ripple__circle"></span>
+                      </div>
+                      Save changes
+                    </button>
+                  </div>
+
+                  <div class="delDialog ic_x_gr"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- toast -->
+          <div class="guide_block">
+            <h3>toast</h3>
+            <div class="guide_data">
+              <p class="title">toast</p>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="toast">
+                  <p class="toast-msg">Blank Toast</p>
+                </div>
+                <div class="toast">
+                  <p class="toast-error"></p>
+                  <p class="toast-msg">This didn't work.</p>
+                </div>
+                <div class="toast">
+                  <p class="toast-success"></p>
+                  <p class="toast-msg">Successfully toasted!</p>
+                </div>
+                <div class="toast">
+                  <p class="toast-loading"></p>
+                  <p class="toast-msg">Loading...</p>
+                </div>
+                <div class="toast type_avatar">
+                  <div class="avatar_data">
+                    <div class="avatar type_circle">
+                      <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                    </div>
+                    <div class="avatar_info">
+                      <p class="name">John Doe</p>
+                      <p class="txt">Sure! 8:30pm works great</p>
+                    </div>
+                  </div>
+                  <div class="delToast ic_x"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- badge -->
+          <div class="guide_block">
+            <h3>badge</h3>
+            <div class="guide_data">
+              <p class="title">badge</p>
+              <div class="data" style="display: flex; gap: 1rem; align-items: flex-start;">
+                <p class="badge">Badge</p>
+                <p class="badge color_gr">Badge</p>
+                <p class="badge color_error">Badge</p>
+                <p class="badge color_warning">Badge</p>
+                <p class="badge color_info">Badge</p>
+                <p class="badge color_success">Badge</p>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <p class="badge type_label">Badge</p>
+                <p class="badge type_label color_gr">Badge</p>
+                <p class="badge type_label color_error">Badge</p>
+                <p class="badge type_label color_warning">Badge</p>
+                <p class="badge type_label color_info">Badge</p>
+                <p class="badge type_label color_success">Badge</p>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <p class="badge type_dot"></p>
+                <p class="badge type_dot color_gr"></p>
+                <p class="badge type_dot color_error"></p>
+                <p class="badge type_dot color_warning"></p>
+                <p class="badge type_dot color_info"></p>
+                <p class="badge type_dot color_success"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- list -->
+          <div class="guide_block">
+            <h3>list</h3>
+            <div class="guide_data">
+              <p class="title">list</p>
+              <div class="data" style="display: flex; gap: 1rem; align-items: flex-start; flex-wrap: wrap;">
+                <div class="list">
+                  <p class="list-title">Basic list items</p>
+
+                  <ul class="">
+                    <li class="active"><a href="javascript:void(0)">Dashboard</a> <span class="chip size_s color_pr">4</span></li>
+                    <li><a href="javascript:void(0)">Widget</a></li>
+                    <li><a href="javascript:void(0)">eCommerce</a><span class="chip size_s color_success">12</span></li>
+                    <li><a href="javascript:void(0)">Academy</a></li>
+                    <li><a href="javascript:void(0)">Logistics</a></li>
+                    <li class="disabled"><a href="javascript:void(0)">Disabled</a></li>
+                  </ul>
+                </div>
+
+                <div class="list">
+                  <p class="list-title">List items with icon</p>
+
+                  <ul class="type_left">
+                    <li><i class="ic_user"></i><a href="javascript:void(0)">Account Settings</a></li>
+                    <li><i class="ic_brand_gitlab"></i><a href="javascript:void(0)">Integrations</a></li>
+                    <li><i class="ic_settings"></i><a href="javascript:void(0)">Settings</a></li>
+                    <li><i class="ic_wallet"></i><a href="javascript:void(0)">Pricing</a></li>
+                    <li><i class="ic_help"></i><a href="javascript:void(0)">Help Center</a></li>
+                  </ul>
+                </div>
+
+                <div class="list">
+                  <p class="list-title">List items with checkbox</p>
+
+                  <ul class="type_left">
+                    <li>
+                      <div class="input_check">
+                        <input type="checkbox" class="check_input" id="checkbox1" checked>
+                        <label for="checkbox1" class=""><span class="check"></span><span class="check_label">Promotion banner</span></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="input_check">
+                        <input type="checkbox" class="check_input" id="checkbox2">
+                        <label for="checkbox2" class=""><span class="check"></span><span class="check_label">Analytics dashboard</span></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="input_check">
+                        <input type="checkbox" class="check_input" id="checkbox3">
+                        <label for="checkbox3" class=""><span class="check"></span><span class="check_label">Make dribbble short</span></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="input_check">
+                        <input type="checkbox" class="check_input" id="checkbox4">
+                        <label for="checkbox4" class=""><span class="check"></span><span class="check_label">Edit Video for facebook</span></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="input_check">
+                        <input type="checkbox" class="check_input" id="checkbox5">
+                        <label for="checkbox5" class=""><span class="check"></span><span class="check_label">Design logo for client</span></label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="list">
+                  <p class="list-title">List items with switch</p>
+
+                  <ul class="">
+                    <li>
+                      <div class="input_switch">
+                        <input type="checkbox" class="" id="swtich1" />
+                        <label for="swtich1" class="switch_label">
+                          <span class="switch_txt">Menu collapse</span>
+                          <span class="swtich_btn"></span>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="input_switch">
+                        <input type="checkbox" class="" id="swtich2" />
+                        <label for="swtich2" class="switch_label">
+                          <span class="switch_txt">Card shadow</span>
+                          <span class="swtich_btn"></span>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="input_switch">
+                        <input type="checkbox" class="" id="swtich3" />
+                        <label for="swtich3" class="switch_label">
+                          <span class="switch_txt">Menu icon</span>
+                          <span class="swtich_btn"></span>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="input_switch">
+                        <input type="checkbox" class="" id="swtich4" checked/>
+                        <label for="swtich4" class="switch_label">
+                          <span class="switch_txt">Dark mode</span>
+                          <span class="swtich_btn"></span>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="input_switch">
+                        <input type="checkbox" class="" id="swtich5" />
+                        <label for="swtich5" class="switch_label">
+                          <span class="switch_txt">Content boxed</span>
+                          <span class="swtich_btn"></span>
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="list">
+                  <p class="list-title">Avatar with subtitle</p>
+
+                  <ul class="">
+                    <li>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                          <span class="badge type_dot color_success"></span>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">Shannon Paucek</p>
+                          <p class="txt">Destiney_Kiehn@yahoo.com</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_2.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">Dorothy Lockman</p>
+                          <p class="txt">Runolfsdottir@hotmail.com</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_3.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">Johanna Wilderman</p>
+                          <p class="txt">Tito.Boehm@gmail.com</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_4.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">Melody Mayert</p>
+                          <p class="txt">Romaguera23@yahoo.com</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_5.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">Emily Baumbach</p>
+                          <p class="txt">Zaria_Veum71@yahoo.com</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="list">
+                  <p class="list-title">Avatar with subtitle</p>
+
+                  <ul class="">
+                    <li>
+                      <div class="avatar_data">
+                        <div class="avatar type_rounded">
+                          <p class="thumb"><img src="../../images/system/archive.svg" alt=""></p>
+                          <span class="badge type_dot color_success"></span>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">Shannon Paucek</p>
+                          <p class="txt">Destiney_Kiehn@yahoo.com</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="avatar_data">
+                        <div class="avatar type_rounded">
+                          <p class="thumb"><img src="../../images/avatar_2.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">Dorothy Lockman</p>
+                          <p class="txt">Runolfsdottir@hotmail.com</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="avatar_data">
+                        <div class="avatar type_rounded">
+                          <p class="thumb"><img src="../../images/avatar_3.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">Johanna Wilderman</p>
+                          <p class="txt">Tito.Boehm@gmail.com</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="avatar_data">
+                        <div class="avatar type_rounded">
+                          <p class="thumb"><img src="../../images/avatar_4.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">Melody Mayert</p>
+                          <p class="txt">Romaguera23@yahoo.com</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="avatar_data">
+                        <div class="avatar type_circle">
+                          <p class="thumb"><img src="../../images/avatar_5.png" alt=""></p>
+                        </div>
+                        <div class="avatar_info">
+                          <p class="name">Emily Baumbach</p>
+                          <p class="txt">Zaria_Veum71@yahoo.com</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- card -->
+          <div class="guide_block" >
+            <h3>card</h3>
+            <div class="guide_data">
+              <p class="title">card</p>
+              <div class="data" style="display: flex; gap: 1rem; align-items: flex-start; flex-wrap: wrap;">
+                <div class="card">
+                  <div class="card-title">
+                    <p class="title">Card header</p>
+                  </div>
+                  <div class="card-body">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-title">
+                    <p class="title">Card header</p>
+                    <p class="subtitle">Subtitle</p>
+                  </div>
+                  <div class="card-body">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-title">
+                    <p class="title">Card header</p>
+                  </div>
+                  <div class="card-body">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                  <div class="btn_wrap">
+                    <button class="btn type_basic">
+                      <div class="ripple js-ripple">
+                        <span class="ripple__circle"></span>
+                      </div>
+                      Share
+                    </button>
+                    <button class="btn type_outline color_gr">
+                      <div class="ripple js-ripple">
+                        <span class="ripple__circle"></span>
+                      </div>
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-img"><img src="../../images/card_img.png" alt=""></div>
+                  <div class="card-body">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                  <div class="btn_wrap">
+                    <button class="btn type_basic">
+                      <div class="ripple js-ripple">
+                        <span class="ripple__circle"></span>
+                      </div>
+                      Share
+                    </button>
+                    <button class="btn type_outline color_gr">
+                      <div class="ripple js-ripple">
+                        <span class="ripple__circle"></span>
+                      </div>
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-title">
+                    <p class="title">Card header</p>
+                    <p class="subtitle">Subtitle</p>
+                  </div>
+                  <div class="card-body">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                  <div class="card-img"><img src="../../images/card_img.png" alt=""></div>
+                </div>
+
+                <div class="card ">
+                  <div class="card-title">
+                    <div class="tab_group_fill">
+                      <a href="javascript:void(0)" class="tab_btn active" id="tab1">tab 1</a>
+                      <a href="javascript:void(0)" class="tab_btn" id="tab2">tab 2</a>
+                      <a href="javascript:void(0)" class="tab_btn" id="tab3">tab 3</a>
+                      <a href="javascript:void(0)" class="tab_btn" id="tab4">tab 4</a>
+                    </div>
+                  </div>
+                  <div class="card-body card_tab" id="tab1-con">
+                    탭1This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                  <div class="card-body card_tab"  id="tab2-con" style="display: none;">
+                    탭2This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                  <div class="card-body card_tab"  id="tab3-con" style="display: none;">
+                    탭3This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                  <div class="card-body card_tab"  id="tab4-con" style="display: none;">
+                    탭4This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                </div>
+
+                <div class="card type_fill">
+                  <div class="card-title">
+                    <p class="title">Card header</p>
+                  </div>
+                  <div class="card-body">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                </div>
+
+                <div class="card type_label">
+                  <div class="card-title">
+                    <p class="title">Card header</p>
+                  </div>
+                  <div class="card-body">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                </div>
+
+                <div class="card type_outline">
+                  <div class="card-title">
+                    <p class="title">Card header</p>
+                  </div>
+                  <div class="card-body">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- timeline -->
+          <div class="guide_block" >
+            <h3>timeline</h3>
+            <div class="guide_data">
+              <p class="title">timeline</p>
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="timeline">
+                  <div class="timeline-block">
+                    <div class="timeline-icon">
+                      <div class="icon color_pr"></div>
+                    </div>
+                    <div class="timeline-data">
+                      <p class="title">12 Invoices have been paid<span class="date">12 min ago</span></p>
+                      <div class="content">
+                        <p class="txt">Invoices have been paid to the company</p>
+
+                        <a  href="javascript:void(0)" class="file">
+                          <i><img src="../../images/file_pdf.svg" alt=""></i>
+                          <p class="">invoices.pdf</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="timeline-block">
+                    <div class="timeline-icon">
+                      <div class="icon color_success"></div>
+                    </div>
+                    <div class="timeline-data">
+                      <p class="title">Client Meeting<span class="date">45 min ago</span></p>
+                      <div class="content">
+                        <p class="txt">Project meeting with john @10:15am</p>
+                        <div class="avatar_data">
+                          <div class="avatar type_circle">
+                            <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                          </div>
+                          <div class="avatar_info">
+                            <p class="name">Shannon Paucek</p>
+                            <p class="txt">Destiney_Kiehn@yahoo.com</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="timeline-block">
+                    <div class="timeline-icon">
+                      <div class="icon color_info"></div>
+                    </div>
+                    <div class="timeline-data">
+                      <p class="title">Create a new project for client<span class="date">2 Day Ago</span></p>
+                      <div class="content">
+                        <p class="txt">6 team members in a project</p>
+
+                        <div class="avatar_list">
+                          <div class="avatar type_circle">
+                            <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                          </div>
+                          <div class="avatar type_circle">
+                            <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                          </div>
+                          <div class="avatar type_circle">
+                            <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                          </div>
+                          <div class="avatar type_circle">
+                            <p class="thumb">+3</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="timeline">
+                  <div class="timeline-block type_dashed">
+                    <div class="timeline-icon">
+                      <div class="icon color_pr"></div>
+                    </div>
+                    <div class="timeline-data">
+                      <p class="title">12 Invoices have been paid<span class="date">12 min ago</span></p>
+                      <div class="content">
+                        <p class="txt">Invoices have been paid to the company</p>
+
+                        <a  href="javascript:void(0)" class="file">
+                          <i><img src="../../images/file_pdf.svg" alt=""></i>
+                          <p class="">invoices.pdf</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="timeline-block type_dashed">
+                    <div class="timeline-icon">
+                      <div class="icon color_success"></div>
+                    </div>
+                    <div class="timeline-data">
+                      <p class="title">Client Meeting<span class="date">45 min ago</span></p>
+                      <div class="content">
+                        <p class="txt">Project meeting with john @10:15am</p>
+                        <div class="avatar_data">
+                          <div class="avatar type_circle">
+                            <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                          </div>
+                          <div class="avatar_info">
+                            <p class="name">Shannon Paucek</p>
+                            <p class="txt">Destiney_Kiehn@yahoo.com</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="timeline-block type_dashed">
+                    <div class="timeline-icon">
+                      <div class="icon color_info"></div>
+                    </div>
+                    <div class="timeline-data">
+                      <p class="title">Create a new project for client<span class="date">2 Day Ago</span></p>
+                      <div class="content">
+                        <p class="txt">6 team members in a project</p>
+
+                        <div class="avatar_list">
+                          <div class="avatar type_circle">
+                            <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                          </div>
+                          <div class="avatar type_circle">
+                            <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                          </div>
+                          <div class="avatar type_circle">
+                            <p class="thumb"><img src="../../images/avatar_1.png" alt=""></p>
+                          </div>
+                          <div class="avatar type_circle">
+                            <p class="thumb">+3</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="data" style="display: flex; gap: 1rem;">
+                <div class="timeline type_wide">
+                  <div class="timeline-block">
+                    <div class="timeline-icon">
+                      <div class="icon color_pr"></div>
+                    </div>
+                    <div class="timeline-data">
+                      <p class="title">12 Invoices have been paid<span class="date">12 min ago</span></p>
+                      <div class="content">
+                        <p class="txt">Invoices have been paid to the company</p>
+
+                        <a  href="javascript:void(0)" class="file">
+                          <i><img src="../../images/file_pdf.svg" alt=""></i>
+                          <p class="">invoices.pdf</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script>
+      //리플버튼
+      var $ripple = $('.js-ripple');
+      $ripple.on('click.ui.ripple', function(e) {
+
+        var $this = $(this);
+        var $offset = $this.parent().offset();
+        var $circle = $this.find('.ripple__circle');
+
+        var x = e.pageX - $offset.left;
+        var y = e.pageY - $offset.top;
+
+        $circle.css({
+          top: y + 'px',
+          left: x + 'px'
+        });
+
+        $this.addClass('is-active');
+      });
+
+      $ripple.on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', function(e) {
+        $(this).removeClass('is-active');
+      });
+
+      //dropdown
+      $(".dropdown-open").click(function () {
+        $(".dropdown_list").slideToggle();
+        })
+      
+      $(".dropdown_list-data").click(function () { 
+        $(this).toggleClass('active')
+      })
+
+      $(".dropdown-btn").find(".chip").click(function () { 
+        $(this).remove()
+      })
+
+      //alert
+      $(".alertDel").click(function(){
+        $(this).parents('.alert').fadeOut(function(){
+          setTimeout(() => {
+            $(this).remove()
+          }, 1500);
+        })
+      })
+
+    //accordian
+    $(".accordion-title").click(function(){
+      $(this).toggleClass('accOpen');
+      $(this).siblings('.accordion-dec').slideToggle();
+      $(this).parents().siblings('.accordion-data').children('.accordion-dec').slideUp();
+      $(this).parents().siblings('.accordion-data').children('.accordion-title').removeClass('accOpen');
+    })
+
+    //option
+    $(".option").click(function(){
+      $(this).toggleClass('active')
+      $(this).siblings().removeClass('active')
+    })
+
+    //progress
+    //일정 길이가 정해져있음
+    $('.progress-bar .bar').each(function () {
+        let $this = $(this);
+        let per = $this.attr('per');
+        let perTxt = $this.parents().children('.per')
+        $this.animate({
+            width: per + "%"
+        }, 2000);
+    });
+
+    //무조껀 100%
+    // var val;
+    
+    // $('.progress-bar .bar').animate({
+    //   width: "100%"
+    // },
+    // {
+    //   duration: 3000,
+    //   progress: function( anim, prog, remainMS ) {
+    //     val = (100 * prog).toFixed(0);
+    //     $('.progress-per').text( val + "%");
+    //   },
+    //   complete: function() {
+    //     $('.progress-per')
+    //       .text("100%");
+    //   }
+    // });
+
+    //스낵바
+    $(".snackbar .delBtn").click(function(){
+      $(this).parents(".snackbar").fadeOut(function(){
+        setTimeout(() => {
+          $(this).remove()
+        }, 700);
+      })
+    })
+
+    //다이얼로그
+    $(".delDialog").click(function(){
+      $(this).parents(".dialog").fadeOut(function(){
+        setTimeout(() => {
+          $(this).remove()
+        }, 700);
+      })
+    })
+
+    //토스트 삭제
+    $(".delToast").click(function(){
+      $(this).parents(".toast").fadeOut(function(){
+        setTimeout(() => {
+          $(this).remove()
+        }, 700);
+      })
+    })
+
+    //탭
+    $(".tab_group_fill").find('.tab_btn').click(function(){
+      var t = $(this).attr('id');
+        $(this).addClass('active')
+        $(this).siblings().removeClass('active')
+        $('.card_tab').hide();
+        $('#'+ t + '-con').fadeIn('slow');
+    })
+    </script>
+  </body>
+</html>

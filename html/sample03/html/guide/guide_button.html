@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/guide.css" />
+    <title>DESIGN GUIDE</title>
+  </head>
+  <style>
+    .btn_b,
+    .btn_social {
+      max-width: 300px;
+    }
+  </style>
+  <body>
+    <main id="guide_main">
+      <!-- menu -->
+      <nav id="guide_nav">
+        <h1>design guide</h1>
+
+        <div class="nav_menu">
+          <a href="guide.html">typography</a>
+          <a href="guide_color.html">color</a>
+          <a href="guide_icon.html">icon</a>
+          <a href="guide_form.html">form</a>
+          <a href="guide_button.html" class="active">button</a>
+          <a href="guide_popup.html">popup</a>
+          <a href="guide_component.html">component</a>
+        </div>
+      </nav>
+
+      <!-- contents -->
+      <section class="container">
+        <div class="contents">
+          <h2>button</h2>
+
+          <div class="guide_info">
+            <p class="txt">- 색상 / color_pr / color_gr / color_warning / color_error / color_info / color_success</p>
+            <p class="txt">- 사이즈 기본 m / size_s / size_l</p>
+            <p class="txt">- 타입 기본 type_basic / type_label / type_outline / type_txt / type_round</p>
+            <p class="txt">- 기타 / .active / .disabled</p>
+          </div>
+
+          <!-- default -->
+          <div class="guide_block">
+            <h3>default</h3>
+            <div class="guide_data">
+              <p class="title"></p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
+
+<script src="../../js/jquery.min.js""></script>
+<script>
+
+//리플버튼
+var $ripple = $('.js-ripple');
+$ripple.on('click.ui.ripple', function(e) {
+
+  var $this = $(this);
+  var $offset = $this.parent().offset();
+  var $circle = $this.find('.ripple__circle');
+
+  var x = e.pageX - $offset.left;
+  var y = e.pageY - $offset.top;
+
+  $circle.css({
+    top: y + 'px',
+    left: x + 'px'
+  });
+
+  $this.addClass('is-active');
+});
+
+$ripple.on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', function(e) {
+  $(this).removeClass('is-active');
+});
+
+//토글버튼
+$(".toggle_btn").click(function(){
+  if($(this).hasClass("disabled")){
+    event.preventDefault()
+  }else{
+    $(this).addClass("active");
+    $(this).siblings().removeClass("active")
+  }
+})
+
+</script>

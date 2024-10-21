@@ -1,0 +1,268 @@
+@import "variables";
+
+/* mediaquery - pc base (1920px) */
+@mixin pc_large {
+  @media (min-width: #{$pc_base + 1px}) {
+    @content;
+  }
+}
+
+@mixin pc_small {
+  @media (max-width: #{$pc_small}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile_large {
+  @media (max-width: #{$mobile_large}) {
+    @content;
+  }
+}
+
+@mixin mobile_base {
+  @media (max-width: #{$mobile_base}) {
+    @content;
+  }
+}
+
+@mixin mobile_small {
+  @media (max-width: #{$mobile_small}) {
+    @content;
+  }
+}
+
+/* flex */
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexcenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexbtw {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flexright {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@mixin flextop {
+  display: flex;
+  align-items: flex-start;
+}
+
+@mixin flextopcenter {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@mixin flextopbtw {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@mixin flextopright {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+@mixin flexbottom {
+  display: flex;
+  align-items: flex-end;
+}
+
+@mixin flexbottomcenter {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+@mixin flexbottombtw {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+@mixin flexbottomright {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+@mixin list_0_25 {
+  display: grid;
+  gap: 0.25rem;
+}
+
+@mixin list_0_5 {
+  display: grid;
+  gap: 0.5rem;
+}
+
+@mixin list_0_75 {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@mixin list_1 {
+  display: grid;
+  gap: 1rem;
+}
+
+@mixin list_1_25 {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@mixin list_1_5 {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@mixin list_1_75 {
+  display: grid;
+  gap: 1.75rem;
+}
+
+@mixin list_2 {
+  display: grid;
+  gap: 2rem;
+}
+
+//====== font =========//
+
+@mixin display1 {
+  font-size: var(--display1-font);
+  font-weight: var(--bold-font);
+  line-height: 1.4;
+}
+
+@mixin display2 {
+  font-size: var(--display2-font);
+  font-weight: var(--bold-font);
+  line-height: 1.2;
+}
+
+@mixin h1 {
+  font-size: var(--h1-font);
+  font-weight: var(--bold-font);
+  line-height: 1.4;
+}
+
+@mixin h2 {
+  font-size: var(--h2-font);
+  font-weight: var(--bold-font);
+  line-height: 1.4;
+}
+
+@mixin h3 {
+  font-size: var(--h3-font);
+  font-weight: var(--semi-bold-font);
+  line-height: 1.4;
+}
+
+@mixin h4 {
+  font-size: var(--h4-font);
+  font-weight: var(--bold-font);
+  line-height: 1.4;
+}
+
+@mixin h5 {
+  font-size: var(--h5-font);
+  font-weight: var(--bold-font);
+  line-height: 1.4;
+}
+
+@mixin h6 {
+  font-size: var(--h6-font);
+  font-weight: var(--bold-font);
+  line-height: 1.4;
+}
+
+@mixin bodyxl {
+  font-size: var(--body-xl-font);
+  line-height: 1.8;
+}
+
+@mixin bodylg {
+  font-size: var(--body-lg-font);
+  line-height: 1.8;
+}
+
+@mixin bodymd {
+  font-size: var(--body-md-font);
+  line-height: 1.8;
+}
+
+@mixin bodysm {
+  font-size: var(--body-sm-font);
+  line-height: 1.8;
+}
+
+@mixin bodyxs_underline {
+  font-size: var(--body-xs-font);
+  line-height: 1.8;
+  text-decoration: underline;
+}
+
+@mixin bodyxs {
+  font-size: var(--body-xs-font);
+  line-height: 1.8;
+}
+
+@mixin captionlg {
+  font-size: var(--caption-xs-font);
+  font-weight: var(--semi-bold-font);
+  line-height: 1.8;
+}
+
+@mixin captionmd {
+  font-size: var(--caption-md-font);
+  line-height: 1.8;
+}
+
+@mixin captionsm {
+  font-size: var(--caption-sm-font);
+  font-weight: var(--semi-bold-font);
+  line-height: 1.8;
+}
+
+@mixin btnlg {
+  font-size: var(--btn-lg-font);
+  line-height: 1.8;
+}
+
+@mixin btnsm {
+  font-size: var(--btn-sm-font);
+  line-height: 1.5rem;
+}
+
+@mixin overlinelg {
+  font-size: var(--overline-lg-font);
+  line-height: 1.8;
+}
+
+@mixin overlinesm {
+  font-size: var(--overline-sm-font);
+  font-weight: var(--semi-bold-font);
+  line-height: normal;
+  letter-spacing: 0.8px;
+}
