@@ -1,3 +1,58 @@
 /***************************************************************
     09. nav
 ***************************************************************/
+.nav {
+  border: 1px solid;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding-block: 2rem 3.5rem;
+  display: none;
+
+  &-menu {
+    @include flextop;
+    gap: 1.5rem;
+  }
+
+  &-block {
+    width: 100%;
+    max-width: var(--w);
+  }
+
+  &-title {
+    @include bodylg;
+    color: var(--black-color);
+    padding-bottom: 1.5rem;
+  }
+
+  &-sub {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  &-link {
+    @include bodylg;
+  }
+
+  &-event {
+    width: 100%;
+    max-width: var(--w);
+  }
+
+  &-banner {
+    @include flexright;
+    gap: 1.5rem;
+
+    li {
+      p {
+        @include bodymd;
+        color: var(--black-color);
+        padding-top: 0.75rem;
+      }
+    }
+  }
+
+  &.active {
+    display: block;
+  }
+}

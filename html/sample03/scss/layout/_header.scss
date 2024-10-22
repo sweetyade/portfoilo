@@ -1,3 +1,97 @@
 /***************************************************************
     11. header
 ***************************************************************/
+.header {
+  width: 100%;
+  position: relative;
+
+  .top_noti {
+    background-color: var(--primary-600);
+    text-align: center;
+    @include overlinesm;
+    color: var(--white-color);
+    padding-block: 0.5rem;
+  }
+
+  .logo {
+    width: 11.5rem;
+    height: 2.875rem;
+
+    @include pc_small {
+      order: 2;
+    }
+
+    @include mobile_large {
+      width: 8.625rem;
+      height: 2.5rem;
+    }
+
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+      background-image: url(../../images/common/logo_l.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &:hover {
+        background-image: url(../../images/common/logo_l_hover.svg);
+      }
+    }
+  }
+
+  .menu {
+    @include flexcenter;
+    gap: 1.5rem;
+
+    a {
+      @include bodylg;
+      min-width: 6.5rem;
+      padding-inline: 0.1875rem;
+      text-align: center;
+    }
+  }
+
+  &-quick {
+    @include flexright;
+    gap: 1.5rem;
+
+    @include pc_small {
+      order: 3;
+      gap: 0.5rem;
+    }
+
+    i {
+      width: 1.5rem;
+    }
+  }
+
+  & > .inner {
+    padding-block: 1.5rem;
+
+    @include mobile_large {
+      padding-block: 0.25rem;
+    }
+  }
+
+  .mobile_none {
+    @include pc_small {
+      display: none;
+    }
+  }
+
+  &-mobile {
+    display: none;
+
+    @include pc_small {
+      display: flex;
+      gap: 0.5rem;
+      order: 1;
+    }
+
+    i {
+      width: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="modimal" />
+    <meta property="og:title" content="header" />
+    <meta property="og:description" content="responsible header" />
+    <meta property="og:image" content="" />
+    <!-- 페이지의 대표 이미지 주소(URL) -->
+    <meta property="og:url" content="/" />
+    <!-- 페이지 주소(URL) -->
+
+    <!--<link rel="shortcut icon" href="favicon.ico" /> 64 x 64 (px) 또는 32 x 32 또는 16 x 16 -->
+    <link rel="icon" href="./favicon.png" />
+    <!-- 500 x 500 (px) -->
+
+    <!-- google font -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <title>header</title>
+</head>
+<body>
+  <!-- header -->
+  <header id="header" class="header">
+    <div class="top_noti">
+      <p class="inner">Enjoy Free Shipping On All Orders</p>
+    </div>
+
+    <div class="inner flex_btw">
+      <h1 class="logo">
+        <a href="./" class="logo_bg"></a>
+      </h1>
+
+      <div class="menu mobile_none">
+        <a href="javascript:void(0)" data-menu="collection">Collection</a>
+        <a href="javascript:void(0)" data-menu="new">New In</a>
+        <a href="javascript:void(0)" data-menu="modi">Modiweek</a>
+        <a href="javascript:void(0)" data-menu="plus">Plus Size</a>
+        <a href="javascript:void(0)" data-menu="sustainability">Sustainability</a>
+      </div>
+
+      <div class="header-quick">
+        <a href="javascript:void(0)" class="mobile_none"><i class="ic_search"></i></a>
+        <a href="javascript:void(0)" class="mobile_none"><i class="ic_profile"></i></a>
+        <a href="javascript:void(0)"><i class="ic_favorite"></i></a>
+        <a href="javascript:void(0)"><i class="ic_bag"></i></a>
+      </div>
+
+      <div class="header-mobile">
+        <a href="javascript:void(0)"><i class="ic_menu"></i></a>
+        <a href="javascript:void(0)"><i class="ic_search"></i></a>
+      </div>
+    </div>
+
+    <!-- nav -->
+    <nav id="nav" class="nav">
+      <div class="inner">
+
+        <!-- Collection -->
+        <div class="nav-menu" data-sub-menu="collection" style="display: none;">
+          <div class="nav-block" style="--w: 11.5rem">
+            <p class="nav-title">category</p>
+  
+            <ul class="nav-sub">
+              <li><a href="javascript:void(0)" class="nav-link">shop all</a></li>
+              <li><a href="javascript:void(0)" class="nav-link">boluses & top</a></li>
+              <li><a href="javascript:void(0)" class="nav-link">pants</a></li>
+              <li><a href="javascript:void(0)" class="nav-link">Dresses & jumpsuits</a></li>
+              <li><a href="javascript:void(0)" class="nav-link">outwear & jackets </a></li>
+              <li><a href="javascript:void(0)" class="nav-link">pullovers</a></li>
+              <li><a href="javascript:void(0)" class="nav-link">tees</a></li>
+              <li><a href="javascript:void(0)" class="nav-link">shorts & skirts</a></li>
+            </ul>
+          </div>
+  
+          <div class="nav-block mobile_none" style="--w: 11.5rem">
+            <p class="nav-title">featured </p>
+  
+            <ul class="nav-sub">
+              <li><a href="javascript:void(0)" class="nav-link">new in</a></li>
+              <li><a href="javascript:void(0)" class="nav-link">modiweek</a></li>
+              <li><a href="javascript:void(0)" class="nav-link">plus size</a></li>
+              <li><a href="javascript:void(0)" class="nav-link">best seller</a></li>
+            </ul>
+          </div>
+  
+          <div class="nav-block mobile_none" style="--w: 11.5rem">
+            <p class="nav-title">more</p>
+  
+            <ul class="nav-sub">
+              <li><a href="javascript:void(0)" class="nav-link">bundles</a></li>
+              <li><a href="javascript:void(0)" class="nav-link">occasion wear</a></li>
+              <li><a href="javascript:void(0)" class="nav-link">matching set</a></li>
+              <li><a href="javascript:void(0)" class="nav-link">suiting</a></li>
+            </ul>
+          </div>
+  
+          <div class="nav-event mobile_none"  style="--w: 37.5rem">
+            <ul class="nav-banner">
+              <li>
+                <a href="javascript:void(0)" class="nav-link">
+                  <img src="../../images/thumb/nav_blouses.png" alt="">
+                  <p>Blouses</p>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="nav-link">
+                  <img src="../../images/thumb/nav_plus.png" alt="">
+                  <p>plus size</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+    </nav>
+  </header>
+
+  <!-- script -->
+  <script src="../../js/jquery.min.js"></script>
+  <script>
+    $(".menu").each(function(){
+      
+
+      $("a").click(function(){
+        const thisMenu = $(this).data('menu')
+        const subMenu = $(".nav-menu").data('sub-menu');
+
+        console.log(subMenu)
+
+        $("#nav").toggleClass("subOpen");
+
+      })
+      
+    })
+  </script>
+</body>
+</html>

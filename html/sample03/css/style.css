@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   /*========== Colors ==========*/
   --primary-color: #748c70;
@@ -36,6 +36,10 @@
   --error: #c30000;
   /*========== Font and typography ==========*/
   --body-font: "Montserrat", -apple-system, BlinkMacSystemFont, system-ui,
+    Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif;
+  --logo-font: "League Spartan", -apple-system, BlinkMacSystemFont, system-ui,
     Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
     "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     sans-serif;
@@ -197,10 +201,15 @@ svg {
 
 img {
   vertical-align: middle;
+  transition: 0.2s;
 }
 
 a {
   text-decoration: none;
+  transition: 0.2s;
+}
+a:hover {
+  color: var(--black-color);
 }
 
 ul,
@@ -596,6 +605,22 @@ button {
   min-height: 100svh;
 }
 
+.inner {
+  width: 100%;
+  max-width: 76.5rem;
+  margin: 0 auto;
+}
+@media (max-width: 1260px) {
+  .inner {
+    padding-inline: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .inner {
+    padding-inline: 1.25rem;
+  }
+}
+
 /***************************************************************
     04. typo
 ***************************************************************/
@@ -603,7 +628,7 @@ body {
   font-family: var(--body-font);
   font-weight: 400;
   line-height: 1.2;
-  color: var(--text-primary);
+  color: var(--gray-40);
 }
 
 .medium_font {
@@ -867,6 +892,35 @@ body {
   color: var(--error);
 }
 
+i {
+  width: 100%;
+  aspect-ratio: 1;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ic_search {
+  background-image: url(../../images/system/search.svg);
+}
+
+.ic_bag {
+  background-image: url(../../images/system/bag.svg);
+}
+
+.ic_favorite {
+  background-image: url(../../images/system/favorite.svg);
+}
+
+.ic_profile {
+  background-image: url(../../images/system/profile.svg);
+}
+
+.ic_menu {
+  background-image: url(../../images/system/menu.svg);
+}
+
 /***************************************************************
     07. form
 ***************************************************************/
@@ -879,6 +933,57 @@ body {
 /***************************************************************
     09. nav
 ***************************************************************/
+.nav {
+  border: 1px solid;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding-block: 2rem 3.5rem;
+  display: none;
+}
+.nav-menu {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.nav-block {
+  width: 100%;
+  max-width: var(--w);
+}
+.nav-title {
+  font-size: var(--body-lg-font);
+  line-height: 1.8;
+  color: var(--black-color);
+  padding-bottom: 1.5rem;
+}
+.nav-sub {
+  display: grid;
+  gap: 0.5rem;
+}
+.nav-link {
+  font-size: var(--body-lg-font);
+  line-height: 1.8;
+}
+.nav-event {
+  width: 100%;
+  max-width: var(--w);
+}
+.nav-banner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+.nav-banner li p {
+  font-size: var(--body-md-font);
+  line-height: 1.8;
+  color: var(--black-color);
+  padding-top: 0.75rem;
+}
+.nav.active {
+  display: block;
+}
+
 /***************************************************************
     10. popup
 ***************************************************************/
@@ -915,6 +1020,102 @@ body {
 /***************************************************************
     11. header
 ***************************************************************/
+.header {
+  width: 100%;
+  position: relative;
+}
+.header .top_noti {
+  background-color: var(--primary-600);
+  text-align: center;
+  font-size: var(--overline-sm-font);
+  font-weight: var(--semi-bold-font);
+  line-height: normal;
+  letter-spacing: 0.8px;
+  color: var(--white-color);
+  padding-block: 0.5rem;
+}
+.header .logo {
+  width: 11.5rem;
+  height: 2.875rem;
+}
+@media (max-width: 1260px) {
+  .header .logo {
+    order: 2;
+  }
+}
+@media (max-width: 480px) {
+  .header .logo {
+    width: 8.625rem;
+    height: 2.5rem;
+  }
+}
+.header .logo a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-image: url(../../images/common/logo_l.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.header .logo a:hover {
+  background-image: url(../../images/common/logo_l_hover.svg);
+}
+.header .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.header .menu a {
+  font-size: var(--body-lg-font);
+  line-height: 1.8;
+  min-width: 6.5rem;
+  padding-inline: 0.1875rem;
+  text-align: center;
+}
+.header-quick {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+@media (max-width: 1260px) {
+  .header-quick {
+    order: 3;
+    gap: 0.5rem;
+  }
+}
+.header-quick i {
+  width: 1.5rem;
+}
+.header > .inner {
+  padding-block: 1.5rem;
+}
+@media (max-width: 480px) {
+  .header > .inner {
+    padding-block: 0.25rem;
+  }
+}
+@media (max-width: 1260px) {
+  .header .mobile_none {
+    display: none;
+  }
+}
+.header-mobile {
+  display: none;
+}
+@media (max-width: 1260px) {
+  .header-mobile {
+    display: flex;
+    gap: 0.5rem;
+    order: 1;
+  }
+}
+.header-mobile i {
+  width: 1.5rem;
+}
+
 /***************************************************************
     12. footer
 ***************************************************************/

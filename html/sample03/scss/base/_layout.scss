@@ -281,3 +281,17 @@
 .main {
   min-height: 100svh;
 }
+
+.inner {
+  width: 100%;
+  max-width: 76.5rem;
+  margin: 0 auto;
+
+  @include pc_small {
+    padding-inline: 1.5rem;
+  }
+
+  @include mobile_large {
+    padding-inline: 1.25rem;
+  }
+}
