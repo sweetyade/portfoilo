@@ -1,99 +1,105 @@
-$pc_large: 2580px;
-$pc_base: 1920px;
-$pc_small: 1260px;
-$tablet: 768px;
-$mobile_large: 480px;
-$mobile_base: 360px;
-$mobile_small: 320px;
-
-//aspect ratio : base 9/16
-$ratio_large: 9/19; //아이폰x ~ 갤럭시
-$ratio_z: 9/22; //z플립
-
-$header_height: 3rem;
+$small_device: 320px;
+$base_device: 360px;
+$large_device: 480px;
 
 //typo
-$point_f: "Montserrat", sans-serif;
-$lineth: line-through;
-$lineunder: underline;
-$font_b: 700;
-$font_m: 500;
-$font_n: 400;
-$lineh: 1.5;
+$point_f: "Poppins";
 
+//color
 :root {
-  /*========== Colors ==========*/
-  --primary-color: #f9f871;
-  --text-color: #323232;
-  --sub-text-color: #7d7d7d;
-  --bg-color: #fff;
-  --bg-gray-color: #f5f5f5;
-  --border-color: #565656;
-  --border-color-alt: #ddd;
+  // -- color -- //
+  --primary-color: rgba(0, 180, 0, 1);
+  --primary-09: rgba(0, 180, 0, 0.9);
+  --primary-08: rgba(0, 180, 0, 0.9);
+  --primary-07: rgba(0, 180, 0, 0.7);
+  --primary-06: rgba(0, 180, 0, 0.6);
+  --primary-05: rgba(0, 180, 0, 0.5);
+  --primary-04: rgba(0, 180, 0, 0.4);
+  --primary-03: rgba(0, 180, 0, 0.3);
+  --primary-02: rgba(0, 180, 0, 0.2);
+  --primary-01: rgba(0, 180, 0, 0.1);
+  --primary-005: rgba(0, 180, 0, 0.05);
 
-  /*========== Font and typography ==========*/
-  --body-font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic",
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  --h1-font-size: 2em;
-  --h2-font-size: 1.5rem;
-  --h3-font-size: 1.25rem;
-  --large-font-size: 1rem;
-  --base-font-size: 0.875rem;
-  --small-font-size: 0.75rem;
-  --smaller-font-size: 0.6875rem;
+  --system-red: rgba(244, 68, 50, 1);
+  --system-red-09: rgba(244, 68, 50, 0.9);
+  --system-red-08: rgba(244, 68, 50, 0.8);
+  --system-red-07: rgba(244, 68, 50, 0.7);
+  --system-red-06: rgba(244, 68, 50, 0.6);
+  --system-red-05: rgba(244, 68, 50, 0.5);
+  --system-red-04: rgba(244, 68, 50, 0.4);
+  --system-red-03: rgba(244, 68, 50, 0.3);
+  --system-red-02: rgba(244, 68, 50, 0.2);
+  --system-red-01: rgba(244, 68, 50, 0.1);
+  --system-red-005: rgba(244, 68, 50, 0.05);
 
-  /*========== z index ==========*/
-  --z-tooltip: 10;
-  --z-fixed: 100;
-  --z-modal: 1000;
+  --system-yellow: rgba(255, 199, 16, 1);
+  --system-yellow-09: rgba(255, 199, 16, 0.9);
+  --system-yellow-08: rgba(255, 199, 16, 0.8);
+  --system-yellow-07: rgba(255, 199, 16, 0.7);
+  --system-yellow-06: rgba(255, 199, 16, 0.6);
+  --system-yellow-05: rgba(255, 199, 16, 0.5);
+  --system-yellow-04: rgba(255, 199, 16, 0.4);
+  --system-yellow-03: rgba(255, 199, 16, 0.3);
+  --system-yellow-02: rgba(255, 199, 16, 0.2);
+  --system-yellow-01: rgba(255, 199, 16, 0.1);
+  --system-yellow-005: rgba(255, 199, 16, 0.05);
 
-  font-size: 12px;
+  --gary-black: rgba(47, 47, 47, 1);
+  --gray-01: rgba(116, 116, 116, 1);
+  --gray-02: rgba(159, 159, 159, 1);
+  --gray-03: rgba(201, 201, 201, 1);
+  --gray-04: rgba(223, 223, 223, 1);
+  --gray-05: rgba(245, 245, 245, 1);
+  --gray-white: rgba(245, 245, 245, 1);
+
+  --brand-yellow: rgba(255, 198, 15, 1);
+  --brand-orange: rgba(255, 142, 0, 1);
+  --brand-blue: rgba(0, 171, 234, 1);
+  --brand-purple: rgba(101, 101, 217, 1);
+
+  // -- font -- //
+  --h1-f: 1.5rem;
+  --h2-f: 1.25rem;
+  --h3-f: 1.125rem;
+  --p1-f: 1.25rem;
+  --p2-f: 0.9375rem;
+  --p3-f: 0.875rem;
+  --p4-f: 0.8125rem;
+  --p5-f: 0.75rem;
+  --p6-f: 1.125rem;
+  --p7-f: 1rem;
+  --span1-f: 0.9375rem;
+  --span2-f: 0.8125rem;
+  --span3-f: 0.75rem;
+  --span4-f: 0.625rem;
+  --misc1-f: 0.9375rem;
+  --misc2-f: 0.8125rem;
+
+  --bold-f: 700;
+  --medium-f: 500;
+  --thin-f: 300;
+
+  --second-f: "Poppins";
+  --line-h: 1.5;
 }
 
-@media (min-width: #{$tablet}) {
+@media (max-width: #{$base_device - 1px}) {
   :root {
-    font-size: 18px;
+    //typo
+    --h1-f: 6.6852vw;
+    --h2-f: 5.571vw;
+    --h3-f: 5.0139vw;
+    --p1-f: 5.571vw;
+    --p2-f: 4.178vw;
+    --p3-f: 3.8997vw;
+    --p4-f: 3.6212vw;
+    --p5-f: 3.3426vw;
+    --p6-f: 5.0139vw;
+    --span1-f: 4.178vw;
+    --span2-f: 3.6212vw;
+    --span3-f: 3.3426vw;
+    --span4-f: 2.7855vw;
+    --misc1-f: 4.1783vw;
+    --misc2-f: 3.6212vw;
   }
-}
-
-@media (min-width: #{$pc_small}) {
-  :root {
-    font-size: 20px;
-  }
-}
-
-.primary_color {
-  color: var(--primary-color);
-}
-
-.text_color {
-  color: var(--text-color);
-}
-
-.sub_text_color {
-  color: var(--sub-text-color);
-}
-
-.border_color {
-  color: var(--border-color);
-}
-
-.bg_primary_color {
-  background-color: var(--primary-color);
-}
-
-.bg_text_color {
-  background-color: var(--text-color);
-}
-
-.bg_sub_text_color {
-  background-color: var(--sub-text-color);
-}
-
-.bg_border_color {
-  background-color: var(--border-color);
-}
-
-.bg_color {
-  background-color: var(--bg-color);
 }

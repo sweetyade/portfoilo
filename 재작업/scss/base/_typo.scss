@@ -2,47 +2,160 @@
     04. typo
 ***************************************************************/
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css");
+
 body {
-  font-family: var(--body-font);
-  font-weight: 400;
+  font-family: "Spoqa Han Sans Neo", -apple-system, BlinkMacSystemFont,
+    system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "sans-serif";
+  font-weight: var(--medium-f);
   line-height: 1.2;
-  color: var(--text-color);
-  font-size: var(--base-font-size);
+  color: var(--gray-black);
 }
 
-.line_h {
-  line-height: $lineh;
+.h1_f {
+  @include h1;
 }
 
-.line_th {
-  text-decoration: $lineth;
+.h2_f {
+  @include h2;
 }
 
-.line_under {
-  text-decoration: $lineunder;
+.h3_f {
+  @include h3;
 }
 
-.bold_f {
-  font-weight: $font_b;
+.p1_f {
+  @include p1;
 }
 
-.medium_f {
-  font-weight: $font_m;
+.p1_fb {
+  @include p1b;
 }
 
-.normal_f {
-  font-weight: $font_n;
+.p2_f {
+  @include p2;
 }
 
-.text_center {
+.p2_fb {
+  @include p2b;
+}
+
+.p3_f {
+  @include p3;
+}
+
+.p3_fb {
+  @include p3b;
+}
+
+.p4_f {
+  @include p4;
+}
+
+.p4_fb {
+  @include p4b;
+}
+
+.p5_f {
+  @include p5;
+}
+
+.p5_fb {
+  @include p5b;
+}
+
+.p6_f {
+  @include p6;
+}
+
+.p6_fb {
+  @include p6b;
+}
+
+.p7_f {
+  @include p7;
+}
+
+.p7_fb {
+  @include p7b;
+}
+
+.span1_f {
+  @include span1;
+}
+
+.span1_fb {
+  @include span1b;
+}
+
+.span2_f {
+  @include span2;
+}
+
+.span2_fb {
+  @include span2b;
+}
+
+.span3_f {
+  @include span3;
+}
+
+.span3_fb {
+  @include span3b;
+}
+
+.span4_f {
+  @include span4;
+}
+
+.span4_fb {
+  @include span4b;
+}
+
+.misc1_th {
+  @include misc1th;
+}
+
+.misc1_thb {
+  @include misc1thb;
+}
+
+.misc2_th {
+  @include misc2th;
+}
+
+.misc2_thb {
+  @include misc2thb;
+}
+
+.misc1_under {
+  @include misc1under;
+}
+
+.misc1_underb {
+  @include misc1underb;
+}
+
+.misc2_under {
+  @include misc2under;
+}
+
+.misc2_underb {
+  @include misc2underb;
+}
+
+.txt_center {
   text-align: center;
 }
 
-.text_right {
+.txt_right {
   text-align: right;
 }
 
-.text_left {
+.txt_left {
   text-align: left;
 }
 
@@ -55,34 +168,18 @@ body {
   }
 }
 
-.h1_f {
-  font-size: var(--h1-font-size);
+.bold_f {
+  font-weight: var(--bold-f);
 }
 
-.h2_f {
-  font-size: var(--h2-font-size);
+.medium_f {
+  font-weight: var(--medium-f);
 }
 
-.h3_f {
-  font-size: var(--h3-font-size);
+.thin_f {
+  font-weight: var(--thin-f);
 }
 
-.large_f {
-  font-size: var(--large-font-size);
-}
-
-.base_f {
-  font-size: var(--base-font-size);
-}
-
-.small_f {
-  font-size: var(--small-font-size);
-}
-
-.smaller_f {
-  font-size: var(--smaller-font-size);
-}
-
-.tiny_f {
-  font-size: var(--tiny-font-size);
+.second_f {
+  font-family: var(--second-f);
 }

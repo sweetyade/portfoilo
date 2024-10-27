@@ -110,36 +110,48 @@
               <p class="title">.flex_{type}</p>
               <div class="data flex flex_data" style="gap: 1rem; flex-wrap: wrap">
                 <div class="flex">
-                  <p style="background-color: #fafafa">.flex<br />align │ justify</p>
+                  <p style="background-color: #fafafa">.flex</p>
                   <p style="background-color: #ecffc8">center │ flex-start</p>
                 </div>
                 <div class="flex_center">
-                  <p style="background-color: #fafafa">.flex_center<br />>align │ justify</p>
+                  <p style="background-color: #fafafa">.flex_center</p>
                   <p style="background-color: #ecffc8">center │ center</p>
                 </div>
                 <div class="flex_right">
-                  <p style="background-color: #fafafa">.flex_right<br />align │ justify</p>
+                  <p style="background-color: #fafafa">.flex_right</p>
                   <p style="background-color: #ecffc8">center │ right</p>
                 </div>
                 <div class="flex_btw">
-                  <p style="background-color: #fafafa">.flex_btw<br />align │ justify</p>
+                  <p style="background-color: #fafafa">.flex_btw</p>
                   <p style="background-color: #ecffc8">center │ space-between</p>
                 </div>
                 <div class="flex_top">
-                  <p style="background-color: #fafafa">.flex_top<br />align │ justify</p>
+                  <p style="background-color: #fafafa">.flex_top</p>
                   <p style="background-color: #ecffc8">flex-top │ flex-start</p>
                 </div>
                 <div class="flex_topcenter">
-                  <p style="background-color: #fafafa">.flex_topcenter<br />align │ justify</p>
+                  <p style="background-color: #fafafa">.flex_topcenter</p>
                   <p style="background-color: #ecffc8">flex-top │ flex-start</p>
                 </div>
                 <div class="flex_topright">
-                  <p style="background-color: #fafafa">.flex_topright<br />align │ justify</p>
+                  <p style="background-color: #fafafa">.flex_topright</p>
                   <p style="background-color: #ecffc8">flex-top │ flex-start</p>
                 </div>
                 <div class="flex_topbtw">
-                  <p style="background-color: #fafafa">.flex_topbtw<br />align │ justify</p>
+                  <p style="background-color: #fafafa">.flex_topbtw</p>
                   <p style="background-color: #ecffc8">flex-top │ space-between</p>
+                </div>
+                <div class="flex_bottom">
+                  <p style="background-color: #fafafa">.flex_bottom</p>
+                  <p style="background-color: #ecffc8">flex-bottom │ flex-start</p>
+                </div>
+                <div class="flex_bottomcenter">
+                  <p style="background-color: #fafafa">.flex_bottomcenter<br /></p>
+                  <p style="background-color: #ecffc8">flex-bottom │ center</p>
+                </div>
+                <div class="flex_bottombtw">
+                  <p style="background-color: #fafafa">.flex_topbtw</p>
+                  <p style="background-color: #ecffc8">flex-bottom │ space-between</p>
                 </div>
               </div>
             </div>
@@ -151,7 +163,6 @@
             <div class="guide_data">
               <p class="title">.inner_{no}</p>
               <div class="data flex padding_data" style="gap: 1rem; flex-wrap: wrap">
-                <p class="pd_none" style="padding: 1rem 1rem 0">.pd_none : padding-bottom: 0;</p>
                 <p class="inner_0_25">.inner_0_25 : left,right - 0.25rem</p>
                 <p class="inner_0_5">.inner_0_5 : left,right - 0.5rem</p>
                 <p class="inner_0_75">.inner_0_75 : left,right - 0.75rem</p>
@@ -166,14 +177,14 @@
             <div class="guide_data">
               <p class="title">.inner_tb_{no}</p>
               <div class="data flex padding_data" style="gap: 1rem; flex-wrap: wrap">
-                <p class="inner_tb_0_25">.inner_tb_0_25 : top,bottom - 0.25rem</p>
-                <p class="inner_tb_0_5">.inner_tb_0_5 : top,bottom - 0.5rem</p>
-                <p class="inner_tb_0_75">.inner_tb_0_75 : top,bottom - 0.75rem</p>
-                <p class="inner_tb_1">.inner_tb_1 : top,bottom - 1rem</p>
-                <p class="inner_1_25">.inner_1_25 : top,bottom - 1.25rem</p>
-                <p class="inner_tb_1_5">.inner_tb_1_5 : top,bottom - 1.5rem</p>
-                <p class="inner_tb_1_75">.inner_tb_1_75 : top,bottom - 1.75rem</p>
-                <p class="inner_tb_2">.inner_tb_2 : top,bottom - 2rem</p>
+                <p class="block_0_25">.block_0_25 : top,bottom - 0.25rem</p>
+                <p class="block_0_5">.block_0_5 : top,bottom - 0.5rem</p>
+                <p class="block_0_75">.block_0_75 : top,bottom - 0.75rem</p>
+                <p class="block_1">.block_1 : top,bottom - 1rem</p>
+                <p class="block_1_25">.block_1_25 : top,bottom - 1.25rem</p>
+                <p class="block_1_5">.block_1_5 : top,bottom - 1.5rem</p>
+                <p class="block_1_75">.block_1_75 : top,bottom - 1.75rem</p>
+                <p class="block_2">.block_2 : top,bottom - 2rem</p>
               </div>
             </div>
           </div>
@@ -193,27 +204,6 @@
             </div>
           </div>
 
-          <!-- section divider -->
-          <div class="guide_block">
-            <h3>divider</h3>
-            <div class="guide_data">
-              <p class="title">.pd_bottom_{size}</p>
-              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
-                <div class="inner_tb inner_1_5 pd_bottom divider_data">
-                  <p>.pd_bottom : bottom .5rem</p>
-                </div>
-                <div class="inner_tb inner_1_5 pd_bottom_s divider_data">
-                  <p>.pd_bottom_s : bottom 3rem</p>
-                </div>
-                <div class="inner_tb inner_1_5 pd_bottom_m divider_data">
-                  <p>.pd_bottom_m : bottom 5rem</p>
-                </div>
-                <div class="inner_tb inner_1_5 pd_bottom_l divider_data">
-                  <p>.pd_bottom_l : bottom 8rem</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </main>

@@ -1,7 +1,7 @@
 /***************************************************************
-    13. guide
+    14. guide
 ***************************************************************/
-// @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;500;600;700&display=swap");
 
 :root {
   --point-y: #f9f871;
@@ -13,12 +13,36 @@
   --dark: #323232;
   --light: #f5f5f5;
   --white: #fff;
+  --h1-f: 1.5rem;
+  --base-f: 1rem;
+  --normal-f: 0.875rem;
+  --small-f: 0.6875rem;
+  --bold-font: 700;
 }
 
 body {
   font-weight: 400;
 }
 
+.guide_point_f {
+  font-family: var(--guide-point-f);
+}
+
+.h1_f {
+  font-size: var(--h1-f);
+}
+
+.base_f {
+  font-size: var(--base-f);
+}
+
+.normal_f {
+  font-size: var(--normal-f);
+}
+
+.small_f {
+  font-size: var(--small-f);
+}
 #guide_main {
   @include flex;
   background-color: var(--white);
@@ -35,7 +59,7 @@ body {
 
   h1 {
     font-size: var(--h1-f);
-    font-weight: $font_b;
+    font-weight: var(--bold-font);
     padding: 2rem;
   }
 
@@ -66,7 +90,7 @@ body {
       }
 
       &:hover {
-        color: #fff;
+        color: var(--white);
         border-color: transparent;
 
         &::after {
@@ -114,6 +138,11 @@ body {
       border: 1px solid var(--border-color);
       padding: 2rem;
       margin: 2rem 0 4rem;
+
+      .txt {
+        font-size: var(--normal-f);
+        line-height: 1.5;
+      }
     }
 
     h3 {
@@ -129,7 +158,7 @@ body {
       .guide_data {
         margin-top: 1rem;
 
-        .title {
+        & > .title {
           border: 1px solid var(--border-color);
           background: var(--bg-color);
           padding: 0.5rem 1rem;
@@ -145,8 +174,23 @@ body {
         }
 
         .guide_color {
-          width: 80px;
-          height: 80px;
+          width: 8rem;
+          border: 1px solid var(--border-color);
+          border-radius: 0.25rem;
+          overflow: hidden;
+
+          .color_chip {
+            height: 3.75rem;
+            @include flexcenter;
+            font-size: var(--normal-f);
+            font-weight: var(--bold-font);
+          }
+
+          .color_name {
+            background-color: var(--bg-color);
+            font-size: var(--small-f);
+            padding: 0.75rem;
+          }
         }
 
         .guide_icon {

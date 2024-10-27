@@ -1,5 +1,5 @@
 /***************************************************************
-    09. popup
+    11. popup
 ***************************************************************/
 .overlay {
   position: fixed;
@@ -7,7 +7,45 @@
   right: 0;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.6);
   z-index: 1;
-  transition: all 0.2s;
+  transition: opacity 0.2s;
+}
+
+//popup
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.3s;
+
+  &.open {
+    z-index: 99;
+    opacity: 1;
+  }
+}
+
+//modal
+.modal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s;
+
+  &.open {
+    opacity: 1;
+    z-index: 99;
+
+    .modal_wrap {
+      bottom: 0;
+    }
+  }
 }

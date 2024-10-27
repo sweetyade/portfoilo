@@ -1,13 +1,7 @@
 /***************************************************************
     03. layer
 ***************************************************************/
-:root {
-  --header-height: 3rem;
-}
 
-.pd_none {
-  padding-bottom: 0;
-}
 .mb_0_25 {
   margin-bottom: 0.25rem;
 }
@@ -117,9 +111,10 @@
 }
 
 .mt_4 {
-  margin-top: 4rem;
+  margin-top: 5rem;
 }
 
+//layout
 .flex {
   @include flex;
 }
@@ -130,10 +125,6 @@
 
 .flex_btw {
   @include flexbtw;
-}
-
-.flex_right {
-  @include flexright;
 }
 
 .flex_top {
@@ -148,8 +139,24 @@
   @include flextopbtw;
 }
 
+.flex_right {
+  @include flexright;
+}
+
 .flex_topright {
   @include flextopright;
+}
+
+.flex_bottom {
+  @include flexbottom;
+}
+
+.flex_bottomcenter {
+  @include flexbottomcenter;
+}
+
+.flex_bottombtw {
+  @include flexbottombtw;
 }
 
 .inner_0_25 {
@@ -184,50 +191,34 @@
   padding-inline: 2rem;
 }
 
-.tb_0_25 {
+.block_0_25 {
   padding-block: 0.25rem;
 }
 
-.tb_0_5 {
+.block_0_5 {
   padding-block: 0.5rem;
 }
 
-.tb_0_75 {
+.block_0_75 {
   padding-block: 0.75rem;
 }
 
-.tb_1 {
+.block_1 {
   padding-block: 1rem;
 }
 
-.tb_1_25 {
+.block_1_25 {
   padding-block: 1.25rem;
 }
 
-.tb_1_2 {
+.block_1_5 {
   padding-block: 1.5rem;
 }
 
-.tb_1_75 {
+.block_1_75 {
   padding-block: 1.75rem;
 }
 
-.tb_2 {
+.block_2 {
   padding-block: 2rem;
-}
-
-.line_point {
-  position: relative;
-  width: fit-content;
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 60%;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-    background-color: var(--primary-color);
-  }
 }
