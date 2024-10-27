@@ -1,0 +1,44 @@
+/***************************************************************
+    12. board
+***************************************************************/
+.page_list{
+
+    .dsc_table{
+        width: 100%;
+        border-top: 2px solid var(--border-color-alt);
+
+        tr{
+            transition: all .3s;
+            background-color: transparent;
+
+            &:hover{
+                background-color: var(--bg-gray-color);
+            }
+        }
+
+        a{
+            display: block;
+            padding: 1rem;
+        }
+        th{
+            font-size: var(--base-font-size);
+            border-bottom: 1px solid var(--border-color-alt);
+            text-align: left;
+            font-weight: $font_b;
+
+            @include pc_small{
+                font-size: var(--small-font-size);
+            }
+        }
+        td{
+          font-size: var(--base-font-size);
+          border-bottom: 1px solid var(--border-color-alt);
+          text-align: left;
+          border-left: 1px solid var(--border-color-alt);
+
+          @include pc_small{
+            font-size: var(--small-font-size);
+        }
+        }
+    }
+}

@@ -1,0 +1,99 @@
+$pc_large: 2580px;
+$pc_base: 1920px;
+$pc_small: 1260px;
+$tablet: 768px;
+$mobile_large: 480px;
+$mobile_base: 360px;
+$mobile_small: 320px;
+
+//aspect ratio : base 9/16
+$ratio_large: 9/19; //아이폰x ~ 갤럭시
+$ratio_z: 9/22; //z플립
+
+$header_height: 3rem;
+
+//typo
+$point_f: "Montserrat", sans-serif;
+$lineth: line-through;
+$lineunder: underline;
+$font_b: 700;
+$font_m: 500;
+$font_n: 400;
+$lineh: 1.5;
+
+:root {
+  /*========== Colors ==========*/
+  --primary-color: #f9f871;
+  --text-color: #323232;
+  --sub-text-color: #7d7d7d;
+  --bg-color: #fff;
+  --bg-gray-color: #f5f5f5;
+  --border-color: #565656;
+  --border-color-alt: #ddd;
+
+  /*========== Font and typography ==========*/
+  --body-font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic",
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  --h1-font-size: 2em;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --large-font-size: 1rem;
+  --base-font-size: 0.875rem;
+  --small-font-size: 0.75rem;
+  --smaller-font-size: 0.6875rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+
+  font-size: 12px;
+}
+
+@media (min-width: #{$tablet}) {
+  :root {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: #{$pc_small}) {
+  :root {
+    font-size: 20px;
+  }
+}
+
+.primary_color {
+  color: var(--primary-color);
+}
+
+.text_color {
+  color: var(--text-color);
+}
+
+.sub_text_color {
+  color: var(--sub-text-color);
+}
+
+.border_color {
+  color: var(--border-color);
+}
+
+.bg_primary_color {
+  background-color: var(--primary-color);
+}
+
+.bg_text_color {
+  background-color: var(--text-color);
+}
+
+.bg_sub_text_color {
+  background-color: var(--sub-text-color);
+}
+
+.bg_border_color {
+  background-color: var(--border-color);
+}
+
+.bg_color {
+  background-color: var(--bg-color);
+}

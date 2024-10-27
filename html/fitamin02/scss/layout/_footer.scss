@@ -1,0 +1,297 @@
+/***************************************************************
+    11. footer
+***************************************************************/
+.footer_nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  @include flexbtw;
+  background-color: $light;
+  border-top: 1px solid $gray05;
+
+  .nav_menu {
+    @include flexbtw;
+    width: calc((100% / 2) - 2.25rem);
+    .nav_link {
+      padding: 0.625rem 0 0.25rem;
+      width: 100%;
+
+      .nav_icon {
+        width: 1.5rem;
+        margin: 0 auto 0.25rem;
+      }
+
+      .nav_txt {
+        @include span4fb;
+        color: $gray01;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.open_btn {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 3px solid $light;
+  border-radius: 50%;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.08);
+  z-index: 11;
+  width: 3.25rem;
+  height: 3.25rem;
+
+  @include sd {
+    width: 14.4847vw;
+    height: 14.4847vw;
+  }
+
+  .navBtn {
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+
+    &.navOpen {
+      transform: rotate(45deg);
+      //   animation: navlotate 0.3s linear;
+    }
+  }
+}
+
+.nav_open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.2s;
+
+  .nav_list {
+    position: absolute;
+    bottom: 5.75rem;
+    left: 50%;
+    transform: translate(-50%, 150%);
+    transition: transform 0.5s ease-in;
+
+    &.loadup {
+      transform: translate(-50%, 0);
+
+      .open_link {
+        bottom: 0;
+        animation: navwidth 1s ease-in;
+
+        &:first-child {
+          transition: bottom 0.75s ease-in-out;
+        }
+
+        &:nth-child(2) {
+          transition: bottom 0.5s ease-in-out;
+        }
+
+        &:nth-child(3) {
+          transition: bottom 0.25s ease-in-out;
+        }
+
+        .open_menu {
+          animation: navname 1s 0.2s linear;
+        }
+      }
+    }
+  }
+
+  .open_link {
+    background-color: $light;
+    border-radius: 5rem;
+    padding: 0.4375rem 1.125rem;
+    @include flex;
+    position: relative;
+    margin-top: 1rem;
+    width: 43.333vw;
+    max-width: 9.75rem;
+    transition: all 1s;
+    bottom: -100svh;
+
+    .open_icon {
+      max-width: 3.125rem;
+      width: 13.889vw;
+    }
+    .open_menu {
+      color: $gray01;
+      text-align: center;
+      width: calc(100% - 3.125rem);
+      white-space: nowrap;
+      transition: opacity 0.3s 1s;
+      @include span1fb;
+      opacity: 1;
+      overflow: hidden;
+    }
+  }
+
+  &.listOpen {
+    z-index: 10;
+    opacity: 1;
+    display: block;
+  }
+}
+
+.footer {
+  background-color: $gray05;
+  padding: 2rem 1.25rem 5rem;
+  position: relative;
+  z-index: 1;
+
+  .footer_social {
+    @include flex;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+
+    a {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+  }
+
+  .footerToggle {
+    @include flex;
+    gap: 0.25rem;
+
+    img {
+      transition: all 0.3s;
+    }
+
+    &.open img {
+      transform: rotate(180deg);
+    }
+  }
+
+  .company_info {
+    display: none;
+  }
+
+  .title {
+    @include span3fb;
+    color: $gray01;
+  }
+
+  .txt_list {
+    display: grid;
+    gap: 0.25rem;
+  }
+
+  .txt {
+    @include flextop;
+    @include span3fn;
+    color: $gray02;
+    gap: 0.5rem;
+  }
+
+  .footer_lnb {
+    @include flex;
+    gap: 0.5rem;
+    a {
+      @include span3fn;
+      position: relative;
+      color: $gray02;
+      padding-right: 0.5rem;
+      line-height: 1;
+      display: block;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 0.625rem;
+        background-color: $gray02;
+        position: absolute;
+        top: 0;
+        right: 0rem;
+      }
+
+      &:last-child::after {
+        display: none;
+      }
+    }
+  }
+
+  .footer_notice {
+    .notice_title {
+      @include span3fb;
+      color: $gray01;
+      margin-bottom: 0.5rem;
+    }
+    .notice_txt {
+      @include p5fn;
+      color: $gray02;
+      position: relative;
+      padding-left: 1rem;
+
+      &::before {
+        content: "";
+        @include listdot;
+        top: 6px;
+      }
+    }
+  }
+}
+
+.noti {
+  padding: 1.5rem 1.25rem 10rem;
+
+  .title {
+    @include span3fb;
+    margin-bottom: 0.5rem;
+  }
+
+  .noti_list {
+    li {
+      @include p5fn;
+      color: $gray02;
+      position: relative;
+      padding-left: 1rem;
+
+      &::before {
+        content: "";
+        @include listdot;
+      }
+    }
+  }
+}
+
+.footer_list_noti {
+  display: grid;
+  gap: 0.5rem;
+
+  .noti_title {
+    @include p5fb;
+    padding-bottom: 0.25rem;
+    color: $gray02;
+    padding-left: 1rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 27%;
+      width: 3px;
+      height: 3px;
+      background-color: $gray02;
+      border-radius: 50%;
+    }
+  }
+
+  .noti_group {
+    padding-left: 1rem;
+    display: grid;
+    gap: 0.25rem;
+
+    .txt {
+      @include p5fn;
+    }
+  }
+}

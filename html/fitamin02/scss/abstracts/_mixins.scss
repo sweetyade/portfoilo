@@ -1,0 +1,414 @@
+@import "variables";
+
+/* mediaquery */
+@mixin xsd {
+  @media (max-device-width: #{$small_device}) {
+    @content;
+  }
+}
+
+@mixin sd {
+  @media (max-device-width: #{$base_device - 1px}) {
+    @content;
+  }
+}
+
+@mixin bd {
+  @media (min-device-width: #{$base_device + 1px}) {
+    @content;
+  }
+}
+
+@mixin ld {
+  @media (min-device-width: #{$large_device}) {
+    @content;
+  }
+}
+
+@mixin ratiol {
+  @media (min-device-aspect-ratio: #{$ratio_large}) {
+    @content;
+  }
+}
+
+@mixin ratioz {
+  @media (device-aspect-ratio: #{$ratio_z}) {
+    @content;
+  }
+}
+
+/* typo */
+@mixin h1f {
+  font-size: var(--h1-f);
+  font-weight: $boldf;
+}
+
+@mixin h2f {
+  font-size: var(--h2-f);
+  font-weight: $boldf;
+}
+
+@mixin h3f {
+  font-size: var(--h3-f);
+  font-weight: $boldf;
+}
+
+@mixin p1fn {
+  font-size: var(--p1-f);
+  line-height: $lineh;
+}
+
+@mixin p1fb {
+  font-size: var(--p1-f);
+  line-height: $lineh;
+  font-weight: $boldf;
+}
+
+@mixin p2fn {
+  font-size: var(--p2-f);
+  line-height: $lineh;
+}
+
+@mixin p2fb {
+  font-size: var(--p2-f);
+  line-height: $lineh;
+  font-weight: $boldf;
+}
+
+@mixin p3fn {
+  font-size: var(--p3-f);
+  line-height: $lineh;
+}
+
+@mixin p3fb {
+  font-size: var(--p3-f);
+  line-height: $lineh;
+  font-weight: $boldf;
+}
+
+@mixin p4fn {
+  font-size: var(--p4-f);
+  line-height: $lineh;
+}
+
+@mixin p4fb {
+  font-size: var(--p4-f);
+  line-height: $lineh;
+  font-weight: $boldf;
+}
+
+@mixin p5fn {
+  font-size: var(--p5-f);
+  line-height: $lineh;
+}
+
+@mixin p5fb {
+  font-size: var(--p5-f);
+  line-height: $lineh;
+  font-weight: $boldf;
+}
+
+@mixin p6fn {
+  font-size: var(--p6-f);
+  line-height: $lineh;
+}
+
+@mixin p6fb {
+  font-size: var(--p6-f);
+  line-height: $lineh;
+  font-weight: $boldf;
+}
+
+@mixin p7fn {
+  font-size: var(--p7-f);
+  line-height: $lineh;
+}
+
+@mixin p7fb {
+  font-size: var(--p7-f);
+  line-height: $lineh;
+  font-weight: $boldf;
+}
+
+@mixin span1fn {
+  font-size: var(--span1-f);
+}
+
+@mixin span1fb {
+  font-size: var(--span1-f);
+  font-weight: $boldf;
+}
+
+@mixin span2fn {
+  font-size: var(--span2-f);
+}
+
+@mixin span2fb {
+  font-size: var(--span2-f);
+  font-weight: $boldf;
+}
+
+@mixin span3fn {
+  font-size: var(--span3-f);
+}
+
+@mixin span3fb {
+  font-size: var(--span3-f);
+  font-weight: $boldf;
+}
+
+@mixin span4fn {
+  font-size: var(--span4-f);
+}
+
+@mixin span4fb {
+  font-size: var(--span4-f);
+  font-weight: $boldf;
+}
+
+@mixin misc1th {
+  font-size: var(--misc1-f);
+  text-decoration: $lineth;
+}
+
+@mixin misc1thb {
+  font-size: var(--misc1-f);
+  font-weight: $boldf;
+  text-decoration: $lineth;
+}
+
+@mixin misc2th {
+  font-size: var(--misc2-f);
+  text-decoration: $lineth;
+}
+
+@mixin misc2thb {
+  font-size: var(--misc2-f);
+  font-weight: $boldf;
+  text-decoration: $lineth;
+}
+
+@mixin misc1under {
+  font-size: var(--misc1-f);
+  text-decoration: $lineunder;
+}
+
+@mixin misc1underb {
+  font-size: var(--misc1-f);
+  font-weight: $boldf;
+  text-decoration: $lineunder;
+}
+
+@mixin misc2under {
+  font-size: var(--misc2-f);
+  text-decoration: $lineunder;
+}
+
+@mixin misc2underb {
+  font-size: var(--misc2-f);
+  font-weight: $boldf;
+  text-decoration: $lineunder;
+}
+
+//typo
+@mixin vertical_txt {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-all;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+}
+
+@mixin txtover {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin listdot {
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: $gray02;
+  position: absolute;
+  left: 5px;
+  top: 7px;
+}
+
+/* grid */
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexcenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexbtw {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flextop {
+  display: flex;
+  align-items: flex-start;
+}
+
+@mixin flextopcenter {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@mixin flextopbtw {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@mixin flexright {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@mixin flextopright {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+@mixin gridcenter {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+
+@mixin gridbtw {
+  display: grid;
+  align-content: space-between;
+}
+
+@mixin inner_0_25 {
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
+}
+
+@mixin inner_0_5 {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+@mixin inner_0_75 {
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+@mixin inner_1 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+@mixin inner_1_25 {
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+}
+
+@mixin inner_1_5 {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+@mixin inner_1_75 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+@mixin inner_2 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@mixin inner_tb_0_25 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+@mixin inner_tb_0_5 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@mixin inner_tb_0_75 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+@mixin inner_tb_1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@mixin inner_tb_1_25 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+@mixin inner_tb_1_5 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+@mixin inner_tb_1_75 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
+@mixin inner_tb_2 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+//shadow
+@mixin shadowbtn {
+  box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.15);
+}
+
+@mixin shadows {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.05);
+}
+
+@mixin shadowm {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+//box
+@mixin border_round_25 {
+  border-radius: 0.25rem;
+}
+
+@mixin border_round_5 {
+  border-radius: 0.5rem;
+}
+
+@mixin border_round_75 {
+  border-radius: 0.75rem;
+}
+
+@mixin border_round_1 {
+  border-radius: 1rem;
+}
+
+@mixin border_left_round {
+  border-radius: 0.75rem 0 0 0;
+}
+
+//transp bg
+@mixin bg_trans {
+  background: linear-gradient(transparent 0, #fff 50%, #fff 100%);
+}

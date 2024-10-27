@@ -1,0 +1,118 @@
+@import "variables";
+
+/* mediaquery - mobile base (360px) */
+@mixin mobile_small {
+  @media (max-width: #{$mobile_base - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile_large {
+  @media (min-width: #{$mobile_large}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin pc_small {
+  @media (min-width: #{$pc_small}) {
+    @content;
+  }
+}
+
+@mixin pc_large {
+  @media (min-width: #{$pc_base + 1px}) {
+    @content;
+  }
+}
+
+/* typo */
+@mixin vertical_txt {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-all;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+}
+
+@mixin txtover {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin listdot {
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--sub-text-color);
+  position: absolute;
+  left: 5px;
+  top: 6px;
+}
+
+/* grid */
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexcenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexbtw {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flexright {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@mixin flextop {
+  display: flex;
+  align-items: flex-start;
+}
+
+@mixin flextopcenter {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@mixin flextopbtw {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@mixin flextopright {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+@mixin linkline {
+  content: "";
+  width: 0%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 60%;
+  background-color: var(--primary-color);
+  z-index: -1;
+  transition: all 0.3s;
+}

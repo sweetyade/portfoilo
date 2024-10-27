@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/guide.css" />
+    <title>DESIGN GUIDE</title>
+  </head>
+  <style>
+    .btn_b,
+    .btn_social {
+      max-width: 300px;
+    }
+  </style>
+  <body>
+    <main id="guide_main">
+      <!-- menu -->
+      <nav id="guide_nav">
+        <h1>design guide</h1>
+
+        <div class="nav_menu">
+          <a href="guide.html">typography</a>
+          <a href="guide_color.html">color</a>
+          <a href="guide_icon.html">icon</a>
+          <a href="guide_form.html">form</a>
+          <a href="guide_button.html" class="active">button</a>
+          <a href="guide_popup.html">popup</a>
+          <a href="guide_layout.html">layout</a>
+          <a href="guide_component.html">component</a>
+        </div>
+      </nav>
+
+      <!-- contents -->
+      <section class="container">
+        <div class="contents">
+          <h2>button</h2>
+
+          <div class="guide_info">
+            <p class="p3_f">- 홈에 많이 쓰이는 기본 버튼 .btn_wrap</p>
+            <p class="p3_f">- 화면 전체 하단에 픽스된 버튼 .btn_fix</p>
+            <p class="p3_f">- 화면 전체 하단에 픽스된 그라디언트 배경 포함 .btn_fix.btn_fixgr</p>
+            <p class="p3_f">- 화면하단 와이드 픽스 .btm_wide.btn_fix</p>
+            <p class="p3_f">- 화면하단 오른쪽 고정 픽스 (주로 글작성버튼) .btn_right</p>
+          </div>
+
+          <!-- button large -->
+          <div class="guide_block">
+            <h3>button large</h3>
+            <div class="guide_data">
+              <p class="title">.btn_b</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <button class="btn_b btn_basic">기본버튼 .btn_basic</button>
+                <button class="btn_b btn_light">라이트버튼 .btn_light</button>
+                <button class="btn_b btn_basic" disabled>비활성버튼 disabled</button>
+                <button class="btn_b btn_white btn_img">
+                  <img src="../../images/icon/systems_check_off.svg" alt="" />
+                  화이트버튼 .btn_wihte
+                </button>
+                <button class="btn_b btn_white btn_img">화이트버튼 .btn_wihte<img src="../../images/icon/systems_check_off.svg" alt="" /></button>
+                <button class="btn_b btn_trans">투명버튼 .btn_trans</button>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">.wide_btn</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <button class="btn_b btn_wide btn_basic">기본버튼 .btn_basic</button>
+                <button class="btn_b btn_wide btn_light">라이트버튼 .btn_light</button>
+                <button class="btn_b btn_wide btn_basic" disabled>비활성버튼 disabled</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- button medium -->
+          <div class="guide_block">
+            <h3>button medium</h3>
+            <div class="guide_data">
+              <p class="title">.btn_m</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <button class="btn_m btn_basic">.btn_basic</button>
+                <button class="btn_m btn_red">.btn_red</button>
+                <button class="btn_m btn_light">.btn_light</button>
+                <button class="btn_m btn_basic" disabled>disabled</button>
+                <button class="btn_m btn_white btn_img">
+                  <img src="../../images/icon/systems_check_off.svg" alt="" />
+                  .btn_wihte
+                </button>
+                <button class="btn_m btn_white btn_img">.btn_wihte<img src="../../images/icon/check_off.svg" alt="" /></button>
+                <button class="btn_m btn_trans">btn_trans</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- button small -->
+          <div class="guide_block">
+            <h3>button small</h3>
+            <div class="guide_data">
+              <p class="title">.btn_s</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <button class="btn_s btn_basic">.btn_basic</button>
+                <button class="btn_s btn_red">.btn_red</button>
+                <button class="btn_s btn_light">.btn_light</button>
+                <button class="btn_s btn_basic" disabled>disabled</button>
+                <button class="btn_s btn_white btn_img">
+                  <img src="../../images/icon/systems_check_off.svg" alt="" />
+                  .btn_wihte
+                </button>
+                <button class="btn_s btn_white btn_img">.btn_wihte<img src="../../images/icon/systems_check_off.svg" alt="" /></button>
+                <button class="btn_s btn_trans">btn_trans</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- black button -->
+          <div class="guide_block">
+            <h3>black button</h3>
+            <div class="guide_data">
+              <p class="title">.btn_black</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <button class="btn_black">.btn_black</button>
+                <button class="btn_black btn_img">
+                  <img src="../../images/icon/systems_edit_wt.svg" alt="" />
+                  .btn_black
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- round icon -->
+          <div class="guide_block">
+            <h3>round icon</h3>
+            <div class="guide_data">
+              <p class="title">.icon_round</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <p class="icon_round btn_basic">.btn_basic</p>
+                <p class="icon_round btn_border">.btn_border</p>
+                <p class="icon_round btn_red">.btn_red</p>
+                <p class="icon_round btn_light">.btn_light</p>
+                <p class="icon_round btn_white">.btn_wihte</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- squre icon -->
+          <div class="guide_block">
+            <h3>squre icon</h3>
+            <div class="guide_data">
+              <p class="title">.btn_icon</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <p class="icon_s icon_basic">.icon_basic</p>
+                <p class="icon_s icon_red">.icon_red</p>
+                <p class="icon_s icon_gray">.icon_gray</p>
+                <p class="icon_s btn_border btn_img"><img src="../../images/icon/time.svg" alt="" /> .btn_border</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- social button -->
+          <div class="guide_block">
+            <h3>social button</h3>
+            <div class="guide_data">
+              <p class="title">.btn_social</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <button class="btn_social btn_kakao"><img src="../../images/icon/kakao_bk.svg" alt="" />카카오로 시작하기</button>
+                <button class="btn_social btn_apple"><img src="../../images/icon/apple_wt.svg" alt="" />Apple로 로그인</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

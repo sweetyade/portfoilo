@@ -1,0 +1,230 @@
+/***************************************************************
+    05. buttons
+***************************************************************/
+button:disabled {
+  background-color: $gray04;
+  color: $gray02;
+}
+
+//layout
+.btn_wrap {
+  width: 100%;
+  padding: 0 1rem 1rem;
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+
+  &.in_btn {
+    width: calc(100% + 2.5rem);
+    transform: translateX(-1.25rem);
+  }
+}
+
+.btn_fix {
+  position: fixed;
+  width: 100%;
+  bottom: 1.5rem;
+  padding: 0 1rem;
+  display: grid;
+  gap: 0.5rem;
+  justify-items: center;
+  z-index: 5;
+
+  &.wide {
+    padding: 0;
+  }
+
+  .btn_b ~ .toast {
+    bottom: 5.25rem;
+  }
+
+  .toast {
+    bottom: 1rem;
+  }
+}
+
+.btn_fixgr {
+  position: relative;
+  &::after {
+    content: "";
+    background: linear-gradient(transparent 0, #fff 70%);
+    position: absolute;
+    width: 100%;
+    height: 3rem;
+    top: -3rem;
+    left: 0;
+  }
+}
+
+.btn_img {
+  @include flexcenter;
+  gap: 0.25rem;
+}
+
+.btn_right {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 9;
+
+  .toast {
+    bottom: 4.5rem;
+  }
+}
+
+//size
+.btn_b {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1rem 0;
+  @include span1fb;
+  border: 1px solid transparent;
+  cursor: pointer;
+
+  &.btn_trans {
+    padding: 0.5rem 0;
+  }
+}
+
+.btn_wide {
+  border-radius: 0;
+}
+
+.btn_m {
+  font-size: var(--span2-f);
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  width: fit-content;
+  line-height: 1;
+
+  &.btn_img img {
+    width: 1rem;
+  }
+
+  &.btn_white {
+    color: $gray02;
+  }
+}
+
+.btn_s {
+  @include span2fn;
+  border-radius: 0.25rem;
+  padding: 0.4rem 0.625rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  width: fit-content;
+  line-height: 1;
+
+  &.btn_img img {
+    width: 1rem;
+  }
+}
+
+.btn_social {
+  @include flexcenter;
+  @include span1fb;
+  padding: 0.6875rem 0;
+  border-radius: 0.25rem;
+  width: 100%;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.icon_round {
+  font-size: var(--span3-f);
+  border-radius: 3rem;
+  padding: 0.3rem 0.625rem;
+  border: 1px solid transparent;
+  line-height: 1;
+  width: fit-content;
+}
+
+.icon_s {
+  padding: 0.125rem 0.25rem;
+  font-size: var(--span4-f);
+  border: 1px solid transparent;
+  line-height: 1;
+  width: fit-content;
+}
+
+.icon_box {
+  @include span4fn;
+  padding: 0 0.25rem;
+  border: 1px solid $gray01;
+  color: $gray01;
+}
+
+//color
+.btn_basic {
+  background-color: $primary;
+  color: $light;
+}
+
+.btn_light {
+  background-color: $gray05;
+  color: $gray01;
+}
+
+.btn_white {
+  background-color: $light;
+  border-color: $gray04;
+  color: $gray01;
+}
+
+.btn_dark {
+  background-color: $dark;
+  color: $light;
+  border-color: $dark;
+}
+
+.btn_trans {
+  background-color: transparent;
+  color: $gray01;
+}
+
+.btn_red {
+  background-color: $system-red;
+  color: $light;
+}
+
+.btn_border {
+  background-color: $light;
+  border-color: $primary;
+  color: $primary;
+}
+
+.btn_kakao {
+  background-color: #fee500;
+  color: #191919;
+}
+
+.btn_apple {
+  background-color: #000;
+  color: #fff;
+}
+
+.icon_basic {
+  background-color: $primary-op;
+  color: $primary;
+}
+
+.icon_red {
+  background-color: $system-red-op;
+  color: $system-red;
+}
+
+.icon_gray {
+  background-color: $gray05;
+  color: $gray01;
+}
+
+.btn_black {
+  background-color: $dark;
+  color: $light;
+  font-size: var(--span1-f);
+  border-radius: 3rem;
+  padding: 0.75rem 1rem;
+  @include shadowbtn;
+}

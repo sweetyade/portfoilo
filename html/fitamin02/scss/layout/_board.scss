@@ -1,0 +1,143 @@
+/***************************************************************
+    12. board
+***************************************************************/
+//inner table
+.inner_table {
+  @include flextop;
+  gap: 1rem;
+
+  .title {
+    @include p3fn;
+    color: $gray02;
+    width: 4.5rem;
+  }
+
+  .txt {
+    @include p3fn;
+    @include vertical_txt;
+    width: calc(100% - 5.5rem);
+  }
+}
+
+//글쓰기
+.write_wrap {
+  padding: 1.5rem 1.25rem 2rem;
+
+  .addfile_slide {
+    width: calc(100% + 2.5rem);
+    transform: translateX(-1.25rem);
+
+    .addfile {
+      margin-left: 1.25rem;
+    }
+
+    .img_list:last-child {
+      margin-right: 1.25rem;
+    }
+  }
+
+  .write_user{
+    border-radius: .5rem;
+    padding:  .75rem;
+    background: $primary-op url(../images/icon/systems_right.svg) no-repeat;
+    background-position: calc(100% - .75rem) center;
+    cursor: pointer;
+    background-size: 1.25rem;
+
+    .title{
+      @include span2fn;
+      color: $primary;
+      margin-bottom: .75rem;
+    }
+
+    .txt{
+      @include p5fn;
+      position: relative;
+      padding-left: 1rem;
+      &::before{
+        content: '';
+        @include listdot;
+        background-color: $dark;
+      }
+    }
+
+    .info_table{
+      gap: .5rem;
+      align-items: center;
+
+      &:first-child{
+        margin-bottom: .5rem;
+      }
+
+      .title{
+        @include span3fn;
+        margin-bottom: 0;
+      }
+
+      .txt{
+        @include span3fn;
+        padding-left: 0;
+        &::before{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+//미리보기 리스트
+.board_pre {
+  .pre_data {
+    padding: 1.25rem;
+    border-bottom: 0.5rem solid $gray05;
+
+    .title {
+      @include span1fb;
+    }
+
+    .pre_desc {
+      @include vertical_txt;
+      margin-block: 0.75rem;
+      @include p4fn;
+      color: $gray01;
+    }
+
+    .pre_cmt {
+      background-color: $gray05;
+      border-radius: 0.5rem;
+      padding-inline: 0.5rem;
+      height: 2rem;
+      @include flex;
+      @include span3fn;
+      color: $gray01;
+
+      &.rpl {
+        background-color: $primary-op;
+        color: $primary;
+      }
+    }
+
+    .cmt_txt {
+      padding-left: 0.5rem;
+    }
+  }
+}
+
+//보드상세
+.board_detail {
+  padding: 0.5rem 1.25rem 1.125rem;
+
+  .title {
+    @include h3f;
+  }
+
+  .detail_name {
+    @include span3fn;
+    color: $gray02;
+  }
+
+  article {
+    @include p4fn;
+    margin: 1rem 0;
+  }
+}

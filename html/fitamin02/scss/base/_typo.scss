@@ -1,0 +1,239 @@
+/***************************************************************
+    04. typo
+***************************************************************/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css");
+
+:root {
+  //typo
+  --h1-f: 1.5rem;
+  --h2-f: 1.25rem;
+  --h3-f: 1.125rem;
+  --p1-f: 1.25rem;
+  --p2-f: 0.9375rem;
+  --p3-f: 0.875rem;
+  --p4-f: 0.8125rem;
+  --p5-f: 0.75rem;
+  --p6-f: 1.125rem;
+  --p7-f: 1rem;
+  --span1-f: 0.9375rem;
+  --span2-f: 0.8125rem;
+  --span3-f: 0.75rem;
+  --span4-f: 0.625rem;
+  --misc1-f: 0.9375rem;
+  --misc2-f: 0.8125rem;
+}
+
+body {
+  font-family: "Spoqa Han Sans Neo", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "sans-serif";
+  font-weight: 500;
+  line-height: 1.2;
+  color: $dark;
+}
+
+.h1_f {
+  @include h1f;
+}
+
+.h2_f {
+  @include h2f;
+}
+
+.h3_f {
+  @include h3f;
+}
+
+.p1_f {
+  @include p1fn;
+}
+
+.p1_fb {
+  @include p1fb;
+}
+
+.p2_f {
+  @include p2fn;
+}
+
+.p2_fb {
+  @include p2fb;
+}
+
+.p3_f {
+  @include p3fn;
+}
+
+.p3_fb {
+  @include p3fb;
+}
+
+.p4_f {
+  @include p4fn;
+}
+
+.p4_fb {
+  @include p4fb;
+}
+
+.p5_f {
+  @include p5fn;
+}
+
+.p5_fb {
+  @include p5fb;
+}
+
+.p6_f {
+  @include p6fn;
+}
+
+.p6_fb {
+  @include p6fb;
+}
+
+.p7_f {
+  @include p7fn;
+}
+
+.p7_fb {
+  @include p7fb;
+}
+
+.span1_f {
+  @include span1fn;
+}
+
+.span1_fb {
+  @include span1fb;
+}
+
+.span2_f {
+  @include span2fn;
+}
+
+.span2_fb {
+  @include span2fb;
+}
+
+.span3_f {
+  @include span3fn;
+}
+
+.span3_fb {
+  @include span3fb;
+}
+
+.span4_f {
+  @include span4fn;
+}
+
+.span4_fb {
+  @include span4fb;
+}
+
+.misc1_th {
+  @include misc1th;
+}
+
+.misc1_thb {
+  @include misc1thb;
+}
+
+.misc2_th {
+  @include misc2th;
+}
+
+.misc2_thb {
+  @include misc2thb;
+}
+
+.misc1_under {
+  @include misc1under;
+}
+
+.misc1_underb {
+  @include misc1underb;
+}
+
+.misc2_under {
+  @include misc2under;
+}
+
+.misc2_underb {
+  @include misc2underb;
+}
+
+.line_h {
+  line-height: $lineh;
+}
+
+.line_th {
+  text-decoration: $lineth;
+}
+
+.line_under {
+  text-decoration: $lineunder;
+}
+
+.bold_f {
+  font-weight: $boldf;
+}
+
+.point_f {
+  font-family: $point_f;
+}
+
+.underlink {
+  @include misc2under;
+  color: $gray01;
+  text-align: center;
+  display: block;
+  margin-top: 1.5rem;
+}
+
+.textcenter {
+  text-align: center;
+  display: block;
+}
+
+.text_right {
+  text-align: right;
+  display: block;
+}
+
+.text_left {
+  text-align: left;
+  display: block;
+}
+
+.listdot {
+  position: relative;
+  padding-left: 1rem;
+  &::before {
+    content: "";
+    @include listdot;
+  }
+}
+
+@media (max-width: #{$base_device - 1px}) {
+  :root {
+    //typo
+    --h1-f: 6.6852vw;
+    --h2-f: 5.571vw;
+    --h3-f: 5.0139vw;
+    --p1-f: 5.571vw;
+    --p2-f: 4.178vw;
+    --p3-f: 3.8997vw;
+    --p4-f: 3.6212vw;
+    --p5-f: 3.3426vw;
+    --p6-f: 5.0139vw;
+    --span1-f: 4.178vw;
+    --span2-f: 3.6212vw;
+    --span3-f: 3.3426vw;
+    --span4-f: 2.7855vw;
+    --misc1-f: 4.1783vw;
+    --misc2-f: 3.6212vw;
+  }
+}

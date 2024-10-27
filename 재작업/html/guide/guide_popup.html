@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/guide.css" />
+    <title>DESIGN GUIDE</title>
+  </head>
+
+  <style>
+    .popup,
+    .modal {
+      position: initial;
+      opacity: 1;
+      z-index: initial;
+    }
+
+    .overlay {
+      display: none;
+    }
+
+    .popup .popup_wrap {
+      position: initial;
+      width: 360px;
+      transform: initial;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+    .modal .modal_wrap {
+      position: relative;
+      width: 360px;
+      transform: initial;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      left: 0;
+    }
+
+    .modal .modal_wrap .modal_in .modal_con::-webkit-scrollbar {
+      width: 5px;
+      background-color: #fff;
+    }
+    .modal .modal_wrap .modal_in .modal_con::-webkit-scrollbar-thumb {
+      background: #dfdfdf;
+    }
+
+    .toast,
+    .bottom_btn {
+      width: 360px;
+      position: initial;
+    }
+  </style>
+  <body>
+    <main id="guide_main">
+      <!-- menu -->
+      <nav id="guide_nav">
+        <h1>design guide</h1>
+
+        <div class="nav_menu">
+          <a href="guide.html">typography</a>
+          <a href="guide_color.html">color</a>
+          <a href="guide_icon.html">icon</a>
+          <a href="guide_form.html">form</a>
+          <a href="guide_button.html">button</a>
+          <a href="guide_popup.html" class="active">popup</a>
+          <a href="guide_layout.html">layout</a>
+          <a href="guide_component.html">component</a>
+        </div>
+      </nav>
+
+      <!-- contents -->
+      <section class="container">
+        <div class="contents">
+          <h2>popup</h2>
+
+          <div class="guide_info">
+            <p class="p3_f">- 팝업 건텐츠 div.popup</p>
+            <p class="p3_f">- 모달 컨첸츠 div.modal</p>
+            <p class="p3_f">- 팝업/컨텐츠 안 overlay필수 / 오픈시 overlay 및 body .open 추가</p>
+            <p class="p3_f">- 박스쉐도우는 디자인확인용/실제팝업,모달에는 적용되지 않음</p>
+          </div>
+
+          <!-- popup -->
+          <div class="guide_block">
+            <h3>popup</h3>
+            <div class="guide_data">
+              <p class="title">.popup_wrap</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <!--팝업 버튼 1개 -->
+                <div class="popup">
+                  <!-- 팝업안 전체 오버레이 -->
+                  <div class="overlay"></div>
+
+                  <!-- 팝업 컨텐츠 -->
+                  <div class="popup_wrap">
+                    <p class="pop_title">서비스를 탈퇴하시겠어요?</p>
+                    <p class="pop_txt">지금 핏타민 서비스를 탈퇴하시면 받고 있는 혜택이 모두 사라져요</p>
+                    <!-- 버튼 1개 -->
+                    <div class="pop_btn">
+                      <button class="btn_light btnClose">확인</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 팝업 버튼 2개 -->
+                <div class="popup">
+                  <!-- 팝업안 전체 오버레이 -->
+                  <div class="overlay"></div>
+
+                  <!-- 팝업 컨텐츠 -->
+                  <div class="popup_wrap">
+                    <p class="pop_title">서비스를 탈퇴하시겠어요?</p>
+                    <p class="pop_txt">지금 핏타민 서비스를 탈퇴하시면 받고 있는 혜택이 모두 사라져요</p>
+                    <!-- 버튼 2개 -->
+                    <div class="pop_btn">
+                      <button class="btn_m btn_light btnClose">확인</button>
+                      <button class="btn_m btn_basic btnClose">탈퇴하기</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 팝업 버튼 2개 -->
+                <div class="popup popup02">
+                  <!-- 팝업안 전체 오버레이 -->
+                  <div class="overlay"></div>
+
+                  <!-- 팝업 컨텐츠 -->
+                  <div class="popup_wrap">
+                    <p class="pop_title">서비스를 탈퇴하시겠어요?</p>
+                    <p class="pop_txt">지금 핏타민 서비스를 탈퇴하시면 받고 있는 혜택이 모두 사라져요</p>
+                    <!-- 버튼 2개 -->
+                    <div class="pop_btn">
+                      <button class="btn_m btn_light btnClose">확인</button>
+                      <button class="btn_mbtn_basic btn_red">탈퇴하기</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- modal -->
+          <div class="guide_block">
+            <h3>modal</h3>
+
+            <!-- basic, info-->
+            <div class="guide_data">
+              <p class="title">basic │ info list</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap; align-items: flex-end">
+                <!-- 기본 타이틀 + 서브타이틀-->
+                <div class="modal">
+                  <!-- 팝업안 전체 오버레이 -->
+                  <div class="overlay"></div>
+
+                  <!-- 모달 컨텐츠-->
+                  <div class="modal_wrap">
+                    <div class="modal_top">
+                      <p class="modal_title">모달 타이틀 텍스트</p>
+                      <p class="modal_sub">
+                        서브타이틀 텍스트<br />
+                        서브타이틀은 여기에 표시합니다.
+                      </p>
+                    </div>
+
+                    <div class="btn_wrap">
+                      <button class="btn_b btn_basic btnClose">오픈 알림받기</button>
+                      <button class="btn_b btn_trans">닫기버튼은 텍스트만 표시</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 기본 타이틀 + 서브타이틀 + 컨텐츠영역-->
+                <div class="modal">
+                  <!-- 팝업안 전체 오버레이 -->
+                  <div class="overlay"></div>
+
+                  <!-- 모달 컨텐츠-->
+                  <div class="modal_wrap">
+                    <div class="modal_top">
+                      <p class="modal_title">모달 타이틀 텍스트</p>
+                      <p class="modal_sub">
+                        서브타이틀 텍스트<br />
+                        서브타이틀은 여기에 표시합니다.
+                      </p>
+                    </div>
+
+                    <div class="modal_con">
+                      <p class="p2_f">컨텐츠가 들어가는 영역입니다.</p>
+                    </div>
+
+                    <div class="btn_wrap">
+                      <button class="btn_b btn_basic btnClose">오픈 알림받기</button>
+                      <button class="btn_b btn_trans">닫기</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 기본타이틀 + 리스트목록-->
+                <div class="modal">
+                  <!-- 팝업안 전체 오버레이 -->
+                  <div class="overlay"></div>
+
+                  <!-- 모달 컨텐츠-->
+                  <div class="modal_wrap">
+                    <div class="modal_top">
+                      <p class="modal_title">충전권 안내사항을 확인해 주세요</p>
+                    </div>
+                    <div class="modal_con">
+                      <ul class="list_dot">
+                        <li>안내사항 같은 리스트 모달은 이렇게 표시됩니다.</li>
+                        <li>최대높이 디바이스 기준 50svh</li>
+                        <li>상품 주문 시 충전한 상품머니를 사용하실 수 있습니다.</li>
+                        <li>쿠폰에 따라 적용 대상이 다를 수 있습니다.</li>
+                        <li>쿠폰은 주문 1회마다 1개씩 적용할 수 있습니다.</li>
+                        <li>쿠폰은 정해진 기간동안만 사용이 유효합니다. 쿠폰의 사용기간을 확인해주세요.</li>
+                        <li>쿠폰을 사용한 주문을 취소하여 쿠폰 사용이 취소된 경우, 유효기간 내에 재발급됩니다.</li>
+                        <li>기간이 경과한 쿠폰은 자동으로 소멸됩니다.</li>
+                        <li>쿠폰 사용 중 문제가 발생했을 경우 1:1게시판으로 문의해주세요.</li>
+                      </ul>
+                    </div>
+
+                    <div class="btn_wrap">
+                      <button class="btn_b btn_white">버튼간격 .5rem</button>
+                      <button class="btn_b btn_basic">확인</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 기본타이틀+리스트목록-->
+                <div class="modal">
+                  <!-- 팝업안 전체 오버레이 -->
+                  <div class="overlay"></div>
+
+                  <!-- 모달 컨텐츠-->
+                  <div class="modal_wrap">
+                    <div class="modal_top">
+                      <p class="modal_title">응모권 이용 안내사항을 확인해주세요</p>
+                    </div>
+
+                    <div class="modal_con">
+                      <ul class="list_dot">
+                        <li>
+                          <p class="bold_f">참가자격</p>
+                          <ul>
+                            <li>본 서비스는 회원 전용 서비스로 회원가입과 휴대폰 전화번호 인증이 반드시 완료되어야합니다.</li>
+                            <li>핏플 챌린지는 Lv. 6 핏플에 해당하는 분들만 참여 할 수 있는 기능입니다.</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p class="bold_f">캐시</p>
+                          <ul>
+                            <li>캐시는 핏타민 앱내 일정한 행위를 마친 때에 적립되는 서비스 상의 데이터입니다. (적립경로 : 홈 &gt; 레벨업 조건 &gt; 핏타민 캐시)</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p class="bold_f">응모 방법 및 안내</p>
+                          <ul>
+                            <li>응모권 추첨 찬스는 보유 응모권으로 원하시는 경품에 응모할 수 있으며 응모 이후 당첨여부에 관계없이 반환되지 않습니다.</li>
+                            <li>응모권 추첨 찬스는 보유 응모권으로 원하시는 경품에 응모할 수 있으며 응모해야할 응모권의 수량은 경품마다 다를 수 있습니다.</li>
+                            <li>응모권은 챌린지에서 응모권 찬스 등의 이벤트 참여를 위한 수단입니다.</li>
+                            <li>핏타민 챌린지 참여를 위한 응모권 획득 경로는 다음과 같습니다.</li>
+                            <li>i. 핏타민 Lv. 6 핏플 레벨 업 최초 승급시 (응모권 5장 획득)</li>
+                            <li>ii. 핏타민 캐시를 응모권으로 교환 할 경우 (100캐시 = 응모권 1 장)</li>
+                            <li>iii. 그 외 회사가 진행하는 후기 작성, 이벤트 참여, 지연 보상 등 정책이 정하는 경우</li>
+                            <li>본 서비스는 제휴사 또는 회사의 사정에 따라 사전 공지 없이 변경되거나 종료될 수 있습니다.</li>
+                            <li>랜덤찬스와 응모권 찬스 모두 응모 이후 당첨여부에 관계없이 응모한 응모권은 반환되지 않습니다.</li>
+                            <li>기타 챌린지 또는 응모권 찬스 관련 문의는 핏타민 고객상담센터 1661-4739(평일 오전9시~오후6시/주말 및 공휴일 휴무)로 부탁드립니다.</li>
+                            <li>응모권은 교환 후 유효기간 3개월간 사용할 수 있으며 미사용 응모권은 유효기간 이후 자동 소멸됩니다.</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p class="bold_f">개인정보 활용/위탁 안내</p>
+                          <ul>
+                            <li>당첨자에게 경품지급을 위한 추가정보를 요청할 수 있으며, 제공을 거부하거나 응모권 찬스 종료일 기준 1주일 이내 연락이 불가할 경우 당첨이 취소됩니다.</li>
+                            <li>이벤트 응모와 참여는 관련 마케팅 정보 수신 동의로 처리되어, 당첨 안내 목적으로 개인 정보가 활용 될 수 있습니다.</li>
+                            <li>경품 발송을 위해 위탁 업체에 당첨자의 정보(성함, 주소, 전화번호)가 제공되며 경품 제공과 고객 응대 목적으로만 사용되고 발송 완료 후 안전하게 일괄 폐기됩니다.</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p class="bold_f">추첨/당첨/경품 참고사항</p>
+                          <ul>
+                            <li>당첨자는 추첨으로 선정합니다.</li>
+                            <li>비정상적이거나 불법적인 방법으로 응모권 찬스에 참여하신 경우 당첨자 선정에서 제외될 수 있습니다.</li>
+                            <li>연락처가 부정확하여 본인확인, 경품 배송 및 제세공과금 처리가 불가한 경우, 당첨이 취소될 수 있습니다.</li>
+                            <li>5만원 초과 경품의 경품가액 전체에 대한 제세공과금은 당첨자 개인이 부담합니다.</li>
+                            <li>응모권 찬스의 경품의 이미지는 실제 상품과 다를 수 있고, 경품은 서비스 운영상황에 따라 다른 경품으로 변경될 수 있습니다.</li>
+                            <li>실물 경품은 본 응모권 찬스 종료일 기준 2주 내 발송 예정이며, 당첨자에 한해 개별 안내 예정입니다.</li>
+                            <li>경품 수령 후에는 단순 변심으로 인한 교환, 반품이 불가합니다.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="btn_wrap">
+                      <div class="btn_trans"></div>
+                      <button class="btn_b btn_basic btnClose">확인</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!--영양제상세-->
+                <div class="modal">
+                  <!-- 팝업안 전체 오버레이 -->
+                  <div class="overlay"></div>
+
+                  <!-- 모달 컨텐츠-->
+                  <div class="modal_wrap">
+                    <div class="modal_top">
+                      <div class="detail_img">
+                        <p class="goods_img"><img src="../../images/drug_sample.png" alt="" /></p>
+                        <p class="flex_right">
+                          <img src="../../images/modal_fix1.png" alt="" />
+                          <img src="../../images/modal_fix2.png" alt="" />
+                        </p>
+                      </div>
+                      <p class="modal_title">비타민B 컴플렉스+</p>
+                      <p class="goods_cost"><span class="primary"> 30정</span> <span class="gray01">12,900원</span></p>
+                    </div>
+
+                    <div class="modal_con">
+                      <div class="modal_goods">
+                        <div class="goods_data">
+                          <p class="goods_title">하루 섭취 권장량</p>
+                          <p class="span2_f gray02">1일 섭취량 : 1정(1,000 mg)</p>
+                        </div>
+
+                        <div class="goods_data">
+                          <p class="goods_title">주요기능</p>
+                          <ul>
+                            <li>비타민A : 어두운 곳에서 시각 적응을 위해 필요, 피부와 점막을 형성하고 기능을 유지하는데 필요,상피 세포의 성장과 발달에 필요</li>
+                            <li>비타민B2 : 체내 에너지 생성에 필요</li>
+                            <li>비타민B6: 단백질및 아미노산 이용에 필요, 혈액의호모시스테인 수준을 정상으로 유지하는데 필요</li>
+                            <li>비타민B12:정상적인 엽산대사에 필요</li>
+                            <li>비타민C:결합조직 형성과 기능유지에 필요, 철의 흡수에 필요, 항산화 작용을 하여 유해산소로부터 세포를 보호하는데 필요</li>
+                          </ul>
+                        </div>
+
+                        <div class="goods_data">
+                          <p class="goods_title">영양정보</p>
+                          <table>
+                            <colgroup>
+                              <col width="30%" />
+                              <col width="60%" />
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th>1일 섭취량 당</th>
+                                <th>함량(% 영양성분기준치)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>단백질</td>
+                                <td>0g(0%)</td>
+                              </tr>
+                              <tr>
+                                <td>지방</td>
+                                <td>0g(0%)</td>
+                              </tr>
+                              <tr>
+                                <td>탄수화물</td>
+                                <td>1g미만(0%)</td>
+                              </tr>
+                              <tr>
+                                <td>나트륨</td>
+                                <td>0mg(0%)</td>
+                              </tr>
+                              <tr>
+                                <td>비타민 A</td>
+                                <td>700µg RE(100%)</td>
+                              </tr>
+                              <tr>
+                                <td>비타민 B1</td>
+                                <td>50mg(4267%)</td>
+                              </tr>
+                              <tr>
+                                <td>비타민 B2</td>
+                                <td>50mg(3571%)</td>
+                              </tr>
+                              <tr>
+                                <td>비타민 B6</td>
+                                <td>50mg(3333%)</td>
+                              </tr>
+                              <tr>
+                                <td>비타민 B12</td>
+                                <td>120µg(5000%)</td>
+                              </tr>
+                              <tr>
+                                <td>비타민 C</td>
+                                <td>100mg(100%)</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+
+                        <div class="goods_data">
+                          <p class="goods_title">섭취방법</p>
+                          <p class="p5_f">충분한 물과 함께 섭취하십시오.</p>
+                        </div>
+
+                        <div class="goods_data">
+                          <p class="goods_title">부작용 및 주의사항</p>
+                          <ul>
+                            <li>비타민B 성분의 중복 섭취를 확인해주세요.</li>
+                            <li>고용량의 비타민A 성분은 독성을 유발할 수 있으므로 중복 섭취에 주의하세요.</li>
+                          </ul>
+                        </div>
+
+                        <div class="goods_data">
+                          <p class="goods_title">제조원 및 판매원</p>
+                          <ul>
+                            <li>제조원 : 코스맥스바이오(주)/충북 제천시 바이오밸리 3로 30</li>
+                            <li>판매원 : (주)킥더허들/경상남도 창원시 의창구 용동로57번길 18, 8층 801호</li>
+                          </ul>
+                        </div>
+
+                        <div class="goods_data">
+                          <ul class="noti">
+                            <li>제품 정보는 제품용기에 기재되거나 제조업체 또는 판매업체가 제공하는 정보에 기반합니다.</li>
+                            <li>개인의 건강상태에 따라 섭취량 및 섭취방법이 달라질 수 있으며 더 정확한 개인별 분석을 위해서는 전문가와의 상담을 권장합니다.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="btn_wrap btn_fixgr">
+                      <button class="btn_b btn_basic">한 팩 담기</button>
+                      <button class="btn_b btn_trans btnClose">닫기</button>
+                      <!-- <p class="toast">쏘팔메토옥타코사놀+ 제품을 담았어요</p> -->
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 옵션선택 -->
+                <div class="modal">
+                  <!-- 팝업안 전체 오버레이 -->
+                  <div class="overlay"></div>
+
+                  <!-- 모달 컨텐츠-->
+                  <div class="modal_wrap">
+                    <div class="modal_option">
+                      <p class="option_val">옵션1</p>
+                      <p class="option_val">옵션2</p>
+                      <p class="option_val">옵션3</p>
+                      <p class="option_val">옵션4</p>
+                      <p class="option_val">옵션5</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- form -->
+            <div class="guide_data">
+              <p class="title">text input │ textarea</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap; align-items: flex-end">
+                <!-- 인풋 모달 -->
+                <div class="modal">
+                  <!-- 팝업안 전체 오버레이 -->
+                  <div class="overlay"></div>
+                  <!-- 모달 컨텐츠-->
+                  <div class="modal_wrap">
+                    <p class="toast">유효하지 않은 추천인 코드입니다</p>
+                    <div class="modal_top">
+                      <p class="modal_title">모달 타이틀 텍스트</p>
+                      <p class="modal_sub">
+                        서브타이틀 텍스트<br />
+                        서브타이틀은 여기에 표시합니다.
+                      </p>
+                    </div>
+
+                    <div class="modal_con">
+                      <div class="input_div">
+                        <input type="text" id="input03" class="clearInput" placeholder="이메일 주소를 입력해주세요." required />
+                        <div class="btnClear"></div>
+                      </div>
+                    </div>
+
+                    <div class="btn_wrap">
+                      <button class="btn_b btn_basic btnClose">오픈 알림받기</button>
+                      <button class="btn_b btn_trans">닫기</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- etc -->
+            <div class="guide_data">
+              <p class="title">image</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap; align-items: flex-end">
+                <!-- 이미지 나열 모달 -->
+                <div class="modal">
+                  <!-- 팝업안 전체 오버레이 -->
+                  <div class="overlay"></div>
+                  <!-- 모달 컨텐츠-->
+                  <div class="modal_wrap">
+                    <div class="modal_top">
+                      <p class="modal_title">사진으로도 인증할 수 있어요</p>
+                      <p class="modal_sub">
+                        섭취기록을 사진으로도 남겨보세요.<br />
+                        이번주 포인트 미션까지 완료할 수 있어요!
+                      </p>
+                    </div>
+
+                    <div class="modal_con">
+                      <div class="img_list">
+                        <p class="img"><img src="../../images/cam_sample.png" alt="" /></p>
+                        <p class="img"><img src="../../images/guide_sample.png" alt="" /></p>
+                        <p class="img"><img src="../../images/guide_sample4.png" alt="" /></p>
+                      </div>
+                    </div>
+
+                    <div class="btn_wrap">
+                      <button class="btn_b btn_basic btnClose">오픈 알림받기</button>
+                      <button class="btn_b btn_trans">닫기</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 버튼 나열 모달 -->
+                <div class="modal">
+                  <!-- 팝업안 전체 오버레이 -->
+                  <div class="overlay"></div>
+                  <!-- 모달 컨텐츠-->
+                  <div class="modal_wrap">
+                    <div class="first_on">
+                      <p class="title"><img src="../../images/icon/alarm.svg" />섭취기록 방법을 알려드려요</p>
+                      <p class="txt">
+                        끌어서 기록은 <span class="primary">알림시간 1시간 전 후</span>로만 할 수 있어요!<br />
+                        만약 시간이 지났다면 사진으로 기록을 남겨주세요 :)
+                      </p>
+                    </div>
+                    <div class="modal_top">
+                      <p class="modal_title">오전 07:00 알림을 설정했어요!<br />어떤 영양제를 추가할까요?</p>
+                    </div>
+
+                    <div class="modal_con">
+                      <div class="modal_gridbtn">
+                        <div class="icon_btn">
+                          <p class="icon"><img src="../../images/icon/search_goods.svg" alt="" /></p>
+                          <p class="txt">영양제 검색하기</p>
+                        </div>
+                        <div class="icon_btn">
+                          <p class="icon"><img src="../../images/icon/qna_question.svg" alt="" /></p>
+                          <p class="txt">직접 입력하기</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="btn_wrap">
+                      <button class="btn_b btn_white btnClose">구독내역 추가하기</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- etc -->
+          <div class="guide_block">
+            <h3>etc</h3>
+            <div class="guide_data">
+              <p class="title">.toast</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap inner_tb_2">
+                <p class="toast">토스트 메세지</p>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">.bottom_btn</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap inner_tb_2; position: relative">
+                <div class="bottom_btn">
+                  <p class="txt">찾는 영양제가 없으신가요?</p>
+                  <p class="btn_s btn_light btn_img"><img src="../../images/icon/systems_edit_gray.svg" alt="" />직접 등록하기</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      let swiper = new Swiper(".add_file", {
+        spaceBetween: 8,
+        slidesPerView: "auto",
+      });
+
+      /* popup */
+      $(".pop01").on("click", function () {
+        $(".popup01, body").addClass("open");
+      });
+
+      $(".overlay, .btnClose").on("click", function () {
+        $(".popup, .modal, body, .btn_trans").removeClass("open");
+      });
+
+      //메인 이미지 팝업
+      let swiper2 = new Swiper(".modal_img", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+      });
+
+      // /* ---- 삭제버튼 ------- */
+      $(document).ready(function () {
+        $(".input_div").each(function () {
+          $(this)
+            .find(".clearInput")
+            .on("keyup focus", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 1");
+
+              if ($(this).val().length == 0) {
+                $(this).siblings(".btnClear").attr("style", "opacity: 0");
+              } else {
+                $(this).siblings(".btnClear").attr("style", "opacity: 1");
+              }
+            });
+
+          $(this)
+            .find(".clearInput")
+            .on("blur", function () {
+              $(this).siblings(".btnClear").attr("style", "opacity: 0");
+            });
+
+          $(this)
+            .find(".btnClear")
+            .on("click touchstart", function () {
+              $(this).closest(".input_div").find(".clearInput").val("");
+              $(this).closest(".input_div").find(".btnClear").attr("style", "opacity: 0");
+              return false;
+            });
+        });
+      });
+    </script>
+  </body>
+</html>

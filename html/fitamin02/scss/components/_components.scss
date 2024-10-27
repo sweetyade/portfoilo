@@ -1,0 +1,1987 @@
+/***************************************************************
+    07. components
+***************************************************************/
+//box
+.box_0_25 {
+  border-radius: 0.25rem;
+}
+
+.box_0_5 {
+  border-radius: 0.5rem;
+}
+
+.box_0_75 {
+  border-radius: 0.75rem;
+}
+
+.box_1 {
+  border-radius: 1rem;
+}
+
+.lt_0 {
+  border-top-left-radius: 0;
+}
+
+//box grid
+.box_grid_1_5 {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 1rem;
+  justify-items: center;
+
+  .box_con {
+    .sub {
+      @include span3fb;
+      color: $gray02;
+      text-align: center;
+    }
+    .total {
+      @include h3f;
+      margin-top: 0.25rem;
+      text-align: center;
+    }
+  }
+}
+
+//label
+.label {
+  @include span2fn;
+  @include flexcenter;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  width: 100%;
+  gap: 0.5rem;
+  line-height: 1;
+
+  .txt {
+    @include flex;
+    font-weight: $boldf;
+  }
+
+  .time {
+    font-weight: $boldf;
+  }
+
+  &.green {
+    background-color: $primary;
+
+    .txt {
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 0.75rem;
+        background: rgba(255, 255, 255, 0.8);
+        margin-left: 0.5rem;
+      }
+    }
+
+    .time {
+      opacity: 0.8;
+    }
+  }
+
+  &.red {
+    background-color: $system-red;
+
+    .txt {
+      opacity: 0.8;
+      background: url(../images/icon/clock_line_wt.svg) no-repeat;
+      background-position: left center;
+      padding-left: 1.25rem;
+    }
+  }
+
+  &.yellow {
+    background-color: $system-yellow;
+
+    .txt {
+      color: $dark;
+      opacity: 0.8;
+    }
+
+    .time {
+      color: $system-red;
+    }
+  }
+
+  &.dark {
+    background-color: $dark;
+
+    .txt {
+      color: $gray03;
+    }
+  }
+
+  &.notice {
+    background: $dark url(../images/icon/systems_right.svg) no-repeat;
+    display: block;
+    padding: 0.75rem 1rem;
+    background-position: calc(100% - 1rem) center;
+
+    .txt {
+      color: $light;
+      font-weight: initial;
+    }
+  }
+
+  &.round_op {
+    background-color: $primary-op;
+    color: $gray01;
+    border-radius: 0.25rem;
+    font-weight: initial;
+
+    .txt {
+      @include flexcenter;
+      @include txtover;
+    }
+  }
+}
+
+.label_btn {
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  @include shadows;
+  @include flex;
+  width: 100%;
+  gap: 0.5rem;
+  font-size: var(--span2-f);
+  background-color: $light;
+  line-height: 1;
+
+  .bold_txt {
+    font-weight: $boldf;
+  }
+
+  .tst {
+    color: $gray02;
+  }
+
+  &.right {
+    background-image: url(../images/icon/systems_right_bk.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 1rem) center;
+    background-size: 1.25rem;
+  }
+
+  &.border {
+    border-color: $gray04;
+    box-shadow: none;
+  }
+}
+
+//bubble
+.bubble {
+  @include span2fn;
+  color: $light;
+  background-color: $dark;
+  padding: 0.5rem 0.75rem;
+  border-radius: 3rem;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+  animation: bubble 1s linear infinite;
+
+  &.white {
+    background-color: $light;
+    color: $gray01;
+    border: 1px solid $gray04;
+
+    &::after {
+      content: "";
+      background-color: $light;
+      border-right: 1px solid $gray04;
+      border-bottom: 1px solid $gray04;
+    }
+  }
+
+  &::after {
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: $dark;
+    display: block;
+    position: absolute;
+    bottom: -0.4rem;
+    transform: rotate(45deg) translateX(-50%);
+    left: 50%;
+    z-index: -1;
+  }
+
+  &.bt_left::after {
+    left: 10%;
+  }
+
+  &.bt_right::after {
+    right: 10%;
+    left: initial;
+  }
+
+  &.t_left::after {
+    top: -0.5rem;
+    bottom: initial;
+    left: 10%;
+    transform: rotate(225deg) translateX(-50%);
+  }
+}
+
+//card
+.card_day_time {
+  background-color: $light;
+  border-radius: 0.5rem;
+  @include shadows;
+  padding: 1.375rem 1rem 1.375rem 3.5rem;
+  background-position: 1rem center;
+  background-size: 2rem;
+  background-repeat: no-repeat;
+
+  .time {
+    @include span1fb;
+    @include flex;
+    gap: 0.5rem;
+  }
+
+  .txt {
+    @include span3fn;
+    color: $gray02;
+    margin-top: 0.5rem;
+  }
+
+  &.sun {
+    background-image: url(../images/icon/sun.svg);
+  }
+
+  &.moon {
+    background-image: url(../images/icon/moon.svg);
+  }
+}
+
+.alarm_item {
+  background-color: $light;
+  border-radius: 0.5rem;
+  padding: 1.5rem 1.25rem;
+  @include flexbtw;
+
+  .alarm_data {
+    width: 6.25rem;
+
+    @include sd {
+      width: 27.8552vw;
+    }
+
+    .time {
+      @include h2f;
+    }
+
+    .day {
+      @include flex;
+      gap: 0.1875rem;
+      margin-top: 0.5rem;
+
+      p {
+        @include span3fn;
+        color: $gray02;
+      }
+
+      .on {
+        color: $primary;
+      }
+    }
+  }
+
+  .alarm_goods {
+    background: url(../images/icon/system_right.svg) no-repeat;
+    background-size: 1.25rem;
+    background-position: right center;
+    padding-right: 1.5rem;
+    @include span2fb;
+    color: $gray02;
+    @include flexright;
+    gap: 0.25rem;
+    width: calc(100% - 7.25rem);
+
+    @include sd {
+      width: calc(100% - 32.312vw);
+    }
+
+    .name {
+      @include txtover;
+      max-width: 5rem;
+
+      @include sd {
+        max-width: 18vw;
+      }
+
+      @include xsd {
+        max-width: 15vw;
+      }
+    }
+    .no {
+    }
+  }
+}
+
+.goods_box_s {
+  padding: 1.125rem 1rem;
+  position: relative;
+  background-color: $gray05;
+  border-radius: 0.5rem;
+  background-size: 2rem;
+  background-repeat: no-repeat;
+  background-position: 1rem center;
+  transition: all 0.3s;
+
+  &.check {
+    padding-left: 3.25rem;
+    background-image: url(../images/icon/system_checkOff.svg);
+
+    &.select {
+      background-image: url(../images/icon/system_checkOn.svg);
+      background-color: $primary-op;
+    }
+  }
+
+  &.radio {
+    padding-left: 3.25rem;
+    background-image: url(../images/icon/system_radioOff.svg);
+
+    &.select {
+      background-image: url(../images/icon/system_radioOn.svg);
+      background-color: $primary-op;
+    }
+  }
+
+  &.disabled {
+    color: $gray02;
+  }
+
+  .name {
+    @include span2fb;
+  }
+
+  .brand {
+    color: $gray02;
+    margin-right: 0.25rem;
+  }
+
+  .deletBtn {
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .brand_s {
+    @include span4fn;
+    color: $gray02;
+    margin-bottom: 0.125rem;
+  }
+}
+
+//chat
+.chat_msg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  @include flex;
+  gap: 0.75rem;
+  padding: 0rem 1rem;
+  border-top: 1px solid $gray05;
+  background-color: $light;
+  z-index: 9;
+
+  .chat_write {
+    width: calc(100% - 3.25rem);
+  }
+
+  .bubble {
+    position: absolute;
+    top: -2.5rem;
+    transition: all 0.3s;
+  }
+
+  .chat_btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: url(../images/icon/sendBtn.svg);
+  }
+
+  .chat_msgcpl {
+    position: absolute;
+    top: -4rem;
+    @include flex;
+    width: fit-content;
+    left: 50%;
+    transform: translate(calc(-50% - 1rem));
+
+    .fire_ani {
+      position: relative;
+      left: 1rem;
+    }
+
+    .meg {
+      @include p4fn;
+      background-color: $primary;
+      padding: 0.375rem 0.625rem;
+      line-height: 1;
+      border-radius: 3rem;
+      color: #fff;
+      white-space: nowrap;
+    }
+  }
+}
+
+//캘린더
+.calender {
+  position: relative;
+  width: calc(100% + 2.5rem);
+  transform: translateX(-1.25rem);
+
+  .month_name {
+    @include span1fb;
+    padding-left: 1.875rem;
+  }
+
+  .cal_top {
+    @include flexbtw;
+    padding: 1rem 1.875rem 0.125rem;
+
+    p {
+      @include span3fn;
+      color: $gray02;
+      width: 1.875rem;
+      text-align: center;
+
+      &.today {
+        color: $dark;
+      }
+    }
+  }
+
+  .cal_week {
+    padding: 0.1875rem 0;
+    margin-top: 0.25rem;
+
+    &.hide_week {
+      display: none;
+    }
+    .week_in {
+      @include flexbtw;
+      padding: 0 1.875rem;
+
+      p {
+        width: 1.875rem;
+        height: 1.875rem;
+        line-height: 1;
+        @include span3fn;
+        border-radius: 50%;
+        @include flexcenter;
+        color: $gray03;
+        position: relative;
+        z-index: 1;
+        &.today {
+          color: $dark;
+        }
+
+        &:last-child {
+          color: #fbb4ad;
+        }
+
+        &.today_done {
+          background-color: $primary;
+          color: $light;
+        }
+
+        &.today_none {
+          border: 2px solid $primary;
+        }
+        &.fail_day::after {
+          content: "";
+          position: absolute;
+          width: 1.5rem;
+          height: 1.5rem;
+          background: url(../images/icon/past_none.svg) no-repeat;
+          background-size: cover;
+          background-position: center;
+          opacity: 0.6;
+        }
+        &.start_day {
+          background-color: $primary;
+          color: $light;
+
+          &::before {
+            content: "";
+            width: 1rem;
+            height: 100%;
+            background-color: $primary;
+            border-radius: 3rem 0 0 3rem;
+            position: absolute;
+            right: 1.125rem;
+            top: 0;
+            z-index: -1;
+          }
+
+          &::after {
+            content: "";
+            width: 2rem;
+            height: 100%;
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            background-color: $primary;
+            z-index: -1;
+
+            @include bd {
+              width: 8.8643vw;
+            }
+
+            @include xsd {
+              width: 7.5vw;
+            }
+          }
+        }
+        &.end_day {
+          background-color: $primary;
+          color: $light;
+
+          &::before {
+            content: "";
+            width: 2rem;
+            height: 100%;
+            display: block;
+            position: absolute;
+            right: 1rem;
+            background-color: $primary;
+            top: 0;
+            z-index: -1;
+
+            @include bd {
+              width: 8.8643vw;
+            }
+
+            @include xsd {
+              width: 7.5vw;
+            }
+          }
+
+          &::after {
+            content: "";
+            width: 1rem;
+            height: 100%;
+            background-color: $primary;
+            border-radius: 0 3rem 3rem 0;
+            position: absolute;
+            left: 1.125rem;
+            top: 0;
+            z-index: -1;
+          }
+        }
+        &.doing_day {
+          background-color: $primary;
+          color: $light;
+          border-radius: 0;
+
+          &::before {
+            content: "";
+            display: block;
+            height: 100%;
+            width: 1.5rem;
+            background-color: $primary;
+            position: absolute;
+            right: 1rem;
+            z-index: -1;
+
+            @include bd {
+              width: 8.8643vw;
+            }
+
+            @include xsd {
+              width: 7.5vw;
+            }
+          }
+
+          &::after {
+            content: "";
+            display: block;
+            height: 100%;
+            width: 1.5rem;
+            background-color: $primary;
+            position: absolute;
+            left: 1rem;
+            z-index: -1;
+
+            @include bd {
+              width: 8.8643vw;
+            }
+
+            @include xsd {
+              width: 7.5vw;
+            }
+          }
+        }
+        &.start_week {
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 5rem;
+            height: 100%;
+            background-color: $primary;
+            right: 1rem;
+          }
+        }
+        &.end_week {
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 5rem;
+            height: 100%;
+            background-color: $primary;
+            left: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .calenderOpen {
+    position: absolute;
+    top: 0;
+    right: 1.875rem;
+    @include p5fn;
+    color: $gray01;
+    @include flexright;
+    gap: 0.125rem;
+
+    img {
+      transition: all 0.3s;
+    }
+
+    &.open img {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+//아이콘 버튼
+.time_sun {
+  background-image: url(../images/icon/sun.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+}
+
+.time_moon {
+  background-image: url(../images/icon/moon.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+}
+
+.closeBtn {
+  background-image: url(../images/icon/system_close_bk.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  cursor: pointer;
+}
+
+.closeBtn_wt {
+  background-image: url(../images/icon/system_close_wt.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  cursor: pointer;
+}
+
+.deletBtn {
+  background-image: url(../images/icon/systems_delete_gray.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: block;
+  cursor: pointer;
+}
+
+//세팅 리스트
+.settion_div {
+  padding: 1.25rem;
+  background-color: $light;
+  border-bottom: 0.5rem solid $gray05;
+  @include flexbtw;
+
+  .setting_info {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .title {
+    @include span1fb;
+  }
+
+  .txt {
+    @include span3fn;
+    color: $gray02;
+  }
+}
+
+//시간선택 슬라이드
+.time_slide {
+  height: 8.375rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 2.625rem;
+    display: block;
+    background-color: $primary-op;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .slide_list {
+    width: fit-content;
+    @include flexcenter;
+
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .swiper {
+    height: 100%;
+    .swiper-slide {
+      height: 2.625rem;
+      @include flexcenter;
+      color: $gray03;
+      width: fit-content;
+      @include span1fb;
+      line-height: 1;
+
+      &.swiper-slide-active {
+        color: $dark;
+      }
+    }
+  }
+  .slide_day {
+    padding: 0 2.25rem 0 0.75rem;
+  }
+  .slide_time {
+    padding: 0 49px 0 0.75rem;
+    position: relative;
+
+    &::after {
+      content: ":";
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .slide_min {
+    padding: 0 0.75rem;
+  }
+}
+
+//랭킹
+.review_star {
+  @include flex;
+
+  .rank_star {
+    width: 2rem;
+    aspect-ratio: 1;
+    background: url(../images/icon/star_off.svg) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+
+    &.star_on {
+      background: url(../images/icon/star_on.svg) no-repeat;
+      background-size: cover;
+    }
+
+    @include sd {
+      width: 1.75rem;
+    }
+  }
+}
+
+//이미지등록 + 이미지 리스트
+.addfile_slide {
+  .swiper-slide {
+    width: 5.375rem;
+    height: 5.375rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    @include sd {
+      width: 23.9554vw;
+      height: 23.9554vw;
+    }
+  }
+
+  .addfile {
+    input[type="file"] {
+      display: none;
+    }
+    label {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: $gray05 url(../images/icon/camera.svg) no-repeat;
+      background-position: center;
+      background-size: 2rem;
+    }
+  }
+
+  .img_list {
+    position: relative;
+    background-color: $dark;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.4;
+    }
+
+    .deleteImg {
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      top: 0;
+      right: 0;
+      background: url(../images/icon/system_delete_gray.svg) no-repeat;
+      cursor: pointer;
+    }
+  }
+}
+
+//탭메뉴
+.tab_menu {
+  width: 100%;
+  position: relative;
+  padding: 0 1.25rem;
+  @include flex;
+  background-color: $light;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $gray04;
+  }
+
+  .tab_btn {
+    width: 100%;
+    @include span1fb;
+    color: $gray03;
+    border-bottom: 2px solid transparent;
+    padding: 1rem 0.75rem 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+
+    &.active {
+      color: $dark;
+      border-color: $dark;
+    }
+  }
+
+  &.swiper {
+    .tab_btn {
+      width: fit-content;
+    }
+  }
+}
+
+//소트버튼
+.tab_sort {
+  @include flex;
+  gap: 0.5rem;
+  position: relative;
+  width: 100%;
+
+  .sort_btn {
+    width: fit-content;
+    padding: 0.5rem 0.75rem;
+    background-color: $gray05;
+    color: $gray02;
+    border-radius: 0.25rem;
+    transition: all 0.3s;
+    cursor: pointer;
+    @include span2fn;
+
+    &.active {
+      background-color: $dark;
+      color: $light;
+    }
+  }
+
+  .sort_link {
+    position: absolute;
+    right: 1.25rem;
+    bottom: 0.5rem;
+    @include misc2under;
+    color: $gray02;
+  }
+
+  &.sort_gr {
+    background-color: $gray05;
+
+    .sort_btn {
+      background-color: $light;
+
+      &.active {
+        background-color: $dark;
+      }
+    }
+  }
+}
+
+//좋아요버튼
+.like_s {
+  @include flexright;
+  gap: 0.25rem;
+  .like_icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    background-image: url(../images/icon/heart_off.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.3s;
+  }
+  .count {
+    @include span4fn;
+    color: $gray03;
+    line-height: 1;
+    transition: all 0.3s;
+    position: relative;
+
+    &.more_count::after {
+      content: "+";
+    }
+
+    &.max_count::after {
+      content: "+";
+    }
+  }
+
+  &.clicked {
+    .like_icon {
+      background-image: url(../images/icon/heart_on.svg);
+    }
+    .count {
+      color: $system-red;
+    }
+  }
+}
+
+//inner slide 모음
+.inner_slide {
+  padding-block: 2rem 1rem;
+  & > .title {
+    @include h3f;
+    padding: 0 1.25rem;
+  }
+
+  .swiper {
+    padding-block: 1rem;
+    .swiper-slide {
+      transform: translateX(1.25rem);
+      &:last-child {
+        margin-right: 2.5rem;
+      }
+    }
+  }
+}
+
+.over_slide {
+  width: calc(100% + 2.5rem);
+  transform: translateX(-1.25rem);
+
+  .swiper-slide {
+    transform: translateX(1.25rem);
+    &:last-child {
+      margin-right: 2.5rem;
+    }
+  }
+}
+
+.cmt_thumb {
+  position: relative;
+  height: 1.5rem;
+  .img {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid $gray04;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &:first-child {
+      left: 0;
+    }
+
+    &:nth-child(2) {
+      left: 1rem;
+    }
+
+    &:nth-child(3) {
+      left: 2rem;
+    }
+
+    &.cmt_more {
+      left: 3rem;
+
+      &::after {
+        content: "+3";
+        color: $light;
+        @include span4fb;
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        @include flexcenter;
+      }
+    }
+  }
+
+  &.cmt_1 {
+    width: 1.75rem;
+  }
+
+  &.cmt_2 {
+    width: 2.5rem;
+  }
+
+  &.cmt_3 {
+    width: 3.5rem;
+  }
+
+  &.cmt_4 {
+    width: 4.5rem;
+  }
+}
+
+//상세 하단
+.detail_bottom {
+  @include flexright;
+  background-color: $light;
+  padding: 0.375rem 1.25rem;
+  gap: 0.75rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 11;
+
+  .progress_wrap {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    height: 2px;
+
+    .progress_bar {
+      background-color: $primary;
+      width: 0;
+      height: 2px;
+      display: block;
+    }
+  }
+}
+
+//정보테이블
+.info_table {
+  @include flextop;
+  
+  gap: 1rem;
+  .sub {
+    @include span3fn;
+    color: $gray02;
+  }
+  .desc {
+    @include span3fn;
+  }
+}
+
+.cst_table {
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: grid;
+  gap: 0.75rem;
+
+  .info_table {
+    @include span3fn;
+  }
+
+  .title {
+    width: 4.375rem;
+    color: $gray02;
+  }
+
+  .txt {
+    width: calc(100% - 4.375rem);
+  }
+}
+
+//이미지 크게보기
+.dark_full {
+  background-color: #111;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s;
+
+  .header {
+    background-color: $dark;
+  }
+
+  .page_name {
+    color: $light;
+  }
+
+  .back img {
+    filter: brightness(100);
+  }
+
+  .full_slide {
+    // height: calc(100svh - 6rem);
+    margin-top: 3rem;
+    z-index: 10;
+    .swiper-wrapper {
+      height: fit-content;
+      align-items: center;
+
+      .swiper-slide {
+        height: calc(100svh - 6rem);
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  .full_nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 2.625rem;
+    z-index: 1;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 2.625rem;
+      height: 2.625rem;
+      background: rgba(0, 0, 0, 0.7);
+      transition: all 0.3s;
+      background-repeat: no-repeat;
+      background-size: 2rem;
+      background-position: center;
+    }
+
+    .swiper-button-prev {
+      left: 0;
+      background-image: url(../images/icon/system_left_wt.svg);
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .swiper-button-next {
+      right: 0;
+      background-image: url(../images/icon/system_right_wt.svg);
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .swiper-pagination {
+    position: fixed;
+    top: 0.9375rem;
+    right: 1.25rem;
+    left: initial;
+    width: fit-content;
+    z-index: 11;
+    height: fit-content;
+    color: $gray02;
+    @include span1fn;
+
+    .swiper-pagination-current {
+      color: $primary;
+    }
+  }
+
+  &.open {
+    opacity: 1;
+    z-index: 999;
+  }
+}
+
+//설문, 상담 관련
+.servey_singular {
+  background-color: $light;
+  border-radius: 1rem;
+  padding: 1.5rem 1.25rem;
+  background-image: url(../images/icon/system_radioOff.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 1.25rem) center;
+  display: grid;
+  gap: 0.25rem;
+  @include shadows;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 1;
+
+  .sbj {
+    @include p3fb;
+    color: $gray02;
+    width: calc(100% - 2.5rem);
+  }
+
+  .txt {
+    @include span2fn;
+    color: $gray02;
+  }
+
+  .dose_info {
+    position: relative;
+    gap: 0.5rem;
+    background-color: $light;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.5rem;
+    display: none;
+    z-index: 9;
+
+    .img {
+      width: 1.5rem;
+      height: 1.5rem;
+      border: 1px solid $gray04;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .name {
+      @include misc2under;
+      color: $gray02;
+    }
+    .doseClose {
+      position: absolute;
+      right: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1.25rem;
+      height: 1.25rem;
+      background: url(../images/icon/systems_close_gray.svg) no-repeat;
+      background-size: cover;
+      cursor: pointer;
+      z-index: 99;
+    }
+  }
+
+  &.servey_plural {
+    background-image: url(../images/icon/system_checkOff.svg);
+
+    &.select {
+      background-image: url(../images/icon/system_checkOn.svg);
+    }
+  }
+
+  &.select {
+    background-color: $primary-op;
+    background-image: url(../images/icon/system_radioOn.svg);
+    box-shadow: none;
+
+    .sbj {
+      color: $dark;
+    }
+
+    .txt {
+      color: $gray01;
+    }
+
+    .dose_info {
+      @include flex;
+    }
+  }
+}
+
+.grid_iconlist {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.servey_icon {
+  cursor: pointer;
+  position: relative;
+
+  .icon {
+    @include flexcenter;
+    aspect-ratio: 1;
+    border-radius: 1rem;
+    @include shadows;
+    transition: all 0.3s;
+
+    img {
+      // width: 50px;
+      width: 13.8889vw;
+    }
+  }
+  .txt {
+    @include p5fn;
+    color: $gray02;
+    text-align: center;
+    margin-top: 0.5rem;
+    transition: all 0.3s;
+  }
+
+  &.select {
+    .txt {
+      color: $dark;
+    }
+  }
+}
+
+.svy_ranking {
+  .sltNo {
+    background-color: $dark;
+    @include span3fn;
+    color: $light;
+    width: fit-content;
+    padding: 0.25rem 0.625rem;
+    border-radius: 3rem;
+    line-height: 1;
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    opacity: 0;
+    // transition: all 0.3s;
+  }
+}
+
+.svy_dose {
+  .servey_plural {
+    background-position: calc(100% - 1.25rem) 18px;
+  }
+}
+
+//약사프로필
+.pharm_p {
+  background-color: $light;
+  border-radius: 1rem;
+  padding: 1.25rem 1rem;
+  @include flex;
+  gap: 0.5rem;
+  position: relative;
+
+  .p_pic {
+    border-radius: 50%;
+    width: 2.875rem;
+    height: 2.875rem;
+    border: 1px solid $gray05;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .p_info {
+    .p_name {
+      @include flex;
+      gap: 0.5rem;
+
+      .name {
+        @include span2fb;
+      }
+
+      .txt {
+        @include span3fn;
+        color: $gray02;
+      }
+
+      .online {
+        @include span3fb;
+        color: $gray03;
+        padding-left: 0.625rem;
+        position: relative;
+
+        &::before {
+          content: "";
+          width: 0.375rem;
+          height: 0.375rem;
+          border-radius: 50%;
+          background-color: $gray03;
+          position: absolute;
+          top: 45%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+
+        &.now {
+          color: $primary;
+
+          &::before {
+            background-color: $primary;
+          }
+        }
+      }
+    }
+
+    .info {
+      @include span3fn;
+      color: $gray02;
+      margin-top: 0.25rem;
+    }
+  }
+
+  .icon_round {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+
+    &.po_rel {
+      top: 50%;
+      transform: translateY(-50%);
+      color: $gray02;
+      right: 0;
+    }
+  }
+}
+
+//채팅
+.chat_wrap {
+  height: calc(100% - 4.625rem);
+  overflow-y: auto;
+
+  .chat_con {
+    display: grid;
+    gap: 0.75rem;
+    padding-bottom: 1rem;
+  }
+
+  .chat_noti {
+    @include p4fn;
+    color: $gray02;
+    text-align: center;
+    position: relative;
+
+    p {
+      width: fit-content;
+      margin: 0 auto;
+      background-color: $light;
+      padding-inline: 0.625rem;
+    }
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: $gray04;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      z-index: -1;
+    }
+  }
+
+  .chat_noti_2 {
+    text-align: center;
+
+    .txt {
+      @include p4fn;
+      color: $gray02;
+    }
+
+    .btn_list {
+      margin-top: 1rem;
+    }
+  }
+
+  .chat_txt {
+    width: fit-content;
+    padding: 0.5rem 0.75rem;
+    @include p5fn;
+  }
+
+  .date {
+    @include span4fn;
+  }
+
+  .chat_left {
+    @include flex;
+    align-items: flex-end;
+
+    .left_con {
+      @include flextop;
+    }
+
+    .img {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      border: 1px solid $gray04;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .chat_txt {
+      max-width: 14.75rem;
+      background-color: $gray05;
+      border-radius: 0 0.5rem 0.5rem 0.5rem;
+      margin-inline: 0.5rem 0.25rem;
+
+      &.ld {
+        @include flex;
+        gap: 0.25rem;
+        padding: 0.75rem;
+        span {
+          width: 0.5rem;
+          height: 0.5rem;
+          border-radius: 50%;
+          background-color: $gray02;
+
+          &:first-child {
+            animation: opct 1s ease-out infinite;
+          }
+
+          &:nth-child(2) {
+            animation: opct 1s 0.3s ease-out infinite;
+          }
+
+          &:last-child {
+            animation: opct 1s 0.6s ease-out infinite;
+          }
+        }
+      }
+    }
+  }
+
+  .chat_right {
+    @include flexright;
+    align-items: flex-end;
+    gap: 0.25rem;
+
+    .chat_txt {
+      background-color: $primary;
+      color: $light;
+      border-radius: 0.5rem 0 0.5rem 0.5rem;
+      text-align: left;
+    }
+  }
+
+  .clttype_btn {
+    margin-top: 0.5rem;
+    .type_btn {
+      @include span3fb;
+      color: $primary;
+      padding: 0.5rem 0.75rem;
+      border-radius: 3rem;
+      border: 1px solid $primary;
+      width: fit-content;
+    }
+  }
+}
+
+.chat_write {
+  width: calc(100% + 1.5rem);
+  transform: translateX(-0.75rem);
+  padding: 0.75rem 1rem;
+  background-color: $light;
+  border-top: 1px solid $gray05;
+  @include flex;
+  gap: 0.75rem;
+
+  .input_div {
+    width: calc(100% - 3.25rem);
+  }
+
+  .file {
+    position: absolute;
+    top: 50%;
+    right: 0.75rem;
+    transform: translateY(-50%);
+  }
+
+  .sand_btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url(../images/icon/sendBtn.svg);
+  }
+}
+
+//건강분석결과
+.result_slt {
+  border-radius: 1rem;
+  padding: 1.25rem 1.25rem;
+  background-color: $light;
+  background-image: url(../images/icon/system_radioOff.svg);
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  background-position: calc(100% - 0.75rem) 0.75rem;
+  @include shadows;
+  position: relative;
+  transition: all 0.3s;
+
+  &.select {
+    background-image: url(../images/icon/system_radioOn.svg);
+    background-color: $primary-op;
+    box-shadow: none;
+
+    .info_table {
+      background-color: $light;
+    }
+  }
+
+  .title {
+    @include flex;
+    gap: 0.25rem;
+    align-items: flex-end;
+
+    .point {
+      @include h2f;
+      color: $primary;
+    }
+
+    .name {
+      @include span2fb;
+    }
+  }
+
+  .info {
+    margin-top: 0.625rem;
+    @include span3fn;
+    color: $gray02;
+  }
+
+  .info_table {
+    padding: 0.5rem 0.75rem;
+    border-radius: 0 0.5rem 0.5rem 0.5rem;
+    background-color: $gray05;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+
+    .title {
+      @include span3fn;
+      color: $gray02;
+    }
+
+    .txt {
+      @include span3fn;
+    }
+  }
+}
+
+.list_goods {
+  @include flexbtw;
+
+  .goods_data {
+    @include flextop;
+    width: calc(100% - 2.5rem);
+    gap: 0.5rem;
+    .thumb {
+      background-color: $gray05;
+      border-radius: 0.5rem;
+      padding: 0.75rem 1rem;
+      width: 4.125rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .goods_info {
+      width: calc(100% - 4.625rem);
+      .type {
+        @include span3fn;
+        color: $primary;
+      }
+      .name {
+        @include span2fn;
+        margin-block: 0.25rem 0.5rem;
+      }
+      .cost {
+        @include p2fb;
+      }
+    }
+  }
+
+  .ck_icon {
+    width: 2rem;
+
+    .icon_img {
+      width: 2rem;
+      height: 2rem;
+      background: url(../images/icon/system_radioOn.svg) no-repeat;
+      background-size: cover;
+    }
+    .date {
+      text-align: center;
+    }
+  }
+}
+
+//goods thumbnail slide
+.thumb_goods_data {
+  width: 9.25rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: $light;
+
+  .img {
+    background-color: $gray05;
+    padding: 0.625rem 0;
+    height: 3.25rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .type {
+    @include span4fn;
+    color: $gray02;
+  }
+
+  .name {
+    @include span3fb;
+    @include txtover;
+  }
+}
+
+.thumb_goods {
+  @include shadows;
+  border-radius: 0.5rem;
+  @include flex;
+  align-items: stretch;
+  position: relative;
+  border: 1px solid transparent;
+
+  .thumb {
+    width: 5.625rem;
+    background-color: $gray05;
+    @include flexcenter;
+    border-radius: 0.5rem 0 0 0.5rem;
+
+    img {
+      width: 2rem;
+      height: auto;
+      max-height: 2rem;
+    }
+  }
+
+  .goods_data {
+    padding: 0.75rem 0.875rem;
+    width: calc(100% - 5.625rem);
+    display: grid;
+    gap: 0.25rem;
+
+    .type {
+      @include span4fn;
+      color: $primary;
+    }
+
+    .name {
+      @include span2fb;
+      @include txtover;
+    }
+  }
+
+  .info {
+    .txt {
+      @include p5fn;
+      color: $gray01;
+      padding-left: 1rem;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: $gray02;
+        position: absolute;
+        top: 0.375rem;
+        left: 0.375rem;
+      }
+    }
+  }
+
+  .best {
+    display: none;
+    position: absolute;
+    top: -0.25rem;
+    right: 1rem;
+    @include span4fb;
+    width: 26px;
+    height: 38px;
+    background: url(../images/icon/best_badge.svg);
+    background-size: contain;
+    color: $light;
+    padding-top: 1rem;
+    text-align: center;
+  }
+
+  &.best_item {
+    border-color: $primary;
+    .best {
+      display: block;
+    }
+  }
+}
+
+//결제카드
+.card_slide {
+  .swiper-slide {
+    aspect-ratio: 16/9;
+    width: 17.5rem;
+    border-radius: 0.5rem;
+  }
+  .card_item {
+    background-color: $dark;
+    color: $light;
+    position: relative;
+    background-image: url(../images/icon/system_radioOff.svg);
+    background-repeat: no-repeat;
+    background-position: 1rem 1rem;
+    .card_info {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      .card_name {
+        @include span3fn;
+      }
+      .card_no {
+        @include span3fn;
+        margin-top: 0.5rem;
+      }
+    }
+    .cardDel {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      color: $gray02;
+      @include span3fn;
+    }
+
+    &.swiper-slide-active {
+      background-image: url(../images/icon/system_radioOn.svg);
+    }
+  }
+
+  .card_add {
+    border: 1px solid $gray04;
+    background-color: $gray05;
+
+    .add {
+      width: 2.625rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+//쿠폰셀렉트 리스트
+.cp_list {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+}
+.cp_list_data {
+  background-color: $gray05;
+  border-radius: 1rem;
+  position: relative;
+  padding: 1.5rem 3.5rem;
+  background-image: url(../images/icon/system_radioOff.svg);
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  background-position: 1rem center;
+  transition: all 0.3s;
+
+  &::after {
+    content: "";
+    width: 1.75rem;
+    height: 1.75rem;
+    position: absolute;
+    right: -0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $light;
+    border-radius: 50%;
+  }
+  .cp_name {
+    @include span1fb;
+    margin-bottom: 0.5rem;
+  }
+  .cp_txt {
+    @include span2fn;
+    color: $gray01;
+  }
+
+  &.active {
+    background-color: $primary-op;
+    background-image: url(../images/icon/system_radioOn.svg);
+  }
+
+  &.disabled {
+    .cp_name,
+    .cp_txt {
+      color: $gray03;
+    }
+  }
+}
