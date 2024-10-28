@@ -1,3 +1,22 @@
 /***************************************************************
     12. header
 ***************************************************************/
+.header {
+  @include flexbtw;
+  padding-inline: 1.25rem;
+  height: 3rem;
+  background-color: var(--gray-white);
+  z-index: var(--z-fixed);
+
+  &-btn {
+    @include span1b;
+    color: var(--gray-02);
+  }
+
+  &-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}

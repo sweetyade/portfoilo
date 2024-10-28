@@ -8,10 +8,6 @@
     <title>DESIGN GUIDE</title>
   </head>
   <style>
-    .btn_b,
-    .btn_social {
-      max-width: 300px;
-    }
   </style>
   <body>
     <main id="guide_main">
@@ -44,17 +40,40 @@
             <p class="p3_f">- 화면하단 오른쪽 고정 픽스 (주로 글작성버튼) .btn_right</p>
           </div>
 
-          <!-- button large -->
+          <!-- size -->
           <div class="guide_block">
-            <h3>button large</h3>
+            <h3>type </h3>
             <div class="guide_data">
-              <p class="title">.btn_b</p>
-              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+              <p class="title">.btn</p>
+              <div class="data flex" style="gap: 1rem; flex-direction: column; align-items: flex-start;">
+                <button class="btn type_wide size_l" style="--w: 300px">wide | large</button>
+                <button class="btn type_wide" style="--w: 300px"><i></i>wide</button>
+                <button class="btn type_wide size_s" style="--w: 300px">wide | small</button>
+                <button class="btn" style="--w: 156px">default</button>
+                <button class="btn type_popup" style="--w: 132px">popup</button>
+                <button class="btn type_popup" style="--w: 132px">popup</button>
+                <button class="btn type_round color_black"><i></i>원하는 약사님께 상담 신청하기</button>
+                <button class="btn type_round color_black size_s"><i class=""></i>설문결과</button>
+                <button class="btn size_s">small</button>
+                <button class="btn size_xs">xsmall</button>
               </div>
             </div>
           </div>
 
-
+          <div class="guide_block">
+            <h3>color</h3>
+            <div class="guide_data">
+              <p class="title">.btn</p>
+              <div class="data flex" style="gap: 1rem; flex-direction: column; align-items: flex-start;">
+                <button class="btn size_l" style="--w: 300px">default</button>
+                <button class="btn size_l color_error" style="--w: 300px">error</button>
+                <button class="btn size_l color_black" style="--w: 300px">black</button>
+                <button class="btn size_l color_gray" style="--w: 300px">gray</button>
+                <button class="btn size_l color_white" style="--w: 300px">white</button>
+                <button class="btn size_l" style="--w: 300px" disabled>disabled</button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
