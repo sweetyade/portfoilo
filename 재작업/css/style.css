@@ -1154,12 +1154,34 @@ body.open {
 }
 
 .onboarding {
-  padding-top: 3rem;
+  padding-block: 3rem 8.5rem;
+  height: 100%;
 }
 .onboarding-item {
   display: grid;
+  align-content: center;
+  height: 100%;
+  border: 1px solid red;
 }
 .onboarding-img {
   margin: 0 auto;
   max-width: 20rem;
+  width: 100%;
+  aspect-ratio: 1;
+}
+.onboarding-info {
+  text-align: center;
+  padding-block: 5rem;
+  display: grid;
+  gap: 1rem;
+}
+.onboarding-txt {
+  font-size: var(--p1-f);
+  line-height: var(--line-h);
+  font-weight: var(--bold-f);
+}
+.onboarding-sub {
+  font-size: var(--p3-f);
+  line-height: var(--line-h);
+  color: var(--gray-02);
 }

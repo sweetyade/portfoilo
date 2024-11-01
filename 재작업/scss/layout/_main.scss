@@ -8,12 +8,42 @@ body.open {
 
 //* 온보딩 *//
 .onboarding {
-  padding-top: 3rem;
+  padding-block: 3rem 8.5rem;
+  height: 100%;
+
+  .swiper-wrapper {
+    // height: 100%;
+  }
+
   &-item {
     display: grid;
+    align-content: center;
+    height: 100%;
+    border: 1px solid red;
   }
   &-img {
     margin: 0 auto;
     max-width: 20rem;
+    width: 100%;
+    aspect-ratio: 1;
+  }
+
+  &-info {
+    text-align: center;
+    padding-block: 5rem;
+    display: grid;
+    gap: 1rem;
+  }
+
+  &-txt {
+    @include p1b;
+  }
+
+  &-sub {
+    @include p3;
+    color: var(--gray-02);
+  }
+
+  &.swiper {
   }
 }
