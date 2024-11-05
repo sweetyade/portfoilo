@@ -13,6 +13,10 @@ body.open {
 
   .swiper-wrapper {
     // height: 100%;
+
+    .onboarding-img {
+      aspect-ratio: 1;
+    }
   }
 
   &-item {
@@ -21,16 +25,17 @@ body.open {
     height: 100%;
     border: 1px solid red;
   }
+
   &-img {
     margin: 0 auto;
     max-width: 20rem;
     width: 100%;
-    aspect-ratio: 1;
+    border: 1px solid blue;
   }
 
   &-info {
     text-align: center;
-    padding-block: 5rem;
+    padding-top: 8svh;
     display: grid;
     gap: 1rem;
   }
@@ -44,6 +49,17 @@ body.open {
     color: var(--gray-02);
   }
 
-  &.swiper {
+  .last_slide {
+    .onboarding-info {
+      padding-top: 5svh;
+    }
+  }
+
+  .last_slide ~ .swiper-pagination {
+    bottom: 22svh;
+  }
+
+  .swiper-pagination {
+    bottom: 16svh;
   }
 }

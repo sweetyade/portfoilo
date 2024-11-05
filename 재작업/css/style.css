@@ -1065,6 +1065,16 @@ button:disabled {
 /***************************************************************
     09. components
 ***************************************************************/
+.swiper-pagination-bullet {
+  width: 5px;
+  height: 5px;
+  color: var(--gray-04);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--gray-black);
+}
+
 /***************************************************************
     10. nav
 ***************************************************************/
@@ -1132,6 +1142,9 @@ button:disabled {
   font-weight: var(--bold-f);
   color: var(--gray-02);
 }
+.header-btn.active {
+  color: var(--primary-color);
+}
 .header-fixed {
   position: fixed;
   top: 0;
@@ -1157,6 +1170,9 @@ body.open {
   padding-block: 3rem 8.5rem;
   height: 100%;
 }
+.onboarding .swiper-wrapper .onboarding-img {
+  aspect-ratio: 1;
+}
 .onboarding-item {
   display: grid;
   align-content: center;
@@ -1167,11 +1183,11 @@ body.open {
   margin: 0 auto;
   max-width: 20rem;
   width: 100%;
-  aspect-ratio: 1;
+  border: 1px solid blue;
 }
 .onboarding-info {
   text-align: center;
-  padding-block: 5rem;
+  padding-top: 8svh;
   display: grid;
   gap: 1rem;
 }
@@ -1184,4 +1200,13 @@ body.open {
   font-size: var(--p3-f);
   line-height: var(--line-h);
   color: var(--gray-02);
+}
+.onboarding .last_slide .onboarding-info {
+  padding-top: 5svh;
+}
+.onboarding .last_slide ~ .swiper-pagination {
+  bottom: 22svh;
+}
+.onboarding .swiper-pagination {
+  bottom: 16svh;
 }

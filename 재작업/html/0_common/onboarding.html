@@ -36,7 +36,7 @@
             <div class="swiper-wrapper">
                 <div class="onboarding-item swiper-slide">
                     <div class="onboarding-img">
-                        <lottie-player src="../../images/json/onboarding_01.json" class="random_ani" background="transparent" speed="1" autoplay=""></lottie-player>
+                        <!-- <lottie-player src="../../images/json/onboarding_01.json" class="random_ani" background="transparent" speed="1" autoplay=""></lottie-player> -->
                     </div>
 
                     <div class="onboarding-info">
@@ -64,7 +64,7 @@
                         <p class="onboarding-sub">꾸준한 섭취 기록과 건강 챌린지에<br>참여하고 경품을 받아보세요.</p>
                     </div>
                 </div>
-                <div class="onboarding-item swiper-slide">
+                <div class="onboarding-item swiper-slide last_slide">
                     <div class="onboarding-img">
                         <!-- <lottie-player src="../../images/json/onboarding_01.json" class="random_ani" background="transparent" speed="1" autoplay=""></lottie-player> -->
                     </div>
@@ -80,8 +80,8 @@
         </div>
 
         <div class="btn_fixed">
-            <button class="btn type_wide">다음</button>
-            <button class="btn type_wide color_gray" style="display: none;">오늘은 둘러볼게요</button>
+            <button class="btn type_wide showBtn">다음</button>
+            <button class="btn type_wide color_gray hideBtn" style="display: none">오늘은 둘러볼게요</button>
         </div>
     </div>
 </head>
@@ -97,12 +97,33 @@
             pagination: {
             el: ".swiper-pagination",
             },
+            on:{
+                slideChangeTransitionEnd : function() {
+                    if(this.activeIndex == 3){
+                        $(".hideBtn").fadeIn("fast")
+                        $(".showBtn").text("섭취 알림 등록하기")
+                        $(".swiper-pagination").css("bottom","22svh")
+                        // $(".header-btn").addClass("active").text("시작하기")
+                    }else{
+                        $(".hideBtn").fadeOut("fast")
+                        $(".showBtn").text("다음")
+                        $(".swiper-pagination").css("bottom","16svh")
+                        // $(".header-btn").removeClass("active").text("시작하기")
+                    }
+                },
+            }
         });
 
         //건너뛰기
         function jump() {
             swiper.slideTo(3, 700, false);
+            $(".hideBtn").fadeIn("fast")
+        $(".showBtn").text("섭취 알림 등록하기")
+        $(".swiper-pagination").css("bottom","22svh")
+        // $(".header-btn").addClass("active").text("시작하기")
         }
+
+        
     </script>
 </body>
 </html>
