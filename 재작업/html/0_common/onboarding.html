@@ -36,7 +36,7 @@
             <div class="swiper-wrapper">
                 <div class="onboarding-item swiper-slide">
                     <div class="onboarding-img">
-                        <!-- <lottie-player src="../../images/json/onboarding_01.json" class="random_ani" background="transparent" speed="1" autoplay=""></lottie-player> -->
+                        <lottie-player src="../../images/json/onboarding_01.json" class="random_ani" background="transparent" speed="1" autoplay=""></lottie-player>
                     </div>
 
                     <div class="onboarding-info">
@@ -46,7 +46,7 @@
                 </div>
                 <div class="onboarding-item swiper-slide">
                     <div class="onboarding-img">
-                        <!-- <lottie-player src="../../images/json/onboarding_01.json" class="random_ani" background="transparent" speed="1" autoplay=""></lottie-player> -->
+                        <lottie-player src="../../images/json/onboarding_02.json" class="random_ani" background="transparent" speed="1" autoplay=""></lottie-player>
                     </div>
 
                     <div class="onboarding-info">
@@ -56,7 +56,7 @@
                 </div>
                 <div class="onboarding-item swiper-slide">
                     <div class="onboarding-img">
-                        <!-- <lottie-player src="../../images/json/onboarding_01.json" class="random_ani" background="transparent" speed="1" autoplay=""></lottie-player> -->
+                        <lottie-player src="../../images/json/onboarding_03.json" class="random_ani" background="transparent" speed="1" autoplay=""></lottie-player>
                     </div>
 
                     <div class="onboarding-info">
@@ -66,7 +66,7 @@
                 </div>
                 <div class="onboarding-item swiper-slide last_slide">
                     <div class="onboarding-img">
-                        <!-- <lottie-player src="../../images/json/onboarding_01.json" class="random_ani" background="transparent" speed="1" autoplay=""></lottie-player> -->
+                        <lottie-player src="../../images/json/onboarding_04.json" class="random_ani" background="transparent" speed="1" autoplay=""></lottie-player>
                     </div>
 
                     <div class="onboarding-info">
@@ -80,7 +80,7 @@
         </div>
 
         <div class="btn_fixed">
-            <button class="btn type_wide showBtn">다음</button>
+            <button class="btn type_wide showBtn" onclick="next()">다음</button>
             <button class="btn type_wide color_gray hideBtn" style="display: none">오늘은 둘러볼게요</button>
         </div>
     </div>
@@ -102,13 +102,13 @@
                     if(this.activeIndex == 3){
                         $(".hideBtn").fadeIn("fast")
                         $(".showBtn").text("섭취 알림 등록하기")
-                        $(".swiper-pagination").css("bottom","22svh")
-                        // $(".header-btn").addClass("active").text("시작하기")
+                        $(".swiper-pagination").css("bottom","20svh")
+                        $(".header-btn").addClass("active").text("시작하기")
                     }else{
                         $(".hideBtn").fadeOut("fast")
                         $(".showBtn").text("다음")
-                        $(".swiper-pagination").css("bottom","16svh")
-                        // $(".header-btn").removeClass("active").text("시작하기")
+                        $(".swiper-pagination").css("bottom","12svh")
+                        $(".header-btn").removeClass("active").text("건너뛰기");
                     }
                 },
             }
@@ -118,12 +118,15 @@
         function jump() {
             swiper.slideTo(3, 700, false);
             $(".hideBtn").fadeIn("fast")
-        $(".showBtn").text("섭취 알림 등록하기")
-        $(".swiper-pagination").css("bottom","22svh")
-        // $(".header-btn").addClass("active").text("시작하기")
+            $(".showBtn").text("섭취 알림 등록하기")
+            $(".swiper-pagination").css("bottom","22svh")
+            $(".header-btn").addClass("active").text("시작하기")
         }
 
-        
+        //다음
+        function next() {
+            swiper.slideNext()
+        }
     </script>
 </body>
 </html>
