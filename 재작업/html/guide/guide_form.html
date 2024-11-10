@@ -9,10 +9,8 @@
   </head>
 
   <style>
-    .input_block,
-    .select_block {
-      max-width: 300px;
-      height: 100px;
+    .input_wrap{
+      max-width: 300px
     }
   </style>
   <body>
@@ -54,7 +52,20 @@
               <p class="title">text │ password │ number</p>
               <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
                 <!-- 기본인풋 -->
+                <div class="input_wrap">
+                  <label for="" class="label">이메일 주소</label>
+                  <div class="input_block">
+                    <input type="text" placeholder="기본인풋">
+                  </div>
+                </div>
 
+                <div class="input_wrap">
+                  <label for="" class="label">이메일 주소</label>
+                  <div class="input_block">
+                    <input type="email" placeholder="기본인풋" required>
+                  </div>
+                  <p class="input_info"></p>
+                </div>
               </div>
             </div>
           </div>

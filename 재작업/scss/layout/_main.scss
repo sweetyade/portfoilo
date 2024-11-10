@@ -6,9 +6,20 @@ body.open {
   overflow: hidden;
 }
 
+//* 공통 *//
+.section_title {
+  @include p1b;
+}
+
+.txt_link {
+  @include misc2under;
+  color: var(--gray-01);
+  text-align: center;
+  display: block;
+}
 //* 온보딩 *//
 .onboarding {
-  padding-block: 3rem 8.5rem;
+  padding-bottom: 8.5rem;
   height: 100%;
 
   .swiper-wrapper {
@@ -59,5 +70,19 @@ body.open {
 
   .swiper-pagination {
     bottom: 12svh;
+  }
+}
+
+//* 로그인 *//
+.login_btns {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 10.25rem;
+  position: relative;
+
+  .tooltip {
+    top: -2.625rem;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

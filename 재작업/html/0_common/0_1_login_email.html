@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <meta name="description" content="약사와 상담하여 맞춤 영양제를 설계하고 섭취 리워드를 통해 꾸준한 섭취 습관을 만들어보세요.">
+    <meta name="keywords" content="핏타민, fitamin, 핏타민영양제, 건강기능식품, 맞춤영양제, 영양제정기배송, 영양제정기구독, 영양제추천, 퍼스널영양제, 핏타민영양제구독, 킥더허들, 맞춤비타민, 비타민정기구독, 하루영양제, 멀티팩영양제, 영양제상담, 영양제추천, 비타민추천, 약사추천영양제, 약사상담, 약사비타민, 약국영양제, 참약사, 섭취습관, 섭취기록, 섭취할인, 맞춤영양제구독서비스, 개인맞춤영양제, 핏타민스토어, 핏타민매장, 핏타민더현대서울, 핏타민더현대, fitaminstore">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="핏타민">
+    <meta property="og:title" content="약사가 상담하는 개인 맞춤 영양제 구독 서비스">
+    <meta property="og:url" content="https://fitamin.kr">
+    <meta property="og:description" content="약사와 상담하여 나만의 맞춤 영양제를 설계하고 섭취 기록을 통해 매일 건강해지는 습관을 만들어보세요.">
+    <meta property="og:image" content="../../images/og_img.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- favicon -->
+    <link rel="icon" href="../../images/favicon.ico" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../css/style.css">
+    
+    <title>0-1.이메일로 로그인</title>
+
+    <!-- header -->
+    <header class="header">
+        <div class="header-left"></div>
+        <h2 class="header-name">이메일로 로그인</h2>
+        <div class="header-right">
+          <button class="btn-icon"><i class="ic_x"></i></button>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main id="main" class="main">
+        <section class="full inner_1">
+            <form action="" id="loginCk">
+                <div class="inner_0_25 list_1 mb_2">
+                    <div class="input_wrap">
+                        <label for="emailCk" class="label">이메일 주소</label>
+                        <div class="input_block">
+                          <input type="email" id="emailCk" placeholder="이메일 주소를 입력해주세요" name="email" required>
+                        </div>
+                    </div>
+    
+                    <div class="input_wrap">
+                        <label for="passCk" class="label">비밀번호</label>
+                        <div class="input_block">
+                          <input type="password" id="passCk" name="password" placeholder="비밀번호를 입력해주세요" required>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            
+
+            <button class="btn">로그인 하기</button>
+
+            <a href="javascript:void(0)" class="txt_link mt_1_5">회원정보를 잊어버리셨나요?</a>
+        </section>
+    </main>
+    
+</head>
+<body>
+    
+    <!-- script -->
+    <script src="../../js/jquery.min.js" ></script>
+    <script src="../../js/jquery.validate.min.js" ></script>
+
+    <script>
+    //유효성 검사
+    jQuery(function() {
+        const myForm = $('#loginCk');
+        myForm.validate({
+            rules:{
+                email: {             
+                    required: true,     
+                    email: true     
+                },
+                password: {             
+                    required: true,     
+                    rangelength: [8,15]
+                },
+            },
+            messages:{
+                email: {
+                    required: '필수 입력 항목입니다',
+                    email: '올바른 이메일 형식으로 입력하세요'
+                },
+                password: {
+                    required: '필수 입력 항목입니다',
+                    rangelength: '영문과 숫자를 포함하는 8자~15자 이내로 설정해주세요'
+                },
+            }
+        });
+    });
+
+    </script>
+</body>
+</html>

@@ -3,10 +3,18 @@
 ***************************************************************/
 .header {
   @include flexbtw;
-  padding-inline: 1.25rem;
+  padding-inline: 1rem;
   height: 3rem;
   background-color: var(--gray-white);
+  position: sticky;
+  top: 0;
   z-index: var(--z-fixed);
+
+  &-name {
+    @include span1b;
+    width: calc(100% - 8.5rem);
+    text-align: center;
+  }
 
   &-btn {
     @include span1b;
@@ -15,6 +23,18 @@
     &.active {
       color: var(--primary-color);
     }
+  }
+
+  &-left {
+    width: 4.25rem;
+    @include flex;
+    gap: 0.25rem;
+  }
+
+  &-right {
+    width: 4.25rem;
+    @include flexright;
+    gap: 0.25rem;
   }
 
   &-fixed {

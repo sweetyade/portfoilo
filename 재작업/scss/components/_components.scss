@@ -10,3 +10,30 @@
 .swiper-pagination-bullet-active {
   background-color: var(--gray-black);
 }
+
+//* tooltip *//
+.tooltip {
+  position: absolute;
+  z-index: var(--z-tool);
+
+  p {
+    @include span2b;
+    color: var(--gray-white);
+    padding: 0.375rem 0.75rem;
+    border-radius: 3rem;
+    background-color: var(--gray-black);
+    animation: tootip 1s ease-in-out infinite;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: var(--gray-black);
+      width: 1rem;
+      height: 1rem;
+      left: 50%;
+      z-index: -1;
+      bottom: -0.5rem;
+      transform: rotate(45deg) translateX(-50%);
+    }
+  }
+}

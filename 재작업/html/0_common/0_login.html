@@ -20,76 +20,40 @@
     <link rel="icon" href="../../images/favicon.ico" />
 
     <!-- css -->
-    <link rel="stylesheet" href="../../css/swiper-bundle.min.css">
     <link rel="stylesheet" href="../../css/style.css">
     
-    <title>onboarding</title>
+    <title>0.로그인</title>
 
+    <!-- header -->
     <header class="header">
-        <h1 class="logo"><a href="javascript:void(0)"></a></h1>
-        <h2 class="header-name"></h2>
-        <button class="header-btn" onclick="jump()">건너뛰기</button>
-    </header> 
-    <main class="fullpage">
-        <div class="onboarding swiper">
-            <div class="swiper-wrapper">
-                <div class="onboarding-item swiper-slide">
-                    <div class="onboarding-img">
-                        <lottie-player src="../../images/json/onboarding_01.json" class="random_ani" background="transparent" speed="1" autoplay=""></lottie-player>
-                    </div>
+        <div class="header-left">
+          <button class="btn-icon"><i class="ic_back"></i></button>
+        </div>
+        <h2 class="header-name">로그인 및 회원가입</h2>
+        <div class="header-right"></div>
+    </header>
 
-                    <div class="onboarding-info">
-                        <p class="onboarding-txt">섭취하면 캐시가 쌓여요</p>
-                        <p class="onboarding-sub">꾸준히 영양제를 섭취하면<br />캐시는 쌓이고 핏타민 레벨은 올라가요</p>
-                    </div>
-                </div>
-                <div class="onboarding-item swiper-slide">
-                    <div class="onboarding-img">
-                        <lottie-player src="../../images/json/onboarding_02.json" class="random_ani" background="transparent" speed="1" autoplay=""></lottie-player>
-                    </div>
+    <!-- main -->
+    <main id="main" class="main">
+        <section class="full inner_1">
+            <p class="section_title inner_0_25">간편하게 로그인하고<br>핏타민과 영양제 관리해요!</p>
 
-                    <div class="onboarding-info">
-                        <p class="onboarding-txt">약사와 쉽고 편하게 상의해요</p>
-                        <p class="onboarding-sub">언제, 어떻게, 무엇을 섭취 해야할지<br>전문가를 통해 확인해요.</p>
-                    </div>
-                </div>
-                <div class="onboarding-item swiper-slide">
-                    <div class="onboarding-img">
-                        <lottie-player src="../../images/json/onboarding_03.json" class="random_ani" background="transparent" speed="1" autoplay=""></lottie-player>
-                    </div>
-
-                    <div class="onboarding-info">
-                        <p class="onboarding-txt">건강을 위한 도전을 시작해요</p>
-                        <p class="onboarding-sub">꾸준한 섭취 기록과 건강 챌린지에<br>참여하고 경품을 받아보세요.</p>
-                    </div>
-                </div>
-                <div class="onboarding-item swiper-slide last_slide">
-                    <div class="onboarding-img">
-                        <lottie-player src="../../images/json/onboarding_04.json" class="random_ani" background="transparent" speed="1" autoplay=""></lottie-player>
-                    </div>
-
-                    <div class="onboarding-info">
-                        <p class="onboarding-txt">자, 이제 시작해볼까요?</p>
-                        <p class="onboarding-sub">지금 섭취 알림을 등록하면,<br>첫 시작 리워드를 받을 수 있어요!</p>
-                    </div>
-                </div>
+            <div class="login_btns">
+                <button class="btn type_social color_kakao"><i class="ic_kakao_bk"></i>카카오로 시작하기</button>
+                <button class="btn type_social color_apple"><i class="ic_apple_w"></i>Apple로 로그인</button>
+                <button class="btn color_gray">이메일 로그인 하기</button>
+                <div class="tooltip"><p>5초만에 빠른 회원가입</p></div>
             </div>
 
-            <div class="swiper-pagination"></div>
-        </div>
-
-        <div class="btn_fixed">
-            <button class="btn type_wide showBtn" onclick="next()">다음</button>
-            <button class="btn type_wide color_gray hideBtn" style="display: none">오늘은 둘러볼게요</button>
-        </div>
+            <a href="javascript:void(0)" class="txt_link mt_1_5">이메일로 회원가입 하기</a>
+        </section>
     </main>
+    
 </head>
 <body>
     
     <!-- script -->
     <script src="../../js/jquery.min.js" defer></script>
-    <script src="../../js/lottie-player.js"></script>
-    <script src="../../js/swiper-bundle.min.js"></script>
 
     <script>
         var swiper = new Swiper(".onboarding", {

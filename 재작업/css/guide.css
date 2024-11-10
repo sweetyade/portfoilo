@@ -249,6 +249,17 @@ button {
 /***************************************************************
     02. animations
 ***************************************************************/
+@keyframes tootip {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 /***************************************************************
     03. layer
 ***************************************************************/
@@ -531,9 +542,27 @@ button {
   gap: 2rem;
 }
 
+.main {
+  background-color: var(--gray-05);
+  min-height: calc(100svh - 3rem);
+}
+
 .fullpage {
   position: relative;
   height: 100svh;
+  background-color: var(--gray-white);
+}
+
+.header + .fullpage {
+  height: calc(100svh - 3rem);
+}
+
+section {
+  background-color: var(--gray-white);
+  padding-block: 1.5rem 2rem;
+}
+section.full {
+  min-height: calc(100svh - 3rem);
 }
 
 /***************************************************************
@@ -961,6 +990,10 @@ i {
   background-image: url(../images/system/kakao_w.svg);
 }
 
+.ic_kakao_bk {
+  background-image: url(../images/system/kakao_bk.svg);
+}
+
 .ic_blog_w {
   background-image: url(../images/system/blog_w.svg);
 }
@@ -969,8 +1002,12 @@ i {
   background-image: url(../images/system/insta_w.svg);
 }
 
+.ic_apple_w {
+  background-image: url(../images/system/apple_w.svg);
+}
+
 .ic_down_gray {
-  background-image: url(../images/common/down_gray.svg);
+  background-image: url(../images/system/down_gray.svg);
 }
 
 .ic_navchallenge {
@@ -987,6 +1024,22 @@ i {
 
 .ic_navstore {
   background-image: url(../images/common/navstore_off.svg);
+}
+
+.ic_back {
+  background-image: url(../images/system/back.svg);
+}
+
+.ic_x {
+  background-image: url(../images/system/x.svg);
+}
+
+.ic_check_off {
+  background-image: url(../images/system/check_off.svg);
+}
+
+.ic_check_on {
+  background-image: url(../images/system/check_on.svg);
 }
 
 /***************************************************************
@@ -1018,6 +1071,10 @@ button:disabled {
 .btn i {
   width: 1.25rem;
 }
+.btn-icon {
+  width: 2rem;
+  height: 2rem;
+}
 .btn.color_white {
   background-color: var(--gray-white);
   color: var(--gray-01);
@@ -1032,6 +1089,14 @@ button:disabled {
 .btn.color_gray {
   background-color: var(--gray-05);
   color: var(--gray-01);
+}
+.btn.color_kakao {
+  background-color: #fee500;
+  color: var(--gray-black);
+}
+.btn.color_apple {
+  background-color: #000;
+  color: var(--gray-white);
 }
 .btn.size_s {
   padding: 0.5rem 0.75rem;
@@ -1088,6 +1153,9 @@ button:disabled {
 .btn.type_popup {
   border-radius: 0.5rem;
 }
+.btn.type_social {
+  padding-block: 11px;
+}
 
 .btn_fixed {
   position: fixed;
@@ -1102,6 +1170,71 @@ button:disabled {
 /***************************************************************
     07. form
 ***************************************************************/
+input[type=text],
+input[type=password],
+input[type=tell],
+input[type=email] {
+  background-color: var(--gray-05);
+  border-radius: 0.5rem;
+  padding: 1rem 0.75rem;
+  font-size: var(--span2-f);
+  width: 100%;
+  background-size: 2rem;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 0.75rem) center;
+  transition: 0.2s;
+}
+input[type=text]::-moz-placeholder, input[type=password]::-moz-placeholder, input[type=tell]::-moz-placeholder, input[type=email]::-moz-placeholder {
+  color: var(--gray-03);
+}
+input[type=text]::placeholder,
+input[type=password]::placeholder,
+input[type=tell]::placeholder,
+input[type=email]::placeholder {
+  color: var(--gray-03);
+}
+input[type=text]:required,
+input[type=password]:required,
+input[type=tell]:required,
+input[type=email]:required {
+  background-image: url(../images/system/check_off.svg);
+}
+input[type=text]:required.valid,
+input[type=password]:required.valid,
+input[type=tell]:required.valid,
+input[type=email]:required.valid {
+  background-image: url(../images/system/check_on.svg);
+}
+input[type=text]:required.error,
+input[type=password]:required.error,
+input[type=tell]:required.error,
+input[type=email]:required.error {
+  background-image: none;
+  background-color: var(--system-red-005);
+}
+
+.label {
+  font-size: var(--span2-f);
+  padding-bottom: 0.25rem;
+  display: block;
+}
+
+.input_wrap {
+  position: relative;
+  width: 100%;
+}
+.input_wrap input ~ label {
+  font-size: var(--span3-f);
+  padding-top: 0.5rem;
+}
+.input_wrap input ~ label.error {
+  color: var(--system-red);
+}
+.input_wrap .input_block {
+  position: relative;
+  width: 100%;
+}
+
 /***************************************************************
     09. components
 ***************************************************************/
@@ -1113,6 +1246,31 @@ button:disabled {
 
 .swiper-pagination-bullet-active {
   background-color: var(--gray-black);
+}
+
+.tooltip {
+  position: absolute;
+  z-index: var(--z-tool);
+}
+.tooltip p {
+  font-size: var(--span2-f);
+  font-weight: var(--bold-f);
+  color: var(--gray-white);
+  padding: 0.375rem 0.75rem;
+  border-radius: 3rem;
+  background-color: var(--gray-black);
+  animation: tootip 1s ease-in-out infinite;
+}
+.tooltip p::after {
+  content: "";
+  position: absolute;
+  background-color: var(--gray-black);
+  width: 1rem;
+  height: 1rem;
+  left: 50%;
+  z-index: -1;
+  bottom: -0.5rem;
+  transform: rotate(45deg) translateX(-50%);
 }
 
 /***************************************************************
@@ -1172,10 +1330,18 @@ button:disabled {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline: 1.25rem;
+  padding-inline: 1rem;
   height: 3rem;
   background-color: var(--gray-white);
+  position: sticky;
+  top: 0;
   z-index: var(--z-fixed);
+}
+.header-name {
+  font-size: var(--span1-f);
+  font-weight: var(--bold-f);
+  width: calc(100% - 8.5rem);
+  text-align: center;
 }
 .header-btn {
   font-size: var(--span1-f);
@@ -1184,6 +1350,19 @@ button:disabled {
 }
 .header-btn.active {
   color: var(--primary-color);
+}
+.header-left {
+  width: 4.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.header-right {
+  width: 4.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.25rem;
 }
 .header-fixed {
   position: fixed;

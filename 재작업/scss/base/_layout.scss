@@ -263,7 +263,26 @@
   gap: 2rem;
 }
 
+.main {
+  background-color: var(--gray-05);
+  min-height: calc(100svh - 3rem);
+}
+
 .fullpage {
   position: relative;
   height: 100svh;
+  background-color: var(--gray-white);
+}
+
+.header + .fullpage {
+  height: calc(100svh - 3rem);
+}
+
+section {
+  background-color: var(--gray-white);
+  padding-block: 1.5rem 2rem;
+
+  &.full {
+    min-height: calc(100svh - 3rem);
+  }
 }
