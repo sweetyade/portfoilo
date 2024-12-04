@@ -21,75 +21,34 @@
 
     <!-- css -->
     <link rel="stylesheet" href="../../css/style.css">
-    
     <title>0.로그인</title>
-
-    <!-- header -->
-    <header class="header">
-        <div class="header-left">
-          <button class="btn-icon"><i class="ic_back"></i></button>
-        </div>
-        <h2 class="header-name">로그인 및 회원가입</h2>
-        <div class="header-right"></div>
-    </header>
-
-    <!-- main -->
-    <main id="main" class="main">
-        <section class="full inner_1">
-            <p class="section_title inner_0_25">간편하게 로그인하고<br>핏타민과 영양제 관리해요!</p>
-
-            <div class="login_btns">
-                <button class="btn type_social color_kakao"><i class="ic_kakao_bk"></i>카카오로 시작하기</button>
-                <button class="btn type_social color_apple"><i class="ic_apple_w"></i>Apple로 로그인</button>
-                <button class="btn color_gray">이메일 로그인 하기</button>
-                <div class="tooltip"><p>5초만에 빠른 회원가입</p></div>
-            </div>
-
-            <a href="javascript:void(0)" class="txt_link mt_1_5">이메일로 회원가입 하기</a>
-        </section>
-    </main>
-    
 </head>
 <body>
-    
-    <!-- script -->
-    <script src="../../js/jquery.min.js" defer></script>
+  <!-- header -->
+  <header class="header">
+    <div class="header-left">
+      <button class="btn-icon"><i class="ic_back"></i></button>
+    </div>
+    <h2 class="header-name">로그인 및 회원가입</h2>
+    <div class="header-right"></div>
+  </header>
+  
+  <!-- main -->
+  <main id="main" class="main">
+    <section class="full inner_1">
+      <p class="section_title inner_0_25">간편하게 로그인하고<br>핏타민과 영양제 관리해요!</p>
 
-    <script>
-        var swiper = new Swiper(".onboarding", {
-            pagination: {
-            el: ".swiper-pagination",
-            },
-            on:{
-                slideChangeTransitionEnd : function() {
-                    if(this.activeIndex == 3){
-                        $(".hideBtn").fadeIn("fast")
-                        $(".showBtn").text("섭취 알림 등록하기")
-                        $(".swiper-pagination").css("bottom","20svh")
-                        $(".header-btn").addClass("active").text("시작하기")
-                    }else{
-                        $(".hideBtn").fadeOut("fast")
-                        $(".showBtn").text("다음")
-                        $(".swiper-pagination").css("bottom","12svh")
-                        $(".header-btn").removeClass("active").text("건너뛰기");
-                    }
-                },
-            }
-        });
+      <div class="login_btns">
+        <button class="btn type_social color_kakao"><i class="ic_kakao_bk"></i>카카오로 시작하기</button>
+        <button class="btn type_social color_apple"><i class="ic_apple_w"></i>Apple로 로그인</button>
+        <button class="btn color_gray">이메일 로그인 하기</button>
+        <div class="tooltip"><p>5초만에 빠른 회원가입</p></div>
+      </div>
 
-        //건너뛰기
-        function jump() {
-            swiper.slideTo(3, 700, false);
-            $(".hideBtn").fadeIn("fast")
-            $(".showBtn").text("섭취 알림 등록하기")
-            $(".swiper-pagination").css("bottom","22svh")
-            $(".header-btn").addClass("active").text("시작하기")
-        }
+      <a href="javascript:void(0)" class="txt_link mt_1_5">이메일로 회원가입 하기</a>
+    </section>
+</main>
 
-        //다음
-        function next() {
-            swiper.slideNext()
-        }
-    </script>
 </body>
 </html>
+      

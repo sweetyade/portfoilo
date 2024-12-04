@@ -4,7 +4,8 @@
 input[type="text"],
 input[type="password"],
 input[type="tell"],
-input[type="email"] {
+input[type="email"],
+input[type="number"] {
   background-color: var(--gray-05);
   border-radius: 0.5rem;
   padding: 1rem 0.75rem;
@@ -55,5 +56,26 @@ input[type="email"] {
   .input_block {
     position: relative;
     width: 100%;
+
+    .btn_abs {
+      position: absolute;
+      top: 50%;
+      right: 0.75rem;
+      transform: translateY(-50%);
+
+      & ~ .time_count {
+        @include span3b;
+        color: var(--gray-02);
+        position: absolute;
+        right: 4.25rem;
+        top: 50%;
+        transform: translateY(-50%);
+        @include flexright;
+
+        .jst-hours {
+          display: none;
+        }
+      }
+    }
   }
 }

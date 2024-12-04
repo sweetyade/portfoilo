@@ -21,81 +21,78 @@
 
     <!-- css -->
     <link rel="stylesheet" href="../../css/style.css">
-    
     <title>0-1.이메일로 로그인</title>
-
-    <!-- header -->
-    <header class="header">
-        <div class="header-left"></div>
-        <h2 class="header-name">이메일로 로그인</h2>
-        <div class="header-right">
-          <button class="btn-icon"><i class="ic_x"></i></button>
-        </div>
-    </header>
-
-    <!-- main -->
-    <main id="main" class="main">
-        <section class="full inner_1">
-            <form action="" id="loginCk">
-                <div class="inner_0_25 list_1 mb_2">
-                    <div class="input_wrap">
-                        <label for="emailCk" class="label">이메일 주소</label>
-                        <div class="input_block">
-                          <input type="email" id="emailCk" placeholder="이메일 주소를 입력해주세요" name="email" required>
-                        </div>
-                    </div>
-    
-                    <div class="input_wrap">
-                        <label for="passCk" class="label">비밀번호</label>
-                        <div class="input_block">
-                          <input type="password" id="passCk" name="password" placeholder="비밀번호를 입력해주세요" required>
-                        </div>
-                    </div>
-                </div>
-            </form>
-            
-
-            <button class="btn">로그인 하기</button>
-
-            <a href="javascript:void(0)" class="txt_link mt_1_5">회원정보를 잊어버리셨나요?</a>
-        </section>
-    </main>
-    
 </head>
 <body>
-    
-    <!-- script -->
-    <script src="../../js/jquery.min.js" ></script>
-    <script src="../../js/jquery.validate.min.js" ></script>
+  <!-- header -->
+  <header class="header">
+    <div class="header-left">
+      <button class="btn-icon"></button>
+    </div>
+    <h2 class="header-name">이메일로 로그인</h2>
+    <div class="header-right">
+      <button class="btn-icon" onclick="javascript:self.close();"><i class="ic_x"></i></button>
+    </div>
+  </header>
+  
+  <main id="main" class="main">
+    <section class="full inner_1">
+      <form action="" id="loginCk">
+        <div class="inner_0_25 list_1 mb_2">
+          <div class="input_wrap">
+            <label for="emailCk" class="label">이메일 주소</label>
+            <div class="input_block">
+              <input type="email" id="emailCk" placeholder="이메일 주소를 입력해주세요" name="email" required>
+            </div>
+          </div>
 
-    <script>
+          <div class="input_wrap">
+            <label for="passCk" class="label">비밀번호</label>
+            <div class="input_block">
+              <input type="password" id="passCk" name="password" placeholder="비밀번호를 입력해주세요" required>
+            </div>
+          </div>
+        </div>
+      </form>
+      
+
+      <button class="btn">로그인 하기</button>
+
+      <a href="javascript:void(0)" class="txt_link mt_1_5">회원정보를 잊어버리셨나요?</a>
+    </section>
+  </main>
+
+  <script src="../../js/jquery.min.js" ></script>
+  <script src="../../js/jquery.validate.min.js" ></script>
+
+  <script>
     //유효성 검사
     jQuery(function() {
-        const myForm = $('#loginCk');
-        myForm.validate({
-            rules:{
-                email: {             
-                    required: true,     
-                    email: true     
-                },
-                password: {             
-                    required: true,     
-                    rangelength: [8,15]
-                },
-            },
-            messages:{
-                email: {
-                    required: '필수 입력 항목입니다',
-                    email: '올바른 이메일 형식으로 입력하세요'
-                },
-                password: {
-                    required: '필수 입력 항목입니다',
-                    rangelength: '영문과 숫자를 포함하는 8자~15자 이내로 설정해주세요'
-                },
-            }
-        });
+      const myForm = $('#loginCk');
+      myForm.validate({
+        rules:{
+          email: {             
+            required: true,     
+            email: true     
+          },
+          password: {             
+            required: true,     
+            rangelength: [8,15]
+          },
+        },
+        messages:{
+          email: {
+            required: '필수 입력 항목입니다',
+            email: '올바른 이메일 형식으로 입력하세요'
+          },
+          password: {
+            required: '필수 입력 항목입니다',
+            rangelength: '영문과 숫자를 포함하는 8자~15자 이내로 설정해주세요'
+          },
+        }
+      });
     });
-
     </script>
-</body>
+  </body>
 </html>
+      
