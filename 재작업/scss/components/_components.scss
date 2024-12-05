@@ -37,3 +37,42 @@
     }
   }
 }
+
+.rounded_box {
+  @include flextop;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+
+  .title {
+    @include p3;
+    color: var(--gray-02);
+    width: 4.75rem;
+  }
+
+  .txt {
+    @include p3;
+    width: calc(100% - 5.25rem);
+    max-height: 2.625rem;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    word-break: break-all;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+  }
+}
+
+.toast {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: var(--gray-white);
+  @include p4;
+  padding: 0.75rem;
+  border-radius: 999px;
+  position: fixed;
+  width: calc(100% - 2rem);
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: var(--b);
+}

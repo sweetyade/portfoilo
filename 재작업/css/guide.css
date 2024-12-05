@@ -977,6 +977,10 @@ body {
   color: var(--brand-purple);
 }
 
+.bg_gray {
+  background-color: var(--gray-05);
+}
+
 /***************************************************************
     06. icons
 ***************************************************************/
@@ -1221,6 +1225,21 @@ input[type=number]:required.error {
   background-image: none;
   background-color: var(--system-red-005);
 }
+input[type=text].inputCk:required:user-invalid,
+input[type=password].inputCk:required:user-invalid,
+input[type=tell].inputCk:required:user-invalid,
+input[type=email].inputCk:required:user-invalid,
+input[type=number].inputCk:required:user-invalid {
+  background-image: none;
+  background-color: var(--system-red-005);
+}
+input[type=text].inputCk:required:user-valid,
+input[type=password].inputCk:required:user-valid,
+input[type=tell].inputCk:required:user-valid,
+input[type=email].inputCk:required:user-valid,
+input[type=number].inputCk:required:user-valid {
+  background-image: url(../images/system/check_on.svg);
+}
 
 .label {
   font-size: var(--span2-f);
@@ -1301,6 +1320,47 @@ input[type=number]:required.error {
   z-index: -1;
   bottom: -0.5rem;
   transform: rotate(45deg) translateX(-50%);
+}
+
+.rounded_box {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.rounded_box .title {
+  font-size: var(--p3-f);
+  line-height: var(--line-h);
+  color: var(--gray-02);
+  width: 4.75rem;
+}
+.rounded_box .txt {
+  font-size: var(--p3-f);
+  line-height: var(--line-h);
+  width: calc(100% - 5.25rem);
+  max-height: 2.625rem;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-all;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+}
+
+.toast {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: var(--gray-white);
+  font-size: var(--p4-f);
+  line-height: var(--line-h);
+  padding: 0.75rem;
+  border-radius: 999px;
+  position: fixed;
+  width: calc(100% - 2rem);
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: var(--b);
 }
 
 /***************************************************************

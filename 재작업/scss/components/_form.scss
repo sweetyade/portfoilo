@@ -32,6 +32,17 @@ input[type="number"] {
       background-color: var(--system-red-005);
     }
   }
+
+  &.inputCk:required {
+    &:user-invalid {
+      background-image: none;
+      background-color: var(--system-red-005);
+    }
+
+    &:user-valid {
+      background-image: url(../images/system/check_on.svg);
+    }
+  }
 }
 
 .label {

@@ -10,9 +10,10 @@
   </head>
 
   <style>
-    .card_day_time {
-      width: 360px;
-    }
+   .toast{
+    position: relative;
+    max-width: 360px;
+   }
   </style>
   <body>
     <main id="guide_main">
@@ -44,13 +45,24 @@
             <p class="p3_f">- 박스쉐도우는 디자인확인용/실제팝업,모달에는 적용되지 않음</p>
           </div>
 
-          <!-- box -->
+          <!-- tooltip -->
           <div class="guide_block">
             <h3>tooltip</h3>
             <div class="guide_data">
               <p class="title">.tooltip</p>
               <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
-                <div class="tooltip">5초만에 빠른 회원가입</div>
+                <div class="tooltip"><p>5초만에 빠른 회원가입</p></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- toast -->
+          <div class="guide_block">
+            <h3>tooltip</h3>
+            <div class="guide_data">
+              <p class="title">.tooltip</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <p class="toast">가입하신 이메일 주소를 입력해주세요</p>
               </div>
             </div>
           </div>
