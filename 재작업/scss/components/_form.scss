@@ -3,7 +3,7 @@
 ***************************************************************/
 input[type="text"],
 input[type="password"],
-input[type="tell"],
+input[type="tel"],
 input[type="email"],
 input[type="number"] {
   background-color: var(--gray-05);
@@ -16,32 +16,45 @@ input[type="number"] {
   background-position: calc(100% - 0.75rem) center;
   transition: 0.2s;
 
+  &:focus,
+  &:hover {
+    background-color: var(--primary-005);
+  }
+
   &::placeholder {
     color: var(--gray-03);
   }
 
-  &:required {
-    background-image: url(../images/system/check_off.svg);
+  &:required:not(:focus) {
+    background-image: url(../images/system/checkOff.svg);
 
     &.valid {
-      background-image: url(../images/system/check_on.svg);
+      background-image: url(../images/system/checkOn.svg);
     }
+  }
 
+  &:required {
     &.error {
       background-image: none;
       background-color: var(--system-red-005);
     }
   }
 
-  &.inputCk:required {
+  &.inputCk:required:not(:focus) {
     &:user-invalid {
       background-image: none;
       background-color: var(--system-red-005);
     }
 
-    &:user-valid {
-      background-image: url(../images/system/check_on.svg);
+    &:valid {
+      background-image: url(../images/system/checkOn.svg);
     }
+  }
+
+  &:placeholder-shown + .btn_abs {
+    background-color: var(--gray-white);
+    color: var(--gray-02);
+    border-color: var(--gray-04);
   }
 }
 
@@ -58,6 +71,7 @@ input[type="number"] {
   input ~ label {
     @include span3;
     padding-top: 0.5rem;
+    display: block;
 
     &.error {
       color: var(--system-red);
@@ -70,17 +84,15 @@ input[type="number"] {
 
     .btn_abs {
       position: absolute;
-      top: 50%;
+      top: 0.45rem;
       right: 0.75rem;
-      transform: translateY(-50%);
 
       & ~ .time_count {
         @include span3b;
         color: var(--gray-02);
         position: absolute;
         right: 4.25rem;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 1rem;
         @include flexright;
 
         .jst-hours {
@@ -88,5 +100,103 @@ input[type="number"] {
         }
       }
     }
+  }
+
+  .ip_info {
+    @include span3;
+    color: var(--primary-color);
+    padding-top: 0.5rem;
+
+    &.error {
+      color: var(--system-red);
+    }
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+}
+
+.check_wrap {
+  label {
+    @include flex;
+    gap: 6px;
+    cursor: pointer;
+
+    .checkbox {
+      width: 2rem;
+      height: 2rem;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: 0.1s;
+    }
+
+    .label {
+      color: var(--gray-02);
+      width: calc(100% - 38px);
+      @include flexbtw;
+
+      a {
+        @include misc2under;
+      }
+
+      &.size_l {
+        @include span1b;
+        color: var(--gray-black);
+      }
+    }
+  }
+
+  .ip_checkbox ~ label .checkbox {
+    background-image: url(../images/system/checkOff.svg);
+  }
+
+  .ip_checkbox:checked ~ label .checkbox {
+    background-image: url(../images/system/checkOn.svg);
+  }
+
+  .ip_radio ~ label .checkbox {
+    background-image: url(../images/system/radioOff.svg);
+  }
+
+  .ip_radio:checked ~ label .checkbox {
+    background-image: url(../images/system/radioOn.svg);
+  }
+
+  input:disabled ~ label {
+    cursor: default;
+  }
+}
+
+.check_list {
+  padding-inline: 0.75rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.btnClear {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.75rem;
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../images/system/delete_circle.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: 0.2s;
+  cursor: pointer;
+
+  &.type_s {
+    right: 4rem;
+  }
+
+  &.type_m {
+    right: 5.5rem;
+  }
+
+  &.type_l {
+    right: 6.5rem;
   }
 }

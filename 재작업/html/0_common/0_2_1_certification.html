@@ -21,23 +21,30 @@
 
     <!-- css -->
     <link rel="stylesheet" href="../../css/style.css">
-    <title>0-1-1.회원정보 찾기</title>
+    <title>0-2-1.본인인증</title>
 </head>
 <body>
   <!-- header -->
   <header class="header">
-    <div class="header-left">
-      <button class="btn-icon"><i class="ic_back"></i></button>
+    <div class="header-left"></div>
+    <h2 class="header-name">회원정보 입력</h2>
+    <div class="header-right">
+      <button class="btn-icon openPop01"><i class="ic_x"></i></button>
     </div>
-    <h2 class="header-name">회원정보 찾기</h2>
-    <div class="header-right"></div>
   </header>
   
   <!-- main -->
   <main id="main" class="main">
     <section class="contents">
-      <p class="section_title">휴대폰 번호를 인증해주세요</p>
-      <p class="section_txt mb_1_5">회원가입 시 인증하신 휴대폰 번호를<br>입력하여 인증을 진행해주세요.</p>
+      <p class="section_title">원활한 서비스 사용을 위해<br>회원정보가 필요해요</p>
+      <p class="section_txt mb_1_5">간편로그인을 이용하실 경우<br>이름과 휴대폰번호를 등록해주세요. </p>
+      
+      <div class="input_wrap mb_1">
+        <label for="" class="label">이름</label>
+        <div class="input_block">
+          <input type="text" class="clearInput" placeholder="한글이나 영문 2~5글자 이내로 입력해주세요">
+        </div>
+      </div>
 
       <div class="input_wrap">
         <label for="" class="label">휴대폰 번호</label>
@@ -54,23 +61,53 @@
     </section>
     
     <div class="btn_fixed">
-      <a href="javascript:void(0)" class="txt_link mb_0_5">비밀번호를 잊어버리셨나요?</a>
-      <button class="btn opnePop01">다음</button>
+      <button class="btn openPop03">완료</button>
     </div>
   </main>
 
-  <!-- 계정없음 팝업 -->
+  <!-- 본인인증 실패 -->
   <div class="popup popup01">
     <div class="overlay"></div>
     <div class="pop_contents">
-      <p class="title">계정을 찾을 수 없어요</p>
+      <p class="title">아직 본인인증이 완료되지 않았어요</p>
       <p class="txt">
-        가입되지 않은 휴대폰 번호예요.<br>
-        회원가입을 진행할까요?
+        본인인증을 진행하지 않고 페이지를<br>
+        나가시면 정보가 저장되지 않아요.
       </p>
       <div class="popup_btn">
-        <button class="btn color_gray  closeModal">닫기</button>
-        <button class="btn closeModal">회원가입</button>
+        <button class="btn color_gray closeModal">닫기</button>
+        <button class="btn color_error closeModal" onclick="javascript:self.close();">나가기</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 이미 가입 -->
+  <div class="popup popup02">
+    <div class="overlay"></div>
+    <div class="pop_contents">
+      <p class="title">이미 가입한 계정이 있어요</p>
+      <p class="txt">
+        해당 휴대폰 번호로 가입된 계정이 있어요.<br>
+        새로운 계정으로 로그인하시겠어요?
+      </p>
+      <div class="popup_btn">
+        <button class="btn color_gray closeModal">회원정보 찾기</button>
+        <button class="btn closeModal">로그인 하기</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 등록완료 -->
+  <div class="popup popup03">
+    <div class="overlay"></div>
+    <div class="pop_contents">
+      <p class="title">회원정보가 등록되었어요</p>
+      <p class="txt">
+        이름과 휴대폰번호가 등록되었어요.<br>
+        회원정보는 마이페이지에서 수정할 수 있어요!
+      </p>
+      <div class="popup_btn">
+        <button class="btn color_gray closeModal">확인</button>
       </div>
     </div>
   </div>
@@ -84,6 +121,8 @@
       $(".popup, .modal, body").removeClass("open")
     })
 
+
+    // ============ 메인 ============== //
     // 인증 카운터
     let timerStarted = false;
 
@@ -101,9 +140,14 @@
       } 
     })
 
-    //계정없음
-    $(".opnePop01").click(function(){
+    // 화면닫기
+    $(".openPop01").click(function(){
       $(".popup01, body").addClass("open")
+    })
+
+     // 회원정보등록
+    $(".openPop03").click(function(){
+      $(".popup03, body").addClass("open")
     })
   </script>
 </body>

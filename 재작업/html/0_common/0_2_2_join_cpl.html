@@ -21,61 +21,64 @@
 
     <!-- css -->
     <link rel="stylesheet" href="../../css/style.css">
-    <title>0-1-1.회원정보 찾기</title>
+    <title>0-2-2.회원가입완료</title>
 </head>
 <body>
   <!-- header -->
   <header class="header">
-    <div class="header-left">
-      <button class="btn-icon"><i class="ic_back"></i></button>
-    </div>
-    <h2 class="header-name">회원정보 찾기</h2>
+    <div class="header-left"></div>
+    <h2 class="header-name"></h2>
     <div class="header-right"></div>
   </header>
   
   <!-- main -->
   <main id="main" class="main">
-    <section class="contents">
-      <p class="section_title">휴대폰 번호를 인증해주세요</p>
-      <p class="section_txt mb_1_5">회원가입 시 인증하신 휴대폰 번호를<br>입력하여 인증을 진행해주세요.</p>
-
-      <div class="input_wrap">
-        <label for="" class="label">휴대폰 번호</label>
-        <div class="input_block mb_0_5">
-          <input type="number" inputmode="numeric" placeholder="- 없이 번호만 입력해주세요">
-          <button class="btn size_s btn_abs countBtn">인증하기</button>
-        </div>
-        <div class="input_block">
-          <input type="number" inputmode="numeric" placeholder="인증번호를 입력해주세요">
-          <button class="btn size_s btn_abs">확인</button>
-          <div class="time_count jst-timeout" data-minutes-left=3><span>03:00</span></div>
-        </div>
+    <section class="full inner_1_25">
+      <div class="cpl_img">
+        <lottie-player src="../../images/json/check.json" class="" background="transparent" speed="1" autoplay=""></lottie-player>
       </div>
+      <p class="section_title">최대오글자님<br>회원가입이 완료되었어요</p>
+      <p class="section_txt">
+        추천인 코드는 마이페이지 > 회원정보 수정<br>
+        페이지에서 입력하실 수 있어요
+      </p>
     </section>
-    
     <div class="btn_fixed">
-      <a href="javascript:void(0)" class="txt_link mb_0_5">비밀번호를 잊어버리셨나요?</a>
-      <button class="btn opnePop01">다음</button>
+      <button class="btn color_white openModal01">추천인 코드 등록하기</button>
+      <button class="btn">홈으로 가기</button>
+      <p class="toast" style="--b: 124px">추천인 코드가 등록되었습니다</p>
+      <p class="toast" style="--b: 124px; display: none">이미 추천인 코드를 등록했습니다</p>
     </div>
   </main>
 
-  <!-- 계정없음 팝업 -->
-  <div class="popup popup01">
+  <div class="modal modal01">
     <div class="overlay"></div>
-    <div class="pop_contents">
-      <p class="title">계정을 찾을 수 없어요</p>
-      <p class="txt">
-        가입되지 않은 휴대폰 번호예요.<br>
-        회원가입을 진행할까요?
-      </p>
-      <div class="popup_btn">
-        <button class="btn color_gray  closeModal">닫기</button>
-        <button class="btn closeModal">회원가입</button>
+
+    <div class="modal_contents">
+      <div class="modal_title">
+        <p class="title">추천인 코드를 입력해주세요</p>
+        <p class="txt">추천인을 입력하시면 포인트 100원을 지급해드립니다</p>
       </div>
+
+      <div class="modal_con">
+        <div class="input_wrap">
+          <div class="input_block">
+            <input type="text" class="" placeholder="추천인 코드 입력">
+          </div>
+        </div>
+      </div>
+
+      <div class="modal_btn">
+        <button class="btn">확인</button>
+        <button class="btn type_txt closeModal">닫기</button>
+      </div>
+
+      <p class="toast">유효하지 않은 추천인 코드입니다</p>
     </div>
   </div>
+
   <script src="../../js/jquery.min.js" ></script>
-  <script src="../../js/jquery.simple.timer.js"></script>
+  <script src="../../js/lottie-player.js"></script>
 
   <script>
     //============= 공통 ==============//
@@ -84,26 +87,10 @@
       $(".popup, .modal, body").removeClass("open")
     })
 
-    // 인증 카운터
-    let timerStarted = false;
 
-    $(".countBtn").click(function(){
-      if (!timerStarted) {
-        $(".time_count span").hide()
-        timerStarted = true;
-
-        $('.time_count').startTimer({
-          onComplete: function(element) {
-            
-            $('html, body').addClass('bodyTimeoutBackground');
-          }
-        });
-      } 
-    })
-
-    //계정없음
-    $(".opnePop01").click(function(){
-      $(".popup01, body").addClass("open")
+    // =========== 메인 ============== //
+    $(".openModal01").click(function(){
+      $(".modal01, body").addClass("open")
     })
   </script>
 </body>

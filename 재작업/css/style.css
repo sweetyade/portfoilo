@@ -566,6 +566,12 @@ section.contents {
 section.full {
   min-height: calc(100svh - 3rem);
 }
+section.b_s {
+  border-bottom: 0.5rem solid var(--gray-05);
+}
+section.b_xl {
+  border-bottom: 8rem solid var(--gray-05);
+}
 
 /***************************************************************
     04. typo
@@ -1053,7 +1059,7 @@ i {
 ***************************************************************/
 input[type=text],
 input[type=password],
-input[type=tell],
+input[type=tel],
 input[type=email],
 input[type=number] {
   background-color: var(--gray-05);
@@ -1066,52 +1072,77 @@ input[type=number] {
   background-position: calc(100% - 0.75rem) center;
   transition: 0.2s;
 }
-input[type=text]::-moz-placeholder, input[type=password]::-moz-placeholder, input[type=tell]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=number]::-moz-placeholder {
+input[type=text]:focus, input[type=text]:hover,
+input[type=password]:focus,
+input[type=password]:hover,
+input[type=tel]:focus,
+input[type=tel]:hover,
+input[type=email]:focus,
+input[type=email]:hover,
+input[type=number]:focus,
+input[type=number]:hover {
+  background-color: var(--primary-005);
+}
+input[type=text]::-moz-placeholder, input[type=password]::-moz-placeholder, input[type=tel]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=number]::-moz-placeholder {
   color: var(--gray-03);
 }
 input[type=text]::placeholder,
 input[type=password]::placeholder,
-input[type=tell]::placeholder,
+input[type=tel]::placeholder,
 input[type=email]::placeholder,
 input[type=number]::placeholder {
   color: var(--gray-03);
 }
-input[type=text]:required,
-input[type=password]:required,
-input[type=tell]:required,
-input[type=email]:required,
-input[type=number]:required {
-  background-image: url(../images/system/check_off.svg);
+input[type=text]:required:not(:focus),
+input[type=password]:required:not(:focus),
+input[type=tel]:required:not(:focus),
+input[type=email]:required:not(:focus),
+input[type=number]:required:not(:focus) {
+  background-image: url(../images/system/checkOff.svg);
 }
-input[type=text]:required.valid,
-input[type=password]:required.valid,
-input[type=tell]:required.valid,
-input[type=email]:required.valid,
-input[type=number]:required.valid {
-  background-image: url(../images/system/check_on.svg);
+input[type=text]:required:not(:focus).valid,
+input[type=password]:required:not(:focus).valid,
+input[type=tel]:required:not(:focus).valid,
+input[type=email]:required:not(:focus).valid,
+input[type=number]:required:not(:focus).valid {
+  background-image: url(../images/system/checkOn.svg);
 }
 input[type=text]:required.error,
 input[type=password]:required.error,
-input[type=tell]:required.error,
+input[type=tel]:required.error,
 input[type=email]:required.error,
 input[type=number]:required.error {
   background-image: none;
   background-color: var(--system-red-005);
 }
-input[type=text].inputCk:required:user-invalid,
-input[type=password].inputCk:required:user-invalid,
-input[type=tell].inputCk:required:user-invalid,
-input[type=email].inputCk:required:user-invalid,
-input[type=number].inputCk:required:user-invalid {
+input[type=text].inputCk:required:not(:focus):user-invalid,
+input[type=password].inputCk:required:not(:focus):user-invalid,
+input[type=tel].inputCk:required:not(:focus):user-invalid,
+input[type=email].inputCk:required:not(:focus):user-invalid,
+input[type=number].inputCk:required:not(:focus):user-invalid {
   background-image: none;
   background-color: var(--system-red-005);
 }
-input[type=text].inputCk:required:user-valid,
-input[type=password].inputCk:required:user-valid,
-input[type=tell].inputCk:required:user-valid,
-input[type=email].inputCk:required:user-valid,
-input[type=number].inputCk:required:user-valid {
-  background-image: url(../images/system/check_on.svg);
+input[type=text].inputCk:required:not(:focus):valid,
+input[type=password].inputCk:required:not(:focus):valid,
+input[type=tel].inputCk:required:not(:focus):valid,
+input[type=email].inputCk:required:not(:focus):valid,
+input[type=number].inputCk:required:not(:focus):valid {
+  background-image: url(../images/system/checkOn.svg);
+}
+input[type=text]:-moz-placeholder-shown + .btn_abs, input[type=password]:-moz-placeholder-shown + .btn_abs, input[type=tel]:-moz-placeholder-shown + .btn_abs, input[type=email]:-moz-placeholder-shown + .btn_abs, input[type=number]:-moz-placeholder-shown + .btn_abs {
+  background-color: var(--gray-white);
+  color: var(--gray-02);
+  border-color: var(--gray-04);
+}
+input[type=text]:placeholder-shown + .btn_abs,
+input[type=password]:placeholder-shown + .btn_abs,
+input[type=tel]:placeholder-shown + .btn_abs,
+input[type=email]:placeholder-shown + .btn_abs,
+input[type=number]:placeholder-shown + .btn_abs {
+  background-color: var(--gray-white);
+  color: var(--gray-02);
+  border-color: var(--gray-04);
 }
 
 .label {
@@ -1127,6 +1158,7 @@ input[type=number].inputCk:required:user-valid {
 .input_wrap input ~ label {
   font-size: var(--span3-f);
   padding-top: 0.5rem;
+  display: block;
 }
 .input_wrap input ~ label.error {
   color: var(--system-red);
@@ -1137,9 +1169,8 @@ input[type=number].inputCk:required:user-valid {
 }
 .input_wrap .input_block .btn_abs {
   position: absolute;
-  top: 50%;
+  top: 0.45rem;
   right: 0.75rem;
-  transform: translateY(-50%);
 }
 .input_wrap .input_block .btn_abs ~ .time_count {
   font-size: var(--span3-f);
@@ -1147,14 +1178,100 @@ input[type=number].inputCk:required:user-valid {
   color: var(--gray-02);
   position: absolute;
   right: 4.25rem;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 1rem;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 .input_wrap .input_block .btn_abs ~ .time_count .jst-hours {
   display: none;
+}
+.input_wrap .ip_info {
+  font-size: var(--span3-f);
+  color: var(--primary-color);
+  padding-top: 0.5rem;
+}
+.input_wrap .ip_info.error {
+  color: var(--system-red);
+}
+
+input[type=checkbox],
+input[type=radio] {
+  display: none;
+}
+
+.check_wrap label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+.check_wrap label .checkbox {
+  width: 2rem;
+  height: 2rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.1s;
+}
+.check_wrap label .label {
+  color: var(--gray-02);
+  width: calc(100% - 38px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.check_wrap label .label a {
+  font-size: var(--misc2-f);
+  text-decoration: underline;
+}
+.check_wrap label .label.size_l {
+  font-size: var(--span1-f);
+  font-weight: var(--bold-f);
+  color: var(--gray-black);
+}
+.check_wrap .ip_checkbox ~ label .checkbox {
+  background-image: url(../images/system/checkOff.svg);
+}
+.check_wrap .ip_checkbox:checked ~ label .checkbox {
+  background-image: url(../images/system/checkOn.svg);
+}
+.check_wrap .ip_radio ~ label .checkbox {
+  background-image: url(../images/system/radioOff.svg);
+}
+.check_wrap .ip_radio:checked ~ label .checkbox {
+  background-image: url(../images/system/radioOn.svg);
+}
+.check_wrap input:disabled ~ label {
+  cursor: default;
+}
+
+.check_list {
+  padding-inline: 0.75rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.btnClear {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.75rem;
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../images/system/delete_circle.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.btnClear.type_s {
+  right: 4rem;
+}
+.btnClear.type_m {
+  right: 5.5rem;
+}
+.btnClear.type_l {
+  right: 6.5rem;
 }
 
 /***************************************************************
@@ -1272,6 +1389,11 @@ button:disabled {
 .btn.type_social {
   padding-block: 11px;
 }
+.btn.type_txt {
+  padding: 0;
+  background-color: transparent;
+  color: var(--gray-01);
+}
 
 .btn_fixed {
   position: fixed;
@@ -1281,6 +1403,17 @@ button:disabled {
   gap: 0.5rem;
   padding-inline: 1rem;
   z-index: var(--z-fixed);
+}
+.btn_fixed .btn {
+  z-index: 1;
+}
+.btn_fixed.bg_trans::after {
+  content: "";
+  width: 100%;
+  height: 108px;
+  position: absolute;
+  bottom: -0.5rem;
+  background: linear-gradient(0deg, #fff 0%, #fff 75.52%, rgba(255, 255, 255, 0) 100%);
 }
 
 /***************************************************************
@@ -1393,7 +1526,8 @@ button:disabled {
   z-index: var(--z-modal);
   opacity: 1;
 }
-.popup .contents {
+
+.pop_contents {
   width: 20rem;
   padding: 1.5rem;
   background-color: var(--gray-white);
@@ -1404,18 +1538,18 @@ button:disabled {
   transform: translate(-50%, -50%);
   border-radius: 0.75rem;
 }
-.popup .contents .title {
+.pop_contents .title {
   font-size: var(--p2-f);
   line-height: var(--line-h);
   font-weight: var(--bold-f);
   padding-bottom: 0.75rem;
 }
-.popup .contents .txt {
+.pop_contents .txt {
   font-size: var(--p3-f);
   line-height: var(--line-h);
   color: var(--gray-01);
 }
-.popup .contents .popup_btn {
+.pop_contents .popup_btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1435,10 +1569,48 @@ button:disabled {
 }
 .modal.open {
   opacity: 1;
-  z-index: 99;
+  z-index: var(--z-modal);
 }
-.modal.open .modal_wrap {
+.modal.open .modal_contents {
   bottom: 0;
+}
+
+.modal_contents {
+  position: fixed;
+  bottom: -100svh;
+  left: 0;
+  right: 0;
+  background-color: var(--gray-white);
+  z-index: var(--z-modal);
+  border-radius: 1.5rem 1.5rem 0 0;
+  transition: 0.3s;
+}
+.modal_contents .modal_title {
+  display: grid;
+  gap: 0.5rem;
+  padding: 2rem 1.25rem 0;
+}
+.modal_contents .modal_title .title {
+  font-size: var(--p1-f);
+  line-height: var(--line-h);
+  font-weight: var(--bold-f);
+}
+.modal_contents .modal_title .txt {
+  font-size: var(--p3-f);
+  line-height: var(--line-h);
+  color: var(--gray-02);
+}
+.modal_contents .modal_con {
+  padding: 1rem 1.25rem;
+}
+.modal_contents .modal_btn {
+  display: grid;
+  gap: 1rem;
+  padding: 0 1rem 0.5rem;
+}
+.modal_contents .toast {
+  position: absolute;
+  top: -3.5rem;
 }
 
 /***************************************************************

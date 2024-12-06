@@ -55,14 +55,16 @@
                 <div class="input_wrap">
                   <label for="" class="label">이메일 주소</label>
                   <div class="input_block">
-                    <input type="text" placeholder="기본인풋">
+                    <input type="text" class="clearInput" placeholder="기본인풋">
+                    <div class="btnClear"></div>
                   </div>
                 </div>
 
                 <div class="input_wrap">
                   <label for="" class="label">이메일 주소</label>
                   <div class="input_block">
-                    <input type="email" placeholder="기본인풋" required>
+                    <input type="email" class="clearInput" placeholder="기본인풋" required>
+                    <div class="btnClear"></div>
                   </div>
                   <p class="input_info"></p>
                 </div>
@@ -70,7 +72,7 @@
             </div>
           </div>
 
-          <!-- 믹스 -->
+          <!-- input mix -->
           <div class="guide_block">
             <h3>mix input</h3>
             <div class="guide_data">
@@ -80,50 +82,94 @@
                 <div class="input_wrap">
                   <label for="" class="label">휴대폰 번호</label>
                   <div class="input_block mb_0_5">
-                    <input type="number" inputmode="numeric" placeholder="- 없이 번호만 입력해주세요">
-                    <button class="btn size_s color_white btn_abs countBtn">인증하기</button>
+                    <input type="number" class="clearInput inputCk" inputmode="numeric" placeholder="- 없이 번호만 입력해주세요" >
+                    <button class="btn size_s btn_abs countBtn">인증하기</button>
+                    <div class="btnClear"></div>
                   </div>
                   <div class="input_block">
-                    <input type="number" inputmode="numeric" placeholder="인증번호를 입력해주세요">
-                    <button class="btn size_s color_white btn_abs">확인</button>
+                    <input type="number" class="clearInput inputCk" inputmode="numeric" placeholder="인증번호를 입력해주세요">
+                    <button class="btn size_s btn_abs">확인</button>
                     <div class="time_count jst-timeout" data-minutes-left=3><span>03:00</span></div>
+                    <div class="btnClear type_s"></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
+          <!-- checkbox -->
+          <div class="guide_block">
+            <h3>checkbox | radio</h3>
+            <div class="guide_data">
+              <p class="title">.ip_checkbox</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="check_wrap">
+                  <input type="checkbox" class="ip_checkbox" id="check01">
+                  <label for="check01">
+                    <p class="checkbox"></p>
+                    <p class="label size_l">약관에 모두 동의합니다</p>
+                  </label>
+                </div>
+                
+                <div class="check_wrap">
+                  <input type="checkbox" class="ip_checkbox" id="check02" checked>
+                  <label for="check02">
+                    <p class="checkbox"></p>
+                    <p class="label">약관에 모두 동의합니다</p>
+                  </label>
+                </div>
 
+                <div class="check_wrap">
+                  <input type="checkbox" class="ip_checkbox" id="check03" disabled>
+                  <label for="check03">
+                    <p class="checkbox"></p>
+                    <p class="label">약관에 모두 동의합니다</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">.ip_radio</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="check_wrap">
+                  <input type="radio" class="ip_radio" id="radio01" name="radio">
+                  <label for="radio01">
+                    <p class="checkbox"></p>
+                    <p class="label">약관에 모두 동의합니다</p>
+                  </label>
+                </div>
+                
+                <div class="check_wrap">
+                  <input type="radio" class="ip_radio" id="radio02"  name="radio" checked>
+                  <label for="radio02">
+                    <p class="checkbox"></p>
+                    <p class="label">약관에 모두 동의합니다</p>
+                  </label>
+                </div>
+
+                <div class="check_wrap">
+                  <input type="radio" class="ip_radio" id="radio03"  name="radio" disabled>
+                  <label for="radio03">
+                    <p class="checkbox"></p>
+                    <p class="label">약관에 모두 동의합니다</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="../../js/jquery.min.js" ></script>
+    <script src="../../js/jquery.validate.min.js" ></script>
+
     <script>
-      // 인증 카운터
-      let timerStarted = false;
-
-      $(".countBtn").click(function(){
-        if (!timerStarted) {
-          $(".time_count span").hide()
-          timerStarted = true;
-
-          $('.time_count').startTimer({
-            onComplete: function(element) {
-              
-              $('html, body').addClass('bodyTimeoutBackground');
-            }
-          });
-        } 
-      })
-
-
-
-
-
       // /* ---- 삭제버튼 ------- */
       $(document).ready(function () {
-        $(".input_div").each(function () {
+        $(".input_block").each(function () {
           $(this)
             .find(".clearInput")
             .on("keyup focus", function () {
@@ -145,12 +191,33 @@
           $(this)
             .find(".btnClear")
             .on("click touchstart", function () {
-              $(this).closest(".input_div").find(".clearInput").val("");
-              $(this).closest(".input_div").find(".btnClear").attr("style", "opacity: 0");
+              $(this).closest(".input_block").find(".clearInput").val("");
+              $(this).closest(".input_block").find(".btnClear").attr("style", "opacity: 0");
               return false;
             });
         });
       });
+
+
+      // 인증 카운터
+      let timerStarted = false;
+
+      $(".countBtn").click(function(){
+        if (!timerStarted) {
+          $(".time_count span").hide()
+          timerStarted = true;
+
+          $('.time_count').startTimer({
+            onComplete: function(element) {
+              
+              $('html, body').addClass('bodyTimeoutBackground');
+            }
+          });
+        } 
+      })
+
+
+      
 
       /* 패스워드 */
       $(".pass_view").click(function () {

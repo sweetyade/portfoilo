@@ -123,6 +123,12 @@ button {
   &.type_social {
     padding-block: 11px;
   }
+
+  &.type_txt {
+    padding: 0;
+    background-color: transparent;
+    color: var(--gray-01);
+  }
 }
 
 .btn_fixed {
@@ -133,4 +139,22 @@ button {
   gap: 0.5rem;
   padding-inline: 1rem;
   z-index: var(--z-fixed);
+
+  .btn {
+    z-index: 1;
+  }
+
+  &.bg_trans::after {
+    content: "";
+    width: 100%;
+    height: 108px;
+    position: absolute;
+    bottom: -0.5rem;
+    background: linear-gradient(
+      0deg,
+      #fff 0%,
+      #fff 75.52%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
 }

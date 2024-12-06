@@ -27,33 +27,33 @@
     z-index: var(--z-modal);
     opacity: 1;
   }
+}
 
-  .contents {
-    width: 20rem;
-    padding: 1.5rem;
-    background-color: var(--gray-white);
-    position: fixed;
-    z-index: var(--z-modal);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 0.75rem;
+.pop_contents {
+  width: 20rem;
+  padding: 1.5rem;
+  background-color: var(--gray-white);
+  position: fixed;
+  z-index: var(--z-modal);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.75rem;
 
-    .title {
-      @include p2b;
-      padding-bottom: 0.75rem;
-    }
+  .title {
+    @include p2b;
+    padding-bottom: 0.75rem;
+  }
 
-    .txt {
-      @include p3;
-      color: var(--gray-01);
-    }
+  .txt {
+    @include p3;
+    color: var(--gray-01);
+  }
 
-    .popup_btn {
-      @include flexbtw;
-      gap: 0.5rem;
-      padding-top: 1rem;
-    }
+  .popup_btn {
+    @include flexbtw;
+    gap: 0.5rem;
+    padding-top: 1rem;
   }
 }
 
@@ -70,10 +70,51 @@
 
   &.open {
     opacity: 1;
-    z-index: 99;
+    z-index: var(--z-modal);
 
-    .modal_wrap {
+    .modal_contents {
       bottom: 0;
     }
+  }
+}
+
+.modal_contents {
+  position: fixed;
+  bottom: -100svh;
+  left: 0;
+  right: 0;
+  background-color: var(--gray-white);
+  z-index: var(--z-modal);
+  border-radius: 1.5rem 1.5rem 0 0;
+  transition: 0.3s;
+
+  .modal_title {
+    display: grid;
+    gap: 0.5rem;
+    padding: 2rem 1.25rem 0;
+
+    .title {
+      @include p1b;
+    }
+
+    .txt {
+      @include p3;
+      color: var(--gray-02);
+    }
+  }
+
+  .modal_con {
+    padding: 1rem 1.25rem;
+  }
+
+  .modal_btn {
+    display: grid;
+    gap: 1rem;
+    padding: 0 1rem 0.5rem;
+  }
+
+  .toast {
+    position: absolute;
+    top: -3.5rem;
   }
 }
