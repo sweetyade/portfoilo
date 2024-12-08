@@ -76,3 +76,86 @@
   transform: translateX(-50%);
   bottom: var(--b);
 }
+
+/* calendar */
+.calendar {
+  position: relative;
+
+  &-month {
+    @include span1b;
+    padding-left: 1.25rem;
+  }
+
+  &-toggle {
+    @include p5b;
+    color: var(--gray-01);
+    @include flexright;
+    gap: 0.125rem;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 1.25rem;
+
+    i {
+      width: 1.25rem;
+    }
+  }
+
+  &-con {
+    margin: 1rem auto 0;
+    width: 100%;
+    max-width: calc(100% - 3.75rem);
+    display: grid;
+    gap: 0.25rem;
+  }
+
+  &-day {
+    @include flexbtw;
+    padding-bottom: 0.125rem;
+
+    p {
+      width: 36px;
+      text-align: center;
+      @include span3;
+      color: var(--gray-02);
+    }
+  }
+
+  &-week {
+    .week_in {
+      @include flexbtw;
+    }
+
+    p {
+      width: 36px;
+      height: 36px;
+      @include flexcenter;
+      @include span2;
+      color: var(--gray-03);
+
+      &:last-child {
+        color: var(--system-red);
+      }
+    }
+
+    &.hide_week {
+      display: none;
+    }
+  }
+
+  .today {
+    color: var(--gray-black);
+  }
+}
+
+/* swiper 관련 */
+.swiper-pagination-fraction {
+  background: rgba(47, 47, 47, 0.6);
+  width: fit-content;
+  color: var(--gray-white);
+  padding: 0.25rem 0.625rem;
+  border-radius: 3rem;
+  @include span3;
+  right: 2rem;
+  left: initial;
+}

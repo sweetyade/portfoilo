@@ -11,6 +11,10 @@ body.open {
   @include p1b;
 }
 
+.section_subtitle {
+  @include h3;
+}
+
 .section_txt {
   padding-top: 0.75rem;
   @include p3;
@@ -101,6 +105,223 @@ body.open {
   margin-block: 0.5rem 1.5rem;
 }
 
-//* 체크박스 리스트 *//
-.ck_list {
+//* 약관 *//
+.terms_block {
+  .section_title {
+    padding-bottom: 0.75rem;
+  }
+
+  .section_subtitle {
+    padding-bottom: 0.75rem;
+  }
+
+  .txt {
+    @include p4;
+    color: var(--gray-01);
+  }
+
+  .terms_table {
+    width: 100%;
+    border-top: 1px solid var(--gray-04);
+    border-left: 1px solid var(--gray-04);
+
+    th {
+      background-color: var(--gray-04);
+      @include p4b;
+      color: var(--gray-01);
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--gray-04);
+      border-right: 1px solid var(--gray-04);
+      text-align: left;
+    }
+
+    td {
+      border-bottom: 1px solid var(--gray-04);
+      border-right: 1px solid var(--gray-04);
+      padding: 0.75rem 1rem;
+      @include p4;
+      color: var(--gray-01);
+    }
+  }
+
+  .select_wrap {
+    .optionList {
+      top: 3.25rem;
+    }
+  }
+}
+
+//* 홈 매안 *//
+.intake_friends {
+  position: relative;
+  padding: 1.25rem;
+
+  &-data {
+    width: 62px;
+  }
+  &-thumb {
+    width: 100%;
+    aspect-ratio: 1;
+    border: 2px solid rgba(25, 87, 25, 0.7);
+    border-radius: 50%;
+    padding: 2px;
+    overflow: hidden;
+  }
+  &-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--gray-03);
+    background-image: url(../images/system/user_fill_w.svg);
+    background-size: cover;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-name {
+    @include span4;
+    padding-top: 0.25rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  &-add {
+    width: 54px;
+
+    .intake_friends-thumb {
+      border: none;
+      cursor: pointer;
+      background-image: url(../images/img/add_circle.png);
+      background-size: cover;
+    }
+  }
+
+  &-msg {
+    position: absolute;
+    top: 1.25rem;
+    left: 10.75rem;
+    background-color: var(--primary-color);
+    color: var(--gray-white);
+    padding: 0.75rem 0.5rem 0.75rem 0.75rem;
+    width: 11rem;
+    @include flexbtw;
+    gap: 0.25rem;
+    border-radius: 0.5rem 0.125rem 0.125rem 0.125rem;
+    z-index: var(--z-tool);
+
+    i {
+      cursor: pointer;
+      width: 1.5rem;
+    }
+
+    .msg {
+      @include span3;
+      width: calc(100% - 1.75rem);
+      word-break: auto-phrase;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -0.5rem;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      background-color: var(--primary-color);
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+}
+
+.home_con {
+  display: grid;
+  gap: 2rem;
+
+  //오늘의 기록
+  .today_record {
+    padding-inline: 1.25rem;
+
+    .title {
+      @include h3;
+      padding-bottom: 1rem;
+    }
+
+    &-add {
+      width: 100%;
+      border-radius: 0.5rem;
+      padding: 1.75rem 1.25rem;
+      box-shadow: var(--shadow-s);
+
+      .icon {
+        width: 2.625rem;
+        height: 2.625rem;
+        margin: 0 auto;
+      }
+
+      .txt {
+        @include span2b;
+        color: var(--gray-02);
+        text-align: center;
+        padding-block: 1rem;
+      }
+    }
+  }
+
+  //롤링배너
+  .home_banner {
+    padding-inline: 1.25rem;
+    width: 100%;
+    overflow: hidden;
+
+    &-data {
+      border: 1px solid var(--gray-04);
+      border-radius: 0.5rem;
+      padding: 2.25rem 1.5rem 2.125rem;
+      background-repeat: no-repeat;
+      background-size: 7.5rem;
+      background-position: calc(100% - 1.25rem) center;
+
+      .title {
+        @include p6b;
+        padding-bottom: 0.375rem;
+      }
+
+      .txt {
+        @include p5;
+      }
+    }
+  }
+
+  //메뉴리스트
+  .home_menu {
+    display: grid;
+    gap: 2rem;
+    padding-inline: 1.25rem;
+
+    &-data {
+      .title {
+        @include p2b;
+        color: var(--gray-01);
+        padding-bottom: 1rem;
+      }
+    }
+
+    &-list {
+      display: grid;
+      gap: 0.5rem;
+      grid-template-columns: repeat(2, 1fr);
+
+      a {
+        @include span2b;
+        padding: 1.25rem 0.75rem;
+        text-align: center;
+        box-shadow: var(--shadow-add);
+        border-radius: 0.75rem 0 0 0;
+      }
+    }
+  }
 }

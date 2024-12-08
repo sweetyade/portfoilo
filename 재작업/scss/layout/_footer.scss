@@ -4,6 +4,9 @@
 .footer {
   background-color: var(--gray-05);
   padding-block: 2rem;
+  padding-bottom: 8rem;
+  position: relative;
+  z-index: 1;
 
   &-social {
     @include flex;
@@ -103,6 +106,7 @@
   background-color: var(--gray-white);
   @include flexbtw;
   border-top: 1px solid var(--gray-04);
+  z-index: var(--z-tool);
 
   .quick_group {
     width: calc((100% - 4.5rem) / 2);
@@ -162,6 +166,7 @@
       box-shadow: 1px -2px 2px 0px rgba(0, 0, 0, 0.1) inset;
       border-radius: 50%;
       transition: 0.2s;
+      cursor: pointer;
 
       img {
         width: 100%;
@@ -178,6 +183,10 @@
       }
     }
   }
+
+  &.active {
+    z-index: var(--z-modal);
+  }
 }
 
 .quick_full {
@@ -186,50 +195,63 @@
   opacity: 0;
   transition: all 0.3s;
 
+  .overlay {
+    top: 100%;
+  }
+
   .full_menu {
     position: fixed;
-    z-index: var(--z-fixed);
-    display: grid;
-    gap: 1rem;
+    z-index: var(--z-modal);
     left: 50%;
     bottom: 5.5rem;
-    transform: translateX(-50%);
+    transform: translate(-50%, 150%);
+    transition: transform 0.5s ease-in;
 
-    a {
+    &.loadup {
+      transform: translate(-50%, 0);
+
+      .quick_link {
+        bottom: 0;
+        animation: navwidth 1s ease-in;
+
+        &:first-child {
+          transition: bottom 0.75s ease-in-out;
+        }
+
+        &:nth-child(2) {
+          transition: bottom 0.5s ease-in-out;
+        }
+        .link_txt {
+          animation: navname 1s 0.2s linear;
+        }
+      }
+    }
+
+    .quick_link {
       background-color: var(--gray-white);
       max-width: 9.75rem;
       width: 41.6667vw;
-      border-radius: 100px;
-      @include flexcenter;
+      border-radius: 6.25rem;
       padding: 0.4375rem 1.25rem;
+      @include flex;
+      position: relative;
+      margin-top: 1rem;
+      transition: all 1s;
+      bottom: -100svh;
 
-      &.ani_add {
-        &:first-child {
-          animation: navquick_01 0.2s ease-in-out;
-        }
-
-        &:last-child {
-        }
+      .quick_icon {
+        max-width: 3.125rem;
+        width: 13.889vw;
       }
-
-      img {
-        width: 50px;
-        aspect-ratio: 1;
-
-        @include sd {
-          width: 13.9276vw;
-        }
-      }
-
-      p {
-        width: calc(100% - 3.125rem);
-        text-align: center;
-        @include span1b;
+      .link_txt {
         color: var(--gray-01);
-
-        @include sd {
-          width: calc(100% - 13.9276vw);
-        }
+        text-align: center;
+        width: calc(100% - 3.125rem);
+        white-space: nowrap;
+        transition: opacity 0.3s 1s;
+        @include span1b;
+        opacity: 1;
+        overflow: hidden;
       }
     }
   }
@@ -237,5 +259,9 @@
   &.open {
     z-index: var(--z-tool);
     opacity: 1;
+
+    .overlay {
+      top: 0;
+    }
   }
 }

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <meta name="description" content="약사와 상담하여 맞춤 영양제를 설계하고 섭취 리워드를 통해 꾸준한 섭취 습관을 만들어보세요.">
+    <meta name="keywords" content="핏타민, fitamin, 핏타민영양제, 건강기능식품, 맞춤영양제, 영양제정기배송, 영양제정기구독, 영양제추천, 퍼스널영양제, 핏타민영양제구독, 킥더허들, 맞춤비타민, 비타민정기구독, 하루영양제, 멀티팩영양제, 영양제상담, 영양제추천, 비타민추천, 약사추천영양제, 약사상담, 약사비타민, 약국영양제, 참약사, 섭취습관, 섭취기록, 섭취할인, 맞춤영양제구독서비스, 개인맞춤영양제, 핏타민스토어, 핏타민매장, 핏타민더현대서울, 핏타민더현대, fitaminstore">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="핏타민">
+    <meta property="og:title" content="약사가 상담하는 개인 맞춤 영양제 구독 서비스">
+    <meta property="og:url" content="https://fitamin.kr">
+    <meta property="og:description" content="약사와 상담하여 나만의 맞춤 영양제를 설계하고 섭취 기록을 통해 매일 건강해지는 습관을 만들어보세요.">
+    <meta property="og:image" content="../../images/og_img.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- favicon -->
+    <link rel="icon" href="../../images/favicon.ico" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>0-2-2-2.개인정보 수집동의</title>
+</head>
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="header-left"></div>
+    <h2 class="header-name"></h2>
+    <div class="header-right">
+      <button class="btn-icon" onclick="javascript:self.close();"><i class="ic_x"></i></button>
+    </div>
+  </header>
+  
+  <main id="main" class="main">
+    <section class="contents list_2 b_m">
+      <div class="terms_block">
+        <div class="select_wrap mb_1_5">
+          <button class="selectBtn optSlt" id="">2022.11.18</button>
+          <ul class="optionList">
+            <li class="optionItem">2022.11.18</li>
+            <li class="optionItem">2022.05.18</li>
+            <li class="optionItem">2021.12.18</li>
+          </ul>
+        </div>
+
+        <h3 class="section_title" style="padding-bottom: 0;">개인정보 수집 및 이용동의</h3>
+      </div>
+      
+      <div class="terms_block">
+        <p class="section_subtitle">1. 민감정보 수집 및 이용 목적</p>
+        <p class="txt">
+          서비스 이용, 설문을 바탕으로 한 맞춤 서비스 제공, 민감의료정보를 통한 맞춤 건강 관리 서비스 제공, 
+          처방전/약봉투 등을 바탕으로 한 복용 약물 검토, 개인 맞춤형 건강기능식품 제안, 
+          맞춤 건강 정보 제공, 건강 관리 서비스 제공, 서비스 개선 및 신규 서비스 개발, 
+          연구 및 시장조사 목적, 마케팅 및 광고에 활용 등
+        </p>
+      </div>
+
+      <div class="terms_block">
+        <p class="section_subtitle">2. 민감정보 수집 항목</p>
+        <p class="txt">
+          생년, 성별, 키, 몸무게, 건강목표, 건강습관, 식습관, 생활습관, 의료정보, 복용의약품, 
+          처방전 내역(질환코드, 방문병원, 처방약제, 투약기록, 방문 날짜), 알러지, 개인이 작성한 
+          기타 문의 사항, 약사 상담 내용, 화상 상담 정보, 대면 상담 정보 등
+        </p>
+      </div>
+
+      <div class="terms_block">
+        <p class="section_subtitle">3. 민감정보 보유 및 이용기간</p>
+        <p class="txt">
+          이용자의 민감정보는 서비스 이용 시작일부터 서비스 제공기간 동안에만 제한적으로 이용하고 있습니다. 
+          그리고 관계 법령의 규정에 따라 일정한 기간 동안 회원정보를 보관하며 자세한 내용은 
+          <개인정보 처리방침> 제2조와 같습니다.
+        </p>
+      </div>
+
+      <div class="terms_block">
+        <p class="section_subtitle">4. 동의를 거부할 권리</p>
+        <p class="txt">
+          이용자는 본 민감정보 수집 및 이용에 대해 동의를 거부할 권리가 있으며, 
+          동의 거부 시에는 회원가입 및 서비스 이용이 제한될 수 있습니다.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../js/jquery.min.js" ></script>
+
+  <script>
+    //* ====== 셀렉트 ====== *//
+    const label = document.querySelectorAll(".selectBtn");
+      label.forEach(function (lb) {
+        lb.addEventListener("click", (e) => {
+          let optionList = lb.nextElementSibling;
+          let optionItems = optionList.querySelectorAll(".optionItem");
+          clickLabel(lb, optionItems);
+        });
+      });
+      const clickLabel = (lb, optionItems) => {
+        if (lb.parentNode.classList.contains("active")) {
+          lb.parentNode.classList.remove("active");
+          optionItems.forEach((opt) => {
+            opt.removeEventListener("click", () => {
+              handleSelect(lb, opt);
+            });
+          });
+        } else {
+          lb.parentNode.classList.add("active");
+          optionItems.forEach((opt) => {
+            opt.addEventListener("click", () => {
+              handleSelect(lb, opt);
+            });
+          });
+        }
+      };
+      const handleSelect = (label, item) => {
+        label.innerHTML = item.textContent;
+        label.parentNode.classList.remove("active");
+        label.classList.add("optSlt");
+      };
+
+  </script>
+</body>
+</html>
+      

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <meta name="description" content="약사와 상담하여 맞춤 영양제를 설계하고 섭취 리워드를 통해 꾸준한 섭취 습관을 만들어보세요.">
+    <meta name="keywords" content="핏타민, fitamin, 핏타민영양제, 건강기능식품, 맞춤영양제, 영양제정기배송, 영양제정기구독, 영양제추천, 퍼스널영양제, 핏타민영양제구독, 킥더허들, 맞춤비타민, 비타민정기구독, 하루영양제, 멀티팩영양제, 영양제상담, 영양제추천, 비타민추천, 약사추천영양제, 약사상담, 약사비타민, 약국영양제, 참약사, 섭취습관, 섭취기록, 섭취할인, 맞춤영양제구독서비스, 개인맞춤영양제, 핏타민스토어, 핏타민매장, 핏타민더현대서울, 핏타민더현대, fitaminstore">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="핏타민">
+    <meta property="og:title" content="약사가 상담하는 개인 맞춤 영양제 구독 서비스">
+    <meta property="og:url" content="https://fitamin.kr">
+    <meta property="og:description" content="약사와 상담하여 나만의 맞춤 영양제를 설계하고 섭취 기록을 통해 매일 건강해지는 습관을 만들어보세요.">
+    <meta property="og:image" content="../../images/og_img.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- favicon -->
+    <link rel="icon" href="../../images/favicon.ico" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>0-2-2-3.마케팅 정보 수신동의</title>
+</head>
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="header-left"></div>
+    <h2 class="header-name"></h2>
+    <div class="header-right">
+      <button class="btn-icon" onclick="javascript:self.close();"><i class="ic_x"></i></button>
+    </div>
+  </header>
+  
+  <main id="main" class="main">
+    <section class="contents list_2 b_m">
+      <div class="terms_block">
+        <div class="select_wrap mb_1_5">
+          <button class="selectBtn optSlt" id="">2022.11.18</button>
+          <ul class="optionList">
+            <li class="optionItem">2022.11.18</li>
+            <li class="optionItem">2022.05.18</li>
+            <li class="optionItem">2021.12.18</li>
+          </ul>
+        </div>
+
+        <h3 class="section_title">마케팅 정보 수신동의</h3>
+
+        <p class="txt">
+          “핏타민”은 회원가입 시 수집된 개인정보를 이용하여 탈퇴 시까지 다음과 같은 목적으로 본인에게 정보, 
+          광고를 문자메세지, 카카오톡, 이메일, 우편, 전화, 앱푸시 등의 방법으로 전달합니다.<br>
+          - 신규 서비스(제품) 개발 및 맞춤 서비스 제공<br>
+          - 이벤트 및 광고성 정보 제공 및 참여기회 제공<br>
+          - 인구통계학적 특성에 따른 서비스 제공 및 광고 게재<br>
+          - 서비스의 유효성 확인<br>
+          - 접속빈도 파악 또는 회원의 서비스 이용에 대한 통계 등 개인정보보호법 제22조 제4항에 의해 
+          동의하지 않을 권리가 있으며, 동의하지 않는 경우에도 회원 가입 및 서비스 이용이 가능합니다. 
+          단, 할인, 이벤트 등의 마케팅 정보안내 서비스가 제한될 수 있습니다.“핏타민”은 의무적으로 
+          안내가 필요한 정보성 내용(회원가입, 예약 내역, 구독, 배송 등)에 대해서는 수신동의 여부와 
+          무관하게 제공합니다.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../js/jquery.min.js" ></script>
+
+  <script>
+    //* ====== 셀렉트 ====== *//
+    const label = document.querySelectorAll(".selectBtn");
+      label.forEach(function (lb) {
+        lb.addEventListener("click", (e) => {
+          let optionList = lb.nextElementSibling;
+          let optionItems = optionList.querySelectorAll(".optionItem");
+          clickLabel(lb, optionItems);
+        });
+      });
+      const clickLabel = (lb, optionItems) => {
+        if (lb.parentNode.classList.contains("active")) {
+          lb.parentNode.classList.remove("active");
+          optionItems.forEach((opt) => {
+            opt.removeEventListener("click", () => {
+              handleSelect(lb, opt);
+            });
+          });
+        } else {
+          lb.parentNode.classList.add("active");
+          optionItems.forEach((opt) => {
+            opt.addEventListener("click", () => {
+              handleSelect(lb, opt);
+            });
+          });
+        }
+      };
+      const handleSelect = (label, item) => {
+        label.innerHTML = item.textContent;
+        label.parentNode.classList.remove("active");
+        label.classList.add("optSlt");
+      };
+
+  </script>
+</body>
+</html>
+      

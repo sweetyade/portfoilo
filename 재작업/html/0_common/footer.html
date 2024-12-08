@@ -24,54 +24,7 @@
     <title>footer</title>
 </head>
 <body>
-
-    <!-- 하단 픽스 나비 -->
-    <div class="footer-quick">
-      <div class="quick_group">
-        <a href="javascript:void(0)" class="active">
-          <i class="ic_navhome"></i>
-          <p>홈</p>
-        </a>
-        <a href="javascript:void(0)" class="">
-          <i class="ic_navqna"></i>
-          <p>약사상담</p>
-        </a>
-      </div>
-
-      <div class="quick_group">
-        <a href="javascript:void(0)" class="">
-          <i class="ic_navchallenge"></i>
-          <p>챌린지</p>
-        </a>
-        <a href="javascript:void(0)" class="">
-          <i class="ic_navstore"></i>
-          <p>스토어</p>
-        </a>
-      </div>
-
-      <div class="quick_center">
-        <div class="center_btn">
-          <img src="../../images/common/navBtn.svg" alt="">
-        </div>
-      </div>
-
-      <!-- 오픈 메뉴 -->
-      <div class="quick_full">
-        <div class="overlay"></div>
-        
-        <div class="full_menu">
-          <a href="javascript:void(0)">
-            <img src="../../images/common/open_nav02.svg" alt="">
-            <p>영양제</p>
-          </a>
-          <a href="javascript:void(0)">
-            <img src="../../images/common/open_nav01.svg" alt="">
-            <p>챌린지</p>
-          </a>
-        </div>
-      </div>
-    </div>
-
+    <!-- footer -->
     <footer id="footer" class="footer">
       <!-- 하단 푸터인포 -->
       <div class="inner_1_25">
@@ -151,6 +104,53 @@
       </div>
     </footer>
 
+    <!-- 하단 픽스 나비 -->
+    <div class="footer-quick">
+      <div class="quick_group">
+        <a href="javascript:void(0)" class="active">
+          <i class="ic_navhome"></i>
+          <p>홈</p>
+        </a>
+        <a href="javascript:void(0)" class="">
+          <i class="ic_navqna"></i>
+          <p>약사상담</p>
+        </a>
+      </div>
+
+      <div class="quick_group">
+        <a href="javascript:void(0)" class="">
+          <i class="ic_navchallenge"></i>
+          <p>챌린지</p>
+        </a>
+        <a href="javascript:void(0)" class="">
+          <i class="ic_navstore"></i>
+          <p>스토어</p>
+        </a>
+      </div>
+
+      <div class="quick_center">
+        <div class="center_btn">
+          <img src="../../images/common/navBtn.svg" alt="">
+        </div>
+      </div>
+
+      <!-- 오픈 메뉴 -->
+      <div class="quick_full">
+        <div class="overlay"></div>
+        
+        <div class="full_menu">
+          <a href="javascript:void(0)">
+            <img src="../../images/common/open_nav02.svg" alt="">
+            <p>영양제</p>
+          </a>
+          <a href="javascript:void(0)">
+            <img src="../../images/common/open_nav01.svg" alt="">
+            <p>챌린지</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
     <!-- script -->
     <script src="../../js/jquery.min.js"></script>
     <script>
@@ -161,6 +161,7 @@
 
       $(".center_btn").click(function(){
         $(this).toggleClass("active");
+        $(".footer-quick").toggleClass("active");
         $(".quick_full").toggleClass("open")
         $(".full_menu a").toggleClass("ani_add")
       })

@@ -118,6 +118,7 @@ input[type="radio"] {
   display: none;
 }
 
+//* checkbox *//
 .check_wrap {
   label {
     @include flex;
@@ -175,6 +176,94 @@ input[type="radio"] {
   gap: 0.25rem;
 }
 
+.select_wrap {
+  position: relative;
+  width: 100%;
+
+  .overlay {
+    opacity: 0;
+    z-index: -1;
+  }
+  label {
+    @include span2;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .selectBtn {
+    background-image: url(../images/system/down_gray.svg);
+    background-color: var(--gray-05);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 0.75rem) center;
+    border-radius: 0.5rem;
+    color: var(--gray-03);
+    padding: 1rem 0.75rem;
+    text-align: left;
+    width: 100%;
+    @include span2;
+
+    &.optSlt {
+      color: var(--gray-black);
+    }
+  }
+
+  .optionList {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 4.5rem;
+
+    transition: all 0.5s ease-in;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 10;
+
+    .optionItem {
+      border-bottom: 1px solid var(--gray-04);
+      border-right: 1px solid var(--gray-04);
+      border-left: 1px solid var(--gray-04);
+      color: var(--gray-01);
+      @include span2;
+      padding: 1rem 0.75rem;
+      cursor: pointer;
+      background-color: var(--gray-white);
+      transition: 0.2s;
+
+      &:first-child {
+        border-top: 1px solid var(--gray-04);
+        border-radius: 0.5rem 0.5rem 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 0 0.5rem 0.5rem;
+      }
+
+      &:hover {
+        background-color: var(--gray-05);
+      }
+    }
+  }
+
+  &.active {
+    .overlay {
+      opacity: 1;
+      z-index: 9;
+    }
+    .selectBtn {
+      background-image: url(../images/system/top_gray.svg);
+    }
+
+    .optionList {
+      max-height: 500px;
+    }
+
+    .optionmodal {
+      bottom: 0;
+    }
+  }
+}
+
+// input option
 .btnClear {
   position: absolute;
   top: 0.45rem;
