@@ -78,21 +78,7 @@
 
 @media (max-width: 359px) {
   :root {
-    --h1-f: 6.6852vw;
-    --h2-f: 5.571vw;
-    --h3-f: 5.0139vw;
-    --p1-f: 5.571vw;
-    --p2-f: 4.178vw;
-    --p3-f: 3.8997vw;
-    --p4-f: 3.6212vw;
-    --p5-f: 3.3426vw;
-    --p6-f: 5.0139vw;
-    --span1-f: 4.178vw;
-    --span2-f: 3.6212vw;
-    --span3-f: 3.3426vw;
-    --span4-f: 2.7855vw;
-    --misc1-f: 4.1783vw;
-    --misc2-f: 3.6212vw;
+    font-size: 4.4vw;
   }
 }
 /* mediaquery */
@@ -285,6 +271,22 @@ button {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes width {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: var(--w);
+  }
+}
+@keyframes widthfull {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
   }
 }
 /***************************************************************
@@ -578,6 +580,9 @@ button {
   position: relative;
   height: 100svh;
   background-color: var(--gray-white);
+}
+.fullpage.bg_dark {
+  background-color: #111;
 }
 
 .header + .fullpage {
@@ -1104,6 +1109,34 @@ i {
   background-image: url(../images/system/color_coin.svg);
 }
 
+.ic_right {
+  background-image: url(../images/system/right.svg);
+}
+
+.ic_sun {
+  background-image: url(../images/icon/sun.svg);
+}
+
+.ic_sun_gray {
+  background-image: url(../images/icon/sun_gray.svg);
+}
+
+.ic_moon {
+  background-image: url(../images/icon/moon.svg);
+}
+
+.ic_moon_gray {
+  background-image: url(../images/icon/moon_gray.svg);
+}
+
+.ic_send {
+  background-image: url(../images/system/sendBtn.svg);
+}
+
+.ic_send_disabled {
+  background-image: url(../images/system/sendBtn_disabled.svg);
+}
+
 /***************************************************************
     08. buttons
 ***************************************************************/
@@ -1244,6 +1277,13 @@ button:disabled {
   position: absolute;
   bottom: -0.5rem;
   background: linear-gradient(0deg, #fff 0%, #fff 75.52%, rgba(255, 255, 255, 0) 100%);
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.25rem;
 }
 
 /***************************************************************
@@ -1543,13 +1583,25 @@ input[type=radio] {
     09. components
 ***************************************************************/
 .swiper-pagination-bullet {
-  width: 5px;
-  height: 5px;
+  width: 0.3125rem;
+  height: 0.3125rem;
   color: var(--gray-04);
 }
 
 .swiper-pagination-bullet-active {
   background-color: var(--gray-black);
+}
+
+.more_btn {
+  font-size: var(--p5-f);
+  line-height: var(--line-h);
+  color: var(--gray-01);
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+}
+.more_btn i {
+  width: 1.25rem;
 }
 
 .tooltip {
@@ -1563,7 +1615,7 @@ input[type=radio] {
   padding: 0.375rem 0.75rem;
   border-radius: 3rem;
   background-color: var(--gray-black);
-  animation: tootip 1s ease-in-out infinite;
+  animation: tootip 1.25s ease-in-out infinite;
 }
 .tooltip p::after {
   content: "";
@@ -1575,6 +1627,9 @@ input[type=radio] {
   z-index: -1;
   bottom: -0.5rem;
   transform: rotate(45deg) translateX(-50%);
+}
+.tooltip p.left::after {
+  left: 1.5rem;
 }
 
 .rounded_box {
@@ -1643,22 +1698,28 @@ input[type=radio] {
 }
 .calendar-toggle i {
   width: 1.25rem;
+  transition: 0.2s;
+}
+.calendar-toggle.toggleOpen i {
+  transform: rotate(180deg);
 }
 .calendar-con {
   margin: 1rem auto 0;
   width: 100%;
-  max-width: calc(100% - 3.75rem);
   display: grid;
-  gap: 0.25rem;
+  gap: 10px;
 }
 .calendar-day {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 0.125rem;
+  width: 100%;
+  max-width: calc(100% - 3.75rem);
+  margin: 0 auto;
 }
 .calendar-day p {
-  width: 36px;
+  width: 30px;
   text-align: center;
   font-size: var(--span3-f);
   color: var(--gray-02);
@@ -1667,18 +1728,142 @@ input[type=radio] {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: calc(100% - 3.75rem);
+  margin: 0 auto;
 }
 .calendar-week p {
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: var(--span2-f);
+  font-size: var(--span3-f);
   color: var(--gray-03);
+  position: relative;
+  z-index: 1;
 }
 .calendar-week p:last-child {
-  color: var(--system-red);
+  color: var(--system-red-06);
+}
+.calendar-week p.today {
+  border: 0.125rem solid var(--primary-color);
+  border-radius: 50%;
+}
+.calendar-week p.today.done {
+  background-color: var(--primary-color);
+  color: var(--gray-white);
+}
+.calendar-week p.start {
+  background-color: var(--primary-color);
+  border-radius: 50% 0 0 50%;
+  color: var(--gray-white);
+}
+.calendar-week p.start::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  aspect-ratio: 1;
+  background-color: var(--primary-color);
+  left: -4px;
+  z-index: -1;
+  border-radius: 50%;
+}
+.calendar-week p.start::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 5vw;
+  background-color: var(--primary-color);
+  right: -5vw;
+  z-index: -1;
+}
+@media (max-device-width: 359px) {
+  .calendar-week p.start::after {
+    width: 2.5vw;
+    right: -2.5vw;
+  }
+}
+.calendar-week p.end {
+  background-color: var(--primary-color);
+  border-radius: 0 50% 50% 0;
+  color: var(--gray-white);
+}
+.calendar-week p.end::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 5vw;
+  background-color: var(--primary-color);
+  left: -5vw;
+  z-index: -1;
+}
+@media (max-device-width: 359px) {
+  .calendar-week p.end::before {
+    width: 2.5vw;
+    left: -2.5vw;
+  }
+}
+.calendar-week p.end::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  aspect-ratio: 1;
+  background-color: var(--primary-color);
+  right: -4px;
+  z-index: -1;
+  border-radius: 50%;
+}
+.calendar-week p.ing {
+  background-color: var(--primary-color);
+  color: var(--gray-white);
+}
+.calendar-week p.ing::before, .calendar-week p.ing::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 5vw;
+  background-color: var(--primary-color);
+  z-index: -1;
+}
+@media (max-device-width: 359px) {
+  .calendar-week p.ing::before, .calendar-week p.ing::after {
+    width: 2.5vw;
+  }
+}
+.calendar-week p.ing::before {
+  left: -5vw;
+}
+@media (max-device-width: 359px) {
+  .calendar-week p.ing::before {
+    left: -2.5vw;
+  }
+}
+.calendar-week p.ing::after {
+  right: -5vw;
+}
+@media (max-device-width: 359px) {
+  .calendar-week p.ing::after {
+    right: -2.5vw;
+  }
+}
+.calendar-week p.fail::after {
+  content: "";
+  background-image: url(../images/system/cal_fail.svg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  opacity: 0.6;
+}
+.calendar-week p:first-child.end::before, .calendar-week p:first-child.ing::before {
+  width: 10vw;
+  left: -10vw;
+}
+.calendar-week p:last-child.start::after, .calendar-week p:last-child.start::after {
+  width: 10vw;
+  right: -10vw;
 }
 .calendar-week.hide_week {
   display: none;
@@ -1698,6 +1883,211 @@ input[type=radio] {
   font-size: var(--span3-f);
   right: 2rem;
   left: initial;
+}
+
+.my_level {
+  width: 100%;
+  padding-inline: 1.25rem;
+}
+.my_level-data {
+  border-radius: 0.5rem;
+  padding: 1.5rem 1rem;
+  position: relative;
+  box-shadow: var(--shadow-s);
+}
+.my_level .more_btn {
+  position: absolute;
+  right: 1rem;
+  top: 1.5rem;
+}
+.my_level-con {
+  margin-block: 0.25rem 1.25rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.my_level-con .txt {
+  font-size: var(--p6-f);
+  line-height: var(--line-h);
+  font-weight: var(--bold-f);
+  padding-top: 0.875rem;
+}
+.my_level-icon {
+  margin-right: 0.625rem;
+  width: 4.875rem;
+  height: 5.625rem;
+  background-image: url(../images/icon/lv0.svg);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+.my_level-prg {
+  position: relative;
+}
+.my_level-prg .txt {
+  font-size: var(--p4-f);
+  line-height: var(--line-h);
+  color: var(--gray-01);
+  padding-bottom: 0.5rem;
+}
+.my_level-prg .icon {
+  width: 1.25rem;
+  height: 1.5625rem;
+  background-image: url(../images/icon/lv1.svg);
+  background-position: center;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  bottom: 0.625rem;
+}
+.my_level-prg .progress {
+  background-color: var(--gray-04);
+  height: 0.375rem;
+  width: calc(100% - 0.5rem);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+.my_level-prg .progress .bar {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  top: 0;
+  background-color: var(--primary-color);
+  border-radius: 999px;
+  width: var(--w);
+  animation: width 1.5s ease-in-out;
+}
+
+.label {
+  font-size: var(--span4-f);
+  padding: 0.125rem 0.25rem 1px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.label.color_primary_ap {
+  background-color: var(--primary-01);
+  color: var(--primary-color);
+}
+.label.color_gray_ap {
+  background-color: var(--gray-05);
+  color: var(--gray-02);
+}
+
+.recoard_item {
+  border-radius: 0.5rem;
+  background-color: var(--gray-white);
+  box-shadow: var(--shadow-add);
+  padding: 1.375rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.recoard_item i {
+  width: 2rem;
+}
+.recoard_item .data {
+  width: calc(100% - 2.5rem);
+}
+.recoard_item .data .title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.recoard_item .data .title p {
+  font-size: var(--span1-f);
+  font-weight: var(--bold-f);
+}
+.recoard_item .data .txt {
+  font-size: var(--span3-f);
+  color: var(--gray-02);
+  padding-top: 0.5rem;
+}
+
+.noti {
+  padding: 0.75rem 1rem;
+  width: 100%;
+  display: block;
+}
+.noti .txt {
+  font-size: var(--span3-f);
+}
+.noti.color_black {
+  background-color: var(--gray-black);
+  color: var(--gray-white);
+}
+.noti.color_black.type_link {
+  background-image: url(../images/system/right_gray.svg);
+  background-size: 1.25rem;
+  background-position: calc(100% - 1rem) center;
+  background-repeat: no-repeat;
+}
+
+.rolling_noti {
+  height: 2rem;
+  width: 100%;
+}
+.rolling_noti .data {
+  background-color: var(--primary-005);
+  font-size: var(--p4-f);
+  line-height: var(--line-h);
+  color: var(--gray-01);
+  text-align: center;
+  padding: 0.375rem 1rem;
+  border-radius: 0.25rem;
+  height: 2rem;
+}
+.rolling_noti .data strong {
+  font-weight: var(--bold-f);
+}
+
+.user_info {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.user_info.size_s .thumb {
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 50%;
+  background-color: var(--gray-05);
+  overflow: hidden;
+}
+.user_info.size_s .thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.user_info.size_s .name {
+  font-size: var(--span3-f);
+  font-weight: var(--bold-f);
+}
+
+.chat_input {
+  width: 100%;
+  padding-inline: 1rem;
+  height: 4.625rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-top: 1px solid var(--gray-05);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.chat_input .input_block {
+  width: calc(100% - 3.25rem);
+}
+.chat_input .sendBtn {
+  width: 2.5rem;
+  cursor: pointer;
+}
+.chat_input .tooltip {
+  top: -1.875rem;
 }
 
 /***************************************************************
@@ -1873,11 +2263,11 @@ input[type=radio] {
   font-size: var(--span2-f);
   font-weight: var(--bold-f);
   background-image: url(../images/system/color_coin.svg);
-  background-size: 18px;
+  background-size: 1.125rem;
   background-repeat: no-repeat;
   background-position: lect center;
-  padding-left: 25px;
-  line-height: 18px;
+  padding-left: 1.5625rem;
+  line-height: 1.125rem;
 }
 
 /***************************************************************
@@ -1896,7 +2286,7 @@ input[type=radio] {
   gap: 0.5rem;
 }
 .footer-social a {
-  width: 28px;
+  width: 1.75rem;
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: var(--gray-03);
@@ -1959,7 +2349,7 @@ input[type=radio] {
 .footer-lnb a::before {
   content: "";
   width: 1px;
-  height: 10px;
+  height: 0.625rem;
   background-color: var(--gray-02);
   position: absolute;
   left: -0.5rem;
@@ -1993,7 +2383,7 @@ input[type=radio] {
   width: 50%;
 }
 .footer-quick .quick_group a i {
-  width: 20px;
+  width: 1.25rem;
   margin: 0 auto 0.5rem;
 }
 @media (max-device-width: 359px) {
@@ -2035,7 +2425,7 @@ input[type=radio] {
   aspect-ratio: 1;
   background-color: var(--gray-white);
   padding: 0.1875rem;
-  box-shadow: 1px -2px 2px 0px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 1px -0.125rem 0.125rem 0px rgba(0, 0, 0, 0.1) inset;
   border-radius: 50%;
   transition: 0.2s;
   cursor: pointer;

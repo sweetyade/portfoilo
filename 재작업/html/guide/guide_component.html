@@ -10,9 +10,31 @@
   </head>
 
   <style>
+    .tooltip{
+      position: relative
+    }
+
    .toast{
     position: relative;
     max-width: 360px;
+   }
+
+   .calendar{
+    width: 100%;
+   }
+
+   .recoard_item{
+    width: 100%;
+   }
+   .recoard_item .data{
+    padding: 0 !important;
+    border: none !important;
+   }
+
+   .rolling_noti .data{
+    padding: 0.375rem 1rem !important;
+    border: none !important;
+    
    }
   </style>
   <body>
@@ -67,141 +89,212 @@
             </div>
           </div>
 
+          <!-- rounded_box -->
+          <div class="guide_block">
+            <h3>rounded_box</h3>
+            <div class="guide_data">
+              <p class="title">.rounded_box</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="rounded_box bg_gray">
+                  <p class="title">이메일</p>
+                  <p class="txt">fitamin@kthd.co.kr</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- calendar -->
+          <div class="guide_block">
+            <h3>calendar</h3>
+            <div class="guide_data">
+              <p class="title">.calendar</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="calendar">
+                  <p class="calendar-month">3월 4주차</p>
+                  <div class="calendar-con">
+                    <div class="calendar-day">
+                      <p>월</p>
+                      <p>화</p>
+                      <p>수</p>
+                      <p>목</p>
+                      <p class="today">오늘</p>
+                      <p>토</p>
+                      <p>일</p>
+                    </div>
+                    <div class="calendar-week hide_week">
+                      <div class="week_in">
+                        <p>1</p>
+                        <p class="start">2</p>
+                        <p class="ing">3</p>
+                        <p class="ing">4</p>
+                        <p class="end">5</p>
+                        <p>6</p>
+                        <p class="start">7</p>
+                      </div>
+                    </div>
+                    <div class="calendar-week hide_week">
+                      <div class="week_in">
+                        <p class="ing">8</p>
+                        <p class="end">9</p>
+                        <p class="fail">10</p>
+                        <p class="start">11</p>
+                        <p class="end">12</p>
+                        <p>13</p>
+                        <p class="start">14</p>
+                      </div>
+                    </div>
+                    <div class="calendar-week hide_week">
+                      <div class="week_in">
+                        <p>15</p>
+                        <p>16</p>
+                        <p>17</p>
+                        <p>18</p>
+                        <p>19</p>
+                        <p>20</p>
+                        <p>21</p>
+                      </div>
+                    </div>
+                    <div class="calendar-week this_week">
+                      <div class="week_in">
+                        <p class="end">22</p>
+                        <p>23</p>
+                        <p>24</p>
+                        <p>25</p>
+                        <p class="today">26</p>
+                        <p class="today done">27</p>
+                        <p>28</p>
+                      </div>
+                    </div>
+                    <div class="calendar-week hide_week">
+                      <div class="week_in">
+                        <p>29</p>
+                        <p class="fail">30</p>
+                        <p>31</p>
+                        <p class="next_month">1</p>
+                        <p class="next_month">2</p>
+                        <p class="next_month">3</p>
+                        <p class="next_month">4</p>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="calendar-toggle">
+                    <span>전체보기</span>
+                    <i class="ic_down_gray"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- label -->
+          <div class="guide_block">
+            <h3>label</h3>
+            <div class="guide_data">
+              <p class="title">.label</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <p class="label color_primary_ap">라벨아이콘</p>
+                <p class="label color_gray_ap">라벨아이콘</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- recoard_item -->
+          <div class="guide_block">
+            <h3>recoard_item</h3>
+            <div class="guide_data">
+              <p class="title">.recoard_item</p>
+              <div class="data flex" style="gap: 1rem; flex-direction: column;">
+                <div class="recoard_item">
+                  <i class="ic_sun"></i>
+                  <div class="data">
+                    <div class="title">
+                      <p>오후 07:00</p>
+                      <span class="label color_primary_ap">기록가능</span>
+                    </div>
+                    <p class="txt">피토틱스 옐로우 외 12개</p>
+                  </div>
+                </div>
+
+                <div class="recoard_item">
+                  <i class="ic_moon"></i>
+                  <div class="data">
+                    <div class="title">
+                      <p>오후 07:00</p>
+                      <span class="label color_primary_ap">기록가능</span>
+                    </div>
+                    <p class="txt">피토틱스 옐로우 외 12개</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- noti -->
+          <div class="guide_block">
+            <h3>noti</h3>
+            <div class="guide_data">
+              <p class="title">.noti</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="noti color_black">
+                  <p class="txt">공지사항 한줄</p>
+                </div>
+                <a href="javascript:void(0)" class="noti color_black type_link">
+                  <p class="txt">공지사항 한줄</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- rolling noti -->
+          <div class="guide_block">
+            <h3>rolling_noti</h3>
+            <div class="guide_data">
+              <p class="title">.rolling_noti</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="swiper rolling_noti mt_1">
+                  <div class="swiper-wrapper">
+                    <p class="swiper-slide data">
+                      📢 지금 임*현 님이 <strong><span class="system_red">Lv. 5</span>로 레벨업</strong> 되었어요!
+                    </p>
+                    <p class="swiper-slide data">
+                      📢 지금 임*현 님이 <strong><span class="system_red">Lv. 5</span>로 레벨업</strong> 되었어요!
+                    </p>
+                    <p class="swiper-slide data">
+                      📢 지금 임*현 님이 <strong><span class="system_red">Lv. 5</span>로 레벨업</strong> 되었어요!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <script src="../../js/jquery.min.js"></script>
       <script src="../../js/swiper-bundle.min.js"></script>
       <script>
-        //시간설정 슬라이드
-        var timeSetting = new Swiper(".slide_day, .slide_min", {
-          direction: "vertical",
-          spaceBetween: 4,
-          slidesPerView: 3,
-          centeredSlides: true,
-          initialSlide: 1,
-        });
-
-        var timeSetting2 = new Swiper(".slide_time", {
-          direction: "vertical",
-          spaceBetween: 4,
-          slidesPerView: 3,
-          centeredSlides: true,
-          initialSlide: 4,
-        });
-
-        //별점
-        var stars = document.querySelectorAll(".rank_star");
-        function togglestar(data) {
-          for (let i = 0; i < stars.length; i++) {
-            stars[i].classList.remove("star_on");
+        //달력
+        $(".calendar-toggle").click(function () { 
+          $(".hide_week").slideToggle().toggleClass("open")
+          $(this).toggleClass("toggleOpen")
+          if($(".hide_week").hasClass("open")){
+            $(".calendar-month").text("3월")
+            $(this).find("span").text("접기")
+          }else{
+            $(".calendar-month").text("3월 1주차")
+            $(this).find("span").text("전체보기")
           }
+        })
 
-          for (let i = 0; i < data; i++) {
-            stars[i].classList.add("star_on");
-          }
-        }
-
-        //이미지추가
-        var addimg = new Swiper(".addfile_slide", {
-          slidesPerView: "auto",
+        //rolling noti
+        var rollingnoti = new Swiper(".rolling_noti", {
           spaceBetween: 8,
+          direction: "vertical",
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
         });
-
-        //추가된 이미지 삭제
-        $(".deleteImg").click(function () {
-          $(this)
-            .parents(".img_list")
-            .fadeOut(function () {
-              $(this).delay(1000).remove();
-            });
-        });
-
-        //탭메뉴
-        var tabmenu = new Swiper(".tab_menu", {
-          slidesPerView: "auto",
-        });
-
-        $(".tab_menu")
-          .find(".tab_btn")
-          .click(function () {
-            $(this).addClass("active");
-            $(this).siblings().removeClass("active");
-          });
-
-        var tabBtn = $(".tab_menu .tab_btn");
-        var tabCont = $(".tab_con");
-
-        tabCont.hide().eq(0).show();
-
-        tabBtn.click(function () {
-          var target = $(this);
-          var index = target.index();
-          // alert(index);
-          tabBtn.removeClass("active");
-          target.addClass("active");
-          tabCont.css("display", "none");
-          tabCont.eq(index).css("display", "block");
-        });
-
-        //소트메뉴
-        var sortbtn = new Swiper(".tab_sort", {
-          slidesPerView: "auto",  
-          spaceBetween: 8,
-        });
-
-        $(".tab_sort")
-          .find(".sort_btn")
-          .click(function () {
-            $(this).addClass("active");
-            $(this).siblings().removeClass("active");
-          });
-
-        //좋아요 데아터
-        $(".like_s").click(function () {
-          $(this).toggleClass("clicked");
-
-          var count = $(this).children(".count");
-          if ($(this).hasClass("clicked")) {
-            count.html(function (i, val) {
-              return val * 1 + 1;
-            });
-
-            if (count.html() > 998) {
-              count.addClass("more_count");
-              count.html(999);
-            }
-          } else if (count.hasClass("max_count")) {
-            count.html(999);
-          } else {
-            count.html(function (i, val) {
-              return val * 1 - 1;
-            });
-
-            if (count.html() <= 998) {
-              count.removeClass("more_count");
-            }
-          }
-        });
-
-      //설문선택-단수
-      $(".servey_singular").click(function() {
-        $(this).addClass("select");
-        $(this).siblings().removeClass("select");
-        $(".btn_b").attr("disabled",false);
-      })
-
-       //하단 프로그래스바
-       window.onscroll = function () {
-        myFunction();
-      };
-
-      function myFunction() {
-        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrolled = (winScroll / height) * 100;
-        document.getElementById("myBar").style.width = scrolled + "%";
-      }
       </script>
     </main>
   </body>

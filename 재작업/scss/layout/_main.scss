@@ -157,14 +157,27 @@ body.open {
   padding: 1.25rem;
 
   &-data {
-    width: 62px;
+    width: 3.875rem;
+
+    &.my {
+      .intake_friends-name {
+        color: var(--gray-black);
+        font-weight: var(--bold-f);
+      }
+    }
+
+    &.done {
+      .intake_friends-thumb {
+        border-color: var(--primary-color);
+      }
+    }
   }
   &-thumb {
     width: 100%;
     aspect-ratio: 1;
-    border: 2px solid rgba(25, 87, 25, 0.7);
+    border: 0.125rem solid var(--gray-04);
     border-radius: 50%;
-    padding: 2px;
+    padding: 0.125rem;
     overflow: hidden;
   }
   &-img {
@@ -187,10 +200,11 @@ body.open {
     padding-top: 0.25rem;
     width: 100%;
     text-align: center;
+    color: var(--gray-01);
   }
 
   &-add {
-    width: 54px;
+    width: 3.375rem;
 
     .intake_friends-thumb {
       border: none;
@@ -237,6 +251,7 @@ body.open {
   }
 }
 
+//* 홈 컨텐츠 *//
 .home_con {
   display: grid;
   gap: 2rem;
@@ -244,10 +259,16 @@ body.open {
   //오늘의 기록
   .today_record {
     padding-inline: 1.25rem;
+    position: relative;
 
-    .title {
+    & > .title {
       @include h3;
       padding-bottom: 1rem;
+
+      .now {
+        color: var(--primary-color);
+        @include span1;
+      }
     }
 
     &-add {
@@ -268,6 +289,32 @@ body.open {
         text-align: center;
         padding-block: 1rem;
       }
+    }
+
+    .all_clear {
+      background-color: var(--primary-color);
+      color: var(--gray-white);
+      padding: 2.625rem 1.25rem;
+      border-radius: 0.5rem;
+      background-image: url(../images/banner/today_cpl.svg);
+      background-size: 7.8125rem;
+      background-repeat: no-repeat;
+      background-position: right bottom;
+
+      .title {
+        @include h3;
+      }
+
+      .txt {
+        @include p5b;
+        padding-top: 0.5rem;
+      }
+    }
+
+    .btns {
+      position: absolute;
+      right: 1.25rem;
+      top: -0.25rem;
     }
   }
 
@@ -321,6 +368,112 @@ body.open {
         text-align: center;
         box-shadow: var(--shadow-add);
         border-radius: 0.75rem 0 0 0;
+      }
+    }
+  }
+}
+
+//* 섭취인증관련 팝업 *//
+.fullpop {
+  height: 100svh;
+  border-radius: 0.5rem;
+  background-color: var(--gray-white);
+
+  .loading_bar {
+    padding: 1rem 0.5rem 0.75rem;
+
+    .bar {
+      position: relative;
+      height: 2px;
+      background-color: var(--gray-04);
+
+      span {
+        width: 100%;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2px;
+        display: block;
+        transition: 2s;
+        animation: widthfull 5s linear;
+      }
+    }
+  }
+
+  .user_info {
+    padding-inline: 1.25rem;
+  }
+
+  .popClose {
+    width: 2rem;
+    position: absolute;
+    top: 2rem;
+    right: 1.25rem;
+  }
+
+  .fullpop_con {
+    position: absolute;
+    top: 48%;
+    transform: translateY(-50%);
+    width: 100%;
+
+    .user_thumb {
+      width: 10.875rem;
+      aspect-ratio: 1;
+      margin: 0 auto;
+      border: 0.5rem solid var(--gray-05);
+      border-radius: 50%;
+      padding: 0.5rem;
+      position: relative;
+
+      .thumbnail {
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        overflow: hidden;
+
+        .img {
+          width: 100%;
+          height: 100%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .user_lv {
+        width: 3.25rem;
+        position: absolute;
+        bottom: -1.75rem;
+        right: 1rem;
+      }
+
+      &.done {
+        border-color: var(--primary-color);
+      }
+    }
+
+    .calendar {
+      padding-block: 1.5rem 2rem;
+    }
+
+    .con_txt {
+      display: grid;
+      gap: 1rem;
+      justify-items: center;
+
+      .title {
+        @include span1b;
+      }
+
+      .txt {
+        @include p4;
+        color: var(--gray-02);
+        text-align: center;
       }
     }
   }
