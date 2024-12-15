@@ -22,6 +22,15 @@
     <!-- css -->
     <link rel="stylesheet" href="../../css/style.css">
     <title>1-2.친구인증현황 - 응원메세지보내기 전</title>
+
+    <style>
+#make-scrollable {
+  position: absolute;
+  left: 0;
+  width: 1px;
+  height: calc(100% + 1px);
+}
+    </style>
 </head>
 <body class="open" style="background-color: #111;">
   <main class="fullpage bg_dark">
@@ -90,29 +99,13 @@
       </div>
       <div class="popClose"><i class="ic_x"></i></div>
     </div>
+    <div id="make-scrollable"></div>
   </main>
   <!-- script -->
   <script src="../../js/jquery.min.js"></script>
 
   <script>
-    const MAX_KEYBOARD_PROPORTION = .52
-const preventScrollWhenSoftKeyboardAppearsIfThereIsPlentyOfRoom = (e) => {
-  // Bail if not iOS
-  if (!/iPad|iPhone|iPod/.test(navigator.userAgent)) return
-  // Bail if there's too little vertical space and scrolling is necessary
-  if ((e.target.offsetTop + e.target.offsetHeight) / window.innerHeight > MAX_KEYBOARD_PROPORTION) return
 
-  // Fix the position of the body momentarily to prevent user agent scrolling
-  var offset = document.body.scrollTop;
-  document.body.style.top = (offset * -1) + 'px';
-  document.body.classList.add('prevent-ios-focus-scrolling');
-  setTimeout(() => {
-    // Undo it after 500ms, roughly the amount of time focus animation takes iOS
-    offset = parseInt(document.body.style.top, 10);
-    document.body.classList.remove('prevent-ios-focus-scrolling');
-    document.body.scrollTop = (offset * -1);
-  }, 500)
-}
   </script>
 
 </body>
