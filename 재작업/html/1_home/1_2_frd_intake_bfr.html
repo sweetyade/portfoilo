@@ -96,26 +96,44 @@
   <script src="../../js/jquery.min.js"></script>
 
   <script>
-    //키보드 높이값
+   $(document).ready(function () {
     let initialViewportHeight = window.innerHeight;
 
-    // 이벤트 리스너: 화면 크기가 변경될 때 실행
-    $(window).on('resize', function () {
+    // 인풋 요소에 포커스 이벤트 처리
+    $('input').on('focus', function () {
+        // 현재 뷰포트 높이 가져오기
         let currentViewportHeight = window.innerHeight;
 
-        // 키보드가 올라왔는지 여부를 판단
-        if (currentViewportHeight < initialViewportHeight) {
-            // 키보드 높이 계산
-            let keyboardHeight = initialViewportHeight - currentViewportHeight;
-            console.log('키보드 높이:', keyboardHeight);
+        // 키보드로 인해 줄어든 높이를 계산
+        let keyboardHeight = initialViewportHeight - currentViewportHeight;
 
-            // 키보드 높이를 뺀 동적 높이 적용
-            $('body').css('height', `${currentViewportHeight}px`);
-        } else {
-            // 키보드가 내려가면 초기 높이로 복구
-            $('body').css('height', '100vh');
+        if (keyboardHeight > 0) {
+            // 포커스된 인풋 요소의 부모 컨테이너에 여백 제거
+            $('body').css({
+                height: `${currentViewportHeight}px`,
+                overflow: 'hidden', // 스크롤 방지
+            });
+
+            // 화면 스크롤 위치를 포커스된 인풋으로 이동
+            setTimeout(() => {
+                $('html, body').scrollTop($(this).offset().top);
+            }, 300); // 키보드 애니메이션 타이밍에 맞추어 조정
         }
     });
+
+    // 인풋 요소에서 포커스 아웃 이벤트 처리
+    $('input').on('blur', function () {
+        // 원래 높이 복구
+        $('body').css({
+            height: '',
+            overflow: '', // 스크롤 복구
+        });
+
+        // 화면 스크롤 초기화
+        $('html, body').scrollTop(0);
+    });
+});
+
 
   </script>
 
