@@ -143,6 +143,23 @@
         },2000)
       })
     })
+
+    var originalHeight = $(window).height(); // 초기 화면 높이 저장
+
+            $(window).on("resize", function () {
+                var currentHeight = $(window).height(); // 현재 화면 높이
+
+                if (currentHeight < originalHeight) {
+                    // 키보드가 올라온 경우
+                    var keyboardHeight = originalHeight - currentHeight;
+                    $("body").css("height", currentHeight + "px");
+                    $(".message_con").css("bottom", keyboardHeight + 10 + "px");
+                } else {
+                    // 키보드가 내려간 경우
+                    $("body").css("height", "100vh");
+                    $(".message_con").css("bottom", "10vh");
+                }
+            });
   </script>
 
 </body>
