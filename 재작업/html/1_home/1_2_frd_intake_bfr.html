@@ -96,43 +96,58 @@
   <script src="../../js/jquery.min.js"></script>
 
   <script>
-   $(document).ready(function () {
+$(document).ready(function () {
     let initialViewportHeight = window.innerHeight;
 
-    // 인풋 요소에 포커스 이벤트 처리
+    function isIOS() {
+        return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    }
+
     $('input').on('focus', function () {
-        // 현재 뷰포트 높이 가져오기
-        let currentViewportHeight = window.innerHeight;
+        if (isIOS()) {
+            // iOS용 처리: 뷰포트 높이를 강제로 설정
+            let currentViewportHeight = window.innerHeight;
 
-        // 키보드로 인해 줄어든 높이를 계산
-        let keyboardHeight = initialViewportHeight - currentViewportHeight;
+            // 키보드가 올라왔는지 확인
+            if (currentViewportHeight < initialViewportHeight) {
+                let keyboardHeight = initialViewportHeight - currentViewportHeight;
 
-        if (keyboardHeight > 0) {
-            // 포커스된 인풋 요소의 부모 컨테이너에 여백 제거
+                // body 스타일 조정
+                $('body').css({
+                    height: `${currentViewportHeight}px`,
+                    overflow: 'hidden',
+                });
+
+                // 입력창으로 스크롤 이동 (딜레이를 추가해 안정적으로 적용)
+                setTimeout(() => {
+                    $('html, body').scrollTop($(this).offset().top - keyboardHeight / 2);
+                }, 300); // 키보드 애니메이션 시간 고려
+            }
+        } else {
+            // 비 iOS 처리 (기본 동작)
+            let currentViewportHeight = window.innerHeight;
             $('body').css({
                 height: `${currentViewportHeight}px`,
-                overflow: 'hidden', // 스크롤 방지
+                overflow: 'hidden',
             });
 
-            // 화면 스크롤 위치를 포커스된 인풋으로 이동
             setTimeout(() => {
                 $('html, body').scrollTop($(this).offset().top);
-            }, 300); // 키보드 애니메이션 타이밍에 맞추어 조정
+            }, 300);
         }
     });
 
-    // 인풋 요소에서 포커스 아웃 이벤트 처리
     $('input').on('blur', function () {
-        // 원래 높이 복구
+        // 모든 플랫폼에서 원래 상태로 복구
         $('body').css({
             height: '',
-            overflow: '', // 스크롤 복구
+            overflow: '',
         });
 
-        // 화면 스크롤 초기화
         $('html, body').scrollTop(0);
     });
 });
+
 
 
   </script>
