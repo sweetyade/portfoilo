@@ -96,6 +96,26 @@
   <script src="../../js/jquery.min.js"></script>
 
   <script>
+    //키보드 높이값
+    let initialViewportHeight = window.innerHeight;
+
+    // 이벤트 리스너: 화면 크기가 변경될 때 실행
+    $(window).on('resize', function () {
+        let currentViewportHeight = window.innerHeight;
+
+        // 키보드가 올라왔는지 여부를 판단
+        if (currentViewportHeight < initialViewportHeight) {
+            // 키보드 높이 계산
+            let keyboardHeight = initialViewportHeight - currentViewportHeight;
+            console.log('키보드 높이:', keyboardHeight);
+
+            // 키보드 높이를 뺀 동적 높이 적용
+            $('body').css('height', `${currentViewportHeight}px`);
+        } else {
+            // 키보드가 내려가면 초기 높이로 복구
+            $('body').css('height', '100vh');
+        }
+    });
 
   </script>
 
