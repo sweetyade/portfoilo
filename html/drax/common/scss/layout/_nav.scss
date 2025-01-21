@@ -1,0 +1,257 @@
+/***************************************************************
+    11. nav
+***************************************************************/
+#quick_nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 944px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--light-color);
+  border-radius: 2rem 2rem 0 0;
+  @include flexcenter;
+  padding-block: 0.625rem 0.25rem;
+
+  @include tablet {
+    border-radius: 0;
+  }
+
+  .quick_menu {
+    width: 100%;
+    max-width: 9.375rem;
+
+    i {
+      width: 1.5rem;
+      margin: 0 auto 0.125rem;
+      display: block;
+    }
+
+    p {
+      @include font1224h;
+      color: var(--text-secondary);
+      text-align: center;
+    }
+  }
+}
+
+#nav {
+  position: absolute;
+  top: -800%;
+  right: 0;
+  background-color: var(--light-color);
+  z-index: var(--z-modal);
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+  width: calc(100svh - 3.5rem);
+  max-width: 15.5rem;
+  padding-bottom: 1.5rem;
+  transition: 0.3s;
+  overscroll-behavior: none;
+
+  @include pc_small {
+    position: fixed;
+    top: 0;
+    border-radius: 0.5rem 0 0 0.5rem;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    right: -100%;
+
+    .overlay {
+      display: block;
+      z-index: -1;
+      opacity: 1;
+    }
+  }
+
+  @include tablet {
+    max-width: 20rem;
+    padding-bottom: 0;
+  }
+
+  .nav_top {
+    padding: 1.5rem 1rem;
+    @include flexbtw;
+
+    .user_info {
+      @include flex;
+      gap: 0.5rem;
+
+      .user_thumb {
+        width: 2rem;
+        height: 2rem;
+        background-image: url(/images/user_bg.png);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        border-radius: 50%;
+        overflow: hidden;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .user_name {
+        @include font1624h;
+      }
+    }
+
+    .nav_icons {
+      @include flexright;
+      gap: 0.25rem;
+      .nav_icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        cursor: pointer;
+
+        i {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--light-color);
+
+    @include tablet {
+      min-height: calc(100svh - 128px);
+      padding-bottom: 3rem;
+    }
+  }
+
+  .nav_block {
+    position: relative;
+
+    .title {
+      @include flexbtw;
+      @include font12b24h;
+      padding-inline: 2rem;
+
+      .txt {
+        line-height: 1.5rem;
+        background-size: 1.5rem;
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 2rem;
+        cursor: pointer;
+        width: calc(100% - 1.5rem);
+      }
+
+      .logoutBtn {
+        width: 1.5rem;
+        height: 1.5rem;
+        cursor: pointer;
+      }
+
+      .admin_qr {
+        width: 1.5rem;
+        cursor: pointer;
+      }
+    }
+
+    &.nav_my {
+      .txt {
+        background-image: url(/images/nav_my.png);
+      }
+      .title .txt {
+        &.nav_admin {
+          background-image: url(/images/nav_admin.png);
+        }
+      }
+    }
+
+    &.nav_admin {
+      .txt {
+        background-image: url(/images/nav_admin.png);
+      }
+    }
+
+    .nav_menu {
+      padding-top: 0.5rem;
+      display: none;
+
+      .menu_list {
+        .menu_title {
+          padding: 0.5rem 2rem;
+          @include font14b20h;
+          color: var(--text-secondary);
+          background-image: url(/images/system/arrow_down_gray.svg);
+          background-repeat: no-repeat;
+          background-position: calc(100% - 2rem) center;
+          background-size: 1.5rem;
+          transition: 0.2s;
+          cursor: pointer;
+
+          &.subOpen {
+            color: var(--primary-color);
+            background-image: url(/images/system/arrow_up_primary.svg);
+          }
+        }
+
+        .nav_sub {
+          background-color: var(--nav-bg);
+          padding: 0.5625rem 3.125rem;
+          display: none;
+
+          a {
+            @include font1216h;
+            font-weight: var(--semi-bold-font);
+            color: var(--gray-color);
+            padding-block: 0.4375rem;
+            display: inline-block;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .divider {
+    background-color: var(--text-primary);
+    width: calc(100% - 4rem);
+    margin-left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+  }
+
+  .nav_lab {
+    background-color: var(--text-primary);
+    padding: 1rem 2rem;
+    position: sticky;
+    bottom: 0;
+    width: 20rem;
+    display: none;
+    z-index: var(--z-fixed);
+
+    @include tablet {
+      @include flexbtw;
+    }
+
+    a {
+      color: var(--light-color);
+      font-weight: var(--semi-bold-font);
+      @include font1216h;
+      text-transform: uppercase;
+    }
+  }
+
+  &.open {
+    top: 0.5rem;
+
+    @include pc_small {
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+//?

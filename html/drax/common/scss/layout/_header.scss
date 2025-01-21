@@ -1,0 +1,235 @@
+/***************************************************************
+    10. header
+***************************************************************/
+#header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--light-color);
+  z-index: var(--z-fixed);
+
+  .header_top {
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+
+    .con_inner {
+      @include flexbtw;
+      height: 4rem;
+
+      @include tablet {
+        padding-inline: 1.5rem;
+      }
+
+      @include mobile_large {
+        padding-inline: 1rem;
+      }
+    }
+
+    .header_logo {
+      display: grid;
+      gap: 0.1875rem;
+
+      .logo {
+        width: 6.25rem;
+      }
+
+      .header_center {
+        @include flex;
+        gap: 0.25rem;
+        @include font1216h;
+
+        &:hover {
+          color: var(--primary-color);
+        }
+
+        i {
+          width: 0.625rem;
+        }
+      }
+    }
+
+    .header_menu {
+      @include flexright;
+      gap: 1.5rem;
+
+      .menu {
+        @include flexright;
+        gap: 1.5rem;
+
+        @include tablet {
+          display: none;
+        }
+
+        a {
+          color: var(--gray-color);
+          @include font1624h;
+
+          &:first-child {
+            color: var(--text-primary);
+            font-weight: var(--bold-font);
+          }
+        }
+      }
+
+      .header_icons {
+        @include flexright;
+        position: relative;
+        gap: 0.5rem;
+
+        i {
+          width: 1.875rem;
+        }
+
+        .openQr {
+          display: none;
+
+          @include tablet {
+            display: block;
+          }
+        }
+
+        .time_info {
+          position: absolute;
+          bottom: -2rem;
+          font-size: 10px;
+          left: 0;
+          background-color: var(--gray-dark);
+          color: var(--light-color);
+          padding: 0.375rem;
+          border-radius: 0.25rem;
+          font-family: var(--second-font);
+          font-weight: var(--bold-font);
+          white-space: nowrap;
+          display: none;
+
+          @include tablet {
+            left: 2.25rem;
+          }
+
+          .flex {
+            gap: 0.25rem;
+          }
+
+          .open_icon {
+            text-transform: uppercase;
+            font-size: 8px;
+            background-color: var(--disabled-bg);
+            padding: 0.125rem;
+            border-radius: 0.125rem;
+            color: var(--text-primary);
+          }
+
+          i {
+            width: 0.75rem;
+          }
+
+          &::before {
+            content: "";
+            width: 0.5rem;
+            height: 0.5rem;
+            position: absolute;
+            background-color: var(--gray-dark);
+            top: -0.25rem;
+            transform: rotate(45deg);
+            left: 0.75rem;
+          }
+        }
+      }
+
+      .openNav {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .header_breadcrumbs {
+    border-bottom: 1px solid var(--border-color);
+    height: 3rem;
+
+    .con_inner {
+      height: 100%;
+      @include flex;
+      gap: 0.25rem;
+      overflow-x: auto;
+
+      &::-webkit-scrollbar {
+        height: 0;
+      }
+
+      @include tablet {
+        padding-inline: 1.5rem;
+      }
+
+      @include mobile_large {
+        padding-inline: 1rem;
+      }
+    }
+
+    .loc {
+      @include font1424h;
+      background-image: url(/images/system/chevron_left.svg);
+      padding-left: 1.75rem;
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: 1.5rem;
+      opacity: 0.5;
+      white-space: nowrap;
+
+      &:last-child {
+        opacity: 1;
+      }
+    }
+  }
+
+  .overlay {
+    opacity: 1;
+    z-index: 9;
+    display: none;
+    transition: 0.1s;
+  }
+}
+
+.header_tab {
+  height: 3rem;
+
+  &::-webkit-scrollbar {
+    height: 0px;
+  }
+
+  .con_inner {
+    @include flexcenter;
+    padding-inline: 0;
+    gap: var(--g);
+  }
+
+  .tab_menu {
+    width: fit-content;
+    border-bottom: 0.25rem solid var(--border-color);
+    padding-block: 14px 6px;
+    min-width: 4.5rem;
+    text-align: center;
+    @include font1624h;
+    color: var(--gray-color);
+    transition: 0.1s;
+    cursor: pointer;
+
+    &.active {
+      color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+  }
+
+  &.tabslide {
+    .con_inner {
+      gap: 0;
+      @include pc_small {
+        margin: 0 auto;
+        justify-content: flex-start;
+      }
+
+      .tab_menu {
+        padding-inline: 0;
+        margin-inline: 1.25rem;
+      }
+    }
+  }
+}

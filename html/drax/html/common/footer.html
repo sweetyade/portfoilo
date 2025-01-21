@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="DRAXfit" />
+    <meta property="og:title" content="기본레이아웃" />
+    <meta property="og:description" content="디랙스핏, 운동하는 새로운 방법을 디랙스가 제시합니다." />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="https://www.draxfit-smart.com/" />
+
+    <!--<link rel="shortcut icon" href="favicon.ico" /> 64 x 64 (px) 또는 32 x 32 또는 16 x 16 -->
+    <link rel="icon" href="./favicon.png" />
+    <!-- 500 x 500 (px) -->
+
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../common/css/style.css" />
+    <title>footer</title>
+</head>
+<body>
+    <footer id="footer">
+      <div class="footer_lnb">
+        <div class="con_inner">
+          <ul class="lnb">
+            <li><a href="javascript:void(0)">이용약관</a></li>
+            <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+          </ul>
+
+          <div class="lnb_slt">
+            <div class="slt_timezone">
+              <p class="lnbslt_title">타임존 및 언어 정보 변경</p>
+              <button class="btn_timezone"><i class="ic_globe_w"></i> kor</button>
+            </div>
+
+            <ul class="slt_lang">
+              <p class="lnbslt_title">서비스 국가</p>
+              <ul>
+                <li class="active">
+                  <p class="thumb"><img src="../../images/common/flag_korea.svg" alt=""></p>
+                  <p class="">Korea (대한민국)</p>
+                </li>
+                <li class="">
+                  <p class="thumb"><img src="../../images/common/flag_au.svg" alt=""></p>
+                  <p class="">Australia</p>
+                </li>
+                <li class="">
+                  <p class="thumb"><img src="../../images/common/flag_de.svg" alt=""></p>
+                  <p class="">Germany (Deutschland)</p>
+                </li>
+                <li class="">
+                  <p class="thumb"><img src="../../images/common/flag_jp.svg" alt=""></p>
+                  <p class="">Japan (日本国)</p>
+                </li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer_con">
+        <div class="con_inner">
+          <div class="footer_add">
+            <p>
+              <span>(주) 디랙스</span>
+              <span>경기도 안양시 만안구 전파로 62번길 26</span>
+              <span>사업자등록번호 123-81-70002</span>
+              <span>대표 유선경</span>
+            </p>
+            <p>
+              <span>Tel 031-459-8530</span>
+              <span>Fax 031-459-8531</span>
+            </p>
+          </div>
+          <div class="footer_copy">
+            <p class="footer_logo">
+              <img src="../../images/common/logo_sub.svg" alt="">
+            </p>
+            <p class="copy">Copyright©2020 DRAX All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+
+      <nav id="quick_nav">
+        <a href="javascript:void(0)" class="quick_menu">
+          <i class="ic_quick_plan"></i>
+          <p>계획 및 결과</p>
+        </a>
+        <a href="javascript:void(0)" class="quick_menu">
+          <i class="ic_quick_guide"></i>
+          <p>운동가이드</p>
+        </a>
+        <a href="javascript:void(0)" class="quick_menu">
+          <i class="ic_quick_home"></i>
+          <p>홈</p>
+        </a>
+        <a href="javascript:void(0)" class="quick_menu">
+          <i class="ic_quick_rate"></i>
+          <p>가이드 달성율</p>
+        </a>
+        <a href="javascript:void(0)" onclick="pageRe()" class="quick_menu" >
+          <i class="ic_quick_refresh"></i>
+          <p>새로고침</p>
+        </a>
+      </nav>
+    </footer>
+
+    <!-- 타임존 선택 -->
+    <div class="modal modal01">
+      <div class="overlay"></div>
+      <div class="modal_con">
+        <div class="modal_title">
+          <p class="title">타임존 및 언어 정보 변경</p>
+        </div>
+        <div class="con_inner">
+          <div class="input_block select_block">
+            <div class="inner mb_0_5">
+              
+              <label class="label" for="slt_time">타임존</label>
+              <select name="" id="slt_time">
+                <option value="hide">시간선택</option>
+                <option value="375">+12:00 Asia/Kamchatka</option>
+                <option value="323">+11:00 Antarctica/Macquarie</option>
+                <option value="388">+11:00 Asia/Magadan</option>
+                <option value="404">+11:00 Asia/Sakhalin</option>
+                <option value="409">+11:00 Asia/Srednekolymsk</option>
+                <option value="453">+10:30 Australia/Lord_Howe</option>
+                <option value="423">+10:00 Asia/Ust-Nera</option>
+                <option value="425">+10:00 Asia/Vladivostok</option>
+                <option value="444">+10:00 Australia/Brisbane</option>
+                <option value="447">+10:00 Australia/Currie</option>
+                <option value="450">+10:00 Australia/Hobart</option>
+                <option value="452">+10:00 Australia/Lindeman</option>
+                <option value="454">+10:00 Australia/Melbourne</option>
+                <option value="460">+10:00 Australia/Sydney</option>
+                <option value="443">+09:30 Australia/Adelaide</option>
+                <option value="445">+09:30 Australia/Broken_Hill</option>
+                <option value="448">+09:30 Australia/Darwin</option>
+                <option value="351">+09:00 Asia/Chita</option>
+                <option value="380">+09:00 Asia/Khandyga</option>
+                <option value="406" selected>+09:00 Asia/Seoul</option>
+                <option value="417">+09:00 Asia/Tokyo</option>
+                <option value="426">+09:00 Asia/Yakutsk</option>
+                <option value="449">+08:45 Australia/Eucla</option>
+                <option value="369">+08:00 Asia/Irkutsk</option>
+                <option value="407">+08:00 Asia/Shanghai</option>
+                <option value="457">+08:00 Australia/Perth</option>
+                <option value="345">+07:00 Asia/Bangkok</option>
+                <option value="346">+07:00 Asia/Barnaul</option>
+                <option value="382">+07:00 Asia/Krasnoyarsk</option>
+                <option value="392">+07:00 Asia/Novokuznetsk</option>
+                <option value="393">+07:00 Asia/Novosibirsk</option>
+                <option value="418">+07:00 Asia/Tomsk</option>
+                <option value="394">+06:00 Asia/Omsk</option>
+                <option value="422">+06:00 Asia/Urumqi</option>
+                <option value="428">+05:00 Asia/Yekaterinburg</option>
+                <option value="360">+04:00 Asia/Dubai</option>
+                <option value="524">+04:00 Europe/Astrakhan</option>
+                <option value="563">+04:00 Europe/Samara</option>
+                <option value="566">+04:00 Europe/Saratov</option>
+                <option value="574">+04:00 Europe/Ulyanovsk</option>
+                <option value="580">+04:00 Europe/Volgograd</option>
+                <option value="402">+03:00 Asia/Riyadh</option>
+                <option value="545">+03:00 Europe/Kirov</option>
+                <option value="555">+03:00 Europe/Moscow</option>
+                <option value="543">+02:00 Europe/Kaliningrad</option>
+                <option value="528">+01:00 Europe/Berlin</option>
+                <option value="533">+01:00 Europe/Busingen</option>
+                <option value="578">+01:00 Europe/Vienna</option>
+                <option value="302">-03:30 America/St_Johns</option>
+                <option value="181">-04:00 America/Blanc-Sablon</option>
+                <option value="214">-04:00 America/Glace_Bay</option>
+                <option value="216">-04:00 America/Goose_Bay</option>
+                <option value="223">-04:00 America/Halifax</option>
+                <option value="262">-04:00 America/Moncton</option>
+                <option value="174">-05:00 America/Atikokan</option>
+                <option value="205">-05:00 America/Detroit</option>
+                <option value="226">-05:00 America/Indiana/Indianapolis</option>
+                <option value="228">-05:00 America/Indiana/Marengo</option>
+                <option value="229">-05:00 America/Indiana/Petersburg</option>
+                <option value="231">-05:00 America/Indiana/Vevay</option>
+                <option value="232">-05:00 America/Indiana/Vincennes</option>
+                <option value="233">-05:00 America/Indiana/Winamac</option>
+                <option value="236">-05:00 America/Iqaluit</option>
+                <option value="240">-05:00 America/Kentucky/Louisville</option>
+                <option value="241">-05:00 America/Kentucky/Monticello</option>
+                <option value="268">-05:00 America/New_York</option>
+                <option value="269">-05:00 America/Nipigon</option>
+                <option value="277">-05:00 America/Pangnirtung</option>
+                <option value="310">-05:00 America/Thunder_Bay</option>
+                <option value="312">-05:00 America/Toronto</option>
+                <option value="193">-06:00 America/Chicago</option>
+                <option value="227">-06:00 America/Indiana/Knox</option>
+                <option value="230">-06:00 America/Indiana/Tell_City</option>
+                <option value="257">-06:00 America/Menominee</option>
+                <option value="272">-06:00 America/North_Dakota/Beulah</option>
+                <option value="273">-06:00 America/North_Dakota/Center</option>
+                <option value="274">-06:00 America/North_Dakota/New_Salem</option>
+                <option value="286">-06:00 America/Rainy_River</option>
+                <option value="287">-06:00 America/Rankin_Inlet</option>
+                <option value="289">-06:00 America/Regina</option>
+                <option value="290">-06:00 America/Resolute</option>
+                <option value="307">-06:00 America/Swift_Current</option>
+                <option value="317">-06:00 America/Winnipeg</option>
+                <option value="184">-07:00 America/Boise</option>
+                <option value="186">-07:00 America/Cambridge_Bay</option>
+                <option value="198">-07:00 America/Creston</option>
+                <option value="203">-07:00 America/Dawson_Creek</option>
+                <option value="204">-07:00 America/Denver</option>
+                <option value="207">-07:00 America/Edmonton</option>
+                <option value="211">-07:00 America/Fort_Nelson</option>
+                <option value="235">-07:00 America/Inuvik</option>
+                <option value="279">-07:00 America/Phoenix</option>
+                <option value="319">-07:00 America/Yellowknife</option>
+                <option value="202">-08:00 America/Dawson</option>
+                <option value="246">-08:00 America/Los_Angeles</option>
+                <option value="314">-08:00 America/Vancouver</option>
+                <option value="316">-08:00 America/Whitehorse</option>
+                <option value="155">-09:00 America/Anchorage</option>
+                <option value="239">-09:00 America/Juneau</option>
+                <option value="259">-09:00 America/Metlakatla</option>
+                <option value="270">-09:00 America/Nome</option>
+                <option value="300">-09:00 America/Sitka</option>
+                <option value="318">-09:00 America/Yakutat</option>
+                <option value="154">-10:00 America/Adak</option>
+                <option value="636">-10:00 Pacific/Honolulu</option>
+                <option value="680">-10:00 US/Hawaii</option>
+              </select>
+            </div>
+
+            <div class="inner">
+              <label class="label" for="slt_lang">언어</label>
+              <select name="" id="slt_lang">
+                <option value="hide">언어선택</option>
+                <option value="deu">Deutsch</option>
+                <option value="eng">English</option>
+                <option value="jpn">日本語 (にほんご)</option>
+                <option value="kor" selected>한국어</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      
+        <div class="popup_btn">
+          <button class="btn color_gray">취소</button>
+          <button class="btn">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+              //셀렉트
+      $('select').each(function(){
+        var $this = $(this), numberOfOptions = $(this).children('option').length;
+
+        $this.addClass('select-hidden'); 
+        $this.wrap('<div class="select"></div>');
+        $this.after('<button class="selectBtn"></button>');
+
+        var $styledSelect = $this.next('button.selectBtn');
+        $styledSelect.text($this.children('option').eq(0).text()).addClass("optSlt");
+
+        var $list = $('<ul />', {
+            'class': 'optionList'
+        }).insertAfter($styledSelect);
+        
+        if($this.children('option').is(":selected")){
+          $this.siblings('button.selectBtn').text($this.children('option:selected').text())
+        }
+        
+
+        for (var i = 0; i < numberOfOptions; i++) {
+            $('<li />', {
+                text: $this.children('option').eq(i).text(),
+                rel: $this.children('option').eq(i).val()
+            }).appendTo($list);
+            if ($this.children('option').eq(i).is(':selected')){
+              $('li[rel="' + $this.children('option').eq(i).val() + '"]').addClass('is-selected');
+            }
+        }
+    
+        var $listItems = $list.children('li');
+
+        $styledSelect.click(function(e) {
+            e.stopPropagation();
+            $('button.selectBtn.active').not(this).each(function(){
+                $(this).removeClass('active').next('ul.optionList').hide();
+            });
+            $(this).toggleClass('active').next('ul.optionList').toggle();
+        });
+      
+        $listItems.click(function(e) {
+            e.stopPropagation();
+            $styledSelect.text($(this).text()).removeClass('active');
+            $this.val($(this).attr('rel'));
+          $list.find('li.is-selected').removeClass('is-selected');
+          $list.find('li[rel="' + $(this).attr('rel') + '"]').addClass('is-selected');
+            $list.hide();
+            // console.log($this.val());
+        });
+      
+        $(document).click(function() {
+            $styledSelect.removeClass('active');
+            $list.hide();
+        });
+      });
+
+    //페이지 리셋
+      function pageRe(){
+        location.reload(true);
+      }
+
+      //서비스국가 선택
+      $(".slt_lang").find("li").click(function(){
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active")
+      })
+
+      //팝업
+      $(".btn_timezone").click(function(){
+        $(".modal01, body").addClass("open")
+      })
+      $(".popup_btn .btn, .overlay").click(function (){
+        $('.modal, body').removeClass('open')
+      })
+    </script>
+  </body>
+</html>

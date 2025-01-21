@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../../common/css/guide.css" />
+    <title>DESIGN GUIDE</title>
+  </head>
+  <style>
+    .btn_n,
+    .btn_social,
+    .search_btn,
+    .popup_btn {
+      max-width: 250px;
+    }
+
+  </style>
+  <body>
+    <main id="guide_main">
+      <!-- menu -->
+      <nav id="guide_nav">
+        <h1>design guide</h1>
+
+        <div class="nav_menu">
+          <a href="guide.html">typography</a>
+          <a href="guide_color.html">color</a>
+          <a href="guide_icon.html">icon</a>
+          <a href="guide_form.html">form</a>
+          <a href="guide_button.html" class="active">button</a>
+          <a href="guide_popup.html">popup</a>
+          <a href="guide_component.html">component</a>
+          <a href="guide_layout.html">layout</a>
+        </div>
+      </nav>
+
+      <!-- contents -->
+      <section class="container">
+        <div class="contents">
+          <h2>button</h2>
+
+          <div class="guide_info">
+            <p class="guide_normal_f mb_0_25">- size : xxlarge | xlarge | large | medium(default) | small | xsmall</p>
+            <p class="guide_normal_f mb_0_25">- color : color_primary(default) | color_cta | color_secondary | color_primary_line | color_black_line | color_black</p>
+            <p class="guide_normal_f mb_0_25">- 일반 버튼 그룹 .btn_block</p>
+            <p class="guide_normal_f ">- 팝업 버튼 그룹 .popup_btn</p>
+          </div>
+
+          <!-- content button -->
+          <div class="guide_block">
+            <h3>content button</h3>
+            <div class="guide_data">
+              <p class="title">.btn(defualt)</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap;">
+                <button class="btn">확인</button>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">.size_{$}</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap;">
+                <button class="btn size_xxl">확인</button>
+                <button class="btn size_xl">확인</button>
+                <button class="btn size_l">확인</button>
+                <button class="btn">확인</button>
+                <button class="btn size_s">확인</button>
+                <button class="btn size_xs">확인</button>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">.color_{$}</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap;">
+                <button class="btn">확인</button>
+                <button class="btn color_cta">확인</button>
+                <button class="btn color_secondary">확인</button>
+                <button class="btn color_black">확인</button>
+                <button class="btn color_primary_line">확인</button>
+                <button class="btn color_black_line">확인</button>
+                <button class="btn" disabled>확인</button>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="guide_block">
+            <h3>popup button</h3>
+            <div class="guide_data">
+              <p class="title">.popup_btn .btn (defualt)</p>
+              <div class="data flex_top" style="gap: 1rem; flex-wrap: wrap;">
+                <div class="popup_btn">
+                  <button class="btn color_gray">확인</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">.size_{$}</p>
+              <div class="data flex_top" style="gap: 1rem; flex-wrap: wrap;">
+                <div class="popup_btn">
+                  <button class="btn color_gray size_xxl">확인</button>
+                </div>
+                <div class="popup_btn">
+                  <button class="btn color_gray size_xl">확인</button>
+                </div>
+                <div class="popup_btn">
+                  <button class="btn color_gray">확인</button>
+                </div>
+                <div class="popup_btn">
+                  <button class="btn color_gray size_s">확인</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">.color_{$}</p>
+              <div class="data flex_top" style="gap: 1rem; flex-wrap: wrap;">
+                <div class="popup_btn">
+                  <button class="btn color_gray">닫기</button>
+                  <button class="btn">확인</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

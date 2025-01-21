@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+   
+    <link rel="stylesheet" href="../../common/css/guide.css" />
+    <title>DESIGN GUIDE</title>
+  </head>
+  <body>
+
+    <style>
+      .toggle_group{
+        width: 250px;
+      }
+    </style>
+    <main id="guide_main">
+      <!-- menu -->
+      <nav id="guide_nav">
+        <h1>design guide</h1>
+
+        <div class="nav_menu">
+          <a href="guide.html">typography</a>
+          <a href="guide_color.html">color</a>
+          <a href="guide_icon.html">icon</a>
+          <a href="guide_form.html">form</a>
+          <a href="guide_button.html">button</a>
+          <a href="guide_popup.html">popup</a>
+          <a href="guide_component.html" class="active">component</a>
+          <a href="guide_layout.html">layout</a>
+        </div>
+      </nav>
+
+      <!-- contents -->
+      <section class="container">
+        <div class="contents">
+          <h2>component</h2>
+
+          <div class="guide_info">
+            <p class="guide_normal_f mb_0_25">- 컴포넌트 모든 사이즈는 미디움 기본 size_l | default | size_s</p>
+            <p class="guide_normal_f mb_0_25">- 색상 color_primary | color_dark</p>
+            <p class="guide_normal_f">- 기타 타입 active | disabled</p>
+          </div>
+
+          <!-- pagenation -->
+          <div class="guide_block">
+            <h3>pagenation</h3>
+            <div class="guide_data">
+              <p class="title">.pagenation</p>
+              <div class="data flex_top" style="gap: 1rem; flex-direction: column;">
+                <div class="pagenation size_l">
+                  <a href="javascript:void(0)"><i class="ic_chevron_double_left"></i></a>
+                  <a href="javascript:void(0)"><i class="ic_chevron_left"></i></a>
+                  <div class="page_link">
+                    <a href="javascript:void(0)" class="active">1</a>
+                    <a href="javascript:void(0)">2</a>
+                    <a href="javascript:void(0)">3</a>
+                    <a href="javascript:void(0)">4</a>
+                    <a href="javascript:void(0)">5</a>
+                  </div>
+                  <a href="javascript:void(0)" class="disabled"><i class="ic_chevron_right"></i></a>
+                  <a href="javascript:void(0)" class="disabled"><i class="ic_chevron_double_right"></i></a>
+                </div>
+                <div class="pagenation">
+                  <a href="javascript:void(0)"><i class="ic_chevron_double_left"></i></a>
+                  <a href="javascript:void(0)"><i class="ic_chevron_left"></i></a>
+                  <div class="page_link">
+                    <a href="javascript:void(0)" class="active">1</a>
+                    <a href="javascript:void(0)">2</a>
+                    <a href="javascript:void(0)">3</a>
+                    <a href="javascript:void(0)">4</a>
+                    <a href="javascript:void(0)">5</a>
+                  </div>
+                  <a href="javascript:void(0)" class="disabled"><i class="ic_chevron_right"></i></a>
+                  <a href="javascript:void(0)" class="disabled"><i class="ic_chevron_double_right"></i></a>
+                </div>
+                <div class="pagenation size_s">
+                  <a href="javascript:void(0)"><i class="ic_chevron_double_left"></i></a>
+                  <a href="javascript:void(0)"><i class="ic_chevron_left"></i></a>
+                  <div class="page_link">
+                    <a href="javascript:void(0)" class="active">1</a>
+                    <a href="javascript:void(0)">2</a>
+                    <a href="javascript:void(0)">3</a>
+                    <a href="javascript:void(0)">4</a>
+                    <a href="javascript:void(0)">5</a>
+                  </div>
+                  <a href="javascript:void(0)"  class="disabled"><i class="ic_chevron_right"></i></a>
+                  <a href="javascript:void(0)" class="disabled"><i class="ic_chevron_double_right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- controller -->
+          <div class="guide_block">
+            <h3>controller</h3>
+            <div class="guide_data">
+              <p class="title">.controller</p>
+              <div class="data flex_top" style="gap: 1rem; flex-direction: column;">
+                <div class="controller">
+                  <div class="ctr_btn"><i class="ic_chevron_up_dark"></i></div>
+                  <div class="ctr_btn"><i class="ic_chevron_down_dark"></i></div>
+                  <div class="ctr_btn"><i class="ic_chevron_left_dark"></i></div>
+                  <div class="ctr_btn"><i class="ic_chevron_right_dark"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- tab -->
+          <div class="guide_block">
+            <h3>tab</h3>
+            <div class="guide_data">
+              <p class="title">.tab (default)</p>
+              <div class="data flex_top" style="gap: 1rem; flex-direction: column;">
+                <div class="tab">
+                  <div class="tab_btn">라벨</div>
+                  <div class="tab_btn active">라벨</div>
+                  <div class="tab_btn disabled">라벨</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">.tab_group (graoup)</p>
+              <div class="data flex_top" style="gap: 1rem; flex-direction: column;">
+                <div class="tab tab_group">
+                  <div class="tab_btn active">라벨</div>
+                  <div class="tab_btn">라벨</div>
+                  <div class="tab_btn disabled">라벨</div>
+                  <div class="tab_btn">라벨</div>
+                  <div class="tab_btn">라벨</div>
+                </div>
+
+                <div class="tab tab_group m_s">
+                  <div class="tab_btn active">남</div>
+                  <div class="tab_btn">여</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- tag -->
+          <div class="guide_block">
+            <h3>tag</h3>
+            <div class="guide_data">
+              <p class="title">.tag (default)</p>
+              <div class="data flex" style="gap: 1rem;">
+                <p class="tag">디랙스 서비스</p>
+                <p class="tag color_primary">구독상품</p>
+                <p class="tag color_primary_line">구독상품</p>
+                <p class="tag color_primary_line">구독상품</p>
+                <p class="tag color_dark">30%</p>
+                <p class="tag disabled_icon">알림발송대상자이름 <i class="ic_del_circle"></i></p>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">.tag (.size_s)</p>
+              <div class="data flex" style="gap: 1rem;">
+                <p class="tag size_s">디랙스 서비스</p>
+                <p class="tag color_primary size_s">구독상품</p>
+                <p class="tag color_primary_line size_s">구독상품</p>
+                <p class="tag color_dark size_s">30%</p>
+                <p class="tag color_light_green size_s">골프개인</p>
+                <p class="tag color_purple size_s">그룹요가</p>
+                <p class="tag size_s disabled">30%</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- tag group -->
+          <div class="guide_block">
+            <h3>tag group</h3>
+            <div class="guide_data">
+              <p class="title">.tag_group</p>
+              <div class="data">
+                <div class="tag_group">
+                  <p class="tag active">전체</p>
+                  <p class="tag">내 수업</p>
+                  <p class="tag cls_green">개인PT</p>
+                  <p class="tag cls_purple">요가그룹</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- carlander -->
+          <div class="guide_block">
+            <h3>carlander</h3>
+            <div class="guide_data">
+              <p class="title">.carlander</p>
+              <div class="data flex" style="gap: 1rem;">
+                <div class="calander">
+                  <div class="calander_top">
+                    <p>일</p>
+                    <p>월</p>
+                    <p>화</p>
+                    <p>수</p>
+                    <p>목</p>
+                    <p>금</p>
+                    <p>토</p>
+                  </div>
+      
+                  <ul class="calandar_month">
+                    <li class="date">11</li>
+                    <li class="date">12</li>
+                    <li class="date rsv">13</li>
+                    <li class="date rsv">14</li>
+                    <li class="date">15</li>
+                    <li class="date">16</li>
+                    <li class="date">17</li>
+                    <li class="date">18</li>
+                    <li class="date">19</li>
+                    <li class="date rsv done">20</li>
+                    <li class="date rsv done">21</li>
+                    <li class="date">22</li>
+                    <li class="date">23</li>
+                    <li class="date">24</li>
+                    <li class="date">25</li>
+                    <li class="date">26</li>
+                    <li class="date rsv done">27</li>
+                    <li class="date rsv done">28</li>
+                    <li class="date">29</li>
+                    <li class="date">30</li>
+                    <li class="date">31</li>
+                    <li class="date">01</li>
+                    <li class="date">02</li>
+                    <li class="date rsv today">03</li>
+                    <li class="date rsv ">04</li>
+                    <li class="date">05</li>
+                    <li class="date">06</li>
+                    <li class="date">07</li>
+                    <li class="date disabled">08</li>
+                    <li class="date disabled">09</li>
+                    <li class="date disabled">10</li>
+                    <li class="date disabled">11</li>
+                    <li class="date disabled">12</li>
+                    <li class="date disabled">13</li>
+                    <li class="date disabled">14</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- card -->
+          <div class="guide_block">
+            <h3>card (base)</h3>
+            <div class="guide_data">
+              <p class="title">.tag (default)</p>
+              <div class="data flex" style="gap: 1rem;">
+                <div class="smr_card">
+                  <p class="title">운동거리(km)</p>
+                  <p class="txt">0.0</p>
+                </div>
+
+                <div class="smr_card">
+                  <p class="title">잔여 횟수</p>
+                  <p class="txt none">해당없음</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- data table -->
+          <div class="guide_block">
+            <h3>table</h3>
+            <div class="guide_data">
+              <p class="title">.data_table (simple)</p>
+              <div class="data flex" style="gap: 1rem;">
+                <div class="data_table">
+                  <table>
+                    <colgroup>
+                      <col width="25%">
+                      <col>
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>세트</th>
+                        <th>횟수</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="left_title">목표</td>
+                        <td>1</td>
+                        <td>10</td>
+                      </tr>
+                      <tr class="total">
+                        <td class="left_title">기록</td>
+                        <td>0</td>
+                        <td>0</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">.data_table (default + checkbox)</p>
+              <div class="data flex" style="gap: 1rem;">
+                <div class="table_wrap">
+                  <table>
+                    <colgroup>
+                      <col width="10">
+                      <col width="30%">
+                      <col width="40%">
+                      <col width="20%">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>
+                          <div class="check_block">
+                            <input type="checkbox" class="checkbox" id="checkAll" name="checkAll">
+                            <label for="checkAll">
+                              <span class="check"></span>
+                            </label>
+                          </div>
+                        </th>
+                        <th>수업 기간</th>
+                        <th>수업 시간</th>
+                        <th>담당 강사</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="check_block">
+                            <input type="checkbox" class="checkbox tcheck" id="check1">
+                            <label for="check1">
+                              <span class="check"></span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>2024-09-06~2024-10-06</td>
+                        <td><p class="date">일월화수목<span>금</span>토</p>12:00PM ~ 12:49PM</td>
+                        <td><p class="fomt_m">강사2</p></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="check_block">
+                            <input type="checkbox" class="checkbox tcheck" id="check2">
+                            <label for="check2">
+                              <span class="check"></span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>2024-09-06~2024-10-06</td>
+                        <td><p class="date">일월화수목<span>금</span>토</p>12:00PM ~ 12:49PM</td>
+                        <td><p class="fomt_m">강사2</p></td>
+                      </tr>
+                      <tr>
+                        <td colspan="4"><p class="blank">선택한 강사 내역이 없습니다.</p></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- list_tab-->
+          <div class="guide_block">
+            <h3>list_tab</h3>
+            <div class="guide_data">
+              <p class="title">.list_tab</p>
+              <div class="data">
+                <div class="list_tab">
+                  <p class="active">유효쿠폰</p>
+                  <p class="">지난쿠폰</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- .more_btn-->
+          <div class="guide_block">
+            <h3>.more_btn</h3>
+            <div class="guide_data">
+              <p class="title">.more_btn</p>
+              <div class="data">
+                <div class="more_btn moreBtn moreOpen"><i class="ic_chevron_down_dark"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- prg -->
+          <div class="guide_block">
+            <h3>prg</h3>
+            <div class="guide_data">
+              <p class="title">.prg</p>
+              <div class="data">
+                <div class="list_0_5">
+                  <div class="prg">
+                    <p class="per_txt">0<span>%</span></p>
+                    <p class="prg_bar" style="--w: 0"></p>
+                  </div>
+  
+                  <div class="prg">
+                    <p class="per_txt">32<span>%</span></p>
+                    <p class="prg_bar" style="--w: 32%"></p>
+                  </div>
+
+                  <div class="prg">
+                    <p class="per_txt">100<span>%</span></p>
+                    <p class="prg_bar" style="--w: 100%"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- product_item -->
+          <div class="guide_block">
+            <h3>product_item</h3>
+            <div class="guide_data">
+              <p class="title">.product_itemprg</p>
+              <div class="data flex" style="gap: 1rem">
+                <div class="product_item">
+                  <div class="product_title">
+                    <div class="flex_topbtw">
+                      <p class="title">AI RAX 근력강화기초 + 플러스 1개월</p>
+                      <p class="tag size_s color_primary_line">사용중</p>
+                    </div>
+                    <p class="tag size_s color_primary badge">구독상품</p>
+                  </div>
+                  <div class="product_data">
+                    <div class="data_info">
+                      <p class="gray_color">주문 일자</p>
+                      <p class="">2024.08.19</p>
+                    </div>
+                    <div class="data_info">
+                      <p class="gray_color">사용 시작일(예정)</p>
+                      <p class="">2024.08.19</p>
+                    </div>
+                    <div class="data_info">
+                      <p class="text_secondary">사용 종료일(예정)</p>
+                      <p class="primary_color">2024.10.18</p>
+                    </div>
+                  </div>
+                  <div class="btn_wrap">
+                    <button class="btn color_secondary">상품 사용 관리</button>
+                    <button class="btn">재구매</button>
+                  </div>
+                </div>
+
+                <div class="product_item">
+                  <div class="product_title">
+                    <div class="flex_topbtw">
+                      <p class="title">Kakako-RAX Golf 6개월</p>
+                      <p class="tag size_s color_primary_line">사용중</p>
+                    </div>
+                  </div>
+                  <div class="product_data">
+                    <div class="data_info">
+                      <p class="gray_color">이용권 종류</p>
+                      <p class="">골프개인</p>
+                    </div>
+                    <div class="data_info">
+                      <p class="gray_color">이용 구분 내용</p>
+                      <p class="">기간(월)/6개월</p>
+                    </div>
+                    <div class="data_info">
+                      <p class="gray_color">사용 시작일(예정)</p>
+                      <p class="">2024.07.16</p>
+                    </div>
+                    <div class="data_info">
+                      <p class="text_secondary">사용 종료일(예정)</p>
+                      <p class="primary_color">2025.01.17</p>
+                    </div>
+                  </div>
+                  <div class="product_total">
+                    <div class="data_info">
+                      <p>잔여일 수</p>
+                      <p><span class="primary_color">130일</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- coupon_item -->
+          <div class="guide_block">
+            <h3>coupon_item</h3>
+            <div class="guide_data">
+              <p class="title">.coupon_item</p>
+              <div class="data flex" style="gap: 1rem">
+                <div class="coupon_item">
+                  <div class="coupon_data">
+                    <p class="per">20%</p>
+                    <p class="name">1만원 구매 시 20%할인(중복가능)</p>
+                    <div class="info">
+                      <p class="date">~ 2024.12.31</p>
+                      <p class="conditionsBtn">적용조건</p>
+                    </div>
+                  </div>
+                  <div class="coupon_down">
+                    <p class="downBtn"><i class="ic_download_primary"></i></p>
+                  </div>
+                </div>
+
+                <div class="coupon_item disabled">
+                  <div class="coupon_data">
+                    <p class="per">20%</p>
+                    <p class="name">1만원 구매 시 20%할인(중복가능)</p>
+                    <div class="info">
+                      <p class="date">~ 2024.12.31</p>
+                      <p class="conditionsBtn">적용조건</p>
+                    </div>
+                  </div>
+                  <div class="coupon_down">
+                    <p class="downBtn"><i class="ic_download_primary"></i></p>
+                  </div>
+                </div>
+
+                <div class="coupon_item">
+                  <div class="coupon_data">
+                    <p class="per">20%</p>
+                    <p class="name">1만원 구매 시 20%할인(중복가능)</p>
+                    <div class="info">
+                      <p class="date">~ 2024.12.31</p>
+                      <p class="conditionsBtn">적용조건</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="coupon_item disabled">
+                  <div class="coupon_data">
+                    <p class="per">20%</p>
+                    <p class="name">1만원 구매 시 20%할인(중복가능)</p>
+                    <div class="info">
+                      <p class="date">~ 2024.12.31</p>
+                      <p class="conditionsBtn">적용조건</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- smr_box -->
+          <div class="guide_block">
+            <h3>smr_box</h3>
+            <div class="guide_data">
+              <p class="title">.smr_box</p>
+              <div class="data">
+                <div class="smr_box">
+                  <div class="smr_data">
+                    <p class="title"><i class="ic_cashsum"></i>결제 합계 금액</p>
+                    <p class="txt">₩ 6,883,294</p>
+                  </div>
+                  <div class="smr_data">
+                    <p class="title"><i class="ic_receiptoff"></i>취소 승인 금액</p>
+                    <p class="txt error_color">₩ 192,000</p>
+                  </div>
+                  <div class="smr_data">
+                    <p class="title"><i class="ic_receipt"></i>결제 승인 금액</p>
+                    <p class="txt blue_color">₩ 7,075,294</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- admin_username -->
+          <div class="guide_block">
+            <h3>admin username</h3>
+            <div class="guide_data">
+              <p class="title">.admin_username</p>
+              <div class="data">
+                <div class="admin_username">
+                  <div class="user_name">
+                    <p class="name">김은수</p>
+                    <span>님</span> 
+                  </div>
+                  <div class="admin_name">
+                    <p class="name">관리자별명</p>
+                    <span>님</span>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+      //tag del
+      $(".tag").find("i").click(function(){
+        $(this).parent().fadeOut("fast", function(){
+          setTimeout(()=>{
+            $(this).remove()
+          }, 500)
+        })
+      })
+
+      //리스트탭 
+      $(".list_tab").find('p').click(function(e){
+        if($(this).hasClass('none')){
+          e.preventDefault();
+        }else{
+          const tabIndex = $(".list_tab p").index(this);
+          $(this).addClass('active')
+          $(this).siblings().removeClass('active');
+          $(".con_tab").hide()
+          $(".con_tab").eq(tabIndex).fadeIn(); 
+          return false;
+        }
+      })
+
+      //카테고리 탭
+      $(".tag_group .tag").click(function(){
+        $(this).siblings().removeClass("active")
+        $(this).addClass("active")
+      })
+
+    
+      // 탭버튼
+      $(".tab_group .tab_btn").click(function(){
+        if($(this).hasClass("disabled")){
+          return
+        }
+        $(this).siblings().removeClass("active")
+        $(this).addClass("active")
+      })
+
+    </script>
+  </body>
+</html>

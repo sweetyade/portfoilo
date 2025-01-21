@@ -1,0 +1,318 @@
+@import "variables";
+
+/* mediaquery - pc base (1920px) */
+@mixin pc_large {
+  @media (min-width: #{$pc_base + 1px}) {
+    @content;
+  }
+}
+
+@mixin pc_small {
+  @media (max-width: #{$pc_small}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile_large {
+  @media (max-width: #{$mobile_large}) {
+    @content;
+  }
+}
+
+@mixin mobile_base {
+  @media (max-width: #{$mobile_base + 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile_small {
+  @media (max-width: #{$mobile_base - 1px}) {
+    @content;
+  }
+}
+
+@mixin small_height {
+  @media (max-height: #{$min_height}) {
+    @content;
+  }
+}
+
+/* typo */
+@mixin vertical_txt {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-all;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+}
+
+@mixin txtover {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin listdot {
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--text-color-2);
+  position: absolute;
+  left: 5px;
+  top: 6px;
+}
+
+/* flex */
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexcenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexbtw {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flexright {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@mixin flextop {
+  display: flex;
+  align-items: flex-start;
+}
+
+@mixin flextopcenter {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@mixin flextopbtw {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@mixin flextopright {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+@mixin flexbottom {
+  display: flex;
+  align-items: flex-end;
+}
+
+@mixin flexbottomcenter {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+@mixin flexbottombtw {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+@mixin flexbottomright {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+@mixin list_0_25 {
+  display: grid;
+  gap: 0.25rem;
+}
+
+@mixin list_0_5 {
+  display: grid;
+  gap: 0.5rem;
+}
+
+@mixin list_0_75 {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@mixin list_1 {
+  display: grid;
+  gap: 1rem;
+}
+
+@mixin list_1_25 {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@mixin list_1_5 {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@mixin list_1_75 {
+  display: grid;
+  gap: 1.75rem;
+}
+
+@mixin list_2 {
+  display: grid;
+  gap: 2rem;
+}
+
+@mixin list_2_5 {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@mixin font20b {
+  font-size: var(--font-20);
+  font-weight: var(--bold-font);
+  line-height: normal;
+}
+
+@mixin font20 {
+  font-size: var(--font-20);
+  line-height: normal;
+}
+
+@mixin font20b28h {
+  font-size: var(--font-20);
+  font-weight: var(--bold-font);
+  line-height: 1.75rem;
+}
+
+@mixin font16b {
+  font-size: var(--font-16);
+  font-weight: var(--bold-font);
+  line-height: normal;
+}
+
+@mixin font16 {
+  font-size: var(--font-16);
+  line-height: normal;
+}
+
+@mixin font16b24h {
+  font-size: var(--font-16);
+  font-weight: var(--bold-font);
+  line-height: 1.5rem;
+}
+
+@mixin font1624h {
+  font-size: var(--font-16);
+  line-height: 1.5rem;
+}
+
+@mixin font1620h {
+  font-size: var(--font-16);
+  line-height: 1.25rem;
+}
+
+@mixin font14b {
+  font-size: var(--font-14);
+  font-weight: var(--bold-font);
+  line-height: normal;
+}
+
+@mixin font14 {
+  font-size: var(--font-14);
+  line-height: normal;
+}
+
+@mixin font14b24h {
+  font-size: var(--font-14);
+  font-weight: var(--bold-font);
+  line-height: 1.5rem;
+}
+
+@mixin font1424h {
+  font-size: var(--font-14);
+  line-height: 1.5rem;
+}
+
+@mixin font14b20h {
+  font-size: var(--font-14);
+  font-weight: var(--bold-font);
+  line-height: 1.25rem;
+}
+
+@mixin font1420h {
+  font-size: var(--font-14);
+  line-height: 1.25rem;
+}
+
+@mixin font12b {
+  font-size: var(--font-12);
+  font-weight: var(--bold-font);
+  line-height: normal;
+}
+
+@mixin font12 {
+  font-size: var(--font-12);
+  line-height: normal;
+}
+
+@mixin font12b24h {
+  font-size: var(--font-12);
+  font-weight: var(--bold-font);
+  line-height: 1.5rem;
+}
+
+@mixin font1224h {
+  font-size: var(--font-12);
+  line-height: 1.5rem;
+}
+
+@mixin font1218h {
+  font-size: var(--font-12);
+  line-height: 1.125rem;
+}
+
+@mixin font12b16h {
+  font-size: var(--font-12);
+  font-weight: var(--bold-font);
+  line-height: 1rem;
+}
+
+@mixin font1216h {
+  font-size: var(--font-12);
+  line-height: 1rem;
+}
+
+@mixin font10b {
+  font-size: var(--font-10);
+  font-weight: var(--bold-font);
+  line-height: normal;
+}
+
+@mixin font10b16h {
+  font-size: var(--font-10);
+  font-weight: var(--bold-font);
+  line-height: 1rem;
+}
+
+@mixin font10 {
+  font-size: var(--font-10);
+  line-height: normal;
+}

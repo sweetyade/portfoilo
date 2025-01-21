@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="DRAXfit" />
+    <meta property="og:title" content="2-7. 제품 - 2-7-1. 등록" />
+    <meta property="og:description" content="디랙스핏, 운동하는 새로운 방법을 디랙스가 제시합니다." />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="https://www.draxfit-smart.com/" />
+
+    <!--<link rel="shortcut icon" href="favicon.ico" /> 64 x 64 (px) 또는 32 x 32 또는 16 x 16 -->
+    <link rel="icon" href="./favicon.png" />
+    <!-- 500 x 500 (px) -->
+
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <!-- <link rel="stylesheet" href="../../common/css/swiper-bundle.min.css"> -->
+    <link rel="stylesheet" href="../../common/css/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="../../common/css/jquery-ui.css">
+    <link rel="stylesheet" href="../../common/css/jquery-ui.theme.css">
+    <link rel="stylesheet" href="../../common/css/style.css" />
+
+
+    <title>2-7. 제품 - 2-7-1. 등록</title>
+</head>
+<body >
+    <!-- header -->
+    <header id="header">
+      <div class="header_top">
+        <div class="con_inner">
+          <div class="header_logo">
+            <h1 class="logo"><a href="./"><img src="../../images/common/logo.svg" alt=""></a></h1>
+            <div class="header_center">
+              <a href="javascript:void(0)">디랙스(선릉점)</a>
+              <i class="ic_logo_s"></i>
+              <i class="ic_star_yellow"></i>
+              <i class="ic_user_fill_green"></i>
+            </div>
+          </div>
+
+          <div class="header_menu">
+            <menu class="menu">
+              <a href="javascript:void(0)">제품소개</a>
+              <a href="javascript:void(0)">서비스소개</a>
+              <a href="javascript:void(0)">CONTACT</a>
+              <a href="javascript:void(0)">ABOUT</a>
+            </menu>
+          
+            <div class="header_icons">
+              <a href="javascript:void(0)" class="openQr"><i class="ic_qr"></i></a>
+              <a href="javascript:void(0)" class="openAlarm"><i class="ic_caution_green"></i></a>
+              <a href="javascript:void(0)"><i class="ic_alarm"></i></a>
+              <p><i class="openNav ic_menu"></i></p>
+              <div class="time_info">
+                <div class="flex">
+                  <i class="ic_user_fill_w"></i><p><span>0</span><span>/4</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <nav id="nav">
+
+            <div class="nav_top">
+              <div class="user_info">
+                <a href="javascript:void(0)" class="user_thumb"><img src="" alt="" /></a>
+                <p class="user_name">홍길동</p>
+              </div>
+    
+              <div class="nav_icons">
+                <a  href="javascript:void(0)" class="nav_icon"><i class="ic_setting"></i></a>
+                <p class="navClose nav_icon"><i class="ic_x"></i></p>
+              </div>
+            </div>
+            
+            <div class="menu">
+              <div class="nav_block nav_my">
+                <div class="title">
+                  <p class="txt nav_my">마이페이지</p>
+                  <p class="logoutBtn"><i class="ic_logout"></i></p>
+                </div>
+      
+                <ul class="nav_menu slideOpen" style="display: block;">
+                  <li class="menu_list">
+                    <h2 class="menu_title">운동&수업</h2>
+                    <ul class="nav_sub">
+                      <li><a href="javascript:void(0)">운동 계획 및 결과</a></li>
+                      <li><a href="javascript:void(0)">운동 가이드 조회</a></li>
+                      <li><a href="javascript:void(0)">수업 일정 및 예약</a></li>
+                      <li><a href="javascript:void(0)">오늘의 수업 조회</a></li>
+                      <li><a href="javascript:void(0)">수업 예약 현황 조회</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu_list">
+                    <h2 class="menu_title">목표 달성</h2>
+                    <ul class="nav_sub">
+                      <li><a href="javascript:void(0)">가이드 달성율</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu_list">
+                    <p class="menu_title">나의 정보</p>
+                    <ul class="nav_sub">
+                      <li><a href="javascript:void(0)">회원 정보</a></li>
+                      <li><a href="javascript:void(0)">설문 결과</a></li>
+                      <li><a href="javascript:void(0)">통합 측정 결과</a></li>
+                      <li><a href="javascript:void(0)">보유 상품 조회</a></li>
+                      <li><a href="javascript:void(0)">이용권 조회</a></li>
+                      <li><a href="javascript:void(0)">보유 머니 조회</a></li>
+                      <li><a href="javascript:void(0)">라커 조회</a></li>
+                      <li><a href="javascript:void(0)">구독 조회</a></li>
+                      <li><a href="javascript:void(0)">카드 조회</a></li>
+                      <li><a href="javascript:void(0)">심박계 등록</a></li>
+                      <li><a href="javascript:void(0)">회원 탈퇴</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu_list">
+                    <h2 class="menu_title">주문</h2>
+                    <ul class="nav_sub">
+                      <li><a href="javascript:void(0)">상품 조회</a></li>
+                      <li><a href="javascript:void(0)">장바구니</a></li>
+                      <li><a href="javascript:void(0)">주문 조회</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu_list">
+                    <h2 class="menu_title">공지사항</h2>
+                    <ul class="nav_sub">
+                      <li><a href="javascript:void(0)">공지사항</a></li>
+                    </ul>
+                  </li>
+  
+                </ul>
+              </div>
+              
+              <div class="divider"></div>
+
+              <div class="nav_block nav_admin">
+                <div class="title">
+                  <h2 class="txt">관리자 페이지</h2>
+                  <p class="admin_qr"><img src="../../images/nav_qr.png" alt=""></p>
+                </div>
+      
+                <ul class="nav_menu">
+                  <li class="menu_list">
+                    <h2 class="menu_title">회원관리</h2>
+                    <ul class="nav_sub">
+                      <li><a href="javascript:void(0)">사용자 관리</a></li>
+                      <li><a href="javascript:void(0)">사용자 이용권 조회</a></li>
+                      <li><a href="javascript:void(0)">고정라커 관리</a></li>
+                      <li><a href="javascript:void(0)">스마트라커 관리</a></li>
+                      <li><a href="javascript:void(0)">심박계 관리</a></li>
+                      <li><a href="javascript:void(0)">알림 관리</a></li>
+                      <li><a href="javascript:void(0)">주문 관리</a></li>
+                      <li><a href="javascript:void(0)">F&B 주문 관리</a></li>
+                      <li><a href="javascript:void(0)">수업 출결 관리</a></li>
+                      <li><a href="javascript:void(0)">머니 이용내역 조회</a></li>
+                      <li><a href="javascript:void(0)">출입 관리</a></li>
+                      <li><a href="javascript:void(0)">구독 관리</a></li>
+                      <li><a href="javascript:void(0)">구독 이력</a></li>
+                      <li><a href="javascript:void(0)">판매기 이용내역 조회</a></li>
+                      <li><a href="javascript:void(0)">대량자료 생성 결과</a></li>
+                      <li><a href="javascript:void(0)">공지사항 관리</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu_list">
+                    <h2 class="menu_title">수업 및 상품</h2>
+                    <ul class="nav_sub">
+                      <li><a href="javascript:void(0)">이용권</a></li>
+                      <li><a href="javascript:void(0)">그룹상품</a></li>
+                      <li><a href="javascript:void(0)">상품</a></li>
+                      <li><a href="javascript:void(0)">수업</a></li>
+                      <li><a href="javascript:void(0)">직원</a></li>
+                      <li><a href="javascript:void(0)">제품</a></li>
+                      <li><a href="javascript:void(0)">품목</a></li>
+                      <li><a href="javascript:void(0)">규격</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu_list">
+                    <h2 class="menu_title">운동 가이드</h2>
+                    <ul class="nav_sub">
+                      <li><a href="javascript:void(0)">유형별 가이드</a></li>
+                      <li><a href="javascript:void(0)">유산소 패턴</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu_list">
+                    <h2 class="menu_title">운동통계</h2>
+                    <ul class="nav_sub">
+                      <li><a href="javascript:void(0)">가이드 달성율</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu_list">
+                    <h2 class="menu_title">사업장 관리</h2>
+                    <ul class="nav_sub">
+                      <li><a href="javascript:void(0)">운영 현황</a></li>
+                      <li><a href="javascript:void(0)">사업장 정보</a></li>
+                      <li><a href="javascript:void(0)">사업장 추천정보</a></li>
+                      <li><a href="javascript:void(0)">사업장 목록</a></li>
+                      <li><a href="javascript:void(0)">알림 발송 비용</a></li>
+                      <li><a href="javascript:void(0)">사업장 보유상품 조회</a></li>
+                      <li><a href="javascript:void(0)">사업장 이용권 조회</a></li>
+                      <li><a href="javascript:void(0)">사업장 구독 조회</a></li>
+                      <li><a href="javascript:void(0)">판매기 목록</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu_list">
+                    <h2 class="menu_title">디랙스핏 이용료</h2>
+                    <ul class="nav_sub">
+                      <li><a href="javascript:void(0)">디랙스핏 이용료 상품 구매</a></li>
+                      <li><a href="javascript:void(0)">사업장 장바구니</a></li>
+                      <li><a href="javascript:void(0)">사업장 주문 조회</a></li>
+                      <li><a href="javascript:void(0)">사업장 카드 조회</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu_list">
+                    <h2 class="menu_title">시스템 관리자</h2>
+                    <ul class="nav_sub">
+                      <li><a href="javascript:void(0)">DRAX 장비 등록정보 조회</a></li>
+                      <li><a href="javascript:void(0)">DRAX 장비 제어</a></li>
+                      <li><a href="javascript:void(0)">사업장 시설 조회</a></li>
+                      <li><a href="javascript:void(0)">시스템 공지사항 관리</a></li>
+                      <li><a href="javascript:void(0)">운동영상 내역 관리</a></li>
+                      <li><a href="javascript:void(0)">운동 기구별 QR코드 관리</a></li>
+                      <li><a href="javascript:void(0)">배치, DB인시던트 관리</a></li>
+                      <li><a href="javascript:void(0)">카드 할부정보 관리</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+    
+            <div class="nav_lab">
+              <a href="javascript:void(0)">제품소개</a>
+              <a href="javascript:void(0)">서비스소개</a>
+              <a href="javascript:void(0)">contact</a>
+              <a href="javascript:void(0)">about</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <div class="header_breadcrumbs">
+        <div class="con_inner">
+          <p class="loc">제품 목록</p>
+          <p class="loc">제품 등록</p>
+        </div>
+      </div>
+
+      <div class="overlay"></div>
+    </header>
+    
+    <!-- main -->
+    <main id="main"> 
+      <div class="main_container light_box">
+        <section class="reg_con">
+          <h3 class="con_title txt_center mb_2">제품 등록 </h3>
+
+          <!-- 그룹상품 썸네일 이미지 -->
+          <div class="group_thumb mt_1">
+            <div class="thumb size_xs">
+              <span>미리보기</span>
+            </div>
+
+            <div class="thumb_ctl">
+              <div class="file_input">
+                <input type="file" id="class_img">
+                <label for="class_img" class="btn size_xs color_black_line">이미지 찾기</label>
+              </div>
+              <button class="btn size_xs color_black">이미지 삭제</button>
+            </div>
+
+            <p class="noti">이미지 용량  : 1MB 제한 / 이미지 형식 : JPG, PNG / 해상도 : 600PX*400PX</p>
+          </div>
+
+          <!-- 등록, 수정 폼 -->
+          <form action="">
+            <div class="reg_form" style="--pt: 2rem">
+              <div class="grid_2">
+                <div class="input_block select_block size_s">
+                  <label class="label" for="mgLsatLcsCd">대분류</label>
+                  <select name="" id="mgLsatLcsCd">
+                    <option value="hide">선택</option>
+                    <option value="1">음료</option>
+                    <option value="2">스낵</option>
+                    <option value="3">운동용품</option>
+                    <option value="4">식품</option>
+                    <option value="5">소모품</option>
+                  </select>
+                </div>
+
+                <div class="input_block select_block size_s">
+                  <label class="label" for="mgLsatMcCd">중분류</label>
+                  <select name="" id="mgLsatMcCd">
+                    <option value="hide">선택</option>
+                    <option value="1">옵션1</option>
+                    <option value="2">옵션2</option>
+                    <option value="3">옵션3</option>
+                    <option value="4">옵션3</option>
+                    <option value="5">옵션3</option>
+                    <option value="6">옵션3</option>
+                    <option value="7">옵션3</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="input_block select_block size_s">
+                <label class="label" for="mgLsatUno">품목</label>
+                <select name="" id="mgLsatUno">
+                  <option value="hide">선택</option>
+                  <option value="1">옵션</option>
+                  <option value="2">옵션</option>
+                  <option value="3">옵션</option>
+                  <option value="4">옵션</option>
+                  <option value="5">옵션</option>
+                </select>
+              </div>
+              
+              <div class="input_block select_block size_s">
+                <label class="label" for="mgRszeUno">규격</label>
+                <select name="" id="mgRszeUno">
+                  <option value="hide">선택</option>
+                  <option value="1">옵션</option>
+                  <option value="2">옵션</option>
+                  <option value="3">옵션</option>
+                  <option value="4">옵션</option>
+                  <option value="5">옵션</option>
+                </select>
+              </div>
+
+              <div class="input_block size_s">
+                <label for="prdNm" for="mgNm" class="label">제품명</label>
+                <div class="inner">
+                  <input type="text" class="" placeholder="제품명을 입력하세요." id="mgNm">
+                </div>
+              </div>
+
+              <div class="input_block size_s">
+                <label for="prdNm" for="mgAbrvNm" class="label">약어명</label>
+                <div class="inner">
+                  <input type="text" class="" placeholder="약어명을 입력하세요." id="mgAbrvNm">
+                </div>
+              </div>
+
+              <div class="grid_2 grid_none">
+                <div class="input_block size_s">
+                  <label for="alarmname" for="mgUtprc" class="label">가격</label>
+                  <div class="inner">
+                    <input type="text" class="price_before" placeholder="" inputmode="numeric" id="mgUtprc">
+                    <span>₩</span>
+                  </div>
+                </div>
+
+                <div class="input_block select_block size_s">
+                  <label class="label" for="txtnClsfCd">과세분류</label>
+                  <select name="" id="txtnClsfCd">
+                    <option value="hide">선택</option>
+                    <option value="1">과세</option>
+                    <option value="2">면세</option>
+                    <option value="3">해당없음</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="input_block textarea_block">
+                <label class="label" for="mgDsc">제품 설명</label>
+                <textarea type="text" class="" placeholder="제품설명을 입력하세요." id="mgDsc"></textarea>
+                <div class="textarea_info">
+                  <p class="input_msg"></p>
+                  <p class="txt_count"><span class="textCount">0</span> / 200</p>
+                </div>
+              </div>
+
+              <div class="input_block size_s">
+                <div class="date_set">
+                  <div class="">
+                    <label class="label" for="vldtStrtDtm">유효 시작일</label>
+                    <input type="text" id="vldtStrtDtm" class="cal_input" placeholder="연도.월.일" value="" readonly style="">
+                  </div>
+                  <span style="padding-top: 1.5rem">~</span>
+                  <div class="">
+                    <label class="label" for="vldtEndDtm">유효 종료일</label>
+                    <input type="text" id="vldtEndDtm" class="cal_input" placeholder="연도.월.일" value="" readonly style="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <div class="btn_wrap size_l">
+            <button class="btn size_l color_secondary">취소</button>
+            <button class="btn size_l">저장</button>
+          </div>
+        </section>
+      </div>
+    </main>
+    
+    <!-- footer -->
+    <footer id="footer">
+      <div class="footer_lnb">
+        <div class="con_inner">
+          <ul class="lnb">
+            <li><a href="javascript:void(0)">이용약관</a></li>
+            <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+          </ul>
+
+          <div class="lnb_slt">
+            <div class="slt_timezone">
+              <p class="lnbslt_title">타임존 및 언어 정보 변경</p>
+              <button class="btn_timezone"><i class="ic_globe_w"></i> kor</button>
+            </div>
+
+            <ul class="slt_lang">
+              <p class="lnbslt_title">서비스 국가</p>
+              <ul>
+                <li class="active">
+                  <p class="thumb"><img src="../../images/common/flag_korea.svg" alt=""></p>
+                  <p class="">Korea (대한민국)</p>
+                </li>
+                <li class="">
+                  <p class="thumb"><img src="../../images/common/flag_au.svg" alt=""></p>
+                  <p class="">Australia</p>
+                </li>
+                <li class="">
+                  <p class="thumb"><img src="../../images/common/flag_de.svg" alt=""></p>
+                  <p class="">Germany (Deutschland)</p>
+                </li>
+                <li class="">
+                  <p class="thumb"><img src="../../images/common/flag_jp.svg" alt=""></p>
+                  <p class="">Japan (日本国)</p>
+                </li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer_con">
+        <div class="con_inner">
+          <div class="footer_add">
+            <p>
+              <span>(주) 디랙스</span>
+              <span>경기도 안양시 만안구 전파로 62번길 26</span>
+              <span>사업자등록번호 123-81-70002</span>
+              <span>대표 유선경</span>
+            </p>
+            <p>
+              <span>Tel 031-459-8530</span>
+              <span>Fax 031-459-8531</span>
+            </p>
+          </div>
+          <div class="footer_copy">
+            <p class="footer_logo">
+              <img src="../../images/common/logo_sub.svg" alt="">
+            </p>
+            <p class="copy">Copyright©2020 DRAX All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+
+      <nav id="quick_nav">
+        <a href="javascript:void(0)" class="quick_menu">
+          <i class="ic_quick_plan"></i>
+          <p>계획 및 결과</p>
+        </a>
+        <a href="javascript:void(0)" class="quick_menu">
+          <i class="ic_quick_guide"></i>
+          <p>운동가이드</p>
+        </a>
+        <a href="javascript:void(0)" class="quick_menu">
+          <i class="ic_quick_home"></i>
+          <p>홈</p>
+        </a>
+        <a href="javascript:void(0)" class="quick_menu">
+          <i class="ic_quick_rate"></i>
+          <p>가이드 달성율</p>
+        </a>
+        <a href="javascript:void(0)" onclick="pageRe()" class="quick_menu" >
+          <i class="ic_quick_refresh"></i>
+          <p>새로고침</p>
+        </a>
+      </nav>
+    </footer>
+
+    <!-- 타임존 선택 -->
+    <div class="modal modal01">
+      <div class="overlay"></div>
+      <div class="modal_con">
+        <div class="modal_title">
+          <p class="title">타임존 및 언어 정보 변경</p>
+        </div>
+        <div class="con_inner">
+          <div class="input_block select_block">
+            <div class="inner mb_0_5">
+              
+              <label class="label" for="slt_time">타임존</label>
+              <select name="" id="slt_time">
+                <option value="hide">시간선택</option>
+                <option value="375">+12:00 Asia/Kamchatka</option>
+                <option value="323">+11:00 Antarctica/Macquarie</option>
+                <option value="388">+11:00 Asia/Magadan</option>
+                <option value="404">+11:00 Asia/Sakhalin</option>
+                <option value="409">+11:00 Asia/Srednekolymsk</option>
+                <option value="453">+10:30 Australia/Lord_Howe</option>
+                <option value="423">+10:00 Asia/Ust-Nera</option>
+                <option value="425">+10:00 Asia/Vladivostok</option>
+                <option value="444">+10:00 Australia/Brisbane</option>
+                <option value="447">+10:00 Australia/Currie</option>
+                <option value="450">+10:00 Australia/Hobart</option>
+                <option value="452">+10:00 Australia/Lindeman</option>
+                <option value="454">+10:00 Australia/Melbourne</option>
+                <option value="460">+10:00 Australia/Sydney</option>
+                <option value="443">+09:30 Australia/Adelaide</option>
+                <option value="445">+09:30 Australia/Broken_Hill</option>
+                <option value="448">+09:30 Australia/Darwin</option>
+                <option value="351">+09:00 Asia/Chita</option>
+                <option value="380">+09:00 Asia/Khandyga</option>
+                <option value="406" selected>+09:00 Asia/Seoul</option>
+                <option value="417">+09:00 Asia/Tokyo</option>
+                <option value="426">+09:00 Asia/Yakutsk</option>
+                <option value="449">+08:45 Australia/Eucla</option>
+                <option value="369">+08:00 Asia/Irkutsk</option>
+                <option value="407">+08:00 Asia/Shanghai</option>
+                <option value="457">+08:00 Australia/Perth</option>
+                <option value="345">+07:00 Asia/Bangkok</option>
+                <option value="346">+07:00 Asia/Barnaul</option>
+                <option value="382">+07:00 Asia/Krasnoyarsk</option>
+                <option value="392">+07:00 Asia/Novokuznetsk</option>
+                <option value="393">+07:00 Asia/Novosibirsk</option>
+                <option value="418">+07:00 Asia/Tomsk</option>
+                <option value="394">+06:00 Asia/Omsk</option>
+                <option value="422">+06:00 Asia/Urumqi</option>
+                <option value="428">+05:00 Asia/Yekaterinburg</option>
+                <option value="360">+04:00 Asia/Dubai</option>
+                <option value="524">+04:00 Europe/Astrakhan</option>
+                <option value="563">+04:00 Europe/Samara</option>
+                <option value="566">+04:00 Europe/Saratov</option>
+                <option value="574">+04:00 Europe/Ulyanovsk</option>
+                <option value="580">+04:00 Europe/Volgograd</option>
+                <option value="402">+03:00 Asia/Riyadh</option>
+                <option value="545">+03:00 Europe/Kirov</option>
+                <option value="555">+03:00 Europe/Moscow</option>
+                <option value="543">+02:00 Europe/Kaliningrad</option>
+                <option value="528">+01:00 Europe/Berlin</option>
+                <option value="533">+01:00 Europe/Busingen</option>
+                <option value="578">+01:00 Europe/Vienna</option>
+                <option value="302">-03:30 America/St_Johns</option>
+                <option value="181">-04:00 America/Blanc-Sablon</option>
+                <option value="214">-04:00 America/Glace_Bay</option>
+                <option value="216">-04:00 America/Goose_Bay</option>
+                <option value="223">-04:00 America/Halifax</option>
+                <option value="262">-04:00 America/Moncton</option>
+                <option value="174">-05:00 America/Atikokan</option>
+                <option value="205">-05:00 America/Detroit</option>
+                <option value="226">-05:00 America/Indiana/Indianapolis</option>
+                <option value="228">-05:00 America/Indiana/Marengo</option>
+                <option value="229">-05:00 America/Indiana/Petersburg</option>
+                <option value="231">-05:00 America/Indiana/Vevay</option>
+                <option value="232">-05:00 America/Indiana/Vincennes</option>
+                <option value="233">-05:00 America/Indiana/Winamac</option>
+                <option value="236">-05:00 America/Iqaluit</option>
+                <option value="240">-05:00 America/Kentucky/Louisville</option>
+                <option value="241">-05:00 America/Kentucky/Monticello</option>
+                <option value="268">-05:00 America/New_York</option>
+                <option value="269">-05:00 America/Nipigon</option>
+                <option value="277">-05:00 America/Pangnirtung</option>
+                <option value="310">-05:00 America/Thunder_Bay</option>
+                <option value="312">-05:00 America/Toronto</option>
+                <option value="193">-06:00 America/Chicago</option>
+                <option value="227">-06:00 America/Indiana/Knox</option>
+                <option value="230">-06:00 America/Indiana/Tell_City</option>
+                <option value="257">-06:00 America/Menominee</option>
+                <option value="272">-06:00 America/North_Dakota/Beulah</option>
+                <option value="273">-06:00 America/North_Dakota/Center</option>
+                <option value="274">-06:00 America/North_Dakota/New_Salem</option>
+                <option value="286">-06:00 America/Rainy_River</option>
+                <option value="287">-06:00 America/Rankin_Inlet</option>
+                <option value="289">-06:00 America/Regina</option>
+                <option value="290">-06:00 America/Resolute</option>
+                <option value="307">-06:00 America/Swift_Current</option>
+                <option value="317">-06:00 America/Winnipeg</option>
+                <option value="184">-07:00 America/Boise</option>
+                <option value="186">-07:00 America/Cambridge_Bay</option>
+                <option value="198">-07:00 America/Creston</option>
+                <option value="203">-07:00 America/Dawson_Creek</option>
+                <option value="204">-07:00 America/Denver</option>
+                <option value="207">-07:00 America/Edmonton</option>
+                <option value="211">-07:00 America/Fort_Nelson</option>
+                <option value="235">-07:00 America/Inuvik</option>
+                <option value="279">-07:00 America/Phoenix</option>
+                <option value="319">-07:00 America/Yellowknife</option>
+                <option value="202">-08:00 America/Dawson</option>
+                <option value="246">-08:00 America/Los_Angeles</option>
+                <option value="314">-08:00 America/Vancouver</option>
+                <option value="316">-08:00 America/Whitehorse</option>
+                <option value="155">-09:00 America/Anchorage</option>
+                <option value="239">-09:00 America/Juneau</option>
+                <option value="259">-09:00 America/Metlakatla</option>
+                <option value="270">-09:00 America/Nome</option>
+                <option value="300">-09:00 America/Sitka</option>
+                <option value="318">-09:00 America/Yakutat</option>
+                <option value="154">-10:00 America/Adak</option>
+                <option value="636">-10:00 Pacific/Honolulu</option>
+                <option value="680">-10:00 US/Hawaii</option>
+              </select>
+            </div>
+
+            <div class="inner">
+              <label class="label" for="slt_lang">언어</label>
+              <select name="" id="slt_lang">
+                <option value="hide">언어선택</option>
+                <option value="deu">Deutsch</option>
+                <option value="eng">English</option>
+                <option value="jpn">日本語 (にほんご)</option>
+                <option value="kor" selected>한국어</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      
+        <div class="popup_btn">
+          <button class="btn color_gray closeModal">취소</button>
+          <button class="btn closeModal">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- opt 로그인 -->
+    <div class="modal modal02">
+      <div class="overlay"></div>
+      <div class="modal_con">
+        <div class="modal_title">
+          <p class="title">OPT 로그인</p>
+        </div>
+        <div class="con_inner">
+          <div class="opt_key">
+            <p class="icon"><img src="../../images/opt_key.png" alt=""></p>
+
+            <div class="opt_input">
+              <input type="number" maxlength="1" inputmode="numeric" oninput="maxLengthCheck(this)">
+              <input type="number" maxlength="1" inputmode="numeric" oninput="maxLengthCheck(this)">
+              <input type="number" maxlength="1" inputmode="numeric" oninput="maxLengthCheck(this)">
+              <input type="number" maxlength="1" inputmode="numeric" oninput="maxLengthCheck(this)">
+              <input type="number" maxlength="1" inputmode="numeric" oninput="maxLengthCheck(this)">
+              <input type="number" maxlength="1" inputmode="numeric" oninput="maxLengthCheck(this)">
+            </div>
+
+            <p>화면에 표시된 숫자 <strong>6자리</strong>를 입력하세요.</p>
+
+            <p>로그인할 기기에서 <img src="../../images/system/otp.svg" alt="">버튼을 클릭하면<br>
+              <span class="primary_color">6자리 숫자</span>가 보입니다.</p>
+          </div>
+        </div>
+        <div class="popup_btn">
+          <button class="btn color_gray closeModal">닫기</button>
+          <button class="btn closeModal">확인</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 관리자페이지 qr -->
+    <div class="modal modal03">
+      <div class="overlay"></div>
+      <div class="modal_con size_s">
+        <div class="con_inner">
+          <div class="qr_adimin">
+            <figure><img src="../../images/and_qr.png" alt="안드로이드 앱 다운로드"></figure>
+            <figcaption><img src="../../images/and_qr_txt.png" alt="안드로이드 앱"></figcaption>
+            <figure><img src="../../images/app_qr.png" alt="안드로이드 앱 다운로드"></figure>
+            <figcaption><img src="../../images/app_qr_txt.png" alt="안드로이드 앱"></figcaption>
+            <figure><img src="../../images/local_qr.png" alt="안드로이드 앱 다운로드"></figure>
+            <figcaption><a href="javascript:void(0)">https://localhost:8080</a></figcaption>
+          </div>
+        </div>
+        <div class="popup_btn">
+          <button class="btn color_gray closeModal">닫기</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script src="../../common/js/jquery.min.js"></script>
+    <script src="../../common/js/jquery-ui.js"></script>
+    <script src="../../common/js/jquery.datetimepicker.full.js"></script>
+    <script>
+
+      // ========================= header =================== //
+      //페이지 로딩시 바디 최소높이값지정
+      const headerHight = $("#header").innerHeight()
+      const footerHeight = $("#footer").innerHeight()
+      const mainHeight = headerHight + footerHeight;
+      const containerHeight = mainHeight + 56;
+      $("#main").css("min-height",`calc(100svh - ${mainHeight}px)`)
+      $(".main_container").css("min-height", `calc(100svh - ${containerHeight}px)`)
+
+       //오픈알람
+      $(".openAlarm").click(function(){
+        $(".time_info").fadeIn("fast")
+        setTimeout(() => {
+          $(".time_info").fadeOut("fast")
+        }, 2000);
+      });
+
+      //nav 관련
+      const bodyWidth = $("body").innerWidth()
+      const menuTile = $(".nav_block .txt")
+      const subMenu = $(".nav_sub");
+      const menuList = $(".menu_title");
+
+      $(".openNav").click(function(){
+        $("#nav").addClass("open")
+        if(bodyWidth <= 1024){
+          $("body").addClass("open")
+          $("#header .overlay").fadeIn("fast")
+        }
+      })
+
+      $(".navClose, #header .overlay").click(function(){
+        $("#nav").removeClass("open")
+        subMenu.removeClass("subOpen").slideUp("fast")
+        menuList.removeClass("subOpen")
+
+        if(bodyWidth <= 1024){
+          $("body").removeClass("open")
+          $("#header .overlay").fadeOut("fast")
+        }
+      })
+
+      menuTile.click(function(){
+        const navMenu = $(this).parent().next(".nav_menu");
+        if(navMenu.hasClass("slideOpen")){
+          navMenu.slideUp().removeClass("slideOpen")
+        }else{
+          $(".nav_menu").removeClass("slideOpen").slideUp()
+          navMenu.slideDown().addClass("slideOpen")
+          subMenu.removeClass("subOpen").slideUp()
+          menuList.removeClass("subOpen")
+        }
+      })
+
+      menuList.click(function(){
+        if($(this).hasClass("subOpen")){
+          $(this).removeClass("subOpen");
+          $(this).siblings(subMenu).slideUp()
+        }else{
+          subMenu.slideUp()
+          menuList.removeClass("subOpen")
+          $(this).siblings(subMenu).slideDown()
+          $(this).addClass("subOpen");
+        }
+      })
+
+
+      /* ============== footer================ */
+       //셀렉트
+      $('select').each(function(){
+        var $this = $(this), numberOfOptions = $(this).children('option').length;
+
+        $this.addClass('select-hidden'); 
+        $this.wrap('<div class="select"></div>');
+        $this.after('<button type="button" class="selectBtn"></button>');
+
+        var $styledSelect = $this.next('button.selectBtn');
+        $styledSelect.text($this.children('option').eq(0).text());
+
+        var $list = $('<ul />', {
+            'class': 'optionList'
+        }).insertAfter($styledSelect);
+        
+        if($this.children('option').is(":selected")){
+          $this.siblings('button.selectBtn').text($this.children('option:selected').text())
+        }
+        
+
+        for (var i = 0; i < numberOfOptions; i++) {
+            $('<li />', {
+                text: $this.children('option').eq(i).text(),
+                rel: $this.children('option').eq(i).val()
+            }).appendTo($list);
+            if ($this.children('option').eq(i).is(':selected')){
+              $('li[rel="' + $this.children('option').eq(i).val() + '"]').addClass('is-selected');
+            }
+        }
+
+        if (!$list.find('li[rel="hide"]').hasClass("is-selected")) {
+          $this.next('button.selectBtn').addClass("optSlt");
+        }
+    
+        var $listItems = $list.children('li');
+
+        $styledSelect.click(function(e) {
+            e.stopPropagation();
+            $('button.selectBtn.active').not(this).each(function(){
+                $(this).removeClass('active').next('ul.optionList').hide();
+            });
+            $(this).toggleClass('active').next('ul.optionList').toggle();
+        });
+      
+        $listItems.click(function(e) {
+            e.stopPropagation();
+            $styledSelect.text($(this).text()).removeClass('active').addClass('optSlt');
+            $this.val($(this).attr('rel'));
+          $list.find('li.is-selected').removeClass('is-selected');
+          $list.find('li[rel="' + $(this).attr('rel') + '"]').addClass('is-selected');
+            $list.hide();
+            // console.log($this.val());
+        });
+      
+        $(document).click(function() {
+            $styledSelect.removeClass('active');
+            $list.hide();
+        });
+      });
+
+ 
+    //페이지 리셋
+      function pageRe(){
+        location.reload(true);
+      }
+
+      //서비스국가 선택
+      $(".slt_lang").find("li").click(function(){
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active")
+      })
+
+      //팝업
+      $(".btn_timezone").click(function(){
+        $(".modal01, body").addClass("open")
+      })
+
+          // opt로그인 팝업 관련
+      $(".openQr").click(function(){
+        $(".modal02, body").addClass("open");
+        $(".opt_input input").first().focus()
+      })
+
+      function maxLengthCheck(object){
+      if (object.value.length > object.maxLength){
+        object.value = object.value.slice(0, object.maxLength);
+        }    
+      }
+
+      $(".opt_input input").keyup(function () {
+          if (this.value.length == this.maxLength) {
+            $(this).next('input').focus();
+          }
+      });
+      
+      // 관리자페이지 qr
+      $(".admin_qr").click(function(){
+        $(".modal03, body").addClass("open");
+      })
+
+      //팝업닫기
+      $(".closeModal, .modal .overlay").click(function (){
+        $('.modal, body').removeClass('open')
+      })
+
+      $(".closeThis").click(function(){
+        $(this).parents(".modal").removeClass("open")
+      })
+
+      /* ================= main =================== */
+      // 탭버튼
+      $(".reg_form .tab_btn").click(function(){
+        if ($(this).hasClass("disabled")) {
+          return;
+        }
+        
+        $(this).siblings().removeClass("active")
+        $(this).addClass("active")
+      })
+
+       //통화입력
+      function formatCurrency(value) {
+        if (!value) return ""; 
+        const numericValue = value.replace(/[^\d.-]/g, "");
+        const number = parseFloat(numericValue);
+        if (isNaN(number)) return "";
+
+        return number.toLocaleString("en-US", {
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 2,
+        });
+      }
+
+      $(".price_before").on("input", function (e) {
+        const $input = $(this);
+        const cursorPosition = this.selectionStart;
+        const formattedValue = formatCurrency($input.val());
+        $input.val(formattedValue);
+
+        this.setSelectionRange(cursorPosition, cursorPosition);
+      });
+
+      $(".price_before").on("blur", function () {
+        const $input = $(this);
+        const formattedValue = formatCurrency($input.val());
+        $input.val(formattedValue);
+      });
+
+      /* textarea */
+      $(".textarea_block").each(function(){
+        $(this).find("textarea").on("keyup", function(){
+          let textCountLimit = 200;
+          let textLength = $(this).val().length;
+          let textCount = $('.textarea_info').find(".textCount");
+      
+          textCount.text(textLength);
+
+          if (textLength > textCountLimit) {
+            $(this).val($(this).val().substr(0, textCountLimit));
+        }
+        })
+      })
+
+      //달력
+      window.onload = function cleanDatepicker(){
+        // clear 버튼 생성
+        var old_fn = $.datepicker._updateDatepicker;
+
+        $.datepicker._updateDatepicker = function(inst) {
+          old_fn.call(this, inst);
+
+          var buttonPane = $(this).datepicker("widget").find(".ui-datepicker-buttonpane");
+
+          $("<button type='button' class='ui-datepicker-clean ui-state-default ui-priority-primary ui-corner-all'>삭제</button>").appendTo(buttonPane).click(function(ev) {
+            $.datepicker._clearDate(inst.input);
+          }) ;
+        }
+      }
+
+      $.datepicker.regional['ko'] = {
+        prevText: '이전달',
+        nextText: '다음달',
+        monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+        monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+        dayNames: ['일','월','화','수','목','금','토'],
+        dayNamesShort: ['일','월','화','수','목','금','토'],
+        dayNamesMin: ['일','월','화','수','목','금','토'],
+        dateFormat: 'yy.mm.dd',
+        currentText: '오늘',
+        closeText: "닫기",
+        showMonthAfterYear: true,
+        changeMonth: true,
+        changeYear: true,
+        showButtonPanel: true,
+        yearRange: 'c-99:c+99',
+      };
+      $.datepicker.setDefaults($.datepicker.regional['ko']);
+      // var nextMonth = $("#from").getMonth()+1;
+
+      $('#vldtStrtDtm').datepicker();
+      $('#vldtStrtDtm').datepicker("option", "maxDate", $("#vldtEndDtm").val());
+      $('#vldtStrtDtm').datepicker("option", "onClose", function ( selectedDate ) {
+          $("#vldtEndDtm").datepicker( "option", "minDate", selectedDate );
+      });
+
+      $('#vldtEndDtm').datepicker();
+      $('#vldtEndDtm').datepicker("option", "minDate", $("#vldtStrtDtm").val());
+      $('#vldtEndDtm').datepicker("option", "onClose", function ( selectedDate ) {
+          $("#vldtStrtDtm").datepicker( "option", "maxDate", selectedDate );
+      });
+    </script>
+  </body>
+</html>

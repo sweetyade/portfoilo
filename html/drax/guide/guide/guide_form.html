@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../../common/css/jquery-ui.css">
+    <link rel="stylesheet" href="../../common/css/jquery-ui.theme.css">
+    <link rel="stylesheet" href="../../common/css/guide.css" />
+    <title>DESIGN GUIDE</title>
+  </head>
+
+  <style>
+    .input_block,
+    .textarea_block,
+    .select_block {
+      width: 300px;
+    }
+
+    .option_block{
+      width: fit-content;
+    }
+  </style>
+  <body>
+    <main id="guide_main">
+      <!-- menu -->
+      <nav id="guide_nav">
+        <h1>design guide</h1>
+
+        <div class="nav_menu">
+          <a href="guide.html">typography</a>
+          <a href="guide_color.html">color</a>
+          <a href="guide_icon.html">icon</a>
+          <a href="guide_form.html" class="active">form</a>
+          <a href="guide_button.html">button</a>
+          <a href="guide_popup.html">popup</a>
+          <a href="guide_component.html">component</a>
+          <a href="guide_layout.html">layout</a>
+        </div>
+      </nav>
+
+      <!-- contents -->
+      <section class="container">
+        <div class="contents">
+          <h2>form</h2>
+
+          <div class="guide_info">
+            <p class="guide_normal_f mb_0_25">- input, select default height: 56px; | .size_s height : 48px</p>
+            <p class="guide_normal_f">- option select, default height: 36px; | .size_s height : 24px  | .size_l height : 48px</p>
+          </div>
+
+          <!-- text input -->
+          <div class="guide_block">
+            <h3>input</h3>
+            <div class="guide_data">
+              <p class="title">input (default)</p>
+              <div class="data flex_top" style="gap: 1rem;">
+                <div class="input_block">
+                  <div class="inner">
+                    <input type="text" class="clearInput" placeholder="기본텍스트 인풋 h56">
+                    <div class="btnClear"></div>
+                  </div>
+                </div>
+                <div class="input_block">
+                  <div class="inner">
+                    <input type="text" class="clearInput" placeholder="disabled, readonly" value="" disabled>
+                    <div class="btnClear"></div>
+                  </div>
+                </div>
+                <div class="input_block size_s">
+                  <div class="inner">
+                    <input type="text" class="clearInput" placeholder="size_s h48" value="" required>
+                    <div class="btnClear"></div>
+                  </div>
+                </div>
+                <div class="input_block size_s">
+                  <div class="inner">
+                    <input type="text" class="" id="ntplNfcId2" placeholder="" value="" disabled>
+                    <button type="button" id="nfcAdm2" class="btn size_s color_secondary input_btn">NFC 스캔</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">input (default-label)</p>
+              <div class="data flex_top" style="gap: 1rem;">
+                <div class="input_block">
+                  <label class="label" for="">라벨</label>
+                  <div class="inner">
+                    <input type="text" class="clearInput" placeholder="기본텍스트 인풋 h56">
+                    <div class="btnClear"></div>
+                  </div>
+                </div>
+                <div class="input_block">
+                  <label class="label" for="">라벨</label>
+                  <div class="inner">
+                    <input type="text" class="clearInput" placeholder="disabled, readonly" value="" disabled>
+                    <div class="btnClear"></div>
+                  </div>
+                </div>
+                <div class="input_block size_s">
+                  <label class="label" for="">라벨</label>
+                  <div class="inner">
+                    <input type="text" class="clearInput" placeholder="size_s h48" value="" required>
+                    <div class="btnClear"></div>
+                  </div>
+                </div>
+
+                <div class="input_block size_s">
+                  <label class="label" for="class1tmNmou">수업 정원</label>
+                  
+                  <div class="count_input">
+                    <input type="text" value="2명" id="class1tmNmou">
+                    <div class="count_ctr">
+                      <div class="ctr_btn btn_minus" id="btn-class1tmNmou-minus"><i class="ic_minus"></i></div>
+                      <div class="ctr_btn btn_plus" id="btn-class1tmNmou-plus"><i class="ic_plus"></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">input (label)</p>
+              <div class="data flex_top" style="gap: 1rem;">
+                <div class="input_block">
+                  <div class="inner">
+                    <label class="label" for="input1">라벨</label>
+                    <input type="text" class="clearInput" id="input1" placeholder="라벨인풋 h56">
+                    <div class="btnClear"></div>
+                  </div>
+                </div>
+                <div class="input_block">
+                  <div class="inner">
+                    <label class="label" for="input2">라벨</label>
+                    <input type="text" class="clearInput" id="input2" placeholder="disabled, readonly" disabled>
+                    <div class="btnClear"></div>
+                  </div>
+                </div>
+                <div class="input_block">
+                  <div class="inner">
+                    <label class="label" for="input3">라벨</label>
+                    <input type="text" class="clearInput" id="input3" placeholder="에러입력시 보더,라벨 색상 변경" name="input3"required>
+                    <div class="btnClear"></div>
+                  </div>
+                  <p class="input_msg">에러메세지</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">input (search)</p>
+              <div class="data flex_top" style="gap: 1rem;">
+                <form action="" onsubmit="return false">
+                  <div class="input_block size_s">
+                    <div class="inner">
+                      <input type="search" class="clearInput search_input" placeholder="search input h48" onKeyPress="if (event.keyCode==13) { form.submit(); }">
+                      <div class="btnClear"></div>
+                      <button class="icon_btn btn_search"><i class="ic_search"></i></button>
+                    </div>
+                  </div>
+                </form>
+                
+                <div class="input_block">
+                  <div class="inner">
+                    <input type="search" class="clearInput search_input" placeholder="search input h56" value="" onKeyPress="if (event.keyCode==13) { form.submit(); }">
+                    <div class="btnClear"></div>
+                    <button class="icon_btn btn_search"><i class="ic_search"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">input (date)</p>
+              <div class="data flex_top" style="gap: 1rem;">
+                <div class="calander_date">
+                  <input type="text" class="date_input settingDate" id="" value="2024.08.11 ~ 09.14" placeholder="년도.월.일 ~ 월.일" style="--w: 242px" readonly="">
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">input (datepicker)</p>
+              <div class="data flex_top" style="gap: 1rem;">
+                <div class="cal_date">
+                  <input type="text" class="date_input" id="classDate" value="" placeholder="년도.월.일" style="--w: 150px" readonly>
+                  <p class="txt todayTxt">금요일</p>
+                  <div class="cal_nav">
+                    <p class="nav_prev nav_icon"></p>
+                    <p class="nav_next nav_icon"></p>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">input (datepicker)</p>
+              <div class="data flex_top" style="gap: 1rem;">
+                <div class="calander_date">
+                  <input type="text" class="date_input" id="strClssSchDate" value="" placeholder="년도.월" style="--w: 150px" readonly>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">input (datepicker from to)</p>
+              <div class="data flex_top" style="gap: 1rem;">
+                <div class="input_block">
+                  <div class="inner">
+                    <label class="label" for="from" name="from">수업 기간</label>
+                    <input type="text" class="cal_input" id="from" placeholder="연도-월-일" value="" readonly>
+                  </div>
+                </div>
+                <div class="input_block">
+                  <div class="inner">
+                    <label class="label" for="to" name="to">수업 종료</label>
+                    <input type="text" id="to" class="cal_input" placeholder="연도-월-일" value="" readonly>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">date_ctr</p>
+              <div class="data flex_top" style="gap: 1rem;">
+                <div class="input_block size_s opt1">
+                  <div class="date_ctr">
+                    <button type="button" class="ctr_btn ctr_prev"><i class="ic_chevron_left_dark"></i></button>
+                    <input type="text" class="todayVal" id="btn-selected-date" value="2024.09.18(목)" readonly="">
+                    <button type="button" class="ctr_btn ctr_next"><i class="ic_chevron_right_dark"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title"></p>
+              <div class="data flex_top" style="gap: 1rem;">
+                <div class="input_block size_s" style="width: 300px">
+                  <label class="label" for="srchStrtDt">주문 기간</label>
+                  <div class="date_set">
+                    <input type="text" id="srchStrtDt" class="cal_input" placeholder="연도.월.일" value="" readonly style="">
+                    <span>~</span>
+                    <input type="text" id="srchEndDt" class="cal_input" placeholder="연도.월.일" value="" readonly style="">
+                  </div>
+                </div>
+
+                <div class="con_search">
+                  <!--/// 여기부터 -->
+                  <div class="date_set_group"  style="width: 300px">
+                    <div class="input_block size_s">
+                      <label class="label" for="startDate01">주문 기간</label>
+                      <div class="date_set">
+                        <input type="text" id="startDate01" class="cal_input" placeholder="연도.월.일" value="" readonly style="--w: 118px">
+                      </div>
+                    </div>
+                    <span style="padding-bottom: 1rem;">~</span>
+                    <div class="input_block size_s">
+                      <label class="label" for="endDate01">종료 일시</label>
+                      <div class="date_set">
+                        <input type="text" id="endDate01" class="cal_input" placeholder="연도.월.일" value="" readonly style="--w: 118px">
+                      </div>
+                    </div>
+                  </div>
+                   <!-- // -->
+                </div>
+                
+              </div>
+            </div>
+            
+          </div>
+
+          <!-- textarea -->
+          <div class="guide_block">
+            <h3>textarea</h3>
+            <div class="guide_data">
+              <p class="title">textarea</p>
+              <div class="data flex_top" style="gap: 1rem;">
+                <div class="input_block textarea_block">
+                  <div class="inner">
+                    <label class="label" for="textarea1">라벨</label>
+                    <textarea type="text" class="" placeholder="플레이스 홀더" id="textarea1"></textarea>
+                  </div>
+                  <div class="textarea_info">
+                    <p class="input_msg">에러메세지</p>
+                    <p class="txt_count"><span class="textCount">0</span> / 200</p>
+                  </div>
+                </div>
+
+                <div class="input_block textarea_block error">
+                  <div class="inner">
+                    <label class="label" for="textarea2">라벨</label>
+                    <textarea type="text" class="" placeholder="플레이스 홀더" id="textarea2"></textarea>
+                  </div>
+                  <div class="textarea_info">
+                    <p class="input_msg">에러메세지</p>
+                    <p class="txt_count"><span class="textCount">0</span> / 200</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- select -->
+          <div class="guide_block">
+            <h3>select</h3>
+            <div class="guide_data">
+              <p class="title">select(default)</p>
+              <div class="data flex_top" style="gap: 1rem;">
+                <div class="input_block select_block size_s">
+                  <select name="" id="">
+                    <option value="hide">셀렉트박스 h48</option>
+                    <option value="">옵션1</option>
+                    <option value="">옵션2</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                  </select>
+                </div>
+
+                <div class="input_block select_block">
+                  <select name="" id="">
+                    <option value="hide">셀렉트박스 h48</option>
+                    <option value="">옵션1</option>
+                    <option value="">옵션2</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                  </select>
+                </div>
+
+                <div class="input_block select_block">
+                  <select name="" id="">
+                    <option value="hide">셀렉트박스 h48</option>
+                    <option value="">옵션1</option>
+                    <option value="">옵션2</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">select(label)</p>
+              <div class="data flex_top" style="gap: 1rem;">
+
+                <div class="input_block select_block">
+                  <div class="inner">
+                    <label class="label" for="select1">라벨</label>
+                    <select name="" id="select1">
+                      <option value="hide">라벨 셀렉트박스</option>
+                      <option value="">옵션1</option>
+                      <option value="">옵션2</option>
+                      <option value="">옵션3</option>
+                      <option value="">옵션3</option>
+                      <option value="">옵션3</option>
+                      <option value="">옵션3</option>
+                      <option value="">옵션3</option>
+                    </select>
+                    <p class="input_msg">에러 메세지</p>
+                  </div>
+                </div>
+
+                <div class="input_block select_block">
+                  <div class="inner">
+                    <label class="label" for="select2">라벨</label>
+                    <select name="" id="select2" disabled>
+                      <option value="hide">라벨 셀렉트박스</option>
+                      <option value="">옵션1</option>
+                      <option value="">옵션2</option>
+                      <option value="">옵션3</option>
+                      <option value="">옵션3</option>
+                      <option value="">옵션3</option>
+                      <option value="">옵션3</option>
+                      <option value="">옵션3</option>
+                    </select>
+                    <p class="input_msg">에러 메세지</p>
+                  </div>
+                </div>
+
+                <div class="input_block select_block error">
+                  <div class="inner">
+                    <label class="label" for="select3">라벨</label>
+                    <select name="" id="select3" required>
+                      <option value="hide">라벨 셀렉트박스</option>
+                      <option value="">옵션1</option>
+                      <option value="">옵션2</option>
+                      <option value="">옵션3</option>
+                      <option value="">옵션3</option>
+                      <option value="">옵션3</option>
+                      <option value="">옵션3</option>
+                      <option value="">옵션3</option>
+                    </select>
+                    <p class="input_msg">에러 메세지</p>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">select(option)</p>
+              <div class="data flex_top" style="gap: 2rem;">
+                <div class="input_block option_block size_s">
+                  <select name="" id="">
+                    <option value="hide">전체 .size_s</option>
+                    <option value="">옵션1</option>
+                    <option value="">옵션2</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                  </select>
+                </div>
+
+                <div class="input_block option_block">
+                  <select name="" id="">
+                    <option value="hide">전체 defualt</option>
+                    <option value="">옵션1</option>
+                    <option value="">옵션2</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                  </select>
+                </div>
+
+                <div class="input_block option_block size_l">
+                  <select name="" id="">
+                    <option value="hide">전체 .size_l</option>
+                    <option value="">옵션1</option>
+                    <option value="">옵션2</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                    <option value="">옵션3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- checkbox -->
+          <div class="guide_block">
+            <h3>checkbox</h3>
+            <div class="guide_data">
+              <p class="title">checkbox</p>
+              <div class="data flex_top" style="gap: 1rem;">
+                <div class="check_block">
+                  <input type="checkbox" class="checkbox" id="check1">
+                  <label for="check1">
+                    <span class="check"></span>
+                    <span class="label">default</span>
+                  </label>
+                </div>
+                <div class="check_block">
+                  <input type="checkbox" class="checkbox" id="check2" checked>
+                  <label for="check2">
+                    <span class="check"></span>
+                    <span class="label">checked</span>
+                  </label>
+                </div>
+                <div class="check_block">
+                  <input type="checkbox" class="checkbox" id="check3" disabled>
+                  <label for="check3">
+                    <span class="check"></span>
+                    <span class="label">disabled</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">radio(default)</p>
+              <div class="data flex_top" style="gap: 1rem;">
+                <div class="check_block">
+                  <input type="radio" class="radio" id="radio1" name="radio_primary">
+                  <label for="radio1">
+                    <span class="check"></span>
+                    <span class="label">default</span>
+                  </label>
+                </div>
+                <div class="check_block">
+                  <input type="radio" class="radio" id="radio2"  name="radio_primary" checked>
+                  <label for="radio2">
+                    <span class="check"></span>
+                    <span class="label">checked</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">radio(secondary)</p>
+              <div class="data flex_top" style="gap: 1rem;">
+                <div class="check_block color_secondary">
+                  <input type="radio" class="radio" id="radio3" name="radio_secondary">
+                  <label for="radio3">
+                    <span class="check"></span>
+                    <span class="label">default</span>
+                  </label>
+                </div>
+                <div class="check_block color_secondary">
+                  <input type="radio" class="radio" id="radio4"  name="radio_secondary" checked>
+                  <label for="radio4">
+                    <span class="check"></span>
+                    <span class="label">checked</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- toggle -->
+          <div class="guide_block">
+            <h3>toggle</h3>
+            <div class="guide_data">
+              <p class="title">toggle (default)</p>
+              <div class="data flex_top" style="gap: 1rem;">
+                <div class="toggle_block">
+                  <input type="checkbox" class="toggle" id="toggle1">
+                  <label for="toggle1">
+                    <span class="toggle_btn"></span>
+                    <span class="label">off</span>
+                  </label>
+                </div>
+                <div class="toggle_block">
+                  <input type="checkbox" class="toggle" id="toggle2" checked>
+                  <label for="toggle2">
+                    <span class="toggle_btn"></span>
+                    <span class="label">on</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">toggle (size_l)</p>
+              <div class="data flex_top" style="gap: 1rem;">
+                <div class="toggle_block">
+                  <input type="checkbox" class="toggle" id="toggle3">
+                  <label for="toggle3">
+                    <span class="toggle_btn size_l"></span>
+                    <span class="label">off</span>
+                  </label>
+                </div>
+                <div class="toggle_block">
+                  <input type="checkbox" class="toggle" id="toggle4" checked>
+                  <label for="toggle4">
+                    <span class="toggle_btn size_l"></span>
+                    <span class="label">on</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../../common/js/jquery-ui.js"></script>
+    <script src="../../common/js/jquery.ui.monthpicker.js"></script>
+    <script>
+      // * ---- 삭제버튼 ------- */
+      $(".input_block").each(function () {
+        $(this)
+          .find(".clearInput")
+          .on("keyup focus", function () {
+            $(this).siblings(".btnClear").attr("style", "opacity: 1");
+
+            if ($(this).val().length == 0) {
+              $(this).siblings(".btnClear").attr("style", "opacity: 0");
+            } else {
+              $(this).siblings(".btnClear").attr("style", "opacity: 1");
+            }
+          });
+
+        $(this)
+          .find(".clearInput")
+          .on("blur", function () {
+            $(this).siblings(".btnClear").attr("style", "opacity: 0");
+          });
+
+        $(this)
+          .find(".btnClear")
+          .on("click touchstart", function () {
+            $(this).closest(".input_block").find(".clearInput").val("");
+            $(this)
+              .closest(".input_block")
+              .find(".btnClear")
+              .attr("style", "opacity: 0");
+            return false;
+          });
+      });
+
+
+      /* 넘버인풋 맥스 */
+      function maxLengthChk(object) {
+        if (object.value.length > object.maxLength) {
+          object.value = object.value.slice(0, object.maxLength);
+        }
+      }
+      
+
+      //셀렉트
+      $('select').each(function(){
+    var $this = $(this), numberOfOptions = $(this).children('option').length;
+  
+    $this.addClass('select-hidden'); 
+    $this.wrap('<div class="select"></div>');
+    $this.after('<button class="selectBtn"></button>');
+
+
+    var $styledSelect = $this.next('button.selectBtn');
+    $styledSelect.text($this.children('option').eq(0).text());
+  
+    var $list = $('<ul />', {
+        'class': 'optionList'
+    }).insertAfter($styledSelect);
+
+    if($this.children('option').is(":selected")){
+          $this.siblings('button.selectBtn').text($this.children('option:selected').text())
+        }
+  
+    for (var i = 0; i < numberOfOptions; i++) {
+        $('<li />', {
+            text: $this.children('option').eq(i).text(),
+            rel: $this.children('option').eq(i).val()
+        }).appendTo($list);
+        if ($this.children('option').eq(i).is(':selected')){
+          $('li[rel="' + $this.children('option').eq(i).val() + '"]').addClass('is-selected');
+        }
+    }
+  
+    var $listItems = $list.children('li');
+  
+    $styledSelect.click(function(e) {
+        e.stopPropagation();
+        $('button.selectBtn.active').not(this).each(function(){
+            $(this).removeClass('active').next('ul.optionList').hide();
+        });
+        $(this).toggleClass('active').next('ul.optionList').toggle();
+    });
+  
+    $listItems.click(function(e) {
+        e.stopPropagation();
+        $styledSelect.text($(this).text()).removeClass('active').addClass('optSlt');
+        $this.val($(this).attr('rel'));
+      $list.find('li.is-selected').removeClass('is-selected');
+      // $list.find('li[rel="' + $(this).attr('rel') + '"]').addClass('is-selected');
+        $list.hide();
+        //console.log($this.val());
+    });
+  
+    $(document).click(function() {
+        $styledSelect.removeClass('active');
+        $list.hide();
+    });
+
+});
+
+       /* textarea */
+      $(".textarea_block").each(function(){
+        $(this).find("textarea").on("keyup", function(){
+          let textCountLimit = 200;
+          let textLength = $(this).val().length;
+          let textCount = $(this).parent().siblings().find(".textCount");
+      
+          textCount.text(textLength);
+
+          if (textLength > textCountLimit) {
+            $(this).val($(this).val().substr(0, textCountLimit));
+        }
+        })
+      })
+    
+    //달력 - 기본
+    let fullDate = new Date();
+    let date = fullDate.getDate();
+    let month = fullDate.getMonth() + 1;
+    let year = fullDate.getFullYear();
+    let day = fullDate.getDay();
+
+    // 날짜 형식 정리
+    if (month < 10) month = '0' + month;
+    if (date < 10) date = '0' + date;
+
+    let today = `${year}.${month}.${date}`;
+    const dayKo = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
+    let week = dayKo[day];
+
+    $("#classDate").val(today);
+    $(".todayTxt").text(week);
+
+    $("#btn-selected-date").val(today+'('+week+')')
+
+    const dateOptions = {
+        dateFormat: "yy.mm.dd",
+        monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+        monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+        dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+        showButtonPanel: true,
+        gotoCurrent: true,
+        closeText: "취소",
+        currentText: "오늘",
+        onClose: function (_, inst) {
+            // 취소 버튼 클릭 감지
+            const isCancel = $(inst.dpDiv).find(".ui-datepicker-close").hasClass("ui-state-active");
+            if (isCancel) {
+                $(this).val("");
+                $(".todayTxt").text("");
+            }
+        },
+        onSelect: function () {
+            let dateInput = $("#classDate");
+            let dateVal = new Date(dateInput.val().replace(/\./g, '-')); // iOS 호환을 위해 .을 -로 변경
+            $(".todayTxt").text(dayKo[dateVal.getDay()]);
+        }
+    };
+
+    $("#classDate").datepicker(dateOptions);
+
+    // 날짜 변경 함수
+    function changeDate(days) {
+        let dateInput = $("#classDate");
+        let currentVal = dateInput.val().replace(/\./g, '-'); // .을 -로 변경
+        let dateVal = new Date(currentVal);
+
+        if (isNaN(dateVal)) dateVal = new Date(); // 유효하지 않으면 현재 날짜로 초기화
+
+        dateVal.setDate(dateVal.getDate() + days);
+        const updatedDate = `${dateVal.getFullYear()}.${String(dateVal.getMonth() + 1).padStart(2, '0')}.${String(dateVal.getDate()).padStart(2, '0')}`;
+
+        dateInput.val(updatedDate);
+        $(".todayTxt").text(dayKo[dateVal.getDay()]);
+    }
+
+    // 이전 날짜 선택
+    $(".nav_prev").on("click touchstart", function () {
+        changeDate(-1);
+    });
+
+    // 다음 날짜 선택
+    $(".nav_next").on("click touchstart", function () {
+        changeDate(1);
+    });
+
+
+
+    //달력 - from - to
+    window.onload = function cleanDatepicker(){
+        // clear 버튼 생성
+        var old_fn = $.datepicker._updateDatepicker;
+
+        $.datepicker._updateDatepicker = function(inst) {
+          old_fn.call(this, inst);
+
+          var buttonPane = $(this).datepicker("widget").find(".ui-datepicker-buttonpane");
+
+          $("<button type='button' class='ui-datepicker-clean ui-state-default ui-priority-primary ui-corner-all'>삭제</button>").appendTo(buttonPane).click(function(ev) {
+            $.datepicker._clearDate(inst.input);
+          }) ;
+        }
+      }
+
+      $.datepicker.regional['ko'] = {
+        prevText: '이전달',
+        nextText: '다음달',
+        monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+        monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+        dayNames: ['일','월','화','수','목','금','토'],
+        dayNamesShort: ['일','월','화','수','목','금','토'],
+        dayNamesMin: ['일','월','화','수','목','금','토'],
+        dateFormat: 'yy.mm.dd',
+        currentText: '오늘',
+        closeText: "닫기",
+        showMonthAfterYear: true,
+        changeMonth: true,
+        changeYear: true,
+        showButtonPanel: true,
+        yearRange: 'c-99:c+99',
+      };
+      $.datepicker.setDefaults($.datepicker.regional['ko']);
+      // var nextMonth = $("#from").getMonth()+1;
+
+      $('#from').datepicker();
+      $('#from').datepicker("option", "maxDate", $("#to").val());
+      $('#from').datepicker("option", "onClose", function ( selectedDate ) {
+          $("#to").datepicker( "option", "minDate", selectedDate );
+      });
+
+      $('#to').datepicker();
+      $('#to').datepicker("option", "minDate", $("#from").val());
+      $('#to').datepicker("option", "onClose", function ( selectedDate ) {
+          $("#from").datepicker( "option", "maxDate", selectedDate );
+      });
+
+
+      //달력 - monthly
+      // var fullDate = new Date();
+      // var startYear = fullDate-10;
+      // let month = fullDate.getMonth()+1
+      // let year = fullDate.getFullYear()
+      // let today = year + "." + month;
+
+      var startYear = fullDate-10;
+      today = year + "." + month;
+
+      if(month < 10){
+        today = year + ".0" + month
+      }
+
+      $("#strClssSchDate").val(today)
+
+      const monthOptions ={
+        dateFormat: 'yy.mm',
+        Button: false,
+        startYear: startYear,
+        prevText: '이전달',
+        nextText: '다음달',
+        monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+        monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+        showMonthAfterYear: true,
+        duration: "fast"
+      }
+
+      $("#strClssSchDate").monthpicker(monthOptions)
+
+
+      //수업정원
+      $(".count_ctr .ctr_btn").click(function(){
+        // e.preventDefault();
+        let $count = $('#class1tmNmou')
+        let count_val = $count.val()
+        let countUp = parseInt(count_val)+1
+        let countDown = parseInt(count_val)-1
+
+        if($(this).hasClass('btn_minus')){
+          if(countDown < 1){ //최소 1명
+                return 1;
+            }
+            $count.val(countDown + '명');
+        }else if($(this).hasClass('btn_plus')){
+          $count.val(countUp + '명');
+        }
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../../common/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../common/css/guide.css" />
+    <title>DESIGN GUIDE</title>
+  </head>
+
+  <style>
+    .modal_con{
+      max-width: 336px
+    }
+  </style>
+  <body>
+    <main id="guide_main">
+      <!-- menu -->
+      <nav id="guide_nav">
+        <h1>design guide</h1>
+
+        <div class="nav_menu">
+          <a href="guide.html">typography</a>
+          <a href="guide_color.html">color</a>
+          <a href="guide_icon.html">icon</a>
+          <a href="guide_form.html">form</a>
+          <a href="guide_button.html">button</a>
+          <a href="guide_popup.html" class="active">popup</a>
+          <a href="guide_component.html">component</a>
+          <a href="guide_layout.html">layout</a>
+        </div>
+      </nav>
+
+      <!-- contents -->
+      <section class="container">
+        <div class="contents">
+          <h2>popup</h2>
+
+          <div class="guide_info">
+            <p class="guide_normal_f mb_0_25">- 팝업 .modal</p>
+            <p class="guide_normal_f mb_0_25">- 팝업 (alert) .alert_con</p>
+            <p class="guide_normal_f mb_0_25">- 팝업 (contents) .modal_con / .size_s / default </p>
+            <p class="guide_normal_f mb_0_25">- 팝업 오픈 시, body에 .open 클래스 추가 (바디 스크롤 방지)</p>
+          </div>
+
+          <!-- popup -->
+          <div class="guide_block">
+            <h3>modal</h3>
+            <div class="guide_data">
+              <p class="title">.alert_con (alert)</p>
+              <div class="data flex_top" style="gap: 1rem; background-color: #f5f5f5;" >
+                <div class="alert_con">
+                  <p class="txt">실제 판매가 된 상품으로 상품명, 상품 설명, 판매기간 종료일시, 최대 판매 개수, 운영자 전용 판매 옵션, 등록 가능 기간, 상품 이미지, 상품 썸네일 이미지만 수정할 수 있습니다.</p>
+                  <div class="popup_btn">
+                    <button class="btn">확인</button>
+                  </div>
+                </div>
+                <div class="alert_con">
+                  <p class="txt txt_center">사업장 임대 심박계 등록은 안드로이드<br>
+                    Draxfit 앱에서만 가능합니다.<br>
+                    (아이폰에서는 불가능합니다.)</p>
+                  <div class="popup_btn">
+                    <button class="btn">확인</button>
+                  </div>
+                </div>
+                <div class="alert_con">
+                  <p class="txt txt_center">삭제하시겠습니까?</p>
+                  <div class="popup_btn">
+                    <button class="btn color_gray">취소</button>
+                    <button class="btn">확인</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">.modal_con (contents)</p>
+              <div class="data flex_top" style="gap: 1rem; background-color: #f5f5f5;" >
+                <div class="modal_con size_s">
+                  <div class="modal_title">
+                    <p class="title">상품 선택</p>
+                    <p class="txt">대표 이용권은 단일 이용권만 등록 가능합니다.</p>
+                  </div>
+                  <div class="con_inner">
+                    모달 컨텐츠 영역 .size_s : 296px;<br>
+                    컨텐츠 내용이 많지 않은경우
+                  </div>
+                
+                  <div class="popup_btn">
+                    <button class="btn color_gray">취소</button>
+                    <button class="btn">확인</button>
+                  </div>
+                </div>
+
+                <div class="modal_con">
+                  <div class="modal_scr">
+                    <div class="modal_title">
+                      <p class="title">상품 선택</p>
+                      <p class="txt">대표 이용권은 단일 이용권만 등록 가능합니다.</p>
+                    </div>
+                    <div class="con_inner" style="height: 1000px">
+                      모달 컨텐츠 영역 default <br>
+                      모바일 100%<br>
+                      컨텐츠 내용이 많은경우 하단버튼 고정/컨텐츠 전체 스크롤
+                    </div>
+                  </div>
+                  
+                  <div class="popup_btn">
+                    <button class="btn color_gray">취소</button>
+                    <button class="btn">확인</button>
+                  </div>
+                </div>
+
+                <div class="modal_con size_l">
+                  <div class="modal_scr">
+                    <div class="modal_title">
+                      <p class="title">상품 선택</p>
+                      <p class="txt">대표 이용권은 단일 이용권만 등록 가능합니다.</p>
+                    </div>
+                    <div class="con_inner" style="height: 1000px">
+                      모달 컨텐츠 영역 .size_l : 650px<br>
+                      모바일 100%<br>
+                      컨텐츠 내용이 많은경우 하단버튼 고정/컨텐츠 전체 스크롤
+                    </div>
+                  </div>
+                  
+                  <div class="popup_btn">
+                    <button class="btn color_gray">취소</button>
+                    <button class="btn">확인</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">.modal_con (etc)</p>
+              <div class="data flex_top" style="gap: 1rem; background-color: #f5f5f5;" >
+                <div class="modal_con size_s">
+                  <div class="con_inner" style="padding-block: .5rem">
+                    <div class="time_slide">
+                      <div class="slide_list">
+                        <!-- 시간 -->
+                        <div class="swiper slide_time">
+                          <div class="swiper-wrapper">
+                            <p class="swiper-slide">00</p>
+                            <p class="swiper-slide">01</p>
+                            <p class="swiper-slide">02</p>
+                            <p class="swiper-slide">03</p>
+                            <p class="swiper-slide">04</p>
+                            <p class="swiper-slide">05</p>
+                            <p class="swiper-slide">06</p>
+                            <p class="swiper-slide">07</p>
+                            <p class="swiper-slide">08</p>
+                            <p class="swiper-slide">09</p>
+                            <p class="swiper-slide">10</p>
+                            <p class="swiper-slide">11</p>
+                            <p class="swiper-slide">12</p>
+                          </div>
+                        </div>
+          
+                        <!-- 분 -->
+                        <div class="swiper slide_min">
+                          <div class="swiper-wrapper">
+                            <p class="swiper-slide">00</p>
+                            <p class="swiper-slide">10</p>
+                            <p class="swiper-slide">20</p>
+                            <p class="swiper-slide">30</p>
+                            <p class="swiper-slide">40</p>
+                            <p class="swiper-slide">50</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="gray_bg txt_center font16 semi_bold_f block_0_75">11:50 AM 예약가능</div>
+                  <div class="popup_btn">
+                    <button class="btn color_gray closeThis">취소</button>
+                    <button class="btn closeThis">확인</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal">
+      <div class="overlay"></div>
+      <div class="alert_con">
+        <p class="txt">실제 판매가 된 상품으로 상품명, 상품 설명, 판매기간 종료일시, 최대 판매 개수, 운영자 전용 판매 옵션, 등록 가능 기간, 상품 이미지, 상품 썸네일 이미지만 수정할 수 있습니다.</p>
+        <div class="popup_btn">
+          <button class="btn">확인</button>
+        </div>
+      </div>
+    </div>
+    <script src="../../common/js/jquery.min.js"></script>
+    <script src="../../common/js/swiper-bundle.min.js"></script>
+    <script>
+      $(".popup_btn .btn, .overlay").click(function (){
+        $('.modal, body').removeClass('open')
+      })
+
+       // 시간선택 팝업 
+    var timeSetting = new Swiper(".slide_min", {
+          direction: "vertical",
+          // spaceBetween: 4,
+          slidesPerView: 3,
+          centeredSlides: true,
+          initialSlide: 1,
+        });
+
+        var timeSetting2 = new Swiper(".slide_time", {
+          direction: "vertical",
+          // spaceBetween: 4,
+          slidesPerView: 3,
+          centeredSlides: true,
+          initialSlide: 4,
+        });
+    </script>
+  </body>
+</html>

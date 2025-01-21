@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../../common/css/guide.css" />
+    <title>DESIGN GUIDE</title>
+  </head>
+
+  <style>
+    .guide_box{
+      width: 150px;
+      background-color: var(--light);
+      padding: 1rem;
+    }
+
+    .guide_box > div{
+      font-size: .75rem;
+      text-align: center;
+      background-color: var(--white);
+      border: 1px solid var(--border-color);
+      color: var(--text-color-3);
+    }
+
+    .guide_box2{
+      width: 400px;
+      background-color: var(--light);
+      padding: 1rem;
+      gap: .5rem;
+    }
+
+    .guide_box2 > div{
+      font-size: .75rem;
+      text-align: center;
+      width: 100px;
+      background-color: var(--white);
+      border: 1px solid var(--border-color);
+      color: var(--text-color-3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .guide_box2 > div:first-child{
+      height: 30px;
+    }
+
+    .guide_box2 > div:nth-child(2){
+      height: 50px;
+    }
+
+    .guide_box2 > div:last-child{
+      height: 20px;
+    }
+
+    .guide_box3{
+      width: 300px;
+      background-color: var(--light);
+      padding: 1rem;
+    }
+
+    .guide_box3 div{
+      background-color: var(--white);
+      border: 1px solid var(--border-color);
+      height: 30px;
+      border-radius: .25rem;
+      font-size: .75rem;
+      color: var(--text-color-3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .guide_box4{
+      width: 400px;
+      background-color: var(--light);
+      padding: 1rem;
+      gap: .5rem;
+    }
+
+    .guide_box4 div{
+      background-color: var(--white);
+      font-size: .75rem;
+      color: var(--text-color-3);
+      border: 1px solid var(--border-color);
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+  <body>
+    <main id="guide_main">
+      <!-- menu -->
+      <nav id="guide_nav">
+        <h1>design guide</h1>
+
+        <div class="nav_menu">
+          <a href="guide.html">typography</a>
+          <a href="guide_color.html">color</a>
+          <a href="guide_icon.html">icon</a>
+          <a href="guide_form.html">form</a>
+          <a href="guide_button.html">button</a>
+          <a href="guide_popup.html">popup</a>
+          <a href="guide_component.html">component</a>
+          <a href="guide_layout.html" class="active">layout</a>
+        </div>
+      </nav>
+
+      <!-- contents -->
+      <section class="container">
+        <div class="contents">
+          <h2>layout</h2>
+
+          <div class="guide_info">
+            <p class="guide_normal_f mb_0_25">- 레이아웃에 개별로 사용하기 편하게 정리</p>
+          </div>
+
+          <!-- margin top -->
+          <div class="guide_block">
+            <h3>margin top</h3>
+            <div class="guide_data">
+              <p class="title">.mt_{$} | margin-top : 0.25rem - 4rem</p>
+              <div class="data flex_bottom" style="gap: 1rem; flex-wrap: wrap">
+
+                <div class="guide_box">
+                  <div class="mt_0_25">
+                    mt_0_25
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mt_0_5">
+                    mt_0_5
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mt_0_75">
+                    mt_0_75
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mt_1">
+                    mt_1
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mt_1_25">
+                    mt_1_25
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mt_1_5">
+                    mt_1_5
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mt_1_75">
+                    mt_1_75
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mt_2">
+                    mt_2
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mt_2_25">
+                    mt_2_25
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mt_2_5">
+                    mt_2_5
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mt_2_75">
+                    mt_2_75
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mt_3">
+                    mt_3
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mt_3_25">
+                    mt_3_25
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mt_3_5">
+                    mt_3_5
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mt_3_75">
+                    mt_3_75
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mt_4">
+                    mt_4
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- margin bottom -->
+          <div class="guide_block">
+            <h3>margin bottom</h3>
+            <div class="guide_data">
+              <p class="title">.mb_{$} | margin-bottom : 0.25rem - 4rem</p>
+              <div class="data flex_top" style="gap: 1rem; flex-wrap: wrap">
+
+                <div class="guide_box">
+                  <div class="mb_0_25">
+                    mb_0_25
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mb_0_5">
+                    mb_0_5
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mb_0_75">
+                    mb_0_75
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mb_1">
+                    mb_1
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mb_1_25">
+                    mb_1_25
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mb_1_5">
+                    mb_1_5
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mb_1_75">
+                    mb_1_75
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mb_2">
+                    mb_2
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mb_2_25">
+                    mb_2_25
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mb_2_5">
+                    mb_2_5
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mb_2_75">
+                    mb_2_75
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mb_3">
+                    mb_3
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mb_3_25">
+                    mb_3_25
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mb_3_5">
+                    mb_3_5
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mb_3_75">
+                    mb_3_75
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="mb_4">
+                    mb_4
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- padding inline -->
+          <div class="guide_block">
+            <h3>padding inlnie</h3>
+            <div class="guide_data">
+              <p class="title">.inline_{$} | padding-inline : 0.25rem - 2rem</p>
+              <div class="data flex_top" style="gap: 1rem; flex-wrap: wrap">
+
+                <div class="guide_box" style="width: fit-content">
+                  <div class="inline_0_25">
+                    inner_0_25
+                  </div>
+                </div>
+
+                <div class="guide_box" style="width: fit-content">
+                  <div class="inline_0_5">
+                    inner_0_5
+                  </div>
+                </div>
+
+                <div class="guide_box" style="width: fit-content">
+                  <div class="inline_0_75">
+                    inner_0_75
+                  </div>
+                </div>
+
+                <div class="guide_box" style="width: fit-content">
+                  <div class="inline_1">
+                    inner_1
+                  </div>
+                </div>
+
+                <div class="guide_box" style="width: fit-content">
+                  <div class="inline_1_25">
+                    inner_1_25
+                  </div>
+                </div>
+
+                <div class="guide_box" style="width: fit-content">
+                  <div class="inline_1_5">
+                    inner_1_5
+                  </div>
+                </div>
+
+                <div class="guide_box" style="width: fit-content">
+                  <div class="inline_1_75">
+                    inner_1_75
+                  </div>
+                </div>
+
+                <div class="guide_box" style="width: fit-content">
+                  <div class="inline_2">
+                    inner_2
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- padding block -->
+          <div class="guide_block">
+            <h3>padding block</h3>
+            <div class="guide_data">
+              <p class="title">.block_{$} | padding-block : 0.25rem - 2rem</p>
+              <div class="data flex_top" style="gap: 1rem; flex-wrap: wrap">
+
+                <div class="guide_box">
+                  <div class="block_0_25">
+                    innerb_0_25
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="block_0_5">
+                    innerb_0_5
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="block_0_75">
+                    innerb_0_75
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="block_1">
+                    innerb_1
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="block_1_25">
+                    innerb_1_25
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="block_1_5">
+                    innerb_1_5
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="block_1_75">
+                    innerb_1_75
+                  </div>
+                </div>
+
+                <div class="guide_box">
+                  <div class="block_2">
+                    innerb_2
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+          <!-- flex -->
+          <div class="guide_block">
+            <h3>flex</h3>
+            <div class="guide_data">
+              <p class="title">.flex</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="guide_box2 flex">
+                  <div></div>
+                  <div>.flex</div>
+                  <div></div>
+                </div>
+
+                <div class="guide_box2 flex_center">
+                  <div></div>
+                  <div>.flex_center</div>
+                  <div></div>
+                </div>
+
+                <div class="guide_box2 flex_btw">
+                  <div></div>
+                  <div>.flex_btw</div>
+                  <div></div>
+                </div>
+
+                <div class="guide_box2 flex_right">
+                  <div></div>
+                  <div>.flex_right</div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">.flex_top{}</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="guide_box2 flex_top">
+                  <div></div>
+                  <div>.flex_top</div>
+                  <div></div>
+                </div>
+
+                <div class="guide_box2 flex_topcenter">
+                  <div></div>
+                  <div>.flex_topcenter</div>
+                  <div></div>
+                </div>
+
+                <div class="guide_box2 flex_topbtw">
+                  <div></div>
+                  <div>.flex_topbtw</div>
+                  <div></div>
+                </div>
+
+                <div class="guide_box2 flex_topright">
+                  <div></div>
+                  <div>.flex_topright</div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">.flex_bottom{}</p>
+              <div class="data flex" style="gap: 1rem; flex-wrap: wrap">
+                <div class="guide_box2 flex_bottom">
+                  <div></div>
+                  <div>.flex_bottom</div>
+                  <div></div>
+                </div>
+
+                <div class="guide_box2 flex_bottomcenter">
+                  <div></div>
+                  <div>.flex_bottomcenter</div>
+                  <div></div>
+                </div>
+
+                <div class="guide_box2 flex_bottombtw">
+                  <div></div>
+                  <div>.flex_bottombtw</div>
+                  <div></div>
+                </div>
+
+                <div class="guide_box2 flex_bottomright">
+                  <div></div>
+                  <div>.flex_bottomright</div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- grid list -->
+          <div class="guide_block">
+            <h3>grid list</h3>
+            <div class="guide_data">
+              <p class="title">.list_{$} | .25rem - 2rem</p>
+              <div class="data flex_top" style="gap: 1rem; flex-wrap: wrap">
+                <div class="guide_box3 list_0_25">
+                  <div>.list_0_25</div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="guide_box3 list_0_5">
+                  <div>.list_0_5</div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="guide_box3 list_0_75">
+                  <div>.list_0_75</div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="guide_box3 list_1">
+                  <div>.list_1</div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="guide_box3 list_1_25">
+                  <div>.list_1_25</div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="guide_box3 list_1_5">
+                  <div>.list_1_5</div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="guide_box3 list_1_75">
+                  <div>.list_1_75</div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="guide_box3 list_2">
+                  <div>.list_2</div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- grid list -->
+          <div class="guide_block">
+            <h3>grid</h3>
+            <div class="guide_data">
+              <p class="title">.grid_{$} | 2 - 3</p>
+              <div class="data flex_top" style="gap: 1rem; flex-wrap: wrap">
+                <div class="guide_box4 grid_2">
+                  <div>.grid_2</div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="guide_box4 grid_3">
+                  <div>.grid_3</div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      let swiper = new Swiper(".add_file", {
+        spaceBetween: 8,
+        slidesPerView: "auto",
+      });
+
+      /* popup */
+      $(".pop01").on("click", function () {
+        $(".popup01, body").addClass("open");
+      });
+
+      $(".overlay, .btnClose").on("click", function () {
+        $(".popup, .modal, body").removeClass("open");
+      });
+
+      //메인 이미지 팝업
+      let swiper2 = new Swiper(".modal_img", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+      });
+    </script>
+  </body>
+</html>

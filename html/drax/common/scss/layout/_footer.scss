@@ -1,0 +1,181 @@
+/***************************************************************
+    12. footer
+***************************************************************/
+#footer {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+
+  .footer_lnb {
+    background-color: var(--text-primary);
+    padding-block: 0.5rem;
+
+    .con_inner {
+      @include flexbtw;
+
+      @include tablet {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+
+    .lnb {
+      @include flex;
+      gap: 0.5rem;
+
+      a {
+        color: var(--light-color);
+        @include font1224h;
+      }
+    }
+
+    .lnb_slt {
+      @include flexright;
+
+      @include tablet {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .lnbslt_title {
+        @include font10b16h;
+        color: var(--text-secondary);
+      }
+
+      .slt_timezone {
+        @include flexright;
+        gap: 0.5rem;
+        position: relative;
+        padding-right: 1.25rem;
+
+        @include tablet {
+          padding-right: 0;
+          padding-block: 0.25rem;
+        }
+
+        &::after {
+          content: "";
+          height: 0.75rem;
+          width: 1px;
+          position: absolute;
+          right: 0.625rem;
+          top: 2px;
+          background-color: var(--text-secondary);
+
+          @include tablet {
+            display: none;
+          }
+        }
+
+        .btn_timezone {
+          font-size: 0.5rem;
+          text-transform: uppercase;
+          color: var(--light-color);
+          font-weight: var(--bold-font);
+          background-image: url(/images/system/chevron_up_w.svg);
+          background-size: 0.75rem;
+          background-position: right center;
+          background-repeat: no-repeat;
+          padding-right: 1.125rem;
+          height: 1rem;
+          @include flexcenter;
+          gap: 0.25rem;
+
+          i {
+            width: 1rem;
+          }
+        }
+      }
+
+      .slt_lang {
+        @include flexright;
+        gap: 0.5rem;
+
+        @include tablet {
+          flex-direction: column;
+          padding-block: 0.25rem;
+
+          .lnbslt_title {
+            display: none;
+          }
+        }
+
+        ul {
+          @include flexright;
+          gap: 0.25rem;
+
+          li {
+            @include flex;
+            gap: 0.25rem;
+            color: var(--light-color);
+            font-size: 0.5rem;
+            line-height: 1rem;
+            font-weight: var(--bold-font);
+            opacity: 0.3;
+            transition: 0.1s;
+            cursor: pointer;
+
+            .thumb {
+              width: 1rem;
+              height: 1rem;
+              border-radius: 3rem;
+              overflow: hidden;
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+
+            &.active {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer_con {
+    background-color: var(--gray-dark);
+    padding-block: 0.75rem 5rem;
+    color: var(--gray-color);
+
+    .footer_add {
+      @include flex;
+      gap: 2.5rem;
+      padding-bottom: 0.75rem;
+
+      @include tablet {
+        flex-wrap: wrap;
+        gap: 0.25rem;
+      }
+
+      p {
+        @include flex;
+        gap: 0.5rem;
+        @include font1216h;
+
+        @include tablet {
+          flex-wrap: wrap;
+          width: 100%;
+        }
+      }
+    }
+
+    .footer_copy {
+      @include flex;
+      gap: 0.5rem;
+
+      .footer_logo {
+        width: 4.5rem;
+      }
+
+      .copy {
+        @include font1216h;
+        letter-spacing: 1;
+      }
+    }
+  }
+}

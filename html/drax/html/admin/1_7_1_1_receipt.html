@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="DRAXfit" />
+    <meta property="og:title" content="1-7-1-1. 영수증 출력" />
+    <meta property="og:description" content="디랙스핏, 운동하는 새로운 방법을 디랙스가 제시합니다." />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="https://www.draxfit-smart.com/" />
+
+    <!--<link rel="shortcut icon" href="favicon.ico" /> 64 x 64 (px) 또는 32 x 32 또는 16 x 16 -->
+    <link rel="icon" href="./favicon.png" />
+    <!-- 500 x 500 (px) -->
+
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../common/css/jquery-ui.css">
+    <link rel="stylesheet" href="../../common/css/jquery-ui.theme.css">
+    <link rel="stylesheet" href="../../common/css/style.css" />
+
+
+    <title>1-7-1-1. 영수증 출력</title>
+</head>
+<body class="action_hover_bg">
+  <div class="receipt_wrap">
+    <div class="closeBtn btn_top" onclick="javascript:self.close();"></div>
+    <div class="receipt_header">
+      <div class="receipt_title">
+        <p class="font16b24h">주식회사 디랙스</p>
+        <p class="total_price">120,000<span>원</span></p>
+      </div>
+
+      <button class="btn size_xxl color_black_line" onclick="javascript:print();"><i class="ic_print"></i>인쇄</button>
+    </div>
+    
+    <div class="list_1_25">
+      <div class="receipt_data">
+        <p class="data_title">거래 정보</p>
+
+        <div class="data_list">
+          <div class="flex_topbtw">
+            <p class="name">카드 종류</p>
+            <p class="txt">비씨카드</p>
+          </div>
+          <div class="flex_topbtw">
+            <p class="name">카드번호</p>
+            <p class="txt">1575-67**-****5546</p>
+          </div>
+          <div class="flex_topbtw">
+            <p class="name">할부</p>
+            <p class="txt">일시불</p>
+          </div>
+          <div class="flex_topbtw">
+            <p class="name">거래유형</p>
+            <p class="txt">승인</p>
+          </div>
+          <div class="flex_topbtw">
+            <p class="name">승인 번호</p>
+            <p class="txt">95486659</p>
+          </div>
+          <div class="flex_topbtw">
+            <p class="name">거래(취소)일시</p>
+            <p class="txt">2024.10.31 19:26:02</p>
+          </div>
+          <div class="flex_topbtw">
+            <p class="name">구매자명</p>
+            <p class="txt">김*구</p>
+          </div>
+          <div class="flex_topbtw">
+            <p class="name">상품명</p>
+            <p class="txt">[테스트] 구독 AI 1개월</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="receipt_data">
+        <p class="data_title">공급대가</p>
+
+        <div class="data_list">
+          <div class="flex_topbtw">
+            <p class="name">과세금액</p>
+            <p class="txt">109,091원</p>
+          </div>
+          <div class="flex_topbtw">
+            <p class="name">부가세</p>
+            <p class="txt">10,909원</p>
+          </div>
+          <div class="flex_topbtw">
+            <p class="name">면세 금액</p>
+            <p class="txt">0원</p>
+          </div>
+          <div class="flex_topbtw">
+            <p class="name">봉사료</p>
+            <p class="txt">0원</p>
+          </div>
+          <div class="flex_topbtw total_price">
+            <p class="name">결제금액</p>
+            <p class="txt">120,000<span>원</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="receipt_data">
+        <p class="data_title">공급자 정보</p>
+
+        <div class="data_list">
+          <div class="flex_topbtw">
+            <p class="name">상호명</p>
+            <p class="txt">주식회사 디랙스</p>
+          </div>
+          <div class="flex_topbtw">
+            <p class="name">대표자명</p>
+            <p class="txt">유선경</p>
+          </div>
+          <div class="flex_topbtw">
+            <p class="name">사업자등록번호</p>
+            <p class="txt">1238170002</p>
+          </div>
+          <div class="flex_topbtw">
+            <p class="name">이용문의</p>
+            <p class="txt">1</p>
+          </div>
+          <div class="flex_topbtw">
+            <p class="name">사업장소재지</p>
+            <p class="txt">경기도 안양시 만안구 전파로 62번길 26(안양동)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="receipt_data">
+        <p class="data_title">카드 가맹점 정보</p>
+
+        <div class="data_list">
+          <div class="flex_topbtw">
+            <p class="name">가맹점명</p>
+            <p class="txt">(주)헥토파이낼셜</p>
+          </div>
+          <div class="flex_topbtw">
+            <p class="name">대표자명</p>
+            <p class="txt">최종원</p>
+          </div>
+          <div class="flex_topbtw">
+            <p class="name">사업자등록번호</p>
+            <p class="txt">1018163383</p>
+          </div>
+          <div class="flex_topbtw">
+            <p class="name">가맹점 번호</p>
+            <p class="txt">0</p>
+          </div>
+          <div class="flex_topbtw">
+            <p class="name">승인 관련 문의</p>
+            <p class="txt">1600-5220</p>
+          </div>
+          <div class="flex_topbtw">
+            <p class="name">가맹점 문의</p>
+            <p class="txt">서울특별시 강남구 테헤란로34길 6, 9~10층 (역삼동, 태광타워)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="receipt_noti">
+      청구서에는 ㈜헥토파이낸셜로 표기되며 부가가치세법 제33조 
+      2항에 의거, 본 영수증은 세금계산서 대용으로 매입세액공제를 
+      받을 수 있으며, 별도 세금계산서를 발행하지 않습니다.
+    </p>
+    <div class="closeBtn btn_bottom" onclick="jjavascript:self.close();"></div>
+  </div>
+
+  <!-- script -->
+  <script src="../../common/js/jquery.min.js"></script>
+  <script src="../../common/js/jquery-ui.js"></script>
+  <script>
+
+  </script>
+</body>
+</html>
