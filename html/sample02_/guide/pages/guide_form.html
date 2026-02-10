@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="../../assets/css/guide.css" />
+    <title>DESIGN GUIDE</title>
+  </head>
+
+  <style>
+    .input_block{
+      width: calc(100% / 4);
+    }
+  </style>
+  <body>
+    <main id="guide_main">
+      <!-- menu -->
+      <nav id="guide_nav">
+        <h1>design guide</h1>
+
+        <div class="nav_menu">
+          <a href="guide.html">typography</a>
+          <a href="guide_color.html">color</a>
+          <a href="guide_icon.html">icon</a>
+          <a href="guide_form.html" class="active">form</a>
+          <a href="guide_button.html">button</a>
+          <a href="guide_popup.html">popup</a>
+          <a href="guide_layout.html">layout</a>
+          <a href="guide_component.html">component</a>
+        </div>
+      </nav>
+
+      <!-- contents -->
+      <section class="container">
+        <div class="contents">
+          <h2>form</h2>
+
+          <div class="guide_info">
+            <p class="normal_f">- text filed, select : 동일 input_block</p>
+          </div>
+
+          <!-- text field -->
+          <div class="guide_block">
+            <h3>text field</h3>
+            <div class="guide_data">
+              <p class="title">variants </p>
+              <div class="data" style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div class="input-block">
+                  <div class="input-inner">
+                    <input type="text" class="input " placeholder="default" pattern="^[0-9]*$" required >
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper" data-default="helper text" data-invalid="value invalid" data-valid="value valid">text helper</p>
+                </div>
+
+                <div class="input-block outline">
+                  <div class="input-inner">
+                    <input type="text" class="input" placeholder="outline" pattern="^[0-9]*$" required >
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper">text helper</p>
+                </div>
+
+                <div class="input-block fill">
+                  <div class="input-inner">
+                    <input type="text" class="input" placeholder="fill" pattern="^[0-9]*$" required >
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper">text helper</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">size </p>
+              <div class="data" style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div class="input-block">
+                  <div class="input-inner">
+                    <input type="text" class="input l" placeholder="default" pattern="^[0-9]*$" required>
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper">text helper</p>
+                </div>
+
+                <div class="input-block">
+                  <div class="input-inner">
+                    <input type="text" class="input" placeholder="default" pattern="^[0-9]*$" required>
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper">text helper</p>
+                </div>
+
+                <div class="input-block">
+                  <div class="input-inner">
+                    <input type="text" class="input s" placeholder="default" pattern="^[0-9]*$" required>
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper">text helper</p>
+                </div>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div class="input-block outline">
+                  <div class="input-inner">
+                    <input type="text" class="input l" placeholder="default" pattern="^[0-9]*$" required>
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper">text helper</p>
+                </div>
+
+                <div class="input-block outline">
+                  <div class="input-inner">
+                    <input type="text" class="input" placeholder="default" pattern="^[0-9]*$" required>
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper">text helper</p>
+                </div>
+
+                <div class="input-block outline">
+                  <div class="input-inner">
+                    <input type="text" class="input s" placeholder="default" pattern="^[0-9]*$" required>
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper">text helper</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">icons </p>
+              <div class="data" style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div class="input-block">
+                  <div class="input-inner">
+                    <i class="input-icon left ic search"></i>
+                    <input type="text" class="input " placeholder="default" pattern="^[0-9]*$" required>
+                    <i class="input-icon right ic eye"></i>
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper">text helper</p>
+                </div>
+
+                <div class="input-block outline">
+                  <div class="input-inner">
+                    <i class="input-icon left ic search"></i>
+                    <input type="text" class="input" placeholder="outline" pattern="^[0-9]*$" required>
+                    <i class="input-icon right ic eye"></i>
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper">text helper</p>
+                </div>
+
+                <div class="input-block fill">
+                  <div class="input-inner">
+                    <i class="input-icon left ic search"></i>
+                    <input type="text" class="input" placeholder="fill" pattern="^[0-9]*$" required >
+                    <i class="input-icon right ic eye"></i>
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper">text helper</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- select -->
+          <div class="guide_block">
+            <h3>select</h3>
+            <div class="guide_data">
+              <p class="title">variants </p>
+              <div class="data" style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div class="input-block">
+                  <div class="input-inner">
+                    <select name="" id="" class="select" required>
+                      <option value="">select</option>
+                      <option value="opt1">option1</option>
+                      <option value="opt2">option2</option>
+                    </select>
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper">text helper</p>
+                </div>
+
+                <div class="input-block outline">
+                  <div class="input-inner">
+                    <select name="" id="" class="select" required>
+                      <option value="">select</option>
+                      <option value="opt1">option1</option>
+                      <option value="opt2">option2</option>
+                    </select>
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper">text helper</p>
+                </div>
+
+                <div class="input-block fill">
+                  <div class="input-inner">
+                    <select name="" id="" class="select" required>
+                      <option value="">select</option>
+                      <option value="opt1">option1</option>
+                      <option value="opt2">option2</option>
+                    </select>
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper">text helper</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">size </p>
+              <div class="data" style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div class="input-block">
+                  <div class="input-inner">
+                    <select name="" id="" class="select l" required>
+                      <option value="">select</option>
+                      <option value="opt1">option1</option>
+                      <option value="opt2">option2</option>
+                    </select>
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper">text helper</p>
+                </div>
+
+                <div class="input-block">
+                  <div class="input-inner">
+                    <select name="" id="" class="select" required>
+                      <option value="">select</option>
+                      <option value="opt1">option1</option>
+                      <option value="opt2">option2</option>
+                    </select>
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper">text helper</p>
+                </div>
+
+                <div class="input-block">
+                  <div class="input-inner">
+                    <select name="" id="" class="select s" required>
+                      <option value="">select</option>
+                      <option value="opt1">option1</option>
+                      <option value="opt2">option2</option>
+                    </select>
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper">text helper</p>
+                </div>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div class="input-block outline">
+                  <div class="input-inner">
+                    <input type="text" class="input l" placeholder="default" pattern="^[0-9]*$" required>
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper">text helper</p>
+                </div>
+
+                <div class="input-block outline">
+                  <div class="input-inner">
+                    <input type="text" class="input" placeholder="default" pattern="^[0-9]*$" required>
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper">text helper</p>
+                </div>
+
+                <div class="input-block outline">
+                  <div class="input-inner">
+                    <input type="text" class="input s" placeholder="default" pattern="^[0-9]*$" required>
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper">text helper</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">icons </p>
+              <div class="data" style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div class="input-block">
+                  <div class="input-inner">
+                    <i class="input-icon left ic search"></i>
+                    <select name="" id="" class="select" required>
+                      <option value="">select</option>
+                      <option value="opt1">option1</option>
+                      <option value="opt2">option2</option>
+                    </select>
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper">text helper</p>
+                </div>
+
+                <div class="input-block outline">
+                  <div class="input-inner">
+                    <i class="input-icon left ic search"></i>
+                    <select name="" id="" class="select" required>
+                      <option value="">select</option>
+                      <option value="opt1">option1</option>
+                      <option value="opt2">option2</option>
+                    </select>
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper">text helper</p>
+                </div>
+
+                <div class="input-block fill">
+                  <div class="input-inner">
+                    <i class="input-icon left ic search"></i>
+                    <select name="" id="" class="select" required>
+                      <option value="">select</option>
+                      <option value="opt1">option1</option>
+                      <option value="opt2">option2</option>
+                    </select>
+                  </div>
+                  <label for="" class="label">label</label>
+                  <p class="helper">text helper</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- checkbox-->
+          <div class="guide_block">
+            <h3>checkbox</h3>
+            <div class="guide_data">
+              <p class="title">checkbox </p>
+              <div class="data" style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div class="check-block">
+                  <input type="checkbox" name="" id="check" class="checkbox" />
+                  <label for="check" class="label check-label">
+                    <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    <p class="label-txt">Label</p>
+                  </label>
+                </div>
+                <div class="check-block">
+                  <input type="checkbox" name="" id="check2" class="checkbox" checked/>
+                  <label for="check2" class="label">
+                    <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    <p class="label-txt">label</p>
+                  </label>
+                </div>
+                <div class="check-block">
+                  <input type="checkbox" name="" id="check3" class="checkbox secondary" checked/>
+                  <label for="check3" class="label">
+                    <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    <p class="label-txt">label</p>
+                  </label>
+                </div>
+                <div class="check-block">
+                  <input type="checkbox" name="" id="check4" class="checkbox error" checked/>
+                  <label for="check4" class="label">
+                    <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    <p class="label-txt">label</p>
+                  </label>
+                </div> 
+                <div class="check-block">
+                  <input type="checkbox" name="" id="check5" class="checkbox warning" checked/>
+                  <label for="check5" class="label">
+                    <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    <p class="label-txt">label</p>
+                  </label>
+                </div>
+                <div class="check-block">
+                  <input type="checkbox" name="" id="check6" class="checkbox info" checked/>
+                  <label for="check6" class="label">
+                    <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    <p class="label-txt">label</p>
+                  </label>
+                </div>
+                <div class="check-block">
+                  <input type="checkbox" name="" id="check7" class="checkbox success" checked/>
+                  <label for="check7" class="label">
+                    <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    <p class="label-txt">label</p>
+                  </label>
+                </div>
+                <div class="check-block">
+                  <input type="checkbox" name="" id="check" class="checkbox disabled" disabled/>
+                  <label for="check" class="label">
+                    <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    <p class="label-txt">label</p>
+                  </label>
+                </div>
+                <div class="check-block">
+                  <input type="checkbox" name="" id="check" class="checkbox disabled" disabled checked/>
+                  <label for="check" class="label">
+                    <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    <p class="label-txt">label</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- radio-->
+          <div class="guide_block">
+            <h3>radio</h3>
+            <div class="guide_data">
+              <p class="title">radio </p>
+              <div class="data" style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div class="check-block">
+                  <input type="radio" name="" id="radio" class="radio" />
+                  <label for="radio" class="label">
+                    <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    <p class="label-txt">Label</p>
+                  </label>
+                </div>
+                <div class="check-block">
+                  <input type="radio" name="" id="radio2" class="radio" checked/>
+                  <label for="radio2" class="label">
+                    <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    <p class="label-txt">label</p>
+                  </label>
+                </div>
+                <div class="check-block">
+                  <input type="radio" name="" id="radio3" class="radio secondary" checked/>
+                  <label for="radio3" class="label">
+                    <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    <p class="label-txt">label</p>
+                  </label>
+                </div>
+                <div class="check-block">
+                  <input type="radio" name="" id="radio4" class="radio error" checked/>
+                  <label for="radio4" class="label">
+                    <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    <p class="label-txt">label</p>
+                  </label>
+                </div> 
+                <div class="check-block">
+                  <input type="radio" name="" id="radio5" class="radio warning" checked/>
+                  <label for="radio5" class="label">
+                    <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    <p class="label-txt">label</p>
+                  </label>
+                </div>
+                <div class="check-block">
+                  <input type="radio" name="" id="radio6" class="radio info" checked/>
+                  <label for="radio6" class="label">
+                    <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    <p class="label-txt">label</p>
+                  </label>
+                </div>
+                <div class="check-block">
+                  <input type="radio" name="" id="radio7" class="radio success" checked/>
+                  <label for="radio7" class="label">
+                    <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    <p class="label-txt">label</p>
+                  </label>
+                </div>
+                <div class="check-block">
+                  <input type="radio" name="" id="radio8" class="radio disabled" disabled/>
+                  <label for="radio8" class="label">
+                    <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    <p class="label-txt">label</p>
+                  </label>
+                </div>
+                <div class="check-block">
+                  <input type="radio" name="" id="radio9" class="radio disabled" disabled checked/>
+                  <label for="radio9" class="label">
+                    <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    <p class="label-txt">label</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- switch -->
+          <div class="guide_block">
+            <h3>switch</h3>
+            <div class="guide_data">
+              <p class="title">switch </p>
+              <div class="data" style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div class="switch-block">
+                  <input type="checkbox" name="" id="swt1" class="switch" />
+                  <label for="swt1" class="label">
+                    <p class="switch-body">
+                      <span class="switch-toggle"></span>
+                    </p>
+                    <span class="label-txt">Label</span>
+                  </label>
+                </div>
+                <div class="switch-block">
+                  <input type="checkbox" name="" id="swt11" class="switch" checked />
+                  <label for="swt11" class="label">
+                    <p class="switch-body">
+                      <span class="switch-toggle"></span>
+                    </p>
+                    <span class="label-txt">label</span>
+                  </label>
+                </div>
+                <div class="switch-block">
+                  <input type="checkbox" name="" id="swt2" class="switch secondary" checked/>
+                  <label for="swt2" class="label">
+                    <p class="switch-body">
+                      <span class="switch-toggle"></span>
+                    </p>
+                    <span class="label-txt">label</span>
+                  </label>
+                </div>
+                <div class="switch-block">
+                  <input type="checkbox" name="" id="swt3" class="switch error" checked/>
+                  <label for="swt3" class="label">
+                    <p class="switch-body">
+                      <span class="switch-toggle"></span>
+                    </p>
+                    <span class="label-txt">label</span>
+                  </label>
+                </div>
+                <div class="switch-block">
+                  <input type="checkbox" name="" id="swt4" class="switch warning" checked/>
+                  <label for="swt4" class="label">
+                    <p class="switch-body">
+                      <span class="switch-toggle"></span>
+                    </p>
+                    <span class="label-txt">label</span>
+                  </label>
+                </div>
+                <div class="switch-block">
+                  <input type="checkbox" name="" id="swt5" class="switch info" checked/>
+                  <label for="swt5" class="label">
+                    <p class="switch-body">
+                      <span class="switch-toggle"></span>
+                    </p>
+                    <span class="label-txt">label</span>
+                  </label>
+                </div>
+                <div class="switch-block">
+                  <input type="checkbox" name="" id="swt6" class="switch success" checked/>
+                  <label for="swt6" class="label">
+                    <p class="switch-body">
+                      <span class="switch-toggle"></span>
+                    </p>
+                    <span class="label-txt">label</span>
+                  </label>
+                </div>
+                <div class="switch-block">
+                  <input type="checkbox" name="" id="swt7" class="switch disabled" disabled/>
+                  <label for="swt7" class="label">
+                    <p class="switch-body">
+                      <span class="switch-toggle"></span>
+                    </p>
+                    <span class="label-txt">label</span>
+                  </label>
+                </div>
+                <div class="switch-block">
+                  <input type="checkbox" name="" id="swt7" class="switch disabled" checked disabled/>
+                  <label for="swt7" class="label">
+                    <p class="switch-body">
+                      <span class="switch-toggle"></span>
+                    </p>
+                    <span class="label-txt">label</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- slider -->
+          <div class="guide_block">
+            <h3>slider</h3>
+            <div class="guide_data">
+              <p class="title">colors </p>
+              <div class="data" style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div class="slider-block">
+                  <div class="slider">
+                    <p class="ui-slider-handle">
+                      <span class="cnt"></span>
+                    </p>
+                  </div>
+                  <div class="slider-values">
+                    <span class="min">0</span>
+                    <span class="max">100</span>
+                  </div>
+                </div>
+                <div class="slider-block">
+                  <div class="slider secondary">
+                    <p class="ui-slider-handle">
+                      <span class="cnt"></span>
+                    </p>
+                  </div>
+                  <div class="slider-values">
+                    <span class="min">0</span>
+                    <span class="max">100</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">sizes </p>
+              <div class="data" style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div class="slider-block">
+                  <div class="slider">
+                    <p class="ui-slider-handle">
+                      <span class="cnt"></span>
+                    </p>
+                  </div>
+                  <div class="slider-values">
+                    <span class="min">0</span>
+                    <span class="max">100</span>
+                  </div>
+                </div>
+                <div class="slider-block s">
+                  <div class="slider secondary">
+                    <p class="ui-slider-handle">
+                      <span class="cnt"></span>
+                    </p>
+                  </div>
+                  <div class="slider-values">
+                    <span class="min">0</span>
+                    <span class="max">100</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+      //인풋, 셀렉트 유효성 체크
+      $('.input-block').each(function () {
+        const $block  = $(this);
+        const $field  = $block.find('input, select, textarea').first();
+        const $helper = $block.find('.helper').first();
+
+        function setHelper(state) {
+          if (!$helper.length) return;
+
+          const defTxt = $helper.data('default') ?? $helper.text();
+          const invTxt = $helper.data('invalid') ?? 'inavalid';
+          const valTxt = $helper.data('valid') ?? defTxt;
+
+          if (state === 'invalid') {
+            $helper.text(invTxt).show();
+          } else if (state === 'valid') {
+            // ✅ 성공 메시지를 보여주고 싶으면 show()
+            // ✅ 안 보여주고 싶으면 hide()
+            $helper.text(valTxt).hide();
+          } else {
+            // 초기/미터치 상태: 기본 helper 보여줄지 말지 선택
+            $helper.text(defTxt).show();
+          }
+        }
+
+        function sync() {
+          const val = ($field.val() ?? '').toString();
+          const hasValue = $.trim(val).length > 0;
+
+          const required = $field.prop('required');
+          const touched  = $block.hasClass('is-touched');
+
+          let isValid = true;
+
+          if ($field.is('input, textarea')) {
+            isValid = $field[0].checkValidity();
+
+            const pattern = $field.attr('pattern');
+            if (pattern && hasValue) isValid = isValid && new RegExp(pattern).test(val);
+          } else if ($field.is('select')) {
+            isValid = !required || hasValue;
+          }
+
+          const showInvalid = touched && required && !hasValue; // 다시 "선택하세요"로 돌아온 케이스
+
+          const invalid = (touched && hasValue && !isValid) || showInvalid;
+          const valid   = touched && hasValue && isValid;
+
+          $block
+            .toggleClass('has-value', hasValue)
+            .toggleClass('is-valid', valid)
+            .toggleClass('is-invalid', invalid);
+
+          if (invalid) setHelper('invalid');
+          else if (valid) setHelper('valid');
+          else setHelper('default');
+        }
+
+        // 사용자가 조작하면 touched 처리
+        $field.on('input change', function () {
+          $block.addClass('is-touched');
+          sync();
+        });
+
+        $field.on('blur', function () {
+          $block.addClass('is-touched');
+          sync();
+        });
+
+        sync();
+      });
+
+      //slider
+      $(".slider").slider({
+        range: "min",
+        min: 0,
+        max: 100,
+        value: 50,
+        slide: function(e, ui) {
+          return $(".cnt").html(ui.value);
+        }
+      });
+
+      $(".cnt").html("50");
+    </script>
+  </body>
+</html>

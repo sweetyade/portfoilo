@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../assets/css/guide.css" />
+    <title>DESIGN GUIDE</title>
+  </head>
+  <style>
+    .btn_b,
+    .btn_social {
+      max-width: 300px;
+    }
+  </style>
+  <body>
+    <main id="guide_main">
+      <!-- menu -->
+      <nav id="guide_nav">
+        <h1>design guide</h1>
+
+        <div class="nav_menu">
+          <a href="guide.html">typography</a>
+          <a href="guide_color.html">color</a>
+          <a href="guide_icon.html">icon</a>
+          <a href="guide_form.html">form</a>
+          <a href="guide_button.html" class="active">button</a>
+          <a href="guide_popup.html">popup</a>
+          <a href="guide_layout.html">layout</a>
+          <a href="guide_component.html">component</a>
+        </div>
+      </nav>
+
+      <!-- contents -->
+      <section class="container">
+        <div class="contents">
+          <h2>button</h2>
+
+          <div class="guide_info">
+            <p class="normal_f">- base : .btn</p>
+            <p class="normal_f">- size : s, m(base), l</p>
+            <p class="normal_f">- type : default(base), label, outline, text</p>
+            <p class="normal_f">- color : primary(base), secondary, error, warning, info, success</p>
+            <p class="normal_f">- state : default(base), hover, active, focus, disabled</p>
+          </div>
+
+          <!-- variants -->
+          <div class="guide_block">
+            <h3>variants</h3>
+            <div class="guide_data">
+              <p class="title">.btn</p>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap">
+                <button class="btn">button</button>
+                <button class="btn label">button</button>
+                <button class="btn outline">button</button>
+                <button class="btn text">button</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- button icons -->
+          <div class="guide_block">
+            <h3>icons</h3>
+            <div class="guide_data">
+              <p class="title">.btn</p>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap">
+                <button class="btn"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+                <button class="btn label"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+                <button class="btn outline"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+                <button class="btn text"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap">
+                <button class="btn secondary"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+                <button class="btn secondary label"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+                <button class="btn secondary outline"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+                <button class="btn secondary text"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap">
+                <button class="btn info"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+                <button class="btn info label"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+                <button class="btn info outline"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+                <button class="btn info text"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap">
+                <button class="btn success"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+                <button class="btn success label"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+                <button class="btn success outline"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+                <button class="btn success text"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap">
+                <button class="btn warning"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+                <button class="btn warning label"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+                <button class="btn warning outline"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+                <button class="btn warning text"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap">
+                <button class="btn error"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+                <button class="btn error label"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+                <button class="btn error outline"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+                <button class="btn error text"><i class="ic arrow-left"></i><span>button</span><i class="ic arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- sizes -->
+          <div class="guide_block">
+            <h3>sizes</h3>
+            <div class="guide_data">
+              <p class="title">.btn</p>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                <button class="btn l">button</button>
+                <button class="btn">button</button>
+                <button class="btn s">button</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- colors -->
+          <div class="guide_block">
+            <h3>colors</h3>
+            <div class="guide_data">
+              <p class="title">.btn</p>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                <button class="btn">button</button>
+                <button class="btn secondary">button</button>
+                <button class="btn info">button</button>
+                <button class="btn success">button</button>
+                <button class="btn warning">button</button>
+                <button class="btn error">button</button>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                <button class="btn label">button</button>
+                <button class="btn secondary label">button</button>
+                <button class="btn info label">button</button>
+                <button class="btn success label">button</button>
+                <button class="btn warning label">button</button>
+                <button class="btn error label">button</button>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                <button class="btn outline">button</button>
+                <button class="btn secondary outline">button</button>
+                <button class="btn info outline">button</button>
+                <button class="btn success outline">button</button>
+                <button class="btn warning outline">button</button>
+                <button class="btn error outline">button</button>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                <button class="btn outline">button</button>
+                <button class="btn secondary text">button</button>
+                <button class="btn info text">button</button>
+                <button class="btn success text">button</button>
+                <button class="btn warning text">button</button>
+                <button class="btn error text">button</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- btn group -->
+          <div class="guide_block">
+            <h3>group</h3>
+            <div class="guide_data">
+              <p class="title">.btn-group</p>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap">
+                <div class="btn-group">
+                  <button class="btn">button</button>
+                  <button class="btn">button</button>
+                  <button class="btn">button</button>
+                </div>
+
+                <div class="btn-group">
+                  <button class="btn label">button</button>
+                  <button class="btn label">button</button>
+                  <button class="btn label">button</button>
+                </div>
+
+                <div class="btn-group">
+                  <button class="btn outline">button</button>
+                  <button class="btn outline">button</button>
+                  <button class="btn outline">button</button>
+                </div>
+
+                <div class="btn-group">
+                  <button class="btn text">button</button>
+                  <button class="btn text">button</button>
+                  <button class="btn text">button</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- btn group icons -->
+          <div class="guide_block">
+            <h3>group icons</h3>
+            <div class="guide_data">
+              <p class="title">.btn-group</p>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap">
+                <div class="btn-group">
+                  <button class="btn"><i class="ic arrow-left"></i>button</button>
+                  <button class="btn">button</button>
+                  <button class="btn">button<i class="ic arrow-right"></i></button>
+                </div>
+
+                <div class="btn-group">
+                  <button class="btn label"><i class="ic arrow-left"></i>button</button>
+                  <button class="btn label">button</button>
+                  <button class="btn label">button<i class="ic arrow-right"></i></button>
+                </div>
+
+                <div class="btn-group">
+                  <button class="btn outline"><i class="ic arrow-left"></i>button</button>
+                  <button class="btn outline">button</button>
+                  <button class="btn outline">button<i class="ic arrow-right"></i></button>
+                </div>
+
+                <div class="btn-group">
+                  <button class="btn text"><i class="ic arrow-left"></i>button</button>
+                  <button class="btn text">button</button>
+                  <button class="btn text">button<i class="ic arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- btn group sizes -->
+          <div class="guide_block">
+            <h3>group sizes</h3>
+            <div class="guide_data">
+              <p class="title">.btn-group</p>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                <div class="btn-group">
+                  <button class="btn l">button</button>
+                  <button class="btn l">button</button>
+                  <button class="btn l">button</button>
+                </div>
+
+                <div class="btn-group">
+                  <button class="btn ml">button</button>
+                  <button class="btn m">button</button>
+                  <button class="btn m">button</button>
+                </div>
+
+                <div class="btn-group">
+                  <button class="btn s">button</button>
+                  <button class="btn s">button</button>
+                  <button class="btn s">button</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- btn group colors -->
+          <div class="guide_block">
+            <h3>group</h3>
+            <div class="guide_data">
+              <p class="title">.btn-group</p>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap">
+                <div class="btn-group">
+                  <button class="btn secondary">button</button>
+                  <button class="btn secondary">button</button>
+                  <button class="btn secondary">button</button>
+                </div>
+
+                <div class="btn-group">
+                  <button class="btn secondary label">button</button>
+                  <button class="btn secondary label">button</button>
+                  <button class="btn secondary label">button</button>
+                </div>
+
+                <div class="btn-group">
+                  <button class="btn secondary outline">button</button>
+                  <button class="btn secondary outline">button</button>
+                  <button class="btn secondary outline">button</button>
+                </div>
+
+                <div class="btn-group">
+                  <button class="btn secondary text">button</button>
+                  <button class="btn secondary text">button</button>
+                  <button class="btn secondary text">button</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- btn icon -->
+          <div class="guide_block">
+            <h3>variants</h3>
+            <div class="guide_data">
+              <p class="title">.btn-icon</p>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap">
+                <button class="btn btn-icon"><i class="ic star"></i></button>
+                <button class="btn btn-icon label"><i class="ic star"></i></button>
+                <button class="btn btn-icon outline"><i class="ic star"></i></button>
+                <button class="btn btn-icon text"><i class="ic star"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- btn icon sizes -->
+          <div class="guide_block">
+            <h3>sizes</h3>
+            <div class="guide_data">
+              <p class="title">.btn-icon</p>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap">
+                <button class="btn l btn-icon"><i class="ic star"></i></button>
+                <button class="btn btn-icon"><i class="ic star"></i></button>
+                <button class="btn s btn-icon"><i class="ic star"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- btn icon colors-->
+          <div class="guide_block">
+            <h3>variants</h3>
+            <div class="guide_data">
+              <p class="title">.btn-icon</p>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap">
+                <button class="btn btn-icon"><i class="ic star"></i></button>
+                <button class="btn btn-icon label"><i class="ic star"></i></button>
+                <button class="btn btn-icon outline"><i class="ic star"></i></button>
+                <button class="btn btn-icon text"><i class="ic star"></i></button>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap">
+                <button class="btn secondary btn-icon"><i class="ic star"></i></button>
+                <button class="btn secondary btn-icon label"><i class="ic star"></i></button>
+                <button class="btn secondary btn-icon outline"><i class="ic star"></i></button>
+                <button class="btn secondary btn-icon text"><i class="ic star"></i></button>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap">
+                <button class="btn info btn-icon"><i class="ic star"></i></button>
+                <button class="btn info btn-icon label"><i class="ic star"></i></button>
+                <button class="btn info btn-icon outline"><i class="ic star"></i></button>
+                <button class="btn info btn-icon text"><i class="ic star"></i></button>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap">
+                <button class="btn success btn-icon"><i class="ic star"></i></button>
+                <button class="btn success btn-icon label"><i class="ic star"></i></button>
+                <button class="btn success btn-icon outline"><i class="ic star"></i></button>
+                <button class="btn success btn-icon text"><i class="ic star"></i></button>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap">
+                <button class="btn warning btn-icon"><i class="ic star"></i></button>
+                <button class="btn warning btn-icon label"><i class="ic star"></i></button>
+                <button class="btn warning btn-icon outline"><i class="ic star"></i></button>
+                <button class="btn warning btn-icon text"><i class="ic star"></i></button>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap">
+                <button class="btn error btn-icon"><i class="ic star"></i></button>
+                <button class="btn error btn-icon label"><i class="ic star"></i></button>
+                <button class="btn error btn-icon outline"><i class="ic star"></i></button>
+                <button class="btn error btn-icon text"><i class="ic star"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- btn icon -->
+          <div class="guide_block">
+            <h3>icon only</h3>
+            <div class="guide_data">
+              <p class="title">.btn-icon_only</p>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                <button class="btn-icon_only l"><i class="ic star-fill"></i></button>
+                <button class="btn-icon_only"><i class="ic star-fill"></i></button>
+                <button class="btn-icon_only s"><i class="ic star-fill"></i></button>
+              </div>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                <button class="btn-icon_only l secondary"><i class="ic star-fill"></i></button>
+                <button class="btn-icon_only secondary"><i class="ic star-fill"></i></button>
+                <button class="btn-icon_only s secondary"><i class="ic star-fill"></i></button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- toggle group -->
+          <div class="guide_block">
+            <h3>toggle group</h3>
+            <div class="guide_data">
+              <p class="title">.btn-toggle_group</p>
+              <div class="data" style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                <div class="btn-toggle_group l">
+                  <button class="toggleBtn active"><i class="ic align-left"></i></button>
+                  <button class="toggleBtn"><i class="ic align-left"></i></button>
+                  <button class="toggleBtn"><i class="ic align-left"></i></button>
+                  <button class="toggleBtn" disabled><i class="ic align-left"></i></button>
+                </div>
+                <div class="btn-toggle_group">
+                  <button class="toggleBtn" class="active"><i class="ic align-left"></i></button>
+                  <button class="toggleBtn"><i class="ic align-left"></i></button>
+                  <button class="toggleBtn"><i class="ic align-left"></i></button>
+                  <button class="toggleBtn" disabled><i class="ic align-left"></i></button>
+                </div>
+                <div class="btn-toggle_group s">
+                  <button class="toggleBtn" class="active"><i class="ic align-left"></i></button>
+                  <button class="toggleBtn"><i class="ic align-left"></i></button>
+                  <button class="toggleBtn"><i class="ic align-left"></i></button>
+                  <button class="toggleBtn" disabled><i class="ic align-left"></i></button>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../assets/scripts/jquery-3.7.1.min.js"></script>
+
+    <script>
+      //토글버튼
+      $(".toggleBtn").on("click", function(){
+        $(this).siblings().removeClass("active");
+        $(this).toggleClass("active");
+
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,322 @@
+/***************************************************************
+    06. icons
+***************************************************************/
+@use "sass:map";
+@use "../abstracts/" as abs;
+i {
+  aspect-ratio: 1;
+}
+
+.ic {
+  display: inline-block;
+  width: 100%;
+  aspect-ratio: 1;
+  background: var(--text-primary);
+  display: block;
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  //아이콘 리스트
+  //a
+  &.atom {
+    mask-image: url(../images/system/atom.svg);
+  }
+
+  &.alert-circle {
+    mask-image: url(../images/system/alert-circle.svg);
+  }
+
+  &.alert-triangle {
+    mask-image: url(../images/system/alert-triangle.svg);
+  }
+
+  &.arrow-left {
+    mask-image: url(../images/system/arrow-left.svg);
+  }
+
+  &.arrow-right {
+    mask-image: url(../images/system/arrow-right.svg);
+  }
+
+  &.align-left {
+    mask-image: url(../images/system/align-left.svg);
+  }
+
+  //b
+  &.brand-instagram {
+    mask-image: url(../images/system/brand-instagram.svg);
+  }
+
+  &.brand-github {
+    mask-image: url(../images/system/brand-github.svg);
+  }
+
+  &.brand-tabler {
+    mask-image: url(../images/system/brand-tabler.svg);
+  }
+
+  &.box {
+    mask-image: url(../images/system/box.svg);
+  }
+
+  //c
+  &.circle {
+    mask-image: url(../images/system/circle.svg);
+  }
+
+  &.circle-dot {
+    mask-image: url(../images/system/circle-dot.svg);
+  }
+  &.caret-up {
+    mask-image: url(../images/system/caret-up.svg);
+  }
+
+  &.caret-up-fill {
+    mask-image: url(../images/system/caret-up-fill.svg);
+  }
+
+  &.circle-check {
+    mask-image: url(../images/system/circle-check.svg);
+  }
+
+  &.close-circle-fill {
+    mask-image: url(../images/system/close-circle-fill.svg);
+  }
+
+  &.chevron-down {
+    mask-image: url(../images/system/chevron-down.svg);
+  }
+
+  &.chevron-left {
+    mask-image: url(../images/system/chevron-left.svg);
+  }
+
+  &.chevron-right {
+    mask-image: url(../images/system/chevron-right.svg);
+  }
+
+  &.chevrons-left {
+    mask-image: url(../images/system/chevrons-left.svg);
+  }
+
+  &.chevrons-right {
+    mask-image: url(../images/system/chevrons-right.svg);
+  }
+
+  &.check {
+    mask-image: url(../images/system/check.svg);
+  }
+
+  &.checkbox {
+    mask-image: url(../images/system/checkbox.svg);
+  }
+
+  &.checkup-list {
+    mask-image: url(../images/system/checkup-list.svg);
+  }
+
+  &.cloud-upload {
+    mask-image: url(../images/system/cloud-upload.svg);
+  }
+
+  &.chart-pie {
+    mask-image: url(../images/system/chart-pie.svg);
+  }
+
+  &.chart-donut-2 {
+    mask-image: url(../images/system/chart-donut-2.svg);
+  }
+
+  &.calendar {
+    mask-image: url(../images/system/calendar.svg);
+  }
+
+  &.copy {
+    mask-image: url(../images/system/copy.svg);
+  }
+
+  //d
+  &.dots {
+    mask-image: url(../images/system/dots.svg);
+  }
+
+  //e
+  &.eye {
+    mask-image: url(../images/system/eye.svg);
+  }
+  &.eye-off {
+    mask-image: url(../images/system/eye-off.svg);
+  }
+
+  &.external-link {
+    mask-image: url(../images/system/external-link.svg);
+  }
+
+  //f
+  &.file {
+    mask-image: url(../images/system/file.svg);
+  }
+
+  &.file-analytics {
+    mask-image: url(../images/system/file-analytics.svg);
+  }
+
+  &.file-invoice {
+    mask-image: url(../images/system/file-invoice.svg);
+  }
+
+  &.folder {
+    mask-image: url(../images/system/folder.svg);
+  }
+
+  //g
+  &.grid-line {
+    mask-image: url(../images/system/grid-line.svg);
+  }
+
+  &.git-merge {
+    mask-image: url(../images/system/git-merge.svg);
+  }
+
+  //h
+  &.help {
+    mask-image: url(../images/system/help.svg);
+  }
+
+  //i
+  &.info-circle {
+    mask-image: url(../images/system/info-circle.svg);
+  }
+
+  &.id {
+    mask-image: url(../images/system/id.svg);
+  }
+
+  //j
+  //k
+  //l
+  &.loading {
+    mask-image: url(../images/system/loading.svg);
+  }
+
+  &.lock {
+    mask-image: url(../images/system/lock.svg);
+  }
+
+  &.layout {
+    mask-image: url(../images/system/layout.svg);
+  }
+
+  //m
+  &.mail {
+    mask-image: url(../images/system/mail.svg);
+  }
+
+  &.message-circle-2 {
+    mask-image: url(../images/system/message-circle-2.svg);
+  }
+  //n
+  //o
+  //p
+  &.plus {
+    mask-image: url(../images/system/plus.svg);
+  }
+
+  &.photo {
+    mask-image: url(../images/system/photo.svg);
+  }
+
+  //q
+  //r
+  //s
+  &.settings {
+    mask-image: url(../images/system/settings.svg);
+  }
+
+  &.search {
+    mask-image: url(../images/system/search.svg);
+  }
+
+  &.star {
+    mask-image: url(../images/system/star.svg);
+  }
+
+  &.star-fill {
+    mask-image: url(../images/system/star-fill.svg);
+  }
+
+  &.smart-home {
+    mask-image: url(../images/system/smart-home.svg);
+  }
+
+  &.shopping-cart {
+    mask-image: url(../images/system/shopping-cart.svg);
+  }
+
+  &.school {
+    mask-image: url(../images/system/school.svg);
+  }
+
+  &.shield-lock {
+    mask-image: url(../images/system/shield-lock.svg);
+  }
+
+  &.square {
+    mask-image: url(../images/system/square.svg);
+  }
+
+  //t
+  &.table {
+    mask-image: url(../images/system/table.svg);
+  }
+
+  &.truck {
+    mask-image: url(../images/system/truck.svg);
+  }
+
+  &.typography {
+    mask-image: url(../images/system/typography.svg);
+  }
+
+  //u
+  &.user {
+    mask-image: url(../images/system/user.svg);
+  }
+
+  //v
+  //w
+  &.wallet {
+    mask-image: url(../images/system/wallet.svg);
+  }
+
+  //x
+  &.x {
+    mask-image: url(../images/system/x.svg);
+  }
+
+  //y
+  //z
+  //etc
+}
+
+//color icons
+.Gift {
+  mask-image: url(../images/icons/Gift.svg);
+}
+
+.Rocket {
+  mask-image: url(../images/icons/Rocket.svg);
+}
+
+//etc
+.pdf {
+  background-image: url(../images/icons/pdf.svg);
+}
+
+.xls {
+  background-image: url(../images/icons/xls.svg);
+}

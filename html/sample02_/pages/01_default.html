@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- css -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div id="wrap">
+    <!-- header : sidebar-->
+    <header class="header" id="header">
+      <div class="scroll">
+        <div class="header-top">
+          <h1 class="logo"><a href=""><img src="/assets/images/common/logo.svg" alt="Vuexy"></a></h1>
+          <button class="btn-icon" id="sidebarToggle"><i class="ic circle-dot"></i></button>
+        </div>
+
+        <nav class="nav" id="nav">
+          <a href="javascript:void(0)" class="list-item">
+            <div class="list-name">
+              <i class="ic smart-home"></i>
+              <p class="name">Dashboards</p>
+            </div>
+            <div class="list-right">
+              <p class="chip s error">4</p>
+              <i class="ic chevron-right"></i>
+            </div>
+          </a>
+          <div class="nav-group">
+            <p class="nav-title">APPS & PAGES</p>
+            <div class="nav-list">
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item active">
+                  <div class="list-name">
+                    <i class="ic shopping-cart"></i>
+                    <p class="name">eCommerce</p>
+                  </div>
+                </a>
+              </div>
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic school"></i>
+                    <p class="name">Academy</p>
+                  </div>
+                </a>
+              </div>
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic truck"></i>
+                    <p class="name">Logistics</p>
+                  </div>
+                </a>
+              </div>
+              <div class="nav-link subOpen">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic user"></i>
+                    <p class="name">Users</p>
+                  </div>
+                  <div class="list-right">
+                    <i class="ic chevron-right"></i>
+                  </div>
+                </a>
+
+                <div class="nav-sub">
+                  <div class="nav-link">
+                    <a href="javascript:void(0)" class="list-item">
+                      <div class="list-name">
+                        <i class="ic circle"></i>
+                        <p class="name">List</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="nav-link subOpen">
+                    <a href="javascript:void(0)" class="list-item">
+                      <div class="list-name">
+                        <i class="ic circle"></i>
+                        <p class="name">View</p>
+                      </div>
+                      <div class="list-right">
+                        <i class="ic chevron-right"></i>
+                      </div>
+                    </a>
+
+                    <div class="nav-sub">
+                      <div class="nav-link">
+                        <a href="javascript:void(0)" class="list-item">
+                          <div class="list-name">
+                            <i class="ic circle"></i>
+                            <p class="name">Overview</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="nav-link">
+                        <a href="javascript:void(0)" class="list-item">
+                          <div class="list-name">
+                            <i class="ic circle"></i>
+                            <p class="name">Security</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="nav-link">
+                        <a href="javascript:void(0)" class="list-item">
+                          <div class="list-name">
+                            <i class="ic circle"></i>
+                            <p class="name">Billing & Plans</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="nav-link">
+                        <a href="javascript:void(0)" class="list-item">
+                          <div class="list-name">
+                            <i class="ic circle"></i>
+                            <p class="name">Notifications</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="nav-link">
+                        <a href="javascript:void(0)" class="list-item">
+                          <div class="list-name">
+                            <i class="ic circle"></i>
+                            <p class="name">List</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic mail"></i>
+                    <p class="name">Email</p>
+                  </div>
+                </a>
+              </div>
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic message-circle-2"></i>
+                    <p class="name">Chat</p>
+                  </div>
+                </a>
+              </div>
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic calendar"></i>
+                    <p class="name">Calendar</p>
+                  </div>
+                </a>
+              </div>
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic copy"></i>
+                    <p class="name">Kanban</p>
+                  </div>
+                </a>
+              </div>
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic file-invoice"></i>
+                    <p class="name">Invoice</p>
+                  </div>
+                  <div class="list-right">
+                    <i class="ic chevron-right"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic lock"></i>
+                    <p class="name">Roles & Permissions</p>
+                  </div>
+                  <div class="list-right">
+                    <i class="ic chevron-right"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-group">
+            <p class="nav-title">PAGES</p>
+            <div class="nav-list">
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic file"></i>
+                    <p class="name">Pages</p>
+                  </div>
+                  <div class="list-right">
+                    <i class="ic chevron-right"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic shield-lock"></i>
+                    <p class="name">Authentications</p>
+                  </div>
+                  <div class="list-right">
+                    <i class="ic chevron-right"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic dots"></i>
+                    <p class="name">Wizard Examples</p>
+                  </div>
+                  <div class="list-right">
+                    <i class="ic chevron-right"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic square"></i>
+                    <p class="name">Dialog Examples</p>
+                  </div>
+                  <div class="list-right">
+                    <i class="ic chevron-right"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-group">
+            <p class="nav-title">USER INTERFACE</p>
+            <div class="nav-list">
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic typography"></i>
+                    <p class="name">Typography</p>
+                  </div>
+                </a>
+              </div>
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic brand-tabler"></i>
+                    <p class="name">Icons</p>
+                  </div>
+                </a>
+              </div>
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic id"></i>
+                    <p class="name">Cards</p>
+                  </div>
+                  <div class="list-right">
+                    <i class="ic chevron-right"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic atom"></i>
+                    <p class="name">Components</p>
+                  </div>
+                  <div class="list-right">
+                    <i class="ic chevron-right"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-group">
+            <p class="nav-title">FORMS & TABLES</p>
+            <div class="nav-list">
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic checkbox"></i>
+                    <p class="name">Form Elements</p>
+                  </div>
+                  <div class="list-right">
+                    <i class="ic chevron-right"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic layout"></i>
+                    <p class="name">Form Layout</p>
+                  </div>
+                </a>
+              </div>
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic checkup-list"></i>
+                    <p class="name">Form Validation</p>
+                  </div>
+                </a>
+              </div>
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic git-merge"></i>
+                    <p class="name">Form Wizard</p>
+                  </div>
+                </a>
+              </div>
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic table"></i>
+                    <p class="name">Table</p>
+                  </div>
+                </a>
+              </div>
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic grid-line"></i>
+                    <p class="name">Mui DataGrid</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-group">
+            <p class="nav-title">CHARTS & MISC</p>
+            <div class="nav-list">
+              <div class="nav-link">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic chart-donut-2"></i>
+                    <p class="name">Charts</p>
+                  </div>
+                </a>
+              </div>
+              <div class="nav-link subOpen">
+                <a href="javascript:void(0)" class="list-item">
+                  <div class="list-name">
+                    <i class="ic box"></i>
+                    <p class="name">Others</p>
+                  </div>
+                  <div class="list-right">
+                    <i class="ic chevron-right"></i>
+                  </div>
+                </a>
+
+                <div class="nav-sub">
+                  <div class="nav-link">
+                    <a href="javascript:void(0)" class="list-item">
+                      <div class="list-name">
+                        <i class="ic circle"></i>
+                        <p class="name">Documentation</p>
+                      </div>
+                      <div class="list-right">
+                        <i class="ic external-link"></i>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="nav-link">
+                    <a href="javascript:void(0)" class="list-item">
+                      <div class="list-name">
+                        <i class="ic circle"></i>
+                        <p class="name">Support</p>
+                      </div>
+                      <div class="list-right">
+                        <i class="ic external-link"></i>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="nav-link subOpen">
+                    <a href="javascript:void(0)" class="list-item ">
+                      <div class="list-name">
+                        <i class="ic circle"></i>
+                        <p class="name">Menu Level 1</p>
+                      </div>
+                      <div class="list-right">
+                        <i class="ic chevron-right"></i>
+                      </div>
+                    </a>
+
+                    <div class="nav-sub subOpen">
+                      <div class="nav-link subOpen">
+                        <a href="javascript:void(0)" class="list-item ">
+                          <div class="list-name">
+                            <i class="ic circle"></i>
+                            <p class="name">Menu Level 2</p>
+                          </div>
+                          <div class="list-right">
+                            <i class="ic chevron-right"></i>
+                          </div>
+                        </a>
+
+                        <div class="nav-sub">
+                          <div class="nav-link">
+                            <a href="javascript:void(0)" class="list-item">
+                              <div class="list-name">
+                                <i class="ic circle"></i>
+                                <p class="name">Menu Level 3</p>
+                              </div>
+                              <div class="list-right">
+                                <i class="ic chevron-right"></i>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main>
+
+    </main>
+  </div>
+
+  <script src="../assets/scripts/jquery-3.7.1.min.js"></script>
+  <script>
+  $('.subOpen > .list-item').on('click', function(e) {
+    e.preventDefault();
+
+    var $parent = $(this).parent(); 
+    var $subMenu = $parent.children('.nav-sub'); 
+
+    $parent.toggleClass('opened');
+    $subMenu.stop().slideToggle(300);
+    // $parent.siblings('.subOpen').removeClass('opened').children('.nav-sub').slideUp(300);
+  });
+  </script>
+</body>
+</html>

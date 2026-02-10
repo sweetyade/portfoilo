@@ -1,0 +1,99 @@
+@use "../abstracts/" as abs;
+
+/***************************************************************
+    components - header
+***************************************************************/
+.header {
+  width: 100%;
+  max-width: 260px;
+  box-shadow: var(--shadow-s);
+  height: 100svh;
+  overflow-y: hidden;
+
+  &-top {
+    padding: var(--gap-5) var(--gap-4);
+    gap: var(--gap-3);
+    @include abs.flexbtw;
+
+    #sidebarToggle {
+      .ic {
+        width: 20px;
+      }
+    }
+  }
+
+  .scroll {
+    &::-webkit-scrollbar {
+      width: 0px;
+    }
+  }
+}
+
+.nav {
+  padding: var(--gap-4) var(--gap-3);
+
+  .list-right {
+    .chip {
+      border-radius: var(--border-radius-round);
+    }
+  }
+
+  &-group {
+    padding-bottom: var(--gap-2);
+  }
+
+  &-title {
+    font-size: var(--etc-caption);
+    line-height: 22px;
+    color: var(--text-disabled);
+    padding: var(--gap-5) var(--gap-3) 6px;
+  }
+
+  &-link.subOpen.opened > .list-item .ic.chevron-right {
+    transform: rotate(90deg);
+    transition: transform 0.3s;
+  }
+
+  .list-item {
+    padding-inline: var(--gap-3);
+    transition: none;
+
+    &.active {
+      color: var(--etc-white);
+      background: var(--menu-active);
+      box-shadow: var(--primary-shadow-s);
+
+      .ic {
+        background-color: var(--etc-white);
+      }
+    }
+  }
+
+  &-list {
+    display: grid;
+    gap: 6px;
+  }
+
+  &-sub {
+    display: none;
+    transition: none;
+
+    .ic.circle {
+      height: 12px;
+    }
+
+    .nav-sub {
+      .ic.circle {
+        width: 34px;
+        mask-position: var(--gap-4) center;
+      }
+
+      .nav-sub {
+        .ic.circle {
+          width: 44px;
+          mask-position: 26px center;
+        }
+      }
+    }
+  }
+}

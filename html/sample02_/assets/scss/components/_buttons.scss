@@ -1,0 +1,360 @@
+@use "../abstracts/" as abs;
+
+/***************************************************************
+    components - buttons
+***************************************************************/
+// $colors: (secondary, info, success, warning, error);
+
+.btn {
+  height: 38px;
+  @include abs.flexcenter;
+  gap: 6px;
+  font-size: var(--btn-m);
+  padding-inline: var(--padding-5);
+  border-radius: var(--border-radius-m);
+  color: var(--etc-white);
+  background-color: var(--primary-main);
+  box-shadow: var(--primary-shadow-s);
+  white-space: nowrap;
+
+  .ic {
+    width: 16px;
+    background-color: var(--etc-white);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: var(--primary-dark);
+  }
+
+  &:disabled {
+    opacity: 0.45;
+  }
+
+  &.s {
+    font-size: var(--btn-s);
+    border-radius: var(--border-radius-s);
+    padding-inline: 14px;
+    height: 30px;
+  }
+
+  &.l {
+    font-size: var(--btn-l);
+    border-radius: var(--border-radius-l);
+    padding-inline: 26px;
+    height: 48px;
+  }
+
+  &.label {
+    box-shadow: none;
+    background-color: var(--primary-alp-light);
+    color: var(--primary-main);
+
+    .ic {
+      background-color: var(--primary-main);
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--primary-alp);
+    }
+  }
+
+  &.outline {
+    box-shadow: none;
+    background-color: transparent;
+    color: var(--primary-main);
+    border: 1px solid var(--primary-main);
+
+    .ic {
+      background-color: var(--primary-main);
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--primary-alp-lighter);
+    }
+  }
+
+  &.text {
+    box-shadow: none;
+    background-color: transparent;
+    color: var(--primary-main);
+    padding-inline: var(--padding-3);
+
+    &.s:not(.btn-icon) {
+      padding-inline: 9px;
+    }
+
+    &.l:not(.btn-icon) {
+      padding-inline: var(--padding-4);
+    }
+
+    .ic {
+      background-color: var(--primary-main);
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--primary-alp-lighter);
+    }
+
+    &:disabled {
+      opacity: 0.45;
+    }
+  }
+
+  &-icon {
+    padding-inline: 0;
+    aspect-ratio: 1;
+
+    &.text {
+      padding-inline: 0;
+    }
+
+    .ic {
+      width: 22px;
+    }
+  }
+
+  @each $c in abs.$themeColors {
+    &.#{$c} {
+      background-color: var(--#{$c}-main);
+      box-shadow: var(--#{$c}-shadow-s);
+
+      &:hover,
+      &:active &:focus {
+        background-color: var(--#{$c}-dark);
+      }
+
+      &.label {
+        box-shadow: none;
+        background-color: var(--#{$c}-alp-light);
+        color: var(--#{$c}-main);
+
+        .ic {
+          width: 16px;
+          background-color: var(--#{$c}-main);
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: var(--#{$c}-alp);
+        }
+      }
+
+      &.outline {
+        box-shadow: none;
+        color: var(--#{$c}-main);
+        border: 1px solid var(--#{$c}-main);
+        background-color: transparent;
+
+        .ic {
+          width: 16px;
+          background-color: var(--#{$c}-main);
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: var(--#{$c}-alp-lighter);
+        }
+      }
+
+      &.text {
+        box-shadow: none;
+        color: var(--#{$c}-main);
+        background-color: transparent;
+
+        .ic {
+          width: 16px;
+          background-color: var(--#{$c}-main);
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: var(--#{$c}-alp-lighter);
+        }
+      }
+
+      &.btn-icon {
+        .ic {
+          width: 22px;
+        }
+      }
+    }
+  }
+
+  &.file {
+    @include abs.flexcenter;
+    gap: 10px;
+    padding-inline: 10px;
+    background-color: var(--action-hover);
+    width: fit-content;
+    height: 32px;
+    box-shadow: none;
+
+    .ic {
+      width: 20px;
+      height: fit-content;
+      background-color: transparent;
+    }
+
+    span {
+      @include abs.body1;
+      color: var(--text-secondary);
+    }
+  }
+}
+
+.btn-group {
+  @include abs.flexcenter;
+  border-radius: var(--border-radius-m);
+  overflow: hidden;
+
+  .btn {
+    border-radius: 0;
+    border-right: 1px solid var(--primary-dark);
+
+    &.secondary {
+      border-right: 1px solid var(--secondary-dark);
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    &.outline {
+      border-top: 0;
+      border-bottom: 0;
+      border-left: 0;
+    }
+
+    &.label {
+      border-right-color: var(--primary-alp-dark);
+
+      &.secondary {
+        border-right-color: var(--secondary-alp-dark);
+      }
+    }
+
+    &.text,
+    &.outline {
+      border-right-color: var(--primary-main);
+
+      &.secondary {
+        border-right-color: var(--secondary-main);
+      }
+    }
+  }
+
+  &:has(.outline) {
+    border: 1px solid var(--primary-main);
+
+    &:has(.secondary) {
+      border: 1px solid var(--secondary-main);
+    }
+  }
+}
+
+.btn-icon_only {
+  width: 38px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  .ic {
+    width: 22px;
+    background-color: var(--primary-main);
+  }
+
+  &:hover {
+    background-color: var(--primary-alp-lighter);
+  }
+
+  &.s {
+    width: 34px;
+
+    .ic {
+      width: 20px;
+    }
+  }
+
+  &.l {
+    width: 42px;
+
+    .ic {
+      width: 28px;
+    }
+  }
+
+  &.secondary {
+    .ic {
+      background-color: var(--secondary-main);
+    }
+
+    &:hover {
+      background-color: var(--secondary-alp-lighter);
+    }
+  }
+}
+
+.btn-toggle_group {
+  padding: 7px;
+  border-radius: var(--border-radius-l);
+  border: 1px solid var(--etc-divider);
+  @include abs.flex;
+
+  button {
+    width: 44px;
+    @include abs.flexcenter;
+    aspect-ratio: 1;
+    border-radius: var(--border-radius-m);
+
+    .ic {
+      width: 24px;
+      background-color: var(--text-primary);
+    }
+
+    &:hover {
+      background-color: var(--action-hover);
+    }
+
+    &.active {
+      background-color: var(--action-selected);
+    }
+
+    &:disabled {
+      cursor: default;
+      .ic {
+        background-color: var(--text-disabled);
+      }
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &.s {
+    button {
+      width: 36px;
+    }
+  }
+
+  &.l {
+    button {
+      width: 52px;
+    }
+  }
+}
+
+.btn-list {
+  @include abs.flex;
+  gap: var(--gap);
+}

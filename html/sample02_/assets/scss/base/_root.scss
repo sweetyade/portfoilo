@@ -1,0 +1,128 @@
+@use "sass:map";
+@use "../abstracts/" as abs;
+
+:root {
+  /*========== Colors ==========*/
+  @function main-color($name) {
+    $shades: map.get(abs.$colors, $name);
+    @return map.get($shades, main);
+  }
+
+  //@Color Declaration
+  @each $color, $shades in abs.$colors {
+    @each $shade, $value in $shades {
+      --#{$color}-#{"" + $shade}: #{$value};
+    }
+  }
+
+  //@Color opacity & shadow
+  @each $color, $shades in abs.$colors {
+    $main: main-color($color);
+
+    /* opacity */
+    --#{$color}-alp-lighter: #{rgba($main, 0.08)};
+    --#{$color}-alp-light: #{rgba($main, 0.16)};
+    --#{$color}-alp: #{rgba($main, 0.24)};
+    --#{$color}-alp-dark: #{rgba($main, 0.32)};
+    --#{$color}-alp-darker: #{rgba($main, 0.38)};
+
+    /* shadow */
+    --#{$color}-shadow-s: 0 4px 4px 0 #{rgba($main, 0.25)};
+    --#{$color}-shadow-m: 0 4px 16px 0 #{rgba($main, 0.4)};
+    --#{$color}-shadow-l: 0 6px 20px 0 #{rgba($main, 0.5)};
+  }
+
+  --gray-alp-lighter: rgba($gray, 0.08);
+  --gray-alp-light: rgba($gray, 0.16);
+  --gray-alp-main: rgba($gray, 0.24);
+  --gray-alp-dark: rgba($gray, 0.32);
+  --gray-alp-darker: rgba($gray, 0.38);
+
+  --gray-shadow-xs: 0 1px 6px 0 rgba(47, 43, 61, 0.1);
+  --gray-shadow-s: 0 2px 8px 0 rgba(47, 43, 61, 0.12);
+  --gray-shadow-m: 0 3px 12px 0 rgba(47, 43, 61, 0.14);
+  --gray-shadow-l: 0 4px 18px 0 rgba(47, 43, 61, 0.16);
+  --gray-shadow-xl: 0 5px 30px 0 rgba(47, 43, 61, 0.18);
+
+  //@extra
+  @each $color, $shades in abs.$extra {
+    @each $shade, $value in $shades {
+      --#{$color}-#{"" + $shade}: #{$value};
+    }
+  }
+
+  //@shadow
+  @include abs.shadow(abs.$gray);
+
+  //menu active
+  --menu-active: linear-gradient(
+    270deg,
+    rgba(115, 103, 240, 0.7) 0%,
+    #7367f0 100%
+  );
+
+  /*========== Font and typography ==========*/
+  @each $font, $types in abs.$font-family {
+    @each $type, $value in $types {
+      --#{$font}-#{$type}: #{$value};
+    }
+  }
+
+  @each $font, $types in abs.$font-size {
+    @each $size, $value in $types {
+      --#{$font}-#{$size}: #{$value};
+    }
+  }
+
+  @each $font, $types in abs.$font-weight {
+    @each $weight, $value in $types {
+      --#{$font}-#{"" + $weight}: #{$value};
+    }
+  }
+
+  /*=========== radius ============*/
+  @each $size, $value in abs.$border-radius {
+    --border-radius-#{$size}: #{$value};
+  }
+
+  /*=========== padding & gap ============*/
+  @each $size, $value in abs.$padding {
+    --padding-#{$size}: #{$value};
+  }
+
+  @each $size, $value in abs.$gap {
+    --gap-#{$size}: #{$value};
+  }
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+:root[data-theme="dark"] {
+  body {
+    background-color: var(--bg-paper);
+  }
+  //@extra
+  @each $color, $shades in abs.$dark {
+    @each $shade, $value in $shades {
+      --#{$color}-#{"" + $shade}: #{$value};
+    }
+  }
+
+  //@shadow
+  @include abs.dark-shadow(abs.$dark-shadow);
+}
+
+// @media (min-width: #{abs.$tablet}) {
+//   :root {
+//     // font-size: 18px;
+//   }
+// }
+
+// @media (min-width: #{abs.$pc_small}) {
+//   :root {
+//     // font-size: 20px;
+//   }
+// }

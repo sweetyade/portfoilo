@@ -1,0 +1,2376 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="../../assets/css/jquery.datetimepicker.min.css" />
+    <link rel="stylesheet" href="../../assets/css/daterangepicker.css" />
+    <link rel="stylesheet" href="../../assets/css/guide.css" />
+    <title>DESIGN GUIDE</title>
+  </head>
+  <body>
+    <main id="guide_main">
+      <!-- menu -->
+      <nav id="guide_nav">
+        <h1>design guide</h1>
+
+        <div class="nav_menu">
+          <a href="guide.html">typography</a>
+          <a href="guide_color.html">color</a>
+          <a href="guide_icon.html">icon</a>
+          <a href="guide_form.html">form</a>
+          <a href="guide_button.html">button</a>
+          <a href="guide_popup.html">popup</a>
+          <a href="guide_layout.html">layout</a>
+          <a href="guide_component.html" class="active">component</a>
+        </div>
+      </nav>
+
+      <!-- contents -->
+      <section class="container">
+        <div class="contents">
+          <h2>component</h2>
+
+          <div class="guide_info">
+            <p class="normal_f">- </p>
+          </div>
+
+            <!-- breadcrumbs --> 
+          <div class="guide_block">
+            <h3>navigations</h3>
+            <div class="guide_data">
+              <p class="title">breadcrumbs</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="breadcrumbs">
+                  <p>Breadcrumbs</p>
+                  <p>Breadcrumbs</p>
+                  <p>Breadcrumbs</p>
+                </div>
+
+                <div class="breadcrumbs">
+                  <p><i class="ic star-fill"></i>Breadcrumbs</p>
+                  <p><i class="ic star-fill"></i>Breadcrumbs</p>
+                  <p><i class="ic star-fill"></i>Breadcrumbs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--dropdown -->
+          <div class="guide_block">
+            <h3>dropdown</h3>
+            <div class="guide_data">
+              <p class="title">dropdown</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="dropdown">
+                  <div class="dropdown-btn">
+                    <div class="chips">
+                      <p class="chip s">
+                        <span>Chip 1</span>
+                        <i class="ic close-circle-fill"></i>
+                      </p>
+                      <p class="chip s">
+                        <span>Chip 1</span>
+                        <i class="ic close-circle-fill"></i>
+                      </p>
+                      <p class="chip s">
+                        <span>Chip 1</span>
+                        <i class="ic close-circle-fill"></i>
+                      </p>
+                      <p class="chip s">
+                        <span>Chip 1</span>
+                        <i class="ic close-circle-fill"></i>
+                      </p>
+                      <p class="chip s">
+                        <span>Chip 1</span>
+                        <i class="ic close-circle-fill"></i>
+                      </p>
+                      <p class="chip s">
+                        <span>Chip 1</span>
+                        <i class="ic close-circle-fill"></i>
+                      </p>
+                    </div>
+                    <i class="ic chevron-down"></i>
+                  </div>
+                  <ul class="dropdown-list">
+                    <li>Show all notification content</li>
+                    <li>Hide sensitive notification content</li>
+                    <li class="active">Hide all notification content</li>
+                    <li>Action</li>
+                    <li>Toggle Dropdown</li>
+                    <li>Something else here</li>
+                    <li>Separated link</li>
+                    <li class="disabled">Extra Link</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--stepper -->
+          <div class="guide_block">
+            <h3>stepper</h3>
+            <div class="guide_data">
+              <p class="title">stepper | subtext | center | center subtext</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="stepper">
+                  <div class="step ">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name"><span class="no">01</span>Account Details</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="step now">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name"><span class="no">02</span>Personal Info</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="step">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name"><span class="no">02</span>Social Links</p>                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="stepper">
+                  <div class="step ">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <p class="step-no">01</p>
+                    <div class="step-desc">
+                      <p class="step-name">Account Details</p>                    
+                      <p class="step-subtxt">Enter your Account Details</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="step now">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <p class="step-no">02</p>
+                    <div class="step-desc">
+                      <p class="step-name">Personal Info</p>    
+                      <p class="step-subtxt">Setup Information</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="step">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <p class="step-no">03</p>
+                    <div class="step-desc">
+                      <p class="step-name">Social Links</p>    
+                      <p class="step-subtxt">Add Social Links</p>                   
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="stepper center">
+                  <div class="step ">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name"><span class="no">01</span>Account Details</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="step now">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name"><span class="no">02</span>Personal Info</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="step">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name"><span class="no">02</span>Social Links</p>                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="stepper center">
+                  <div class="step ">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <p class="step-no">01</p>
+                    <div class="step-desc">
+                      <p class="step-name">Account Details</p>                    
+                      <p class="step-subtxt">Enter your Account Details</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="step now">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <p class="step-no">02</p>
+                    <div class="step-desc">
+                      <p class="step-name">Personal Info</p>    
+                      <p class="step-subtxt">Setup Information</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="step">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <p class="step-no">03</p>
+                    <div class="step-desc">
+                      <p class="step-name">Social Links</p>    
+                      <p class="step-subtxt">Add Social Links</p>                   
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">stepper vertical | subtext | center | center subtext </p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; align-items: flex-start; gap: 48px">
+                <div class="stepper vertical">
+                  <div class="step ">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name"><span class="no">01</span>Account Details</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="step now">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name"><span class="no">02</span>Personal Info</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="step">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name"><span class="no">02</span>Social Links</p>                    
+                    </div>
+                  </div>
+                </div>
+                <div class="stepper vertical">
+                  <div class="step ">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <p class="step-no">01</p>
+                    <div class="step-desc">
+                      <p class="step-name">Account Details</p>                    
+                      <p class="step-subtxt">Enter your Account Details</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="step now">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <p class="step-no">02</p>
+                    <div class="step-desc">
+                      <p class="step-name">Personal Info</p>    
+                      <p class="step-subtxt">Setup Information</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="step">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <p class="step-no">03</p>
+                    <div class="step-desc">
+                      <p class="step-name">Social Links</p>    
+                      <p class="step-subtxt">Add Social Links</p>                   
+                    </div>
+                  </div>
+                </div>
+                <div class="stepper vertical center">
+                  <div class="step ">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name"><span class="no">01</span>Account Details</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="step now">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name"><span class="no">02</span>Personal Info</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="step">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name"><span class="no">02</span>Social Links</p>                    
+                    </div>
+                  </div>
+                </div>
+                <div class="stepper vertical center">
+                  <div class="step ">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <p class="step-no">01</p>
+                    <div class="step-desc">
+                      <p class="step-name">Account Details</p>                    
+                      <p class="step-subtxt">Enter your Account Details</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="step now">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <p class="step-no">02</p>
+                    <div class="step-desc">
+                      <p class="step-name">Personal Info</p>    
+                      <p class="step-subtxt">Setup Information</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="step">
+                    <p class="step-icon"><i class="ic check"></i></p>
+                    <p class="step-no">03</p>
+                    <div class="step-desc">
+                      <p class="step-name">Social Links</p>    
+                      <p class="step-subtxt">Add Social Links</p>                   
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="guide_data">
+              <p class="title">stepper custom</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="stepper custom">
+                  <div class="step">
+                    <p class="step-icon">1</p>
+                    <div class="step-desc">
+                      <p class="step-name">Account Details</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"><i class="ic chevron-right"></i></div>
+                  <div class="step now">
+                    <p class="step-icon">2</p>
+                    <div class="step-desc">
+                      <p class="step-name">Personal Info</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"><i class="ic chevron-right"></i></div>
+                  <div class="step">
+                    <p class="step-icon">3</p>
+                    <div class="step-desc">
+                      <p class="step-name">Social Links</p>                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="stepper custom">
+                  <div class="step">
+                    <p class="step-icon"><i class="ic file-analytics"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name">Account Details</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"><i class="ic chevron-right"></i></div>
+                  <div class="step now">
+                    <p class="step-icon"><i class="ic user"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name">Personal Info</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"><i class="ic chevron-right"></i></div>
+                  <div class="step">
+                    <p class="step-icon"><i class="ic brand-instagram"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name">Social Links</p>                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="stepper custom">
+                  <div class="step">
+                    <p class="step-icon">1</p>
+                    <div class="step-desc">
+                      <p class="step-name">Account Details</p>    
+                      <p class="step-subtxt">Enter your Account Details</p>                
+                    </div>
+                  </div>
+                  <div class="divider"><i class="ic chevron-right"></i></div>
+                  <div class="step now">
+                    <p class="step-icon">2</p>
+                    <div class="step-desc">
+                      <p class="step-name">Personal Info</p>                
+                      <p class="step-subtxt">Setup Information</p>         
+                    </div>
+                  </div>
+                  <div class="divider"><i class="ic chevron-right"></i></div>
+                  <div class="step">
+                    <p class="step-icon">3</p>
+                    <div class="step-desc">
+                      <p class="step-name">Social Links</p>                
+                      <p class="step-subtxt">Add Social Links</p>         
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="stepper custom">
+                  <div class="step">
+                    <p class="step-icon"><i class="ic file-analytics"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name">Account Details</p>      
+                      <p class="step-subtxt">Enter your Account Details</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"><i class="ic chevron-right"></i></div>
+                  <div class="step now">
+                    <p class="step-icon"><i class="ic user"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name">Personal Info</p>          
+                      <p class="step-subtxt">Setup Information</p>                
+                    </div>
+                  </div>
+                  <div class="divider"><i class="ic chevron-right"></i></div>
+                  <div class="step">
+                    <p class="step-icon"><i class="ic brand-instagram"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name">Social Links</p>     
+                      <p class="step-subtxt">Add Social Links</p>                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">stepper custom</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 52px; align-items: flex-start;">
+                <div class="stepper custom vertical">
+                  <div class="step">
+                    <p class="step-icon">1</p>
+                    <div class="step-desc">
+                      <p class="step-name">Account Details</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"><i class="ic chevron-right"></i></div>
+                  <div class="step now">
+                    <p class="step-icon">2</p>
+                    <div class="step-desc">
+                      <p class="step-name">Personal Info</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"><i class="ic chevron-right"></i></div>
+                  <div class="step">
+                    <p class="step-icon">3</p>
+                    <div class="step-desc">
+                      <p class="step-name">Social Links</p>                    
+                    </div>
+                  </div>
+                </div>
+                <div class="stepper custom vertical">
+                  <div class="step">
+                    <p class="step-icon"><i class="ic file-analytics"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name">Account Details</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"><i class="ic chevron-right"></i></div>
+                  <div class="step now">
+                    <p class="step-icon"><i class="ic user"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name">Personal Info</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"><i class="ic chevron-right"></i></div>
+                  <div class="step">
+                    <p class="step-icon"><i class="ic brand-instagram"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name">Social Links</p>                    
+                    </div>
+                  </div>
+                </div>
+                <div class="stepper custom vertical">
+                  <div class="step">
+                    <p class="step-icon">1</p>
+                    <div class="step-desc">
+                      <p class="step-name">Account Details</p>    
+                      <p class="step-subtxt">Enter your Account Details</p>                
+                    </div>
+                  </div>
+                  <div class="divider"><i class="ic chevron-right"></i></div>
+                  <div class="step now">
+                    <p class="step-icon">2</p>
+                    <div class="step-desc">
+                      <p class="step-name">Personal Info</p>                
+                      <p class="step-subtxt">Setup Information</p>         
+                    </div>
+                  </div>
+                  <div class="divider"><i class="ic chevron-right"></i></div>
+                  <div class="step">
+                    <p class="step-icon">3</p>
+                    <div class="step-desc">
+                      <p class="step-name">Social Links</p>                
+                      <p class="step-subtxt">Add Social Links</p>         
+                    </div>
+                  </div>
+                </div>
+                <div class="stepper custom vertical">
+                  <div class="step">
+                    <p class="step-icon"><i class="ic file-analytics"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name">Account Details</p>      
+                      <p class="step-subtxt">Enter your Account Details</p>                    
+                    </div>
+                  </div>
+                  <div class="divider"><i class="ic chevron-right"></i></div>
+                  <div class="step now">
+                    <p class="step-icon"><i class="ic user"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name">Personal Info</p>          
+                      <p class="step-subtxt">Setup Information</p>                
+                    </div>
+                  </div>
+                  <div class="divider"><i class="ic chevron-right"></i></div>
+                  <div class="step">
+                    <p class="step-icon"><i class="ic brand-instagram"></i></p>
+                    <div class="step-desc">
+                      <p class="step-name">Social Links</p>     
+                      <p class="step-subtxt">Add Social Links</p>                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--tabs -->
+          <div class="guide_block">
+            <h3>tabs</h3>
+            <div class="guide_data">
+              <p class="title">taps (default)</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="tabs">
+                  <p class="tab-btn active"><i class="ic search"></i>tab 1</p>
+                  <p class="tab-btn">tab 2</p>
+                  <p class="tab-btn">tab 3</p>
+                  <p class="tab-btn">tab 4</p>
+                  <p class="tab-btn">tab 5</p>
+                  <p class="tab-btn"><i class="ic search"></i>tab 6<i class="ic search"></i></p>
+                </div>
+              </div>
+
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="tabs fill">
+                  <p class="tab-btn active"><i class="ic search"></i>tab 1</p>
+                  <p class="tab-btn">tab 2</p>
+                  <p class="tab-btn">tab 3</p>
+                  <p class="tab-btn">tab 4</p>
+                  <p class="tab-btn">tab 5</p>
+                  <p class="tab-btn"><i class="ic search"></i>tab 6<i class="ic search"></i></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">taps vertical</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 48px; align-items: flex-start;">
+                <div class="tabs vertical">
+                  <p class="tab-btn active"><i class="ic search"></i>tab 1</p>
+                  <p class="tab-btn">tab 2</p>
+                  <p class="tab-btn">tab 3</p>
+                  <p class="tab-btn">tab 4</p>
+                  <p class="tab-btn">tab 5</p>
+                  <p class="tab-btn"><i class="ic search"></i>tab 6<i class="ic search"></i></p>
+                </div>
+
+                <div class="tabs fill vertical">
+                  <p class="tab-btn active"><i class="ic search"></i>tab 1</p>
+                  <p class="tab-btn">tab 2</p>
+                  <p class="tab-btn">tab 3</p>
+                  <p class="tab-btn">tab 4</p>
+                  <p class="tab-btn">tab 5</p>
+                  <p class="tab-btn"><i class="ic search"></i>tab 6<i class="ic search"></i></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- pagenation -->
+          <div class="guide_block">
+            <h3>pagenation</h3>
+            <div class="guide_data">
+              <p class="title">variants</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="pagenation">
+                  <p class="page-btn page-first"><i class="ic chevrons-left"></i></p>
+                  <p class="page-btn page-prev"><i class="ic chevron-left"></i></p>
+                  <p class="page-btn">1</p>
+                  <p class="page-btn">2</p>
+                  <p class="page-btn active">3</p>
+                  <p class="page-btn">4</p>
+                  <p class="page-btn">5</p>
+                  <p class="page-btn">6</p>
+                  <p class="page-btn page-next"><i class="ic chevron-right"></i></p>
+                  <p class="page-btn page-last"><i class="ic chevrons-right"></i></p>
+                </div>
+                <div class="pagenation outline">
+                  <p class="page-btn page-first"><i class="ic chevrons-left"></i></p>
+                  <p class="page-btn page-prev"><i class="ic chevron-left"></i></p>
+                  <p class="page-btn">1</p>
+                  <p class="page-btn">2</p>
+                  <p class="page-btn active">3</p>
+                  <p class="page-btn">4</p>
+                  <p class="page-btn">5</p>
+                  <p class="page-btn">6</p>
+                  <p class="page-btn page-next"><i class="ic chevron-right"></i></p>
+                  <p class="page-btn page-last"><i class="ic chevrons-right"></i></p>
+                </div>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="pagenation round">
+                  <p class="page-btn page-first"><i class="ic chevrons-left"></i></p>
+                  <p class="page-btn page-prev"><i class="ic chevron-left"></i></p>
+                  <p class="page-btn ">1</p>
+                  <p class="page-btn">2</p>
+                  <p class="page-btn active">3</p>
+                  <p class="page-btn">4</p>
+                  <p class="page-btn">5</p>
+                  <p class="page-btn">6</p>
+                  <p class="page-btn page-next"><i class="ic chevron-right"></i></p>
+                  <p class="page-btn page-last"><i class="ic chevrons-right"></i></p>
+                </div>
+                <div class="pagenation outline round">
+                  <p class="page-btn page-first"><i class="ic chevrons-left"></i></p>
+                  <p class="page-btn page-prev"><i class="ic chevron-left"></i></p>
+                  <p class="page-btn ">1</p>
+                  <p class="page-btn">2</p>
+                  <p class="page-btn active">3</p>
+                  <p class="page-btn">4</p>
+                  <p class="page-btn">5</p>
+                  <p class="page-btn">6</p>
+                  <p class="page-btn page-next"><i class="ic chevron-right"></i></p>
+                  <p class="page-btn page-last"><i class="ic chevrons-right"></i></p>
+                </div>
+              </div>
+            </div>
+            <div class="guide_data">
+              <p class="title">size</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="pagenation s">
+                  <p class="page-btn page-first"><i class="ic chevrons-left"></i></p>
+                  <p class="page-btn page-prev"><i class="ic chevron-left"></i></p>
+                  <p class="page-btn">1</p>
+                  <p class="page-btn">2</p>
+                  <p class="page-btn active">3</p>
+                  <p class="page-btn">4</p>
+                  <p class="page-btn">5</p>
+                  <p class="page-btn">6</p>
+                  <p class="page-btn page-next"><i class="ic chevron-right"></i></p>
+                  <p class="page-btn page-last"><i class="ic chevrons-right"></i></p>
+                </div>
+                <div class="pagenation">
+                  <p class="page-btn page-first"><i class="ic chevrons-left"></i></p>
+                  <p class="page-btn page-prev"><i class="ic chevron-left"></i></p>
+                  <p class="page-btn">1</p>
+                  <p class="page-btn">2</p>
+                  <p class="page-btn active">3</p>
+                  <p class="page-btn">4</p>
+                  <p class="page-btn">5</p>
+                  <p class="page-btn">6</p>
+                  <p class="page-btn page-next"><i class="ic chevron-right"></i></p>
+                  <p class="page-btn page-last"><i class="ic chevrons-right"></i></p>
+                </div>
+                <div class="pagenation l">
+                  <p class="page-btn page-first"><i class="ic chevrons-left"></i></p>
+                  <p class="page-btn page-prev"><i class="ic chevron-left"></i></p>
+                  <p class="page-btn">1</p>
+                  <p class="page-btn">2</p>
+                  <p class="page-btn active">3</p>
+                  <p class="page-btn">4</p>
+                  <p class="page-btn">5</p>
+                  <p class="page-btn">6</p>
+                  <p class="page-btn page-next"><i class="ic chevron-right"></i></p>
+                  <p class="page-btn page-last"><i class="ic chevrons-right"></i></p>
+                </div>
+              </div>
+            </div>
+            <div class="guide_data">
+              <p class="title">colors</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="pagenation">
+                  <p class="page-btn page-first"><i class="ic chevrons-left"></i></p>
+                  <p class="page-btn page-prev"><i class="ic chevron-left"></i></p>
+                  <p class="page-btn">1</p>
+                  <p class="page-btn">2</p>
+                  <p class="page-btn active">3</p>
+                  <p class="page-btn">4</p>
+                  <p class="page-btn">5</p>
+                  <p class="page-btn">6</p>
+                  <p class="page-btn page-next"><i class="ic chevron-right"></i></p>
+                  <p class="page-btn page-last"><i class="ic chevrons-right"></i></p>
+                </div>
+                <div class="pagenation primary">
+                  <p class="page-btn page-first"><i class="ic chevrons-left"></i></p>
+                  <p class="page-btn page-prev"><i class="ic chevron-left"></i></p>
+                  <p class="page-btn">1</p>
+                  <p class="page-btn">2</p>
+                  <p class="page-btn active">3</p>
+                  <p class="page-btn">4</p>
+                  <p class="page-btn">5</p>
+                  <p class="page-btn">6</p>
+                  <p class="page-btn page-next"><i class="ic chevron-right"></i></p>
+                  <p class="page-btn page-last"><i class="ic chevrons-right"></i></p>
+                </div>
+                <div class="pagenation secondary">
+                  <p class="page-btn page-first"><i class="ic chevrons-left"></i></p>
+                  <p class="page-btn page-prev"><i class="ic chevron-left"></i></p>
+                  <p class="page-btn">1</p>
+                  <p class="page-btn">2</p>
+                  <p class="page-btn active">3</p>
+                  <p class="page-btn">4</p>
+                  <p class="page-btn">5</p>
+                  <p class="page-btn">6</p>
+                  <p class="page-btn page-next"><i class="ic chevron-right"></i></p>
+                  <p class="page-btn page-last"><i class="ic chevrons-right"></i></p>
+                </div>
+                <div class="pagenation error">
+                  <p class="page-btn page-first"><i class="ic chevrons-left"></i></p>
+                  <p class="page-btn page-prev"><i class="ic chevron-left"></i></p>
+                  <p class="page-btn">1</p>
+                  <p class="page-btn">2</p>
+                  <p class="page-btn active">3</p>
+                  <p class="page-btn">4</p>
+                  <p class="page-btn">5</p>
+                  <p class="page-btn">6</p>
+                  <p class="page-btn page-next"><i class="ic chevron-right"></i></p>
+                  <p class="page-btn page-last"><i class="ic chevrons-right"></i></p>
+                </div>
+                <div class="pagenation warning">
+                  <p class="page-btn page-first"><i class="ic chevrons-left"></i></p>
+                  <p class="page-btn page-prev"><i class="ic chevron-left"></i></p>
+                  <p class="page-btn">1</p>
+                  <p class="page-btn">2</p>
+                  <p class="page-btn active">3</p>
+                  <p class="page-btn">4</p>
+                  <p class="page-btn">5</p>
+                  <p class="page-btn">6</p>
+                  <p class="page-btn page-next"><i class="ic chevron-right"></i></p>
+                  <p class="page-btn page-last"><i class="ic chevrons-right"></i></p>
+                </div>
+                <div class="pagenation info">
+                  <p class="page-btn page-first"><i class="ic chevrons-left"></i></p>
+                  <p class="page-btn page-prev"><i class="ic chevron-left"></i></p>
+                  <p class="page-btn">1</p>
+                  <p class="page-btn">2</p>
+                  <p class="page-btn active">3</p>
+                  <p class="page-btn">4</p>
+                  <p class="page-btn">5</p>
+                  <p class="page-btn">6</p>
+                  <p class="page-btn page-next"><i class="ic chevron-right"></i></p>
+                  <p class="page-btn page-last"><i class="ic chevrons-right"></i></p>
+                </div>
+                <div class="pagenation success">
+                  <p class="page-btn page-first"><i class="ic chevrons-left"></i></p>
+                  <p class="page-btn page-prev"><i class="ic chevron-left"></i></p>
+                  <p class="page-btn">1</p>
+                  <p class="page-btn">2</p>
+                  <p class="page-btn active">3</p>
+                  <p class="page-btn">4</p>
+                  <p class="page-btn">5</p>
+                  <p class="page-btn">6</p>
+                  <p class="page-btn page-next"><i class="ic chevron-right"></i></p>
+                  <p class="page-btn page-last"><i class="ic chevrons-right"></i></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- chip -->
+          <div class="guide_block">
+            <h3>chip</h3>
+            <div class="guide_data">
+              <p class="title">chip</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <p class="chip">Chip</p>
+                <p class="chip primary">Chip</p>
+                <p class="chip secondary">Chip</p>
+                <p class="chip error">Chip</p>
+                <p class="chip warning">Chip</p>
+                <p class="chip info">Chip</p>
+                <p class="chip success">Chip</p>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <p class="chip s">Chip</p>
+                <p class="chip primary s">Chip</p>
+                <p class="chip secondary s">Chip</p>
+                <p class="chip error s">Chip</p>
+                <p class="chip warning s">Chip</p>
+                <p class="chip info s">Chip</p>
+                <p class="chip success s">Chip</p>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <p class="chip outline">Chip</p>
+                <p class="chip primary outline">Chip</p>
+                <p class="chip secondary outline">Chip</p>
+                <p class="chip error outline">Chip</p>
+                <p class="chip warning outline">Chip</p>
+                <p class="chip info outline">Chip</p>
+                <p class="chip success outline">Chip</p>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <p class="chip s outline">Chip</p>
+                <p class="chip primary s outline">Chip</p>
+                <p class="chip secondary s outline">Chip</p>
+                <p class="chip error s outline">Chip</p>
+                <p class="chip warning s outline">Chip</p>
+                <p class="chip info s outline">Chip</p>
+                <p class="chip success s outline">Chip</p>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <p class="chip primary label">Chip</p>
+                <p class="chip secondary label">Chip</p>
+                <p class="chip error label">Chip</p>
+                <p class="chip warning label">Chip</p>
+                <p class="chip info label">Chip</p>
+                <p class="chip success label">Chip</p>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <p class="chip primary s label">Chip</p>
+                <p class="chip secondary s label">Chip</p>
+                <p class="chip error s label">Chip</p>
+                <p class="chip warning s label">Chip</p>
+                <p class="chip info s label">Chip</p>
+                <p class="chip success s label">Chip</p>
+              </div>
+            </div>
+
+            
+          </div>
+
+          <!-- accordion -->
+          <div class="guide_block">
+            <h3>accordion</h3>
+            <div class="guide_data">
+              <p class="title">accordion</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="accordion">
+                  <div class="acc-block">
+                    <div class="acc-title">
+                      <p class="tit">Accordion 1</p>
+                      <i class="ic chevron-right"></i>
+                    </div>
+                    <div class="acc-con">
+                      Content
+                    </div>
+                  </div>
+                  <div class="acc-block">
+                    <div class="acc-title">
+                      <p class="tit">Accordion 2</p>
+                      <i class="ic chevron-right"></i>
+                    </div>
+                    <div class="acc-con">
+                      Content
+                    </div>
+                  </div>
+                  <div class="acc-block">
+                    <div class="acc-title">
+                      <p class="tit">Accordion 3</p>
+                      <i class="ic chevron-right"></i>
+                    </div>
+                    <div class="acc-con">
+                      Content
+                    </div>
+                  </div>
+                  <div class="acc-block">
+                    <div class="acc-title">
+                      <p class="tit">Accordion 4</p>
+                      <i class="ic chevron-right"></i>
+                    </div>
+                    <div class="acc-con">
+                      Content
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion custom">
+                  <div class="acc-block">
+                    <div class="acc-title">
+                      <p class="tit">Accordion 1</p>
+                      <i class="ic plus"></i>
+                    </div>
+                    <div class="acc-con">
+                      Content
+                    </div>
+                  </div>
+                  <div class="acc-block">
+                    <div class="acc-title">
+                      <p class="tit">Accordion 2</p>
+                      <i class="ic plus"></i>
+                    </div>
+                    <div class="acc-con">
+                      Content
+                    </div>
+                  </div>
+                  <div class="acc-block">
+                    <div class="acc-title">
+                      <p class="tit">Accordion 3</p>
+                      <i class="ic plus"></i>
+                    </div>
+                    <div class="acc-con">
+                      Content
+                    </div>
+                  </div>
+                  <div class="acc-block">
+                    <div class="acc-title">
+                      <p class="tit">Accordion 4</p>
+                      <i class="ic plus"></i>
+                    </div>
+                    <div class="acc-con">
+                      Content
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- tooltip -->
+          <div class="guide_block">
+            <h3>tooltip</h3>
+            <div class="guide_data">
+              <p class="title">tooltip</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="tooltip" style="position: relative;">
+                  <p class="tooltip-txt">My Tooltip</p>
+                </div>
+                <div class="tooltip bottom"style="position: relative;"> 
+                  <p class="tooltip-txt">My Tooltip</p>
+                </div>
+                <div class="tooltip top" style="position: relative;">
+                  <p class="tooltip-txt">My Tooltip</p>
+                </div>
+                <div class="tooltip right" style="position: relative;">
+                  <p class="tooltip-txt">My Tooltip</p>
+                </div>
+                <div class="tooltip left" style="position: relative;">
+                  <p class="tooltip-txt">My Tooltip</p>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+
+          <!-- avatar -->
+          <div class="guide_block">
+            <h3>avatar</h3>
+            <div class="guide_data">
+              <p class="title">avatar</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="avatar round">
+                  <div class="thumb avt1"></div>
+                </div>
+                <div class="avatar">
+                  <div class="thumb avt2"></div>
+                </div>
+                <div class="avatar rounded">
+                  <div class="thumb avt3"></div>
+                </div>
+                <div class="avatar round">
+                  <div class="thumb">AK</div>
+                </div>
+                <div class="avatar">
+                  <div class="thumb">AK</div>
+                </div>
+                <div class="avatar rounded">
+                  <div class="thumb">AK</div>
+                </div>
+                <div class="avatar round">
+                  <div class="thumb"><i class="ic star"></i></div>
+                </div>
+                <div class="avatar">
+                  <div class="thumb"><i class="ic star"></i></div>
+                </div>
+                <div class="avatar rounded">
+                  <div class="thumb"><i class="ic star"></i></div>
+                </div>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="avatar round">
+                  <div class="thumb avt1"></div>
+                  <div class="badge dot success"></div>
+                </div>
+                <div class="avatar">
+                  <div class="thumb avt2"></div>
+                  <div class="badge dot success"></div>
+                </div>
+                <div class="avatar rounded">
+                  <div class="thumb avt3"></div>
+                  <div class="badge dot success"></div>
+                </div>
+                <div class="avatar round">
+                  <div class="thumb">AK</div>
+                  <div class="badge dot success"></div>
+                </div>
+                <div class="avatar">
+                  <div class="thumb">AK</div>
+                  <div class="badge dot success"></div>
+                </div>
+                <div class="avatar rounded">
+                  <div class="thumb">AK</div>
+                  <div class="badge dot success"></div>
+                </div>
+                <div class="avatar round">
+                  <div class="thumb"><i class="ic star"></i></div>
+                  <div class="badge dot success"></div>
+                </div>
+                <div class="avatar">
+                  <div class="thumb"><i class="ic star"></i></div>
+                  <div class="badge dot success"></div>
+                </div>
+                <div class="avatar rounded">
+                  <div class="thumb"><i class="ic star"></i></div>
+                  <div class="badge dot success"></div>
+                </div>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="avatar-group">
+                  <div class="avatar">
+                    <div class="thumb avt4"></div>
+                    <div class="tooltip bottom">
+                      <p class="tooltip-txt">John Doe</p>
+                    </div>
+                  </div>
+                  <div class="avatar">
+                    <div class="thumb avt5"></div>
+                    <div class="tooltip bottom">
+                      <p class="tooltip-txt">John Doe</p>
+                    </div>
+                  </div>
+                  <div class="avatar">
+                    <div class="thumb avt6"></div>
+                    <div class="tooltip bottom">
+                      <p class="tooltip-txt">John Doe</p>
+                    </div>
+                  </div>
+                  <div class="avatar" style="border: none;">
+                    <div class="thumb">+3</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- custom options -->
+          <div class="guide_block">
+            <h3>custom options</h3>
+            <div class="guide_data">
+              <p class="title">custom options</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="custom-option">
+                  <div class="check-block">
+                    <input type="checkbox" name="" id="check" class="checkbox">
+                    <label for="check" class="label check-label">
+                      <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    </label>
+                  </div>
+                  <div class="option-data">
+                    <div class="option-title">
+                      <p class="tit">Discount</p>
+                      <p class="sub">20%</p>
+                    </div>
+                    <p class="option-txt">wow Get 20% off on your next purchases!</p>
+                  </div>
+                </div>
+                <div class="custom-option vertical">
+                  <div class="check-block">
+                    <input type="checkbox" name="" id="check2" class="checkbox">
+                    <label for="check2" class="label check-label">
+                      <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    </label>
+                  </div>
+                  <div class="option-data">
+                    <div class="option-title">
+                      <i class="ic cloud-upload"></i>
+                      <p class="tit">Backup</p>
+                    </div>
+                    <p class="option-txt">For freelancers who work with multiple clients</p>
+                  </div>
+                </div>
+                <div class="custom-option vertical">
+                  <div class="check-block">
+                    <input type="checkbox" name="" id="check3" class="checkbox">
+                    <label for="check3" class="label check-label">
+                      <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    </label>
+                  </div>
+                  <div class="option-data">
+                    <div class="option-title">
+                      <i class="ic lg Rocket"></i>
+                      <p class="tit">Getting Started</p>
+                    </div>
+                    <p class="option-txt">Whether you’re new or you’re a power user.</p>
+                  </div>
+                </div>
+                <div class="custom-option img">
+                  <div class="check-block">
+                    <input type="checkbox" name="" id="check4" class="checkbox">
+                    <label for="check4" class="label check-label">
+                      <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    </label>
+                  </div>
+                  <div class="option-img">
+                    <img src="../../assets/images/sub/goods_img_2.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="custom-option">
+                  <div class="check-block">
+                    <input type="radio" name="custom-option" id="check5" class="radio" checked>
+                    <label for="check5" class="label check-label">
+                      <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    </label>
+                  </div>
+                  <div class="option-data">
+                    <div class="option-title">
+                      <p class="tit">Basic</p>
+                      <p class="sub">Free</p>
+                    </div>
+                    <p class="option-txt">Get 1 project with 1 teams members.</p>
+                  </div>
+                </div>
+                <div class="custom-option vertical">
+                  <div class="check-block">
+                    <input type="radio" name="custom-option" id="check6" class="radio">
+                    <label for="check6" class="label check-label">
+                      <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    </label>
+                  </div>
+                  <div class="option-data">
+                    <div class="option-title">
+                      <i class="ic star"></i>
+                      <p class="tit">Starter</p>
+                    </div>
+                    <p class="option-txt">For freelancers who work with multiple clients</p>
+                  </div>
+                </div>
+                <div class="custom-option vertical">
+                  <div class="check-block">
+                    <input type="radio" name="custom-option" id="check7" class="radio">
+                    <label for="check7" class="label check-label">
+                      <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    </label>
+                  </div>
+                  <div class="option-data">
+                    <div class="option-title">
+                      <i class="ic lg Gift"></i>
+                      <p class="tit">Basic</p>
+                    </div>
+                    <p class="option-txt">A simple start for start ups & Students</p>
+                    <div class="option-price">
+                      <p class="lg"><span>$</span>0</p>
+                      <p class="sm">/month</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="custom-option img">
+                  <div class="check-block">
+                    <input type="radio" name="custom-option" id="check8" class="radio">
+                    <label for="check8" class="label check-label">
+                      <p class="label-bg">
+                      <span class="label-border"></span>
+                      <span class="label-ck"></span>
+                    </p>
+                    </label>
+                  </div>
+                  <div class="option-img">
+                    <img src="../../assets/images/sub/goods_img_1.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+
+          <!-- progress -->
+          <div class="guide_block">
+            <h3>progress</h3>
+            <div class="guide_data">
+              <p class="title">progress</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="progress">
+                  <div class="progress-bar"><span style="--barW: 50%"></span></div>
+                  <div class="progress-per">50%</div>
+                </div>
+                <div class="progress secondary">
+                  <div class="progress-bar"><span style="--barW: 50%"></span></div>
+                  <div class="progress-per">50%</div>
+                </div>
+                <div class="progress s">
+                  <div class="progress-bar"><span style="--barW: 50%"></span></div>
+                  <div class="progress-per">50%</div>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+
+          <!-- snackbar -->
+          <div class="guide_block">
+            <h3>snackbar</h3>
+            <div class="guide_data">
+              <p class="title">snackbar</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="snackbar">
+                  <p class="snackbar-txt">Lorem ipsum dolor sit amet</p>
+                  <div class="btn-list">
+                    <button class="btn text s">Small</button>
+                    <button class="btn btn-icon s text"><i class="ic x"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+
+          <!-- alert -->
+          <div class="guide_block">
+            <h3>alert</h3>
+            <div class="guide_data">
+              <p class="title">alert</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="alert error">
+                  <div class="alert-icon"><i class="ic"></i></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <p class="alert-con">
+                      Alert content
+                    </p>
+                  </div>
+                  <div class="alert-close"><i class="ic x"></i></div>
+                </div>
+                <div class="alert warning">
+                  <div class="alert-icon"><i class="ic"></i></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <p class="alert-con">
+                      Alert content
+                    </p>
+                  </div>
+                  <div class="alert-close"><i class="ic x"></i></div>
+                </div>
+                <div class="alert info">
+                  <div class="alert-icon"><i class="ic"></i></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <p class="alert-con">
+                      Alert content
+                    </p>
+                  </div>
+                  <div class="alert-close"><i class="ic x"></i></div>
+                </div>
+                <div class="alert success">
+                  <div class="alert-icon"><i class="ic"></i></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <p class="alert-con">
+                      Alert content
+                    </p>
+                  </div>
+                  <div class="alert-close"><i class="ic x"></i></div>
+                </div>
+              </div>
+
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="alert error label">
+                  <div class="alert-icon"><i class="ic"></i></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <p class="alert-con">
+                      Alert content
+                    </p>
+                  </div>
+                  <div class="alert-close"><i class="ic x"></i></div>
+                </div>
+                <div class="alert warning label">
+                  <div class="alert-icon"><i class="ic"></i></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <p class="alert-con">
+                      Alert content
+                    </p>
+                  </div>
+                  <div class="alert-close"><i class="ic x"></i></div>
+                </div>
+                <div class="alert info label">
+                  <div class="alert-icon"><i class="ic"></i></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <p class="alert-con">
+                      Alert content
+                    </p>
+                  </div>
+                  <div class="alert-close"><i class="ic x"></i></div>
+                </div>
+                <div class="alert success label">
+                  <div class="alert-icon"><i class="ic"></i></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <p class="alert-con">
+                      Alert content
+                    </p>
+                  </div>
+                  <div class="alert-close"><i class="ic x"></i></div>
+                </div>
+              </div>
+
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="alert error outline">
+                  <div class="alert-icon"><i class="ic"></i></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <p class="alert-con">
+                      Alert content
+                    </p>
+                  </div>
+                  <div class="alert-close"><i class="ic x"></i></div>
+                </div>
+                <div class="alert warning outline">
+                  <div class="alert-icon"><i class="ic"></i></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <p class="alert-con">
+                      Alert content
+                    </p>
+                  </div>
+                  <div class="alert-close"><i class="ic x"></i></div>
+                </div>
+                <div class="alert info outline">
+                  <div class="alert-icon"><i class="ic"></i></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <p class="alert-con">
+                      Alert content
+                    </p>
+                  </div>
+                  <div class="alert-close"><i class="ic x"></i></div>
+                </div>
+                <div class="alert success outline">
+                  <div class="alert-icon"><i class="ic"></i></div>
+                  <div class="alert-data">
+                    <p class="alert-title">Title</p>
+                    <p class="alert-con">
+                      Alert content
+                    </p>
+                  </div>
+                  <div class="alert-close"><i class="ic x"></i></div>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+
+          <!-- dialog -->
+          <div class="guide_block">
+            <h3>dialog</h3>
+            <div class="guide_data">
+              <p class="title">dialog</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="dialog">
+                  <div class="dialog-con">
+                    <p class="dialog-title">Dialog Title</p>
+                    <p class="dialog-txt">Content</p>
+                  </div>
+                  <div class="btn-list" style="--gap: 16px">
+                    <button class="btn secondary label">Close</button>
+                    <button class="btn">Save changes</button>
+                  </div>
+                  <div class="dialog-close"><i class="ic x"></i></div>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+
+          <!-- toast -->
+          <div class="guide_block">
+            <h3>toast</h3>
+            <div class="guide_data">
+              <p class="title">toast</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="toast">
+                  <p class="toast-txt">Blank Toast</p>
+                </div>
+                <div class="toast">
+                  <div class="toast-icon"><i class="ic x"></i></div>
+                  <p class="toast-txt">This didn't work.</p>
+                </div>
+                <div class="toast">
+                  <div class="toast-icon"><i class="ic check"></i></div>
+                  <p class="toast-txt">Successfully toasted!</p>
+                </div>
+                <div class="toast">
+                  <div class="toast-icon"><i class="ic loading"></i></div>
+                  <p class="toast-txt">Loading...</p>
+                </div>
+                <div class="toast">
+                  <div class="avatar-card">
+                    <div class="avatar round">
+                      <div class="thumb avt1"></div>
+                    </div>
+                    <div class="avatar-data">
+                      <p class="avatar-name">John Doe</p>
+                      <p class="avatar-txt">Sure! 8:30pm works great</p>
+                    </div>
+                  </div>
+                  <p class="toast-close"><i class="ic x"></i></p>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+
+          <!-- badge -->
+          <div class="guide_block">
+            <h3>badge</h3>
+            <div class="guide_data">
+              <p class="title">badge</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="badge">Badge</div>
+                <div class="badge secondary">Badge</div>
+                <div class="badge error">Badge</div>
+                <div class="badge warning">Badge</div>
+                <div class="badge info">Badge</div>
+                <div class="badge success">Badge</div>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="badge label">Badge</div>
+                <div class="badge secondary label">Badge</div>
+                <div class="badge error label">Badge</div>
+                <div class="badge warning label">Badge</div>
+                <div class="badge info label">Badge</div>
+                <div class="badge success label">Badge</div>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="badge dot"></div>
+                <div class="badge secondary dot"></div>
+                <div class="badge error dot"></div>
+                <div class="badge warning dot"></div>
+                <div class="badge info dot"></div>
+                <div class="badge success dot"></div>
+              </div>
+            </div>
+
+            
+          </div>
+
+          <!-- list -->
+          <div class="guide_block">
+            <h3>list</h3>
+            <div class="guide_data">
+              <p class="title">list</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="list">
+                  <p class="list-title">Basic list items</p>
+                  <a href="javascript:void(0)" class="list-item active">
+                    <div class="list-name">
+                      <p class="name">Dashboard</p>
+                    </div>
+                    <p class="chip s primary">4</p>
+                  </a>
+                  <a href="javascript:void(0)" class="list-item">
+                    <div class="list-name">
+                      <p class="name">Widget</p>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)" class="list-item">
+                    <div class="list-name">
+                      <p class="name">eCommerce</p>
+                    </div>
+                    <p class="chip s success">12</p>
+                  </a>
+                  <a href="javascript:void(0)" class="list-item">
+                    <div class="list-name">
+                      <p class="name">Academy</p>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)" class="list-item">
+                    <div class="list-name">
+                      <p class="name">Logistics</p>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)" class="list-item disabled">
+                    <div class="list-name">
+                      <p class="name">Disabled</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="list">
+                  <p class="list-title">List items with icon</p>
+                  <a href="javascript:void(0)" class="list-item active">
+                    <div class="list-name">
+                      <i class="ic user"></i>
+                      <p class="name">Account Settings</p>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)" class="list-item">
+                    <div class="list-name">
+                      <i class="ic brand-github"></i>
+                      <p class="name">Integrations</p>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)" class="list-item">
+                    <div class="list-name">
+                      <i class="ic settings"></i>
+                      <p class="name">Settings</p>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)" class="list-item">
+                    <div class="list-name">
+                      <i class="ic wallet"></i>
+                      <p class="name">Pricing</p>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)" class="list-item">
+                    <div class="list-name">
+                      <i class="ic help"></i>
+                      <p class="name">Help Center</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="list">
+                  <p class="list-title">List items with checkbox</p>
+                  <div class="list-item">
+                    <div class="check-block">
+                      <input type="checkbox" name="" id="check1" class="checkbox" checked/>
+                      <label for="check1" class="label">
+                        <p class="label-bg">
+                          <span class="label-border"></span>
+                          <span class="label-ck"></span>
+                        </p>
+                        <p class="label-txt">Promotion banner</p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="list-item">
+                    <div class="check-block">
+                      <input type="checkbox" name="" id="check2" class="checkbox"/>
+                      <label for="check2" class="label">
+                        <p class="label-bg">
+                          <span class="label-border"></span>
+                          <span class="label-ck"></span>
+                        </p>
+                        <p class="label-txt">Analytics dashboard</p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="list-item">
+                    <div class="check-block">
+                      <input type="checkbox" name="" id="check3" class="checkbox"/>
+                      <label for="check3" class="label">
+                        <p class="label-bg">
+                          <span class="label-border"></span>
+                          <span class="label-ck"></span>
+                        </p>
+                        <p class="label-txt">Make dribbble short</p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="list-item">
+                    <div class="check-block">
+                      <input type="checkbox" name="" id="check4" class="checkbox"/>
+                      <label for="check4" class="label">
+                        <p class="label-bg">
+                          <span class="label-border"></span>
+                          <span class="label-ck"></span>
+                        </p>
+                        <p class="label-txt">Edit Video for facebook</p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="list-item">
+                    <div class="check-block">
+                      <input type="checkbox" name="" id="check5" class="checkbox"/>
+                      <label for="check5" class="label">
+                        <p class="label-bg">
+                          <span class="label-border"></span>
+                          <span class="label-ck"></span>
+                        </p>
+                        <p class="label-txt">Design logo for client</p>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="list">
+                  <p class="list-title">List items with switch</p>
+                  <div class="list-item">
+                    <div class="list-name">
+                      <p class="name">Menu collapse</p>
+                    </div>
+                    <div class="switch-block">
+                      <input type="checkbox" name="" id="swt1" class="switch" />
+                      <label for="swt1" class="label">
+                        <p class="switch-body">
+                          <span class="switch-toggle"></span>
+                        </p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="list-item">
+                    <div class="list-name">
+                      <p class="name">Card shadow</p>
+                    </div>
+                    <div class="switch-block">
+                      <input type="checkbox" name="" id="swt2" class="switch" />
+                      <label for="swt2" class="label">
+                        <p class="switch-body">
+                          <span class="switch-toggle"></span>
+                        </p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="list-item">
+                    <div class="list-name">
+                      <p class="name">Menu icon</p>
+                    </div>
+                    <div class="switch-block">
+                      <input type="checkbox" name="" id="swt3" class="switch" />
+                      <label for="swt3" class="label">
+                        <p class="switch-body">
+                          <span class="switch-toggle"></span>
+                        </p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="list-item">
+                    <div class="list-name">
+                      <p class="name">Dark mode</p>
+                    </div>
+                    <div class="switch-block">
+                      <input type="checkbox" name="" id="swt4" class="switch" checked/>
+                      <label for="swt4" class="label">
+                        <p class="switch-body">
+                          <span class="switch-toggle"></span>
+                        </p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="list-item">
+                    <div class="list-name">
+                      <p class="name">Content boxed</p>
+                    </div>
+                    <div class="switch-block">
+                      <input type="checkbox" name="" id="swt5" class="switch" />
+                      <label for="swt5" class="label">
+                        <p class="switch-body">
+                          <span class="switch-toggle"></span>
+                        </p>
+                      </label>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="list">
+                  <p class="list-title">Avatar with subtitle</p>
+                  <div class="list-item">
+                    <div class="avatar-card">
+                      <div class="avatar round">
+                        <div class="thumb avt1"></div>
+                      </div>
+                      <div class="avatar-data">
+                        <p class="avatar-name">Shannon Paucek</p>
+                        <p class="avatar-txt">Destiney_Kiehn@yahoo.com</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-item">
+                    <div class="avatar-card">
+                      <div class="avatar round">
+                        <div class="thumb avt4"></div>
+                      </div>
+                      <div class="avatar-data">
+                        <p class="avatar-name">Dorothy Lockman</p>
+                        <p class="avatar-txt">Runolfsdottir@hotmail.com</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-item">
+                    <div class="avatar-card">
+                      <div class="avatar round">
+                        <div class="thumb avt8"></div>
+                      </div>
+                      <div class="avatar-data">
+                        <p class="avatar-name">Johanna Wilderman</p>
+                        <p class="avatar-txt">Tito.Boehm@gmail.com</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-item">
+                    <div class="avatar-card">
+                      <div class="avatar round">
+                        <div class="thumb avt6"></div>
+                      </div>
+                      <div class="avatar-data">
+                        <p class="avatar-name">Melody Mayert</p>
+                        <p class="avatar-txt">Romaguera23@yahoo.com</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-item">
+                    <div class="avatar-card">
+                      <div class="avatar round">
+                        <div class="thumb avt2"></div>
+                      </div>
+                      <div class="avatar-data">
+                        <p class="avatar-name">Emily Baumbach</p>
+                        <p class="avatar-txt">Zaria_Veum71@yahoo.com</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- card -->
+          <div class="guide_block">
+            <h3>card</h3>
+            <div class="guide_data">
+              <p class="title">card</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="card">
+                  <div class="card-header">
+                    <p class="card-title">Card header</p>
+                  </div>
+                  <div class="card-con">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <p class="card-title">Card header</p>
+                    <p class="card-subtitle">Subtitle</p>
+                  </div>
+                  <div class="card-con">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <p class="card-title">Card header</p>
+                  </div>
+                  <div class="card-con">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                  <div class="btn-list" style="--gap: 16px">
+                    <button class="btn">Share</button>
+                    <button class="btn outline secondary">Learn More</button>
+                  </div>
+                </div>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="../../assets/images/sub/card-thumb.png" alt="">
+                  </div>
+                  <div class="card-con">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                  <div class="btn-list" style="--gap: 16px">
+                    <button class="btn">Share</button>
+                    <button class="btn outline secondary">Learn More</button>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <p class="card-title">Card header</p>
+                    <p class="card-subtitle">Subtitle</p>
+                  </div>
+                  <div class="card-img mt_1_5">
+                    <img src="../../assets/images/sub/card-thumb.png" alt="">
+                  </div>
+                </div>
+                
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="card fill">
+                  <div class="card-header">
+                    <p class="card-title">Card header</p>
+                  </div>
+                  <div class="card-con">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                </div>
+                <div class="card label">
+                  <div class="card-header">
+                    <p class="card-title">Card header</p>
+                  </div>
+                  <div class="card-con">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                </div>
+                <div class="card outline">
+                  <div class="card-header">
+                    <p class="card-title">Card header</p>
+                  </div>
+                  <div class="card-con">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                </div>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="card ">
+                  <div class="tabs fill">
+                    <p class="tab-btn active">tab 1</p>
+                    <p class="tab-btn">tab 2</p>
+                    <p class="tab-btn">tab 3</p>
+                    <p class="tab-btn">tab 4</p>
+                  </div>
+                  <div class="card-con">
+                    This is some text within a card body. Jelly lemon drops tiramisu chocolate cake cotton candy soufflé oat cake sweet roll. Sugar plum marzipan dragée topping cheesecake chocolate bar. Danish muffin icing donut.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+
+          <!-- timeline -->
+          <div class="guide_block">
+            <h3>timeline</h3>
+            <div class="guide_data">
+              <p class="title">timeline</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="timeline">
+                  <div class="timeline-item">
+                    <div class="timeline-header">
+                      <p class="header-dot"></p>
+                      <div class="header-title">
+                        <p class="title">12 Invoices have been paid</p>
+                        <p class="date">12 min ago</p>
+                      </div>
+                    </div>
+                    <div class="timeline-con">
+                      <p class="txt">Invoices have been paid to the company</p>
+                      <button class="btn file">
+                        <i class="ic pdf"></i>
+                        <span>invoices.pdf</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="timeline-item success">
+                    <div class="timeline-header">
+                      <p class="header-dot"></p>
+                      <div class="header-title">
+                        <p class="title">Client Meeting</p>
+                        <p class="date">45 min ago</p>
+                      </div>
+                    </div>
+                    <div class="timeline-con">
+                      <p class="txt">Project meeting with john @10:15am</p>
+                      <div class="avatar-card">
+                      <div class="avatar round">
+                        <div class="thumb avt1"></div>
+                      </div>
+                      <div class="avatar-data">
+                        <p class="avatar-name">Lester McCarthy (Client)</p>
+                        <p class="avatar-txt">CEO of ThemeSelection</p>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="timeline-item info">
+                    <div class="timeline-header">
+                      <p class="header-dot"></p>
+                      <div class="header-title">
+                        <p class="title">Create a new project for client</p>
+                        <p class="date">2 Day Ago</p>
+                      </div>
+                    </div>
+                    <div class="timeline-con">
+                      <p class="txt">6 team members in a project</p>
+                      <div class="avatar-group">
+                        <div class="avatar">
+                          <div class="thumb avt4"></div>
+                          <div class="tooltip bottom">
+                            <p class="tooltip-txt">John Doe</p>
+                          </div>
+                        </div>
+                        <div class="avatar">
+                          <div class="thumb avt5"></div>
+                          <div class="tooltip bottom">
+                            <p class="tooltip-txt">John Doe</p>
+                          </div>
+                        </div>
+                        <div class="avatar">
+                          <div class="thumb avt6"></div>
+                          <div class="tooltip bottom">
+                            <p class="tooltip-txt">John Doe</p>
+                          </div>
+                        </div>
+                        <div class="avatar" style="border: none;">
+                          <div class="thumb">+3</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="timeline dot">
+                  <div class="timeline-item">
+                    <div class="timeline-header">
+                      <p class="header-dot"></p>
+                      <div class="header-title">
+                        <p class="title">12 Invoices have been paid</p>
+                        <p class="date">12 min ago</p>
+                      </div>
+                    </div>
+                    <div class="timeline-con">
+                      <p class="txt">Invoices have been paid to the company</p>
+                      <button class="btn file">
+                        <i class="ic pdf"></i>
+                        <span>invoices.pdf</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="timeline-item success">
+                    <div class="timeline-header">
+                      <p class="header-dot"></p>
+                      <div class="header-title">
+                        <p class="title">Client Meeting</p>
+                        <p class="date">45 min ago</p>
+                      </div>
+                    </div>
+                    <div class="timeline-con">
+                      <p class="txt">Project meeting with john @10:15am</p>
+                      <div class="avatar-card">
+                      <div class="avatar round">
+                        <div class="thumb avt1"></div>
+                      </div>
+                      <div class="avatar-data">
+                        <p class="avatar-name">Lester McCarthy (Client)</p>
+                        <p class="avatar-txt">CEO of ThemeSelection</p>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="timeline-item info">
+                    <div class="timeline-header">
+                      <p class="header-dot"></p>
+                      <div class="header-title">
+                        <p class="title">Create a new project for client</p>
+                        <p class="date">2 Day Ago</p>
+                      </div>
+                    </div>
+                    <div class="timeline-con">
+                      <p class="txt">6 team members in a project</p>
+                      <div class="avatar-group">
+                        <div class="avatar">
+                          <div class="thumb avt4"></div>
+                          <div class="tooltip bottom">
+                            <p class="tooltip-txt">John Doe</p>
+                          </div>
+                        </div>
+                        <div class="avatar">
+                          <div class="thumb avt5"></div>
+                          <div class="tooltip bottom">
+                            <p class="tooltip-txt">John Doe</p>
+                          </div>
+                        </div>
+                        <div class="avatar">
+                          <div class="thumb avt6"></div>
+                          <div class="tooltip bottom">
+                            <p class="tooltip-txt">John Doe</p>
+                          </div>
+                        </div>
+                        <div class="avatar" style="border: none;">
+                          <div class="thumb">+3</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <div class="timeline-cards">
+                  <div class="card-block">
+                    <div class="card-date">
+                      <p class="date">2 month’s ago</p>
+                    </div>
+                    <div class="card-icon">
+                      <div class="icon-bg">
+                        <i class="ic file"></i>
+                      </div>
+                    </div>
+                    <div class="card-item">
+                      <p class="data-title">You've uploaded doc pdf to the Themeselection project</p>
+                      <div class="data-con">
+                        <p class="txt">he process of recording the key project details and producing the documents that are required to implement it successfully. Simply put, it's an umbrella term which includes all the documents created over the course of the project.</p>
+                        <button class="btn file">
+                          <i class="ic pdf"></i>
+                          <span>invoices.pdf</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-block">
+                    <div class="card-date">
+                      <p class="date">24 day’s ago</p>
+                    </div>
+                    <div class="card-icon">
+                      <div class="icon-bg">
+                        <i class="ic photo"></i>
+                      </div>
+                    </div>
+                    <div class="card-item">
+                      <p class="data-title">Heather added 4 images to the Team album</p>
+                      <div class="data-con">
+                        <p class="txt">In the Select Image for Project dialog box, choose one of the following: Under the Upload New Image section</p>
+                        <div class="data-thumb">
+                          <p class="thumb"><img src="/assets/images/sub/card_thumb1.png" alt=""></p>
+                          <p class="thumb"><img src="/assets/images/sub/card_thumb2.png" alt=""></p>
+                          <p class="thumb"><img src="/assets/images/sub/card_thumb3.png" alt=""></p>
+                          <p class="thumb"><img src="/assets/images/sub/card_thumb4.png" alt=""></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-block">
+                    <div class="card-date">
+                      <p class="date">6 day’s ago</p>
+                    </div>
+                    <div class="card-icon">
+                      <div class="icon-bg">
+                        <i class="ic star"></i>
+                      </div>
+                    </div>
+                    <div class="card-item">
+                      <p class="data-title">You've uploaded doc pdf to the Themeselection project</p>
+                      <div class="data-con">
+                        <div class="avatar-card">
+                          <div class="avatar round">
+                            <div class="thumb avt1"></div>
+                          </div>
+                          <div class="avatar-data">
+                            <p class="avatar-name">Shannon Paucek</p>
+                            <p class="avatar-txt">Destiney_Kiehn@yahoo.com</p>
+                          </div>
+                        </div>
+
+                        <div class="avatar-review">
+                          <div class="rating">
+                            <i class="ic star-fill"></i>
+                            <i class="ic star-fill"></i>
+                            <i class="ic star-fill"></i>
+                            <i class="ic star-fill"></i>
+                            <i class="ic star-fill"></i>
+                          </div>
+
+                          <div class="chip s label success">
+                            <div class="avatar round">
+                              <div class="thumb avt1"></div>
+                            </div>
+                            <span>VERIFIED BUYER</span>
+                          </div>
+                        </div>
+                        <p class="txt">
+                          I wish I could select more than one main reason for rating this. I love how they constantly work on to make the template better. I am so thankful for this. Also, in the past, they had responded well to my tickets. Thank you for this great theme, for such an amazing support, for the better updates. I wish I could rate this for so many times. I highly recommend this template!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-block">
+                    <div class="card-date">
+                      <p class="date">2 day’s ago</p>
+                    </div>
+                    <div class="card-icon">
+                      <div class="icon-bg">
+                        <i class="ic chart-pie"></i>
+                      </div>
+                    </div>
+                    <div class="card-item">
+                      <p class="data-title">Julia stiles shared an earnings report</p>
+                      <div class="data-con">
+                        <div class="info-data-title">
+                          <p class="h4-title">$24,895</p>
+                          <p class="data-up">
+                            <i class="ic caret-up-fill"></i>
+                            <span>10%</span>
+                          </p>
+                          <p class="title-desc">Compared to $84,325 last year</p>
+                        </div>
+
+                        <div class="info-data-item">
+                          <div class="item-left">
+                            <p class="item-icon"><img src="/assets/images/icons/Zipcar.svg" alt=""></p>
+                            <div class="item-txt">
+                              <p class="name">Zipcar</p>
+                              <p class="desc">Vuejs, React & HTML</p>
+                            </div>
+                          </div>
+                          <div class="item-right" style="--w: 80px;">
+                            <p class="bar-txt">$24,895.65</p>
+                            <div class="bar-bg primary">
+                              <p class="bar-fill" style="--w: 80%;"></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="info-data-item">
+                          <div class="item-left">
+                            <p class="item-icon"><img src="/assets/images/icons/Bitbank.svg" alt=""></p>
+                            <div class="item-txt">
+                              <p class="name">Bitbank</p>
+                              <p class="desc">Sketch, Figma & XD</p>
+                            </div>
+                          </div>
+                          <div class="item-right" style="--w: 80px;">
+                            <p class="bar-txt">$8,6500.20</p>
+                            <div class="bar-bg info">
+                              <p class="bar-fill" style="--w: 80%;"></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="info-data-item">
+                          <div class="item-left">
+                            <p class="item-icon"><img src="/assets/images/icons/Aviato.svg" alt=""></p>
+                            <div class="item-txt">
+                              <p class="name">Aviato</p>
+                              <p class="desc">HTML & Angular</p>
+                            </div>
+                          </div>
+                          <div class="item-right" style="--w: 80px;">
+                            <p class="bar-txt">$1,2450.80</p>
+                            <div class="bar-bg secondary">
+                              <p class="bar-fill" style="--w: 80%;"></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-block">
+                    <div class="card-date">
+                      <p class="date">2 day’s ago</p>
+                    </div>
+                    <div class="card-icon">
+                      <div class="icon-bg">
+                        <i class="ic folder"></i>
+                      </div>
+                    </div>
+                    <div class="card-item">
+                      <p class="data-title">josh johnson shared Next js project progress report</p>
+                      <div class="data-con">
+                        <p class="txt">The structure and process are defined in the project organization considering the attainment of the corporate objectives and therefore also project objectives. The components of the project process are</p>
+                        <button class="btn file">
+                          <i class="ic xls"></i>
+                          <span>progress-report.xls</span>
+                        </button>
+                        <div class="progress s">
+                          <div class="progress-bar"><span style="--barW: 34%"></span></div>
+                          <div class="progress-per">34%</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+
+          <!-- datepicker -->
+          <div class="guide_block">
+            <h3>datepicker</h3>
+            <div class="guide_data">
+              <p class="title">datepicker</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <input id="datepicker" type="text" >
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">datetimepicker</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <input id="datetimepicker" type="text" >
+              </div>
+            </div>
+            <style>
+              .daterangepicker{
+                display: block !important;
+                position: initial !important;
+              }
+            </style>
+
+            <div class="guide_data">
+              <p class="title">daterangepicker</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <input type="text" id="rangeInput" hidden>
+                <div id="rangePreview"></div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">monthpicker</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <!-- <input id="monthPicker" type="text" /> -->
+                <div id="monthPicker"></div>
+              </div>
+            </div>
+
+            <div class="guide_data">
+              <p class="title">weekpicker</p>
+              <div class="data" style="display: flex;gap: 1rem; flex-wrap: wrap; gap: 16px">
+                <!-- <input type="text" id="datepicker"> -->
+                  <div id="weekPicker"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../assets/scripts/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script src="../../assets/scripts/MonthPicker.js"></script>
+    <script src="../../assets/scripts/jquery.datetimepicker.full.min.js"></script>
+    <script src="../../assets/scripts/moment.min.js"></script>
+    <script src="../../assets/scripts/daterangepicker.js"></script>
+    
+    <script>
+      //dropdown
+      $(".dropdown-btn > .ic").on("click", function(){
+        $(".dropdown-list").slideToggle();
+      })
+
+      $(".dropdown-list li:not(.disabled)").on("click", function(){
+        $(this).toggleClass("active");
+        $(this).siblings().removeClass("active")
+      })
+
+      $(".dropdown .chip > .ic").on("click", function(){
+        $(this).parents(".chip").remove()
+      })
+
+      //tabs
+      $(".tab-btn").on("click", function(){
+        $(this).toggleClass("active");
+        $(this).siblings().removeClass("active")
+      })
+
+      //datepicker - month
+      $('#datepicker').datetimepicker({
+        format:'d.m.Y',
+        inline:true,
+        timepicker:false,
+      });
+
+      //datepicker - datetime
+      $('#datetimepicker').datetimepicker({
+        format:'d.m.Y H:i',
+        inline:true,
+        timepicker:true,
+      });
+
+      //datepicker - daterange
+      $('#rangeInput').daterangepicker({
+        parentEl: '#rangePreview',
+        autoApply: true,
+        alwaysShowCalendars: true,
+        opens: 'left'
+      });
+
+      // 항상 열어둠 (디자인 확인용)
+      $('#rangeInput').data('daterangepicker').show();
+      
+
+      //monthpicker
+      $("#monthPicker").MonthPicker({
+        Button: false ,
+        SelectedMonth: '04/' + new Date().getFullYear(),
+        OnAfterChooseMonth: function(selectedDate) {
+            // Do something with selected JavaScript date.
+            // console.log(selectedDate);
+        }
+    });
+
+      //weekpicker
+      $( "#weekPicker" ).datepicker({
+      showWeek: true,
+      firstDay: 1
+    });
+
+    //accrordion
+    $(".accordion .acc-title").on("click", function(){
+      $(this).parent().toggleClass("opened");
+      $(this).next(".acc-con").slideToggle();
+    })  
+
+    //alert 
+    $(".alert .alert-close").on("click", function(){
+      const $alert = $(this).closest(".alert")
+      $alert.fadeOut(500);
+
+      setTimeout(function () { 
+        $alert.remove();
+      }, 1000);
+    })
+
+    //dialog
+    $(".dialog .dialog-close").on("click", function(){
+      const $dialog = $(this).closest(".dialog")
+      $dialog.fadeOut(500);
+
+      setTimeout(function () { 
+        $dialog.remove();
+      }, 1000);
+    })
+
+    //toast
+    $(".toast .toast-close").on("click", function(){
+      const $toast = $(this).closest(".toast")
+      $toast.fadeOut(500);
+
+      setTimeout(function () { 
+        $toast.remove();
+      }, 1000);
+    })
+    </script>
+  </body>
+</html>

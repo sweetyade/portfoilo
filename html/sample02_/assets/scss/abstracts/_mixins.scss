@@ -1,0 +1,259 @@
+@use "sass:map";
+@use "variables" as *;
+@use "colors" as abs;
+
+/* mediaquery - mobile base (375px) */
+@mixin mobile_small {
+  @media (max-width: #{$mobile_base - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile_large {
+  @media (min-width: #{$mobile_large}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet + 1}) {
+    @content;
+  }
+}
+
+/* color - shadow */
+@mixin shadow($color) {
+  --shadow-xs: 0 1px 6px 0 #{rgba($color, 0.1)};
+  --shadow-s: 0 2px 8px 0 #{rgba($color, 0.12)};
+  --shadow-m: 0 3px 12px 0 #{rgba($color, 0.14)};
+  --shadow-l: 0 4px 18px 0 #{rgba($color, 0.16)};
+  --shadow-xl: 0 5px 30px 0 #{rgba($color, 0.18)};
+}
+
+@mixin dark-shadow($color) {
+  --shadow-xs: 0 1px 6px 0 #{rgba($color, 0.16)};
+  --shadow-s: 0 2px 8px 0 #{rgba($color, 0.18)};
+  --shadow-m: 0 3px 12px 0 #{rgba($color, 0.2)};
+  --shadow-l: 0 4px 18px 0 #{rgba($color, 0.22)};
+  --shadow-xl: 0 5px 30px 0 #{rgba($color, 0.24)};
+}
+
+/* typo */
+@mixin vertical_txt {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-all;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+}
+
+@mixin txtover {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin listdot {
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--sub-text-color);
+  position: absolute;
+  left: 5px;
+  top: 6px;
+}
+
+@mixin h1 {
+  font-size: var(--h-1);
+  line-height: 68px;
+  font-weight: 500;
+}
+
+@mixin h2 {
+  font-size: var(--h-2);
+  line-height: 56px;
+  font-weight: 500;
+}
+
+@mixin h3 {
+  font-size: var(--h-3);
+  line-height: 42px;
+  font-weight: 500;
+}
+
+@mixin h4 {
+  font-size: var(--h-4);
+  line-height: 38px;
+  font-weight: 500;
+}
+
+@mixin h5 {
+  font-size: var(--h-5);
+  line-height: 28px;
+  font-weight: 500;
+}
+
+@mixin h6 {
+  font-size: var(--h-6);
+  line-height: 22px;
+  font-weight: 500;
+}
+
+@mixin subtitle1 {
+  font-size: var(--subtitle-1);
+  line-height: 22px;
+}
+
+@mixin subtitle2 {
+  font-size: var(--subtitle-2);
+  line-height: 20px;
+}
+
+@mixin body1 {
+  font-size: var(--body-1);
+  line-height: 22px;
+}
+
+@mixin body2 {
+  font-size: var(--body-2);
+  line-height: 20px;
+}
+
+@mixin caption {
+  font-size: var(--etc-caption);
+  // font-weight: var(--fw-regular);
+  // color: var(--text-disabled);
+  // text-transform: uppercase;
+  line-height: 18px;
+}
+
+@mixin overline {
+  font-size: var(--etc-overline);
+  line-height: 14px;
+}
+
+@mixin chip {
+  font-size: var(--etc-chip);
+  line-height: 1;
+}
+
+@mixin tooltip {
+  font-size: var(--etc-tooltip);
+  line-height: 20px;
+}
+
+@mixin avatar {
+  font-size: var(--etc-avatar);
+  line-height: 18px;
+}
+
+@mixin alert {
+  font-size: var(--etc-alert);
+  line-height: 22px;
+  font-weight: var(--fw-medium);
+}
+
+@mixin toast {
+  font-size: var(--body-1);
+  line-height: 22px;
+}
+
+@mixin badge {
+  font-size: var(--body-2);
+  line-height: 16px;
+}
+
+@mixin btns {
+  font-size: var(--btn-s);
+  line-height: 1;
+}
+
+@mixin btnm {
+  font-size: var(--btn-m);
+  line-height: 1;
+}
+
+@mixin btnl {
+  font-size: var(--btn-l);
+  line-height: 1;
+}
+
+@mixin inputs {
+  font-size: var(--input-s);
+  line-height: 1;
+}
+
+@mixin inputm {
+  font-size: var(--input-m);
+  line-height: 1;
+}
+
+@mixin inputl {
+  font-size: var(--input-l);
+  line-height: 1;
+}
+
+@mixin label {
+  font-size: var(--input-label);
+  line-height: 15px;
+}
+
+@mixin helper {
+  font-size: var(--input-helper);
+  line-height: 13px;
+}
+
+/* flex */
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexcenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexbtw {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flexright {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@mixin flextop {
+  display: flex;
+  align-items: flex-start;
+}
+
+@mixin flextopcenter {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@mixin flextopbtw {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@mixin flextopright {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+@mixin flexbottomcenter {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}

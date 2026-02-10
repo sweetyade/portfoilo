@@ -1,0 +1,186 @@
+/***************************************************************
+    05. color
+***************************************************************/
+$colors: (primary, secondary, info, success, warning, error);
+$levels: (100, 200, 300, light, main, dark, 700, 800, 900);
+$alp:(lighter, light, main, dark, darker);
+$shadow-sizes: (s,m,l);
+
+//color
+@each $c in $colors {
+  .#{$c} {
+    @each $sz in $levels {
+      &-#{$sz} {
+        color: var(--#{$c}-#{$sz});
+      }
+    }
+  }
+}
+
+//alpha
+@each $c in $colors {
+  .#{$c}_alp {
+    @each $sz in $alp {
+      &-#{$sz} {
+        background-color: var(--#{$c}-alp-#{$sz});
+      }
+    }
+  }
+}
+
+//shadow
+@each $c in $colors {
+  .#{$c}_shadow {
+    @each $sz in $shadow-sizes {
+      &-#{$sz} {
+        box-shadow: var(--#{$c}-shadow-#{$sz});
+      }
+    }
+  }
+}
+
+
+//graycolor
+.gray-main{
+  color: var(--gray);
+}
+
+.action-focus{
+  color: var(--action-focus);
+}
+
+.action-disabled{
+  color: var(--action-disabled);
+}
+
+.action-active{
+  color: var(--action-active);
+}
+
+.action-hover{
+  color: var(--action-hover);
+}
+
+.action-selected{
+  color: var(--action-selected);
+}
+
+.action-disabled_bg{
+  color: var(--action-disabled-bg);
+}
+
+.text-disabled{
+  color: var(--text-disabled);
+}
+
+.text-secondary{
+  color: var(--text-secondary);
+}
+
+.text-primary{
+  color: var(--text-primary);
+}
+
+.border-outline{
+  color: var(--border-outline);
+}
+
+.border-input{
+  color: var(--border-input);
+}
+
+.bg-body{
+  background-color: var(--bg-body);
+}
+
+.bg-paper{
+  background-color: var(--bg-paper);
+}
+
+.bg-chat{
+  background-color: var(--bg-chat);
+}
+
+.bg-tarck{
+  background-color: var(--bg-tarck);
+}
+
+.bg-chip{
+  background-color: var(--bg-chip);
+}
+
+.etc-200{
+  color: var(--etc-200);
+}
+
+.etc-500{
+  color: var(--etc-500);
+}
+
+.etc-800{
+  color: var(--etc-800);
+}
+
+.etc-white{
+  color: var(--etc-white);
+}
+
+.etc-divider{
+  color: var(--etc-divider);
+}
+
+.etc-overlay{
+  background-color: var(--etc-overlay);
+}
+
+.etc-snackbar{
+  background-color: var(--etc-snackbar);
+}
+
+.etc-table_header{
+  background-color: var(--etc-table-header);
+}
+
+.etc-gray_light{
+  background-color: var(--etc-gray-light);
+}
+
+.gray_alp-lighter{
+  background-color: var(--gray-alp-lighter);
+}
+
+.gray_alp-light{
+  background-color: var(--gray-alp-light);
+}
+
+.gray_alp-main{
+  background-color: var(--gray-alp-main);
+}
+
+.gray_alp-dark{
+  background-color: var(--gray-alp-dark);
+}
+
+.gray_alp-darker{
+  background-color: var(--gray-alp-darker);
+}
+
+.gray_shadow-xs{
+  box-shadow: var(--gray-shadow-xs);
+}
+
+.gray_shadow-s{
+  box-shadow: var(--gray-shadow-s);
+}
+
+.gray_shadow-m{
+  box-shadow: var(--gray-shadow-m);
+}
+
+.gray_shadow-l{
+  box-shadow: var(--gray-shadow-l);
+}
+
+.gray_shadow-xl{
+  box-shadow: var(--gray-shadow-xl);
+}
