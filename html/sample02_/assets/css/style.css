@@ -581,6 +581,20 @@ button {
   height: 100svh;
 }
 
+/* main */
+#wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main {
+  background-color: var(--bg-body);
+  padding-inline: var(--padding-7);
+  min-height: 100svh;
+  width: 100%;
+}
+
 /***************************************************************
     04. typo
 ***************************************************************/
@@ -4524,27 +4538,6 @@ input.switch {
 /***************************************************************
     components - header
 ***************************************************************/
-.header {
-  width: 100%;
-  max-width: 260px;
-  box-shadow: var(--shadow-s);
-  height: 100svh;
-  overflow-y: hidden;
-}
-.header-top {
-  padding: var(--gap-5) var(--gap-4);
-  gap: var(--gap-3);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.header-top #sidebarToggle .ic {
-  width: 20px;
-}
-.header .scroll::-webkit-scrollbar {
-  width: 0px;
-}
-
 .nav {
   padding: var(--gap-4) var(--gap-3);
 }
@@ -4596,4 +4589,47 @@ input.switch {
   width: 44px;
   -webkit-mask-position: 26px center;
           mask-position: 26px center;
+}
+
+.header {
+  width: 70px;
+  box-shadow: var(--shadow-s);
+  height: 100svh;
+  overflow-y: hidden;
+  z-index: var(--z-fixed);
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.header-top {
+  padding: var(--gap-5) var(--gap-4);
+  gap: var(--gap-3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-top .logo a {
+  gap: var(--gap-3);
+  font-size: 22px;
+  font-weight: var(--fw-bold);
+  display: flex;
+  align-items: center;
+}
+.header-top .logo a span {
+  opacity: 0;
+  transition: all 0.2s;
+}
+.header-top #sidebarToggle .ic {
+  width: 20px;
+}
+.header .scroll::-webkit-scrollbar {
+  width: 0px;
+}
+.header:hover {
+  width: 260px;
+}
+.header:hover .logo a span {
+  opacity: 1;
+}
+.header.fixed {
+  width: 260px;
 }

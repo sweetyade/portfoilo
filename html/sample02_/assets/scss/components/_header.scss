@@ -3,32 +3,6 @@
 /***************************************************************
     components - header
 ***************************************************************/
-.header {
-  width: 100%;
-  max-width: 260px;
-  box-shadow: var(--shadow-s);
-  height: 100svh;
-  overflow-y: hidden;
-
-  &-top {
-    padding: var(--gap-5) var(--gap-4);
-    gap: var(--gap-3);
-    @include abs.flexbtw;
-
-    #sidebarToggle {
-      .ic {
-        width: 20px;
-      }
-    }
-  }
-
-  .scroll {
-    &::-webkit-scrollbar {
-      width: 0px;
-    }
-  }
-}
-
 .nav {
   padding: var(--gap-4) var(--gap-3);
 
@@ -95,5 +69,58 @@
         }
       }
     }
+  }
+}
+
+.header {
+  // width: 100%;
+  width: 70px;
+  box-shadow: var(--shadow-s);
+  height: 100svh;
+  overflow-y: hidden;
+  z-index: var(--z-fixed);
+  white-space: nowrap;
+  transition: all 0.2s;
+
+  &-top {
+    padding: var(--gap-5) var(--gap-4);
+    gap: var(--gap-3);
+    @include abs.flexbtw;
+
+    .logo a {
+      gap: var(--gap-3);
+      font-size: 22px;
+      font-weight: var(--fw-bold);
+      @include abs.flex;
+
+      span {
+        opacity: 0;
+        transition: all 0.2s;
+      }
+    }
+
+    #sidebarToggle {
+      .ic {
+        width: 20px;
+      }
+    }
+  }
+
+  .scroll {
+    &::-webkit-scrollbar {
+      width: 0px;
+    }
+  }
+
+  &:hover {
+    width: 260px;
+
+    .logo a span {
+      opacity: 1;
+    }
+  }
+
+  &.fixed {
+    width: 260px;
   }
 }
