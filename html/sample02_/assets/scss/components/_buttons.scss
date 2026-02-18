@@ -111,6 +111,7 @@
   &-icon {
     padding-inline: 0;
     aspect-ratio: 1;
+    position: relative;
 
     &.text {
       padding-inline: 0;
@@ -118,6 +119,21 @@
 
     .ic {
       width: 22px;
+    }
+
+    &.text-primary {
+      .ic {
+        background-color: var(--text-primary);
+      }
+    }
+
+    .badge {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 8px;
+      right: 8px;
+      border: 2px solid var(--bg-paper);
     }
   }
 

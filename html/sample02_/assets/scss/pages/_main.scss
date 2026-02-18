@@ -1,0 +1,446 @@
+@use "../abstracts/" as abs;
+
+/***************************************************************
+    pages - main
+***************************************************************/
+/* main */
+
+::-webkit-scrollbar {
+  height: 0;
+  width: 8px;
+  background-color: var(--secondary-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-200);
+  border-radius: var(--border-radius-round);
+}
+
+#wrap {
+  width: 100%;
+  min-width: 1440px;
+  @include abs.flextopbtw;
+}
+
+.main {
+  background-color: var(--bg-body);
+  height: 100svh;
+  width: 100%;
+  overflow-y: auto;
+  max-width: calc(100% - 70px);
+  position: relative;
+
+  &-top {
+    padding: var(--padding-2) var(--padding-4) var(--padding-2) var(--padding-6);
+    background-color: var(--bg-paper);
+    border-radius: var(--border-radius-m);
+    box-shadow: var(--shadow-s);
+    position: sticky;
+    top: 0;
+    margin-bottom: var(--padding-6);
+    z-index: var(--z-fixed);
+    @include abs.flexbtw;
+
+    .top-right {
+      gap: var(--gap-4);
+      @include abs.flexright;
+
+      .icons {
+        @include abs.flexright;
+      }
+    }
+
+    .input {
+      border: none;
+      padding-left: 0;
+
+      &:hover,
+      &:focus {
+        border: none;
+        box-shadow: none;
+      }
+
+      &-block {
+        .input-inner {
+          gap: var(--gap-2);
+          @include abs.flex;
+        }
+      }
+    }
+  }
+
+  &-con {
+    padding: var(--padding-4) var(--padding-6) 0;
+  }
+
+  &-bottom {
+    padding: var(--padding-4) var(--padding-6);
+    position: sticky;
+    bottom: 0;
+    background-color: var(--bg-body);
+    @include abs.flexbtw;
+
+    .copyright {
+      color: var(--text-secondary);
+      @include abs.body1;
+
+      span {
+        color: var(--primary-main);
+      }
+    }
+
+    .lnb {
+      gap: var(--gap-4);
+      @include abs.flexright;
+
+      a {
+        color: var(--primary-main);
+        @include abs.body1;
+      }
+    }
+  }
+}
+
+.analytics-slide {
+  background: transparent;
+
+  .swiper-slide {
+    background-color: var(--primary-main);
+    color: var(--etc-white);
+    background-image: url("/assets/images/sub/analytics-slide-bg.svg");
+    border-radius: VAR(--border-radius-m);
+    background-repeat: no-repeat;
+    background-position: calc(100% + 48px) var(--padding-7);
+  }
+
+  .analytics-con {
+    padding: var(--padding-1) var(--padding-6);
+
+    .txt {
+      font-weight: var(--fw-medium);
+      padding-block: var(--padding-6) var(--padding-4);
+      @include abs.body1;
+    }
+
+    .con-list {
+      display: grid;
+      gap: var(--gap-4) var(--gap-3);
+      grid-template-columns: repeat(2, 1fr);
+      width: 270px;
+      padding-bottom: var(--gap-6);
+
+      .con-item {
+        gap: var(--gap-2);
+        @include abs.flex;
+
+        .cnt {
+          padding: var(--gap-2);
+          background-color: var(--primary-dark);
+          border-radius: var(--border-radius-m);
+          font-weight: var(--fw-medium);
+          white-space: nowrap;
+          @include abs.body1;
+        }
+        .name {
+          white-space: nowrap;
+          @include abs.body1;
+        }
+      }
+    }
+  }
+
+  .swiper-pagination {
+    top: var(--gap-6);
+    right: var(--gap-6);
+    left: initial;
+    width: fit-content;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: var(--etc-white);
+  }
+}
+
+/* 위젯 */
+.widget {
+  &-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: var(--gap-6);
+
+    & > div {
+      box-shadow: var(--shadow-m);
+      background-color: var(--bg-paper);
+      border-radius: var(--border-radius-m);
+    }
+  }
+
+  &-title {
+    padding: var(--padding-6) var(--padding-6) 0;
+    display: grid;
+    gap: var(--gap-1);
+
+    .tit {
+      @include abs.h5;
+    }
+    .subtit {
+      @include abs.subtitle2;
+    }
+  }
+
+  &-values {
+    .data-desc {
+      color: var(--text-secondary);
+      @include abs.body1;
+      @include abs.flexbtw;
+
+      .desc-cnt {
+        color: var(--success-main);
+      }
+    }
+    .data-value {
+      @include abs.h4;
+    }
+  }
+
+  &-con {
+    padding: var(--padding-3) var(--padding-6) var(--padding-6);
+  }
+
+  &-icon-tit {
+    gap: var(--gap-4);
+    @include abs.flex;
+
+    .icon {
+      width: 34px;
+      height: 34px;
+      border-radius: var(--border-radius-m);
+      @include abs.flexcenter;
+
+      .ic {
+        width: 22px;
+      }
+    }
+    .txts {
+      .tit {
+        @include abs.body1;
+      }
+      .desc {
+      }
+    }
+
+    &.s {
+      gap: var(--gap-2);
+
+      .icon {
+        width: 26px;
+        height: 26px;
+
+        .ic {
+          width: 18px;
+        }
+      }
+    }
+  }
+
+  &-proccess {
+    width: 100%;
+    height: var(--h);
+    background-color: var(--action-selected);
+    border-radius: var(--border-radius-round);
+    position: relative;
+
+    .bar {
+      width: var(--w);
+      position: absolute;
+      left: 0;
+      height: 100%;
+      border-radius: var(--border-radius-round);
+    }
+  }
+
+  .sales-overview {
+    padding: var(--padding-6);
+
+    &-con {
+      gap: 10px;
+      position: relative;
+      height: 96px;
+      @include abs.flexbtw;
+
+      .overview-data {
+        .data-tit {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          padding-bottom: 10px;
+
+          .tit-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: var(--border-radius-m);
+            @include abs.flexcenter;
+
+            .ic {
+              width: 18px;
+              height: 18px;
+            }
+          }
+
+          .txt {
+            color: var(--text-secondary);
+            @include abs.body1;
+          }
+        }
+
+        .data-con {
+          .data-value {
+            @include abs.h5;
+          }
+
+          .data-cnt {
+            color: var(--text-disabled);
+            @include abs.body2;
+          }
+        }
+
+        &.data-left {
+          .data-tit {
+            .tit-icon {
+              background-color: var(--info-alp-light);
+
+              .ic {
+                background-color: var(--info-main);
+              }
+            }
+          }
+        }
+
+        &.data-right {
+          text-align: right;
+
+          .data-tit {
+            .tit-icon {
+              background-color: var(--primary-alp-light);
+
+              .ic {
+                background-color: var(--primary-main);
+              }
+            }
+          }
+        }
+      }
+
+      .overview-vs {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: var(--action-hover);
+        color: var(--text-disabled);
+        @include abs.flexcenter;
+        @include abs.overline;
+
+        &::before {
+          content: "";
+          width: 1px;
+          height: 31px;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          background-color: var(--etc-divider);
+        }
+
+        &::after {
+          content: "";
+          width: 1px;
+          height: 31px;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          background-color: var(--etc-divider);
+        }
+      }
+    }
+
+    &-bar {
+      height: 10px;
+      width: 100%;
+      background-color: var(--primary-main);
+      border-radius: var(--border-radius-round);
+      position: relative;
+      overflow: hidden;
+
+      .bar {
+        position: absolute;
+        left: 0;
+        height: 100%;
+        background-color: var(--info-main);
+        width: var(--w);
+      }
+    }
+  }
+
+  .earning-reports {
+    padding-top: 0;
+
+    &-top {
+      gap: var(--gap-8);
+      padding-bottom: var(--gap-3);
+      @include abs.flexbtw;
+
+      .top-left {
+        .top-tit {
+          gap: 10px;
+          @include abs.flex;
+        }
+      }
+
+      .f-body2 {
+        color: var(--text-secondary);
+      }
+    }
+
+    .canvas-earning-reports {
+      height: 145px;
+    }
+
+    &-bottom {
+      border: 1px solid var(--etc-divider);
+      border-radius: var(--border-radius-m);
+      padding: var(--padding-5);
+      gap: var(--gap-6);
+      @include abs.flexbtw;
+
+      .bottom-item {
+        width: 100%;
+        display: grid;
+        gap: var(--gap-2);
+
+        @each $c in abs.$themeColors {
+          &.#{$c} {
+            .icon {
+              background-color: var(--#{$c}-alp-light);
+
+              .ic {
+                background-color: var(--#{$c}-main);
+              }
+            }
+
+            .widget-proccess .bar {
+              background-color: var(--#{$c}-main);
+              box-shadow: var(--#{$c}-shadow-s);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.canvas {
+  &-dailysales {
+    height: 76px;
+  }
+}

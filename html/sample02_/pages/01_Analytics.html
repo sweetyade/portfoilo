@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- css -->
+  <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="../assets/css/style.css">
   <title>Document</title>
 </head>
 <body>
   <div id="wrap">
     <!-- header : sidebar-->
-    <header class="header fold" id="header" >
+    <header class="header" id="header" >
       <div class="scroll">
         <div class="header-top">
           <h1 class="logo"><a href=""><img src="/assets/images/common/logo.svg" alt="Vuexy"><span>Vuexy</span></a></h1>
@@ -29,7 +30,10 @@
             </div>
           </a>
           <div class="nav-group">
-            <p class="nav-title">APPS & PAGES</p>
+            <p class="nav-title">
+              <span class="tit-op">APPS & PAGES</span>
+              <span class="tit-cl"></span>
+            </p>
             <div class="nav-list">
               <div class="nav-link">
                 <a href="javascript:void(0)" class="list-item active">
@@ -189,7 +193,10 @@
           </div>
 
           <div class="nav-group">
-            <p class="nav-title">PAGES</p>
+            <p class="nav-title">
+              <span class="tit-op">PAGES</span>
+              <span class="tit-cl"></span>
+            </p>
             <div class="nav-list">
               <div class="nav-link">
                 <a href="javascript:void(0)" class="list-item">
@@ -239,7 +246,10 @@
           </div>
 
           <div class="nav-group">
-            <p class="nav-title">USER INTERFACE</p>
+            <p class="nav-title">
+              <span class="tit-op">USER INTERFACE</span>
+              <span class="tit-cl"></span>
+            </p>
             <div class="nav-list">
               <div class="nav-link">
                 <a href="javascript:void(0)" class="list-item">
@@ -283,7 +293,10 @@
           </div>
 
           <div class="nav-group">
-            <p class="nav-title">FORMS & TABLES</p>
+            <p class="nav-title">
+              <span class="tit-op">FORMS & TABLES</span>
+              <span class="tit-cl"></span>
+            </p>
             <div class="nav-list">
               <div class="nav-link">
                 <a href="javascript:void(0)" class="list-item">
@@ -340,7 +353,10 @@
           </div>
 
           <div class="nav-group">
-            <p class="nav-title">CHARTS & MISC</p>
+            <p class="nav-title">
+              <span class="tit-op">CHARTS & MISC</span>
+              <span class="tit-cl"></span>
+            </p>
             <div class="nav-list">
               <div class="nav-link">
                 <a href="javascript:void(0)" class="list-item">
@@ -433,22 +449,490 @@
 
     <!-- main -->
     <main class="main" id="main">
+      <div class="main-con">
+        <!-- \\\\ top search \\\\\ -->
+        <div class="main-top">
+          <div class="input-block">
+            <div class="input-inner">
+              <button class="btn btn-icon text"><i class="ic star-fill"></i></button>
+              <input type="text" class="input" id="topSearch"  placeholder="Search ⌘K">
+            </div>
+          </div>
 
+          <div class="top-right">
+            <div class="icons">
+              <button type="button" class="btn btn-icon text"><i class="ic star-fill"></i></button>
+              <button type="button" class="btn btn-icon text"><i class="ic star-fill"></i></button>
+              <button type="button" class="btn btn-icon text"><i class="ic star-fill"></i></button>
+              <button type="button" class="btn btn-icon text text-primary"><i class="ic bell"></i><div class="badge dot error"></div></button>
+            </div>
+            <div class="avatar round">
+              <div class="thumb avt1"></div>
+              <div class="badge dot success"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="widget-block mb_1_5">
+          <!-- analytics -->
+          <div class="swiper analytics-slide column-6">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="widget-title">
+                  <p class="tit">Website Analytics</p>
+                  <p class="subtit">Total 28.5% Conversion Rate</p>
+                </div>
+
+                <div class="analytics-con">
+                  <p class="txt">Traffic</p>
+                  <div class="con-list">
+                    <div class="con-item">
+                      <p class="cnt">28%</p>
+                      <p class="name">Sessions</p>
+                    </div>
+                    <div class="con-item">
+                      <p class="cnt">3.1k</p>
+                      <p class="name">Page Views</p>
+                    </div>
+                    <div class="con-item">
+                      <p class="cnt">1.2k</p>
+                      <p class="name">Leads</p>
+                    </div>
+                    <div class="con-item">
+                      <p class="cnt">12%</p>
+                      <p class="name">Conversions</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="widget-title">
+                  <p class="tit">Website Analytics</p>
+                  <p class="subtit">Total 28.5% Conversion Rate</p>
+                </div>
+
+                <div class="analytics-con">
+                  <p class="txt">Traffic</p>
+                  <div class="con-list">
+                    <div class="con-item">
+                      <p class="cnt">28%</p>
+                      <p class="name">Sessions</p>
+                    </div>
+                    <div class="con-item">
+                      <p class="cnt">3.1k</p>
+                      <p class="name">Page Views</p>
+                    </div>
+                    <div class="con-item">
+                      <p class="cnt">1.2k</p>
+                      <p class="name">Leads</p>
+                    </div>
+                    <div class="con-item">
+                      <p class="cnt">12%</p>
+                      <p class="name">Conversions</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="widget-title">
+                  <p class="tit">Website Analytics</p>
+                  <p class="subtit">Total 28.5% Conversion Rate</p>
+                </div>
+
+                <div class="analytics-con">
+                  <p class="txt">Traffic</p>
+                  <div class="con-list">
+                    <div class="con-item">
+                      <p class="cnt">28%</p>
+                      <p class="name">Sessions</p>
+                    </div>
+                    <div class="con-item">
+                      <p class="cnt">3.1k</p>
+                      <p class="name">Page Views</p>
+                    </div>
+                    <div class="con-item">
+                      <p class="cnt">1.2k</p>
+                      <p class="name">Leads</p>
+                    </div>
+                    <div class="con-item">
+                      <p class="cnt">12%</p>
+                      <p class="name">Conversions</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <!-- average daily sales -->
+          <div class="widget column-3">
+            <div class="widget-title">
+              <p class="tit">Average Daily Sales</p>
+            </div>
+
+            <div class="widget-con">
+              <div class="widget-values">
+                <p class="data-desc">Total Sales This Month</p>
+                <p class="data-value">$28,450</p>
+              </div>
+            </div>
+            <div class="canvas-dailysales">
+              <canvas id="monthSale"></canvas>
+            </div>
+          </div>
+
+          <!-- salse overview -->
+          <div class="widget column-3">
+            <div class="widget-title">
+              <div class="widget-values">
+                <p class="data-desc">
+                  Total Sales This Month
+                  <span class="desc-cnt">+18.2%</span>
+                </p>
+                <p class="data-value">$28,450</p>
+              </div>
+            </div>
+
+            <div class="widget-con sales-overview">
+              <div class="sales-overview-con mb_1_5">
+                <div class="overview-data data-left">
+                  <div class="data-tit">
+                    <div class="tit-icon"><i class="ic shopping-cart"></i></div>
+                    <p class="txt">Order</p>
+                  </div>
+
+                  <div class="data-con">
+                    <p class="data-value">62.2%</p>
+                    <p class="data-cnt">6,440</p>
+                  </div>
+                </div>
+
+                <div class="overview-vs">VS</div>
+
+                <div class="overview-data data-right">
+                  <div class="data-tit">
+                    <p class="txt">Visits</p>
+                    <div class="tit-icon"><i class="ic link"></i></div>
+                  </div>
+
+                  <div class="data-con">
+                    <p class="data-value">25.5%</p>
+                    <p class="data-cnt">12,749</p>
+                  </div>
+                </div>
+              </div>
+              <div class="sales-overview-bar">
+                <div class="bar" style="--w: 62.2%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="widget-block mb_1_5">
+          <!-- earning reports -->
+          <div class="widget column-6">
+            <div class="widget-title">
+              <p class="tit">Earning Reports</p>
+              <p class="subtit">Weekly Earnings Overview</p>
+            </div>
+
+            <div class="widget-con earning-reports">
+              <div class="earning-reports-top">
+                <div class="top-left">
+                  <div class="top-tit">
+                    <p class="f-h2">$468</p>
+                    <p class="chip s success label">+4.2%</p>
+                  </div>
+                  <p class="f-body2">You informed of this week<br>compared to last week</p>
+                </div>
+                <div class="canvas-earning-reports">
+                  <canvas id="earningReports"></canvas>
+                </div>
+              </div>
+              <div class="earning-reports-bottom">
+                <div class="bottom-item primary">
+                  <div class="widget-icon-tit s">
+                    <p class="icon"><i class="ic currency-dollar"></i></p>
+                    <div class="txts">
+                      <p class="tit">Earnings</p>
+                    </div>
+                  </div>
+                  <p class="f-h4">$545.69</p>
+                  <div class="widget-proccess" style="--h: 4px">
+                    <div class="bar" style="--w: 78%"></div>
+                  </div>
+                </div>
+                <div class="bottom-item info">
+                  <div class="widget-icon-tit s">
+                    <p class="icon"><i class="ic chart-pie-2"></i></p>
+                    <div class="txts">
+                      <p class="tit">Profit</p>
+                    </div>
+                  </div>
+                  <p class="f-h4">$256.34</p>
+                  <div class="widget-proccess" style="--h: 4px">
+                    <div class="bar" style="--w: 62%"></div>
+                  </div>
+                </div>
+                <div class="bottom-item error">
+                  <div class="widget-icon-tit s">
+                    <p class="icon"><i class="ic brand-paypal"></i></p>
+                    <div class="txts">
+                      <p class="tit">Expense</p>
+                    </div>
+                  </div>
+                  <p class="f-h4">$74.19</p>
+                  <div class="widget-proccess" style="--h: 4px">
+                    <div class="bar" style="--w: 15%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="widget column-6">
+            <div class="widget-title">
+              <p class="tit">Support Tracker</p>
+              <p class="subtit">Last 7 Days</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="widget-block mb_1_5">
+          <div class="widget column-4">
+            <div class="widget-title">
+              <p class="tit">Sales by Countries</p>
+              <p class="subtit">Monthly Sales Overview</p>
+            </div>
+          </div>
+
+          <div class="widget column-4">
+            <div class="widget-title">
+              <div class="widget-values lg">
+                <p class="data-txt">Total Earning <i class="ic"></i></p>
+                <p class="data-value">
+                  87%
+
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="widget column-4">
+            <div class="widget-title">
+              <p class="tit">Monthly Campaign State</p>
+              <p class="subtit">8.52k Social Visitors</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-bottom">
+        <p class="copyright">© 2024, Made with ❤️ <span>by PIXINVENT</span></p>
+        <div class="lnb">
+          <a href="javascript:void(0)">License</a>
+          <a href="javascript:void(0)">More Themes</a>
+          <a href="javascript:void(0)">Documentation</a>
+          <a href="javascript:void(0)">Support</a>
+        </div>
+      </div>
     </main>
   </div>
 
   <script src="../assets/scripts/jquery-3.7.1.min.js"></script>
+  <script src="../assets/scripts/swiper-bundle.min.js"></script>
+  <script src="../assets/scripts/chart.js"></script>
+  <script src="../assets/scripts/chartjs-plugin-datalabels@2.0.0"></script>
   <script>
-  $('.subOpen > .list-item').on('click', function(e) {
-    e.preventDefault();
+    /* ============== sidebar ============= */
+    //사이드토글
+    $("#sidebarToggle").on("click", function() {
+      $("#header").toggleClass("fixed");
+    });
 
-    var $parent = $(this).parent(); 
-    var $subMenu = $parent.children('.nav-sub'); 
+    //서브메뉴
+    $('.subOpen > .list-item').on('click', function(e) {
+      e.preventDefault();
 
-    $parent.toggleClass('opened');
-    $subMenu.stop().slideToggle(300);
-    // $parent.siblings('.subOpen').removeClass('opened').children('.nav-sub').slideUp(300);
-  });
+      var $parent = $(this).parent(); 
+      var $subMenu = $parent.children('.nav-sub'); 
+
+      $parent.toggleClass('opened');
+      $subMenu.stop().slideToggle(300);
+      // $parent.siblings('.subOpen').removeClass('opened').children('.nav-sub').slideUp(300);
+    });
+
+
+    /* ==================== search =============== */
+        //서치 포커트팝업 오픈
+    $('#topSearch').keypress(function(e){
+      if(e.keyCode && e.keyCode == 13){
+        $('.search_pop, body').addClass("open");
+        $(".search_pop input").focus()
+      }
+    })
+
+    //서치팝  esc 닫기
+    $(document).on('keydown', function(e) {
+      if(e.key == "Escape") {
+        $('.search_pop, body').removeClass("open");
+      }
+    });
+
+
+    //서치 팝업 포커스
+    $('.delPop, .overlay').click(function(){
+      $('.search_pop, body').removeClass('open')
+    })
+
+    //* ==================== swiper =============== */
+    var swiper = new Swiper(".analytics-slide", {
+      effect: "fade",
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+
+
+    //chart1 =================== month Sale 차트
+    const monthSale = document.getElementById('monthSale').getContext('2d')
+    var gradient1 = monthSale.createLinearGradient(0,0,0,80)
+    gradient1.addColorStop(0, 'rgba(40, 199, 111, 0.23)')
+    gradient1.addColorStop(1, 'rgba(40, 199, 111, 0)')
+    const data1 = {
+      labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL"],
+      datasets: [
+        {
+          label: 'Total Sales This Month',
+          data: [8, 6, 4, 5, 9, 4, 2],
+          pointRadius: 0,
+          backgroundColor: gradient1,
+          borderColor: "rgba(40, 199, 111, 1)",
+          fill: true,
+          borderWidth: 2,
+          lineTension: 0.5,
+        }
+      ]
+    }
+
+    const options1 = {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false,
+        },
+        tooltip: {
+          enabled: false,
+        },
+
+        datalabels: {
+          display: false,
+        },
+      },
+      scales: {
+        x: {
+          display: false,
+          grid: {
+            display: false,
+          },
+        },
+        y: {
+          display: false,
+          beginAtZero: true,
+          grid: {
+            display: false,
+          },
+        },
+      },
+    }
+
+    const Chart1 = new Chart(monthSale, {
+      type: "line",
+      data: data1,
+      options: options1
+    })
+
+
+    //chart2 ===================== canvas_earning_reports 차트
+    function getBgColors() {
+      var array = [4, 9, 7, 5, 10, 6, 8];
+      var maxValue = Math.max.apply(this, array);
+      var bg = array.map((a) =>
+        a === maxValue ? "rgba(115, 103, 240, 1)" : "rgba(115, 103, 240, 0.16)"
+      );
+      return bg;
+    }
+    const data2 = {
+      labels: ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+      datasets: [
+        {
+          label: "Total Sales This Month",
+          data: [4, 9, 7, 5, 10, 6, 8],
+          pointRadius: 0,
+          backgroundColor: getBgColors(),
+          borderColor: "transperent",
+          fill: true,
+          borderWidth: 0,
+          borderRadius: 4,
+          categoryPercentage: 1.0,
+          barPercentage: 0.5,
+          borderSkipped: false,
+        },
+      ],
+    }
+
+    const options2 = {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false,
+        },
+        tooltip: {
+          enabled: false,
+        },
+
+        datalabels: {
+          display: false,
+        },
+      },
+
+      layout: {
+        padding: {
+          top: 0,
+          bottom: 14,
+          left: 0,
+          right: 0,
+        },
+      },
+      scales: {
+        x: {
+          grid: {
+            display: false,
+          },
+          border: {
+            display: false,
+          },
+          ticks:{
+            color: "rgba(47, 43, 61, 0.4)"
+          }
+        },
+        y: {
+          display: false,
+          grid: {
+            display: false,
+          },
+        },
+      },
+    }
+    const earningReport = document.getElementById('earningReports')
+    const Chart2 = new Chart(earningReport, {
+      type: "bar",
+      data: data2,
+      options: options2
+    })
   </script>
 </body>
 </html>
