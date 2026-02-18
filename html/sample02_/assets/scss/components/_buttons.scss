@@ -46,6 +46,10 @@
     height: 48px;
   }
 
+  &.w {
+    width: 100%;
+  }
+
   &.label {
     box-shadow: none;
     background-color: var(--primary-alp-light);
@@ -109,22 +113,15 @@
   }
 
   &-icon {
+    width: 38px;
     padding-inline: 0;
     aspect-ratio: 1;
+    border-radius: var(--border-radius-m);
     position: relative;
-
-    &.text {
-      padding-inline: 0;
-    }
+    @include abs.flexcenter;
 
     .ic {
       width: 22px;
-    }
-
-    &.text-primary {
-      .ic {
-        background-color: var(--text-primary);
-      }
     }
 
     .badge {
@@ -134,6 +131,63 @@
       top: 8px;
       right: 8px;
       border: 2px solid var(--bg-paper);
+    }
+
+    &.s {
+      width: 30px;
+
+      .ic {
+        width: 20px;
+      }
+    }
+
+    &.l {
+      width: 48px;
+
+      .ic {
+        width: 24px;
+      }
+    }
+
+    @each $c in abs.$themeColors {
+      &.#{$c} {
+        .ic {
+          background-color: var(--#{$c}-main);
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: var(--#{$c}-alp-light);
+        }
+
+        &.outline {
+          border: 1px solid var(--#{$c}-main);
+        }
+
+        &.label {
+          background-color: var(--#{$c}-alp-light);
+
+          &:hover,
+          &:focus,
+          &:active {
+            background-color: var(--#{$c}-alp);
+          }
+        }
+
+        &.fill {
+          background-color: var(--#{$c}-main);
+          box-shadow: var(--#{$c}-shadow-s);
+
+          .ic {
+            background-color: var(--etc-white);
+          }
+        }
+
+        &:disabled {
+          opacity: 0.45;
+        }
+      }
     }
   }
 
@@ -283,6 +337,7 @@
   width: 38px;
   aspect-ratio: 1;
   border-radius: 50%;
+  @include abs.flexcenter;
 
   .ic {
     width: 22px;

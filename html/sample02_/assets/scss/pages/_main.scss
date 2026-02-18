@@ -47,6 +47,14 @@
 
       .icons {
         @include abs.flexright;
+
+        & > div {
+          position: relative;
+        }
+      }
+
+      .avatar {
+        cursor: pointer;
       }
     }
 
@@ -65,6 +73,146 @@
           gap: var(--gap-2);
           @include abs.flex;
         }
+      }
+    }
+
+    .langList,
+    .themeList {
+      position: absolute;
+      width: fit-content;
+      white-space: nowrap;
+      top: 60px;
+      right: 0;
+      background-color: var(--bg-paper);
+      border-radius: var(--border-radius-m);
+      box-shadow: var(--shadow-l);
+      padding: var(--padding-2);
+      display: none;
+    }
+
+    .shortcutsList {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 514px;
+      background-color: var(--bg-paper);
+      border-radius: var(--border-radius-m);
+      box-shadow: var(--shadow-l);
+      display: none;
+
+      .title {
+        padding: var(--padding-3) var(--padding-4);
+        @include abs.flexbtw;
+      }
+
+      .shortcuts-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .shortcuts-item {
+          border-top: 1px solid var(--etc-divider);
+          padding: var(--padding-6);
+          display: grid;
+          gap: var(--gap-3);
+          justify-content: center;
+          justify-items: center;
+          text-align: center;
+
+          .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--action-selected);
+            @include abs.flexcenter;
+
+            .ic {
+              width: 26px;
+            }
+          }
+
+          .f-body2 {
+            color: var(--text-secondary);
+          }
+
+          &:nth-child(odd) {
+            border-right: 1px solid var(--etc-divider);
+          }
+        }
+      }
+    }
+
+    .notiList {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 380px;
+      background-color: var(--bg-paper);
+      border-radius: var(--border-radius-m);
+      box-shadow: var(--shadow-l);
+      display: none;
+
+      .title {
+        padding: var(--padding-3) var(--padding-4);
+        border-bottom: 1px solid var(--etc-divider);
+        @include abs.flexbtw;
+
+        .flexbtw {
+          gap: var(--gap-2);
+        }
+      }
+
+      .noti-item {
+        padding: var(--padding-3) var(--padding-4);
+        gap: var(--gap-3);
+        border-bottom: 1px solid var(--etc-divider);
+        @include abs.flextopbtw;
+
+        .noti-con {
+          display: grid;
+          gap: var(--gap-2);
+          width: calc(100% - 84px);
+
+          .txts {
+            display: grid;
+            gap: var(--gap-1);
+
+            .tit {
+              font-weight: var(--fw-medium);
+              @include abs.body2;
+            }
+
+            .desc {
+              color: var(--text-secondary);
+              @include abs.caption;
+            }
+          }
+
+          .date {
+            color: var(--text-disabled);
+            @include abs.caption;
+          }
+        }
+
+        .noti-state {
+          width: 20px;
+          text-align: right;
+
+          .ic {
+            cursor: pointer;
+            margin-top: var(--padding-2);
+          }
+
+          &:has(.badge.primary) {
+            .ic {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .btn-list {
+        width: 100%;
+        padding: var(--padding-4);
       }
     }
   }
@@ -162,6 +310,37 @@
 }
 
 /* 위젯 */
+.icon-per {
+  gap: var(--gap-1);
+  width: fit-content;
+  white-space: nowrap;
+  min-width: 45px;
+  @include abs.flexright;
+  @include abs.h6;
+
+  .ic {
+    width: 20px;
+  }
+
+  &.up {
+    color: var(--success-main);
+
+    .ic {
+      background-color: var(--success-main);
+      mask-image: url(../images/system/chevron-up.svg);
+    }
+  }
+
+  &.down {
+    color: var(--error-main);
+
+    .ic {
+      background-color: var(--error-main);
+      mask-image: url(../images/system/chevron-down.svg);
+    }
+  }
+}
+
 .widget {
   &-block {
     width: 100%;
@@ -183,10 +362,23 @@
     gap: var(--gap-1);
 
     .tit {
+      @include abs.flexbtw;
       @include abs.h5;
+
+      .ic {
+        cursor: pointer;
+        width: 22px;
+        background-color: var(--text-disabled);
+      }
     }
+
     .subtit {
+      color: var(--text-secondary);
       @include abs.subtitle2;
+    }
+
+    &:has(.value-flex) {
+      gap: 0;
     }
   }
 
@@ -206,7 +398,8 @@
   }
 
   &-con {
-    padding: var(--padding-3) var(--padding-6) var(--padding-6);
+    // padding: var(--padding-3) var(--padding-6) var(--padding-6);
+    padding: var(--padding-6);
   }
 
   &-icon-tit {
@@ -223,11 +416,26 @@
         width: 22px;
       }
     }
+
     .txts {
       .tit {
         @include abs.body1;
       }
       .desc {
+        color: var(--text-disabled);
+        @include abs.body2;
+      }
+    }
+
+    @each $c in abs.$themeColors {
+      &.#{$c} {
+        .icon {
+          background-color: var(--#{$c}-alp-light);
+
+          .ic {
+            background-color: var(--#{$c}-main);
+          }
+        }
       }
     }
 
@@ -241,6 +449,31 @@
         .ic {
           width: 18px;
         }
+      }
+    }
+
+    &.l {
+      .icon {
+        width: 38px;
+      }
+    }
+  }
+
+  &-list {
+    display: grid;
+    gap: var(--gap-4);
+  }
+
+  &-item {
+    @include abs.flexbtw;
+
+    .item-right {
+      gap: var(--gap-4);
+      @include abs.flexright;
+
+      .desc {
+        color: var(--text-secondary);
+        @include abs.body1;
       }
     }
   }
@@ -259,6 +492,80 @@
       height: 100%;
       border-radius: var(--border-radius-round);
     }
+  }
+
+  &-board-title {
+    padding: var(--padding-6);
+    @include abs.flexbtw;
+  }
+
+  &-board {
+    border-top: 1px solid var(--etc-divider);
+
+    table {
+      width: 100%;
+
+      th {
+        padding: var(--padding-4) var(--padding-4) var(--padding-4)
+          var(--padding-5);
+        text-align: left;
+        position: relative;
+        @include abs.theader;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: var(--padding-4);
+          transform: translateY(-50%);
+          width: 1px;
+          height: 14px;
+          background-color: var(--etc-divider);
+        }
+
+        &:has(.check-block) {
+          padding: 5px 0 5px var(--gap-3);
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      td {
+        border-top: 1px solid var(--etc-divider);
+        height: 56px;
+        padding-inline: var(--padding-5) var(--padding-4);
+
+        &:has(.check-block) {
+          padding: 5px 0 5px var(--gap-3);
+        }
+      }
+    }
+
+    .board-pagenation {
+      padding-inline: var(--padding-6);
+      height: 64px;
+      border-top: 1px solid var(--etc-divider);
+
+      @include abs.flexbtw;
+
+      .txt {
+        color: var(--text-disabled);
+        @include abs.body1;
+      }
+    }
+  }
+
+  .list-auto {
+    height: calc(100% - 76px);
+    display: grid;
+    align-content: space-between;
+  }
+
+  .value-flex {
+    gap: var(--gap-2);
+    @include abs.flex;
   }
 
   .sales-overview {
@@ -382,6 +689,10 @@
     }
   }
 
+  .daily-sales {
+    padding-top: var(--padding-3);
+  }
+
   .earning-reports {
     padding-top: 0;
 
@@ -435,6 +746,42 @@
           }
         }
       }
+    }
+  }
+
+  .support-tracker {
+    @include abs.flexbtw;
+
+    .support_graph {
+      width: 240px;
+      height: 240px;
+      position: relative;
+      @include abs.flexcenter;
+
+      .praph_bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        mask-image: url("/assets/images/sub/support_graph.png");
+        mask-size: 100%;
+        text-align: center;
+        background: conic-gradient(
+          from 90deg,
+          var(--primary-main) 0deg,
+          transparent var(--prg-bar)
+        );
+
+        transform: rotate(180deg) scaleX(-1);
+      }
+    }
+  }
+
+  .total-earning {
+    .canvas-total-earning {
+      height: 100px;
     }
   }
 }
