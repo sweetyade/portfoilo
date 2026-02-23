@@ -1,0 +1,83 @@
+/***************************************************************
+    components - popup
+***************************************************************/
+@use "../abstracts/" as abs;
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--etc-overlay);
+  z-index: var(--z-modal);
+  display: none;
+
+  &-con {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: var(--maxW);
+    background-color: var(--bg-paper);
+    border-radius: var(--border-radius-m);
+    box-shadow: var(--shadow-l);
+  }
+}
+
+.pop-search {
+  &-header {
+    padding: var(--padding-3) var(--padding-4);
+    gap: var(--gap-2);
+    border-bottom: 1px solid var(--etc-divider);
+    @include abs.flexbtw;
+
+    .input,
+    .input-block:focus-within .input,
+    .input:hover {
+      border: none;
+      box-shadow: none;
+    }
+
+    .input-block {
+      .input-icon {
+        width: var(--gap-6);
+
+        &.left {
+          left: 0;
+        }
+      }
+
+      &:has(.input-icon.left) .input {
+        padding-left: 30px;
+      }
+    }
+
+    .f-body1 {
+      color: var(--text-disabled);
+      width: 54px;
+      text-align: right;
+    }
+  }
+
+  &-con {
+    padding: var(--padding-12);
+    display: grid;
+    gap: var(--gap-4);
+    grid-template-columns: repeat(2, 1fr);
+
+    .list {
+      padding-block: 0;
+    }
+
+    .list-item:hover {
+      background-color: transparent;
+      color: var(--primary-main);
+
+      .ic {
+        background-color: var(--primary-main);
+      }
+    }
+  }
+}

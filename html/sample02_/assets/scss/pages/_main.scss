@@ -4,6 +4,10 @@
     pages - main
 ***************************************************************/
 /* main */
+.no-scroll {
+  height: 100vh;
+  overflow: hidden;
+}
 
 ::-webkit-scrollbar {
   height: 0;
@@ -215,6 +219,41 @@
         padding: var(--padding-4);
       }
     }
+
+    .userList {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 240px;
+      background-color: var(--bg-paper);
+      padding-block: var(--padding-2);
+      border-radius: var(--border-radius-m);
+      box-shadow: var(--shadow-l);
+      display: none;
+
+      .list-group {
+        display: grid;
+        gap: 2px;
+        border-top: 1px solid var(--etc-divider);
+        padding: var(--padding-1) var(--padding-2);
+
+        .list-item {
+          margin-bottom: var(--padding-1);
+        }
+
+        &:first-child {
+          border-top: none;
+        }
+      }
+
+      .btn-list {
+        padding: var(--padding-2) var(--padding-4);
+
+        .btn {
+          width: 100%;
+        }
+      }
+    }
   }
 
   &-con {
@@ -306,6 +345,10 @@
 
   .swiper-pagination-bullet {
     background-color: var(--etc-white);
+  }
+
+  .widget-title .subtit {
+    color: var(--etc-white);
   }
 }
 

@@ -455,7 +455,7 @@
           <div class="input-block">
             <div class="input-inner">
               <button class="btn btn-icon text"><i class="ic star-fill"></i></button>
-              <input type="text" class="input" id="topSearch"  placeholder="Search ⌘K">
+              <input type="text" class="input" id="topSearch" placeholder="Search ⌘K">
             </div>
           </div>
 
@@ -674,11 +674,68 @@
                 </div>
               </div>
             </div>
+
             <div class="avatar round userBtn">
               <div class="thumb avt1"></div>
               <div class="badge dot success"></div>
 
-              <div class="userList"></div>
+              <div class="userList">
+                <div class="list-group">
+                  <div class="list-item">
+                    <div class="avatar-card">
+                      <div class="avatar round">
+                        <div class="thumb avt1"></div>
+                      </div>
+                      <div class="avatar-data">
+                        <p class="avatar-name">John Doe</p>
+                        <p class="avatar-txt">Admin</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+
+                <div class="list-group">
+                  <a href="javascript:void(0)" class="list-item">
+                    <div class="list-name">
+                      <i class="ic user"></i>
+                      <p class="name">My Profile</p>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)" class="list-item">
+                    <div class="list-name">
+                      <i class="ic settings"></i>
+                      <p class="name">Settings</p>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)" class="list-item">
+                    <div class="list-name">
+                      <i class="ic file-dollar"></i>
+                      <p class="name">Billing Plan</p>
+                    </div>
+                    <p class="chip s error">4</p>
+                  </a>
+                </div>
+
+                <div class="list-group">
+                  <a href="javascript:void(0)" class="list-item">
+                    <div class="list-name">
+                      <i class="ic currency-dollar"></i>
+                      <p class="name">Pricing</p>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)" class="list-item">
+                    <div class="list-name">
+                      <i class="ic question-mark"></i>
+                      <p class="name">FAQ</p>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="btn-list">
+                  <button class="btn error fill">Logout <i class="ic logout-box-r-line"></i></button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1268,8 +1325,8 @@
                   <tr>
                     <th>
                       <div class="check-block">
-                        <input type="checkbox" name="" id="all" class="checkbox">
-                        <label for="all" class="label check-label">
+                        <input type="checkbox" name="" id="checkAll" class="checkbox">
+                        <label for="checkAll" class="label check-label">
                           <p class="label-bg">
                             <span class="label-border"></span>
                             <span class="label-ck"></span>
@@ -1581,7 +1638,132 @@
     </main>
   </div>
 
-
+  <!-- 검색창 1-->
+  <div class="modal pop-search" style="--maxW: 600px">
+    <div class="modal-con">
+      <div class="pop-search-header">
+        <div class="input-block">
+          <div class="input-inner">
+            <i class="input-icon left ic search"></i>
+            <input type="text" class="input" required="" />
+          </div>
+        </div>
+        <p class="f-body1">[esc]</p>
+        <p class="btn-icon popClose"><i class="ic x"></i></p>
+      </div>
+      <div class="pop-search-con">
+        <div class="list">
+          <p class="list-title">Popular SEarch</p>
+          <a href="javascript:void(0)" class="list-item">
+            <div class="list-name">
+              <i class="ic chart-bar"></i>
+              <p class="name">Analytics</p>
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="list-item">
+            <div class="list-name">
+              <i class="ic chart-donut-3"></i>
+              <p class="name">CRM</p>
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="list-item">
+            <div class="list-name">
+              <i class="ic shopping-cart"></i>
+              <p class="name">eCommerce</p>
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="list-item">
+            <div class="list-name">
+              <i class="ic truck"></i>
+              <p class="name">Logistics</p>
+            </div>
+          </a>
+        </div>
+        <div class="list">
+          <p class="list-title">APPS & PAGES</p>
+          <a href="javascript:void(0)" class="list-item">
+            <div class="list-name">
+              <i class="ic calendar"></i>
+              <p class="name">Calendar</p>
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="list-item">
+            <div class="list-name">
+              <i class="ic lock"></i>
+              <p class="name">Roles & Permissions</p>
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="list-item">
+            <div class="list-name">
+              <i class="ic settings"></i>
+              <p class="name">Account Settings</p>
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="list-item">
+            <div class="list-name">
+              <i class="ic copy"></i>
+              <p class="name">Dialog Examples</p>
+            </div>
+          </a>
+        </div>
+        <div class="list">
+          <p class="list-title">USER INTERFACE</p>
+          <a href="javascript:void(0)" class="list-item">
+            <div class="list-name">
+              <i class="ic typography"></i>
+              <p class="name">Typography</p>
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="list-item">
+            <div class="list-name">
+              <i class="ic menu-2"></i>
+              <p class="name">Accordion</p>
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="list-item">
+            <div class="list-name">
+              <i class="ic alert-report-problem"></i>
+              <p class="name">Alerts</p>
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="list-item">
+            <div class="list-name">
+              <i class="ic checkbox"></i>
+              <p class="name">Cards</p>
+            </div>
+          </a>
+        </div>
+        <div class="list">
+          <p class="list-title">FORMS & TABLES</p>
+          <a href="javascript:void(0)" class="list-item">
+            <div class="list-name">
+              <i class="ic circle-dot"></i>
+              <p class="name">Radio</p>
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="list-item">
+            <div class="list-name">
+              <i class="ic file-invoice"></i>
+              <p class="name">Form Layouts</p>
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="list-item">
+            <div class="list-name">
+              <i class="ic table"></i>
+              <p class="name">Table</p>
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="list-item">
+            <div class="list-name">
+              <i class="ic edit"></i>
+              <p class="name">Editor</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <script src="../assets/scripts/jquery-3.7.1.min.js"></script>
   <script src="../assets/scripts/swiper-bundle.min.js"></script>
   <script src="../assets/scripts/chart.js"></script>
@@ -1605,32 +1787,34 @@
       // $parent.siblings('.subOpen').removeClass('opened').children('.nav-sub').slideUp(300);
     });
 
+
     /* ==================== search =============== */
-        //서치 포커트팝업 오픈
+    //서치 포커트팝업 오픈
     $('#topSearch').keypress(function(e){
       if(e.keyCode && e.keyCode == 13){
-        $('.search_pop, body').addClass("open");
-        $(".search_pop input").focus()
+        $("body").addClass("no-scroll");
+        $('.pop-search').fadeIn();
+        $(".pop-search .input").focus();
       }
     })
 
     //서치팝  esc 닫기
     $(document).on('keydown', function(e) {
       if(e.key == "Escape") {
-        $('.search_pop, body').removeClass("open");
+        $('.pop-search').fadeOut("fast")
+        $('body').removeClass("no-scroll");
       }
     });
 
-
     //서치 팝업 포커스
-    $('.delPop, .overlay').click(function(){
-      $('.search_pop, body').removeClass('open')
+    $('.popClose').click(function(){
+      $('.pop-search').fadeOut("fast");
+      $('body').removeClass("no-scroll");
     })
 
     //서치 언어선택
     $(".langBtn").on("click", function () {  
       $(".langList").slideToggle();
-
       $(".langList .list-item").on("click", function () {  
         $(this).siblings().removeClass("active")
         $(this).addClass('active');
@@ -1666,6 +1850,11 @@
         })
       })
     })
+
+    //아바타 버튼
+    $(".userBtn").on("click", function () {  
+      $(".userList").slideToggle();
+    })
     
 
     //* ==================== swiper =============== */
@@ -1675,6 +1864,28 @@
         el: ".swiper-pagination",
       },
     });
+
+    /* ================== table checkbox ================= */
+    //테이블 전체체크
+    const checkInput = $('.widget-board tbody input')
+    $("#checkAll").click(function(){
+      if($(this).is(":checked")){
+        checkInput.prop('checked', true)
+      }else{
+        checkInput.prop('checked', false)
+      }
+    });
+
+    //테이블 체크
+    checkInput.click(function(){
+      const checkItem = $('.widget-board tbody input:checked').length;
+      if(checkItem == 5){
+        $("#checkAll").prop('checked', true);
+      }else{
+        $("#checkAll").prop('checked', false);
+
+      }
+    })
 
 
     //chart1 =================== month Sale 차트
