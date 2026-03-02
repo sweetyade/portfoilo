@@ -6,7 +6,7 @@
   <!-- css -->
   <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="../assets/css/style.css">
-  <title>01.Analytics</title>
+  <title>02.CRM</title>
 </head>
 <body>
   <div id="wrap">
@@ -14,7 +14,7 @@
     <header class="header" id="header" >
       <div class="scroll">
         <div class="header-top">
-          <h1 class="logo"><a href=""><img src="/assets/images/common/logo.svg" alt="Vuexy"><span>Vuexy</span></a></h1>
+          <h1 class="logo"><a href=""><img src="../assets/images/common/logo.svg" alt="Vuexy"><span>Vuexy</span></a></h1>
           <button class="btn-icon" id="sidebarToggle"><i class="ic circle-dot"></i></button>
         </div>
 
@@ -741,269 +741,82 @@
         </div>
 
         <div class="widget-block mb_1_5">
-          <!-- analytics -->
-          <div class="swiper analytics-slide column-6">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="widget-title">
-                  <p class="tit">Website Analytics</p>
-                  <p class="subtit">Total 28.5% Conversion Rate</p>
-                </div>
-
-                <div class="analytics-con">
-                  <p class="txt">Traffic</p>
-                  <div class="con-list">
-                    <div class="con-item">
-                      <p class="cnt">28%</p>
-                      <p class="name">Sessions</p>
-                    </div>
-                    <div class="con-item">
-                      <p class="cnt">3.1k</p>
-                      <p class="name">Page Views</p>
-                    </div>
-                    <div class="con-item">
-                      <p class="cnt">1.2k</p>
-                      <p class="name">Leads</p>
-                    </div>
-                    <div class="con-item">
-                      <p class="cnt">12%</p>
-                      <p class="name">Conversions</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="widget-title">
-                  <p class="tit">Website Analytics</p>
-                  <p class="subtit">Total 28.5% Conversion Rate</p>
-                </div>
-
-                <div class="analytics-con">
-                  <p class="txt">Traffic</p>
-                  <div class="con-list">
-                    <div class="con-item">
-                      <p class="cnt">28%</p>
-                      <p class="name">Sessions</p>
-                    </div>
-                    <div class="con-item">
-                      <p class="cnt">3.1k</p>
-                      <p class="name">Page Views</p>
-                    </div>
-                    <div class="con-item">
-                      <p class="cnt">1.2k</p>
-                      <p class="name">Leads</p>
-                    </div>
-                    <div class="con-item">
-                      <p class="cnt">12%</p>
-                      <p class="name">Conversions</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="widget-title">
-                  <p class="tit">Website Analytics</p>
-                  <p class="subtit">Total 28.5% Conversion Rate</p>
-                </div>
-
-                <div class="analytics-con">
-                  <p class="txt">Traffic</p>
-                  <div class="con-list">
-                    <div class="con-item">
-                      <p class="cnt">28%</p>
-                      <p class="name">Sessions</p>
-                    </div>
-                    <div class="con-item">
-                      <p class="cnt">3.1k</p>
-                      <p class="name">Page Views</p>
-                    </div>
-                    <div class="con-item">
-                      <p class="cnt">1.2k</p>
-                      <p class="name">Leads</p>
-                    </div>
-                    <div class="con-item">
-                      <p class="cnt">12%</p>
-                      <p class="name">Conversions</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-
-          <!-- average daily sales -->
-          <div class="widget column-3">
+          <!-- other -->
+          <div class="widget column-2">
             <div class="widget-title">
-              <p class="tit">Average Daily Sales</p>
+              <p class="tit">Order</p>
+              <p class="subtit">Last week</p>
             </div>
 
-            <div class="widget-con daily-sales">
-              <div class="widget-values">
-                <p class="data-desc">Total Sales This Month</p>
-                <p class="data-value">$28,450</p>
+            <div class="widget-con order">
+              <div class="canvas-order">
+                <canvas id="orderS"></canvas>
               </div>
-            </div>
-            <div class="canvas-dailysales">
-              <canvas id="monthSale"></canvas>
-            </div>
-          </div>
-
-          <!-- salse overview -->
-          <div class="widget column-3">
-            <div class="widget-title">
-              <div class="widget-values">
-                <p class="data-desc">
-                  Total Sales This Month
-                  <span class="desc-cnt">+18.2%</span>
-                </p>
-                <p class="data-value">$28,450</p>
-              </div>
-            </div>
-
-            <div class="widget-con sales-overview">
-              <div class="sales-overview-con mb_1_5">
-                <div class="overview-data data-left">
-                  <div class="data-tit">
-                    <div class="tit-icon"><i class="ic shopping-cart"></i></div>
-                    <p class="txt">Order</p>
-                  </div>
-
-                  <div class="data-con">
-                    <p class="data-value">62.2%</p>
-                    <p class="data-cnt">6,440</p>
-                  </div>
-                </div>
-
-                <div class="overview-vs">VS</div>
-
-                <div class="overview-data data-right">
-                  <div class="data-tit">
-                    <p class="txt">Visits</p>
-                    <div class="tit-icon"><i class="ic link"></i></div>
-                  </div>
-
-                  <div class="data-con">
-                    <p class="data-value">25.5%</p>
-                    <p class="data-cnt">12,749</p>
-                  </div>
-                </div>
-              </div>
-              <div class="sales-overview-bar">
-                <div class="bar" style="--w: 62.2%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="widget-block mb_1_5">
-          <!-- earning reports -->
-          <div class="widget column-6">
-            <div class="widget-title">
-              <p class="tit">Earning Reports</p>
-              <p class="subtit">Weekly Earnings Overview</p>
-            </div>
-
-            <div class="widget-con earning-reports">
-              <div class="earning-reports-top">
-                <div class="top-left">
-                  <div class="value-flex">
-                    <p class="f-h2">$468</p>
-                    <p class="chip s success label">+4.2%</p>
-                  </div>
-                  <p class="f-body2">You informed of this week<br>compared to last week</p>
-                </div>
-                <div class="canvas-earning-reports">
-                  <canvas id="earningReports"></canvas>
-                </div>
-              </div>
-              <div class="earning-reports-bottom">
-                <div class="bottom-item primary">
-                  <div class="widget-icon-tit s">
-                    <p class="icon"><i class="ic currency-dollar"></i></p>
-                    <div class="txts">
-                      <p class="tit">Earnings</p>
-                    </div>
-                  </div>
-                  <p class="f-h4">$545.69</p>
-                  <div class="widget-proccess" style="--h: 4px">
-                    <div class="bar" style="--w: 78%"></div>
-                  </div>
-                </div>
-                <div class="bottom-item info">
-                  <div class="widget-icon-tit s">
-                    <p class="icon"><i class="ic chart-pie-2"></i></p>
-                    <div class="txts">
-                      <p class="tit">Profit</p>
-                    </div>
-                  </div>
-                  <p class="f-h4">$256.34</p>
-                  <div class="widget-proccess" style="--h: 4px">
-                    <div class="bar" style="--w: 62%"></div>
-                  </div>
-                </div>
-                <div class="bottom-item error">
-                  <div class="widget-icon-tit s">
-                    <p class="icon"><i class="ic brand-paypal"></i></p>
-                    <div class="txts">
-                      <p class="tit">Expense</p>
-                    </div>
-                  </div>
-                  <p class="f-h4">$74.19</p>
-                  <div class="widget-proccess" style="--h: 4px">
-                    <div class="bar" style="--w: 15%"></div>
-                  </div>
-                </div>
+              <div class="flexbtw">
+                <p class="f-h4">124k</p>
+                <p class="icon-per up">+12.6%</p>
               </div>
             </div>
           </div>
 
-          <!-- support tracker -->
-          <div class="widget column-6">
+          <!-- sales -->
+          <div class="widget column-2 sales">
             <div class="widget-title">
-              <p class="tit">Support Tracker</p>
-              <p class="subtit">Last 7 Days</p>
+              <p class="tit">Sales</p>
+              <p class="subtit">Last Year</p>
             </div>
+              <div class="canvas-sales">
+                <canvas id="saleS"></canvas>
+              </div>
+            <div class="widget-con sales">
+              <div class="flexbtw">
+                <p class="f-h4">175k</p>
+                <p class="icon-per down">+12.6%</p>
+              </div>
+            </div>
+          </div>
 
-            <div class="widget-con support-tracker">
-              <div class="list_1_5">
-                <div class="">
-                  <p class="f-h2">164</p>
-                  <p class="f-body1 text-secondary">Total Tickets</p>
-                </div>
+          <!-- total profit -->
+          <div class="widget widget-smr column-2">
+            <div class="avatar l rounded error">
+              <div class="thumb"><i class="ic credit-card"></i></div>
+            </div>
+            <div class="widget-title">
+              <p class="tit">Total Profit</p>
+              <p class="subtit">Last week</p>
+              <p class="f-body1">1.28k</p>
+            </div>
+            <p class="chip s error label">-12.2%</p>
+          </div>
 
-                <div class="list_1">
-                  <div class="widget-icon-tit primary">
-                    <p class="icon"><i class="ic ticket"></i></p>
-                    <div class="txts">
-                      <p class="tit">New Tickets</p>
-                      <p class="desc">142</p>
-                    </div>
-                  </div>
-                  <div class="widget-icon-tit info">
-                    <p class="icon"><i class="ic check"></i></p>
-                    <div class="txts">
-                      <p class="tit">Open Tickets</p>
-                      <p class="desc">28</p>
-                    </div>
-                  </div>
-                  <div class="widget-icon-tit warning">
-                    <p class="icon"><i class="ic clock"></i></p>
-                    <div class="txts">
-                      <p class="tit">Response Time</p>
-                      <p class="desc">1 Day</p>
-                    </div>
-                  </div>
-                </div>
+          <!-- total sales -->
+          <div class="widget widget-smr column-2">
+            <div class="avatar l rounded success">
+              <div class="thumb"><i class="ic currency-dollar"></i></div>
+            </div>
+            <div class="widget-title">
+              <p class="tit">Total Sales</p>
+              <p class="subtit">Last week</p>
+              <p class="f-body1">24.67k</p>
+            </div>
+            <p class="chip s success label">+24.5%</p>
+          </div>
+
+          <!-- revenue growth -->
+          <div class="widget column-4 revenue-growth">
+            <div class="revenue-growth-con">
+              <div class="widget-title">
+                <p class="tit">Revenue Growth</p>
+                <p class="subtit">Weekly Report</p>
               </div>
 
-              <div class="support_graph">
-                <div class="praph_bar" style="--prg-bar: 85%"></div>
-                <div class="praph_txt">
-                  <p class="f-body2 text-disabled">Completed Task</p>
-                  <p class="f-h2">85%</p>
-                </div>
+              <div class="list_0_5">
+                <p class="f-h3">$4,673</p>
+                <p class="chip label success s">+15.2%</p>
               </div>
+            </div>
+            <div class="canvas-revenue-growth">
+              <canvas id="revenueGrowth"></canvas>
             </div>
           </div>
         </div>
@@ -1082,26 +895,16 @@
             </div>
           </div>
 
-          <!-- total earning -->
+          <!-- Project Status -->
           <div class="widget column-4">
             <div class="widget-title">
-              <p class="tit"><span>Sales by Countries</span><i class="ic dots-vertical"></i></p>
-              <div class="value-flex">
-                <p class="f-h2">87%</p>
-                <p class="icon-per up"><i class="ic"></i>25.8%</p>
-              </div>
+              <p class="tit"><span>Project Status</span><i class="ic dots-vertical"></i></p>
             </div>
 
-            <div class="widget-con total-earning">
-              <div class="canvas-list">
-                <div class="canvas-total-earning">
-                  <canvas id="totalEarning-1"></canvas>
-                </div>
-                <div class="canvas-total-earning">
-                  <canvas id="totalEarning-2"></canvas>
-                </div>
+            <div class="widget-con project-status">
+              <div class="canvas-project-status">
+                <canvas id="projectStatus"></canvas>
               </div>
-              
 
               <div class="widget-list">
                 <div class="widget-item">
@@ -1626,6 +1429,7 @@
         </div>
       </div>
 
+      <!-- \\\\ footer copy \\\\ -->
       <div class="main-bottom">
         <p class="copyright">© 2024, Made with ❤️ <span>by PIXINVENT</span></p>
         <div class="lnb">
@@ -1888,12 +1692,94 @@
     })
 
 
-    //chart1 =================== month Sale 차트
-    const monthSale = document.getElementById('monthSale').getContext('2d')
-    var gradient1 = monthSale.createLinearGradient(0,0,0,80)
+    // chart 1 ============= order s 차트
+    const borderRadius = 50;
+    const borderRadiusAllCorners = {topLeft: borderRadius, topRight: borderRadius, bottomLeft: borderRadius, bottomRight: borderRadius}
+    const data1 = {
+      labels: ["January", "February", "March", "April", "May", "June", "July"],
+      datasets: [
+        {
+          label: "order",
+          data: [4, 9, 7, 5, 10, 6, 8],
+          pointRadius: 0,
+          backgroundColor: "rgba(115, 103, 240, 1)",
+          borderColor: "transperent",
+          fill: true,
+          borderWidth: 0,
+          borderRadius: borderRadiusAllCorners,
+          categoryPercentage: 1.0,
+          barPercentage: 0.3,
+          borderSkipped: false,
+        },
+        {
+          label: 'bg',
+          data: [10, 10, 10, 10, 10, 10, 10],
+          pointRadius: 0,
+          backgroundColor: 'rgba(47, 43, 61, 0.08)',
+          borderColor: 'transperent',
+          fill: true,
+          borderWidth: 0,
+          borderRadius: borderRadiusAllCorners,
+          categoryPercentage: 1.0,
+          barPercentage: 0.3,
+          borderSkipped: false,
+        },
+      ],
+    };
+
+    const options1  = {
+      responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          },
+          tooltip: {
+            // 기존 툴팁 사용 안 함
+            enabled: false,
+          },
+
+          datalabels: {
+            display: false,
+          },
+        },
+        layout: {
+          padding: {
+            top: 0,
+            bottom: 12,
+            left: 0,
+            right: 0 ,
+          },
+        },
+        scales: {
+          x: {
+            stacked: true,
+            display: false,
+          },
+          y: {
+              // stacked: true,
+              display: false,
+            },
+          },
+          elements: {
+        rectangle: {
+          borderSkipped: 'bottom'
+        }
+      }
+    };
+    const orderS = document.getElementById('orderS')
+    const Chart1 = new Chart(orderS, {
+      type: "bar",
+      data: data1,
+      options: options1
+    })
+
+    //chart 2 ====================== sale s 차트
+    const saleS = document.getElementById('saleS').getContext('2d')
+    var gradient1 = saleS.createLinearGradient(0,0,0,80)
     gradient1.addColorStop(0, 'rgba(40, 199, 111, 0.23)')
     gradient1.addColorStop(1, 'rgba(40, 199, 111, 0)')
-    const data1 = {
+    const data2 = {
       labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL"],
       datasets: [
         {
@@ -1908,8 +1794,7 @@
         }
       ]
     }
-
-    const options1 = {
+    const options2 = {
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
@@ -1940,186 +1825,99 @@
         },
       },
     }
-
-    const Chart1 = new Chart(monthSale, {
+    const Chart2 = new Chart(saleS, {
       type: "line",
-      data: data1,
-      options: options1
-    })
-
-
-    //chart2 ===================== canvas_earning_reports 차트
-    function getBgColors() {
-      var array = [4, 9, 7, 5, 10, 6, 8];
-      var maxValue = Math.max.apply(this, array);
-      var bg = array.map((a) =>
-        a === maxValue ? "rgba(115, 103, 240, 1)" : "rgba(115, 103, 240, 0.16)"
-      );
-      return bg;
-    }
-    const data2 = {
-      labels: ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
-      datasets: [
-        {
-          label: "Total Sales This Month",
-          data: [4, 9, 7, 5, 10, 6, 8],
-          pointRadius: 0,
-          backgroundColor: getBgColors(),
-          borderColor: "transperent",
-          fill: true,
-          borderWidth: 0,
-          borderRadius: 4,
-          categoryPercentage: 1.0,
-          barPercentage: 0.5,
-          borderSkipped: false,
-        },
-      ],
-    }
-
-    const options2 = {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          display: false,
-        },
-        tooltip: {
-          enabled: false,
-        },
-
-        datalabels: {
-          display: false,
-        },
-      },
-
-      layout: {
-        padding: {
-          top: 0,
-          bottom: 14,
-          left: 0,
-          right: 0,
-        },
-      },
-      scales: {
-        x: {
-          grid: {
-            display: false,
-          },
-          border: {
-            display: false,
-          },
-          ticks:{
-            color: "rgba(47, 43, 61, 0.4)"
-          }
-        },
-        y: {
-          display: false,
-          grid: {
-            display: false,
-          },
-        },
-      },
-    }
-    const earningReport = document.getElementById('earningReports')
-    const Chart2 = new Chart(earningReport, {
-      type: "bar",
       data: data2,
       options: options2
     })
 
-    //chart3 ================ canvas-total-earning 차트
+
+    // chart3  ==================== revenueGrowth 차트
+    function getBgColorsGreen() {
+      var array  = [4, 9, 7, 5, 10, 6, 8];
+      var maxValue = Math.max.apply(this, array);
+
+
+      var bg = array.map(a =>  a === maxValue ? "#28c76f" : "rgba(40, 199, 111, 0.24)");
+      return bg;
+    }
     const data3 = {
-      labels: ["January", "February", "March", "April", "May", "June", "July"],
+      labels: ["M", "T", "W", "T", "F", "S", "S"],
       datasets: [
         {
-          label: 'Total Revenue',
+          label: 'order',
           data: [4, 9, 7, 5, 10, 6, 8],
           pointRadius: 0,
-          backgroundColor: 'rgba(115, 103, 240, 1)',
+          backgroundColor: getBgColorsGreen(),
           borderColor: 'transperent',
           fill: true,
           borderWidth: 0,
-          borderRadius: 4,
+          borderRadius: 50,
           categoryPercentage: 1.0,
-          barPercentage: 0.2,
+          barPercentage: 0.3,
           borderSkipped: false,
-        },
+        }
       ],
-    }
-    const options3 = {
+    };
+    const options3  = {
       responsive: true,
       maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          display: false,
-        },
-        tooltip: {
-          enabled: false,
-        },
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              // 기존 툴팁 사용 안 함
+              enabled: false,
+            },
 
-        datalabels: {
-          display: false,
-        },
-      },
-
-      layout: {
-        padding: {
-          top: 0,
-          bottom: 10,
-          left: 0,
-          right: 0,
-        },
-      },
-      scales: {
-        x: {
-          stacked: true,
-          display: false,
-          grid: {
-            display: false,
+            datalabels: {
+              display: false,
+            },
           },
-        border: {
-          display: false,
-        },
-        },
-        y: {
-          stacked: true,
-          display: false,
-          grid: {
-            display: false,
+          layout: {
+            padding: {
+              top: 32,
+              bottom: 0,
+              left: 0,
+              right: 0 ,
+            },
           },
-        },
-      },
-    }
-    const totalEarning_1 = document.getElementById('totalEarning-1')
-    const Chart3 = new Chart(totalEarning_1, {
+          scales: {
+            x: {
+              stacked: true,
+              grid: {
+                display: false,
+                borderColor: 'transparent'
+              },
+              ticks:{
+                color : "rgba(47, 43, 61, 0.4)",
+              },
+              border: {
+                display: false,
+              },
+            },
+            y: {
+              stacked: true,
+              display: false,
+              grid: {
+                display: false,
+              },
+              border: {
+              display: false,
+            },
+            },
+          },
+          elements: {
+        rectangle: {
+          borderSkipped: 'bottom'
+        }
+      }
+    };
+    const revenueGrowth = document.getElementById('revenueGrowth')
+    const Chart3 = new Chart(revenueGrowth, {
       type: "bar",
       data: data3,
-      options: options3
-    })
-
-    //chart3-2 ==================== canvas_total_earning2 차트
-    const data4 = {
-      labels: ["January", "February", "March", "April", "May", "June", "July"],
-      datasets: [
-        {
-          label: 'Total Revenue',
-          data: [-3, -5, -2, -9, -10, -6, -8],
-          pointRadius: 0,
-          backgroundColor: 'rgba(128, 131, 144, 1)',
-          borderColor: 'transperent',
-          fill: true,
-          borderWidth: 0,
-          borderRadius: 4,
-          categoryPercentage: 1.0,
-          barPercentage: 0.2,
-          borderSkipped: false,
-        },
-      ],
-    }
-    const totalEarning_2 = document.getElementById('totalEarning-2')
-    const Chart4 = new Chart(totalEarning_2, {
-      type: "bar",
-      data: data4,
       options: options3
     })
   </script>
