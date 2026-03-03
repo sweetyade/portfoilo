@@ -382,27 +382,39 @@
       mask-image: url(../images/system/chevron-down.svg);
     }
   }
+
+  &.s {
+    @include abs.body2;
+  }
 }
 
 .widget {
+  // box-sizing: border-box;
+  box-shadow: var(--shadow-m);
+  background-color: var(--bg-paper);
+  border-radius: var(--border-radius-m);
+
   &-block {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     gap: var(--gap-6);
 
-    & > div {
-      box-shadow: var(--shadow-m);
-      background-color: var(--bg-paper);
-      border-radius: var(--border-radius-m);
+    &-depth {
+      gap: var(--gap-6);
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+
+      .widget {
+        width: 100%;
+      }
     }
   }
 
   &-title {
     padding: var(--padding-6) var(--padding-6) 0;
     display: grid;
-    gap: var(--gap-1);
 
     .tit {
       @include abs.flexbtw;
@@ -412,6 +424,15 @@
         cursor: pointer;
         width: 22px;
         background-color: var(--text-disabled);
+      }
+
+      .tit-icon {
+        gap: var(--gap-3);
+        @include abs.flex;
+
+        .ic {
+          background-color: var(--text-primary);
+        }
       }
     }
 
@@ -458,6 +479,19 @@
       .ic {
         width: 22px;
       }
+
+      &.logo-card {
+        background-color: var(--action-hover);
+        width: 50px;
+        height: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &.product-img {
+        width: 46px;
+        height: 46px;
+      }
     }
 
     .txts {
@@ -498,6 +532,19 @@
     &.l {
       .icon {
         width: 38px;
+        height: 38px;
+      }
+    }
+
+    &.xl {
+      .icon {
+        width: 40px;
+        height: 40px;
+
+        .ic {
+          width: 24px;
+          height: 24px;
+        }
       }
     }
   }
@@ -539,7 +586,13 @@
 
   &-board-title {
     padding: var(--padding-6);
+    @include abs.h5;
     @include abs.flexbtw;
+
+    .ic {
+      width: 22px;
+      background-color: var(--text-disabled);
+    }
   }
 
   &-board {
@@ -582,6 +635,35 @@
 
         &:has(.check-block) {
           padding: 5px 0 5px var(--gap-3);
+        }
+      }
+
+      &.s {
+        th,
+        td {
+          padding-inline: var(--padding-4) 0;
+
+          &:first-child {
+            padding-left: var(--padding-6);
+          }
+
+          &:last-child {
+            padding-right: var(--padding-6);
+            text-align: right;
+          }
+
+          &::after {
+            display: none;
+          }
+        }
+
+        th {
+          border-bottom: 1px solid var(--etc-divider);
+        }
+
+        td {
+          height: 62px;
+          border-top: 0;
         }
       }
     }
@@ -877,6 +959,196 @@
     .canvas-revenue-growth {
       width: 150px;
       height: 172px;
+    }
+  }
+
+  .earning-reports-2 {
+    .earning-reports-tabs {
+      gap: var(--gap-4);
+      padding-bottom: var(--gap-2);
+      @include abs.flex;
+
+      .tab-btn {
+        width: 110px;
+        height: 100px;
+        padding-inline: var(--gap-5);
+        border-radius: var(--border-radius-xl);
+        border: 1px dashed var(--etc-divider);
+        display: grid;
+        gap: var(--gap-2);
+        align-content: center;
+        justify-items: center;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        .icon {
+          background-color: var(--bg-avatar);
+          width: 38px;
+          height: 38px;
+          border-radius: var(--border-radius-m);
+          transition: all 0.2s;
+          @include abs.flexcenter;
+
+          .ic {
+            width: 22px;
+            height: 22px;
+            transition: all 0.2s;
+            background-color: var(--text-secondary);
+          }
+        }
+
+        &.active {
+          border: 1px solid var(--primary-main);
+          .icon {
+            background-color: var(--primary-alp-light);
+
+            .ic {
+              background-color: var(--primary-main);
+            }
+          }
+        }
+      }
+    }
+
+    .canvas_earning_order {
+      height: 231px;
+    }
+  }
+
+  .project-status {
+    .canvas-project-status {
+      height: 232px;
+      margin-bottom: var(--gap-6);
+    }
+  }
+
+  .active-projects {
+    .widget-icon-tit {
+      .icon .ic {
+        width: 32px;
+        background-color: transparent;
+      }
+    }
+
+    .progress-bar {
+      width: 80px;
+    }
+
+    .progress-per {
+      color: var(--text-disabled);
+    }
+  }
+
+  .last-transaction {
+  }
+
+  &.view-sales {
+    background-image: url("/assets/images/sub/bg-widget-man.svg");
+    background-repeat: no-repeat;
+    background-size: 116px;
+    background-position: calc(100% - 24px) bottom;
+
+    .widget-con {
+      padding-top: var(--padding-2);
+    }
+  }
+
+  .statistics-list {
+    @include abs.flexbtw;
+  }
+
+  .profit {
+    padding-top: var(--gap-3);
+
+    .canvas-profit {
+      height: 80px;
+    }
+  }
+
+  .expenses {
+    padding-top: var(--padding-3);
+    .canvas_expenses {
+      height: 78px;
+      position: relative;
+
+      .prog_per {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        @include abs.h4;
+      }
+    }
+  }
+
+  &.generated-leads {
+    padding: var(--padding-6);
+    @include abs.flexbtw;
+
+    .widget-title {
+      padding: 0;
+    }
+
+    .left-con {
+      width: calc(100% - 120px);
+
+      .con-data {
+        padding-top: 6px;
+      }
+    }
+
+    .canvas_generated-leads {
+      width: 120px;
+      height: 120px;
+      position: relative;
+
+      .total {
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .f-h4 {
+          line-height: 1;
+        }
+      }
+    }
+  }
+
+  &.revenue-report {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    .left-con {
+      width: calc(100% - 265px);
+
+      .widget-con {
+        height: calc(100% - 52px);
+        display: grid;
+        align-content: center;
+
+        .canvas-revenue-report1,
+        .canvas-revenue-report2 {
+          height: 130px;
+        }
+      }
+    }
+
+    .right-con {
+      width: 265px;
+      padding-inline: 48px;
+      display: grid;
+      justify-items: center;
+      align-content: center;
+      gap: var(--gap-8);
+    }
+  }
+
+  .earning-report-3 {
+    .canvas-earning-report-3 {
+      height: 196px;
     }
   }
 }

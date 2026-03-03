@@ -606,10 +606,19 @@
     }
   }
 
-  &.secondary {
-    .progress-bar span {
-      background-color: var(--secondary-main);
-      box-shadow: var(--secondary-shadow-s);
+  &.l {
+    gap: var(--gap-4);
+    .progress-bar {
+      height: 8px;
+    }
+  }
+
+  @each $c in abs.$themeColors {
+    &.#{$c} {
+      .progress-bar span {
+        background-color: var(--#{$c}-main);
+        box-shadow: var(--#{$c}-shadow-s);
+      }
     }
   }
 }
@@ -1231,15 +1240,16 @@
   border-bottom: 1px solid var(--etc-divider);
 
   .tab-btn {
-    @include abs.flexcenter;
     gap: 6px;
-    @include abs.btnm;
     height: 38px;
     padding-inline: var(--padding-5);
     white-space: nowrap;
     cursor: pointer;
     position: relative;
     font-weight: var(--fw-medium);
+    transition: all 0.2s;
+    @include abs.btnm;
+    @include abs.flexcenter;
 
     &::after {
       content: "";

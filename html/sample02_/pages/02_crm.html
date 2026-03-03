@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
   <!-- css -->
-  <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="../assets/css/style.css">
   <title>02.CRM</title>
 </head>
@@ -822,6 +821,60 @@
         </div>
 
         <div class="widget-block mb_1_5">
+          <!-- Earning Reports -->
+          <div class="widget column-8">
+            <div class="widget-title">
+              <p class="tit"><span>Earning Reports</span><i class="ic dots-vertical"></i></p>
+              <p class="subtit">Yearly Earnings Overview</p>
+            </div>
+
+            <div class="widget-con earning-reports-2">
+              <div class="earning-reports-tabs">
+                <div class="tab-btn active">
+                  <p class="icon"><i class="ic shopping-cart"></i></p>
+                  <span>Orders</span>
+                </div>
+                <div class="tab-btn">
+                  <p class="icon"><i class="ic chart-bar"></i></p>
+                  <span>Sales</span>
+                </div>
+                <div class="tab-btn">
+                  <p class="icon"><i class="ic currency-dollar"></i></p>
+                  <span>Profit</span>
+                </div>
+                <div class="tab-btn">
+                  <p class="icon"><i class="ic chart-pie-2"></i></p>
+                  <span>Income</span>
+                </div>
+                <div class="tab-btn">
+                  <p class="icon"><i class="ic plus"></i></p>
+                </div>
+              </div>
+              <div class="canvas_earning_order">
+                <canvas id="earningOrder" class="tab-con"></canvas>
+                <canvas id="earningOrder_2" class="tab-con" style="display: none;"></canvas>
+                <canvas id="earningOrder_3" class="tab-con" style="display: none;"></canvas>
+                <canvas id="earningOrder_4" class="tab-con" style="display: none;"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sales -->
+          <div class="widget column-4">
+            <div class="widget-title">
+              <p class="tit"><span>Sales</span><i class="ic dots-vertical"></i></p>
+              <p class="subtit">Last 6 Months</p>
+            </div>
+
+            <div class="widget-con">
+              <div class="canvas-sales-redar">
+                <canvas id="salesRedar"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="widget-block mb_1_5">
           <!-- sales by countries -->
           <div class="widget column-4">
             <div class="widget-title">
@@ -902,113 +955,144 @@
             </div>
 
             <div class="widget-con project-status">
+              <div class="widget-item">
+                <div class="widget-icon-tit xl warning">
+                  <p class="icon"><i class="ic currency-dollar"></i></p>
+                  <div class="txts">
+                    <p class="tit">$4,3742</p>
+                    <p class="desc">Your Earnings</p>
+                  </div>
+                </div>
+                <p class="icon-per up">+10.2%</p>
+              </div>
+
               <div class="canvas-project-status">
                 <canvas id="projectStatus"></canvas>
               </div>
 
               <div class="widget-list">
                 <div class="widget-item">
-                  <div class="widget-icon-tit l primary">
-                    <p class="icon"><i class="ic brand-paypal"></i></p>
+                  <div class="widget-icon-tit">
                     <div class="txts">
-                      <p class="tit">Total Revenue</p>
-                      <p class="desc">Client Payment</p>
+                      <p class="tit">Donates</p>
                     </div>
                   </div>
-                  <p class="icon-per up">+$126</p>
+                  <div class="item-right">
+                    <p class="desc">$756.26</p>
+                    <p class="icon-per down">-139.34</p>
+                  </div>
                 </div>
                 <div class="widget-item">
-                  <div class="widget-icon-tit l secondary">
-                    <p class="icon"><i class="ic currency-dollar"></i></p>
+                  <div class="widget-icon-tit">
                     <div class="txts">
-                      <p class="tit">Total Sales</p>
-                      <p class="desc">Refund</p>
+                      <p class="tit">Podcasts</p>
                     </div>
                   </div>
-                  <p class="icon-per up">+$98</p>
+                  <div class="item-right">
+                    <p class="desc">$2,207.03</p>
+                    <p class="icon-per up">+576.24</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- monthly campain state -->
+          <!-- Active Projects -->
           <div class="widget column-4">
             <div class="widget-title">
-              <p class="tit"><span>Monthly Campaign State</span><i class="ic dots-vertical"></i></p>
-              <p class="subtit">8.52k Social Visitors</p>
+              <p class="tit"><span>Active Projects</span><i class="ic dots-vertical"></i></p>
+              <p class="subtit">Average 72% completed</p>
             </div>
 
-            <div class="widget-con list-auto">
+            <div class="widget-con list-auto active-projects">
               <div class="widget-item">
-                <div class="widget-icon-tit success">
-                  <p class="icon"><i class="ic mail"></i></p>
+                <div class="widget-icon-tit">
+                  <p class="icon"><i class="ic logo-laravel"></i></p>
                   <div class="txts">
-                    <p class="tit">Emails</p>
+                    <p class="tit">Laravel</p>
+                    <p class="desc">Ecommerce</p>
                   </div>
                 </div>
                 <div class="item-right">
-                  <p class="desc">12,346</p>
-                  <p class="icon-per up">0.3%</p>
+                  <div class="progress l error">
+                    <div class="progress-bar"><span style="--barW: 85%"></span></div>
+                    <div class="progress-per">85%</div>
+                  </div>
                 </div>
               </div>
               <div class="widget-item">
-                <div class="widget-icon-tit info">
-                  <p class="icon"><i class="ic link"></i></p>
+                <div class="widget-icon-tit">
+                  <p class="icon"><i class="ic logo-figma"></i></p>
                   <div class="txts">
-                    <p class="tit">Opened</p>
+                    <p class="tit">Figma</p>
+                    <p class="desc">App UI Kit</p>
                   </div>
                 </div>
                 <div class="item-right">
-                  <p class="desc">8,734</p>
-                  <p class="icon-per up">2.1%</p>
+                  <div class="progress l">
+                    <div class="progress-bar"><span style="--barW: 86%"></span></div>
+                    <div class="progress-per">86%</div>
+                  </div>
                 </div>
               </div>
               <div class="widget-item">
-                <div class="widget-icon-tit warning">
-                  <p class="icon"><i class="ic mouse"></i></p>
+                <div class="widget-icon-tit">
+                  <p class="icon"><i class="ic logo-vue"></i></p>
                   <div class="txts">
-                    <p class="tit">Clicked</p>
+                    <p class="tit">VueJS</p>
+                    <p class="desc">Calendar App</p>
                   </div>
                 </div>
                 <div class="item-right">
-                  <p class="desc">967</p>
-                  <p class="icon-per down">1.4%</p>
+                  <div class="progress l success">
+                    <div class="progress-bar"><span style="--barW: 90%"></span></div>
+                    <div class="progress-per">90%</div>
+                  </div>
                 </div>
               </div>
               <div class="widget-item">
-                <div class="widget-icon-tit primary">
-                  <p class="icon"><i class="ic users"></i></p>
+                <div class="widget-icon-tit">
+                  <p class="icon"><i class="ic logo-react"></i></p>
                   <div class="txts">
-                    <p class="tit">Subscribe</p>
+                    <p class="tit">React</p>
+                    <p class="desc">Dashboard</p>
                   </div>
                 </div>
                 <div class="item-right">
-                  <p class="desc">345</p>
-                  <p class="icon-per up">8.5%</p>
+                  <div class="progress l info">
+                    <div class="progress-bar"><span style="--barW: 37%"></span></div>
+                    <div class="progress-per">37%</div>
+                  </div>
                 </div>
               </div>
               <div class="widget-item">
-                <div class="widget-icon-tit secondary">
-                  <p class="icon"><i class="ic alert-report-problem"></i></p>
+                <div class="widget-icon-tit">
+                  <p class="icon"><i class="ic logo-bootstrap"></i></p>
                   <div class="txts">
-                    <p class="tit">Complaints</p>
+                    <p class="tit">Bootstrap</p>
+                    <p class="desc">Website</p>
                   </div>
                 </div>
                 <div class="item-right">
-                  <p class="desc">10</p>
-                  <p class="icon-per down">1.5%</p>
+                  <div class="progress l">
+                    <div class="progress-bar"><span style="--barW: 22%"></span></div>
+                    <div class="progress-per">22%</div>
+                  </div>
                 </div>
               </div>
               <div class="widget-item">
-                <div class="widget-icon-tit error">
-                  <p class="icon"><i class="ic ban"></i></p>
+                <div class="widget-icon-tit">
+                  <p class="icon"><i class="ic logo-sketch"></i></p>
                   <div class="txts">
-                    <p class="tit">Unsubscribe</p>
+                    <p class="tit">Sketch</p>
+                    <p class="desc">Website Design</p>
                   </div>
                 </div>
                 <div class="item-right">
-                  <p class="desc">86</p>
-                  <p class="icon-per up">0.8%</p>
+                  <div class="progress l warning">
+                    <div class="progress-bar"><span style="--barW: 29%"></span></div>
+                    <div class="progress-per">29%</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1016,412 +1100,225 @@
         </div>
 
         <div class="widget-block mb_1_5">
-          <!-- source visits -->
-          <div class="widget column-4">
-            <div class="widget-title">
-              <p class="tit"><span>Source Visits</span><i class="ic dots-vertical"></i></p>
-              <p class="subtit">38.4k Visitors</p>
-            </div>
-
-            <div class="widget-con list-auto">
-              <div class="widget-item">
-                <div class="widget-icon-tit secondary">
-                  <p class="icon"><i class="ic shadow"></i></p>
-                  <div class="txts">
-                    <p class="tit">Direct Source</p>
-                    <p class="desc">Direct link click</p>
-                  </div>
-                </div>
-                <div class="item-right">
-                  <p class="desc">1.2k</p>
-                  <p class="chip s label success">+4.2%</p>
-                </div>
-              </div>
-              <div class="widget-item">
-                <div class="widget-icon-tit secondary">
-                  <p class="icon"><i class="ic globe"></i></p>
-                  <div class="txts">
-                    <p class="tit">Social Networks</p>
-                    <p class="desc">Social Channels</p>
-                  </div>
-                </div>
-                <div class="item-right">
-                  <p class="desc">31.5k</p>
-                  <p class="chip s label success">+8.2%</p>
-                </div>
-              </div>
-              <div class="widget-item">
-                <div class="widget-icon-tit secondary">
-                  <p class="icon"><i class="ic mail"></i></p>
-                  <div class="txts">
-                    <p class="tit">Email Newsletter</p>
-                    <p class="desc">Mail Campaigns</p>
-                  </div>
-                </div>
-                <div class="item-right">
-                  <p class="desc">893</p>
-                  <p class="chip s label success">+2.4%</p>
-                </div>
-              </div>
-              <div class="widget-item">
-                <div class="widget-icon-tit secondary">
-                  <p class="icon"><i class="ic external-link"></i></p>
-                  <div class="txts">
-                    <p class="tit">Referrals</p>
-                    <p class="desc">Impact Radius Visits</p>
-                  </div>
-                </div>
-                <div class="item-right">
-                  <p class="desc">342</p>
-                  <p class="chip s label error">-0.4%</p>
-                </div>
-              </div>
-              <div class="widget-item">
-                <div class="widget-icon-tit secondary">
-                  <p class="icon"><i class="ic ad"></i></p>
-                  <div class="txts">
-                    <p class="tit">ADVT</p>
-                    <p class="desc">Google ADVT</p>
-                  </div>
-                </div>
-                <div class="item-right">
-                  <p class="desc">2.15k</p>
-                  <p class="chip s label success">+9.1%</p>
-                </div>
-              </div>
-              <div class="widget-item">
-                <div class="widget-icon-tit secondary">
-                  <p class="icon"><i class="ic star"></i></p>
-                  <div class="txts">
-                    <p class="tit">Other</p>
-                    <p class="desc">Many Sources</p>
-                  </div>
-                </div>
-                <div class="item-right">
-                  <p class="desc">12.5k</p>
-                  <p class="chip s label success">+6.2%</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- project list -->
-          <div class="widget column-8">
+          <!-- Last Transaction -->
+          <div class="widget column-6">
             <div class="widget-board-title">
-              <p class="tit">Project List</p>
-              <div class="input-block" style="--maxW: 250px">
-                <input type="text" class="input" placeholder="Search Project">
-              </div>
+              <p class="tit">Last Transaction</p>
+              <i class="ic dots-vertical"></i>
             </div>
 
-            <div class="widget-board">
-              <table>
+            <div class="widget-board last-transaction">
+              <table class="s">
                 <colgroup>
-                  <col width="48px">
-                  <col width="230px">
-                  <col width="100px">
-                  <col width="120px">
-                  <col width="150px">
-                  <col width="99px">
+                  <col width="36%">
+                  <col width="24%">
+                  <col width="20%">
+                  <col width="20%">
                 </colgroup>
                 <thead>
                   <tr>
-                    <th>
-                      <div class="check-block">
-                        <input type="checkbox" name="" id="checkAll" class="checkbox">
-                        <label for="checkAll" class="label check-label">
-                          <p class="label-bg">
-                            <span class="label-border"></span>
-                            <span class="label-ck"></span>
-                          </p>
-                        </label>
-                      </div>
-                    </th>
-                    <th>PROJECT</th>
-                    <th>Leader</th>
-                    <th>Team</th>
-                    <th>PROGRESS</th>
-                    <th>Action</th>
+                    <th>Card</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Trend</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>
-                      <div class="check-block">
-                        <input type="checkbox" name="" id="pl1" class="checkbox">
-                        <label for="pl1" class="label check-label">
-                          <p class="label-bg">
-                            <span class="label-border"></span>
-                            <span class="label-ck"></span>
-                          </p>
-                        </label>
+                      <div class="widget-icon-tit">
+                        <p class="icon logo-card visa"></p>
+                        <div class="txts">
+                          <p class="tit">*4230</p>
+                          <p class="desc">Credit</p>
+                        </div>
                       </div>
                     </td>
                     <td>
                       <div class="widget-icon-tit">
-                        <p class="icon logo-react"></p>
                         <div class="txts">
-                          <p class="tit">BGC eCommerce App</p>
-                          <p class="desc">React Project</p>
+                          <p class="tit">Sent</p>
+                          <p class="desc">17 Mar 2022</p>
                         </div>
                       </div>
                     </td>
-                    <td>Eileen</td>
-                    <td>
-                      <div class="avatar-group s">
-                        <div class="avatar">
-                          <div class="thumb avt4"></div>
-                          <div class="tooltip bottom">
-                            <p class="tooltip-txt">John Doe</p>
-                          </div>
-                        </div>
-                        <div class="avatar">
-                          <div class="thumb avt5"></div>
-                          <div class="tooltip bottom">
-                            <p class="tooltip-txt">John Doe</p>
-                          </div>
-                        </div>
-                        <div class="avatar">
-                          <div class="thumb avt6"></div>
-                          <div class="tooltip bottom">
-                            <p class="tooltip-txt">John Doe</p>
-                          </div>
-                        </div>
-                        <div class="avatar" style="border: none;">
-                          <div class="thumb">+3</div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="progress">
-                        <div class="progress-bar"><span style="--barW: 78%"></span></div>
-                        <div class="progress-per">78%</div>
-                      </div>
-                    </td>
-                    <td>
-                      <button class="btn btn-icon text"><i class="ic star"></i></button>
-                    </td>
+                    <td><p class="chip s label success">Verified</p></td>
+                    <td class="f-body1">+$1,678</td>
                   </tr>
                   <tr>
                     <td>
-                      <div class="check-block">
-                        <input type="checkbox" name="" id="pl2" class="checkbox">
-                        <label for="pl2" class="label check-label">
-                          <p class="label-bg">
-                            <span class="label-border"></span>
-                            <span class="label-ck"></span>
-                          </p>
-                        </label>
+                      <div class="widget-icon-tit">
+                        <p class="icon logo-card master"></p>
+                        <div class="txts">
+                          <p class="tit">*5578</p>
+                          <p class="desc">Credit</p>
+                        </div>
                       </div>
                     </td>
                     <td>
                       <div class="widget-icon-tit">
-                        <p class="icon logo-figma"></p>
                         <div class="txts">
-                          <p class="tit">Falcon Logo Design</p>
-                          <p class="desc">Figma Project</p>
+                          <p class="tit">Sent</p>
+                          <p class="desc">12 Feb 2022</p>
                         </div>
                       </div>
                     </td>
-                    <td>Owen</td>
-                    <td>
-                      <div class="avatar-group s">
-                        <div class="avatar">
-                          <div class="thumb avt4"></div>
-                          <div class="tooltip bottom">
-                            <p class="tooltip-txt">John Doe</p>
-                          </div>
-                        </div>
-                        <div class="avatar">
-                          <div class="thumb avt2"></div>
-                          <div class="tooltip bottom">
-                            <p class="tooltip-txt">John Doe</p>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="progress">
-                        <div class="progress-bar"><span style="--barW: 18%"></span></div>
-                        <div class="progress-per">18%</div>
-                      </div>
-                    </td>
-                    <td>
-                      <button class="btn btn-icon text"><i class="ic star"></i></button>
-                    </td>
+                    <td><p class="chip s label error">Rejected</p></td>
+                    <td class="f-body1 ">-$839</td>
                   </tr>
                   <tr>
                     <td>
-                      <div class="check-block">
-                        <input type="checkbox" name="" id="pl3" class="checkbox">
-                        <label for="pl3" class="label check-label">
-                          <p class="label-bg">
-                            <span class="label-border"></span>
-                            <span class="label-ck"></span>
-                          </p>
-                        </label>
+                      <div class="widget-icon-tit">
+                        <p class="icon logo-card american"></p>
+                        <div class="txts">
+                          <p class="tit">*4567</p>
+                          <p class="desc">ATM</p>
+                        </div>
                       </div>
                     </td>
                     <td>
                       <div class="widget-icon-tit">
-                        <p class="icon logo-vue"></p>
                         <div class="txts">
-                          <p class="tit">Dashboard Design</p>
-                          <p class="desc">VueJs Project</p>
+                          <p class="tit">Sent</p>
+                          <p class="desc">28 Feb 2022</p>
                         </div>
                       </div>
                     </td>
-                    <td>Keith</td>
-                    <td>
-                      <div class="avatar-group s">
-                        <div class="avatar">
-                          <div class="thumb avt8"></div>
-                          <div class="tooltip bottom">
-                            <p class="tooltip-txt">John Doe</p>
-                          </div>
-                        </div>
-                        <div class="avatar">
-                          <div class="thumb avt2"></div>
-                          <div class="tooltip bottom">
-                            <p class="tooltip-txt">John Doe</p>
-                          </div>
-                        </div>
-                        <div class="avatar">
-                          <div class="thumb avt1"></div>
-                          <div class="tooltip bottom">
-                            <p class="tooltip-txt">John Doe</p>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="progress">
-                        <div class="progress-bar"><span style="--barW: 62%"></span></div>
-                        <div class="progress-per">62%</div>
-                      </div>
-                    </td>
-                    <td>
-                      <button class="btn btn-icon text"><i class="ic star"></i></button>
-                    </td>
+                    <td><p class="chip s label success">Verified</p></td>
+                    <td class="f-body1 ">+$435</td>
                   </tr>
                   <tr>
                     <td>
-                      <div class="check-block">
-                        <input type="checkbox" name="" id="pl4" class="checkbox">
-                        <label for="pl4" class="label check-label">
-                          <p class="label-bg">
-                            <span class="label-border"></span>
-                            <span class="label-ck"></span>
-                          </p>
-                        </label>
+                      <div class="widget-icon-tit">
+                        <p class="icon logo-card visa"></p>
+                        <div class="txts">
+                          <p class="tit">*5699</p>
+                          <p class="desc">Credit</p>
+                        </div>
                       </div>
                     </td>
                     <td>
                       <div class="widget-icon-tit">
-                        <p class="icon logo-xamarin"></p>
                         <div class="txts">
-                          <p class="tit">Foodista Mobile App</p>
-                          <p class="desc">Xamarin Project</p>
+                          <p class="tit">Sent</p>
+                          <p class="desc">08 Jan 2022</p>
                         </div>
                       </div>
                     </td>
-                    <td>Merline</td>
-                    <td>
-                      <div class="avatar-group s">
-                        <div class="avatar">
-                          <div class="thumb avt3"></div>
-                          <div class="tooltip bottom">
-                            <p class="tooltip-txt">John Doe</p>
-                          </div>
-                        </div>
-                        <div class="avatar">
-                          <div class="thumb avt4"></div>
-                          <div class="tooltip bottom">
-                            <p class="tooltip-txt">John Doe</p>
-                          </div>
-                        </div>
-                        <div class="avatar">
-                          <div class="thumb avt5"></div>
-                          <div class="tooltip bottom">
-                            <p class="tooltip-txt">John Doe</p>
-                          </div>
-                        </div>
-                        <div class="avatar" style="border: none;">
-                          <div class="thumb">+8</div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="progress">
-                        <div class="progress-bar"><span style="--barW: 8%"></span></div>
-                        <div class="progress-per">8%</div>
-                      </div>
-                    </td>
-                    <td>
-                      <button class="btn btn-icon text"><i class="ic star"></i></button>
-                    </td>
+                    <td><p class="chip s label secondary">Pending</p></td>
+                    <td class="f-body1 ">+$2,345</td>
                   </tr>
                   <tr>
                     <td>
-                      <div class="check-block">
-                        <input type="checkbox" name="" id="pl5" class="checkbox">
-                        <label for="pl5" class="label check-label">
-                          <p class="label-bg">
-                            <span class="label-border"></span>
-                            <span class="label-ck"></span>
-                          </p>
-                        </label>
+                      <div class="widget-icon-tit">
+                        <p class="icon logo-card visa"></p>
+                        <div class="txts">
+                          <p class="tit">*5699</p>
+                          <p class="desc">Credit</p>
+                        </div>
                       </div>
                     </td>
                     <td>
                       <div class="widget-icon-tit">
-                        <p class="icon logo-sketch"></p>
                         <div class="txts">
-                          <p class="tit">Blockchain Website</p>
-                          <p class="desc">Sketch Project</p>
+                          <p class="tit">Sent</p>
+                          <p class="desc">08 Jan 2022</p>
                         </div>
                       </div>
                     </td>
-                    <td>Allyson</td>
-                    <td>
-                      <div class="avatar-group s">
-                        <div class="avatar">
-                          <div class="thumb avt1"></div>
-                          <div class="tooltip bottom">
-                            <p class="tooltip-txt">John Doe</p>
-                          </div>
-                        </div>
-                        <div class="avatar">
-                          <div class="thumb avt8"></div>
-                          <div class="tooltip bottom">
-                            <p class="tooltip-txt">John Doe</p>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="progress">
-                        <div class="progress-bar"><span style="--barW: 92%"></span></div>
-                        <div class="progress-per">92%</div>
-                      </div>
-                    </td>
-                    <td>
-                      <button class="btn btn-icon text"><i class="ic star"></i></button>
-                    </td>
+                    <td><p class="chip s label error">Rejected</p></td>
+                    <td class="f-body1 ">+$2,345</td>
                   </tr>
                 </tbody>
               </table>
+            </div>
+          </div>
 
-              <div class="board-pagenation">
-                <p class="txt">Showing 1 to 7 of 10 entries</p>
+          <!-- Activity Timeline -->
+          <div class="widget column-6">
+            <div class="widget-title">
+              <div class="tit">
+                <p class="tit-icon">
+                  <i class="ic list-details"></i>
+                  <span>Activity Timeline</span>
+                </p>
+                <i class="ic dots-vertical"></i>
+              </div>
+            </div>
 
-                <div class="pagenation primary">
-                  <p class="page-btn page-first"><i class="ic chevrons-left"></i></p>
-                  <p class="page-btn page-prev"><i class="ic chevron-left"></i></p>
-                  <p class="page-btn">1</p>
-                  <p class="page-btn active">2</p>
-                  <p class="page-btn page-next"><i class="ic chevron-right"></i></p>
-                  <p class="page-btn page-last"><i class="ic chevrons-right"></i></p>
+            <div class="widget-con">
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-header">
+                    <p class="header-dot"></p>
+                    <div class="header-title">
+                      <p class="title">12 Invoices have been paid</p>
+                      <p class="date">12 min ago</p>
+                    </div>
+                  </div>
+                  <div class="timeline-con">
+                    <p class="txt">Invoices have been paid to the company</p>
+                    <button class="btn file">
+                      <i class="ic pdf"></i>
+                      <span>invoices.pdf</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="timeline-item success">
+                  <div class="timeline-header">
+                    <p class="header-dot"></p>
+                    <div class="header-title">
+                      <p class="title">Client Meeting</p>
+                      <p class="date">45 min ago</p>
+                    </div>
+                  </div>
+                  <div class="timeline-con">
+                    <p class="txt">Project meeting with john @10:15am</p>
+                    <div class="avatar-card">
+                    <div class="avatar round">
+                      <div class="thumb avt1"></div>
+                    </div>
+                    <div class="avatar-data">
+                      <p class="avatar-name">Lester McCarthy (Client)</p>
+                      <p class="avatar-txt">CEO of ThemeSelection</p>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="timeline-item info">
+                  <div class="timeline-header">
+                    <p class="header-dot"></p>
+                    <div class="header-title">
+                      <p class="title">Create a new project for client</p>
+                      <p class="date">2 Day Ago</p>
+                    </div>
+                  </div>
+                  <div class="timeline-con">
+                    <p class="txt">6 team members in a project</p>
+                    <div class="avatar-group">
+                      <div class="avatar">
+                        <div class="thumb avt4"></div>
+                        <div class="tooltip bottom">
+                          <p class="tooltip-txt">John Doe</p>
+                        </div>
+                      </div>
+                      <div class="avatar">
+                        <div class="thumb avt5"></div>
+                        <div class="tooltip bottom">
+                          <p class="tooltip-txt">John Doe</p>
+                        </div>
+                      </div>
+                      <div class="avatar">
+                        <div class="thumb avt6"></div>
+                        <div class="tooltip bottom">
+                          <p class="tooltip-txt">John Doe</p>
+                        </div>
+                      </div>
+                      <div class="avatar" style="border: none;">
+                        <div class="thumb">+3</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1567,12 +1464,13 @@
       </div>
     </div>
   </div>
-  
+
+
   <script src="../assets/scripts/jquery-3.7.1.min.js"></script>
-  <script src="../assets/scripts/swiper-bundle.min.js"></script>
   <script src="../assets/scripts/chart.js"></script>
   <script src="../assets/scripts/chartjs-plugin-datalabels@2.0.0"></script>
   <script>
+
     /* ============== sidebar ============= */
     //사이드토글
     $("#sidebarToggle").on("click", function() {
@@ -1661,14 +1559,21 @@
     })
     
 
-    //* ==================== swiper =============== */
-    var swiper = new Swiper(".analytics-slide", {
-      effect: "fade",
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });
+    //earning reports tab
+    $(".earning-reports-tabs").find('.tab-btn').click(function(e){
+      if($(this).hasClass('none')){
+        e.preventDefault();
+      }else{
+        const tabIndex = $(".tab-btn").index(this);
+        $(this).addClass('active')
+        $(this).siblings().removeClass('active');
+        $(".tab-con").hide()
+        $(".tab-con").eq(tabIndex).fadeIn("slow"); 
+        return false;
+      }
+    })
 
+    
     /* ================== table checkbox ================= */
     //테이블 전체체크
     const checkInput = $('.widget-board tbody input')
@@ -1919,6 +1824,359 @@
       type: "bar",
       data: data3,
       options: options3
+    })
+
+    // chart4 ===================== earningOrder 차트 1
+    const data4 = {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+      datasets: [
+        {
+          label: 'Total Sales This Month',
+          data: [28, 10, 45, 38, 15, 30, 35, 28, 8],
+          pointRadius: 0,
+          max: 50,
+          backgroundColor: getBgColors(),
+          borderColor: 'transperent',
+          fill: true,
+          borderWidth: 0,
+          borderRadius: 6,
+          categoryPercentage: 1.0,
+          barPercentage: 0.4,
+        }
+      ]
+    }
+
+    const options4 = { 
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false,
+        },
+        tooltip: {
+          // 기존 툴팁 사용 안 함
+          enabled: false,
+        },
+
+        datalabels: {
+          anchor: 'end',
+          align: "top",
+          offset: 8,
+          formatter: (val) => {
+            return val + 'k';
+          },
+          color: "rgba(47, 43, 61, 0.9)"
+        },
+      },
+      layout: {
+        padding: {
+          top: 40,
+          bottom: 0,
+          left: 10,
+          right: 10 ,
+        },
+      },
+      scales: {
+        x: {
+          grid: {
+            display: false,
+            borderColor : "rgba(47, 43, 61, 0.12)"
+          },
+          ticks: { 
+            color: 'rgba(47, 43, 61, 0.4)' 
+          },
+        },
+        y: {
+          grid: {
+            display: false,
+            borderColor : "rgba(47, 43, 61, 0.12)"
+          },
+          tickWidth: 0,
+          ticks: { 
+            color: 'rgba(47, 43, 61, 0.4)',
+            maxTicksLimit: 6,
+            callback: function(value, index, ticks) {
+                return value + 'k';
+            }
+          },
+          border: {
+          display: false,
+          },
+        },
+      },
+    }
+    function getBgColors() {
+      var array  = [28, 10, 45, 38, 15, 30, 35, 28, 8];
+      var maxValue = Math.max.apply(this, array);
+      var bg = array.map(a => a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)");
+      return bg;
+    }
+    const earningOrder = document.getElementById('earningOrder')
+    const Chart4 = new Chart(earningOrder, {
+      plugins: [ChartDataLabels],
+      type: "bar",
+      data: data4,
+      options: options4
+    })
+
+
+    // chart4-2 ===================== earningOrder 차트 2
+    const data4_2 = {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+      datasets: [
+        {
+          label: 'Total Sales This Month',
+          data:[23, 66, 12, 45, 24, 77, 56, 34, 87],
+          pointRadius: 0,
+          max: 50,
+          backgroundColor: getBgColors2(),
+          borderColor: 'transperent',
+          fill: true,
+          borderWidth: 0,
+          borderRadius: 6,
+          categoryPercentage: 1.0,
+          barPercentage: 0.4,
+        }
+      ]
+    }
+    function getBgColors2() {
+      var array  = [23, 66, 12, 45, 24, 77, 56, 34, 87];
+      var maxValue = Math.max.apply(this, array);
+      var bg = array.map(a => a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)");
+      return bg;
+    }
+    const earningOrder_2 = document.getElementById('earningOrder_2')
+    const Chart4_2 = new Chart(earningOrder_2, {
+      plugins: [ChartDataLabels],
+      type: "bar",
+      data: data4_2,
+      options: options4
+    })
+
+
+     // chart4-3 ===================== earningOrder 차트 3
+    const data4_3 = {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+      datasets: [
+        {
+          label: 'Total Sales This Month',
+          data:[55, 34, 76, 28, 95, 33, 75, 17, 67],
+          pointRadius: 0,
+          max: 50,
+          backgroundColor: getBgColors3(),
+          borderColor: 'transperent',
+          fill: true,
+          borderWidth: 0,
+          borderRadius: 6,
+          categoryPercentage: 1.0,
+          barPercentage: 0.4,
+        }
+      ]
+    }
+
+    function getBgColors3() {
+      var array  = [55, 34, 76, 28, 95, 33, 75, 17, 67];
+      var maxValue = Math.max.apply(this, array);
+      var bg = array.map(a => a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)");
+      return bg;
+    }
+    const earningOrder_3 = document.getElementById('earningOrder_3')
+    const Chart4_3 = new Chart(earningOrder_3, {
+      plugins: [ChartDataLabels],
+      type: "bar",
+      data: data4_3,
+      options: options4
+    })
+
+
+    // chart4-4 ===================== earningOrder 차트 4
+    const data4_4 = {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+      datasets: [
+        {
+          label: 'Total Sales This Month',
+          data:[23, 31, 37, 44, 29, 16, 9, 37, 26],
+          pointRadius: 0,
+          max: 50,
+          backgroundColor: getBgColors4(),
+          borderColor: 'transperent',
+          fill: true,
+          borderWidth: 0,
+          borderRadius: 6,
+          categoryPercentage: 1.0,
+          barPercentage: 0.4,
+        }
+      ]
+    }
+
+    function getBgColors4() {
+      var array  = [23, 31, 37, 44, 29, 16, 9, 37, 26];
+      var maxValue = Math.max.apply(this, array);
+      var bg = array.map(a => a === maxValue ? "#7367f0" : "rgba(115, 103, 240, 0.16)");
+      return bg;
+    }
+    const earningOrder_4 = document.getElementById('earningOrder_4')
+    const Chart4_4 = new Chart(earningOrder_4, {
+      plugins: [ChartDataLabels],
+      type: "bar",
+      data: data4_4,
+      options: options4
+    })
+
+
+    //salesRedar 차트
+    const data5 = {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+      datasets: [
+        {
+          label: 'Sales',
+          data: [5,8,10,3,2,6],
+          pointRadius: 0,
+          backgroundColor: "rgba(115, 103, 240, 0.9)",
+          borderColor: 'transperent',
+          fill: true,
+          borderWidth: 0,
+        },
+        {
+          label: 'Visits',
+          data: [3,5,2,1,8,6],
+          pointRadius: 0,
+          backgroundColor: "rgba(0, 186, 209, 0.9)",
+          borderColor: 'transperent',
+          fill: true,
+          borderWidth: 0,
+
+        },
+        
+      ]
+    };
+    const options5 = {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: "bottom",
+          labels: {
+            boxWidth : 12,
+            boxHeight: 12,
+            color: "rgba(47, 43, 61, 0.7)",
+            useBorderRadius: true,
+            borderRadius: 6,
+            padding: 14,
+            font: {
+              size: 13,
+            },
+          }
+        },
+        tooltip: {
+          enabled: false,
+        },
+        datalabels: {
+          display: false,
+        },
+      },
+      layout: {
+        padding: {
+          top: 0,
+          bottom: 0,
+          left: 0,
+          right: 0 ,
+        },
+      },
+      scales: {
+        r: {
+        min: 0, // MIN
+        max: 10, // MAX
+        pointLabels: {
+            color: 'rgba(47, 43, 61, 0.4)',
+            font: {
+              size: 13,
+            }
+          },
+          grid:{
+            color: "rgba(47, 43, 61, 0.12)"
+          },
+        beginAtZero: true,
+          ticks: {
+          stepSize: 5,
+          display:false,
+          },
+        },
+      },
+    };
+    const salesRedar = document.getElementById('salesRedar')
+    const Chart5 = new Chart(salesRedar, {
+      type: "radar",
+      data: data5,
+      options: options5
+    })
+
+
+    // //canvas_project_states
+    const projectStatus = document.getElementById('projectStatus').getContext('2d')
+    var gradient2 = projectStatus.createLinearGradient(0,0,0,220)
+    // var gradient2 = projectStatus.createLinearGradient(0,0,0,projectStatus.canvas.clientHeight)
+    gradient2.addColorStop(0, 'rgba(255, 159, 67, 0.23)')
+    gradient2.addColorStop(1, 'rgba(255, 159, 67, 0)')
+    const data6 = {
+      labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9","10","11","12","13","14","15","16"],
+      datasets: [
+        {
+          label: 'Total Sales This Month',
+          data: [3, 3, 6, 6, 5, 5, 3, 3,5,5,7,7,6,6,9,9],
+          pointRadius: 0,
+          backgroundColor: gradient2,
+          borderColor: "rgba(255, 159, 67,1)",
+          fill: true,
+          borderWidth: 4,
+        }
+      ]
+    }
+    const options6 = {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false,
+        },
+        tooltip: {
+          enabled: false,
+        },
+
+        datalabels: {
+          display: false,
+        },
+      },
+
+      layout: {
+        padding: {
+          top:24,
+          bottom: 24,
+          left: 0,
+          right: 0 ,
+        },
+      },
+      scales: {
+        x: {
+          display: false,
+          grid: {
+            display: false,
+          },
+          
+        },
+        y: {
+          display: false,
+          beginAtZero: true,
+          grid: {
+            display: false,
+          },
+        },
+      },
+    }
+    const Chart6 = new Chart(projectStatus, {
+      type: "line",
+      data: data6,
+      options: options6
     })
   </script>
 </body>

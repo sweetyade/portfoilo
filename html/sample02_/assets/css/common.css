@@ -206,6 +206,7 @@
   --border-radius-s: 4px;
   --border-radius-m: 6px;
   --border-radius-l: 8px;
+  --border-radius-xl: 10px;
   --border-radius-round: 500px;
   /*=========== padding & gap ============*/
   --padding-1: 4px;
@@ -431,6 +432,19 @@ button {
     transform: rotate(359deg);
   }
 }
+@keyframes a-ripple {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    padding-bottom: 200%;
+    opacity: 0;
+  }
+}
 /***************************************************************
     03. layout
 ***************************************************************/
@@ -594,52 +608,64 @@ button {
   height: 100svh;
 }
 
+.column-1 {
+  grid-column: span 1;
+  box-sizing: border-box;
+}
+
 .column-2 {
-  width: calc(16.6666666667% + 14px);
-  min-width: 198px;
+  grid-column: span 2;
+  box-sizing: border-box;
 }
 
 .column-3 {
-  width: calc(25% + 28px);
+  grid-column: span 3;
+  box-sizing: border-box;
 }
 
 .column-4 {
-  width: calc(33.3333333333% + 42px);
-  min-width: 422px;
+  grid-column: span 4;
+  box-sizing: border-box;
 }
 
 .column-5 {
-  width: calc(41.6666666667% + 56px);
+  grid-column: span 5;
+  box-sizing: border-box;
 }
 
 .column-6 {
-  width: calc(50% + 70px);
-  min-width: 645px;
+  grid-column: span 6;
+  box-sizing: border-box;
 }
 
 .column-7 {
-  width: calc(58.3333333333% + 84px);
+  grid-column: span 7;
+  box-sizing: border-box;
 }
 
 .column-8 {
-  width: calc(66.6666666667% + 98px);
-  min-width: 868px;
+  grid-column: span 8;
+  box-sizing: border-box;
 }
 
 .column-9 {
-  width: calc(75% + 112px);
+  grid-column: span 9;
+  box-sizing: border-box;
 }
 
 .column-10 {
-  width: calc(83.3333333333% + 126px);
+  grid-column: span 10;
+  box-sizing: border-box;
 }
 
 .column-11 {
-  width: calc(91.6666666667% + 140px);
+  grid-column: span 11;
+  box-sizing: border-box;
 }
 
 .column-12 {
-  width: calc(41.6666666667% + 56px);
+  grid-column: span 12;
+  box-sizing: border-box;
 }
 
 /***************************************************************
@@ -747,6 +773,14 @@ body {
 
 .fw-light {
   font-weight: var(--fw-light);
+}
+
+.txt-right {
+  text-align: right;
+}
+
+.txt-center {
+  text-align: center;
 }
 
 /***************************************************************
@@ -1479,6 +1513,10 @@ i {
   -webkit-mask-image: url(../images/system/id.svg);
           mask-image: url(../images/system/id.svg);
 }
+.ic.list-details {
+  -webkit-mask-image: url(../images/system/list-details.svg);
+          mask-image: url(../images/system/list-details.svg);
+}
 .ic.loading {
   -webkit-mask-image: url(../images/system/loading.svg);
           mask-image: url(../images/system/loading.svg);
@@ -1680,6 +1718,26 @@ i {
 
 .logo-sketch {
   background-image: url(../images/icons/logo-sketch.svg);
+}
+
+.logo-laravel {
+  background-image: url(../images/icons/logo-laravel.svg);
+}
+
+.logo-bootstrap {
+  background-image: url(../images/icons/logo-bootstrap.svg);
+}
+
+.visa {
+  background-image: url(../images/icons/card-visa.svg);
+}
+
+.master {
+  background-image: url(../images/icons/card-master.svg);
+}
+
+.american {
+  background-image: url(../images/icons/card-american.svg);
 }
 
 /***************************************************************
@@ -2325,9 +2383,35 @@ i {
 .progress.s .progress-bar {
   height: 3px;
 }
+.progress.l {
+  gap: var(--gap-4);
+}
+.progress.l .progress-bar {
+  height: 8px;
+}
+.progress.primary .progress-bar span {
+  background-color: var(--primary-main);
+  box-shadow: var(--primary-shadow-s);
+}
 .progress.secondary .progress-bar span {
   background-color: var(--secondary-main);
   box-shadow: var(--secondary-shadow-s);
+}
+.progress.info .progress-bar span {
+  background-color: var(--info-main);
+  box-shadow: var(--info-shadow-s);
+}
+.progress.success .progress-bar span {
+  background-color: var(--success-main);
+  box-shadow: var(--success-shadow-s);
+}
+.progress.warning .progress-bar span {
+  background-color: var(--warning-main);
+  box-shadow: var(--warning-shadow-s);
+}
+.progress.error .progress-bar span {
+  background-color: var(--error-main);
+  box-shadow: var(--error-shadow-s);
 }
 
 .snackbar {
@@ -3047,18 +3131,19 @@ i {
   border-bottom: 1px solid var(--etc-divider);
 }
 .tabs .tab-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 6px;
-  font-size: var(--btn-m);
-  line-height: 1;
   height: 38px;
   padding-inline: var(--padding-5);
   white-space: nowrap;
   cursor: pointer;
   position: relative;
   font-weight: var(--fw-medium);
+  transition: all 0.2s;
+  font-size: var(--btn-m);
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .tabs .tab-btn::after {
   content: "";
@@ -3729,6 +3814,7 @@ i {
   background-color: var(--primary-main);
   box-shadow: var(--primary-shadow-s);
   white-space: nowrap;
+  position: relative;
 }
 .btn .ic {
   width: 16px;
@@ -3812,6 +3898,7 @@ i {
 }
 .btn-icon .ic {
   width: 22px;
+  height: 22px;
 }
 .btn-icon .badge {
   position: absolute;
@@ -4409,6 +4496,32 @@ i {
   display: flex;
   align-items: center;
   gap: var(--gap);
+}
+
+.ripple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+
+.ripple__circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.ripple.is-active .ripple__circle {
+  animation: a-ripple 0.4s ease-in;
 }
 
 /***************************************************************
