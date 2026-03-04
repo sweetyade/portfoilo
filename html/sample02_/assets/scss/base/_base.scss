@@ -81,7 +81,8 @@ table {
 input,
 textarea,
 button,
-select {
+select,
+datalist {
   font-family: inherit;
   appearance: none;
   border-radius: 0;
@@ -133,6 +134,11 @@ button {
 
 [type="search"]::-webkit-search-decoration {
   appearance: none;
+}
+
+/* datalist 화살표 없애기 */
+input[list]::-webkit-calendar-picker-indicator {
+  display: none !important;
 }
 
 ::-webkit-file-upload-button {

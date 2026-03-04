@@ -71,7 +71,15 @@
   gap: 4px;
   position: relative;
 
+  .input[list] {
+    background-image: url(../images/system/chevron-down.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 14px) center;
+    background-size: 16px;
+  }
+
   .input-inner {
+    width: 100%;
     order: 2;
     position: relative;
   }
@@ -136,6 +144,10 @@
     }
     .label {
       color: var(--primary-main);
+    }
+
+    .input[list] {
+      background-image: url(../images/system/chevron-up.svg);
     }
   }
 
@@ -315,6 +327,13 @@
       border-color: var(--success-main);
     }
   }
+}
+
+.input-mix {
+  width: 100%;
+  max-width: var(--maxW);
+  gap: var(--gap-4);
+  @include abs.flexbtw;
 }
 
 /* checkbox, radio */
