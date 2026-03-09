@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
   <!-- css -->
   <link rel="stylesheet" href="../assets/css/style.css">
-  <title>04.Academy</title>
+  <title>05.Logistics</title>
 </head>
 <body>
   <div id="wrap">
@@ -448,7 +448,7 @@
 
     <!-- main -->
     <main class="main" id="main">
-      <h2 style="display: none;">Academy</h2>
+      <h2 style="display: none;">Logistics</h2>
       <div class="main-con">
         <!-- \\\\ top search \\\\\ -->
         <div class="main-top">
@@ -740,331 +740,422 @@
           </div>
         </div>
 
-        <div class="academy-top">
-          <!-- welcome -->
-          <div class="academy-welcome">
-            <h3 class="welcome-title">
-              <p class="tit">Welcome back, <span>Felecia 👋🏻 </span></p>
-              <p class="subtit">Your progress this week is Awesome. let's keep it up and get a lot of points reward!</p>
-            </h3>
-            <div class="welcom-con">
-              <div class="welcome-item primary">
-                <p class="icon"><i class="ic Laptop"></i></p>
-                <div class="item-con">
-                  <p class="txt">Hours Spent</p>
-                  <p class="cnt">34h</p>
-                </div>
-              </div>
-              <div class="welcome-item info">
-                <p class="icon"><i class="ic Lightbulb"></i></p>
-                <div class="item-con">
-                  <p class="txt">Test Results</p>
-                  <p class="cnt">82%</p>
-                </div>
-              </div>
-              <div class="welcome-item warning">
-                <p class="icon"><i class="ic Check"></i></p>
-                <div class="item-con">
-                  <p class="txt">Course Completed</p>
-                  <p class="cnt">14</p>
-                </div>
-              </div>
+        <div class="widget-block mb_1_5">
+          <div class="widget column-3 widget-line primary">
+            <div class="widget-title">
+              <div class="icon"><i class="ic truck"></i></div>
+              <p class="f-h4">42</p>
             </div>
+            <p class="sbj">On route vehicles</p>
+            <p class="desc">+18.2%<span>than last week</span></p>
           </div>
 
-          <!-- time soendings -->
-          <div class="academy-time">
-            <div class="time-left">
-              <h3 class="time-title">
-                <p class="tit">Time spendings</p>
-                <p class="subtit">Weekly report</p>
-              </h3>
+          <div class="widget column-3 widget-line warning">
+            <div class="widget-title">
+              <div class="icon"><i class="ic alert-triangle"></i></div>
+              <p class="f-h4">8</p>
+            </div>
+            <p class="sbj">Vehicles with errors</p>
+            <p class="desc">-8.7%<span>than last week</span></p>
+          </div>
 
-              <div class="welcom-con">
-                <p class="f-h4">231<span class="text-secondary">h</span> 14<span class="text-secondary">m</span></p>
-                <p class="chip s label success">+18.4%</p>
-              </div>
+          <div class="widget column-3 widget-line error">
+            <div class="widget-title">
+              <div class="icon"><i class="ic git-fork"></i></div>
+              <p class="f-h4">27</p>
             </div>
-            <div class="canvas-time-spendings">
-              <canvas id="timeSpendings"></canvas>
-              <div class="total">
-                <p class="f-h5">231h</p>
-                <p class="f-body2 text-secondary">Total</p>
-              </div>
+            <p class="sbj">Deviated from route</p>
+            <p class="desc">+4.3%<span>than last week</span></p>
+          </div>
+
+          <div class="widget column-3 widget-line info">
+            <div class="widget-title">
+              <div class="icon"><i class="ic clock"></i></div>
+              <p class="f-h4">13</p>
             </div>
+            <p class="sbj">Late vehicles</p>
+            <p class="desc">-2.5%<span>than last week</span></p>
           </div>
         </div>
 
         <div class="widget-block mb_1_5">
-          <!-- topic interested -->
-          <div class="widget column-8">
+          <!-- Vehicles overview -->
+          <div class="widget column-6">
             <h3 class="widget-title">
-              <p class="tit"><span>Topic you are interested in</span><i class="ic dots-vertical"></i></p>
+              <p class="tit"><span>Vehicles overview</span><i class="ic dots-vertical"></i></p>
             </h3>
 
-            <div class="widget-con topic-interested">
-              <div class="canvas-topic-interested">
-                <canvas id="topicInterested"></canvas>
+            <div class="widget-con vehicles-overview">
+              <div class="labels">
+                <p class="" style="--w: 39.7%">On the way</p>
+                <p class="" style="--w: 28.3%">Unloading</p>
+                <p class="" style="--w: 17.4%">Loading</p>
+                <p class="" style="--w: 14.6%">Waiting</p>
+              </div>
+              <div class="canvas-vehicles-overview">
+                <canvas id="vehiclesOverview"></canvas>
               </div>
 
-              <div class="topic-label">
-                <div class="label-item">
-                  <div class="icon"><span class="primary"></span></div>
-                  <div class="item-con">
-                    <p class="txt">UI Design</p>
-                    <p class="f-h5">35%</p>
+              <div class="list_0_75">
+                <div class="flexbtw">
+                  <div class="list-name">
+                    <i class="ic car"></i>
+                    <p class="">On the way</p>
+                  </div>
+                  <div class="list-data">
+                    <p class="data-1">2hr 10min</p>
+                    <p class="data-2">39.7%</p>
                   </div>
                 </div>
-                <div class="label-item">
-                  <div class="icon"><span class="info"></span></div>
-                  <div class="item-con">
-                    <p class="txt">UX Design</p>
-                    <p class="f-h5">20%</p>
+                <div class="flexbtw">
+                  <div class="list-name">
+                    <i class="ic arrow-down-circle"></i>
+                    <p class="">Unloading</p>
+                  </div>
+                  <div class="list-data">
+                    <p class="data-1">3hr 15min</p>
+                    <p class="data-2">28.3%</p>
                   </div>
                 </div>
-                <div class="label-item">
-                  <div class="icon"><span class="success"></span></div>
-                  <div class="item-con">
-                    <p class="txt">Music</p>
-                    <p class="f-h5">14%</p>
+                <div class="flexbtw">
+                  <div class="list-name">
+                    <i class="ic arrow-up-circle"></i>
+                    <p class="">Loading</p>
+                  </div>
+                  <div class="list-data">
+                    <p class="data-1">1hr 24min</p>
+                    <p class="data-2">17.4%</p>
                   </div>
                 </div>
-                <div class="label-item">
-                  <div class="icon"><span class="secondary"></span></div>
-                  <div class="item-con">
-                    <p class="txt">Animation</p>
-                    <p class="f-h5">12%</p>
+                <div class="flexbtw">
+                  <div class="list-name">
+                    <i class="ic clock"></i>
+                    <p class="">Waiting</p>
                   </div>
-                </div>
-                <div class="label-item">
-                  <div class="icon"><span class="error"></span></div>
-                  <div class="item-con">
-                    <p class="txt">React</p>
-                    <p class="f-h5">10%</p>
-                  </div>
-                </div>
-                <div class="label-item">
-                  <div class="icon"><span class="warning"></span></div>
-                  <div class="item-con">
-                    <p class="txt">SEO</p>
-                    <p class="f-h5">9%</p>
+                  <div class="list-data">
+                    <p class="data-1">5hr 19min</p>
+                    <p class="data-2">14.6%</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- popular instructors -->
-          <div class="widget column-4">
-            <h3 class="widget-board-title">
-              <p class="tit"><span>Popular Instructors</span><i class="ic dots-vertical"></i></p>
-            </h3>
-
-            <div class="widget-grid last-ransaction">
-              <div class="grid-header">
-                <p class="header-th">INSTRUCTORS</p>
-                <p class="header-th">COURSES</p>
-              </div>
-
-              <div class="grid-body">
-                <div class="body-tr">
-                  <div class="body-td">
-                    <div class="widget-icon-tit">
-                      <p class="icon avt1 rounded"></p>
-                      <div class="txts">
-                        <p class="tit">Maven Analytics</p>
-                        <p class="desc">Business Intelligence</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="body-td">33</div>
-                </div>
-                <div class="body-tr">
-                  <div class="body-td">
-                    <div class="widget-icon-tit">
-                      <p class="icon avt8 rounded"></p>
-                      <div class="txts">
-                        <p class="tit">Maven Analytics</p>
-                        <p class="desc">ven Analytics</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="body-td">52</div>
-                </div>
-                <div class="body-tr">
-                  <div class="body-td">
-                    <div class="widget-icon-tit">
-                      <p class="icon avt5 rounded"></p>
-                      <div class="txts">
-                        <p class="tit">Maven Analytics</p>
-                        <p class="desc">UI/UX Design</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="body-td">12</div>
-                </div>
-                <div class="body-tr">
-                  <div class="body-td">
-                    <div class="widget-icon-tit">
-                      <p class="icon avt6 rounded"></p>
-                      <div class="txts">
-                        <p class="tit">Maven Analytics</p>
-                        <p class="desc">React Native</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="body-td">8</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="widget-block mb_1_5">
-          <!-- Top Courses -->
-          <div class="widget column-4">
+          <!-- Shipment statistics -->
+          <div class="widget column-6 shipment-statistics">
             <h3 class="widget-title">
-              <p class="tit"><span>Top Courses</span><i class="ic dots-vertical"></i></p>
+              <p class="tit">Shipment statistics</p>
+              <p class="subtit">Total number of deliveries 23.8k</p>
             </h3>
 
-            <div class="widget-con list-auto top-courses">
-              <div class="widget-item">
-                <div class="widget-icon-tit xl primary">
-                  <p class="icon"><i class="ic video"></i></p>
-                  <div class="txts">
-                    <p class="tit">Videography Basic Design Course</p>
-                  </div>
-                </div>
-                <p class="chip s label secondary">1.2k Views</p>
-              </div>
-              <div class="widget-item">
-                <div class="widget-icon-tit xl info">
-                  <p class="icon"><i class="ic code"></i></p>
-                  <div class="txts">
-                    <p class="tit">Basic Front-end Development Course</p>
-                  </div>
-                </div>
-                <p class="chip s label secondary">834 Views</p>
-              </div>
-              <div class="widget-item">
-                <div class="widget-icon-tit xl success">
-                  <p class="icon"><i class="ic camera"></i></p>
-                  <div class="txts">
-                    <p class="tit">Basic Fundamentals of Photography </p>
-                  </div>
-                </div>
-                <p class="chip s label secondary">3.7k Views</p>
-              </div>
-              <div class="widget-item">
-                <div class="widget-icon-tit xl warning">
-                  <p class="icon"><i class="ic brand-dribbble"></i></p>
-                  <div class="txts">
-                    <p class="tit">Advance Dribble Base Visual Design</p>
-                  </div>
-                </div>
-                <p class="chip s label secondary">1.2k Views</p>
-              </div>
-              <div class="widget-item">
-                <div class="widget-icon-tit xl error">
-                  <p class="icon"><i class="ic microphone-2"></i></p>
-                  <div class="txts">
-                    <p class="tit">Your First Singing Lesson</p>
-                  </div>
-                </div>
-                <p class="chip s label secondary">948 Views</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Upcoming Webinar -->
-          <div class="widget column-4 upcoming-webinar">
-            <div class="top-img"></div>
-            <h3 class="widget-title">
-              <p class="tit">Upcoming Webinar</p>
-              <p class="subtit">Next Generation Frontend Architecture Using Layout Engine And React Native Web.</p>
-            </h3>
             <div class="widget-con">
+              <div class="canvas-shipment-statistics">
+                <canvas id="shipmentStatistics"></canvas>
+              </div>
+
+              <div class="labels">
+                <p class="label-1">Shipment</p>
+                <p class="label-2">Delivery</p>
+              </div>
+            </div>
+
+            <div class="btn_list">
+              <button class="btn label s statisticsBtn">
+                <div class="ripple js-ripple">
+                  <span class="ripple__circle"></span>
+                </div>
+                <span class="textData">January</span><i class="ic chevron-down"></i>
+              </button>
+  
+              <ul class="statisticsList" style="">
+                <li>January</li>
+                <li>Febryary</li>
+                <li>March</li>
+                <li>April</li>
+                <li>May</li>
+                <li>June</li>
+                <li>July</li>
+                <li>August</li>
+                <li>September</li>
+                <li>October</li>
+                <li>Nobember</li>
+                <li>December</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="widget-block mb_1_5">
+          <!-- Delivery Performance -->
+          <div class="widget column-4">
+            <h3 class="widget-title">
+              <p class="tit"><span>Transactions</span><i class="ic dots-vertical"></i></p>
+              <p class="subtit">Total 58 transaction done in month</p>
+            </h3>
+
+            <div class="widget-con list-auto">
               <div class="widget-item">
-                <div class="widget-icon-tit xl primary">
-                  <p class="icon"><i class="ic calendar"></i></p>
+                <div class="widget-icon-tit primary">
+                  <p class="icon"><i class="ic box"></i></p>
                   <div class="txts">
-                    <p class="tit">17 Nov 23</p>
-                    <p class="desc">Date</p>
+                    <p class="tit">Packages in transit</p>
+                    <p class="icon-per up s"><i class="ic chevron-up"></i>25.8%</p>
                   </div>
                 </div>
+                <p class="f-body1 text-secondary">10k</p>
               </div>
               <div class="widget-item">
-                <div class="widget-icon-tit xl primary">
+                <div class="widget-icon-tit info">
+                  <p class="icon"><i class="ic truck"></i></p>
+                  <div class="txts">
+                    <p class="tit">Packages out for delivery</p>
+                    <p class="icon-per up s"><i class="ic chevron-up"></i>4.3%</p>
+                  </div>
+                </div>
+                <p class="f-body1 text-secondary">5k</p>
+              </div>
+              <div class="widget-item">
+                <div class="widget-icon-tit success">
+                  <p class="icon"><i class="ic alert-check-circle"></i></p>
+                  <div class="txts">
+                    <p class="tit">Packages delivered</p>
+                    <p class="icon-per down s"><i class="ic chevron-down"></i>12.5</p>
+                  </div>
+                </div>
+                <p class="f-body1 text-secondary">15k</p>
+              </div>
+              <div class="widget-item">
+                <div class="widget-icon-tit warning">
+                  <p class="icon"><i class="ic percentage"></i></p>
+                  <div class="txts">
+                    <p class="tit">Delivery success rate</p>
+                    <p class="icon-per up s"><i class="ic chevron-up"></i>35.6%</p>
+                  </div>
+                </div>
+                <p class="f-body1 text-secondary">95k</p>
+              </div>
+              <div class="widget-item">
+                <div class="widget-icon-tit secondary">
                   <p class="icon"><i class="ic clock"></i></p>
                   <div class="txts">
-                    <p class="tit">32 minutes</p>
-                    <p class="desc">Duration</p>
+                    <p class="tit">Average delivery time</p>
+                    <p class="icon-per down s"><i class="ic chevron-down"></i>2.15</p>
                   </div>
                 </div>
+                <p class="f-body1 text-secondary">2.5 Days</p>
+              </div>
+              <div class="widget-item">
+                <div class="widget-icon-tit error">
+                  <p class="icon"><i class="ic users"></i></p>
+                  <div class="txts">
+                    <p class="tit">Customer satisfaction</p>
+                    <p class="icon-per up s"><i class="ic chevron-up"></i>5.7%</p>
+                  </div>
+                </div>
+                <p class="f-body1 text-secondary">4.5/5</p>
               </div>
             </div>
-            <button class="btn">
-              <div class="ripple js-ripple">
-                <span class="ripple__circle"></span>
-              </div>
-              Join the event
-            </button>
           </div>
 
-          <!-- Assignment Progress -->
+          <!-- Delivery exceptions -->
           <div class="widget column-4">
-            <div class="widget-title">
-              <p class="tit"><span>Assignment Progress</span><i class="ic dots-vertical"></i></p>
+            <h3 class="widget-title">
+              <p class="tit"><span>Delivery exceptions</span><i class="ic dots-vertical"></i></p>
+            </h3>
+
+            <div class="widget-con delivery-exceptions">
+              <div class="canvas-delivery-exceptions">
+                <canvas id="deliveryExceptions"></canvas>
+                <div class="total">
+                  <p class="f-h4"><strong>30</strong>%</p>
+                  <p class="text-secondary f-body1">AVG. Exceptions</p>
+                </div>
+              </div>
+
+              <div class="labels">
+                <p>Incorrect address</p>
+                <p>Weather conditions</p>
+                <p>Federal Holidays</p>
+                <p>Damage during transit</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Orders by Countries -->
+          <div class="widget column-4 orders-countries">
+            <h3 class="widget-title">
+              <p class="tit"><span>Orders by Countries</span><i class="ic dots-vertical"></i></p>
+              <p class="subtit">62 deliveries in progress</p>
+            </h3>
+
+            <div class="tabs">
+              <p class="tab-btn active" id="tab1">New</p>
+              <p class="tab-btn" id="tab2">Preparing</p>
+              <p class="tab-btn" id="tab3">Shipping</p>
             </div>
 
-            <div class="widget-con list-auto assignment-progress">
-              <div class="widget-item">
-                <div class="widget-icon-tit">
-                  <div class="circle-prg primary" style="--p: 72;">
-                    <p class="per"><strong>72</strong>%</p>
+            <div class="widget-con">
+              <div class="tab-con" id="tab1-con">
+                <div class="timeline dot icon">
+                  <div class="timeline-item">
+                    <div class="timeline-header success">
+                      <p class="header-dot"><i class="ic alert-check-circle"></i></p>
+                      <div class="header-title">
+                        <p class="title">SENDER-new</p>
+                      </div>
+                    </div>
+                    <div class="timeline-con">
+                      <p class="subtit">Myrtle Ullrich</p>
+                      <p class="txt">101 Boulder, California(CA), 95959</p>
+                    </div>
                   </div>
-                  <div class="txts">
-                    <p class="tit">User experience Design</p>
-                    <p class="desc">120 Tasks</p>
+                  <div class="timeline-item">
+                    <div class="timeline-header primary">
+                      <p class="header-dot"><i class="ic map-pin"></i></p>
+                      <div class="header-title">
+                        <p class="title">RECEIVER</p>
+                      </div>
+                    </div>
+                    <div class="timeline-con">
+                      <p class="subtit">Barry Schowalter</p>
+                      <p class="txt">939 Orange, California(CA), 92118</p>
+                    </div>
                   </div>
                 </div>
-                <button class="btn-icon secondary label"><i class="ic star"></i></button>
+                <div class="timeline dot icon">
+                  <div class="timeline-item">
+                    <div class="timeline-header success">
+                      <p class="header-dot"><i class="ic alert-check-circle"></i></p>
+                      <div class="header-title">
+                        <p class="title">SENDER</p>
+                      </div>
+                    </div>
+                    <div class="timeline-con">
+                      <p class="subtit">Veronica Herman</p>
+                      <p class="txt">162  Windsor, California(CA), 95492</p>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-header primary">
+                      <p class="header-dot"><i class="ic map-pin"></i></p>
+                      <div class="header-title">
+                        <p class="title">RECEIVER</p>
+                      </div>
+                    </div>
+                    <div class="timeline-con">
+                      <p class="subtit">Helen Jacobs</p>
+                      <p class="txt">487 Sunset, California(CA), 94043</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="widget-item">
-                <div class="widget-icon-tit">
-                  <div class="circle-prg success" style="--p: 48;">
-                    <p class="per"><strong>48</strong>%</p>
+              <div class="tab-con" id="tab2-con" style="display: none;">
+                <div class="timeline dot icon">
+                  <div class="timeline-item">
+                    <div class="timeline-header success">
+                      <p class="header-dot"><i class="ic alert-check-circle"></i></p>
+                      <div class="header-title">
+                        <p class="title">SENDER-preparing</p>
+                      </div>
+                    </div>
+                    <div class="timeline-con">
+                      <p class="subtit">Myrtle Ullrich</p>
+                      <p class="txt">101 Boulder, California(CA), 95959</p>
+                    </div>
                   </div>
-                  <div class="txts">
-                    <p class="tit">Basic fundamentals</p>
-                    <p class="desc">32 Tasks</p>
+                  <div class="timeline-item">
+                    <div class="timeline-header primary">
+                      <p class="header-dot"><i class="ic map-pin"></i></p>
+                      <div class="header-title">
+                        <p class="title">RECEIVER</p>
+                      </div>
+                    </div>
+                    <div class="timeline-con">
+                      <p class="subtit">Barry Schowalter</p>
+                      <p class="txt">939 Orange, California(CA), 92118</p>
+                    </div>
                   </div>
                 </div>
-                <button class="btn-icon secondary label"><i class="ic star"></i></button>
+                <div class="timeline dot icon">
+                  <div class="timeline-item">
+                    <div class="timeline-header success">
+                      <p class="header-dot"><i class="ic alert-check-circle"></i></p>
+                      <div class="header-title">
+                        <p class="title">SENDER</p>
+                      </div>
+                    </div>
+                    <div class="timeline-con">
+                      <p class="subtit">Veronica Herman</p>
+                      <p class="txt">162  Windsor, California(CA), 95492</p>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-header primary">
+                      <p class="header-dot"><i class="ic map-pin"></i></p>
+                      <div class="header-title">
+                        <p class="title">RECEIVER</p>
+                      </div>
+                    </div>
+                    <div class="timeline-con">
+                      <p class="subtit">Helen Jacobs</p>
+                      <p class="txt">487 Sunset, California(CA), 94043</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="widget-item">
-                <div class="widget-icon-tit">
-                  <div class="circle-prg error" style="--p: 15;">
-                    <p class="per"><strong>15</strong>%</p>
+              <div class="tab-con" id="tab3-con" style="display: none;">
+                <div class="timeline dot icon">
+                  <div class="timeline-item">
+                    <div class="timeline-header success">
+                      <p class="header-dot"><i class="ic alert-check-circle"></i></p>
+                      <div class="header-title">
+                        <p class="title">SENDER-shipping</p>
+                      </div>
+                    </div>
+                    <div class="timeline-con">
+                      <p class="subtit">Myrtle Ullrich</p>
+                      <p class="txt">101 Boulder, California(CA), 95959</p>
+                    </div>
                   </div>
-                  <div class="txts">
-                    <p class="tit">React native components</p>
-                    <p class="desc">182 Tasks</p>
+                  <div class="timeline-item">
+                    <div class="timeline-header primary">
+                      <p class="header-dot"><i class="ic map-pin"></i></p>
+                      <div class="header-title">
+                        <p class="title">RECEIVER</p>
+                      </div>
+                    </div>
+                    <div class="timeline-con">
+                      <p class="subtit">Barry Schowalter</p>
+                      <p class="txt">939 Orange, California(CA), 92118</p>
+                    </div>
                   </div>
                 </div>
-                <button class="btn-icon secondary label"><i class="ic star"></i></button>
-              </div>
-              <div class="widget-item">
-                <div class="widget-icon-tit">
-                  <div class="circle-prg info" style="--p: 28;">
-                    <p class="per"><strong>28</strong>%</p>
+                <div class="timeline dot icon">
+                  <div class="timeline-item">
+                    <div class="timeline-header success">
+                      <p class="header-dot"><i class="ic alert-check-circle"></i></p>
+                      <div class="header-title">
+                        <p class="title">SENDER</p>
+                      </div>
+                    </div>
+                    <div class="timeline-con">
+                      <p class="subtit">Veronica Herman</p>
+                      <p class="txt">162  Windsor, California(CA), 95492</p>
+                    </div>
                   </div>
-                  <div class="txts">
-                    <p class="tit">Basic of music theory</p>
-                    <p class="desc">56 Tasks</p>
+                  <div class="timeline-item">
+                    <div class="timeline-header primary">
+                      <p class="header-dot"><i class="ic map-pin"></i></p>
+                      <div class="header-title">
+                        <p class="title">RECEIVER</p>
+                      </div>
+                    </div>
+                    <div class="timeline-con">
+                      <p class="subtit">Helen Jacobs</p>
+                      <p class="txt">487 Sunset, California(CA), 94043</p>
+                    </div>
                   </div>
                 </div>
-                <button class="btn-icon secondary label"><i class="ic star"></i></button>
               </div>
             </div>
           </div>
@@ -1074,20 +1165,18 @@
           <!-- Course you are taking -->
           <div class="widget column-12">
             <h3 class="widget-board-title">
-              <p class="tit">Course you are taking</p>
-              <div class="input-block" style="--maxW: 250px">
-                <input type="text" class="input" placeholder="Search Course">
-              </div>
+              <p class="tit"><span>On route vehicles</span><i class="ic dots-vertical"></i></p>
             </h3>
 
             <div class="widget-board course-table">
               <table>
                 <colgroup>
                   <col width="48px">
-                  <col width="297px">
-                  <col width="190px">
-                  <col width="297px">
-                  <col width="297px">
+                  <col width="216px">
+                  <col width="215px">
+                  <col width="214px">
+                  <col width="216px">
+                  <col width="216px">
                 </colgroup>
                 <thead>
                   <tr>
@@ -1102,10 +1191,11 @@
                         </label>
                       </div>
                     </th>
-                    <th>Course Name</th>
-                    <th>Time</th>
+                    <th>LOCATION</th>
+                    <th>STARTING ROUTE</th>
+                    <th>ENDING ROUTE</th>
+                    <th>WARNINGS</th>
                     <th>progress</th>
-                    <th>Status</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -1122,41 +1212,20 @@
                       </div>
                     </td>
                     <td>
-                      <div class="widget-icon-tit error xl">
-                        <p class="icon"><i class="ic brand-angular"></i></p>
+                      <div class="widget-icon-tit secondary xl">
+                        <p class="icon rounded"><i class="ic car"></i></p>
                         <div class="txts">
-                          <p class="tit">Basics of Angular</p>
-                          <div class="desc">
-                            <div class="avatar round">
-                              <div class="thumb avt1"></div>
-                            </div>
-                            <span>Tommy Sicilia</span>
-                          </div>
+                          <p class="tit">VOL-653CD1</p>
                         </div>
                       </div>
                     </td>
-                    <td>24h 13m</td>
+                    <td>Sicily, Italy</td>
+                    <td>Tallin, EST</td>
+                    <td><p class="chip s label success">No Warnings</p></td>
                     <td>
                       <div class="progress l">
-                        <div class="progress-per">88%</div>
                         <div class="progress-bar"><span style="--barW: 88%"></span></div>
-                        <p class="progress-txt">8/12</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="course-smrlist">
-                        <div class="course-smritem">
-                          <i class="ic users primary"></i>
-                          <p class="txt">1.2k</p>
-                        </div>
-                        <div class="course-smritem">
-                          <i class="ic book info"></i>
-                          <p class="txt">12</p>
-                        </div>
-                        <div class="course-smritem">
-                          <i class="ic video error"></i>
-                          <p class="txt">43</p>
-                        </div>
+                        <p class="progress-per">88%</p>
                       </div>
                     </td>
                   </tr>
@@ -1173,41 +1242,20 @@
                       </div>
                     </td>
                     <td>
-                      <div class="widget-icon-tit warning xl">
-                        <p class="icon"><i class="ic palette"></i></p>
+                      <div class="widget-icon-tit secondary xl">
+                        <p class="icon rounded"><i class="ic car"></i></p>
                         <div class="txts">
-                          <p class="tit">UI/UX Design</p>
-                          <div class="desc">
-                            <div class="avatar round">
-                              <div class="thumb avt4"></div>
-                            </div>
-                            <span>Waldemar Mannering</span>
-                          </div>
+                          <p class="tit">VOL-243685</p>
                         </div>
                       </div>
                     </td>
-                    <td>234h 13m</td>
+                    <td>Rotterdam</td>
+                    <td>Brussels, Belgium</td>
+                    <td><p class="chip s label warning">Temperature Not Optimal</p></td>
                     <td>
                       <div class="progress l">
-                        <div class="progress-per">21%</div>
-                        <div class="progress-bar"><span style="--barW: 21%"></span></div>
-                        <p class="progress-txt">12/34</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="course-smrlist">
-                        <div class="course-smritem">
-                          <i class="ic users primary"></i>
-                          <p class="txt">456</p>
-                        </div>
-                        <div class="course-smritem">
-                          <i class="ic book info"></i>
-                          <p class="txt">8</p>
-                        </div>
-                        <div class="course-smritem">
-                          <i class="ic video error"></i>
-                          <p class="txt">16</p>
-                        </div>
+                        <div class="progress-bar"><span style="--barW: 32%"></span></div>
+                        <p class="progress-per">32%</p>
                       </div>
                     </td>
                   </tr>
@@ -1224,41 +1272,20 @@
                       </div>
                     </td>
                     <td>
-                      <div class="widget-icon-tit info xl">
-                        <p class="icon"><i class="ic brand-react-native"></i></p>
+                      <div class="widget-icon-tit secondary xl">
+                        <p class="icon rounded"><i class="ic car"></i></p>
                         <div class="txts">
-                          <p class="tit">React Native</p>
-                          <div class="desc">
-                            <div class="avatar round">
-                              <div class="thumb avt3"></div>
-                            </div>
-                            <span>Louetta Esses</span>
-                          </div>
+                          <p class="tit">VOL-348975</p>
                         </div>
                       </div>
                     </td>
-                    <td>47h 13m</td>
+                    <td>Abu Dhabi, UAE</td>
+                    <td>Boston, USA</td>
+                    <td><p class="chip s label error">Ecu Not Responding</p></td>
                     <td>
                       <div class="progress l">
-                        <div class="progress-per">23%</div>
-                        <div class="progress-bar"><span style="--barW: 23%"></span></div>
-                        <p class="progress-txt">7/16</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="course-smrlist">
-                        <div class="course-smritem">
-                          <i class="ic users primary"></i>
-                          <p class="txt">2.4k</p>
-                        </div>
-                        <div class="course-smritem">
-                          <i class="ic book info"></i>
-                          <p class="txt">24</p>
-                        </div>
-                        <div class="course-smritem">
-                          <i class="ic video error"></i>
-                          <p class="txt">89</p>
-                        </div>
+                        <div class="progress-bar"><span style="--barW: 45%"></span></div>
+                        <p class="progress-per">45%</p>
                       </div>
                     </td>
                   </tr>
@@ -1275,49 +1302,28 @@
                       </div>
                     </td>
                     <td>
-                      <div class="widget-icon-tit success xl">
-                        <p class="icon"><i class="ic pencil"></i></p>
+                      <div class="widget-icon-tit secondary xl">
+                        <p class="icon rounded"><i class="ic car"></i></p>
                         <div class="txts">
-                          <p class="tit">Art & Drawing</p>
-                          <div class="desc">
-                            <div class="avatar round">
-                              <div class="thumb avt8"></div>
-                            </div>
-                            <span>Tressa Gass</span>
-                          </div>
+                          <p class="tit">VOL-934788</p>
                         </div>
                       </div>
                     </td>
-                    <td>458h 13m</td>
+                    <td>Schipol, Amsterdam</td>
+                    <td>Changi, Singapore</td>
+                    <td><p class="chip s label warning">Temperature Not Optimal</p></td>
                     <td>
                       <div class="progress l">
-                        <div class="progress-per">67%</div>
                         <div class="progress-bar"><span style="--barW: 67%"></span></div>
-                        <p class="progress-txt">20/26</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="course-smrlist">
-                        <div class="course-smritem">
-                          <i class="ic users primary"></i>
-                          <p class="txt">348</p>
-                        </div>
-                        <div class="course-smritem">
-                          <i class="ic book info"></i>
-                          <p class="txt">45</p>
-                        </div>
-                        <div class="course-smritem">
-                          <i class="ic video error"></i>
-                          <p class="txt">110</p>
-                        </div>
+                        <p class="progress-per">67%</p>
                       </div>
                     </td>
                   </tr>
                   <tr>
                     <td>
                       <div class="check-block">
-                        <input type="checkbox" name="" id="pl1" class="checkbox">
-                        <label for="pl1" class="label check-label">
+                        <input type="checkbox" name="" id="pl5" class="checkbox">
+                        <label for="pl5" class="label check-label">
                           <p class="label-bg">
                             <span class="label-border"></span>
                             <span class="label-ck"></span>
@@ -1326,41 +1332,20 @@
                       </div>
                     </td>
                     <td>
-                      <div class="widget-icon-tit primary xl">
-                        <p class="icon"><i class="ic star"></i></p>
+                      <div class="widget-icon-tit secondary xl">
+                        <p class="icon rounded"><i class="ic car"></i></p>
                         <div class="txts">
-                          <p class="tit">Basic Fundamentals</p>
-                          <div class="desc">
-                            <div class="avatar round">
-                              <div class="thumb avt5"></div>
-                            </div>
-                            <span>Ardis Balderson</span>
-                          </div>
+                          <p class="tit">VOL-345789</p>
                         </div>
                       </div>
                     </td>
-                    <td>12h 13m</td>
+                    <td>Cleveland, Ohio, USA</td>
+                    <td>Cleveland, Ohio, USA</td>
+                    <td><p class="chip s label info">Oil Leakage</p></td>
                     <td>
                       <div class="progress l">
-                        <div class="progress-per">25%</div>
-                        <div class="progress-bar"><span style="--barW: 25%"></span></div>
-                        <p class="progress-txt">2/8</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="course-smrlist">
-                        <div class="course-smritem">
-                          <i class="ic users primary"></i>
-                          <p class="txt">8.6k</p>
-                        </div>
-                        <div class="course-smritem">
-                          <i class="ic book info"></i>
-                          <p class="txt">13</p>
-                        </div>
-                        <div class="course-smritem">
-                          <i class="ic video error"></i>
-                          <p class="txt">69</p>
-                        </div>
+                        <div class="progress-bar"><span style="--barW: 8%"></span></div>
+                        <p class="progress-per">8%</p>
                       </div>
                     </td>
                   </tr>
@@ -1529,6 +1514,7 @@
 
   <script src="../assets/scripts/jquery-3.7.1.min.js"></script>
   <script src="../assets/scripts/chart.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script> -->
   <script src="../assets/scripts/chartjs-plugin-datalabels@2.0.0"></script>
   <script>
 
@@ -1575,8 +1561,7 @@
       $('.pop-search').fadeOut("fast");
       $('body').removeClass("no-scroll");
     })
-
-
+    
     /* =============== header 퀵 버튼 ================= */
     const dropdownMap = {
       ".langBtn": ".langList",
@@ -1620,8 +1605,7 @@
       }
     });
 
-
-    //리플버튼
+    /* ============ 리플 버튼 =============== */
     var $ripple = $('.js-ripple');
     $ripple.on('click.ui.ripple', function(e) {
 
@@ -1643,7 +1627,27 @@
     $ripple.on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', function(e) {
       $(this).removeClass('is-active');
     });
-    
+
+
+    //statisticsBtn 리스트 오픈
+    $(".statisticsBtn").on("click", function () {  
+      $(this).next("ul").slideDown();
+    })
+
+    $(".statisticsList li").on("click", function () {  
+      $(".statisticsList").slideUp();
+      $(".statisticsBtn .textData").text($(this).text());
+    })
+
+    //orders by countries 탭
+    $(".tabs").find('.tab-btn').click(function(){
+      var t = $(this).attr('id');
+        $(this).addClass('active')
+        $(this).siblings().removeClass('active')
+        $('.orders-countries .tab-con').hide();
+        $('#'+ t + '-con').fadeIn('slow');
+    })
+
     /* ================== table checkbox ================= */
     //테이블 전체체크
     const checkInput = $('.widget-board tbody input')
@@ -1666,143 +1670,157 @@
       }
     })
 
-    //인풋, 셀렉트 유효성 체크
-      $('.input-block').each(function () {
-        const $block  = $(this);
-        const $field  = $block.find('input, select, textarea').first();
-        const $helper = $block.find('.helper').first();
 
-        function setHelper(state) {
-          if (!$helper.length) return;
-
-          const defTxt = $helper.data('default') ?? $helper.text();
-          const invTxt = $helper.data('invalid') ?? 'inavalid';
-          const valTxt = $helper.data('valid') ?? defTxt;
-
-          if (state === 'invalid') {
-            $helper.text(invTxt).show();
-          } else if (state === 'valid') {
-            // ✅ 성공 메시지를 보여주고 싶으면 show()
-            // ✅ 안 보여주고 싶으면 hide()
-            $helper.text(valTxt).hide();
-          } else {
-            // 초기/미터치 상태: 기본 helper 보여줄지 말지 선택
-            $helper.text(defTxt).show();
-          }
-        }
-
-        function sync() {
-          const val = ($field.val() ?? '').toString();
-          const hasValue = $.trim(val).length > 0;
-
-          const required = $field.prop('required');
-          const touched  = $block.hasClass('is-touched');
-
-          let isValid = true;
-
-          if ($field.is('input, textarea')) {
-            isValid = $field[0].checkValidity();
-
-            const pattern = $field.attr('pattern');
-            if (pattern && hasValue) isValid = isValid && new RegExp(pattern).test(val);
-          } else if ($field.is('select')) {
-            isValid = !required || hasValue;
-          }
-
-          const showInvalid = touched && required && !hasValue; // 다시 "선택하세요"로 돌아온 케이스
-
-          const invalid = (touched && hasValue && !isValid) || showInvalid;
-          const valid   = touched && hasValue && isValid;
-
-          $block
-            .toggleClass('has-value', hasValue)
-            .toggleClass('is-valid', valid)
-            .toggleClass('is-invalid', invalid);
-
-          if (invalid) setHelper('invalid');
-          else if (valid) setHelper('valid');
-          else setHelper('default');
-        }
-
-        // 사용자가 조작하면 touched 처리
-        $field.on('input change', function () {
-          $block.addClass('is-touched');
-          sync();
-        });
-
-        $field.on('blur', function () {
-          $block.addClass('is-touched');
-          sync();
-        });
-
-        sync();
-      });
-
-
-
-    // chart 1 ============= time spendings 차트
-    const data2 = {
-      labels: ["1","2","3","4","5","6"],
-      
+    /* ================ chart ================ */
+    //chart1 ================ vehicles overview 차트
+    const data1 = {
+      labels: ["vehicles overview"],
       datasets: [
         {
-          label: "bg",
-          data: ["24","34","44","82","13","34"],
-          backgroundColor: ["rgba(32, 159, 89, 1)","rgba(36, 179, 100, 1)","rgba(40, 199, 111, 1)","rgba(83, 210, 140, 1)","rgba(126, 221, 169, 1)","rgba(169, 233, 197, 1)"],
-          borderWidth: 0,
-          cutout:"68%",
+          label: "On the way",
+          data: [39.7],
+          pointRadius: 0,
+          backgroundColor: "rgba(47, 43, 61, 0.06)",
+          borderRadius: {
+            topLeft: 6,
+            topRight: 0,
+            bottomLeft: 6,
+            bottomRight: 0
+          },
+          fill: false,
+          barThickness: 46,
+          borderSkipped: false,
+          
+        },
+        {
+          label: "Unloading",
+          data: [28.3],
+          pointRadius: 0,
+          backgroundColor: "rgba(115, 103, 240, 1)",
+          borderRadius: 0,
+          fill: false,
+          borderRadius: 0,
+          barThickness: 46,
+        },
+        {
+          label: "Loading",
+          data: [17.4],
+          pointRadius: 0,
+          backgroundColor:"rgba(0, 186, 209, 1)",
+          borderRadius: 0,
+          fill: false,
+          barThickness: 46,
+        },
+        {
+          label: "Waiting",
+          data: [14.6],
+          pointRadius: 0,
+          backgroundColor:  "rgba(47, 43, 61, 1)",
+          borderRadius: {
+            topLeft: 0,
+            topRight: 6,
+            bottomLeft: 0,
+            bottomRight: 6
+          },
+          fill: false,
+          barThickness: 46,
         },
       ],
     };
-
-    const options2  = {
+    const options1  = {
       responsive: true,
       maintainAspectRatio: false,
+      indexAxis: 'y',
+      layout: {
+          padding: 0
+      },
       plugins: {
         legend: {
           display: false,
         },
         tooltip: {
-          // enabled: false,
-          callbacks: {
-              label: function (tooltipItem, data) {
-                return tooltipItem.formattedValue + 'h';
-              }
-          }
+          enabled: false,
         },
+
         datalabels: {
-          display: false,
+          formatter: (val) => {
+            return val + '%';
+          },
+          color: ((context, args) => {
+            let datasetIndex = context.datasetIndex;
+            let colorMap = ["rgba(47, 43, 61, 0.9)", "#fff", "#fff", "#fff"];
+            return colorMap[datasetIndex];
+          })
         },
       },
+      scales: {
+        x: {
+          stacked: true,
+          display: false,
+          border: {
+            display: false
+          }
+        },
+        y: {
+          stacked: true,
+          display: false,
+          border: {
+            display: false 
+          }
+        }
+      },
     };
-    const timeSpendings = document.getElementById('timeSpendings');
-    const Chart2 = new Chart(timeSpendings, {
-      type: "doughnut",
-      data: data2,
-      options: options2
+
+    const vehiclesOverview = document.getElementById('vehiclesOverview')
+    const Chart1 = new Chart(vehiclesOverview, {
+      plugins: [ChartDataLabels],
+      type: "bar",
+      data: data1,
+      options: options1
     })
 
 
-    //chart2 ================ topic interested 차트
-    const data1 = {
-      labels: ["UI Design", "UX Design", "Music", "Animation", "React", 'SEO'],
+    // chart2 ===================== shipment statistics 차트
+    const shipmentStatistics = document.getElementById('shipmentStatistics').getContext('2d')
+    // var gradient = shipmentStatistics.createLinearGradient(0,0,0,shipmentStatistics.canvas.clientHeight)
+    var gradient = shipmentStatistics.createLinearGradient(0,0,0,200)
+    gradient.addColorStop(0, 'rgba(115, 103, 240, 0.5)')
+    gradient.addColorStop(1, 'rgba(115, 103, 240, 0)')
+    const data2 = {
+      labels: ["1 Jan","2 Jan","3 Jan","4 Jan","5 Jan","6 Jan","7 Jan","8 Jan","9 Jan","10 Jan"],
       datasets: [
         {
-          label: "order",
-          data: [35, 20, 14, 12, 10, 9],
-          pointRadius: 0,
-          backgroundColor: ["rgba(115, 103, 240, 1)", "rgba(0, 186, 209, 1)", "rgba(40, 199, 111, 1)", "rgba(128, 131, 144, 1)", "rgba(255, 76, 81, 1)", "rgba(255, 159, 67, 1)"],
-          borderRadius: 6,
-          fill: false,
+          type: "line",
+          label: 'Delivery',
+          data: [23, 26, 24, 28, 29, 40, 34, 33, 24, 29],
+          pointRadius: 5,
+          pointBorderWidth: 3,
+          pointBackgroundColor:"#fff",
+          backgroundColor : gradient,
+          borderColor: 'rgba(115, 103, 240, 1)',
+          fill: true,
+          borderWidth: 3,
+          tension: 0.4,
+          
         },
-
-      ],
-    };
-
-    const options1  = {
+        {
+          type: "bar",
+          label: 'Shipment',
+          data: [38, 47, 33, 39, 32, 50, 48, 37, 42, 38],
+          pointRadius: 0,
+          backgroundColor: "rgba(255, 159, 67, 1)",
+          borderColor: 'transperent',
+          fill: true,
+          borderWidth: 0,
+          borderRadius: 6,
+          categoryPercentage: 1.0,
+          barPercentage: 0.25,
+        },
+      ]
+    }
+    const options2 = {
       responsive: true,
       maintainAspectRatio: false,
-      indexAxis: 'y',
       plugins: {
         legend: {
           display: false,
@@ -1811,62 +1829,91 @@
           enabled: false,
         },
         datalabels: {
-          formatter: function(value, context) { // Show the label instead of the value
-              return context.chart.data.labels[context.dataIndex];
-          },
-          color: "#fff"
-        },
-      },
-      layout: {
-        padding: {
-          top: 0,
-          bottom: 0,
-          left: 0,
-          right: 0 ,
+          display: false,
         },
       },
       scales: {
-        x:{
+        x: {
+          grid: {
+            display: false,
+            borderColor: 'transparent',
+          },
+          ticks: { 
+            color: 'rgba(47, 43, 61, 0.4)' ,
+            font:{
+              size: 13,
+            }
+          },
+        },
+        y: {
           grid: {
             display: true,
             color: "rgba(47, 43, 61, 0.12)",
             borderColor: 'transparent',
             drawTicks: false,
+            borderDash:  [5, 5]
           },
-          border:{
-            display: false,
-            dash: [5,5]
-          },
-          ticks:{
-            padding: 16,
-            color: "rgba(47, 43, 61, 0.4)",
-            maxTicksLimit: 5,
+          tickWidth: 0,
+          ticks: { 
+            color: 'rgba(47, 43, 61, 0.4)',
+            padding: 10,
+            maxTicksLimit: 6,
             callback: function(value, index, ticks) {
               return value + '%';
             },
             font:{
               size: 13,
             }
-          }
-        },
-        y:{
-          grid:{
+          },
+            border: {
             display: false,
           },
-          ticks:{
-            display: false,
-            color: "rgba(47, 43, 61, 0.4)",
-          }
-        }
+        },
       },
-    };
-    const topicInterested = document.getElementById('topicInterested')
-    const Chart1 = new Chart(topicInterested, {
-      plugins: [ChartDataLabels],
-      type: "bar",
-      data: data1,
-      options: options1
+    }
+    const Chart2 = new Chart(shipmentStatistics, {
+      data: data2,
+      options: options2
     })
+
+    // chart 3 ============= expense 차트
+      const data3 = {
+        labels: ["Incorrect address","Weather conditions","Federal Holidays","Damage during transit"],
+        datasets: [
+          {
+            label: "bg",
+            data: ["5","6","6","13"],
+            backgroundColor: ["rgba(40, 199, 111, 1)","rgba(40, 199, 111, 0.8)","rgba(40, 199, 111, 0.6)","rgba(40, 199, 111, 0.4)"],
+            borderWidth: 0,
+            cutout:"68%",
+          },
+        ],
+      };
+
+      const options3  = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          },
+          tooltip:{
+            callbacks: {
+              label: function (tooltipItem, data) {
+                return tooltipItem.formattedValue + '%';
+              }
+            }
+          }
+        },
+      };
+
+      const deliveryExceptions = document.getElementById('deliveryExceptions');
+      const Chart3 = new Chart(deliveryExceptions, {
+        type: "doughnut",
+        data: data3,
+        options: options3
+      })
+
   </script>
 </body>
 </html>

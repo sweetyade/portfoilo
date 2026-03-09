@@ -290,6 +290,7 @@
 
 .analytics-slide {
   background: transparent;
+  height: 100%;
 
   .swiper-slide {
     background-color: var(--primary-main);
@@ -393,6 +394,7 @@
   box-shadow: var(--shadow-m);
   background-color: var(--bg-paper);
   border-radius: var(--border-radius-m);
+  position: relative;
 
   &-block {
     width: 100%;
@@ -1363,6 +1365,254 @@
     .avatar {
       width: 22px;
       height: 22px;
+    }
+  }
+
+  &-line {
+    display: grid;
+    gap: var(--gap-1);
+    padding: var(--padding-6);
+    height: 141px;
+
+    .widget-title {
+      gap: var(--gap-4);
+      padding: 0;
+      @include abs.flex;
+
+      .icon {
+        width: 40px;
+        height: 40px;
+        border-radius: var(--border-radius-m);
+        @include abs.flexcenter;
+
+        .ic {
+          width: 28px;
+        }
+      }
+    }
+
+    .sbj {
+      color: var(--text-secondary);
+      @include abs.body1;
+    }
+
+    .desc {
+      gap: var(--gap-2);
+      @include abs.flex;
+
+      span {
+        color: var(--text-disabled);
+        @include abs.body2;
+      }
+    }
+
+    @each $c in abs.$themeColors {
+      &.#{$c} {
+        border-bottom: 2px solid var(--#{$c}-alp-darker);
+        transition: all 0.2s;
+
+        .icon {
+          background-color: var(--#{$c}-alp-light);
+
+          .ic {
+            background-color: var(--#{$c}-main);
+          }
+        }
+
+        &:hover {
+          border-bottom: 3px solid var(--#{$c}-main);
+          box-shadow: var(--shadow-l);
+        }
+      }
+    }
+  }
+
+  .vehicles-overview {
+    .labels {
+      @include abs.flexbtw;
+
+      p {
+        color: var(--text-secondary);
+        width: calc(100%);
+        max-width: var(--w);
+        @include abs.body1;
+
+        &::after {
+          content: "";
+          width: 2px;
+          height: 10px;
+          display: block;
+          margin-top: var(--padding-1);
+          background-color: var(--etc-divider);
+        }
+      }
+    }
+
+    .canvas-vehicles-overview {
+      height: 94px;
+    }
+
+    .list_0_75 {
+      .flexbtw {
+        border-bottom: 1px solid var(--etc-divider);
+        padding-bottom: var(--padding-3);
+
+        &:last-child {
+          border: none;
+        }
+      }
+
+      .list-name {
+        gap: var(--gap-2);
+        @include abs.flex;
+
+        .ic {
+          width: 24px;
+        }
+
+        p {
+          @include abs.body1;
+        }
+      }
+
+      .list-data {
+        gap: var(--gap-6);
+        text-align: right;
+
+        @include abs.body1;
+        @include abs.flexright;
+
+        .data-1 {
+          width: 80px;
+        }
+
+        .data-2 {
+          width: 46px;
+          color: var(--text-secondary);
+        }
+      }
+    }
+  }
+
+  &.shipment-statistics {
+    .canvas-shipment-statistics {
+      height: 241px;
+    }
+
+    .labels {
+      margin-top: var(--padding-5);
+      gap: var(--gap-4);
+      @include abs.flexcenter;
+
+      p {
+        border: 1px solid var(--etc-divider);
+        padding: var(--padding-1) var(--padding-4);
+        border-radius: var(--border-radius-m);
+        gap: var(--gap-2);
+        @include abs.body1;
+        @include abs.flex;
+
+        &::before {
+          content: "";
+
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+        }
+
+        &.label-1::before {
+          background-color: var(--warning-main);
+        }
+
+        &.label-2::before {
+          background-color: var(--primary-main);
+        }
+      }
+    }
+
+    .btn_list {
+      position: absolute;
+      top: var(--padding-6);
+      right: var(--padding-6);
+
+      .btn {
+        width: 100px;
+      }
+
+      .statisticsList {
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-paper);
+        border-radius: var(--border-radius-m);
+        box-shadow: var(--shadow-m);
+        margin-top: var(--padding-2);
+        padding-block: var(--padding-2);
+        max-height: 200px;
+        overflow: auto;
+        @include abs.body2;
+
+        li {
+          padding: var(--padding-2) var(--padding-4);
+          transition: all 0.2s;
+          cursor: pointer;
+
+          &:hover {
+            background-color: var(--action-hover);
+          }
+        }
+      }
+    }
+  }
+
+  .delivery-exceptions {
+    padding-top: 48px;
+
+    .canvas-delivery-exceptions {
+      height: 292px;
+      position: relative;
+
+      .total {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    }
+
+    .labels {
+      padding-top: var(--padding-12);
+      flex-wrap: wrap;
+      gap: var(--gap-4);
+      @include abs.flexcenter;
+
+      p {
+        gap: var(--gap-2);
+        @include abs.body2;
+        @include abs.flex;
+
+        &:before {
+          content: "";
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: var(--success-main);
+        }
+
+        &:nth-child(2)::before {
+          background-color: rgba(86, 202, 0, 0.8);
+        }
+
+        &:nth-child(3)::before {
+          background-color: rgba(86, 202, 0, 0.6);
+        }
+
+        &:nth-child(4)::before {
+          background-color: rgba(86, 202, 0, 0.4);
+        }
+      }
     }
   }
 }

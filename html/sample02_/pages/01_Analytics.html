@@ -1816,50 +1816,50 @@
       $('body').removeClass("no-scroll");
     })
 
-    //서치 언어선택
-    $(".langBtn").on("click", function () {  
-      $(".langList").slideToggle();
-      $(".langList .list-item").on("click", function () {  
-        $(this).siblings().removeClass("active")
-        $(this).addClass('active');
-        $(".langList").slideUp();
-      })
-    })
 
-    //서치 테마
-    $(".themeBtn").on("click", function () {  
-      $(".themeList").slideToggle();
-
-      $(".themeList .list-item").on("click", function () {  
-        $(this).siblings().removeClass("active")
-        $(this).addClass('active');
-        $(".themeList").slideUp();
-      })
-    })
-
-    //바로가기 버튼
-    $(".shortcutsBtn").on("click", function () {  
-      $(".shortcutsList").slideToggle();
-    })
-
-    //노티 버튼
-    $(".notiBtn").on("click", function () {  
-      $(".notiList").slideToggle();
-
-      $(".closeBtn").on("click", function () {  
-        $(this).parents('.noti-item').fadeOut(function(){
-          setTimeout(() => {
-            $(this).remove()
-          }, 700);
-        })
-      })
-    })
-
-    //아바타 버튼
-    $(".userBtn").on("click", function () {  
-      $(".userList").slideToggle();
-    })
+    /* =============== header 퀵 버튼 ================= */
+    const dropdownMap = {
+      ".langBtn": ".langList",
+      ".themeBtn": ".themeList", 
+      ".shortcutsBtn": ".shortcutsList",
+      ".notiBtn": ".notiList",
+      ".userBtn": ".userList"
+    };
     
+    // 모든 리스트 선택자 생성
+    const allListsSelector = Object.values(dropdownMap).join(", ");
+    const $allLists = $(allListsSelector);
+    
+    // 각 버튼에 동일한 로직 적용
+    Object.entries(dropdownMap).forEach(([btnSelector, listSelector]) => {
+      $(btnSelector).on("click", function(e) {
+        e.stopPropagation();
+        
+        const $currentList = $(listSelector);
+        $allLists.not($currentList).slideUp(300);
+        $currentList.stop(true, true).slideToggle(300);
+      });
+    });
+  
+    // 나머지 이벤트들은 동일...
+    $(".langList .list-item, .themeList .list-item").on("click", function() {
+      $(this).addClass("active").siblings().removeClass("active");
+      $(this).closest($allLists.selector).slideUp(300);
+    });
+
+    $(document).on("click", ".notiList .closeBtn", function(e) {
+      e.stopPropagation();
+      $(this).parents('.noti-item').fadeOut(() => {
+        setTimeout(() => $(this).remove(), 700);
+      });
+    });
+    
+    $(document).on("click", function(e) {
+      if (!$(e.target).closest(".icons, .avatar").length) {
+        $allLists.slideUp(300);
+      }
+    });
+
 
     //* ==================== swiper =============== */
     var swiper = new Swiper(".analytics-slide", {
