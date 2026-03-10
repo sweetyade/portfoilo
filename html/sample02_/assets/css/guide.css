@@ -1521,6 +1521,10 @@ i {
   -webkit-mask-image: url(../images/system/clock.svg);
           mask-image: url(../images/system/clock.svg);
 }
+.ic.corner-left-down {
+  -webkit-mask-image: url(../images/system/corner-left-down.svg);
+          mask-image: url(../images/system/corner-left-down.svg);
+}
 .ic.dots {
   -webkit-mask-image: url(../images/system/dots.svg);
           mask-image: url(../images/system/dots.svg);
@@ -4140,9 +4144,6 @@ i {
 ***************************************************************/
 .btn {
   height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   gap: 6px;
   font-size: var(--btn-m);
   padding-inline: var(--padding-5);
@@ -4152,6 +4153,9 @@ i {
   box-shadow: var(--primary-shadow-s);
   white-space: nowrap;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .btn .ic {
   width: 16px;

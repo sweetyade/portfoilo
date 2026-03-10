@@ -1,0 +1,128 @@
+@use "../abstracts/" as abs;
+/***************************************************************
+    pages - pricing
+***************************************************************/
+.pricing {
+  background-color: var(--bg-paper);
+  border-radius: var(--border-radius-m);
+  box-shadow: var(--shadow-m);
+  margin-bottom: var(--padding-6);
+  padding: var(--padding-10) 100px 64px;
+
+  .con-title {
+    padding-bottom: var(--padding-2);
+  }
+
+  &-toggle {
+    width: fit-content;
+    margin: var(--gap-2) auto;
+
+    .toggle-chip {
+      transform: translateX(80%);
+      gap: var(--gap-1);
+      @include abs.flex;
+
+      .ic {
+        margin-top: 15px;
+        width: 24px;
+        background-color: var(--text-disabled);
+      }
+    }
+
+    .switch-block {
+      padding-inline: 0;
+    }
+  }
+
+  .pricing-plans {
+    padding-top: var(--padding-6);
+    gap: var(--gap-6);
+    @include abs.flexbtw;
+
+    .pricing-item {
+      border: 1px solid var(--etc-divider);
+      border-radius: var(--border-radius-m);
+      width: 100%;
+      display: grid;
+      gap: var(--gap-5);
+      position: relative;
+      padding: 60px var(--padding-5) var(--padding-6);
+
+      .chip {
+        position: absolute;
+        top: var(--padding-4);
+        right: var(--padding-5);
+      }
+
+      .icon {
+        width: 120px;
+        margin: 0 auto;
+      }
+
+      .item-tit {
+        text-align: center;
+
+        .tit {
+          padding-bottom: var(--padding-1);
+          @include abs.h4;
+        }
+
+        .subtit {
+          color: var(--text-secondary);
+          @include abs.body1;
+        }
+      }
+
+      .item-price {
+        text-align: center;
+        height: 86px;
+
+        .price-group {
+          height: 68px;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          color: var(--text-secondary);
+
+          .f-h1 {
+            color: var(--primary-main);
+          }
+
+          .bt {
+            padding-top: 46px;
+          }
+        }
+
+        .f-caption {
+          color: var(--text-disabled);
+        }
+      }
+
+      .item-benefit {
+        display: grid;
+        gap: var(--gap-4);
+
+        li {
+          color: var(--text-secondary);
+          position: relative;
+          gap: var(--gap-2);
+          @include abs.flex;
+          @include abs.body1;
+
+          &::before {
+            content: "";
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--text-secondary);
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        border-color: var(--primary-main);
+      }
+    }
+  }
+}

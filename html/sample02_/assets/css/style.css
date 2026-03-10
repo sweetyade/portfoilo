@@ -1517,6 +1517,10 @@ i {
   -webkit-mask-image: url(../images/system/clock.svg);
           mask-image: url(../images/system/clock.svg);
 }
+.ic.corner-left-down {
+  -webkit-mask-image: url(../images/system/corner-left-down.svg);
+          mask-image: url(../images/system/corner-left-down.svg);
+}
 .ic.dots {
   -webkit-mask-image: url(../images/system/dots.svg);
           mask-image: url(../images/system/dots.svg);
@@ -4136,9 +4140,6 @@ i {
 ***************************************************************/
 .btn {
   height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   gap: 6px;
   font-size: var(--btn-m);
   padding-inline: var(--padding-5);
@@ -4148,6 +4149,9 @@ i {
   box-shadow: var(--primary-shadow-s);
   white-space: nowrap;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .btn .ic {
   width: 16px;
@@ -5975,6 +5979,24 @@ input.switch {
   font-size: var(--body-1);
   line-height: 22px;
 }
+.main .con-title {
+  padding-block: var(--padding-6);
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: var(--gap-2);
+  text-align: center;
+}
+.main .con-title .tit {
+  font-size: var(--h-4);
+  line-height: 38px;
+  font-weight: 500;
+}
+.main .con-title .subtit {
+  color: var(--text-secondary);
+  font-size: var(--body-1);
+  line-height: 22px;
+}
 
 .analytics-slide {
   background: transparent;
@@ -7534,23 +7556,6 @@ input.switch {
   font-size: var(--body-1);
   line-height: 22px;
 }
-.faq-cs .con-title {
-  padding-block: var(--padding-6);
-  display: grid;
-  align-content: center;
-  justify-items: center;
-  gap: var(--gap-2);
-}
-.faq-cs .con-title .tit {
-  font-size: var(--h-4);
-  line-height: 38px;
-  font-weight: 500;
-}
-.faq-cs .con-title .subtit {
-  color: var(--text-secondary);
-  font-size: var(--body-1);
-  line-height: 22px;
-}
 .faq-cs-con {
   gap: var(--gap-6);
   padding-bottom: var(--padding-6);
@@ -7578,4 +7583,120 @@ input.switch {
 .faq-cs-con .con-item .icon .ic {
   width: 26px;
   background-color: var(--primary-main);
+}
+
+/***************************************************************
+    pages - pricing
+***************************************************************/
+.pricing {
+  background-color: var(--bg-paper);
+  border-radius: var(--border-radius-m);
+  box-shadow: var(--shadow-m);
+  margin-bottom: var(--padding-6);
+  padding: var(--padding-10) 100px 64px;
+}
+.pricing .con-title {
+  padding-bottom: var(--padding-2);
+}
+.pricing-toggle {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: var(--gap-2) auto;
+}
+.pricing-toggle .toggle-chip {
+  transform: translateX(80%);
+  gap: var(--gap-1);
+  display: flex;
+  align-items: center;
+}
+.pricing-toggle .toggle-chip .ic {
+  margin-top: 15px;
+  width: 24px;
+  background-color: var(--text-disabled);
+}
+.pricing-toggle .switch-block {
+  padding-inline: 0;
+}
+.pricing .pricing-plans {
+  padding-top: var(--padding-6);
+  gap: var(--gap-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pricing .pricing-plans .pricing-item {
+  border: 1px solid var(--etc-divider);
+  border-radius: var(--border-radius-m);
+  width: 100%;
+  display: grid;
+  gap: var(--gap-5);
+  position: relative;
+  padding: 60px var(--padding-5) var(--padding-6);
+}
+.pricing .pricing-plans .pricing-item .chip {
+  position: absolute;
+  top: var(--padding-4);
+  right: var(--padding-5);
+}
+.pricing .pricing-plans .pricing-item .icon {
+  width: 120px;
+  margin: 0 auto;
+}
+.pricing .pricing-plans .pricing-item .item-tit {
+  text-align: center;
+}
+.pricing .pricing-plans .pricing-item .item-tit .tit {
+  padding-bottom: var(--padding-1);
+  font-size: var(--h-4);
+  line-height: 38px;
+  font-weight: 500;
+}
+.pricing .pricing-plans .pricing-item .item-tit .subtit {
+  color: var(--text-secondary);
+  font-size: var(--body-1);
+  line-height: 22px;
+}
+.pricing .pricing-plans .pricing-item .item-price {
+  text-align: center;
+  height: 86px;
+}
+.pricing .pricing-plans .pricing-item .item-price .price-group {
+  height: 68px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+.pricing .pricing-plans .pricing-item .item-price .price-group .f-h1 {
+  color: var(--primary-main);
+}
+.pricing .pricing-plans .pricing-item .item-price .price-group .bt {
+  padding-top: 46px;
+}
+.pricing .pricing-plans .pricing-item .item-price .f-caption {
+  color: var(--text-disabled);
+}
+.pricing .pricing-plans .pricing-item .item-benefit {
+  display: grid;
+  gap: var(--gap-4);
+}
+.pricing .pricing-plans .pricing-item .item-benefit li {
+  color: var(--text-secondary);
+  position: relative;
+  gap: var(--gap-2);
+  display: flex;
+  align-items: center;
+  font-size: var(--body-1);
+  line-height: 22px;
+}
+.pricing .pricing-plans .pricing-item .item-benefit li::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--text-secondary);
+}
+.pricing .pricing-plans .pricing-item:nth-child(2) {
+  border-color: var(--primary-main);
 }
