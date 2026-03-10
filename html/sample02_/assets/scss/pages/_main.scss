@@ -35,12 +35,13 @@
   position: relative;
 
   &-top {
+    margin-top: var(--padding-4);
     padding: var(--padding-2) var(--padding-4) var(--padding-2) var(--padding-6);
     background-color: var(--bg-paper);
     border-radius: var(--border-radius-m);
     box-shadow: var(--shadow-s);
     position: sticky;
-    top: 0;
+    top: var(--padding-4);
     margin-bottom: var(--padding-6);
     z-index: var(--z-fixed);
     @include abs.flexbtw;
@@ -257,7 +258,8 @@
   }
 
   &-con {
-    padding: var(--padding-4) var(--padding-6) 0;
+    // padding: var(--padding-4) var(--padding-6) 0;
+    padding-inline: var(--padding-6);
   }
 
   &-bottom {

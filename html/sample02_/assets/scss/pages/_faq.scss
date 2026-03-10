@@ -1,0 +1,145 @@
+@use "../abstracts/" as abs;
+/***************************************************************
+    pages - faq
+***************************************************************/
+
+.faq {
+  &-header {
+    width: 100%;
+    height: 320px;
+    background-color: var(--primary-alp-lighter);
+    border-radius: var(--border-radius-m);
+    background-image: url("/assets/images/sub/bg-faq-header.png");
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    gap: 10px;
+
+    h2.tit {
+      @include abs.h4;
+    }
+
+    .subtit {
+      color: var(--text-secondary);
+      @include abs.body1;
+    }
+  }
+
+  &-list {
+    gap: var(--gap-6);
+    @include abs.flextop;
+
+    .list-menu {
+      width: 360px;
+      height: 423px;
+      background-image: url("/assets/images/sub/sofa-woman.svg");
+      background-position: center bottom;
+      background-size: 230px;
+      background-repeat: no-repeat;
+
+      .list {
+        display: grid;
+        gap: var(--gap-1);
+        background-color: transparent;
+      }
+
+      .list-item {
+        &:hover {
+          background-color: var(--primary-alp-light);
+          color: var(--primary-main);
+
+          .ic {
+            background-color: var(--primary-main);
+          }
+        }
+        &.active {
+          color: var(--etc-white);
+          background-color: var(--primary-main);
+
+          .ic {
+            background-color: var(--etc-white);
+          }
+        }
+      }
+    }
+
+    .list-con {
+      width: calc(100% - 384px);
+
+      .con-tit {
+        gap: var(--gap-4);
+        padding-bottom: var(--padding-4);
+        @include abs.flex;
+
+        .icon {
+          width: 50px;
+          height: 50px;
+          background-color: var(--primary-alp-light);
+          border-radius: var(--border-radius-m);
+          @include abs.flexcenter;
+
+          .ic {
+            width: 30px;
+            background-color: var(--primary-main);
+          }
+        }
+
+        .tit {
+          @include abs.h5;
+        }
+
+        .subtit {
+          color: var(--text-secondary);
+          @include abs.body1;
+        }
+      }
+    }
+  }
+
+  &-cs {
+    .con-title {
+      padding-block: var(--padding-6);
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      gap: var(--gap-2);
+
+      .tit {
+        @include abs.h4;
+      }
+
+      .subtit {
+        color: var(--text-secondary);
+        @include abs.body1;
+      }
+    }
+
+    &-con {
+      gap: var(--gap-6);
+      padding-bottom: var(--padding-6);
+      @include abs.flexbtw;
+
+      .con-item {
+        width: 100%;
+        border-radius: var(--border-radius-m);
+        background-color: var(--action-hover);
+        text-align: center;
+        padding: var(--padding-6);
+
+        .icon {
+          width: 46px;
+          height: 46px;
+          background-color: var(--primary-alp-light);
+          border-radius: var(--border-radius-m);
+          margin: 0 auto var(--gap-4);
+          @include abs.flexcenter;
+
+          .ic {
+            width: 26px;
+            background-color: var(--primary-main);
+          }
+        }
+      }
+    }
+  }
+}
