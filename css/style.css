@@ -618,8 +618,7 @@ body {
   justify-content: space-between;
   padding: 1rem 1.5rem;
   z-index: var(--z-fixed);
-  -webkit-backdrop-filter: blur(0.25rem);
-          backdrop-filter: blur(0.25rem);
+  backdrop-filter: blur(0.25rem);
 }
 #header .logo {
   font-size: var(--h1-font-size);
@@ -642,8 +641,7 @@ body {
   color: var(--sub-dext-color);
   position: relative;
   z-index: 11;
-  -webkit-backdrop-filter: blur(0.25rem);
-          backdrop-filter: blur(0.25rem);
+  backdrop-filter: blur(0.25rem);
 }
 @media (min-width: 1260px) {
   #footer {
@@ -797,6 +795,10 @@ body {
 #main .main_con .con_list .list_data .info {
   font-size: var(small-font-size);
   color: var(--sub-text-color);
+}
+#main .main_con .con_list .list_data .info b {
+  font-weight: 700;
+  color: var(--text-color);
 }
 #main .main_con .con_list .data_img {
   border: 1px solid var(--border-color);
